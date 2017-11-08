@@ -1,7 +1,7 @@
 {
 	"id": "940fe18e5885fd2252fa1c92fdbe7a1a",
 	"title": "England Squad Selector",
-	"headerBackground": "http://www.hrreview.co.uk/wp-content/uploads/England-Football-Team-Free-Desktop-Wallpaper.jpg",
+	"headerBackground": "https://www.hrreview.co.uk/wp-content/uploads/England-Football-Team-Free-Desktop-Wallpaper.jpg",
 	"sponsorLink": "",
 	"sponsorImage": "",
 	"backgroundImage": "#CC0F13",
@@ -26,12 +26,12 @@
 				"id": 9017,
 				"longName": "Alexis Sanchez",
 				"shortName": "Sanchez",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
 				"team": {
 					"id": 413,
 					"name": "Arsenal",
 					"shortName": "Arsenal",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/413.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/413.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -42,12 +42,12 @@
 				"id": 7192,
 				"longName": "Petr Cech",
 				"shortName": "Cech",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7192.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7192.png",
 				"team": {
 					"id": 413,
 					"name": "Arsenal",
 					"shortName": "Arsenal",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/413.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/413.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -58,12 +58,12 @@
 				"id": 59269,
 				"longName": "Laurent Koscielny",
 				"shortName": "Koscielny",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_59269.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_59269.png",
 				"team": {
 					"id": 413,
 					"name": "Arsenal",
 					"shortName": "Arsenal",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/413.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/413.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -74,12 +74,12 @@
 				"id": 6678,
 				"longName": "Mesut Ozil",
 				"shortName": "Ozil",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_6678.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_6678.png",
 				"team": {
 					"id": 413,
 					"name": "Arsenal",
 					"shortName": "Arsenal",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/413.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/413.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -90,12 +90,12 @@
 				"id": 73554,
 				"longName": "Joshua King",
 				"shortName": "King",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_73554.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_73554.png",
 				"team": {
 					"id": 333,
 					"name": "Bournemouth",
 					"shortName": "B\u0027mouth",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/333.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/333.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -106,12 +106,12 @@
 				"id": 106946,
 				"longName": "Michael Keane",
 				"shortName": "Keane",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_106946.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_106946.png",
 				"team": {
 					"id": 160,
 					"name": "Burnley",
 					"shortName": "Burnley",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/160.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/160.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -122,12 +122,12 @@
 				"id": 1279,
 				"longName": "Tom Heaton",
 				"shortName": "Heaton",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1279.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1279.png",
 				"team": {
 					"id": 160,
 					"name": "Burnley",
 					"shortName": "Burnley",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/160.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/160.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -138,12 +138,12 @@
 				"id": 7017,
 				"longName": "Gary Cahill",
 				"shortName": "Cahill",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7017.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7017.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -154,12 +154,12 @@
 				"id": 4743,
 				"longName": "Eden Hazard",
 				"shortName": "Hazard",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_4743.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_4743.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -170,12 +170,12 @@
 				"id": 111487,
 				"longName": "N\u0027Golo Kante",
 				"shortName": "Kante",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_111487.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_111487.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -186,12 +186,12 @@
 				"id": 9841,
 				"longName": "Cesar Azpilicueta",
 				"shortName": "Azpilicueta",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9841.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9841.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -202,12 +202,12 @@
 				"id": 2478,
 				"longName": "Cesc Fabregas",
 				"shortName": "Fabregas",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_2478.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_2478.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -218,12 +218,12 @@
 				"id": 13920,
 				"longName": "Nemanja Matic",
 				"shortName": "Matic",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13920.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13920.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -234,12 +234,12 @@
 				"id": 72601,
 				"longName": "Thibaut Courtois",
 				"shortName": "Courtois",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72601.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72601.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -250,12 +250,12 @@
 				"id": 15868,
 				"longName": "David Luiz",
 				"shortName": "Luiz",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_15868.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_15868.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -266,12 +266,12 @@
 				"id": 3290,
 				"longName": "Victor Moses",
 				"shortName": "Moses",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_3290.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_3290.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -282,12 +282,12 @@
 				"id": 16773,
 				"longName": "Diego Costa",
 				"shortName": "Costa",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_16773.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_16773.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -298,12 +298,12 @@
 				"id": 1266,
 				"longName": "Pedro",
 				"shortName": "Pedro",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1266.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1266.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -314,12 +314,12 @@
 				"id": 96211,
 				"longName": "Marcos Alonso",
 				"shortName": "Alonso",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96211.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96211.png",
 				"team": {
 					"id": 524,
 					"name": "Chelsea",
 					"shortName": "Chelsea",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/524.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/524.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -330,12 +330,12 @@
 				"id": 18055,
 				"longName": "Christian Benteke",
 				"shortName": "Benteke",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_18055.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_18055.png",
 				"team": {
 					"id": 234,
 					"name": "Crystal Palace",
 					"shortName": "C Palace",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/234.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/234.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -346,12 +346,12 @@
 				"id": 96278,
 				"longName": "Wilfried Zaha",
 				"shortName": "Zaha",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96278.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96278.png",
 				"team": {
 					"id": 234,
 					"name": "Crystal Palace",
 					"shortName": "C Palace",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/234.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/234.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -362,12 +362,12 @@
 				"id": 99504,
 				"longName": "Ross Barkley",
 				"shortName": "Barkley",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_99504.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_99504.png",
 				"team": {
 					"id": 229,
 					"name": "Everton",
 					"shortName": "Everton",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/229.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/229.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -378,12 +378,12 @@
 				"id": 72541,
 				"longName": "Romelu Lukaku",
 				"shortName": "Lukaku",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72541.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72541.png",
 				"team": {
 					"id": 229,
 					"name": "Everton",
 					"shortName": "Everton",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/229.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/229.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -394,12 +394,12 @@
 				"id": 913,
 				"longName": "Kasper Schmeichel",
 				"shortName": "Schmeichel",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_913.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_913.png",
 				"team": {
 					"id": 152,
 					"name": "Leicester City",
 					"shortName": "Leicester",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/152.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/152.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -410,12 +410,12 @@
 				"id": 72776,
 				"longName": "Jamie Vardy",
 				"shortName": "Vardy",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72776.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72776.png",
 				"team": {
 					"id": 152,
 					"name": "Leicester City",
 					"shortName": "Leicester",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/152.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/152.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -426,12 +426,12 @@
 				"id": 13233,
 				"longName": "Jordan Henderson",
 				"shortName": "Henderson",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13233.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13233.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -442,12 +442,12 @@
 				"id": 98669,
 				"longName": "Philippe Coutinho",
 				"shortName": "Coutinho",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_98669.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_98669.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -458,12 +458,12 @@
 				"id": 109569,
 				"longName": "Sadio Mane",
 				"shortName": "Mane",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_109569.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_109569.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -474,12 +474,12 @@
 				"id": 1978,
 				"longName": "Georginio Wijnaldum",
 				"shortName": "Wijnaldum",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1978.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1978.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -490,12 +490,12 @@
 				"id": 5926,
 				"longName": "Dejan Lovren",
 				"shortName": "Lovren",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5926.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5926.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -506,12 +506,12 @@
 				"id": 102073,
 				"longName": "Roberto Firmino",
 				"shortName": "Firmino",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_102073.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_102073.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -522,12 +522,12 @@
 				"id": 1,
 				"longName": "James Milner",
 				"shortName": "Milner",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -538,12 +538,12 @@
 				"id": 1015,
 				"longName": "Adam Lallana",
 				"shortName": "Lallana",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1015.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1015.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -554,12 +554,12 @@
 				"id": 110254,
 				"longName": "Emre Can",
 				"shortName": "Can",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_110254.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_110254.png",
 				"team": {
 					"id": 155,
 					"name": "Liverpool",
 					"shortName": "Liverpool",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/155.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/155.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -570,12 +570,12 @@
 				"id": 19950,
 				"longName": "Nicolas Otamendi",
 				"shortName": "Otamendi",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_19950.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_19950.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -586,12 +586,12 @@
 				"id": 7464,
 				"longName": "David Silva",
 				"shortName": "Silva",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7464.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7464.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -602,12 +602,12 @@
 				"id": 5915,
 				"longName": "Fernandinho",
 				"shortName": "Fernandinho",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5915.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5915.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -618,12 +618,12 @@
 				"id": 110808,
 				"longName": "Raheem Sterling",
 				"shortName": "Sterling",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_110808.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_110808.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -634,12 +634,12 @@
 				"id": 5812,
 				"longName": "Aleksandar Kolarov",
 				"shortName": "Kolarov",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5812.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5812.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -650,12 +650,12 @@
 				"id": 5808,
 				"longName": "Sergio Aguero",
 				"shortName": "Aguero",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5808.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5808.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -666,12 +666,12 @@
 				"id": 72603,
 				"longName": "Kevin De Bruyne",
 				"shortName": "De Bruyne",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72603.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72603.png",
 				"team": {
 					"id": 345,
 					"name": "Manchester City",
 					"shortName": "Man City",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/345.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -682,12 +682,12 @@
 				"id": 72906,
 				"longName": "Ander Herrera",
 				"shortName": "Herrera",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72906.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72906.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -698,12 +698,12 @@
 				"id": 18677,
 				"longName": "David De Gea",
 				"shortName": "De Gea",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_18677.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_18677.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -714,12 +714,12 @@
 				"id": 775,
 				"longName": "Michael Carrick",
 				"shortName": "Carrick",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_775.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_775.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -730,12 +730,12 @@
 				"id": 7043,
 				"longName": "Antonio Valencia",
 				"shortName": "Valencia",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7043.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7043.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -746,12 +746,12 @@
 				"id": 102339,
 				"longName": "Paul Pogba",
 				"shortName": "Pogba",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_102339.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_102339.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -762,12 +762,12 @@
 				"id": 2366,
 				"longName": "Zlatan Ibrahimovic",
 				"shortName": "Ibrahimovic",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_2366.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_2366.png",
 				"team": {
 					"id": 210,
 					"name": "Manchester United",
 					"shortName": "Man Utd",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/210.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -778,12 +778,12 @@
 				"id": 96756,
 				"longName": "Ben Gibson",
 				"shortName": "Gibson",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96756.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_96756.png",
 				"team": {
 					"id": 389,
 					"name": "Middlesbrough",
 					"shortName": "M\u0027boro",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/389.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/389.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -794,12 +794,12 @@
 				"id": 103655,
 				"longName": "Virgil van Dijk",
 				"shortName": "van Dijk",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_103655.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_103655.png",
 				"team": {
 					"id": 392,
 					"name": "Southampton",
 					"shortName": "So\u0027ton",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/392.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/392.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -810,12 +810,12 @@
 				"id": 13511,
 				"longName": "Fraser Forster",
 				"shortName": "Forster",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13511.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_13511.png",
 				"team": {
 					"id": 392,
 					"name": "Southampton",
 					"shortName": "So\u0027ton",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/392.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/392.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -826,12 +826,12 @@
 				"id": 3398,
 				"longName": "Lee Grant",
 				"shortName": "Grant",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_3398.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_3398.png",
 				"team": {
 					"id": 384,
 					"name": "Stoke City",
 					"shortName": "Stoke",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/384.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/384.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -842,12 +842,12 @@
 				"id": 1774,
 				"longName": "Jermain Defoe",
 				"shortName": "Defoe",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1774.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1774.png",
 				"team": {
 					"id": 415,
 					"name": "Sunderland",
 					"shortName": "S\u0027land",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/415.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/415.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -858,12 +858,12 @@
 				"id": 109742,
 				"longName": "Jordan Pickford",
 				"shortName": "Pickford",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_109742.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_109742.png",
 				"team": {
 					"id": 415,
 					"name": "Sunderland",
 					"shortName": "S\u0027land",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/415.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/415.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -874,12 +874,12 @@
 				"id": 9799,
 				"longName": "Fernando Llorente",
 				"shortName": "Llorente",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9799.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9799.png",
 				"team": {
 					"id": 375,
 					"name": "Swansea City",
 					"shortName": "Swansea ",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/375.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/375.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -890,12 +890,12 @@
 				"id": 5569,
 				"longName": "Gylfi Sigurdsson",
 				"shortName": "Sigurdsson",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5569.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5569.png",
 				"team": {
 					"id": 375,
 					"name": "Swansea City",
 					"shortName": "Swansea ",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/375.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/375.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -906,12 +906,12 @@
 				"id": 121690,
 				"longName": "Danny Rose",
 				"shortName": "Rose",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_121690.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_121690.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -922,12 +922,12 @@
 				"id": 114546,
 				"longName": "Dele Alli",
 				"shortName": "Alli",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_114546.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_114546.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -938,12 +938,12 @@
 				"id": 15830,
 				"longName": "Kyle Walker",
 				"shortName": "Walker",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_15830.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_15830.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -954,12 +954,12 @@
 				"id": 16153,
 				"longName": "Toby Alderweireld",
 				"shortName": "Alderweireld",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_16153.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_16153.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -970,12 +970,12 @@
 				"id": 86825,
 				"longName": "Christian Eriksen",
 				"shortName": "Eriksen",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_86825.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_86825.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Attacking Midfielder",
@@ -986,12 +986,12 @@
 				"id": 5716,
 				"longName": "Jan Vertonghen",
 				"shortName": "Vertonghen",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5716.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5716.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -1002,12 +1002,12 @@
 				"id": 100728,
 				"longName": "Heung-Min Son",
 				"shortName": "Son",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_100728.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_100728.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -1018,12 +1018,12 @@
 				"id": 5187,
 				"longName": "Hugo Lloris",
 				"shortName": "Lloris",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5187.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5187.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -1034,12 +1034,12 @@
 				"id": 73855,
 				"longName": "Victor Wanyama",
 				"shortName": "Wanyama",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_73855.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_73855.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Midfielder",
@@ -1050,12 +1050,12 @@
 				"id": 106603,
 				"longName": "Eric Dier",
 				"shortName": "Dier",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_106603.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_106603.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Defender",
@@ -1066,12 +1066,12 @@
 				"id": 74238,
 				"longName": "Harry Kane",
 				"shortName": "Kane",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_74238.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_74238.png",
 				"team": {
 					"id": 608,
 					"name": "Tottenham Hotspur",
 					"shortName": "Tottenham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/608.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/608.png"
 				},
 				"position": {
 					"displayName": "Striker",
@@ -1082,12 +1082,12 @@
 				"id": 1204,
 				"longName": "Ben Foster",
 				"shortName": "Foster",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1204.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_1204.png",
 				"team": {
 					"id": 275,
 					"name": "West Bromwich Albion",
 					"shortName": "W Brom",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/275.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/275.png"
 				},
 				"position": {
 					"displayName": "Goalkeeper",
@@ -1098,12 +1098,12 @@
 				"id": 12998,
 				"longName": "Michail Antonio",
 				"shortName": "Antonio",
-				"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_12998.png",
+				"image": "https:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_12998.png",
 				"team": {
 					"id": 367,
 					"name": "West Ham United",
 					"shortName": "West Ham",
-					"image": "http:\/\/img.skysports.com\/football\/badges\/192\/367.png"
+					"image": "https:\/\/img.skysports.com\/football\/badges\/192\/367.png"
 				},
 				"position": {
 					"displayName": "Midfielder",

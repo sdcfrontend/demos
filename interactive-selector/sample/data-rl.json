@@ -2,7 +2,7 @@
   "id": "1234567890",
   "title":"Rugby League Selector",
   "headerBackground": false,
-  "sponsorLink":"http://www.blah.com",
+  "sponsorLink":"https://www.blah.com",
   "sponsorImage":"./dist/Standard-Life-Logo.png",
   "backgroundImage": "#F4442E",
   "restrictSelections":true,
@@ -22,12 +22,12 @@
              "id":55969,
              "longName":"T Waldrom",
              "shortName":"T Waldrom",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Prop",
@@ -44,12 +44,12 @@
              "id":10495,
              "longName":"T Youngs",
              "shortName":"T Youngs",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Prop",
@@ -66,12 +66,12 @@
              "id":10453,
              "longName":"D Hartley",
              "shortName":"D Hartley",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Hooker",
@@ -88,12 +88,12 @@
              "id":11384,
              "longName":"D Care",
              "shortName":"D Care",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Second Row",
@@ -110,12 +110,12 @@
              "id":57436,
              "longName":"J Launchbury",
              "shortName":"J Launchbury",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Second Row",
@@ -132,12 +132,12 @@
              "id":46415,
              "longName":"B Youngs",
              "shortName":"B Youngs",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Loose Forward",
@@ -154,12 +154,12 @@
              "id":51391,
              "longName":"O Farrell",
              "shortName":"O Farrell",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Scrum Half",
@@ -177,12 +177,12 @@
              "id":10512,
              "longName":"L Dickson",
              "shortName":"L Dickson",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Stand Off",
@@ -200,12 +200,12 @@
              "id":53529,
              "longName":"F Burns",
              "shortName":"F Burns",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Centre",
@@ -223,12 +223,12 @@
              "id":10516,
              "longName":"T Flood",
              "shortName":"T Flood",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Centre",
@@ -246,12 +246,12 @@
              "id":11022,
              "longName":"A Goode",
              "shortName":"A Goode",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Winger",
@@ -269,12 +269,12 @@
              "id":10435,
              "longName":"Joe Bloggs",
              "shortName":"J Bloggs",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Winger",
@@ -292,12 +292,12 @@
              "id":10433,
              "longName":"M Brown",
              "shortName":"M Brown",
-             "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png",
+             "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png",
              "team":{
                 "id":451,
                 "name":"England",
                 "shortName":"England",
-                "image":"http://e1.365dm.com/rugbyunion/badges/192/451.png"
+                "image":"https://e1.365dm.com/rugbyunion/badges/192/451.png"
              },
              "position":{
                 "displayName":"Full Back",

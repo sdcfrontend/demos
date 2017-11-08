@@ -1,7 +1,7 @@
 {
 	"id": "940fe18e5885fd2252fa1c92fdbe7a1z",
 	"title": "The Oscars - Who would you choose?",
-	"headerBackground": "http://pop.h-cdn.co/assets/16/08/980x480/gallery-1456288576-oscar-statuette-1-1.jpg",
+	"headerBackground": "https://pop.h-cdn.co/assets/16/08/980x480/gallery-1456288576-oscar-statuette-1-1.jpg",
 	"sponsorLink":"",
 	"sponsorImage":"",
 	"backgroundImage": "darkred",
@@ -202,7 +202,7 @@
 				"id": 8,
 				"longName": "Mega Shark vs. Mecha Shark (2014)",
 				"shortName": "Mega Shark vs. Mecha Shark (2014)",
-				"image": "http://i1.ytimg.com/vi/hkALxSMLEPQ/movieposter.jpg?v=52bc9a5c",
+				"image": "https://i1.ytimg.com/vi/hkALxSMLEPQ/movieposter.jpg?v=52bc9a5c",
 				"team": {
 					"id": 123,
 					"name": "",
