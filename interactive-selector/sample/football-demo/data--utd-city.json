@@ -1,7 +1,7 @@
 {
 	"id": "3",
 	"title": "Pick Your United & City Combined XI",
-	"headerBackground": "http://blog.oxforddictionaries.com/wp-content/uploads/football-1.jpg",
+	"headerBackground": "./dist/City-Utd-header.jpg",
 	"sponsorLink":"",
 	"sponsorImage":"",
 	"backgroundImage": "#030C7E",

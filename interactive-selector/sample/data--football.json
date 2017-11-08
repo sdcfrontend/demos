@@ -3,7 +3,7 @@
 	"title": "Premier League Team of the Season",
 	"headerBackground": "http://blog.oxforddictionaries.com/wp-content/uploads/football-1.jpg",
 	"sponsorLink":"http://www.blah.com",
-	"sponsorImage":"dist/Standard-Life-Logo.png",
+	"sponsorImage":"./dist/Standard-Life-Logo.png",
 	"backgroundImage": "#01A611",
 	"restrictSelections": true,
 	"notCategorisedParticipants": false,

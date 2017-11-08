@@ -1,7 +1,7 @@
 {
 	"id": "940fe18e5885fd2252fa1c92fdbe7a1y",
 	"title": "Cricket Selector",
-	"headerBackground": "dist/Cricket-header.jpg",
+	"headerBackground": "./dist/Cricket-header.jpg",
 	"sponsorLink":"",
 	"sponsorImage":"",
 	"backgroundColour": "#028CCF",

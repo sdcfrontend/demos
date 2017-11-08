@@ -1,9 +1,9 @@
 {
 	"id": "1",
 	"title": "Premier League Team of the Season",
-	"headerBackground": "dist/PL-header.jpg",
+	"headerBackground": "./dist/PL-header.jpg",
   "sponsorLink":"http://www.blah.com",
-  "sponsorImage":"dist/Standard-Life-Logo-dark.png",
+  "sponsorImage":"./dist/Standard-Life-Logo-dark.png",
 	"backgroundImage": "#030C7E",
 	"restrictSelections": true,
 	"notCategorisedParticipants": false,

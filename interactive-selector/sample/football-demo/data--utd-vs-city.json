@@ -1,7 +1,7 @@
 {
 	"id": "4",
 	"title": "Pick Your United vs City Starting XIs",
-	"headerBackground": "dist/City-Utd-header.jpg",
+	"headerBackground": "./dist/City-Utd-header.jpg",
 	"sponsorLink":"",
 	"sponsorImage":"",
 	"backgroundImage": "#030C7E",

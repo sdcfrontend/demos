@@ -3,7 +3,7 @@
 	"title": "Champions League Team of the Season",
 	"headerBackground": "http://blog.oxforddictionaries.com/wp-content/uploads/football-1.jpg",
 	"sponsorLink":"http://www.blah.com",
-	"sponsorImage":"dist/Standard-Life-Logo.png",
+	"sponsorImage":"./dist/Standard-Life-Logo.png",
 	"backgroundImage": "hotpink",
 	"formation": "532",
 	"restrictSelections": true,

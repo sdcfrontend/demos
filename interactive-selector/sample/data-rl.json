@@ -3,7 +3,7 @@
   "title":"Rugby League Selector",
   "headerBackground": false,
   "sponsorLink":"http://www.blah.com",
-  "sponsorImage":"dist/Standard-Life-Logo.png",
+  "sponsorImage":"./dist/Standard-Life-Logo.png",
   "backgroundImage": "#F4442E",
   "restrictSelections":true,
   "notCategorisedParticipants": false,
