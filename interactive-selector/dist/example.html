@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../../css/min/site-core.css">
+  </head>
+  <body>
+    <div class="">
+      <div class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="token" data-url="../sample/data--custom.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+    <script>
+      requirejs.config({
+        "paths": {
+          "sdc-interactive-selector": "script",
+          "component-loader": "/js/modules/component-loader"
+        }
+      });
+    </script>
+    <script src="/js/min/site-main.js"></script>
+    <script>
+      requirejs(['site-main'], function(site){
+        site.init();
+      })
+    </script>
+  </body>
+</html>
