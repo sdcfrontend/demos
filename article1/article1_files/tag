@@ -1,0 +1,21 @@
+(function(w, d, s) {
+  try {
+    d = w.top.document || d; w = w.top.document ? w.top : w;
+  } catch (e) {}
+  var ttag = function() {
+    w.teads.page(8077).placement(44500, {slider: {allow_corner_position: false, allow_top_position: false}, "css":"margin: 0px 0px 22px;","format":"inread","slot":{"btf":false,"selector":"#in-article-desktop","minimum":1}}).passback(function passback() {(function(d) {
+     var js = d.createElement("script"),
+      s = d.getElementsByTagName("script")[0];
+     js.innerHTML = "var unruly = window.unruly || {}; unruly.native = unruly.native || {}; unruly.native.siteId = 1087915;";
+     s.parentNode.insertBefore(js, s);
+     js = d.createElement("script");
+     js.src = "//video.unrulymedia.com/native/native-loader.js";
+     s.parentNode.insertBefore(js, s);
+})(window.top.document);}).serve();
+  };
+  if (w.teads && w.teads.page) { ttag(); }
+  else if (!w.teadsscript) {
+    s.src = '//cdn.teads.tv/media/format/v3/teads-format.min.js';
+    s.async = true; s.onload = ttag; w.teadsscript = d.getElementsByTagName('head')[0].appendChild(s);
+  }
+})(window, document, document.createElement('script'));
