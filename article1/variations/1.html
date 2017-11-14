@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .div {
+        background: #15165f;
+        padding-bottom: 50%;
+        position: relative;
+        overflow: hidden
+      }
+
+      span {
+        background: url(header1.jpg) no-repeat;
+        background-position: top right;
+        background-size: 200% auto;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        transform: translateX(0%)
+      }
+
+      span + span {
+        left: auto;
+        right: 100%;
+        transform: translateX(0%);
+        background-position: top left;
+      }
+    </style>
+  </head>
+  <body>
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br
+    <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="div">
+  <span></span>
+  <span></span>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<script>
+
+  var div = document.querySelector('div');
+  var span = document.querySelector('span');
+  var span2 = document.querySelector('span + span');
+
+  function tick(){
+
+    var dims = div.getBoundingClientRect();
+    var fromtop = (window.innerHeight - dims.top) + 100;
+
+    span.style.cssText = "transform:translateX("+Math.max((((100/(window.innerHeight-200))*fromtop)*-1), -100.1)+"%)";
+    span2.style.cssText = "transform:translateX("+Math.min((((100/(window.innerHeight-200))*fromtop)*1), 100.1)+"%)";
+
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+
+</script>
+  </body>
+</html>
