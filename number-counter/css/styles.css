@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink;
+}
+
+h1 {
+  font-size: 2.24em;
+  font-weight: normal;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0 0 1.5em;
+  line-height: 1.4;
+  font-size: 22px;
+}
+
+.wrap {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.number-counter {
+  font-size: 5em;
+  line-height: 0;
+  text-align: center;
+}
+
+.number-counter__digit {
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.number-counter__digit:before,
+.number-counter__digit:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.15em;
+  z-index: 1;
+}
+
+.number-counter__digit:before {
+  background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
+  top: 0;
+}
+
+.number-counter__digit:after {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1));
+  bottom: 0;
+}
+
+.number-counter__digit-wheel {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  line-height: 1em;
+  transition: bottom 1s ease-in-out;
+}
