@@ -47,12 +47,17 @@ p {
 
 .number-counter__digit {
   display: inline-block;
-  width: 0.6em;
+  width: 0.55em;
   height: 1em;
   position: relative;
   overflow: hidden;
   word-wrap: break-word;
   text-align: left;
+  color: transparent;
+}
+
+.number-counter__digit--thin {
+  margin-left: 0.1em;
 }
 
 .number-counter__digit-wheel {
@@ -61,4 +66,5 @@ p {
   bottom: 0;
   line-height: 1em;
   transition: bottom 1s ease-in-out;
+  color: #333;
 }
