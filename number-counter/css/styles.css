@@ -47,7 +47,7 @@ p {
 
 .number-counter__digit {
   display: inline-block;
-  width: 0.55em;
+  min-width: 0.55em;
   height: 1em;
   position: relative;
   overflow: hidden;
