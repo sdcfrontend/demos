@@ -1,5 +1,20 @@
 NodeList.prototype.forEach = Array.prototype.forEach;
 
+function cleanNumber(number) {
+  var cleanDigits = [];
+  var dirtyDigits = number.split('');
+
+  dirtyDigits.forEach(function(digit, index) {
+
+    if (!isNaN(parseInt(digit, 10))) {
+      cleanDigits.push(digit);
+    }
+
+  });
+
+  return cleanDigits;
+}
+
 function createDigitsMarkup(numberCounters) {
 
   var numberCounters = document.querySelectorAll('[data-role="number-counter"]');
@@ -14,8 +29,11 @@ function createDigitsMarkup(numberCounters) {
 
     digits.forEach(function(digit, index) {
 
-      numberCounter.innerHTML += '<span class="number-counter__digit" data-role="digit"><span class="number-counter__digit-wheel" data-role="digit-wheel">01234567890</span></span>';
-
+      if (isNaN(parseInt(digit, 10))) {
+        numberCounter.innerHTML += '<span class="number-counter__punctuation">' + digit + '</span>';
+      } else {
+        numberCounter.innerHTML += '<span class="number-counter__digit" data-role="digit"><span class="number-counter__digit-wheel" data-role="digit-wheel">01234567890</span></span>';
+      }
     });
 
   });
@@ -23,8 +41,7 @@ function createDigitsMarkup(numberCounters) {
 
 function count(numberCounter) {
 
-  var number = numberCounter.dataset.number;
-  var digits = number.split('');
+  var digits = cleanNumber(numberCounter.dataset.number);
   var digitElements = numberCounter.querySelectorAll('[data-role="digit"]');
   var digitElementsArray = [];
 
@@ -34,11 +51,11 @@ function count(numberCounter) {
 
   });
 
-  digits.forEach(function(digit, index) {
+  digitElementsArray.forEach(function(digitElement, index) {
 
-    var digitWheel = digitElementsArray[index].querySelector('[data-role="digit-wheel"]');
+    var digitWheel = digitElement.querySelector('[data-role="digit-wheel"]');
 
-    digitWheel.style.bottom = '-' + (1000 - (digit*100)) + '%';
+    digitWheel.style.bottom = '-' + (1000 - (digits[index]*100)) + '%';
 
   });
 

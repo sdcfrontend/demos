@@ -36,6 +36,13 @@ p {
   font-size: 5em;
   line-height: 0;
   text-align: center;
+  position: relative;
+}
+
+.number-counter__punctuation {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 0.5em;
 }
 
 .number-counter__digit {
@@ -46,27 +53,6 @@ p {
   overflow: hidden;
   word-wrap: break-word;
   text-align: left;
-}
-
-.number-counter__digit:before,
-.number-counter__digit:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 0.15em;
-  z-index: 1;
-}
-
-.number-counter__digit:before {
-  background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,1));
-  top: 0;
-}
-
-.number-counter__digit:after {
-  background-image: linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,1));
-  bottom: 0;
 }
 
 .number-counter__digit-wheel {
