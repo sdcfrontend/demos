@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="output.css">
+    <style media="screen">
+
+      .pages {
+        white-space: nowrap;
+        overflow: scroll;
+        width: 100vw;
+      }
+
+      .page {
+        background: hotpink;
+        width: 100vw;
+        border: 3px solid red;
+        height: 100vh
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="pages">
+
+      <div class="page">1</div>
+      <div class="page">2</div>
+      <div class="page">3</div>
+      <div class="page">4</div>
+      <div class="page">5</div>
+      <div class="page">6</div>
+
+    </div>
+
+
+<script>
+
+NodeList.prototype.forEach = Array.prototype.forEach;
+
+var images = document.querySelectorAll('.image-wrap');
+var page = document.querySelector('.pages');
+var headlines = document.querySelectorAll('h2');
+
+function opacity(index){
+
+  images.forEach(function(item){
+    item.style.cssText = "opacity:0";
+  });
+
+  images[index].style.cssText = "opacity: 1"
+}
+
+
+function tick(){
+
+  var match = 0;
+
+  headlines.forEach(function(item, index){
+    if(item.getBoundingClientRect().top < (window.innerHeight/2)){
+      match = index;
+    }
+  });
+
+  opacity(match);
+
+  // console.log(list);
+
+  requestAnimationFrame(tick);
+
+}
+
+tick();
+
+
+
+
+
+</script>
+  </body>
+</html>
