@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="output.css">
+    <style media="screen">
+
+      @keyframes slide {
+        /*60% {
+          transform: translateX(105%)
+        }*/
+
+        100% {
+          transform: translateX(100%);
+        }
+
+      }
+
+      @keyframes slideback {
+        /*60% {
+          transform: translateX(-105%)
+        }*/
+
+        100% {
+          transform: translateX(-100%);
+        }
+
+      }
+
+      .image {
+        background: url(bg.jpg);
+        background-size: 100% auto;
+        background-position: center;
+        background-color: #15165f;
+        padding-bottom: 50%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3em;
+      }
+
+      .image[data-scroll-action-active] span {
+        animation-delay: 0.1s;
+        animation-name: slideback;
+        animation-direction: normal;
+        animation-timing-function: cubic-bezier(0.000, 0.945, 0.310, 0.980);
+      }
+
+      .image[data-scroll-action-active] span + span {
+        animation-name: slide;
+      }
+
+      span {
+        background: url(right.png) no-repeat;
+        background-position: top right;
+        background-size: 100% auto;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 100%;
+        height: 100%;
+        transform: translateX(0%);
+        animation-duration: 1.2s;
+        animation-fill-mode: forwards;
+        /*mix-blend-mode: hard-light;*/
+        /*animation-name: slideback;
+        animation-direction: reverse;*/
+      }
+
+      span + span {
+        background-image: url(left.png);
+        left: auto;
+        right: 100%;
+        transform: translateX(0%);
+        background-position: top left;
+      }
+
+      p {
+        font-size: 22px;
+        margin: 0 auto 1.5em;
+        line-height: 1.4;
+        max-width: 740px;
+        padding: 0 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image" data-scroll-action>
+      <span></span>
+      <span></span>
+    </div>
+    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+
+    <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+
+    <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
+
+    <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+
+    <p>"What's happened to me? " he thought. It wasn't a dream.
+
+    <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+
+    <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+
+    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+
+    <p>Gregor then turned to look out the window at the dull weather.
+
+  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
+
+    <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
+
+      <div class="image" data-scroll-action>
+        <span></span>
+        <span></span>
+      </div>
+    <p>However hard he threw himself onto his right, he always rolled back to where he was.
+      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+
+      <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+
+      <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
+
+      <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+
+      <p>"What's happened to me? " he thought. It wasn't a dream.
+
+      <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+
+      <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+
+
+        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
+
+        <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+
+        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
+
+        <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+          <div class="image" data-scroll-action>
+            <span></span>
+            <span></span>
+          </div>
+        <p>"What's happened to me? " he thought. It wasn't a dream.
+
+        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+
+        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
+
+        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
+
+        <p>Gregor then turned to look out the window at the dull weather.
+
+      <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
+
+        <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
+
+
+
+<script>
+
+  function scrollAction(){
+
+    function tick(){
+      var items = document.querySelectorAll('[data-scroll-action]:not([data-scroll-action-active])');
+      var h = window.innerHeight;
+      items.forEach(function(item){
+        var dims = item.getBoundingClientRect();
+        console.log(dims.top);
+        if(dims.top < h){
+          item.setAttribute('data-scroll-action-active', 'true');
+        }
+      });
+
+      requestAnimationFrame(tick);
+    }
+
+    tick();
+
+  }
+
+  scrollAction();
+
+
+
+</script>
+  </body>
+</html>
