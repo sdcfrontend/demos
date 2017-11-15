@@ -34,19 +34,20 @@ p {
 
 .number-counter {
   font-size: 5em;
-  line-height: 0;
   text-align: center;
   position: relative;
 }
 
 .number-counter__punctuation {
   display: inline-block;
-  vertical-align: bottom;
-  height: 0.5em;
+  vertical-align: middle;
+  height: 0;
+  line-height: 0;
 }
 
 .number-counter__digit {
   display: inline-block;
+  vertical-align: middle;
   min-width: 0.55em;
   height: 1em;
   position: relative;
@@ -65,6 +66,6 @@ p {
   width: 100%;
   bottom: 0;
   line-height: 1em;
-  transition: bottom 1s ease-in-out;
+  transition: transform 1s ease-in-out;
   color: #333;
 }

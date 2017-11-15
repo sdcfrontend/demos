@@ -55,7 +55,7 @@ function count(numberCounter) {
 
     var digitWheel = digitElement.querySelector('[data-role="digit-wheel"]');
 
-    digitWheel.style.bottom = '-' + (1000 - (digits[index]*100)) + '%';
+    digitWheel.style.cssText = 'transform: translateY(' + (10 - digits[index]) + 'em)';
 
   });
 
