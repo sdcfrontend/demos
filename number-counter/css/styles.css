@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -35,7 +36,6 @@ p {
 .number-counter {
   font-size: 5em;
   text-align: center;
-  position: relative;
 }
 
 .number-counter__punctuation {
@@ -54,6 +54,9 @@ p {
   overflow: hidden;
   word-wrap: break-word;
   text-align: left;
+}
+
+.number-counter__digit--static {
   color: transparent;
 }
 
@@ -67,5 +70,64 @@ p {
   bottom: 0;
   line-height: 1em;
   transition: transform 1s ease-in-out;
-  color: #333;
+}
+
+.player-stats {
+  background-color: #030C7E;
+}
+
+.player-stats__cols {
+  max-width: 1200px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.player-stats__col {
+  flex: 0 0 50%;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.player-stats__col + .player-stats__col {
+  align-self: center;
+}
+
+.player-stats__image {
+  display: block;
+  max-width: 100%;
+  padding: 1.5em 0 0 0;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.player-stats__stat {
+  color: #fff;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.player-stats__stat-figure {
+  font-size: 8em;
+  font-weight: 200;
+}
+
+.player-stats__stat-caption {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.bar-chart {
+  list-style: none;
+}
+
+.bar-chart__bar {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 2em;
+  text-align: center;
+  background: darkgreen;
+  color: #fff;
 }

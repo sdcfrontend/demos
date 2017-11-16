@@ -32,7 +32,7 @@ function createDigitsMarkup(numberCounters) {
       if (isNaN(parseInt(digit, 10))) {
         numberCounter.innerHTML += '<span class="number-counter__punctuation">' + digit + '</span>';
       } else {
-        numberCounter.innerHTML += '<span class="number-counter__digit" data-role="digit"><span class="number-counter__digit-wheel" data-role="digit-wheel">0<span class="number-counter__digit--thin">1</span>234567890</span>' + digit + '</span>';
+        numberCounter.innerHTML += '<span class="number-counter__digit" data-role="digit"><span class="number-counter__digit-wheel" data-role="digit-wheel">0<span class="number-counter__digit--thin">1</span>234567890</span><span class="number-counter__digit--static">' + digit + '</span></span>';
       }
     });
 
