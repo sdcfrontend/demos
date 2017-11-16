@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="output.css">
+
+    <style media="screen">
+    h1 {
+      font-size:3.6em;
+      font-weight: 400;
+      text-align: center;
+      margin: 0.8em 0 0.8em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 25%);
+      grid-template-rows:  repeat(7, 40vh);
+      flex-wrap: wrap;
+    }
+
+    .grid-item {
+      /* position: sticky; */
+      position: relative;
+      background: orange;
+      top: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .grid-item h2 {
+      font-size: 2em;
+      font-weight: normal;
+    }
+
+    .grid-item:after {
+      content:"";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .grid-item:before {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: black;
+      mix-blend-mode: saturation;
+      position: absolute;
+      transition: transform 1s;
+    }
+
+    .grid-item[active]:before {
+      transform: translateX(-100%);
+    }
+
+    .grid-item[data-vertical][active]:before {
+      transform: translateY(-100%)
+    }
+
+    .grid-item[data-horizontal][active]:before {
+      transform: translateX(100%)
+    }
+
+
+    .grid-item:nth-child(1){
+      grid-row: 1/3;
+      font-size: 1.4em;
+    }
+
+    .grid-item:nth-child(2){
+      grid-column: 2/4;
+      grid-row: 1/3;
+      font-size: 1.75em;
+    }
+
+    .grid-item:nth-child(6){
+      grid-column: 1/3;
+      grid-row: 3/5;
+      font-size: 1.75em
+    }
+
+    .grid-item:nth-child(9){
+      grid-column: 3/4;
+      grid-row: 3/6;
+      font-size: 1.4em
+    }
+
+    .grid-item:nth-child(13){
+      grid-column: 2/3;
+      grid-row: 5/7;
+      font-size: 1.4em
+    }
+
+
+    .grid-item:nth-child(14){
+      grid-column: 3/5;
+      grid-row: 6/7;
+      font-size: 1.4em
+    }
+
+    .grid-item:nth-child(15){
+      grid-column: 2/4;
+      font-size: 1.4em
+    }
+
+
+    .number-counter__punctuation {
+      display: inline-block;
+      vertical-align: middle;
+      height: 0;
+      line-height: 0;
+    }
+    
+    .number-counter__digit {
+      display: inline-block;
+      vertical-align: middle;
+      min-width: 0.55em;
+      height: 1em;
+      position: relative;
+      overflow: hidden;
+      word-wrap: break-word;
+      text-align: left;
+    }
+    
+    .number-counter__digit--static {
+      color: transparent;
+    }
+    
+    .number-counter__digit--thin {
+      margin-left: 0.1em;
+    }
+    
+    .number-counter__digit-wheel {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      line-height: 1em;
+      transition: transform 1s ease-in-out;
+    }
+    
+
+
+    </style>
+   </head>
+   <body>
+     <!-- <h1>World Cup 2018 in Stats</h1> -->
+    <div class="grid">
+
+      <div class="grid-item" data-vertical style="background: rgb(67, 105, 177); color: white">
+        <div>
+          <h2>Russia</h2>
+          <ul><li>Ranking: <span data-role="number-counter">15</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" style="background: rgb(255, 208, 0)">
+        <div>
+          <h2>Brazil</h2>
+          <ul><li>Ranking: <span data-role="number-counter">1</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" data-horizontal style="background: rgb(19, 175, 19); color: white">
+        <div>
+          <h2>Iran</h2>
+          <ul><li>Ranking: <span data-role="number-counter">31</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+     
+      <div class="grid-item" style="background: rgb(248, 248, 248); color: rgb(216, 5, 5)">
+        <div>
+          <h2>Japan</h2>
+          <ul><li>Ranking: <span data-role="number-counter">14</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" style="background: #006946;color: white">
+        <div>
+          <h2>Mexico</h2>
+          <ul><li>Ranking: <span data-role="number-counter">12</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" data-horizontal style="background: black; color: #ffee00">
+          <div>
+            <h2>Germany</h2>
+            <ul><li>Ranking: <span data-role="number-counter">2</span> </li>
+            <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+        
+        </div></div>
+      <div class="grid-item" style="background: #e80016; color: yellow">
+        <div>
+          <h2>Belgium</h2>
+          <ul><li>Ranking: <span data-role="number-counter">4</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+
+
+      <div class="grid-item" style="background: #da071e; color: white">
+          <div>
+            <h2>Peru</h2>
+            <ul><li>Ranking: <span data-role="number-counter">30</span> </li>
+            <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+        
+        </div></div>
+
+
+        <div class="grid-item"  data-vertical style="background: #001e96; color: white;">
+            <div>
+              <h2>France</h2>
+              <ul><li>Ranking: <span data-role="number-counter">3</span> </li>
+              <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+          
+          </div></div>
+
+      <div class="grid-item" style="background: #008851; color: white">
+        <div>
+          <h2>Nigeria</h2>
+          <ul><li>Ranking: <span data-role="number-counter">25</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" style="background: #ffffff; color: rgb(214, 1, 1)">
+        <div>
+          <h2>Poland</h2>
+          <ul><li>Ranking: <span data-role="number-counter">13</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      <div class="grid-item" data-vertical style="background: #be0b0b; color:rgb(255, 255, 255)">
+        <div>
+          <h2>Portugal</h2>
+          <ul><li>Ranking: <span data-role="number-counter">9</span> </li>
+          <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+      
+      </div></div>
+      
+
+      <div class="grid-item"  data-vertical style="background: #ffc501;color: rgb(151, 15, 15)">
+          <div>
+            <h2>Spain</h2>
+            <ul><li>Ranking: <span data-role="number-counter">5</span> </li>
+            <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+        
+        </div></div>
+     
+      <div class="grid-item" style="background: #cf081f; color: white" data-horizontal>
+          <div>
+            <h2>England</h2>
+            <ul><li>Ranking: <span data-role="number-counter">8</span> </li>
+            <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+        
+        </div></div>
+
+        <div class="grid-item" style="background: #75ade0; color: white">
+          <div>
+            <h2>Argentina</h2>
+            <ul><li>Ranking: <span data-role="number-counter">7</span> </li>
+            <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+        
+        </div></div>
+
+        <div class="grid-item" data-horizontal style="background: #268609; color: yellow">
+            <div>
+              <h2>Australia</h2>
+              <ul><li>Ranking: <span data-role="number-counter">26</span> </li>
+              <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+          
+          </div></div>
+
+          
+
+            <!-- <div class="grid-item" style="background: #0036aa; color: rgb(255, 255, 255)">
+                <div>
+                  <h2>Uruguay</h2>
+                  <ul><li>Ranking: <span data-role="number-counter">12</span> </li>
+                  <li>World Cup wins: <span data-role="number-counter">3</span></li></ul>
+              
+              </div></div> -->
+     
+      
+   
+
+    </div>
+    <script>
+     NodeList.prototype.forEach = Array.prototype.forEach;
+     var items = document.querySelectorAll('.grid-item');
+
+function cleanNumber(number) {
+  var cleanDigits = [];
+  var dirtyDigits = number.split('');
+
+  dirtyDigits.forEach(function(digit, index) {
+
+    if (!isNaN(parseInt(digit, 10))) {
+      cleanDigits.push(digit);
+    }
+
+  });
+
+  return cleanDigits;
+}
+
+function createDigitsMarkup(numberCounters) {
+
+  var numberCounters = document.querySelectorAll('[data-role="number-counter"]');
+
+  numberCounters.forEach(function(numberCounter) {
+
+    var number = numberCounter.textContent;
+    var digits = number.split('');
+
+    numberCounter.setAttribute('data-number', number);
+    numberCounter.innerHTML = '';
+
+    digits.forEach(function(digit, index) {
+
+      if (isNaN(parseInt(digit, 10))) {
+        numberCounter.innerHTML += '<span class="number-counter__punctuation">' + digit + '</span>';
+      } else {
+        numberCounter.innerHTML += '<span class="number-counter__digit" data-role="digit"><span class="number-counter__digit-wheel" data-role="digit-wheel">0<span class="number-counter__digit--thin">1</span>234567890</span><span class="number-counter__digit--static">' + digit + '</span></span>';
+      }
+    });
+
+  });
+}
+
+function count(numberCounter) {
+
+  var digits = cleanNumber(numberCounter.dataset.number);
+  var digitElements = numberCounter.querySelectorAll('[data-role="digit"]');
+  var digitElementsArray = [];
+
+  digitElements.forEach(function(digitElement) {
+
+    digitElementsArray.push(digitElement);
+
+  });
+
+  digitElementsArray.forEach(function(digitElement, index) {
+
+    var digitWheel = digitElement.querySelector('[data-role="digit-wheel"]');
+
+    digitWheel.style.cssText = 'transform: translateY(' + (10 - digits[index]) + 'em)';
+
+  });
+
+}
+
+function triggerCounters() {
+
+  function findScrollPosition() {
+
+    var numberCounters = document.querySelectorAll('[data-role="number-counter"]');
+    var height = window.innerHeight;
+
+    numberCounters.forEach(function(numberCounter) {
+
+      var dimensions = numberCounter.getBoundingClientRect();
+
+      if (dimensions.bottom < height) {
+        count(numberCounter);
+      }
+
+    });
+
+    items.forEach(function(item){
+      if((item.getBoundingClientRect().top - height) < 0){
+        item.setAttribute('active', true);
+      }
+    })
+
+    requestAnimationFrame(findScrollPosition);
+
+  }
+
+  findScrollPosition();
+
+}
+
+createDigitsMarkup();
+triggerCounters();
+
+    </script>
+   </body>
+
+</html>
