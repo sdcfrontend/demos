@@ -62,18 +62,18 @@ p {
 }
 
 .sticky-images__strip {
-  height: 100vh;
+  height: 200vh;
   position: relative;
 }
 
 .sticky-images__strip + .sticky-images__strip {
-  margin-top: -30vh;
+  margin-top: -100vh;
 }
 
 .sticky-images__image-wrap {
   position: sticky;
   top: 0;
-  height: 70vh;
+  height: 100vh;
 }
 
 .sticky-images__image {
@@ -84,7 +84,7 @@ p {
 
 .sticky-images__caption {
   position: absolute;
-  top: 50%;
+  top: 25%;
   width: 100%;
   text-align: center;
 }
