@@ -5,13 +5,51 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <ul class="bar-chart" data-role="chart" data-type="bar" data-max="10">
-      <li class="bar-chart__bar" data-role="bar" data-value="8">8</li>
-      <li class="bar-chart__bar" data-role="bar" data-value="2">2</li>
-      <li class="bar-chart__bar" data-role="bar" data-value="5">5</li>
-      <li class="bar-chart__bar" data-role="bar" data-value="8">6</li>
-      <li class="bar-chart__bar" data-role="bar" data-value="8">4</li>
-    </ul>
+    <div class="grid">
+      <div class="chart">
+        <ul class="bar-chart" data-role="chart" data-type="bar" data-max="10">
+          <li class="bar-chart__bar" data-role="bar" data-value="8">8</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="2">2</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="5">5</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="6">6</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="4">4</li>
+        </ul>
+      </div>
+
+      <div class="chart">
+        <ul class="bar-chart" data-role="chart" data-type="bar" data-max="10">
+          <li class="bar-chart__bar" data-role="bar" data-value="8">8</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="2">2</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="5">5</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="6">6</li>
+          <li class="bar-chart__bar" data-role="bar" data-value="4">4</li>
+        </ul>
+      </div>
+
+      <div class="chart">
+        <div class="circle-chart" data-role="chart" data-type="circle" data-max="10" data-track="false" data-preset="true" data-stroke="50" data-stroke-colour="blue" data-value="0.8" data-duration="1">
+          <h1 class="number-counter" data-role="number-counter">80%</h1>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class="circle-chart" data-role="chart" data-type="circle" data-max="10" data-track="false" data-preset="true" data-stroke="50" data-stroke-colour="green" data-value="0.37" data-duration="1">
+          <h1 class="number-counter" data-role="number-counter">37%</h1>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class="circle-chart" data-role="chart" data-type="circle" data-max="10" data-track="false" data-preset="true" data-stroke="4" data-stroke-colour="yellow" data-value="0.8" data-duration="1">
+          <h1 class="number-counter" data-role="number-counter">80%</h1>
+        </div>
+      </div>
+
+      <div class="chart">
+        <div class="circle-chart" data-role="chart" data-type="circle" data-max="10" data-track="true" data-preset="true" data-stroke="1" data-stroke-colour="orange" data-value="0.37" data-duration="1">
+          <h1 class="number-counter" data-role="number-counter">37%</h1>
+        </div>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/charts.js"></script>

@@ -119,15 +119,63 @@ p {
   font-weight: 200;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid > .chart {
+  padding: 1em;
+  flex-basis: 50%;
+}
+
 .bar-chart {
   list-style: none;
+  height: 300px;
+  vertical-align: bottom;
+  display: flex;
+  flex: 1 0 50%;
+  background: #eee;
+  overflow: hidden;
 }
 
 .bar-chart__bar {
-  display: inline-block;
-  vertical-align: bottom;
   width: 2em;
+  height: 100%;
+  margin: 0 0.1em;
   text-align: center;
   background: darkgreen;
   color: #fff;
+  flex: 1;
+  align-self: flex-end;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.circle-chart {
+  position: relative;
+}
+
+.circle-chart > svg {
+  width: 100%;
+}
+
+.circle-chart > .number-counter {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -0.65em;
+  font-size: 3em;
+  z-index: 2;
+}
+
+.circle-chart__track {
+  fill: transparent;
+  stroke: rgba(0,0,0,0.1);
+  stroke-width: 1;
+}
+
+.circle-chart__bar {
+  fill: transparent;
+  stroke: rgba(0,0,0,0.5);
 }
