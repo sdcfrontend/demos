@@ -6,9 +6,14 @@ function adjustSubjectPosition(parallaxWindow) {
   var parallexWindowDimensions = parallaxWindow.getBoundingClientRect();
 
   if (parallexWindowDimensions.top < height) {
-    var parallaxSubject = parallaxWindow.querySelector('[data-role="parallax-subject"]');
+    var parallaxSubjects = parallaxWindow.querySelectorAll('[data-role="parallax-subject"]');
 
-    parallaxSubject.style.cssText = 'transform: translateY(' + (-parallexWindowDimensions.top*0.25) + 'px)';
+    parallaxSubjects.forEach(function(parallaxSubject) {
+      var multiplier = parallaxSubject.dataset.multiplier;
+
+      parallaxSubject.style.cssText = 'transform: translateY(' + (-parallexWindowDimensions.top*multiplier) + 'px)';
+
+    });
   }
 
 }

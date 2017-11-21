@@ -73,6 +73,10 @@ p {
   position: relative;
 }
 
+.sticky-images__strip--static {
+  overflow: hidden;
+}
+
 .sticky-images__image-wrap {
   position: sticky;
   -webkit-position: sticky;
