@@ -4,7 +4,7 @@ function setProperties(subject, frameDimensions, property, defaults) {
 
   switch (property) {
     case 'fade':
-    subject.style.cssText = 'opacity: ' + -(frameDimensions.top/50)*defaults.multiplier;
+    subject.style.cssText = 'opacity: ' + -(frameDimensions.top/20)*defaults.multiplier;
     break;
 
     case 'transform':
