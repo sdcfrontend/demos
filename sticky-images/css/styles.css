@@ -165,3 +165,13 @@ p {
   text-transform: uppercase;
   color: #fff;
 }
+
+@media all and (max-width: 480px) {
+  .sticky-images__title {
+    height: auto;
+  }
+  .sticky-images__title-side {
+    position: static;
+    white-space: normal;
+  }
+}
