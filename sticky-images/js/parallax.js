@@ -22,13 +22,16 @@ function triggerParallax() {
 
   function findScrollPosition() {
 
+    var height = window.innerHeight;
     var parallaxWindows = document.querySelectorAll('[data-role="parallax-window"]');
 
     parallaxWindows.forEach(function(parallaxWindow) {
 
-      var dimensions = parallaxWindow.getBoundingClientRect();
+      var parallaxWindowDimensions = parallaxWindow.getBoundingClientRect();
 
-      adjustSubjectPosition(parallaxWindow);
+      if (parallaxWindowDimensions.top < height && (parallaxWindowDimensions.top + parallaxWindowDimensions.height) > 0 ) {
+        adjustSubjectPosition(parallaxWindow);
+      }
 
     });
 
