@@ -69,6 +69,10 @@ p {
   transition: transform 0.5s ease-in-out;
 }
 
+.sticky-images {
+  background: black;
+}
+
 .sticky-images__strip {
   position: relative;
 }
