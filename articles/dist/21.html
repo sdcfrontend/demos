@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="output.css">
+<script src="http://www.webglearth.com/v2/api.js"></script>
+<script>
+ 
+</script>
+    <style media="screen">
+    
+      .page {
+        display: flex;
+        padding: 2em 4vw;
+      }
+
+      .page-col {
+        margin: 0;
+        padding: 12px 0
+      }
+
+      .page-nav {
+        width: 200px
+      }
+
+      .page-related {
+        width: 340px
+      }
+
+      .page-body {
+        flex: 1;
+        min-width: 500px;
+        padding: 0 3em;
+      }
+
+      .page-stick {
+        top: 2em;
+        position: sticky
+
+      }
+
+      p,
+      h1,
+      h2 {
+        margin-bottom: 2em;
+        font-weight: 400;
+      }
+
+      h1 {
+        margin-bottom: 0.75em;
+        font-size: 2.8em;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+      }
+
+      h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.75em;
+        font-weight: 500;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      li a {
+        padding: 2px 1px;
+        display: inline-block;
+        color: #3157a1
+      }
+
+      .sdc-news-story-grid__card {
+        display: flex;
+        margin-bottom: 24px;
+      }
+
+      .sdc-news-story-grid__link {
+        width: 130px
+      }
+
+      .sdc-news-story-grid__body {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+      }
+
+      .sdc-news-story-grid__headline  {
+        font-size: 1.1em;
+        font-weight: 400;
+        color: #3157a1
+      }
+
+     .gallery {
+       margin-bottom: 2em;
+       cursor: pointer;
+       position: relative;
+       z-index: 10;
+     }
+
+     .pic {
+       position: relative;
+       padding-bottom: 56.25%;
+     }
+
+     .pic img {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 0;
+       object-fit: cover;
+     }
+
+     .pic + .pic {
+       display: none;
+     }
+
+     .pic-caption {
+       display: none;
+     }
+
+     .gallery-close {
+       position: fixed;
+       height: 40px;
+       width: 40px;
+       display: none;
+       align-items: center;
+       justify-content: center;
+      border-radius: 50%;
+      top: 0;
+      right:0;
+      transform: translate(-100%,100%);
+      z-index: 111111;
+      font-size: 28px;
+      line-height: 0.5;
+      color: white;
+      padding-bottom: 3px;
+      background: rgba(0,0,0,0.6);
+      cursor: pointer;
+     }
+
+     .gallery-close:hover {
+      text-decoration: none;
+     }
+
+     .gallery-badge {
+       position: absolute;
+       width: 75px;
+       height: 75px;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%);
+       pointer-events: none;
+       z-index: 12;
+     }
+
+     .gallery-badge svg {
+       fill: white;
+       position: absolute;
+       width: 100%;
+     }
+
+     .gallery:-webkit-full-screen {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      overflow: auto;
+      cursor: default
+     }
+
+     .gallery:-webkit-full-screen .pic {
+       padding: 0;
+       height: 100vh;
+       position: -webkit-sticky;
+       position: sticky;
+       top: 0;
+       display: block!important;
+     }
+
+     .gallery:-webkit-full-screen .pic-caption {
+       display: block;
+       position: absolute;
+       bottom: 8vh;
+       left: 50%;
+       width: 60%;
+       transform: translateX(-50%);
+       margin: 0;
+       color: white;
+       font-size: 1.2em;
+       text-align: center;
+       padding: 1em;
+       background: rgba(0,0,0,0.6)
+     }
+
+     .gallery:-webkit-full-screen .gallery-close {
+        display: flex;
+      }
+
+      .gallery:-webkit-full-screen .gallery-badge {
+        display: none;
+      }
+
+      .gallery:fullscreen {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      overflow: auto;
+     }
+
+     .gallery:fullscreen .pic {
+       padding: 0;
+       height: 100vh;
+       position: -webkit-sticky;
+       position: sticky;
+       top: 0;
+       display: block!important;
+     }
+
+     .gallery:fullscreen .pic-caption {
+       display: block;
+       position: absolute;
+       bottom: 8vh;
+       left: 50%;
+       width: 60%;
+       transform: translateX(-50%);
+       margin: 0;
+       color: white;
+       font-size: 1.2em;
+       text-align: center;
+       padding: 1em;
+       background: rgba(0,0,0,0.6)
+     }
+
+     .gallery:fullscreen .gallery-close {
+        display: flex;
+      }
+
+      .gallery:fullscreen .gallery-badge {
+        display: none;
+      }
+
+
+      
+
+    </style>
+   </head>
+   <body>
+    <div class="page">
+      <div class="page-col page-nav">
+        <div class="page-stick">
+          <div class="video-dock"></div>
+          <h3>Summary:</h3>
+          <ul>
+            <li><a class="page-anchor" href="#d1">The Incident</a></li>
+            <li><a class="page-anchor" href="#d2">Pursuit across London</a></li>
+            <li><a class="page-anchor" href="#d3">Shootout at the Bridge</a></li>
+            <li><a class="page-anchor" href="#d4">Capture</a></li>
+            <li><a class="page-anchor" href="#d5">Suspected Identified</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="page-col page-body">
+        <h1>Sky special report: London calling</h1>
+
+          <h2 id="d1">The Incident</h2>
+
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+          </p><p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          <div class="gallery">
+            <span class="gallery-badge">
+                <svg viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  
+                  <g transform="translate(0, 5)">
+                      <path d="M38.61,5.48714286 L30.6742857,5.48714286 L28.1571429,2.95 C27.3228571,2.10857143 26.2257143,1.18428571 25.1242857,1.17285714 L25.1242857,1.15142857 L17.8,1.15142857 L17.8,1.17285714 L17.7771429,1.17285714 C16.6685714,1.17285714 15.5628571,2.10428571 14.7242857,2.95 L12.2057143,5.48714286 L4.32571429,5.48714286 C1.96285714,5.48714286 0.04,7.43285714 0.04,9.82428571 L0.04,27.17 C0.04,29.5614286 1.96285714,31.5071429 4.32571429,31.5071429 L38.6114286,31.5071429 C40.9742857,31.5071429 42.8971429,29.5614286 42.8971429,27.17 L42.8971429,9.82428571 C42.8957143,7.43285714 40.9742857,5.48714286 38.61,5.48714286 Z M40.0385714,27.17 C40.0385714,27.9857143 39.3971429,28.65 38.61,28.65 L4.32428571,28.65 C3.53714286,28.65 2.89571429,27.9857143 2.89571429,27.17 L2.89571429,9.82428571 C2.89571429,9.00857143 3.53714286,8.34428571 4.32428571,8.34428571 L12.2057143,8.34428571 L13.3957143,8.34428571 L14.2342857,7.5 L16.7528571,4.96142857 C17.4171429,4.29142857 17.7714286,4.08714286 17.8942857,4.03 L20.6571429,4.04142857 L20.6571429,4.00857143 L23.0985714,4.00857143 L24.9814286,4.02857143 C25.1014286,4.08285714 25.4557143,4.28428571 26.1285714,4.96285714 L28.6457143,7.5 L29.4842857,8.34428571 L30.6742857,8.34428571 L38.61,8.34428571 C39.3971429,8.34428571 40.0385714,9.00857143 40.0385714,9.82428571 L40.0385714,27.17 Z" id="Shape"></path>
+                      <path d="M21.4757143,9.00571429 C16.7414286,9.00571429 12.9042857,12.8428571 12.9042857,17.5771429 C12.9042857,22.3114286 16.7414286,26.1485714 21.4757143,26.1485714 C26.21,26.1485714 30.0471429,22.3114286 30.0471429,17.5771429 C30.0471429,12.8428571 26.21,9.00571429 21.4757143,9.00571429 Z M21.4757143,23.2914286 C18.3242857,23.2914286 15.7614286,20.7285714 15.7614286,17.5771429 C15.7614286,14.4257143 18.3242857,11.8628571 21.4757143,11.8628571 C24.6271429,11.8628571 27.19,14.4257143 27.19,17.5771429 C27.19,20.7271429 24.6271429,23.2914286 21.4757143,23.2914286 Z"></path>
+                      <circle id="Oval" cx="35.0471429" cy="13.38" r="2.5"></circle>
+                  </g>
+                  
+                  </svg>
+            </span>
+            <a href="#" class="gallery-close">x</a>
+            <div class="pic"><img src="https://e3.365dm.com/17/06/2048x1152/1db47ea208b59cc44a53d6419ee13eaa55c21809ff9f4e41235d88538fb7c024_3982084.jpg?20170620154937" alt="">
+            <p class="pic-caption">A wonderful serenity has taken possession of my soul</p>
+            </div>
+            <div class="pic"><img src="https://e3.365dm.com/17/11/2048x1152/skynews-theresa-may-priti-patel_4149855.jpg?20171108012646" alt=""><p class="pic-caption">A wonderful serenity has taken possession of my soul</p></div>
+            <div class="pic"><img src="https://e3.365dm.com/17/11/2048x1536/skynews-priti-patel-cabinet-minister_4150609.jpg?20171109130402" alt=""><p class="pic-caption">A wonderful serenity has taken possession of my soul</p></div>
+            <div class="pic"><img src="https://e3.365dm.com/17/11/2048x1152/skynews-gary-goldsmith-uncle-kate-middleton_4155444.jpg?20171114122331" alt=""><p class="pic-caption">A wonderful serenity has taken possession of my soul</p></div>
+            <div class="pic"><img src="https://e3.365dm.com/17/11/2048x1152/skynews-vladimir-putin-moscow-tv-interview_4155492.jpg?20171114131313" alt=""><p class="pic-caption">A wonderful serenity has taken possession of my soul</p></div>
+
+          </div>
+          
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p>
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          
+          <h2 id="d2">Pursuit across London</h2>
+          
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p>
+          <h2 id="d3">Shootout at the Bridge</h2>
+          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p>
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p>
+          
+          <h2 id="d4">Capture</h2>
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <h2 id="d5">Suspected Identified</h2>
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+              
+
+    </div>
+
+    <div class="page-col page-related">
+        <div class="page-stick">
+          <h3>Recommended for you:</h3>
+          <div class="sdc-news-story-grid__row">
+              
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11137405">
+              
+              
+              
+                                      <a href="https://news.sky.com/story/eight-things-to-read-before-the-budget-11136723" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-philip-hammond-speech_4162749.jpg?bypass-service-worker&amp;20171122032733" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-philip-hammond-speech_4162749.jpg?bypass-service-worker&amp;20171122032733 288w" alt="Philip Hammond prepares his speech for the Budget in Downing Street" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="https://news.sky.com/story/eight-things-to-read-before-the-budget-11136723" class="sdc-news-story-grid__link">Eight things to read before the Budget</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138450">
+              
+              
+              
+                                      <a href="/story/live-un-judgment-on-butcher-of-bosnia-mladic-11138450" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-ratko-mladic-trial_4162863.jpg?bypass-service-worker&amp;20171122091249" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-ratko-mladic-trial_4162863.jpg?bypass-service-worker&amp;20171122091249 288w" alt="Ratko Mladic" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline sdc-news-story-grid__headline--breaking">
+                                              <a href="/story/live-un-judgment-on-butcher-of-bosnia-mladic-11138450" class="sdc-news-story-grid__link">LIVE: UN judgment on 'Butcher of Bosnia'</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138297">
+              
+              
+              
+                                      <a href="/story/david-cassidy-1970s-teen-idol-and-the-partridge-family-star-dies-11138297" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-david-cassidy-music_4160174.jpg?bypass-service-worker&amp;20171119093119" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-david-cassidy-music_4160174.jpg?bypass-service-worker&amp;20171119093119 288w" alt="David Cassidy at a press conference in London in 1974" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/david-cassidy-1970s-teen-idol-and-the-partridge-family-star-dies-11138297" class="sdc-news-story-grid__link">David Cassidy, 1970s teen idol, dies aged 67</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11137245">
+              
+              
+              
+                                      <a href="/story/best-day-of-my-life-celebrations-as-zimbabwe-awaits-mugabe-successor-11137245" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-zimbabwe-harare-celebrations_4162793.jpg?bypass-service-worker&amp;20171122071027" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-zimbabwe-harare-celebrations_4162793.jpg?bypass-service-worker&amp;20171122071027 288w" alt="Zimbabweans celebrate in the morning sun after President Robert Mugabe resigned in Harare" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/best-day-of-my-life-celebrations-as-zimbabwe-awaits-mugabe-successor-11137245" class="sdc-news-story-grid__link">Mugabe successor on way back to be sworn in </a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138291">
+              
+              
+              
+                                      <a href="/story/sky-views-does-animal-suffering-matter-to-uk-11138291" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-calves-animal-welfare_4162742.jpg?bypass-service-worker&amp;20171122004713" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-calves-animal-welfare_4162742.jpg?bypass-service-worker&amp;20171122004713 288w" alt="Is the UK taking a step backward on animal welfare?" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/sky-views-does-animal-suffering-matter-to-uk-11138291" class="sdc-news-story-grid__link">Sky Views: UK risks being animal torturers</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+              
+                  </div>
+
+        </div>
+    </div>
+
+  </div>
+
+    <script>
+
+      NodeList.prototype.forEach = Array.prototype.forEach;
+
+     var gallery = document.querySelector('.gallery');
+
+     gallery.onclick = function(){
+
+      
+       if(this.classList.contains('fullscreen')){
+          document.exitFullscreen();
+          document.webkitCancelFullScreen();
+          gallery.classList.remove('fullscreen');
+          
+       }
+
+       else {
+          gallery.webkitRequestFullscreen();
+          gallery.requestFullscreen();
+          requestAnimationFrame(function(){
+            gallery.scrollTop = 0;
+          })
+       }
+     }
+
+     document.querySelector('.gallery-close').onclick = function(){
+      document.exitFullscreen();
+      document.webkitCancelFullScreen();
+     }
+
+      function tick(){
+       
+        requestAnimationFrame(tick);
+      }
+
+      tick();
+
+     
+            
+    </script>
+   </body>
+
+</html>
