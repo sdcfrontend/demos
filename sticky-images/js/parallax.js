@@ -4,8 +4,9 @@ function setProperties(subject, frameDimensions, property, defaults) {
 
   switch (property) {
     case 'fade':
-    var value = defaults.direction*((frameDimensions.top/20)*defaults.multiplier);
     var max = 1;
+    var value = max*((window.innerHeight - frameDimensions.top) / window.innerHeight)
+    // var value = defaults.direction*((frameDimensions.top/20)*defaults.multiplier);
 
     if (value < max) {
       subject.style.cssText = 'opacity: ' + value;
@@ -22,14 +23,29 @@ function setProperties(subject, frameDimensions, property, defaults) {
 
       switch (action) {
         case 'blur':
-        var value = ((frameDimensions.top*defaults.multiplier)-(window.innerHeight/100));
+        var max = 10*defaults.multiplier
+
+        var value = max*((frameDimensions.bottom - window.innerHeight) / window.innerHeight);
 
         if (defaults.direction == 1) {
-          value = ((window.innerHeight/100)+(frameDimensions.top*defaults.multiplier));
+          value = max - (max*((frameDimensions.top + window.innerHeight) / window.innerHeight))
         }
-        console.log(value, (frameDimensions.top*defaults.multiplier)/10)
 
         subject.style.filter += 'blur(' + value + 'px)';
+        break;
+
+        case 'saturate':
+        var value = 100 - (frameDimensions.bottom/frameDimensions.height)*100;
+
+        if (defaults.direction == 1) {
+          value = (frameDimensions.bottom/frameDimensions.height)*100;
+        }
+
+        if (value < 0) {
+          value = 0;
+        }
+
+        subject.style.filter += 'saturate(' + value + '%)';
         break;
       }
     });
@@ -61,7 +77,7 @@ function setProperties(subject, frameDimensions, property, defaults) {
         break;
 
         case 'scale':
-        var value = defaults.direction*((frameDimensions.top/100)*defaults.multiplier);
+        var value = 1 + defaults.multiplier*((window.innerHeight - frameDimensions.top) / window.innerHeight);
 
         subject.style.transform += 'scale(' + value + ')';
         break;
@@ -95,13 +111,6 @@ function markPassedSubjects(parallaxFrame) {
 
 function adjustSubjectProperties(parallaxFrame) {
 
-  var defaults = {
-    properties: ['transform'],
-    actions: ['translateY'],
-    multiplier: 0.5,
-    direction: -1
-  }
-
   var height = window.innerHeight;
   var parallaxFrameDimensions = parallaxFrame.getBoundingClientRect();
 
@@ -110,15 +119,22 @@ function adjustSubjectProperties(parallaxFrame) {
 
     parallaxSubjects.forEach(function(parallaxSubject) {
 
+      var defaults = {
+        properties: ['transform'],
+        actions: ['translateY'],
+        multiplier: 0.5,
+        direction: -1
+      }
+
       if (!parallaxSubject.hasAttribute('passed')) {
-        if (parallaxSubject.getAttribute('data-multiplier') != null) {
-          defaults.multiplier = parallaxSubject.getAttribute('data-multiplier');
-        }
         if (parallaxSubject.getAttribute('data-properties') != null) {
           defaults.properties = parallaxSubject.getAttribute('data-properties').split(',');
         }
         if (parallaxSubject.getAttribute('data-actions') != null) {
           defaults.actions = parallaxSubject.getAttribute('data-actions').split(',');
+        }
+        if (parallaxSubject.getAttribute('data-multiplier') != null) {
+          defaults.multiplier = parallaxSubject.getAttribute('data-multiplier');
         }
         if (parallaxSubject.getAttribute('data-direction') != null) {
           var direction = parallaxSubject.getAttribute('data-direction');
