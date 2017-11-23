@@ -48,7 +48,7 @@
       }
 
       h1 {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.75em;
         font-size: 2.8em;
       }
 
@@ -96,58 +96,44 @@
         color: #3157a1
       }
 
-      .gallery {
-        margin-bottom: 3em;
-        top: 0;
-      }
-
-      .pic {
+      .video {
         position: relative;
-        opacity: 1;
-        z-index: 30;
-        height: 100vh;
+        background: #eee;
       }
 
-      .pic-mask {
+      .video-con {
         position: absolute;
-        height: 100vh;
-        width: 100%;
-        clip: rect(auto,auto,auto,auto);
-        overflow-y: scroll;
-      }
-
-      .pic-bg {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background-color: #171717;
-        top: 0;
-        background-position: center center;
-        background-repeat: no-repeat;
-        border-bottom: 0;
-        background-size: auto 100%;
-        z-index: 0;
-        transform: translate3d(0,0,0);
-      }
-
-      .pic img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
-        object-fit: cover;
-        /* opacity: 0.5 */
+        width: 100%;
+        padding-bottom: 56.25%;
+        transition: 0.2s all;
+        will-change: all;
       }
 
-      .pic-content {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 100vh;
+      .video-con video {
+        position: absolute;
+        top: 0;
         width: 100%;
+        max-width: 100%;
+        object-fit: cover;
       }
+
+      .video[docked] .video-con {
+        width: 270px!important;
+        left: 0!important;
+        top: 0!important;
+      }
+
+      .video-dock {
+        transition: all 0.2s ease-in 0.2s;
+        will-change: all;
+      }
+
+      .video-dock[docked] {
+        padding-bottom: 75%;
+      }
+
 
 
     </style>
@@ -156,6 +142,7 @@
     <div class="page">
       <div class="page-col page-nav">
         <div class="page-stick">
+          <div class="video-dock"></div>
           <h3>Summary:</h3>
           <ul>
             <li><a class="page-anchor" href="#d1">The Incident</a></li>
@@ -169,7 +156,13 @@
       </div>
       <div class="page-col page-body">
         <h1>Sky special report: London calling</h1>
-        
+
+          <div class="video">
+            <div class="video-con">
+              <video src="videos/news.mp4" loop="" autoplay></video>
+            </div>
+          </div>
+          
           <h2 id="d1">The Incident</h2>
          
 
@@ -373,33 +366,46 @@
 
       NodeList.prototype.forEach = Array.prototype.forEach;
 
-      var anchors = document.querySelectorAll('.page-anchors');
-      anchors.forEach(function(anchor){
-        anchor.onclick = function(e){
-          e.preventDefault();
-          var id = this.href.replace('#', '');
-          var target = document.querySelector('#' + id);
-          if(!target){
-            return;
-          }
+      var video = document.querySelector('.video');
+      var vidCon = document.querySelector('.video-con');
+      var dock = document.querySelector('.video-dock');
 
-          var top = target.getBoundingClientRect().top + window.pageYOffset;
-          window.scrollTo(0, top);
-
-        }
-      })
 
       function tick(){
+        var vidDims = video.getBoundingClientRect();
 
-        videos.forEach(function(item){
-          if(item.getBoundingClientRect().top < (window.innerHeight/2)){
-            item.play();
-          }
-        });
+        if(vidDims.top < 10){
+          video.setAttribute('docked', true);
+          vidCon.style.position = "fixed";
+          dock.setAttribute('docked', true);
+        }
+
+        else {
+          video.removeAttribute('docked');
+          dock.removeAttribute('docked');
+          setInterval(function(){
+            vidCon.style.position = "relative";
+          }, 50)
+        }
+        
         requestAnimationFrame(tick);
       }
 
       tick();
+
+      function setWidth(){
+        console.log(setWidth);
+        var vidDims = video.getBoundingClientRect();
+        vidCon.style.width = vidDims.width+"px";
+      }
+
+      var timer;
+      window.onresize = function(){
+        clearTimeout(timer);
+        timer = setTimeout( setWidth , 150 );
+      }
+
+      setWidth();
             
     </script>
    </body>
