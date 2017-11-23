@@ -150,7 +150,7 @@ function adjustSubjectProperties(parallaxFrame) {
   var parallaxFrameDimensions = parallaxFrame.getBoundingClientRect();
 
   if (parallaxFrameDimensions.top < height) {
-    var parallaxSubjects = parallaxFrame.querySelectorAll('[data-role="parallax-subject"]');
+    var parallaxSubjects = parallaxFrame.querySelectorAll('[data-parallax-role="subject"]');
 
     parallaxSubjects.forEach(function(parallaxSubject) {
 
@@ -199,7 +199,7 @@ function triggerParallax() {
   function findScrollPosition() {
 
     var height = window.innerHeight;
-    var parallaxFrames = document.querySelectorAll('[data-role="parallax-frame"]');
+    var parallaxFrames = document.querySelectorAll('[data-parallax-role="frame"]');
 
     parallaxFrames.forEach(function(parallaxFrame) {
 
