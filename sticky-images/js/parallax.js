@@ -1,12 +1,47 @@
 NodeList.prototype.forEach = Array.prototype.forEach;
 
+function framePercentageValue(frameDimensions, defaults, max) {
+
+  var value = '';
+  switch (defaults.start) {
+
+    case 'top':
+      value = max - (frameDimensions.bottom/frameDimensions.height)*max;
+
+      if (defaults.direction == 1) {
+        value = (frameDimensions.bottom/frameDimensions.height)*max;
+      }
+      break;
+
+    case 'bottom':
+      value = max*((frameDimensions.bottom - window.innerHeight) / window.innerHeight);
+
+      if (defaults.direction == 1) {
+        value = (max*((window.innerHeight - frameDimensions.top) / window.innerHeight))
+      }
+      break;
+
+  }
+
+  if (value > max) {
+    value = max;
+  }
+
+  if (value < 0) {
+    value = 0;
+  }
+
+  return value;
+
+}
+
 function setProperties(subject, frameDimensions, property, defaults) {
 
   switch (property) {
     case 'fade':
-    var max = 1;
-    var value = max*((window.innerHeight - frameDimensions.top) / window.innerHeight)
-    // var value = defaults.direction*((frameDimensions.top/20)*defaults.multiplier);
+    var max = 1*defaults.multiplier;
+    defaults.direction = defaults.direction*-1
+    var value = framePercentageValue(frameDimensions, defaults, max);
 
     if (value < max) {
       subject.style.cssText = 'opacity: ' + value;
@@ -23,30 +58,42 @@ function setProperties(subject, frameDimensions, property, defaults) {
 
       switch (action) {
         case 'blur':
-        var max = 10*defaults.multiplier
+        var max = 10*defaults.multiplier;
+        var value = framePercentageValue(frameDimensions, defaults, max);
 
-        var value = max*((frameDimensions.bottom - window.innerHeight) / window.innerHeight);
-
-        if (defaults.direction == 1) {
-          value = max - (max*((frameDimensions.top + window.innerHeight) / window.innerHeight))
+        if (value < max) {
+          subject.style.filter += 'blur(' + value + 'px)';
+        } else {
+          subject.style.filter += 'blur(' + max + 'px)';
+          markPassedSubject(subject);
         }
-
         subject.style.filter += 'blur(' + value + 'px)';
         break;
 
         case 'saturate':
-        var value = 100 - (frameDimensions.bottom/frameDimensions.height)*100;
+        var max = 100*defaults.multiplier;
+        var value = framePercentageValue(frameDimensions, defaults, max);
 
-        if (defaults.direction == 1) {
-          value = (frameDimensions.bottom/frameDimensions.height)*100;
+        if (value < max) {
+          subject.style.filter += 'saturate(' + value + '%)';
+        } else {
+          subject.style.filter += 'saturate(' + max + '%)';
+          markPassedSubject(subject);
         }
-
-        if (value < 0) {
-          value = 0;
-        }
-
-        subject.style.filter += 'saturate(' + value + '%)';
         break;
+
+        case 'hue-rotate':
+        var max = 360*defaults.multiplier;
+        var value = framePercentageValue(frameDimensions, defaults, max);
+
+        if (value < max) {
+          subject.style.filter += 'hue-rotate(' + value + 'deg)';
+        } else {
+          subject.style.filter += 'hue-rotate(' + max + 'deg)';
+          markPassedSubject(subject);
+        }
+        break;
+
       }
     });
 
@@ -54,7 +101,6 @@ function setProperties(subject, frameDimensions, property, defaults) {
 
     case 'transform':
     subject.style.transform = '';
-
     defaults.actions.forEach(function(action) {
 
       switch (action) {
@@ -77,7 +123,8 @@ function setProperties(subject, frameDimensions, property, defaults) {
         break;
 
         case 'scale':
-        var value = 1 + defaults.multiplier*((window.innerHeight - frameDimensions.top) / window.innerHeight);
+        var max = 1*defaults.multiplier;
+        var value = 1 + framePercentageValue(frameDimensions, defaults, max);
 
         subject.style.transform += 'scale(' + value + ')';
         break;
@@ -97,18 +144,6 @@ function markPassedSubject(parallaxSubject) {
 
 }
 
-function markPassedSubjects(parallaxFrame) {
-
-  var parallaxSubjects = parallaxFrame.querySelectorAll('[data-role="parallax-subject"]');
-
-  parallaxSubjects.forEach(function(parallaxSubject) {
-
-    markPassedSubject(parallaxSubject);
-
-  });
-
-}
-
 function adjustSubjectProperties(parallaxFrame) {
 
   var height = window.innerHeight;
@@ -122,8 +157,9 @@ function adjustSubjectProperties(parallaxFrame) {
       var defaults = {
         properties: ['transform'],
         actions: ['translateY'],
-        multiplier: 0.5,
-        direction: -1
+        multiplier: 1,
+        direction: -1,
+        start: "bottom"
       }
 
       if (!parallaxSubject.hasAttribute('passed')) {
@@ -141,6 +177,9 @@ function adjustSubjectProperties(parallaxFrame) {
           if (direction = "backwards") {
             defaults.direction = 1;
           }
+        }
+        if (parallaxSubject.getAttribute('data-start') != null) {
+          defaults.start = parallaxSubject.getAttribute('data-start');
         }
 
         defaults.properties.forEach(function(property) {
