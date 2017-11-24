@@ -1,6 +1,6 @@
 NodeList.prototype.forEach = Array.prototype.forEach;
 
-function framePercentageValue(frameDimensions, defaults, max) {
+function framePercentageValue(frameDimensions, defaults, max, min) {
 
   var value = '';
   switch (defaults.start) {
@@ -27,8 +27,8 @@ function framePercentageValue(frameDimensions, defaults, max) {
     value = max;
   }
 
-  if (value < 0) {
-    value = 0;
+  if (value < min) {
+    value = min;
   }
 
   return value;
@@ -44,9 +44,9 @@ function setProperties(subject, frameDimensions, property, defaults) {
     var value = framePercentageValue(frameDimensions, defaults, max);
 
     if (value < max) {
-      subject.style.cssText = 'opacity: ' + value;
+      subject.style.opacity = value;
     } else {
-      subject.style.cssText = 'opacity: ' + max;
+      subject.style.opacity = max;
       markPassedSubject(subject);
     }
     break;
@@ -71,8 +71,9 @@ function setProperties(subject, frameDimensions, property, defaults) {
         break;
 
         case 'saturate':
+        var min = 0;
         var max = 100*defaults.multiplier;
-        var value = framePercentageValue(frameDimensions, defaults, max);
+        var value = framePercentageValue(frameDimensions, defaults, max, min);
 
         if (value < max) {
           subject.style.filter += 'saturate(' + value + '%)';
@@ -117,7 +118,8 @@ function setProperties(subject, frameDimensions, property, defaults) {
         break;
 
         case 'rotate':
-        var value = defaults.direction*(frameDimensions.top*defaults.multiplier);
+        var max = 360*defaults.multiplier;
+        var value = framePercentageValue(frameDimensions, defaults, max);
 
         subject.style.transform += 'rotate(' + value + 'deg)';
         break;
