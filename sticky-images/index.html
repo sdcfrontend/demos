@@ -3,6 +3,7 @@
   <head>
     <title>Boxing Stats</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/skyfont.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -38,9 +39,14 @@
         </div>
       </div>
 
-      <div class="sticky-images__strip" data-parallax-role="frame">
-        <div class="sticky-images__image-wrap">
-          <img src="img/haye-stats_img.jpg" class="sticky-images__image" data-parallax-role="subject" data-multiplier="1" data-properties="filter" data-actions="saturate" data-start="top">
+      <div class="sticky-images__strip">
+        <div class="sticky-images__image-wrap" data-parallax-role="frame">
+          <div class="sticky-images__image-inner-wrap" data-parallax-role="subject" data-multiplier="0.05" data-properties="transform" data-actions="translateX">
+            <img src="img/haye-stats_img-cutout.png" class="sticky-images__image" data-parallax-role="subject" data-multiplier="1" data-properties="filter" data-actions="blur">
+          </div>
+          <div class="sticky-images__image-inner-wrap" data-parallax-role="subject" data-multiplier="0.05" data-properties="transform" data-actions="scale" data-direction="backwards">
+            <img src="img/haye-stats_img-cutout2.png" class="sticky-images__image" data-parallax-role="subject" data-multiplier="0.5" data-properties="filter" data-actions="blur" data-direction="backwards">
+          </div>
         </div>
 
         <div class="sticky-images__body">

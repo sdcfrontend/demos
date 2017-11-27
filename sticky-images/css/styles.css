@@ -9,7 +9,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
-  font-family: "Sky Text", sans-serif;
+  font-family: 'Sky Text', 'SkyTextReg', sans-serif;
   color: #333;
   scroll-behavior: smooth;
   word-wrap: break-word;
@@ -86,6 +86,13 @@ p {
   -webkit-position: sticky;
   top: 0;
   height: 100vh;
+}
+
+.sticky-images__image-inner-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .sticky-images__strip--static .sticky-images__image-wrap {
