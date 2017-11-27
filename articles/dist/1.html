@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="header-sport.css">
     <style media="screen">
-      .div {
+      .slide {
         background: #15165f;
+        background: url(bg.jpg);
+        background-size: 100% auto;
+        background-position: center;
         padding-bottom: 50%;
         position: relative;
         overflow: hidden;
         margin-bottom: 2.5em;
       }
 
-      span {
+      .slide span {
         background: url(header1.jpg) no-repeat;
         background-position: top right;
         background-size: 200% auto;
@@ -25,11 +29,23 @@
         transform: translateX(0%)
       }
 
-      span + span {
+      .slide span + span {
         left: auto;
         right: 100%;
         transform: translateX(0%);
         background-position: top left;
+      }
+
+      h1, h2 {
+        max-width: 740px;
+        padding: 0 2vw;
+        margin: 1.5em auto
+      }
+
+      h2 {
+        font-size: 1.8em;
+        font-weight: 400;
+        margin-bottom: 1em;
       }
 
       p {
@@ -43,28 +59,281 @@
     </style>
   </head>
   <body>
-    <br>
+
+      <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header" data-init="true">
+          <div class="site-header site-header--rainbow">
+        
+              <div class="site-header__body site-wrap">
+        
+                  <div class="site-header__col site-header__col1">
+                      <a href="/" class="svg-logo site-header__logo">
+                        <img class="svg-logo__image" src="http://www.skysports.com/assets/Sky-Sports-Logo-transparent.svg" alt="Sky Sports" onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo-transparent.png'">
+                      </a>
+                  </div>
+        
+                  <div class="site-header__col site-header__col2">
+                    <div class="site-login" data-role="site-login">
+                        <!--default-->
+                        <ul class="site-login__links">
+                          <li class="site-login__item site-login__item--promo"><a href="http://www.skysports.com/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                          <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl=http%3A%2F%2Fwww.skysports.com" data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
+                        </ul>
+                      </div>
+                  </div>
+        
+              <div class="site-header__col site-header__col3">
+        
+                  <form action="http://www.skysports.com/search" method="GET" class="site-search">
+                      <input type="text" name="q" placeholder="Search Sky Sports" accesskey="q" autocomplete="off" autocorrect="off" autocapitalize="off" class="site-search__input">
+                      <input type="hidden" value="the site" name="searchtype">
+                      <input type="hidden" name="v" value="2">
+                      <button class="site-search__button">
+                          <span class="site-search__button-label">Search</span>
+                          <svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg>
+                      </button>
+                  </form>
+        
+              </div>
+        
+              <a class="site-header__col site-header__col4 site-header__nav-button-hit-area" data-role="open-left-hand-nav" href="#no-js-nav" aria-controls="site-nav-desktop-wrap">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2048 2048" xml:space="preserve" class="site-header__nav-button">
+                    <rect y="384" width="2048" height="256"></rect>
+                    <rect y="896" width="2048" height="256"></rect>
+                    <rect y="1408" width="2048" height="256"></rect>
+                </svg>
+              </a>
+        
+          </div>
+          <!-- desktop nav -->
+          <div class="site-nav-desktop__wrap  site-wrap">
+            <div class="site-nav-desktop" role="navigation" data-role="main-nav" id="site-nav-desktop-wrap">
+              <div class="site-login site-login--mobile" data-role="site-login">
+                  <!--default-->
+                  <ul class="site-login__links">
+                      <li class="site-login__item site-login__item--promo"><a href="http://www.skysports.com/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                      <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl=http%3A%2F%2Fwww.skysports.com" data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
+                  </ul>
+              </div>
+              <ul class="site-nav-desktop__body">
+              <li class="site-nav-desktop__item">
+              <a href="http://www.skysports.com/" class="site-nav-desktop__item-link">
+              Home</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-sports-more-nav" id="site-nav-desktop-sports-more">Sports<svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true"><path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5"></path></svg>
+            </a>
+              <div class="site-nav-desktop__menu" aria-labelledby="site-nav-desktop-sports-more" id="site-nav-desktop-sports-more-nav">
+              <div class="site-nav-desktop__menu-body">
+                <ul class="site-nav-desktop__menu-links">
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/football">
+                Football</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/f1">
+                F1</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/cricket">
+                Cricket</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/rugby-union">
+                Rugby Union</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/rugby-league">
+                Rugby League</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/golf">
+                Golf</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/boxing">
+                Boxing</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/tennis">
+                Tennis</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/cycling">
+                Cycling</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/racing">
+                Racing</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/darts">
+                Darts</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/nfl">
+                NFL</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/motorsport">
+                Motorsport</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/netball">
+                Netball</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/gaa">
+                GAA</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/wwe">
+                WWE</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/esports">
+                eSports</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/more-sports">
+                More Sports</a>
+                </li>
+                <li class="site-nav-desktop__menu-item">
+                <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/joshua">
+                Joshua vs Takam</a>
+                </li>
+                </ul>
+              </div>
+              </div>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="http://www.skysports.com/live-scores" class="site-nav-desktop__item-link">
+              Score Centre</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="http://www.skysports.com/watch/video" class="site-nav-desktop__item-link">
+              Video</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="http://www.skysports.com/watch" class="site-nav-desktop__item-link">
+              TV</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="https://www.skybet.com/skybet?offer=188&amp;sba_promo=SKYSPORTS10&amp;aff=9749&amp;dcmp=ss_main_nav" class="site-nav-desktop__item-link" target="_blank">
+              Sky Bet</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="http://www.skysports.com/games" class="site-nav-desktop__item-link">
+              Games</a>
+              </li>
+              <li class="site-nav-desktop__item">
+              <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-more-more-nav" id="site-nav-desktop-more-more">More<svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true"><path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5"></path></svg></a>
+              <div class="site-nav-desktop__menu site-nav-desktop__menu--right" aria-labelledby="site-nav-desktop-more-more" id="site-nav-desktop-more-more-nav">
+              <div class="site-nav-desktop__menu-body">
+                <ul class="site-nav-desktop__menu-links">
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/transfer-centre">
+                  Transfer Centre</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/watch/sport-on-sky">
+                  Live on Sky</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/watch/get-sky">
+                  Get Sky Sports</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/watch/tv-shows">
+                  TV Shows</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/watch/tv-guide">
+                  TV Guide</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/competitions">
+                  Competitions</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://go.sky.com/" target="_blank">
+                  Sky Go</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.nowtv.com/promo/sky-sports?DCMP=ilc_skysports_moredropdownlink" target="_blank">
+                  Now TV</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://pubfinder.sky.com/" target="_blank">
+                  Pub Finder</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://www.teamsky.com/" target="_blank">
+                  Team Sky</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/watch/tv-shows/sportswomen">
+                  Sportswomen</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/scholarships">
+                  Sports Scholarships</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/clubsincommunities">
+                  Clubs in Communities</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/podcasts">
+                  Podcasts</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/mobile">
+                  Mobile</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://twitter.com/SkySports" target="_blank">
+                  Twitter</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://www.facebook.com/SkySports" target="_blank">
+                  Facebook</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://livingforsport.skysports.com/" target="_blank">
+                  Living for Sport</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="http://www.skysports.com/contact-us">
+                  Contact Us</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/help/articles/skycom-terms-and-conditions" target="_blank">
+                  Terms &amp; Conditions</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item">
+                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/" target="_blank">
+                  Sky.com</a>
+                  </li>
+                </ul>
+              </div>
+              </div>
+              </li>
+              </ul>
+              <a href="http://www.skysports.com/watch" class="site-nav-desktop__watch-button no-default-hover no-default-active"><span class="site-nav-desktop__watch-button__label">Watch Sky Sports</span></a>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+
+    <h1>The Big Match: We preview the key battles</h1>
     <p>"What's happened to me? " he thought. It wasn't a dream.
 
     <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
 
-    <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame.
-
-    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
-
-    <p>Gregor then turned to look out the window at the dull weather.
-
-  <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
-
-      <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer.
-
-      <p>Gregor then turned to look out the window at the dull weather.
-
-    <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
-
       <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
-
-<div class="div">
+        <h2>Strikers</h2>
+<div class="slide">
   <span></span>
   <span></span>
 </div>
@@ -95,12 +364,11 @@
 <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
 
   <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
-
 <script>
 
-  var div = document.querySelector('div');
-  var span = document.querySelector('span');
-  var span2 = document.querySelector('span + span');
+  var div = document.querySelector('.slide');
+  var span = div.querySelector('span');
+  var span2 = div.querySelector('span + span');
 
   function tick(){
 

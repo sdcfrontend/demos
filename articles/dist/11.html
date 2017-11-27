@@ -61,9 +61,611 @@
     </style>
    </head>
    <body>
+      <style>
+          .sdc-news-header {
+            background: #BFC6CE url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAMDAwMDAwUDAwUIBQUFCAoICAgICg0KCgoKCg0QDQ0NDQ0NEBAQEBAQEBATExMTExMWFhYWFhkZGRkZGRkZGRn/2wBDAQQEBAYGBgsGBgsaEg8SGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhr/wgARCACZC7gDASIAAhEBAxEB/8QAHAAAAwEBAQEBAQAAAAAAAAAAAAECAwQFBgcI/9oACAEBAAAAAP61AAACwbLdU6uqu7u7utKvSqq6baYkoSSynLMQ23o7YzXR2zSqbdunTt1TqmxjbHTGMYwCm02AwAAIHTbAATAAAqwB8fOAMGCAAQmhgAAAMGwGxADaVAgYIECqUhLMJmJiVEwTlnMRMzMRjmoylZ45xGeOc5Y4znidHpwKQHV1da63dFtCkkUkokUgkICQBSAAAAAAAAFg2WW6q6q7q7u7u6u6umxg0CzUrKMoFNsdXTt1dOmVdU3VVTp1VOqdNtjG6YNsGwCmCoTGwAlDTdUASUAABowCfMAAAYAhoG0mwAAAbGAwBCKFQCAkEIEpKSlTEmcwpnOFlMQomJjOcs5nPOcs8ImM8IzywhT290yICrelXrprVlgKSRSSiRSEiAJAFIAAAAAAAAWDZTt1V1V1V3elXdXdU6GwQIkWWU5TMjp03etMbWljqnVW6qqbp1TqqtsYNtsbbBsAKQxgFNCQADqmSmxgAPQAfnZANADExAxppgAmAANgmCABsYJJISGkgEiVMpZxKhRGcrOImc4iZhYxnnGMRnlnMY54545h6XRJIN060u9NdbotgpJFJKJFISgBIAUgAAAAAAABYNlO3VVdVV3d3V1dXVOmxAIQTGeWUTI29KuqbbY6qnVFVVVVW3Td06q22xhTYxjKYyRjYMYxBLGAPRygY2AFUMOfjAYmk2IAYgYJppiEwBgDAEMEpQgSQAISQiZmYUREE5xERMRM5RKiMsc5jLLPPLGVjlhAo9qiYbqldXppprrdlsFJIpJRIpCUCEACkAAAAAAAALBsp23dVdVdXd1dXVVVNiYORELNZ55TCd3pQU6opqm7qinVVVXVU29W3VOnQxtsGwVUwABgNjluQGxhTAAKYA1dC8uaBoGJoBiAATZJRnYABSaaSEgSQKRMEJAkkmpzUSs5iVOMTEQpzmIiIjPDKIwxicefMUYZp+61mVTKqtNNNNddLLYKSRSSiRSEoEgAFIAAAAAAAAUxsp23dVVXdXVXV1dVToTGKXKghZZxEBpo2wbtuqYVVjqqd1VVV03VVTp1ToYxtgAW2AwTKSaBgDKGFJsApgAaM87AAGADQ0mIabmxDQwQJppCEhCSkSppISYkkkSTMypjKc0RlnKiJiM85ic8o58IM+TOMspSzyz09tCdM0dXemm2mulu2CkkUkokUhKBIAFIAAAAAAAAFMbKdt1VVd1V1V1dVVtsY0hJSnlGcTEjqhumyiqKsKoqqd06q3VVVlVdN1VNtsQMbabpgMGgSGNiTpjGkOrBjYFt4eaAADQAADKTaaAkZIpSHIMSSkQDSEhUkEykSkiYmZziYU55ws4nOIjOYzxynLmhZc+MxlETM9PqMKHTu70vXbTbS3VApJFJKJFISgSABSAAAAAAAABTGynZVVVXVVdXV1VU6KbQIUpKYnPKZGBTY6bbbpu2x1VVV23TqqqrdVVt1TooABjabdDAYCABtIboYgY7GxtgaPyoBNANpAAUwQlLRKaklIECQgGJAIQJAhTKFKkFEGcxMZqFlnOaziIzyziM8py44Rz885ZzKXd20Dum9NLu9d9NtNC6BSSKSUSKQlAkAEoAAAAAAAACmNlOnVVVVVXdVV1TqqbAQ5SMyVnjmgTBVQ2VSqnTKqk6rSnVW3Tp260dO7p1Q2MGMGx0E1TBMQwSBjbGAMZTqhsdc/ngMQDQSxNCQkSCQkkkkIBhLkYCBNISEJTIplOUpzSjOM5UxlnCjKM8oziIzxiebnJx54iJg9rVg3Wr0vTS9d9Ntbd0CkkUkokUhKBIAUgAAAAAAAAFMKKdOqd06uqt3bqqptoGkSklM45EqBtobpsboNGqpuqdO6p1dUU6uqqqelVTG6aYNsYnSCqE3IwcgMbAbYMGaUOgfhQ2xiAQCAEiRIEkkppCJEDQlQMJEOUhIkM0SmkpUTKzynOUs8s4mMM5zzzymc8onl5JcYRnmq+gSG7q9a000013112t3QKSRSSiRSEoEgBSAAAAAAAAAFhQ6dU6qqqqqrqqqqdAwEkiZUTnmpykKbpKnVNFhTtuqdNuqqyqux1bu3dO7dUm3QMAYDbGFOFTblNjBg0N0DB3bbPN8sG22kAhIESSCQgEhJSgABoYAISQCJSkUpDUykpznOYziYgxzzyWOWcRMZxnlkublhLLPOO/1EOnVaXprppptttrtdVYKSRSSiRSEoEgBSAAAAAAAAAFhQ6dN3Tq3VXVVVVTbAcpVEyQRnks5UjbbaY6ptWx6MqqKdOnVuqqrdVVurqquqYW0MaYMKYimkDGA22JkU2UxjHduo+YgAYCYACEIEhEilISBAIAGmhghJqESIJlNJTMqVlMznnMxnOWOcRljKiM8888sJjlyU5wvY6Grpu7100110132120d2CkkUkokUhKBIAUgAAAAAAAABYUOi26qqdXVuqp22ympQQkiZjLOJlITbKbTG7Y7bZVU6dtt23bt26qququqq7dDYwExjabTakbYxqhsbgGNlOht3b8bxWNggGISASSESCkQJEgCASoYMSEkkmkkEoSlKJIzgic8s0sc8spiccYmM5xjPPCFzZKM790dMq7vTTXbXXbbbbXV3YKSRSSiRSEoEgBSAAAAAAAAAFhQWU6p23d06qqodNuWJKRKIU4woiZdIHTHQDp2K7Buqt26ZTturb0d1buquqejqkNgADbE24Q2xNt2A0AFMbtjd6R8ZmDABAwBCBIIGpEJJISY0hWAASSASNSIUwCUrNKYmclnnGeecRhMZ5YZqJzzzjPHEyxifQ9EY6d6aa6abb66776ba1WgKSRSSiRSEoEgBSAAAAAAAAAFg2WU6dU6uqdVTdOhtCSJcTMKMlMZQKm0xtlUMKbplN06qqqm23VOrqqq7duqu3V06YDAAYNkoG6QNtuhMYAOm3Td6eH84MAECGm0IRISBKSSkAGhpywaECExJBJKFCczKUSpiZyWeWWcxOPNMxjjmRGeUxGPPMZz79gytbvXTXXTo2132220utAUkiklEikJQJACkAAAAAAAAALBsspuqdVVVTqm3RQAkJSpzIiJyzmZGqbTT0ZTc0yqGVbpuqt03TKqqu6qrdXTq6q6dtjQ2gGm1LYDQym2NUxgwdN1TqvhMBiaBACGhJyhISUoQ0MENCGnLBAJimWkkJQKFMzKURMQscYznGMOcmcuWCYzmMs8cYj1e6Qd1eul67a6b76777ba3WgKSRSSiRSEoEgBSAAAAAAAAAFg2U3TqnVOqqm3TbBgJJTMJZxOeWcoQDKBlNlOiXaqqHVW26dVTp1TelXVVVW6t1d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') 50% 0 no-repeat;
+            position: relative;
+            color: black;
+            min-height: 74px; }
+        
+          .sdc-news-header--has-toolbar {
+            padding-top: .75em; }
+        
+          .sdc-news-header__logo {
+            position: absolute;
+            min-width: 50px;
+            height: 42px;
+            left: 50%;
+            -webkit-transform: translate(-501px, -50%);
+                -ms-transform: translate(-501px, -50%);
+                    transform: translate(-501px, -50%);
+            z-index: 11; }
+        
+          .sdc-news-header__logo-image {
+            position: absolute;
+            height: 100%;
+            border: 0; }
+        
+          .sdc-news-header__nav-wrap {
+            padding-top: 74px;
+            width: 100%;
+            max-width: 1024px;
+            min-height: 74px;
+            margin: 0 auto;
+            padding: 0 14px;
+            position: relative;
+            z-index: 10; }
+        
+          .sdc-news-header__nav-group {
+            list-style: none;
+            padding: 0; }
+        
+          .sdc-news-header__nav-item {
+            color: inherit;
+            display: inline-block;
+            font-size: 1.125em;
+            position: relative; }
+        
+          .sdc-news-header__nav-item-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: .7em .6em .9em;
+            position: relative;
+            line-height: 1.14; }
+        
+          .sdc-news-header__nav-item-link--menu-icon {
+            display: inline-block;
+            width: .85em;
+            height: .85em;
+            fill: currentColor;
+            vertical-align: middle; }
+        
+          .sdc-news-header__nav-menu {
+            display: none; }
+        
+          .sdc-news-header__nav-menu-group {
+            -webkit-column-count: 2;
+               -moz-column-count: 2;
+                    column-count: 2;
+            -webkit-column-gap: .25em;
+               -moz-column-gap: .25em;
+                    column-gap: .25em;
+            list-style: none; }
+        
+          .sdc-news-header__nav-menu-item-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: .25em .5em;
+            font-size: .9em;
+            display: inline-block;
+            width: 100%;
+            opacity: .9; }
+        
+          .sdc-news-header__components {
+            height: 36px;
+            position: absolute;
+            right: 50%;
+            -webkit-transform: translate(501px, -50%);
+                -ms-transform: translate(501px, -50%);
+                    transform: translate(501px, -50%);
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between; }
+        
+          .sdc-news-header__search {
+            position: relative;
+            margin: 0 1em 0 0;
+            width: 220px;
+            height: 100%;
+            border: 1px solid #3157a1;
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            border-radius: 3px; }
+        
+          .sdc-news-header__search-input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 1em;
+            border: 0;
+            padding: 0 3em 0 .75em;
+            font-weight: 400;
+            background: white;
+            border-radius: 0; }
+        
+          .sdc-news-header__search-button {
+            background: #3157a1;
+            position: absolute;
+            z-index: 12;
+            right: 0;
+            font-size: 1em;
+            height: 100%;
+            padding: 0 1.2em;
+            border: 0;
+            border-radius: 0; }
+        
+          .sdc-news-header__search-button-label {
+            display: none; }
+        
+          .sdc-news-header__search-button-icon {
+            fill: white;
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            top: 20%;
+            left: 20%; }
+        
+          .sdc-news-header__components,
+          .sdc-news-header__logo {
+            top: -webkit-calc(74px / 2);
+            top: calc(74px / 2); }
+        
+          .sdc-news-header__toolbar {
+            color: inherit;
+            text-decoration: none;
+            direction: rtl;
+            position: absolute;
+            top: 0;
+            right: 14px;
+            min-width: 25%;
+            line-height: 1; }
+        
+          .sdc-news-header__edition,
+          .sdc-news-header__login {
+            color: inherit;
+            display: inline-block;
+            text-decoration: none; }
+        
+          .sdc-news-header__edition:hover {
+            border-bottom: 2px solid #3157a1; }
+        
+          .sdc-news-header__login {
+            padding-right: 2em; }
+        
+          .sdc-news-header__watch-link {
+            display: inline-block;
+            background: #9f202d;
+            white-space: nowrap;
+            vertical-align: middle;
+            padding: .4em 1em;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            -webkit-font-smoothing: subpixel-antialiased; }
+        
+          @media all and (min-width: 900px) {
+            .sdc-news-header__body {
+              position: relative; }
+            .sdc-news-header__nav-wrap {
+              padding-top: -webkit-calc(74px + 14px);
+              padding-top: calc(74px + 14px); }
+            .sdc-news-header__nav-item:first-of-type {
+              margin-left: -.675em; }
+            .sdc-news-header__nav-item-link[data-state="open"] {
+              background: #777; }
+            .sdc-news-header__nav-item-link[data-state="open"] + .sdc-news-header__nav-menu {
+              visibility: visible;
+              opacity: 1; }
+            .sdc-news-header__nav-item-link:after {
+              content: "";
+              bottom: .25em;
+              height: 2px;
+              background: transparent;
+              display: block; }
+            .sdc-news-header__nav-item-link:hover:after,
+            .sdc-news-header__nav-item-link--active:after {
+              background: #3157a1; }
+            .sdc-news-header__nav-item-link--active {
+              font-weight: bold; }
+            .sdc-news-header__nav-menu {
+              display: block;
+              position: absolute;
+              width: 380px;
+              min-height: 150px;
+              background: #777;
+              visibility: hidden;
+              opacity: 0;
+              padding: .75em .5em 1em; }
+            .sdc-news-header__components,
+            .sdc-news-header__logo {
+              top: -webkit-calc((74px + 26px) / 2);
+              top: calc((74px + 26px) / 2); } }
+        
+          @media all and (max-width: 1030px) {
+            .sdc-news-header__logo {
+              left: 18px;
+              -webkit-transform: translate(0, -50%);
+                  -ms-transform: translate(0, -50%);
+                      transform: translate(0, -50%); }
+            .sdc-news-header__components {
+              right: 18px;
+              -webkit-transform: translate(0, -50%);
+                  -ms-transform: translate(0, -50%);
+                      transform: translate(0, -50%); }
+            .sdc-news-header__nav-wrap {
+              padding-left: 18px;
+              padding-right: 18px;
+              width: 1030px;
+              max-width: 100%; }
+            .sdc-news-header__toolbar {
+              right: 18px; } }
+        
+          @media all and (max-width: 899px) {
+            .sdc-news-header__nav-wrap {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              width: 450px;
+              padding: 18px;
+              background: #fff;
+              visibility: hidden;
+              opacity: 0; }
+            .sdc-news-header__nav-wrap[data-state="open"] {
+              visibility: visible;
+              opacity: 1; }
+            .sdc-news-header__nav {
+              padding: 0;
+              margin-bottom: .8em; }
+            .sdc-news-header__nav-menu {
+              padding: 0 .25em;
+              margin: .25em .25em 1em; }
+            .sdc-news-header__nav-item-link[data-state="open"] > .sdc-news-header__nav-item-link--menu-icon {
+              -webkit-transform: rotate(180deg);
+                  -ms-transform: rotate(180deg);
+                      transform: rotate(180deg); }
+            .sdc-news-header__nav-item-link[data-state="open"] + .sdc-news-header__nav-menu {
+              display: block; }
+            .sdc-news-header__nav-menu-item-link {
+              padding: .35em .25em; }
+            .sdc-news-header__components {
+              position: relative;
+              width: 100%;
+              -webkit-transform: none;
+                  -ms-transform: none;
+                      transform: none;
+              height: auto;
+              right: auto;
+              top: auto; }
+            .sdc-news-header__search {
+              position: relative;
+              right: auto;
+              width: 100%;
+              margin: 0 0 .8em 0;
+              height: 42px; }
+            .sdc-news-header__logo {
+              -webkit-transform: translate(0, -50%);
+                  -ms-transform: translate(0, -50%);
+                      transform: translate(0, -50%);
+              width: 270px;
+              max-width: 66.66%; }
+            .sdc-news-header__nav-group--columns {
+              -webkit-column-count: 2;
+                 -moz-column-count: 2;
+                      column-count: 2; }
+            .sdc-news-header__nav-item {
+              display: block;
+              margin-left: -.5em; }
+            .sdc-news-header__nav-item-link {
+              padding: .35em .5em; }
+            .sdc-news-header__toolbar {
+              position: static;
+              width: 100%;
+              margin: .25em 0 1.25em 0; }
+            .sdc-news-header__login {
+              float: left; }
+            .sdc-news-header__watch-link {
+              margin: 0; } }
+        
+          @media all and (max-width: 500px) {
+            .sdc-news-header {
+              min-height: 55px; }
+            .sdc-news-header__logo {
+              height: 30px;
+              top: -webkit-calc(55px / 2);
+              top: calc(55px / 2); } }
+        
+          .sdc-news-header__nav-action {
+            display: none; }
+        
+          @media all and (max-width: 899px) {
+            .sdc-news-header__nav-action {
+              cursor: pointer;
+              display: block;
+              width: 74px;
+              height: 100%;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              -webkit-transform: translate(0, -50%);
+                  -ms-transform: translate(0, -50%);
+                      transform: translate(0, -50%); }
+            .sdc-news-header__nav-action-icon {
+              display: block;
+              -webkit-transform: rotate(0deg);
+                  -ms-transform: rotate(0deg);
+                      transform: rotate(0deg);
+              -webkit-transition: .3s ease-in-out;
+              transition: .3s ease-in-out;
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              -webkit-transform: translate(0, -50%);
+                  -ms-transform: translate(0, -50%);
+                      transform: translate(0, -50%);
+              width: 33px;
+              height: 32px;
+              right: 20px; }
+              .sdc-news-header__nav-action-icon:before {
+                content: "";
+                display: block;
+                position: absolute;
+                border: 1px solid #111;
+                top: -1px;
+                right: -9px;
+                width: 102px;
+                bottom: -1px;
+                border-radius: 5px;
+                opacity: .6; }
+            .sdc-news-header__nav-action-icon-label {
+              display: block;
+              font-size: 1.125rem;
+              right: 45px;
+              display: block;
+              position: absolute;
+              line-height: 32px;
+              color: #111; }
+            .sdc-news-header__nav-action-icon-symbol {
+              top: 50%;
+              -webkit-transform: translate3d(0, -50%, 0);
+                      transform: translate3d(0, -50%, 0); }
+              .sdc-news-header__nav-action-icon-symbol, .sdc-news-header__nav-action-icon-symbol:before, .sdc-news-header__nav-action-icon-symbol:after {
+                display: block;
+                width: 100%;
+                position: absolute;
+                background-color: #111;
+                -webkit-transition: background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+                transition: background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+                transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+                transition: transform .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+                -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                -webkit-perspective: 1000;
+                        perspective: 1000;
+                border-radius: 2px;
+                height: 3px; }
+              .sdc-news-header__nav-action-icon-symbol:before, .sdc-news-header__nav-action-icon-symbol:after {
+                content: "";
+                -webkit-transform: translate3d(0, 0, 0);
+                        transform: translate3d(0, 0, 0);
+                -webkit-transform-origin: left center;
+                    -ms-transform-origin: left center;
+                        transform-origin: left center; }
+              .sdc-news-header__nav-action-icon-symbol:before {
+                top: -7px; }
+              .sdc-news-header__nav-action-icon-symbol:after {
+                top: 7px; }
+            .sdc-news-header__nav-action[data-state="open"] {
+              background: #fff;
+              z-index: 1000; }
+              .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon:before,
+              .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-label {
+                display: none; }
+              .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol {
+                background-color: transparent;
+                -webkit-transform: translate(0, -50%) scale(0.8);
+                    -ms-transform: translate(0, -50%) scale(0.8);
+                        transform: translate(0, -50%) scale(0.8); }
+              .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol:before {
+                -webkit-transform: translate(5px, -5px) rotate(45deg);
+                    -ms-transform: translate(5px, -5px) rotate(45deg);
+                        transform: translate(5px, -5px) rotate(45deg); }
+              .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol:after {
+                -webkit-transform: translate(5px, 5px) rotate(-45deg);
+                    -ms-transform: translate(5px, 5px) rotate(-45deg);
+                        transform: translate(5px, 5px) rotate(-45deg); } }
+        
+          @media all and (max-width: 500px) {
+            .sdc-news-header__nav-action {
+              width: 55px; }
+            .sdc-news-header__nav-action-icon {
+              width: 22px;
+              height: 32px;
+              right: 16px; }
+              .sdc-news-header__nav-action-icon:before {
+                top: 1px;
+                bottom: 1px;
+                width: 88px; }
+            .sdc-news-header__nav-action-icon-label {
+              right: 35px;
+              font-size: 1rem; }
+            .sdc-news-header__nav-action-icon-symbol, .sdc-news-header__nav-action-icon-symbol:before, .sdc-news-header__nav-action-icon-symbol:after {
+              border-radius: 2px;
+              height: 2px; }
+            .sdc-news-header__nav-action-icon-symbol:before {
+              top: -5px; }
+            .sdc-news-header__nav-action-icon-symbol:after {
+              top: 5px; }
+            .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol {
+              -webkit-transform: translate(0, -50%) scale(1);
+                  -ms-transform: translate(0, -50%) scale(1);
+                      transform: translate(0, -50%) scale(1); }
+            .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol:before {
+              -webkit-transform: translate(3px, -2px) rotate(45deg);
+                  -ms-transform: translate(3px, -2px) rotate(45deg);
+                      transform: translate(3px, -2px) rotate(45deg); }
+            .sdc-news-header__nav-action[data-state="open"] .sdc-news-header__nav-action-icon-symbol:after {
+              -webkit-transform: translate(3px, 3px) rotate(-45deg);
+                  -ms-transform: translate(3px, 3px) rotate(-45deg);
+                      transform: translate(3px, 3px) rotate(-45deg); } }
+        
+          /* Mobile/Tablet menu */
+          .sdc-news-header__logo {
+            width: 204px; }
+        
+          @media screen and (max-width: 899px) {
+            .sdc-news-header {
+              background-size: auto 100%; }
+              .sdc-news-header__logo {
+                max-height: 26px;
+                width: 126px; }
+              .sdc-news-header__nav-wrap {
+                padding: 20px 20px 0;
+                max-width: 20rem;
+                width: 100%;
+                border-bottom: 1px solid #dcdcdc;
+                z-index: 999;
+                border-radius: 0 0 0 5px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); }
+              .sdc-news-header__toolbar {
+                margin: 0; }
+              .sdc-news-header__components {
+                margin-bottom: 1em;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between; }
+              .sdc-news-header__search {
+                margin: 0 1em 0 0;
+                height: 36px;
+                overflow: hidden; }
+              .sdc-news-header__search-input {
+                padding: 0 .5em;
+                outline: 0; }
+              .sdc-news-header__watch-link {
+                margin: 0;
+                float: right; }
+              .sdc-news-header__nav-group {
+                overflow: visible;
+                margin: 0 0; }
+              .sdc-news-header__nav-item {
+                margin: 0;
+                width: 100%;
+                display: block;
+                border-top: 1px solid #f2f2f2; }
+              .sdc-news-header__nav-item-link {
+                padding: .75em 0;
+                color: #2f53a1; }
+                .sdc-news-header__nav-item-link:hover {
+                  text-decoration: underline; }
+                .sdc-news-header__nav-item-link--active {
+                  font-weight: bold; }
+              .sdc-news-header__edition {
+                position: absolute;
+                bottom: 1em;
+                left: 20px;
+                border-bottom: 2px solid transparent;
+                color: #2f53a1; } }
+        
+        </style>
+        <div class="sdc-news-header callfn " data-component-name="sdc-news-header">
+        
+          <div class="sdc-news-header__body">
+        
+            <a href="/" class="sdc-news-header__logo"><img src="https://news.sky.com/assets/sky-news-logo.png?bypass-service-worker" alt="Sky News" class="sdc-news-header__logo-image" data-lazy-loaded="true"></a>
+        
+            <a href="" class="sdc-news-header__nav-action" data-role="mobile-nav-action">
+              <span class="sdc-news-header__nav-action-icon">
+                <span class="sdc-news-header__nav-action-icon-label">Menu</span>
+                <span class="sdc-news-header__nav-action-icon-symbol"></span>
+              </span>
+            </a>
+        
+            <div class="sdc-news-header__nav-wrap" data-role="mobile-nav-body">
+        
+        
+              <div class="sdc-news-header__nav" role="navigation" aria-labelledby="main-site-navigation">
+        
+                <div class="sdc-news-header__toolbar">
+        
+        
+        
+                </div>
+        
+                <div class="sdc-news-header__components">
+        
+                  <div class="sdc-news-header__search">
+                        <form action="/search" method="get" class="site-search">
+                            <input type="text" name="q" placeholder="Search" accesskey="q" autocomplete="off" autocorrect="off" autocapitalize="off" value="" class="sdc-news-header__search-input">
+                              <input type="hidden" value="date" name="sortby">
+                            <button class="sdc-news-header__search-button">
+                                <svg class="sdc-news-header__search-button-icon" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M339.535 303.959c22.91-30.146 36.66-67.632 36.66-108.408 0-99.136-80.361-179.501-179.492-179.501-99.135 0-179.501 80.366-179.501 179.501 0 99.14 80.366 179.501 179.501 179.501 41.03 0 78.73-13.926 108.965-37.09l99.004 99.004c27.655 27.666 65.302 36.953 93.788 25.918l-158.925-158.925zm-290.331-108.408c0-81.333 66.162-147.5 147.499-147.5 81.328 0 147.5 66.167 147.5 147.5 0 81.337-66.172 147.5-147.5 147.5-81.337 0-147.499-66.162-147.499-147.5z"></path></svg>
+                                <span class="sdc-news-header__search-button-label">Search</span>
+                            </button>
+                        </form>
+                  </div>
+        
+                      <a class="sdc-news-header__watch-link" href="/watch-live">Watch Live</a>
+        
+                </div>
+        
+                <ul class="sdc-news-header__nav-group" role="menubar"><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link  sdc-news-header__nav-item-link--active" href="/" role="menuitem">Home</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/uk" role="menuitem">UK</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/world" role="menuitem">World</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/politics" role="menuitem">Politics</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/us" role="menuitem">US</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/ocean-rescue" role="menuitem">Ocean Rescue</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/technology" role="menuitem">Tech</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/business" role="menuitem">Business</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/entertainment" role="menuitem">Entertainment</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/strangenews" role="menuitem">Offbeat</a>
+        
+                  </li><li class="sdc-news-header__nav-item" role="presentation">
+        
+                      <a class="sdc-news-header__nav-item-link " href="/weather" role="menuitem">Weather</a>
+        
+                  </li></ul>
+              </div>
+        
+            </div>
+        
+          </div>
+        
+        </div>
+        
     <div class="page">
       <div class="page-col page-body">
-        <h1>Qualifying Zones</h1>
+        <h1>In Depth Report</h1>
           <h2 id="1" cue="[51.50085005203554, -0.12362409461901334]" text="The incident occured in Westminister">The Incident</h2>
           <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
             </p><p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
