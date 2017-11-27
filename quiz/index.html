@@ -179,6 +179,16 @@
         font-size: 1em;
       }
 
+      .card__answer:empty {
+        display: none;
+      }
+
+      .card__answer[class] {
+        font-size: 0.95em;
+        margin: 1em 0 0;
+        padding: 0
+      }
+
       .card li {
         display: inline-block;
         margin: 4px; 
@@ -244,8 +254,7 @@
         </div>
       </div>
       <div class="page-col page-body">
-       
-          
+
           <div class="quiz" data-id="0404">
             <div class="quiz-scores">
               <a href="#card1">1</a>
@@ -256,58 +265,64 @@
               <a href="#card6">6</a>
             </div>
             <h2>Football Quiz!</h2>
-            <div class="card" data-id="4" id="card1">
-              <p>Who said "Some people think football is a matter of life and death. I assure you, it's much more serious than that?"</p>
+            <div class="card" data-id="4" id="card1" data-explanation="Bill Shankley said the famous words in a 1971 interview">
+              <p class="card__question">Who said "Some people think football is a matter of life and death. I assure you, it's much more serious than that?"</p>
               <ul>
                 <li><a href="#">Bilbo Baggins</a></li>
                 <li><a href="#">Billy the Kid</a></li>
                 <li><a href="#">Bill Shankley</a></li>
               </ul>
+              <p class="card__answer"></p>
             </div>
 
-            <div class="card" data-id="4" id="card2">
+            <div class="card" data-id="4" id="card2" data-explanation="There are eleven footballers in a team, unless someone gets sent off!!">
                 <p>How many players are there in a football team?</p>
                 <ul>
                   <li><a href="#">A million</a></li>
                   <li><a href="#">Eleven</a></li>
                   <li><a href="#">One</a></li>
                 </ul>
+                <p class="card__answer"></p>
               </div>
 
-              <div class="card" data-id="6" id="card3">
+              <div class="card" data-id="6" id="card3" data-explanation="Much to tabloid amusement, Gazza turned up at the seige with a chicken, some lager and a fishing rod">
                   <p>What did Gazza take with him when he went to see his old pal Moaty?</p>
                   <ul>
                     <li><a href="#">Some pysciatric help</a></li>
                     <li><a href="#">Medication</a></li>
                     <li><a href="#">A chicken, a fishing rod and some cans of Stella</a></li>
                   </ul>
+                  <p class="card__answer"></p>
                 </div>
 
-                <div class="card" data-id="5" id="card4">
+                <div class="card" data-id="5" id="card4" data-explanation="Lineker says the notorious incident is the thing he most gets asked about">
                     <p>What did Gary Lineker say was his best achievement in the 1990 World Cup?</p>
                     <ul>
                       <li><a href="#">Shitting himself then wiping his arse on the pitch like a dog</a></li>
                       <li><a href="#">Becoming England's top world Cup goalscorer</a></li>
                       <li><a href="#">Reaching the semi-final</a></li>
                     </ul>
+                    <p class="card__answer"></p>
                   </div>
 
-                  <div class="card" data-id="6"  id="card5">
+                  <div class="card" data-id="6"  id="card5" data-explantion="Wayne Rooney broke Bobby Charlton's 40 year old record in May 2015">
                       <p>What has scored the most goals for Manchester United?</p>
                       <ul>
                         <li><a href="#">Wayne Rooney</a></li>
                         <li><a href="#">Stephen Hawking</a></li>
                         <li><a href="#">Pingu</a></li>
                       </ul>
+                      <p class="card__answer"></p>
                     </div>
 
-                    <div class="card" data-id="9"  id="card6">
+                    <div class="card" data-id="9"  id="card6" data-explanation="Shaka Hislop, who has a degree in engineering, was an intern at NASA for two years,">
                         <p>Which footballer once worked for NASA?</p>
                         <ul>
                           <li><a href="#">Wayne Rooney</a></li>
                           <li><a href="#">Clarence Seedorf</a></li>
                           <li><a href="#">Shaka Hislop</a></li>
                         </ul>
+                        <p class="card__answer"></p>
                       </div>
 
                       <p class="quiz-result"></p>
@@ -549,6 +564,7 @@
           answers: item.querySelectorAll('a').map(function(a){
             return a.textContent
           }),
+          explantion: item.getAttribute('data-explanation'),
           correct: (parseInt(item.getAttribute('data-id'), 10) - (cardIndex+1))
         });
 
@@ -566,15 +582,21 @@
         var answers = card.card.querySelectorAll('a');
         answers[card.correct-1].setAttribute('data-correct', true);
 
+        var explantion = card.explantion ? [card.explantion] : [];
+
         if(card.correct!==(questionIndex+1)){
           answers[questionIndex].setAttribute('data-wrong', true);
           scores[cardIndex].setAttribute('data-wrong', true);
+          explantion.unshift('WRONG');
         }
 
         else {
           scores[cardIndex].setAttribute('data-correct', true);
           data.score += 1;
+          explantion.unshift('CORRECT');
         }
+
+        card.card.querySelector('.card__answer').textContent = explantion.join(' - ');
 
         if(data.answered === data.items.length){
           result.textContent = ["You got", data.score, "out of", data.items.length].join(" ")
