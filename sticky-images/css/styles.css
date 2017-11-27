@@ -86,13 +86,15 @@ p {
   -webkit-position: sticky;
   top: 0;
   height: 100vh;
+  overflow: hidden;
 }
 
 .sticky-images__image-inner-wrap {
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
 }
 
 .sticky-images__strip--static .sticky-images__image-wrap {
