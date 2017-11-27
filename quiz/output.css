@@ -1,4 +1,5 @@
-/* START/RESET */
+
+    /* START/RESET */
 /* ========= */
 * {
   padding: 0;
@@ -35,9 +36,18 @@ svg {
 a:hover {
   text-decoration: underline; }
 
+.site-wrap {
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 @media (hover: none) {
   a[href]:hover {
-    text-decoration: none; } }
+    text-decoration: none; 
+  } 
+}
 
 :focus {
   outline-offset: -2px; }
