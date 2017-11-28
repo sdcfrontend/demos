@@ -1,11 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
 }
 
+.article-header {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.article-header__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-header > .article-cols {
+  flex: 1;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+  color: #fff;
+  padding: 4em 0;
+}
+
+.article-cols__wrap {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.article-cols__col {
+  flex: 0 1 50%;
+}
+
+.article-cols__col--wide {
+  flex: 0 0 800px;
+  padding: 0 1em;
+}
+
+.article-header__type {
+  font-size: 2.2em;
+  font-weight: 400;
+}
+
+.article-header__heading {
+  font-size: 2.8em;
+  font-weight: 500;
+}
+
+.article-header__sub-heading {
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.article-header__text {
+  font-size: 0.95em;
+}
+
+.article-header__text:first-of-type {
+  font-weight: 500;
+}
+
+.article-header__by-line {
+  font-size: 0.8em;
+}
+
+.article-header__by-line p {
+  flex: 1;
+}
+
+.article-header__by-line span {
+  font-weight: 500;
+}
+
+.article-header__time {
+  border-left: 2px solid #fff;
+  padding-left: 1em;
+  margin-bottom: 1.5em;
+  font-size: 0.8em;
+}
+
+.article-header__time .article-header__text {
+  margin: 0;
+}
+
+.article-header__tag {
+  display: inline-block;
+  color: #4a4a4a;
+  background: #fff;
+  font-size: 0.75em;
+  padding: 0.2em 0.8em 0.15em 0.8em;
+  border-radius: 1em;
+}
+
 .article-body {
+  padding: 2em;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+.article-body__wrap {
   max-width: 1024px;
   margin: 0 auto;
-  padding: 2em;
 }
 
 .image-with-words {
@@ -38,17 +140,28 @@ img {
 
 .image-with-words__body {
   position: relative;
-  margin: -3em 4em 0 4em;
-  padding: 3em 4em;
+  margin: -2em 3em 0 3em;
+  padding: 2em 4em;
   background: #fff;
 }
 
-.image-with-words__body > p:first-of-type {
-  font-size: 1.4em;
-  position: relative;
+.image-with-words__body > p {
+  font-size: 1.1em;
 }
 
-.image-with-words__body > p:first-of-type:before {
+.image-with-words__body p:first-of-type {
+  font-weight: 500;
+}
+
+.image-with-words__heading {
+  font-size: 1.2em;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 1em;
+  line-height: 1.4em;
+}
+
+.image-with-words__heading:before {
   content: "";
   display: block;
   position: absolute;
@@ -68,5 +181,9 @@ img {
 }
 
 .cards__card-body {
-  padding: 2em;
+  padding: 1em 2em;
+}
+
+.cards__card-body > p {
+  font-size: 1em;
 }
