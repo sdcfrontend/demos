@@ -12,6 +12,7 @@
 	"useTeamName": true,
 	"type": "football",
 	"showFooter": "false",
+	"showFormations": "false",
 	"numOfParticipants": 11,
   "successMessage": {
     "title": "",
