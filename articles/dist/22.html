@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="output.css">
+<script src="http://www.webglearth.com/v2/api.js"></script>
+<script>
+ 
+</script>
+    <style media="screen">
+    
+      .page {
+        display: flex;
+        padding: 2em 4vw;
+      }
+
+      .page-col {
+        margin: 0;
+        padding: 12px 0
+      }
+
+      .page-nav {
+        width: 200px
+      }
+
+      .page-related {
+        width: 340px
+      }
+
+      .page-body {
+        flex: 1;
+        min-width: 500px;
+        padding: 0 3em;
+      }
+
+      .page-stick {
+        top: 2em;
+        position: sticky
+
+      }
+
+      p,
+      h1,
+      h2 {
+        margin-bottom: 2em;
+        font-weight: 400;
+      }
+
+      h1 {
+        margin-bottom: 0.75em;
+        font-size: 2.8em;
+      }
+
+      h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+      }
+
+      h3 {
+        font-size: 1.25em;
+        margin-bottom: 0.75em;
+        font-weight: 500;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+
+      li a {
+        padding: 2px 1px;
+        display: inline-block;
+        color: #3157a1
+      }
+
+      .sdc-news-story-grid__card {
+        display: flex;
+        margin-bottom: 24px;
+      }
+
+      .sdc-news-story-grid__link {
+        width: 130px
+      }
+
+      .sdc-news-story-grid__body {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 1em;
+      }
+
+      .sdc-news-story-grid__headline  {
+        font-size: 1.1em;
+        font-weight: 400;
+        color: #3157a1
+      }
+
+      .quiz {
+        background: #ddd;
+        padding: 1em;
+        margin-bottom: 2.5em;
+      }
+
+      .card {
+        background: white;
+        padding: 2.5em 1.5em;
+        margin-bottom: 1em;
+        box-shadow: 0 0 5px rgba(0,0,0,0.15);
+        text-align: center;
+        font-size: 18px;
+        transition: 0.33s outline, 0.33s background;
+      }
+
+      .card[data-incorrect]{
+        outline: 5px solid #9f202d;
+        background-color: rgb(253, 223, 229)
+      }
+
+      .card p {
+        margin-bottom: 1.25em;
+        font-size: 1em;
+      }
+
+      .card li {
+        display: inline-block;
+        margin: 2px; 
+      }
+
+      .card li a,
+      .check button {
+        display: inline-block;
+        padding: 12px 16px;
+        font-size: 16px;
+        color: white;
+        background: #3157a1;
+        text-decoration: none;
+        transition: 0.33s background;
+        cursor: pointer;
+      }
+
+      .check button[disabled] {
+        background: #ccc;
+        color: #aaa;
+      }
+
+
+      .card li a[aria-selected],
+      .card li a[aria-selected]:hover {
+        background: #68a9ff;
+      }
+
+      .card li a:hover {
+        background: #2f68d7;
+      }
+
+      .check {
+        text-align: center;
+      }
+
+      .score {
+        font-size: 18px;
+        margin: 21px 0 18px;
+        text-align: center;
+      }
+
+    </style>
+   </head>
+   <body>
+    <div class="page">
+      <div class="page-col page-nav">
+        <div class="page-stick">
+          <div class="video-dock"></div>
+          <h3>Summary:</h3>
+          <ul>
+            <li><a class="page-anchor" href="#d1">The Incident</a></li>
+            <li><a class="page-anchor" href="#d2">Pursuit across London</a></li>
+            <li><a class="page-anchor" href="#d3">Shootout at the Bridge</a></li>
+            <li><a class="page-anchor" href="#d4">Capture</a></li>
+            <li><a class="page-anchor" href="#d5">Suspected Identified</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="page-col page-body">
+        <h1>Sky special report: London calling</h1>
+
+          <h2 id="d1">The Incident</h2>
+
+          <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+          </p><p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          
+          <div class="quiz" data-id="0404">
+            <div class="card" data-id="4">
+              <p>Who said "Some people think football is a matter of life and death. I assure you, it's much more serious than that?"</p>
+              <ul>
+                <li><a href="#">Bilbo Baggins</a></li>
+                <li><a href="#">Billy the Kid</a></li>
+                <li><a href="#">Bill Shankley</a></li>
+              </ul>
+            </div>
+
+            <div class="card" data-id="4">
+                <p>How many players are there in a football team?</p>
+                <ul>
+                  <li><a href="#">A million</a></li>
+                  <li><a href="#">Eleven</a></li>
+                  <li><a href="#">One</a></li>
+                </ul>
+              </div>
+
+              <div class="card" data-id="6">
+                  <p>What did Gazza take with him when he went to see his old pal Moaty?</p>
+                  <ul>
+                    <li><a href="#">Some pysciatric help</a></li>
+                    <li><a href="#">Medication</a></li>
+                    <li><a href="#">A chicken, a fishing rod and some cans of Stella</a></li>
+                  </ul>
+                </div>
+
+                <div class="card" data-id="5">
+                    <p>What did Gary Lineker say was his best achievement in the 1990 World Cup?</p>
+                    <ul>
+                      <li><a href="#">Shitting himself then wiping his arse on the pitch like a dog</a></li>
+                      <li><a href="#">Becoming England's top world Cup goalscorer</a></li>
+                      <li><a href="#">Reaching the semi-final</a></li>
+                    </ul>
+                  </div>
+
+              <div class="check">
+                <button disabled>Check Answers</button>
+              </div>
+
+              <p class="score"></p>
+
+          </div>
+          
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p>
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          
+          <h2 id="d2">Pursuit across London</h2>
+          
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p>
+          <h2 id="d3">Shootout at the Bridge</h2>
+          <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+          </p>
+          </p><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
+          </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p>
+          
+          <h2 id="d4">Capture</h2>
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <h2 id="d5">Suspected Identified</h2>
+          <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+          <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
+          </p>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+          </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+          </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+          </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+
+              
+
+    </div>
+
+    <div class="page-col page-related">
+        <div class="page-stick">
+          <h3>Recommended for you:</h3>
+          <div class="sdc-news-story-grid__row">
+              
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11137405">
+              
+              
+              
+                                      <a href="https://news.sky.com/story/eight-things-to-read-before-the-budget-11136723" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-philip-hammond-speech_4162749.jpg?bypass-service-worker&amp;20171122032733" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-philip-hammond-speech_4162749.jpg?bypass-service-worker&amp;20171122032733 288w" alt="Philip Hammond prepares his speech for the Budget in Downing Street" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="https://news.sky.com/story/eight-things-to-read-before-the-budget-11136723" class="sdc-news-story-grid__link">Eight things to read before the Budget</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138450">
+              
+              
+              
+                                      <a href="/story/live-un-judgment-on-butcher-of-bosnia-mladic-11138450" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-ratko-mladic-trial_4162863.jpg?bypass-service-worker&amp;20171122091249" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-ratko-mladic-trial_4162863.jpg?bypass-service-worker&amp;20171122091249 288w" alt="Ratko Mladic" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline sdc-news-story-grid__headline--breaking">
+                                              <a href="/story/live-un-judgment-on-butcher-of-bosnia-mladic-11138450" class="sdc-news-story-grid__link">LIVE: UN judgment on 'Butcher of Bosnia'</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138297">
+              
+              
+              
+                                      <a href="/story/david-cassidy-1970s-teen-idol-and-the-partridge-family-star-dies-11138297" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-david-cassidy-music_4160174.jpg?bypass-service-worker&amp;20171119093119" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-david-cassidy-music_4160174.jpg?bypass-service-worker&amp;20171119093119 288w" alt="David Cassidy at a press conference in London in 1974" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/david-cassidy-1970s-teen-idol-and-the-partridge-family-star-dies-11138297" class="sdc-news-story-grid__link">David Cassidy, 1970s teen idol, dies aged 67</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11137245">
+              
+              
+              
+                                      <a href="/story/best-day-of-my-life-celebrations-as-zimbabwe-awaits-mugabe-successor-11137245" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-zimbabwe-harare-celebrations_4162793.jpg?bypass-service-worker&amp;20171122071027" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-zimbabwe-harare-celebrations_4162793.jpg?bypass-service-worker&amp;20171122071027 288w" alt="Zimbabweans celebrate in the morning sun after President Robert Mugabe resigned in Harare" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/best-day-of-my-life-celebrations-as-zimbabwe-awaits-mugabe-successor-11137245" class="sdc-news-story-grid__link">Mugabe successor on way back to be sworn in </a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+                          <div class="sdc-news-story-grid__card sdc-news-story-grid__card--5col   " data-id="11138291">
+              
+              
+              
+                                      <a href="/story/sky-views-does-animal-suffering-matter-to-uk-11138291" class="sdc-news-story-grid__link">
+                                          <div class="sdc-news-story-grid__media">
+                                              <div class="sdc-news-story-grid__ratio sdc-news-story-grid__ratio--4/3">
+                                                  <img src="https://e3.365dm.com/17/11/288x216/skynews-calves-animal-welfare_4162742.jpg?bypass-service-worker&amp;20171122004713" srcset="
+                                                      https://e3.365dm.com/17/11/288x216/skynews-calves-animal-welfare_4162742.jpg?bypass-service-worker&amp;20171122004713 288w" alt="Is the UK taking a step backward on animal welfare?" class="sdc-news-story-grid__media-element sdc-news-story-grid__media-img" data-lazy-loaded="true">
+                                              </div>
+                                              
+                                          </div>
+                                      </a>
+              
+                                  <div class="sdc-news-story-grid__body">
+                                          <h3 class="sdc-news-story-grid__headline ">
+                                              <a href="/story/sky-views-does-animal-suffering-matter-to-uk-11138291" class="sdc-news-story-grid__link">Sky Views: UK risks being animal torturers</a>
+                                          </h3>
+              
+                                  </div>
+              
+              
+              
+                          </div>
+              
+                  </div>
+
+        </div>
+    </div>
+
+  </div>
+
+    <script>
+
+      NodeList.prototype.forEach = Array.prototype.forEach;
+      NodeList.prototype.map = Array.prototype.map;
+
+      var quiz = document.querySelector('.quiz');
+      var cards = quiz.querySelectorAll('.card');
+      var submit = quiz.querySelector('.check button');
+      submit.onclick = validate;
+
+      var answers = 0;
+      
+      var data = []
+
+      cards.forEach(function(item, cardIndex){
+
+        data.push({
+          card: item,
+          question: item.querySelector('p').textContent,
+          number: (cardIndex + 1),
+          answers: item.querySelectorAll('a').map(function(a){
+            return a.textContent
+          }),
+          correct: (parseInt(item.getAttribute('data-id'), 10) - (cardIndex+1))
+        });
+
+        item.querySelectorAll('a').forEach(function(link, questionIndex){
+          link.onclick = selectAnswer.bind(link, cardIndex, questionIndex);
+        })
+      })
+
+      function selectAnswer(cardIndex, questionIndex, event){
+
+        event.preventDefault();
+        
+        data[cardIndex].card.querySelectorAll('a').forEach(function(item){
+          item.removeAttribute('aria-selected')
+        })
+
+        this.setAttribute('aria-selected', true);
+        data[cardIndex].selected = (questionIndex + 1);
+
+        answers = quiz.querySelectorAll('[aria-selected]').length;
+
+        setSubmitState(submit, answers === data.length)
+        
+      }
+
+      function setSubmitState(button, state){
+
+        if(state){
+          button.disabled = false;
+        }
+
+        else {
+          button.disabled = 'disabled';
+        }
+      }
+
+      function validate(){
+
+        var correct = 0;
+
+        data.forEach(function(item){
+
+          item.card.querySelectorAll('a')[item.correct-1].setAttribute('data-correct', true);
+
+          if(item.correct === item.selected){
+            correct += 1;
+            item.card.removeAttribute('data-incorrect');
+          }
+
+          else {
+            item.card.setAttribute('data-incorrect', true);
+          }
+        })
+
+        quiz.querySelector('.score').textContent = ["You got", correct, "out of", data.length].join(" ");
+
+      }
+     
+
+    </script>
+   </body>
+
+</html>

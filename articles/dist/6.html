@@ -64,10 +64,9 @@
       }
 
       nav {
-        background: black;
         color: white;
         position: fixed;
-        top: 10px;
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
@@ -75,12 +74,17 @@
 
       nav a {
         display: inline-block;
+        background: #777;
         padding: 4px;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin: 3px 1px;
+        color: transparent
       }
 
       nav a[aria-current]{
         background: white;
-        color: black;
       }
 
       shim {
