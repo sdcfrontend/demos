@@ -29,7 +29,7 @@ p {
 }
 
 *[data-parallax-role="subject"] {
-  will-change: all;
+  will-change: transform, filter, opacity;
 }
 
 .article-wrap {
