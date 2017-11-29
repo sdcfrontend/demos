@@ -31,14 +31,13 @@
       }
 
       .image {
-        background: url(bg.jpg);
+        background: url(GettyImages-626117408.jpg);
         background-size: 100% auto;
         background-position: center;
         background-color: #15165f;
-        padding-bottom: 50%;
+        padding-bottom: 56.25%;
         position: relative;
         overflow: hidden;
-        margin-bottom: 3em;
       }
 
       .image[data-scroll-action-active] span {
@@ -53,7 +52,7 @@
       }
 
       .image span {
-        background: url(right.png) no-repeat;
+        background-image: url(vettel2.png);
         background-position: top right;
         background-size: 100% auto;
         position: absolute;
@@ -64,13 +63,14 @@
         transform: translateX(0%);
         animation-duration: 1.2s;
         animation-fill-mode: forwards;
+        box-shadow: 3px 0 2px rgba(0,0,0,0.2);
         /*mix-blend-mode: hard-light;*/
         /*animation-name: slideback;
         animation-direction: reverse;*/
       }
 
       .image span + span {
-        background-image: url(left.png);
+        background-image: url(hamilton2.png);
         left: auto;
         right: 100%;
         transform: translateX(0%);
@@ -373,7 +373,7 @@
           </div>
         </div>
 
-    <h1>The Big Match Head to Head</h1>
+    <h1>Weekend Sport Preview</h1>
     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
         
             <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
@@ -383,10 +383,12 @@
             <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
         
             <p>"What's happened to me? " he thought. It wasn't a dream.
-    <div class="image" data-scroll-action>
-      <span></span>
-      <span></span>
-    </div>
+          <div style="margin-bottom: 3em">
+          <div class="image" data-scroll-action>
+          <span></span>
+          <span></span>
+          </div>
+          </div>
     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
 
     <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
@@ -408,10 +410,11 @@
   <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
 
     <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
-
-      <div class="image" data-scroll-action>
-        <span></span>
-        <span></span>
+      <div style="margin-bottom: 3em">
+      <div class="image" data-scroll-action  style="background-image:url(CRICKET_BG.jpg)">
+        <span style="background-image:url(CRICKET_2.png)"></span>
+        <span style="background-image:url(CRICKET_1.png)"></span>
+      </div>
       </div>
     <p>However hard he threw himself onto his right, he always rolled back to where he was.
       <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
@@ -436,9 +439,11 @@
         <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
 
         <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
-          <div class="image" data-scroll-action>
-            <span></span>
-            <span></span>
+            <div style="margin-bottom: 3em">
+                <div class="image" data-scroll-action  style="background-image:url(GOLF_BG.jpg)">
+                    <span style="background-image:url(GOLF_2.png)"></span>
+                    <span style="background-image:url(GOLF_1.png)"></span>
+                  </div>
           </div>
         <p>"What's happened to me? " he thought. It wasn't a dream.
 
@@ -466,7 +471,7 @@
       items.forEach(function(item){
         var dims = item.getBoundingClientRect();
         console.log(dims.top);
-        if(dims.top < (h/1.5)){
+        if(dims.top < (h/3)){
           item.setAttribute('data-scroll-action-active', 'true');
         }
       });

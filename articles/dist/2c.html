@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="header-sport.css">
-
+    
     <style media="screen">
 
       @keyframes slide {
@@ -30,29 +30,14 @@
 
       }
 
-      h1 {
-        font-size: 3em;
-        font-weight: 400;
-        max-width: 740px;
-        padding: 0 2vw;
-        margin: 0.75em auto;
-      }
-
-      .image-con {
-        height: 200vh;
-        margin-bottom: 3em;
-      }
-
       .image {
         background: url(GettyImages-626117408.jpg);
-        background-size: cover;
+        background-size: 100% auto;
         background-position: center;
         background-color: #15165f;
-        height: 100vh;
-        position: sticky;
-        top: 0;
+        padding-bottom: 56.25%;
+        position: relative;
         overflow: hidden;
-
       }
 
       .image[data-scroll-action-active] span {
@@ -68,8 +53,8 @@
 
       .image span {
         background: url(vettel2.png) no-repeat;
-        background-position: 0 100%;
-        background-size: auto 100%;
+        background-position: top right;
+        background-size: 100% auto;
         position: absolute;
         width: 50%;
         top: 0;
@@ -88,8 +73,7 @@
         left: auto;
         right: 100%;
         transform: translateX(0%);
-        background-position: 100%;
-        box-shadow: 0 0 0.75em rgba(0,0,0,0.6);
+        background-position: top left;
       }
 
       p {
@@ -99,20 +83,40 @@
         max-width: 740px;
         padding: 0 2vw;
       }
+
+      h1 {
+        font-size: 3em;
+        font-weight: 400;
+        max-width: 740px;
+        padding: 0 2vw;
+        margin: 1em auto;
+      }
+
+      h1, h2 {
+        max-width: 740px;
+        padding: 0 2vw;
+      }
+
+      h2 {
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 1.5em auto 1em
+      }
     </style>
   </head>
   <body>
+
       <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header" data-init="true">
           <div class="site-header site-header--rainbow">
-
+        
               <div class="site-header__body site-wrap">
-
+        
                   <div class="site-header__col site-header__col1">
                       <a href="/" class="svg-logo site-header__logo">
                         <img class="svg-logo__image" src="http://www.skysports.com/assets/Sky-Sports-Logo-transparent.svg" alt="Sky Sports" onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo-transparent.png'">
                       </a>
                   </div>
-
+        
                   <div class="site-header__col site-header__col2">
                     <div class="site-login" data-role="site-login">
                         <!--default-->
@@ -122,9 +126,9 @@
                         </ul>
                       </div>
                   </div>
-
+        
               <div class="site-header__col site-header__col3">
-
+        
                   <form action="http://www.skysports.com/search" method="GET" class="site-search">
                       <input type="text" name="q" placeholder="Search Sky Sports" accesskey="q" autocomplete="off" autocorrect="off" autocapitalize="off" class="site-search__input">
                       <input type="hidden" value="the site" name="searchtype">
@@ -134,9 +138,9 @@
                           <svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg>
                       </button>
                   </form>
-
+        
               </div>
-
+        
               <a class="site-header__col site-header__col4 site-header__nav-button-hit-area" data-role="open-left-hand-nav" href="#no-js-nav" aria-controls="site-nav-desktop-wrap">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2048 2048" xml:space="preserve" class="site-header__nav-button">
                     <rect y="384" width="2048" height="256"></rect>
@@ -144,7 +148,7 @@
                     <rect y="1408" width="2048" height="256"></rect>
                 </svg>
               </a>
-
+        
           </div>
           <!-- desktop nav -->
           <div class="site-nav-desktop__wrap  site-wrap">
@@ -364,23 +368,26 @@
               <a href="http://www.skysports.com/watch" class="site-nav-desktop__watch-button no-default-hover no-default-active"><span class="site-nav-desktop__watch-button__label">Watch Sky Sports</span></a>
               </div>
             </div>
-
+        
           </div>
         </div>
-        <h1>Weekend Sport Preview</h1>
-        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
-            
-                  <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
-            
-                  <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
-            
+
+    <h1>Weekend Sport Preview</h1>
+    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
         
-      <div class="image-con">
-          <div class="image" data-scroll-action  style="background-image:url(CRICKET_BG.jpg)">
-              <span style="background-image:url(CRICKET_2.png)"></span>
-              <span style="background-image:url(CRICKET_1.png)"></span>
-            </div>
-    </div>
+            <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
+        
+            <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
+        
+            <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
+        
+            <p>"What's happened to me? " he thought. It wasn't a dream.
+          <div style="margin-bottom: 3em">
+          <div class="image" data-scroll-action>
+          <span></span>
+          <span></span>
+          </div>
+          </div>
     <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
 
     <p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
@@ -402,12 +409,12 @@
   <p>Drops of rain could be heard hitting the pane, which made him feel quite sad.
 
     <p>"How about if I sleep a little bit longer and forget all this nonsense", he thought, but that was something he was unable to do because he was used to sleeping on his right, and in his present state couldn't get into that position.
-    <div class="image-con">
+      <div style="margin-bottom: 3em">
       <div class="image" data-scroll-action>
         <span></span>
         <span></span>
       </div>
-    </div>
+      </div>
     <p>However hard he threw himself onto his right, he always rolled back to where he was.
       <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.
 
@@ -431,10 +438,11 @@
         <p>The bedding was hardly able to cover it and seemed ready to slide off any moment.
 
         <p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.
-          <div class="image-con"><div class="image" data-scroll-action  style="background-image:url(PL_BG.jpg)">
-              <span style="background-image:url(PL_2.png)"></span>
-              <span style="background-image:url(PL_1.png)"></span>
-            </div>
+            <div style="margin-bottom: 3em">
+              <div class="image" data-scroll-action>
+            <span></span>
+            <span></span>
+          </div>
           </div>
         <p>"What's happened to me? " he thought. It wasn't a dream.
 
@@ -462,7 +470,7 @@
       items.forEach(function(item){
         var dims = item.getBoundingClientRect();
         console.log(dims.top);
-        if(dims.top < 10){
+        if(dims.top < (200)){
           item.setAttribute('data-scroll-action-active', 'true');
         }
       });

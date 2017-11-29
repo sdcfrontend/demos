@@ -1,0 +1,138 @@
+
+    /* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+.site-wrap {
+  padding-left: 24px;
+  padding-right: 24px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; 
+  } 
+}
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+h1 {
+  font-size: 2.24em;
+  font-weight: normal;
+  margin-bottom: 1.5em; }
+
+p {
+  margin: 0 0 1.5em;
+  line-height: 1.4;
+  font-size: 22px; }
+
+.sdc-article__group {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.sdc-article__image {
+  width: 50%;
+  max-width: 750px;
+  background: #eee;
+  top: 0;
+  position: relative; }
+
+figcaption {
+  background: #333;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  width: 100%; }
+
+.sdc-article__image > img {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  min-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  align-self: flex-start;
+  position: sticky;
+  top: 0; }
+
+.sdc-article__group-body {
+  flex: 1;
+  padding: 2em 4em 0;
+  min-width: 50%; }
+
+.sdc-article__group + .sdc-article__group >
+.sdc-article__group-body {
+  padding-top: 0; }
+
+@media all and (max-width: 1023px) {
+  .sdc-article__group {
+    display: block; }
+  .sdc-article__image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 75%;
+    margin-bottom: 3em; }
+  .sdc-article__image > img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%; }
+  .sdc-article__group:first-of-type
+.sdc-article__image {
+    margin-bottom: 1em; } }
+
+@media all and (max-width: 760px) {
+  p {
+    font-size: 20px; }
+  h1 {
+    font-size: 1.9em;
+    margin-bottom: 1em; }
+  .sdc-article__group-body {
+    padding: 1em 4vw;
+    min-width: 100%; } }
+
+/*# sourceMappingURL=output.css.map */
