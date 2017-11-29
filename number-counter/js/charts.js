@@ -61,7 +61,6 @@ function setChart(chart) {
   switch (type) {
 
     case "bar":
-    console.log('hi')
 
       bars.forEach(function(bar) {
         if (direction == "horizontal") {
