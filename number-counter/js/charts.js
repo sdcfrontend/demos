@@ -43,6 +43,7 @@ function preSetChart(chart) {
 function setChart(chart) {
   var max = chart.dataset.max;
   var type = chart.dataset.type;
+  var direction = chart.dataset.direction;
   var bars = chart.querySelectorAll('[data-role="bar"]');
 
   if (!max) {
@@ -56,9 +57,14 @@ function setChart(chart) {
   }
 
   switch (type) {
+
     case "bar":
+    console.log('hi')
+
       bars.forEach(function(bar) {
-        if (type == "bar") {
+        if (direction == "horizontal") {
+          bar.style.cssText = 'transform: translateX(' + (-100 + (bar.dataset.value/max)*100) + '%)';
+        } else {
           bar.style.cssText = 'transform: translateY(' + (100 - (bar.dataset.value/max)*100) + '%)';
         }
       });
@@ -67,7 +73,7 @@ function setChart(chart) {
     case "circle":
       bars.forEach(function(bar) {
         var trackLength = bar.getTotalLength();
-        var pathLength = trackLength - (trackLength * chart.dataset.value);
+        var pathLength = trackLength - (trackLength * (chart.dataset.value/max));
 
         bar.style.transition = 'stroke-dashoffset '+chart.dataset.duration+'s ease-in-out';
         bar.style.strokeDashoffset = pathLength;
@@ -83,7 +89,6 @@ function triggerCharts() {
   var height = window.innerHeight;
 
   charts.forEach(function(chart) {
-
     if (chart.dataset.preset) {
       preSetChart(chart);
     }
