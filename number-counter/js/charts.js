@@ -8,7 +8,7 @@ function createCircleSVG(stroke, track) {
 
   var svg = '<svg viewBox=\"0 0 100 100\">';
   if (track == 'true') {
-    svg+='<path class=\"circle-chart__track\" d=\"'+path+'\" >';
+    svg+='<path class=\"circle-chart__track\" data-role=\"track\" d=\"'+path+'\" >';
   }
   svg+= '</path><path class=\"circle-chart__bar\" data-role=\"bar\" d=\"'+path+'\"></path></svg>';
 
@@ -26,6 +26,7 @@ function preSetChart(chart) {
       chart.insertAdjacentHTML('beforeend', createCircleSVG(chart.dataset.stroke, chart.dataset.track));
 
       var bars = chart.querySelectorAll('[data-role="bar"]');
+      var track = chart.querySelector('[data-role="track"]');
 
       bars.forEach(function(bar) {
         var trackLength = bar.getTotalLength();
@@ -33,6 +34,7 @@ function preSetChart(chart) {
         bar.style.strokeDasharray = trackLength + ' ' + trackLength;
         bar.style.strokeDashoffset = trackLength;
         bar.style.strokeWidth = chart.dataset.stroke;
+        track.style.strokeWidth = chart.dataset.stroke;
         bar.style.stroke = chart.dataset.strokeColour;
       });
       break;
