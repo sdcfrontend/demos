@@ -778,7 +778,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   background-image: radial-gradient(circle at center, #ffffff 0, #f7f7f7 100%); }
 
 .sdc-site-tiles__item--new .sdc-site-tile__figure:after {
-  content: "New";
+  content: "Mit new";
   display: block;
   position: absolute;
   top: 0.5em;
@@ -790,7 +790,10 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   color: #fff;
   z-index: 2;
   padding: 0.5em;
-  line-height: 1.8em;
+  line-height: 0.9em;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8em;
 }
 
 .blackjack-sdc-site-tile__figure {
