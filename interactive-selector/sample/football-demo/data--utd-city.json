@@ -11,8 +11,8 @@
 	"useCustomParticipants": false,
 	"useTeamName": true,
 	"type": "football",
-	"showFooter": "false",
-	"showFormations": "false",
+	"showFooter": false,
+	"showFormations": false,
 	"numOfParticipants": 11,
   "successMessage": {
     "title": "",
