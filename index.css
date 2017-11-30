@@ -7,7 +7,7 @@
   font-family:"Sky Text";
   src:url(https://sport.sky.de/assets/fonts/sky-regular.woff) format("woff")
 }
-  
+
 @font-face{
   font-family:"Sky Text";
   src:url(https://sport.sky.de/assets/fonts/sky-medium.woff) format("woff");
@@ -776,6 +776,22 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   font-size: 1em;
   background-color: #fff;
   background-image: radial-gradient(circle at center, #ffffff 0, #f7f7f7 100%); }
+
+.sdc-site-tiles__item--new .sdc-site-tile__figure:after {
+  content: "New";
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: red;
+  color: #fff;
+  z-index: 2;
+  padding: 0.5em;
+  line-height: 1.8em;
+}
 
 .blackjack-sdc-site-tile__figure {
   overflow: hidden;
