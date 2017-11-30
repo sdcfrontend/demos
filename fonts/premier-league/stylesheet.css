@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'sky_sports_premier_league_bMd';
+    src: url('fonts/premier-league/skysportspremierleaguebeta2-medium-webfont.woff2') format('woff2'),
+         url('fonts/premier-league/skysportspremierleaguebeta2-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

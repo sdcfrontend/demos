@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'sky_sports_football_beta4Md';
+    src: url('fonts/football/skysportsfootballbeta4-medium-webfont.woff2') format('woff2'),
+         url('fonts/football/skysportsfootballbeta4-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
