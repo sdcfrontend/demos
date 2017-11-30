@@ -52,7 +52,7 @@ p {
   display: inline-block;
   vertical-align: middle;
   min-width: 0.55em;
-  height: 1em;
+  height: 1.1em;
   position: relative;
   overflow: hidden;
   word-wrap: break-word;
@@ -189,6 +189,8 @@ p {
 
 .circle-chart {
   position: relative;
+  width: 100%;
+  min-height: 200px;
   max-width: 200px;
   padding: 0.5em;
   display: inline-block;
