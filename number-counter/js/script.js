@@ -52,10 +52,14 @@ function count(numberCounter) {
   });
 
   digitElementsArray.forEach(function(digitElement, index) {
-
+    var digit = digits[index];
     var digitWheel = digitElement.querySelector('[data-role="digit-wheel"]');
 
-    digitWheel.style.cssText = 'transform: translateY(' + digits[index] + 'em)';
+    if (digit == 0) {
+      digit = 10;
+    }
+
+    digitWheel.style.cssText = 'transform: translateY(' + digit + 'em)';
 
   });
 
