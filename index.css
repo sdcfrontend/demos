@@ -778,7 +778,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   background-image: radial-gradient(circle at center, #ffffff 0, #f7f7f7 100%); }
 
 .sdc-site-tiles__item--new .sdc-site-tile__figure:after {
-  content: "Mit new";
+  content: "New";
   display: block;
   position: absolute;
   top: 0.5em;
