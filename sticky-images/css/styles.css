@@ -28,7 +28,7 @@ p {
   font-size: 22px;
 }
 
-*[data-parallax-role="subject"] {
+* {
   will-change: transform, filter, opacity;
 }
 
