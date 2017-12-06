@@ -263,7 +263,22 @@ img {
   display: none;
 }
 
+.article-body__layered-images {
+  text-align: center;
+  background: #222;
+  position: relative;
+}
+
 .article-body__section-image {
+  position: sticky;
+  top: 0;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.article-body__section-background-image {
   position: sticky;
   top: 0;
   object-fit: cover;
