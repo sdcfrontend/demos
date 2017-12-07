@@ -27,6 +27,22 @@ img {
   padding: 4em 2em;
 }
 
+@media all and (max-width: 800px) {
+
+  .article-header > .article-cols {
+    padding: 3.5em 1.5em;
+  }
+
+}
+
+@media all and (max-width: 500px) {
+
+  .article-header > .article-cols {
+    padding: 3em 1em;
+  }
+
+}
+
 .article-cols {
   z-index: 1;
   position: relative;
