@@ -286,6 +286,7 @@ img {
 }
 
 .article-body__section-image {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   display: block;
@@ -295,6 +296,7 @@ img {
 }
 
 .article-body__section-background-image {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   object-fit: cover;
@@ -309,6 +311,7 @@ img {
 }
 
 .article-body__side-text {
+  position: -webkit-sticky;
   position: sticky;
   top: 2em;
   border-left: 2px solid #fff;
