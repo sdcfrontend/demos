@@ -440,6 +440,8 @@ body {
   min-height: 100vh;
   text-align: center;
   background: #222;
+  position: sticky;
+  top: 0;
 }
 
 .article-body__info-graphic-background {
@@ -488,6 +490,15 @@ body {
 .article-body__info-graphic-text {
   color: #fff;
   font-size: 2.5em;
+}
+
+.article-body__info-graphic-text--small {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.article-body__info-graphic-image {
+  max-width: 400px;
 }
 
 .article-body__info-graphic-chart {
