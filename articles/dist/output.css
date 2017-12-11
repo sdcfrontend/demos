@@ -6,6 +6,17 @@
   box-sizing: border-box;
   font-size: 100%; }
 
+@font-face {
+  font-family: 'Sky Text';
+  src: url('https://sport.sky.de/assets/fonts/sky-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url('https://sport.sky.de/assets/fonts/sky-medium.woff') format('woff');
+  font-weight: bold;
+}
+
 html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
