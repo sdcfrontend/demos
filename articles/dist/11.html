@@ -45,19 +45,47 @@
 
       h1 {
         font-weight: 400;
-        font-size: 3.4em;
+        font-size: 3em;
         margin-bottom: 0.5em;
       }
+
       h2 {
         color: white-space;
         font-size: 2em;
         margin-bottom: 1em;
-        font-weight: 400;
-        padding-top: 1em;
+      }
+
+      .desktop-hidden {
+        display: none;
       }
 
       .we-pp-content {
         color: black
+      }
+
+      @media all and (max-width: 800px){
+
+        .desktop-hidden {
+          display: block;
+          margin: 0 0 1em;
+        }
+
+        h1 {
+          font-size: 2.25em
+        }
+
+        h2 {
+          font-size: 1.75em
+        }
+
+        .page-body {
+          padding: 1em 4vw;
+        } 
+
+        .page-col + .page-col {
+          display: none;
+        }
+
       }
 
 
@@ -797,25 +825,28 @@
 
         var match = headers[0];
 
-        headers.forEach(function(header){
+        if(window.innerWidth > 800){
 
-          if(header.getBoundingClientRect().top < (window.innerHeight+10)){
-            match = header;
-          }
+          headers.forEach(function(header){
 
-        });
+            if(header.getBoundingClientRect().top < (window.innerHeight+10)){
+              match = header;
+            }
 
-        if(match!==current){
-          current = match;
-          var coords = JSON.parse(current.getAttribute('cue'));
-          // console.log(coords);
-          earth.panInsideBounds([coords, coords], {
-            duration: 0.6,
-            zoom: 3
           });
-          var marker = WE.marker(coords).addTo(earth)
-          marker.bindPopup('<b>' + current.getAttribute('text') + '</b>');
-          marker.openPopup();
+
+          if(match!==current){
+            current = match;
+            var coords = JSON.parse(current.getAttribute('cue'));
+            // console.log(coords);
+            earth.panInsideBounds([coords, coords], {
+              duration: 0.6,
+              zoom: 3
+            });
+            var marker = WE.marker(coords).addTo(earth)
+            marker.bindPopup('<b>' + current.getAttribute('text') + '</b>');
+            marker.openPopup();
+          }
         }
 
         requestAnimationFrame(tick);

@@ -50,7 +50,7 @@
 
       h1 {
         margin-bottom: 0.75em;
-        font-size: 2.8em;
+        font-size: 2.7em;
       }
 
       h2 {
@@ -246,6 +246,72 @@
       .gallery:fullscreen .gallery-badge {
         display: none;
       }
+
+      .page-body h1 {
+        font-size: 2.7em;
+        margin: 0 auto 0.75em;
+      }
+
+      .page-body h2 {
+        font-size: 2em;
+        margin-bottom: 1em;
+      }
+
+      @media all and (max-width: 820px){
+
+        .page {
+          padding: 1em 4vw;
+          display: block;
+        }
+
+        .sdc-news-story-grid__link {
+          width: 104px;
+        }
+
+        .page-body h1 {
+          font-size: 2.25em;
+          font-weight: 400;
+          max-width: 740px;
+          padding: 0;
+          margin: 0.5em auto 0;
+
+        }
+
+        .page-body h2 {
+          font-size: 1.7em;
+        }
+
+        .page-nav {
+          display: none!important;
+        }
+
+        .page-body {
+          padding: 0;
+          min-width: 0
+        }
+
+        .page-related {
+          width: auto;
+          font-size: 0.9em;
+        }
+
+        .video[docked] .video-con {
+          max-width: 50vw;
+        }
+
+        .gallery-close {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          transform: none;
+        }
+
+        .gallery:-webkit-full-screen .pic-caption {
+          width: 90%;
+          bottom: 20px;
+        }
+      }
+
 
 
       
