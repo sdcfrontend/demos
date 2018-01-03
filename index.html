@@ -45,6 +45,10 @@
         padding: 0.2em;
       }
 
+      .sdc-site-tiles__inner {
+        margin-bottom: 60px!important;
+      }
+
       @media all and (max-width: 600px){
         body {
           font-size: 18px;
@@ -54,7 +58,37 @@
     </style>
   </head>
   <body>
-    <h1>Article Functionality</h1>
+
+    <h1>Basic Article Functionality</h1>
+
+    <div class="sdc-site-tiles__inner">
+        <div class="sdc-site-tiles__group">
+  
+          <div class="sdc-site-tiles__item sdc-site-tile sdc-site-tile--has-link">
+              <figure class="sdc-site-tile__figure" aria-hidden="true">
+                <div class="sdc-site-tile__image-wrap">
+                  <picture>
+                    <source srcset="img/articles_0000_Screen Shot 2017-11-30 at 15.22.58.jpg 1000w" sizes="100vw">
+                    <img src="img/articles_0000_Screen Shot 2017-11-30 at 15.22.58.jpg" class="sdc-site-tile__image">
+                  </picture>
+                </div>
+              </figure>
+  
+              <div class="sdc-site-tile__body">
+                <div class="sdc-site-tile__body-main">
+                  <div class="sdc-site-tile__info"></div>
+                  <h3 class="sdc-site-tile__headline">
+                      <a href="articles/dist/2.html" class="sdc-site-tile__headline-link">
+                        <span class="sdc-site-tile__headline-text">Image variations</span>
+                      </a>
+                  </h3>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <h1>Enhanced Article Functionality</h1>
 
     <div class="sdc-site-tiles__inner">
       <div class="sdc-site-tiles__group">
