@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<style class="cp-pen-styles">html {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  h1,h2 {
+    font-weight: normal
+  }
+  
+  ol {
+    padding: 0;
+    display: inline-block;
+  }
+  
+  li {
+    font-size: 16px
+  }
+  
+  input {
+    font-size: 18px;
+    padding: 0.3em 0.6em;
+    margin: 4px 3px
+  }
+  
+  input:valid {
+    color: green
+  }
+  
+  input:invalid {
+    color: red
+  }</style></head><body>
+  <h2>Missing Men<br><small>Man City vs Watford</small></h2><ol>
+   <li><input type="text" placeholder required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+   <li><input type="text" required></li>
+  </ol>
+  <script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+  <script >var answers = ['Ederson','Walker','Stones','Otamendi','Delph','De Bruyne','Fernandinho','Silva','Sterling','Aguero','Sane'];
+  
+  document.querySelectorAll('input').forEach(function(item, index){
+    
+    item.onkeyup = checkValidity.bind(item,index);
+    
+    item.placeholder = answers[index].replace(/./g, '*');
+    
+  })
+
+  
+  function checkValidity(index){
+    var reg = new RegExp('\\b'+answers[index]+'\\b', 'i');
+                           
+    if(this.value.match(reg)){
+      this.setCustomValidity("");
+    }
+    
+    else {
+      this.setCustomValidity("Wrong anwser");
+    }
+  }
+  </script>
+</body>
+</html>
