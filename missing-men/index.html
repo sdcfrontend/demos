@@ -81,13 +81,35 @@
   
   input:invalid {
     color: red
-  }</style>
+  }
+
+  button {
+    font-size: 20px;
+    background: white;
+    -webkit-appearance: none;
+  }
+
+  button[data-started] {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  button > time,
+  button[data-started] > span {
+    display: none;
+  }
+
+  button[data-started] > time {
+    display: block;
+  }
+</style>
   
 </head>
 
 <body>
   <h2>Missing Men<br><small>Man City vs Watford</small></h2>
-  <form action="">
+  <button><span>START</span><time><span data-role="timer">00:00:00</span></time></button>
+  <form action="" novalidate>
     <ul>
       <li>
       <input type="text" placeholder required>
@@ -161,16 +183,22 @@
     
     var items =  document.querySelectorAll('li');
     var form = document.querySelector('form');
+    var button = document.querySelector('button');
+    var timer = document.querySelector('[data-role="timer"]');
+    var interval;
 
     form.onchange = function(){
       if(form.checkValidity() === true){
-
+        clearInterval(interval);
       }
     }
 
     items.forEach(function(item, index){
 
       var input = item.querySelector('input');
+      input.onclick = function(){
+        button.click();
+      }
       input.onkeyup = checkValidity.bind(input,index);
       input.placeholder = answers[index].replace(/./g, '*');
 
@@ -196,6 +224,34 @@
         this.setCustomValidity("Wrong anwser");
       }
     }
+
+  button.onclick = function(e){
+    e.preventDefault();
+    this.setAttribute('data-started', true);
+    interval = setInterval(countTimer, 1000);
+    this.onclick = null;
+  }
+
+  var totalSeconds = 0;
+
+  function countTimer() {
+
+    ++totalSeconds;
+    var hour = Math.floor(totalSeconds /3600);
+    var minute = Math.floor((totalSeconds - hour*3600)/60);
+    var seconds = totalSeconds - (hour*3600 + minute*60);
+
+    timer.textContent = pad(hour) + ":" + pad(minute) + ":" + pad(seconds);
+  }
+
+  function pad(num){
+    if(num<10){
+      return "0"+num;
+    }
+
+    return num;
+  }
+
   </script>
 </body>
 </html>
