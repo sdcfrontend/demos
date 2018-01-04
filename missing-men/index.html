@@ -87,6 +87,7 @@
     text-align: center;
     line-height: 1;
     box-sizing: border-box;
+    text-transform: capitalize
   }
   
   input:valid {
@@ -170,6 +171,11 @@
     box-shadow: inset 0px 0px 0px 30px #62a02f;
   }
 }
+
+button[data-role="answers"]{
+  font-size: 15px;
+}
+
 </style>
   
 </head>
@@ -177,7 +183,9 @@
 <body>
   <h2>Missing Men<br><small>Man City vs Watford</small></h2>
   <button><span>START</span><time><span data-role="timer">00:00:00</span></time></button>
+  <button data-role="answers" disabled>SHOW CLUES</button>
   <form action="" novalidate>
+    
     <ul>
       <li>
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
@@ -263,10 +271,15 @@
     var items =  document.querySelectorAll('li');
     var form = document.querySelector('form');
     var button = document.querySelector('button');
+    var clues = document.querySelector('[data-role="answers"]');
     var timer = document.querySelector('[data-role="timer"]');
     var interval;
 
     form.onchange = function(){
+      checkAnswers();
+    }
+
+    function checkAnswers(){
       if(form.checkValidity() === true){
         clearInterval(interval);
       }
@@ -279,11 +292,11 @@
         button.click();
       }
       input.onkeyup = checkValidity.bind(input,index);
-      input.placeholder = answers[index].replace(/./g, '*');
+      input.placeholder = answers[index].replace(/\S/g, '•');
 
       item.style.left = formations['442'][index][0] + '%';
       item.style.top = formations['442'][index][1] + '%';
-    })
+    });
     
     function checkValidity(index){
 
@@ -306,11 +319,36 @@
       }
     }
 
+  clues.onclick = showClues;
+
+  function showClues(){
+    this.textContent = 'SHOW ANSWERS';
+    this.onclick = showAnswers;
+    items.forEach(function(item, index){
+      var input = item.querySelector('input');
+      var placeholder = input.getAttribute('placeholder');
+      input.setAttribute('placeholder', placeholder.replace('•', answers[index].slice(0,1)));
+    })
+  }
+
+  function showAnswers(){
+    this.disabled = 'disabled';
+    this.onclick = null;
+    items.forEach(function(item, index){
+      item.setAttribute('data-correct', true);
+      var input = item.querySelector('input');
+      input.value = answers[index];
+    })
+
+    checkAnswers();
+  }
+
   button.onclick = function(e){
     e.preventDefault();
     this.setAttribute('data-started', true);
     interval = setInterval(countTimer, 1000);
     this.onclick = null;
+    clues.removeAttribute('disabled');
   }
 
   var totalSeconds = 0;
