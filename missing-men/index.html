@@ -292,7 +292,7 @@ button[data-role="answers"]{
         button.click();
       }
       input.onkeyup = checkValidity.bind(input,index);
-      input.placeholder = answers[index].replace(/\S/g, '•');
+      input.placeholder = answers[index].replace(/\S/g, '_');
 
       item.style.left = formations['442'][index][0] + '%';
       item.style.top = formations['442'][index][1] + '%';
@@ -327,7 +327,7 @@ button[data-role="answers"]{
     items.forEach(function(item, index){
       var input = item.querySelector('input');
       var placeholder = input.getAttribute('placeholder');
-      input.setAttribute('placeholder', placeholder.replace('•', answers[index].slice(0,1)));
+      input.setAttribute('placeholder', placeholder.replace('_', answers[index].slice(0,1)));
     })
   }
 

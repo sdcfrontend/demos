@@ -45,8 +45,94 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)
-
       }
+
+    </style>
+    <style data-role="bg-1">
+    </style>
+
+    <style data-role="bg-2">
+      /* 
+      .section-wrap,
+      .sdc-article-header,
+      .sdc-article-body,
+      .sdc-article-body > * {
+        background: #222!important;
+        color: #eee!important;
+      }
+
+      .section-wrap
+      .sdc-article-image__caption[class],
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__link[class],
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__title,
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__text {
+        background: #444;
+        color: #eee!important;
+        border: #444
+      }
+
+      .sdc-article-header__date-time[class],
+      .sdc-article-tags__title[class] {
+        color: #aaa;
+      }
+
+      .sdc-article-tags__link[class][class] {
+        color: #eee!important
+      }
+
+      .sdc-article-tags[class]:before,
+      .sdc-article-share[class]:before {
+        background: #888!important;
+      }
+
+       */
+      
+    </style>
+
+    <style data-role="bg-3">
+    
+      /* .section-wrap,
+      .sdc-article-header,
+      .sdc-article-body,
+      .sdc-article-body > * {
+        background: #030c7e!important;
+        color: #eee!important;
+      }
+
+      .section-wrap
+      .sdc-article-image__caption[class],
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__link[class],
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__title,
+      .sdc-article-strapline--default-layout 
+      .sdc-article-strapline__text {
+        background: #13174f;
+        color: #eee!important;
+        border: #13174f
+      }
+
+      .sdc-article-header__date-time[class],
+      .sdc-article-tags__title[class] {
+        color: #aaa;
+      }
+
+      .sdc-article-tags__link[class][class] {
+        color: #eee!important
+      }
+
+      .sdc-article-tags[class]:before,
+      .sdc-article-share[class]:before {
+        background: #888!important;
+      } */
+      
+    </style>
+
+    <style data-role="bg-current">
+    
     </style>
 
           <link rel="icon" type="image/png" href="https://sport.sky.de/assets/favicon.png">
@@ -335,7 +421,7 @@ var digitalData={campaign:{crm:"",crmString:"",eml:"",intcmp1:"",intcmp2:"",intc
               <h2 class="sdc-article-header__sub-title">Trainingslager in Spanien</h2>
   
             <h1 class="sdc-article-header__title" data-short-title="Dortmund bricht ohne Auba auf - Rückkehr von Reus"><span class="sdc-article-header__long-title">Borussia Dortmund bricht ohne Aubameyang auf - Reus reist mit</span></h1>
-            <button style="position: absolute; top: 0; right: 0; padding: 4px; font-size: 16px;">toggle bg</button>
+            <button data-role="toggle-bg" style="position: absolute; top: 0; right: 0; padding: 4px; font-size: 16px;">toggle bg</button>
           </div>
         </div>
       </div>
@@ -897,12 +983,31 @@ var digitalData={campaign:{crm:"",crmString:"",eml:"",intcmp1:"",intcmp2:"",intc
             </div>
         </div>
     </div>
+
+
   <script>
   if(window.isModernBrowser){
     requirejs(['site-main'], function(page){
       page.init();
     });
   }
+
+  var style = document.querySelector('[data-role="bg-current"]');
+
+  var num = 2;
+  document.querySelector('[data-role="toggle-bg"]').onclick = function(){
+
+    if(num>3){
+      num = 1;
+    }
+
+    var css = document.querySelector('[data-role="bg-'+(num)+'"]').textContent;
+    css = css.trim().replace(/^\/\*/, '').replace(/\*\/$/, '');
+
+    style.textContent = css;
+    num++;
+  }
+
   </script>
 
     <script>
