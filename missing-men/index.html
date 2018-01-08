@@ -1,376 +1,616 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<!-- saved from url=(0022)http://localhost:9876/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/sdc-interactive-missing-men.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
 
-<style >
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
 
-  html {
-    font-family: sans-serif;
-    font-size: 20px;
-    text-align: center;
-    background: #eee;
-  }
-  
-  h1,h2 {
-    font-weight: normal
-  }
-  
-  ul {
-    padding: 1em 0;
-    display: inline-block;
-    list-style: none;
-    width: 100%;
-    max-width: 500px;
-    background: yellowgreen;
-    position: relative;
-  }
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
 
-  ul:after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
-  }
-  
-  li {
-    font-size: 16px;
-    width: 19%;
-    padding: 0;
-    position: absolute;
-    transform: translate(-50%,20%);
-    text-align: center;
-  }
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
 
-  li > svg {
-    width: 20px;
-    height: 20px;
-    top: 0;
-    right: 0;
-    display: none;
-    position: absolute
-  }
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
 
-  li[data-correct] > svg {
-    display: block;
-  }
+a:hover {
+  text-decoration: underline; }
 
-  li:before {
-    content: "";
-    display: inline-block;
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+.site-wrap {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.site-wrap-padding, .section-wrap__article-column {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-indent[class] {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-component-vertical-margin {
+  margin-bottom: 30px; }
+
+.site-component-vertical-margin-negative {
+  margin-top: -30px; }
+
+.site-component-vertical-margin-l {
+  margin-bottom: 70px; }
+
+.site-component-vertical-margin-s {
+  margin-bottom: 18px; }
+
+.section-wrap {
+  background: white; }
+
+.section-wrap--padding {
+  padding: 30px 0; }
+
+.section-wrap--shade {
+  padding: 65px 0 75px; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 5vw;
+    padding-right: 5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 24px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -24px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 50px; } }
+
+@media all and (max-width: 600px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 18px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -18px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 36px; }
+  .section-wrap--shade {
+    padding: 50px 0; }
+  .section-wrap--padding {
+    padding: 30px 0; } }
+
+@media all and (max-width: 480px) {
+  .site-wrap-padding, .section-wrap__article-column,
+  .site-indent[class] {
+    padding-left: 16px;
+    padding-right: 16px; }
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+  @supports (mix-blend-mode: overlay) { }
+
+.glints-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+@supports (pointer-events: none) { }
+
+.glints-box-padding {
+  padding: 1.8em; }
+
+@media all and (max-width: 600px) {
+  .glints-box-padding {
+    padding: 1.4em; } }
+
+@media all and (max-width: 480px) {
+  .glints-box-padding {
+    padding: 1em 16px; } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-site-tile__significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--breaking[class] {
+  color: #000000;
+  background: #ffe001;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-site-tile__significance--live[class] {
+  color: #ffffff;
+  background: #d0021b;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--transfer[class] {
+  color: #ffe001;
+  background: #000000;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--update[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-interactive-missing-men {
+  font-family: sans-serif;
+  font-size: 1em;
+  position: relative;
+  text-align: center;
+  background: #1f2583;
+  color: white;
+  overflow: hidden; }
+
+.sdc-interactive-missing-men:before {
+  content: "";
+  background: linear-gradient(5deg, #0f0f50 0%, #090f6a 100%);
+  position: absolute;
+  width: 150%;
+  height: 70%;
+  left: -10%;
+  bottom: -10%;
+  transform: rotate(-5deg); }
+
+.sdc-interactive-missing-men__inner {
+  padding: 2em 1em; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-men__inner {
+    padding: 1.6em 0; } }
+
+.sdc-interactive-missing-men__head {
+  margin-bottom: 24px;
+  padding: 0 1em; }
+
+.sdc-interactive-missing-men__title {
+  font-size: 2.5em;
+  margin: 0 0 18px;
+  font-weight: 400; }
+
+.sdc-interactive-missing-men__sub-title {
+  font-size: 1.5em;
+  margin: 0 0 8px;
+  font-weight: 400; }
+
+.sdc-interactive-missing-men__description {
+  font-size: 1em;
+  margin: 0 0 18px;
+  line-height: 1.4; }
+
+.sdc-interactive-missing-men__badges {
+  list-style: none;
+  padding: 0; }
+
+.sdc-interactive-missing-men__badge-item {
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  position: relative; }
+
+.sdc-interactive-missing-men__badge {
+  width: 100%; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-men__title {
+    font-size: 2em;
+    margin-bottom: 12px; }
+  .sdc-interactive-missing-men__badge-item {
     width: 50px;
-    height: 50px;
-    background: url(http://img.skysports.com/football/players/home/head/h_head_19950.png);
-    background-size: auto 112%;
-    background-position: center bottom;
-    filter: brightness(0);
-    will-change: filter;
-    transition: filter 0.33s;
-  }
+    height: 50px; } }
 
-  li[data-correct]:before {
-    filter: brightness(100%)
-  }
-  
-  input {
-    font-size: 16px;
-    padding: 0.32em 2px;
-    margin: 4px 3px;
-    width: 100%;
-    background: white;
-    border: 0;
-    text-align: center;
-    line-height: 1;
-    box-sizing: border-box;
-    text-transform: capitalize
-  }
-  
-  input:valid {
-    color: green;
-  }
+.sdc-interactive-missing-men__nav {
+  margin-bottom: 24px; }
 
-  input[disabled] {
-    pointer-events: none;
-    user-select: none;
-    color: green;
-    background: white;
-    border: 0;
-  }
-  
-  input:invalid {
-    color: red
-  }
+.sdc-interactive-missing-men__start {
+  font-size: 1.4em;
+  padding: 5px 12px;
+  background: green;
+  color: white;
+  border: 0;
+  cursor: pointer; }
 
-  button {
-    font-size: 20px;
-    background: white;
-    -webkit-appearance: none;
-  }
+.sdc-interactive-missing-men__start[disabled] {
+  cursor: default; }
 
-  button[data-started] {
-    pointer-events: none;
-    user-select: none;
-  }
+.sdc-interactive-missing-men__start-timer {
+  display: none; }
 
-  button > time,
-  button[data-started] > span {
-    display: none;
-  }
+.sdc-interactive-missing-men__start[data-started] .sdc-interactive-missing-men__start-label {
+  display: none; }
 
-  button[data-started] > time {
-    display: block;
-  }
+.sdc-interactive-missing-men__start[data-started] .sdc-interactive-missing-men__start-timer {
+  display: block; }
 
+.sdc-interactive-missing-men__pitch {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAD9CAQAAADKIcEjAAAsX0lEQVR4AeTUsW7TUBTG8f85106SijCwMyMxsvAcMCAep6/CzAoDTEjdeArEyESFREvjcz6G9srXiesObOEnRf5yzpfrIZaNkydDH878MVwbi8K3wNVio9g1S4qFhzbAfT353u6aYtZgVmpe84c11Yp6F4pbO1tR9ezp6dWVwaBvdj3QC8xuW17M+rs5M1ew0vs46dp9ZRSWOQVxZOmMgY6BUViZNCKLotQuQEcULIBCcA8Pr3HstN+Kp9d8vPdB4oyNlDiQMycE3rFtN8mUpKIzGrmYW87Iin3m63ND/EdMnDhDXx79fqunlrMPRJvsoUdHNub5U8xyftNkGYDCDM/Zhqlmrx/86MrBzI5a0B30zLES0B2dXTvW/KITs3edEPP+uZFtEqrZyS3GFWpbKVeaCwbz2jXdzSDNc3jg//VUps3vMO0wXWrvVmfHr6yCUnF7hjN/kqRwtbPgkDLlC68sC57Yxt7x/X1TO312zik7NwQf3+gFF/5TReLAQCNS43xW3KhbOoEhLZmxp0pZhpUbvbRnXMS30u2ZCvXBxGqSBuu0ahrrZjdOLFa6sXG/xofY+St+lE9dASghbbhVrwdZmbClqqkhAmOJCB6STPxiaifykipi91p/2bsL7yqudo/j32fPnOAVLKRolRJW6PtSd6SkvG2Ku7tc+xeS/A1XcNe6ozVcqkA4wd1dGjs5s5/r91L3Yc90PktwsjN7r2ft+W05re2iykuNvf//3VuDS/y4wFrlR1kNfvBvXAsa9w7+mllw177DdbLKD8polfITDll+wkArPz6ubd/mZoJUySy+js8sK5lhCfr+E6Yva1mDU46nzN/jtfwXaghR8zzzT7qJ94i4joXSRedygFBdup/Rupl3ccAdgqbzdRRfsRw6/mlKlk+MlRrsI3f7L7Cz51pQg5YKDsgXAu8RWtt3TtTc5qWVX6FY+YVeNQR5razhAhz0BlqiSrCZk6S81hzwDUpYNO/gqZNaULuBK+0EFeH7KaFQyU/vXi0vyCnWJxlWHAi68haZLOLN4Oomg3XnNfWVnKsT9XadzoVJgob3PD7tabrIbA50FjTK/UrzzD+SZhkhyhH0zLO2yL7GtjkOjKZiQZGy4eR789j/yp8kyfJLiadiQUvNI330NpkXXN3qUHcqMLO9aSub5MKEMAuHguYG1cElou+aXLC5depRRailt6K8XhevIO+z4oCbX/IVQVNv1+bafnZmv8tvRLlkJa+EAqzqpgXmTQ4UyvMWdyh4nbXW+4IwCXqgjt7uX7pYQbQpUK3nJL/iFqoaEBqFu8+d3q8Fp1tyLA8HaKnhet83/PFen/wFBRZBk1fCyKZXj3VkFJ/zCvR0qCNV0DltZZItZzEhmiDol80yU+UAS4m4RwSt7mJeZAFlOWH2raAnOvnDWceKFq6MKUF3Pe710w9YTfzh7yZ+XjPYR5ppX3My8x4Uiapj86sH1eNzOBniJL5U0J63aQPOw6OCEnFymlptSRlh2x+clfwr6y+5splAoWBLWZ7XzZxm53KDTfZhRTC9ejXn1jHkBXM4sd1g3Wrb9OY5kzl/12yyhKiLoJsfl37+Er5aYbBR7+Frjev+gxxjPqFKCXqqB4W6mB2zDdaVp7Gl3q3j5facGZxbbLBJwYqcJ3vbp3QZXzgStn9jcM0tpJDlfDZOUEK1ubc8aGdz7Mk4ZB1e7SRtlPOvVBD2S2FLM0kPtlyEuhSAFOXVn8CFevOobidokmFFKr16/EEzxK7nXRxTKOjcRjLV2pxpVIwUNNwn022838T+K9djUbDI9OE/y+/RuqF/NyfHcLedxqnWgroz6gc8IMNlC29CnHe++0KclBjss62yL7Hv6moY6GDHST7Nzapsxdhw2ybo4/W0iV59sgJBSoVfqBinCIGcpp5tzlFCf5Jmp3b0OnIKZxRbYEdZK7qak2wviXPBKolXemVfbZgdoBnzRuPMRlNqXTvXOCOV8yBXzZfcBP5tpkE2vd4C2pVfaj2uefBIqsa/A1BCdm1/gwtex2DjiapW7pQGQS+sbporRZwddDS+20ilJGYHnT8aZDuzkPRG97rMYNvkM9pu4S1CNl7QDZ1kkN3llaX8zI2X0Xzj4HTqh3/3m9fU3PA7Kf5otdzov1uvQdAo1V3PpOaTDX+OdeolnpZ5lM80WJfy0XRjJmlNNA5EJxmWoB8+Lb1YyUfdnewulbkjvXvNLI6FnV8h6Lq/STev1qZuvExGvnEdjdzwcwPf+DWYb15fc8O/DYv95s8s1lbWTONCo9AL1pl2wQQpYzlOmWWwQ9oHY9jF0rgmWaIxCtufuNeMJd19CYp7nSXo0raZSexhETfFXffaXLI3XMZ3w8/+5+c/8Hs+P3CJ3zf+nzBnWQBZkBT+bq7dhN42Jyd4uUznfAu3Rpqge7rYF4P3WFeQFCzHr+m7LZhEkJnFtb+5GLYLuqCvfVznkx4b7aGUEPTEo97A4F3WtXKuYMHuoVLgLWBvHLeRSklctop6TUZxd3YOh7cYrIstnNfMTOV8zWxqJwtK6FRKhd+sGMdYwifoldsq/k6uVc6i5h7nSla6IZNs3coZXFzpaslKQvenC02P4A22uJleIeiibvYFfY2tYwQl2hKCnu6vj9hZHGglqGvhyOB2wXg5lL+A2B2I9otjkV491Um6my1mC4ijw/uVhrazOV23DISoSyjg78w+5D3AARxTbBGOpN+VAeU9WYESK5Im2l4x2B7Na6bo5YuzqRro7vzqUTuQlXw4WlCiLiFoOqfxRL2ldjqX2zjZp+V99QmW8FW8PqTCfyXi6VWxXVkn0w/qvH5H1QdubRX9xobR+p3NtexOEvGgSH7m9E56m/vY5mZBrbeyKo+X9MzAM3EqWVIS/a2i/XiMJexYb7CuLgksydcx2a28EZf1wYQKeropUzi3dy7ZLoK6F5T0z/UmcenKXKoed6J9ybYGQdc9LIPtJ7yH046PlPuzsziSBO7xIYKeHKoF3kyOtBDUxWx3SCc7QrbyBnSIycjzJdIHnZ9rY4o0zSro4mqHCPpqG3Of7h1zFFASMaHAsR3+X20njuCgYgvsTH8k3fUUW0sETV4Jb/bJqYbnJ5k6Mp3LTzndHUt72yeDBew+EqMsIVEs6Il63mTNyZnG9aYujkBB8dKj5C6Zw5GXDTYpWDc1vdowlE7VCynfZLDuDuplTXWKXqqY9c0No4l45FinesjzmSV82dbZ9eldt/uTpFZmcb39TWtjkmEJuuXZbFHwPp90EdTldi59TnvaV9k2MilXcSPohbzMZI4yD0fNMthB98pYLe+wGCXyY9CP6lbR59prT/Ol+cT1Ab2ogXlAz18pJxE/Ck1Pnzmk91S04sQ9gjqZZAn7y9b4RXuO88n9RJ0fzXJV2Nj2lXO173wjbHdSqkOQJ2saXxsuKIm4EdR8ZQsadOQEjhKAT9K5Upg9W1b+usEmGVboB51bjQ7uNLM5utb1x+/fM4HmdjrnYvlCmBD0bAOdiuo0KvMcXqne2SA1ifoynYuhh+9J6F7Y03bX19jm9toggr7cIRjNdt4gphLDBD1Z5D0jCynLFdTdt5JBbRnP0Q7zCRA0Cd1De/A9/qLDzGbeIgKOjLD5MoOjwwQlEdd7G9rYySbNEhyWJ2jZQ94g1vF+cvg5xIPOz7ZITdKL2TlUd3F+frWklUxlP/OJrcRwQV/xnhord8h0zuUKisP29bFP2qV8Gd3Thf4rkTro/Gq9nH7Y2tepXmfWWadbC8iDkrKfQ3wD98QwRQjO7ND7s/mcc36BYGW2heklZ4eciuptpFISqa2im/qbRzKL2fWxwbq+NLCwSZ0pwdWLs6j5pxgXrIQKeujW+lO0qmLGN+8fdTJ8b56aJFcazuEP/oiyJMMSdNNj3oDgQ1bivCcFXd5Fi3idLUMFJRH3HKuvPFo9nz2Of1C8we4p0BHmU16DKO5896MTtne9M+dFyk6tgYGOP2gRdGED/0FztqKMxJ+Ct8M+murEHsFpFmFX+Yf00FNsTlYJ/yiC7m10cZLx687gyl8Edb+8tn9Ih3hrWT1IUOItISipMxO1cfBvXGrl/GIQ3p6Reo+Zw+HoJVl+aSS2iops7SNNZW7NlVXmbet82mZLfHmQr4OviL8EghpqdZf0lvZswW2KEFS/VW+i9s+ZNfLqXYImM6zfl6DbupoXeJf1DwsahfYubp8ap/+VE/ziBEv4AyixI3/styu/+H853tj7Oy5snEWA49IGO/AeM0735C9CNVIlSzQC6dXzHWQUO1gOj0Xk4S4bZjr6czjUT1DiLiEA6JkB8gBzOZzrfq8LWv6MeYmVfNQ+KVi/b7kqahpM1gp/JpUPRmR+9UarYKLuZzE/YLD8OzvnwCvdFYbR9bx7rjNfbds246S27b/R/ozatsIGtW3btu6c92lzsjOo3fthDXbWXmPzePRciiE2HLGnR2yFvq3r5/VdwPJ+V7TbXdFnRt8GfSb1fXQN8IW6/i7GBLA4AJ32UAZ0aaGISuN55FgJ6JRJfwNIk5YUAFO0SIU+kkrXA6XAr1qMWAcA99sf3V/01HEPBI1KNCqGRsO7rFbaUq0T34uWQvOTw8wC0NAWVOiTyiELMgAaq6uVfQ/XMOdZURiePdhb5sU8NT/9jFSnzfk/Oq92nFaNc3j95iCZL9hgP3b2y/4oooEWKQuVBqkphUEjoF/DQ5ZixFzvRIP9Zb9FBFCAoEhBa0GAIiAotoJAUefb1sbWh8fSi54UijGFrAgFaHgXHQB1jKI/pzqG6kiL/tCbOQE9GqDQ+Y39eWBJOIEgqc0pqDiH9mJj95udDqj7S2MqA6vVkakEwinSo7tMWpLAs2748qsr+Hzt+eI11kPT06fEjM7gw8uCXPSA9Y+w+17sypU8uK0wc592CaNxFJMSnXrnsQ2QAMh20qc2arfBBrBIe1BIqjWA2ib395WQBGEp6guAAAol7YEplQFAqVaAUptdzdGJNdSN2fiEV9TrTNjRhNtGh0hnB6qV7BkmDIBK0jba3mlIRG0kWZNHDIT5jlnWYDOm+YT7+IyASmIYshy176AyMdK+NfmtJg3w45geal97svlGVKbyS8/wFTADODHA58wDbJvKF0p38zNRSaeXBOBjABZ36PGv6TEfcFuQR60yexJvfXUes/PFuxdAntvPAVtyuO/kBuYjXpkqize9ekcBvslODu4aJccSvhLMeFwT+aaXGbqDfWP6jOdy1V4EPvYKps873nDInvapZoD5B3hkRe+iDWU9rvt5k/+ATcfYhp1YnKe4hQ/491mE8LNb6dC4nZuZT9DzzE0uDXKvFXxKvvfRefzA3l3+x3VdDd//rX3OjEZkdszMMkOY+cqT1IHWaRu6yu1zM72X9Dfc71wONwq7THa4jq0YIzMzimFmztnr/lxyMx87kV05saWZ0foWMtKI4Zd91tmjk35AUK4qI0KOgsL6WeGNzHGR2574eNZesoAgKFeOAB4oZT63MJ7DrGEDikMpVEpB2bGcW/Vl6mcXxO+YaB4fYfsfSGWwklOLBaWQSO/uVCRvfw1UUBDZOIPrZXYQ6n42RQ00ASwSAAH9Cm8dQAEoZx7XM5GzrGUtbYCgmD675L77LmPdSo4UwiRLavJ02A71K3QZz7H1dw6P6bfvg8imyX5ZWBVW0Kjb5NPUQbro9mtXrYByeQTBc841zGMxo2lhA2s5Bdh3ux8eEF3yQ2ku+9IPiLYVlqDrb3aP+D/zl/7dKmpUUICdI/xc5jMuEDmuu4OdXUdpO38jRq1U60VXggKAoCifGcwU5jGVSk6yiU84DQigmD7fOrSiKnjGb+A3MEdQC9ZlfwEfm5r9vu5c+hweC1b/ExSgLjlvkpvjZsoIJ+4sB+SAP5o4SScXmCB6qUPZJCMZx3SmMJgMB9jIdlotVv2+jfRe+Td5nQ9mWbC+xPRqMD8U0ZU0583JVpMLyuby1IRwukxitCt1nUGznnTH9ZScLW/tTI/qIuaLkqQoZQijGM0YhlFGJ8fYxQ6OEvd7rIygdcG8J90M90v2vujwNsO6jKlJrXv4aT9Tf8Ge/NwqalMtgPpExcjE2OQExslQVyoJ4rCDdtrDLu2StEaBDwmcJEhJaVBKuasgRUyaZg5zgEOcJAKLVR49XnfQsB/hun5K43xBbYXVO4JuuJsH9C3eWyIo+ccIAEq3NeGMwTIiHKbDZWhQIeWUuoQEziEOpxITh2nXoe1BM2c4xWnOkO7p7Zh+5vC7p/nvs51nYaagFqxeTa8emeufop5XIZ+DZbSH3NQnxidLEkEYJLpCEUh5H/lsZZZsXYaYnBWWqnwk6I6becT9ib/OsGD1LlfLR/ITmrt+SueNlqtC8dk5QuXSBCxU+Uv++YBolvnn2PqKw9sM619NR8KN39Xx0c849HuHp8CYauHiFEwhPCC64geuUlZy6gWHt2Bd0vLlcjMvsXGRoBhj+uEo59vj+KEej39BpkpQOyTsmaBblkbf1ndYRT8xxiwRdPcS/Za8xyrykOyi/73g8I+M0x9yJP5Vf/+hC2PMrgf97VLHupmC2gqrxyNn9wMpz6zkTL//3StjbJKVGPRdxstKDk93eAvW+QSFTY+zOH6Wbascnn5mjG0P3j3S/1DbBv2MjjGCcj4L1sabeUR+z+qFgmJMPrDh+2z+nU28nF/bSF3/52rzFL2PDQvXLMQYkw+qfbXM3C5/41putRnWhaurIXxH4sQvacubk6jGGEFxO55ws7O/Ynedww/4fVjVgiIbvsU0/2z+XRPHGJtknapo/LELkytpnCjoQF9hCfrJrXIHf2B93v0RZGOMw++aqt+XXS8+i68WdCAHS9BNM+NH2MSfMCZP2TbS7TcGj8pf+XN+XGsx7Med7UO5wx1OrgabXhmTjwTgo51j9e742PYtswUdmCssQQm3PBiN8G9x2na2G5O3BN2fyvxAhqZXcuI1hx+gQ/flN8rceDV7LFf5ztierMfHJH6oJ7N58IBo0f4Ztk93N/ut1JPnjDGrHP6JRXxbPuDtAffg5+mCfjw8cQenF79n18QpBMaIoDseCO6MX+Xj/t33LtoPV5rtuoVk+B7tCwohV8YYQdeEY7/jJvBTDr/g8ANohvXoEh3r1xbQBeiNMYJuHy4/cJ2dP+/PpYZoHy8s1011VbqNPcsKKFfGmBqHf3qG/47fzG9gpqDFHqzu6VWw1J1gEwXGGLNY0O13hPfLKj6cVvTBEvRw6cllEvn1ZG19VWiMUUFhx+Myxz3PnumCFvkKa9OieKjW2wXoC5Qxgm4uT30ncPIszVMFLeJgfTLdTZEGjtg1cQqZsUnW1yeknvD7Z9b1x7aksK+6vHWUTHIHOQKblMJkjPELhEO7/8wDe2/i/Wn0NembI981FYMW07FkI7EISkEzxuy8V+bJKnZPE7ToDgnXhMMW+FK3sVi2ihpj19UZ/Iir7HqTs1WCFlmwNs7QsTQUyVZRY4ygR4Z3fI3TM/5AjKBFEiwR9NPR8cz4IPspEsaYRYLumOJu1wY+pg/JDq6emYLuqEzPjVsWb0MpKsaYXYuCqvgf7J0haFGssOoTJXPioLyB9AxBKRLGGBW0Llh4kwxOvE/TZEELPlgi9dPc0PQOWq4vxlwZY8P3soobSM9aR0YELfBtDf8YlZyQOMQJipAxZp6gO0eEC/1xPi34P+AXV7ZPkWYOUMSMsevqNExKTPG7OFLQQ/co2TY59Ev2EVPUjDH7ZkVDWrbnHiVcgDMsWTuupLTzMJ03CUqxMsYIqok9szLM2Xn1J1nCVfHhsOTQ6BQtFDljzPWCbi6vnOZaJ+0vyBVWfVnJcNfOWYwxA4QbnhyrJzjJVRXu4Uo7FJZWVnbObMQYM3Cc2ZYMhmknrVxFsp0ra5asGTw6ON5MhDFmAHnHPTUuCuMjZLhq5FOurEGl+1PD2slgjBlokjKmNP3rk/gCuczXQ4mKVJAhjTFmACovOzM8aqWJq0Q2cOUscvWp4Z4ujDEDVDQoW17ZRCdXRTiCK2W8NIQn46UZjDEDV+teoXR3loirQFZzxYTXuKoIjzFmIHN7K7N+Vhuax/uwal21w1uujDH1icGlYYYurjjZx5UwWercCsWDMcY0JKNENkOWK0zWcyUsdYDHGGP+mawyNzmDz8NDwtoLcmWMMdXSkOjUpRGaZxdSFamhRjHGmJwa1Wx9iCPmCnJX5kNDOY8xxogujdcIrjD+prsxxrg6WeHR/g2WMcb0w4RbajDGmKvIAT4vhu41gmKMMRenNWIrrAJhjKkRQOlXgmCMMdYLY4wlq7+utmOMMYIUyjs2xhixXBljjOXKGGO5MsYYG7YXIGOMra+MMbZiEkC5gDEqdKsVLqpa6SagGPOlWyKWq8tiRIGvkh8VzqcMQEYEUAuWuUpUoFbwfM6YxNCSYSXtJclklEiFUULCMEgKQIiqi6M4kZWIbEnGZ8q64jQZPqdKbO1lq6wrESzLlZEaqVaUnPrEkVS6PBqSHMwQHRRUaEVQEiQkIQlCFwQOEXEIDocDAi9evYvCLFmyYZoO1xq0SpNvDpvCNt9FmpzpUpt7b6bYiQCgXz1YlisjesGqpyYcM8SNDEcEI91whrpBUuLAB544SLsu7XBdQSdpybisxMSJ2PsQ74LAuSAklKQrkZRLUeZKJRUEuMA5cRlapVHOymk5FZzOniVNLlwAKMYOCy8/WDXO/q03UJfqK8ui4YnR8fhwrAwNSkmJSptrCVqkyTVps2uhraxD050R8aX/DK7IK26qy4SlJXFpUFFS6Qe7IW4Ig2SwVAaBS9PlmjgWHg6OBadppdsIW29Zsi4/WCq1YheZGEDjdAVYE+4enpnoJ8sYucaVScZ1SJM7HhzPngobffuhdjw9qhHlC5SL2FxOecVgHcmoYLQMc+UuJWk5FZyID+iBjpOkbbVlybpksGx9ZauqlYnM+HCSTvcTXKl30sxROeqOBsf9WbLk/FgUcqQ3SRG9RMjqgpuGxKMYE4xz42SoE0m7Y7Lb7x9xkM7iHkoYkSsYLJVawWOKVo1oblW1c6zOYoYfo+W0cdIf9HuDY6ebifin6nMHaaBcGQKfO+xzjZUdo9zUYJIbxZCgS07o3mD72UN0AUy2bA34NZb04l7FFKdcrJ4d3l7FLJlCiXbqQbcr3nfNMTJ0W9E3s6QLftbqgjtHuUluup8aVODlkO5IfMpRgLIBGC1LVu+DpZiipAIo1AUtU6IFMpthmvEHZWe488hxIoDq/tgfJcp54ZK2kTo9nuWmBOXS7PbEm8t30TWQDxAtWcKAZbFaWSZzdaFMJaGnpEG3HTtE5rNUCWg+fIyAnB1XMov5jAmFg7oltYmmARUt25NlwbLDwLqKloW6VCZ4L3vY3LadJoD/0XOq8iFbZe0zggXMllRwgg3hBk5btIp8jWXBMjUODyMrUov0Wsb7Drct+KR8Lxl4XBQBzecVIdI1UZck5jLUnfIbwnqLVvGyS9UbQaEu2baYm3S8b5ctup59AD+QfE1VT+er/8/o1BJd7Ia506xlHa1FNms1FiwjoqDwsznBrTpdM+5T/yEHAL4vAlpAszdQaB+Vuj5YyGAO8wGfEFu0LFimaNQ6PEwa7W+TRTi28R57Ab4raKGuFIEx3MwikmznHfYADo+xYJkCJ2hd0HJDcLuM0AP6XsUmYlghaBHszJ/Jbcymg494l/bCXmcZC5YRFJ4d5+91Vb6dteXv0wYNDk/BqxYUSHAdtzCS/fyV7QW+zjIWLDsUnH5DdA9DdAd/YT98R1CKh8MDI7iHJaR5nzWkERRjwTIFRtBfVCb+TZdqWt9vfZf0fxVAKS6C4BGu5S5GsJ1VnLCtDhYsU4Db8F6ZmF7up3Aw+zt2w2GHpyhVCwqM4kGqOMXv2VI40yxjwTKCwouL9MF4iNTHf6TpO8W+5hBASXIXt+H5G6stWRYsU0C5eu527gX+/sxqtMbhKXrVDg8s5QEG8SG/J1MIA3hjwbJcyXMPya3aEvyWjfCEoAMp1UzmESawkdfosGRZsEw+E7TWTX+Ymzmpr7P7qYE3fnZ4RvINprOVV2m1ZFmwTD7nKpzxKNdxKHqNI88IysDj8FTydeaxk9/QbMmyYJl8JCi89HW9iQOJlzjVi+2hxTzNSvFNFtLAS7RbsixYJs+IoPDyQ/HtHJaXObHT4QEGcLJKeZz5bOYVuhAUY8Ey+eSFu939nIhf5NieXK4GdLLKeII5rKUOtWQVB4cpBgIvLgrukhZ9w1mugFqPo4PXOMi13I2xFZbJp8cMVk2MnpaUvMqmbwoKgHF4JvAklbzKBgSlnxkLlhH0ufLEd9zk+A/8/fxdV0YdngU8Tju/4lheDN+NBcv85mG5Pap/4sUvzGqMoNzHfWzjWbIISr8xNsMyAi8tkOs5Mvj3v+s5V2Y1DczhVvqVsRWWEfSFQeH35JrgZTZvdXhMT+cLx/EdAn7FwX5NurFgmVcf0jv9B7zORZhvCsqtPMxWniO2ZBWyEFO4BH15QnCtnvbvwrcF5WLMWuZSxYJ+PFtobIVlXv2WXyareOeSF5UwDk8VT3GEX9BpybKhu+l7Am9O03kcLF1XirkkDzSwlckspB8YC5ZR8MskpR+3dzwkKOZSHLCWNMsoRRGMBcv0IYGXJ/i5cqh8czn/kvHAHnYwkdkYC5bpe4n5Uu63dPZufWUE2AAsBBRjwTJ9RtC6CmbRHG4N6TWzh0NMYTwgGDtLaPru4c6z54X/7up5mV4yjwrK3TzIKlYjKMb2YZm+UO3htelOZRdscnh6wTwKsJtWZvIeEcaC9dWJgGIupVbwS8tkmjZ1HQCoFnrDCHCUk4xhFEdwKJfFCIDSjwRTkN6YrD9gJ89ymcyj93A/r7AOU4BCpX+IKAC1Uk2dwArWSKWUSlIglGMygROSEIBQoFFgBE1Ct+EANMtgbRYuYijQIgBNDMn9P0BPzwuEz2kGYDDNfBXNwODc7ZSjWwsAg8g9dZm6wrArniWJoDEzLAzbAKigrft/lyN2XJYOAMro4HwZSbmsJDQrkFCAUJKakcH62f1Jhf94+twtcm+ljM+UAmlJuNQFzyGn5+enyDn/PkkHKc4p4XOEDIoyixOE/CsBvZKmBIA0lyeNOHEAaS5X5kvcJ04kA4Aq3ZKqChlANaEZEoqe00XCq6omvVfV2HtN+WYt9bHGWtH9/5FmNaNjNNKMQl2Epw+IOoA64TwrOKeO861QgFouVKP0RC+2jquRamCNq5STbogrd52BD10iFWpCkiRIxiWSJEmChIZBIk6II9QwEO9coKGId14C8SLi8AIOla+8fhR1TsHzGQ893I7JwV/ilkrP96lz+J7fQ4/P9cIFPAAe51RVRVR689H0/JRHBFH5wutc8i04fA/fXsQD4HCAw+HOuy1fuAeQUBGnwXn3iTjJvU7u5c//p+CAEC546yKiDiRUhz/3dkVyL9EDTxqhBLms4w9Be7wNeEF7/k4BKAKA9vQdkot/17Sn73xPPze55yuCfu4eAFFQwAuAUw+q6kGdjxVFncZeY1Q8scbqJY7jIOsjiTQiq7Fk46xk40iykpVIslEURO1xWRT5MIp8Mvba2Up2maAI52hezLBq6SVB+RcmaZm2MEQz2qptmvIlcSZIRLELiEGdj+LIu1idBBJ6EecDDcQ5AomcQ53/wk+VF3AKXs79Pyr+cj5c5TPS44+QnPeUENMzVdQpxIBwjkcAAfSCj9rnbscEfF7gVVVysSQgBhyqzulIde6Uz4p4QOiWexnOiwuoipJz/kemOEAuCLKjZwpeNCAGpIevDCgKgKDEKAEeQXF4hAAAj0Ac4AEhwiHEBHgCUE+AoiCqAV5A1OEAT3DBVyoSp+JVlQAHgOa+hgJ4hItwTKSEBrpwnBOjCF+k9IoD4i+WzqMAnp7F5CBAdNF7ISYgvujbUlDvA+9Fe/jpDBQgAgQA1ZgQNCDGa6gRqCfwkQaKZjXwsTrvFR/E6tUHsf8PcRg7H8QdPogTsY/TvszHmvUlHs1oVpfGxT7DEgXIHRZCnaxgjcAd1AuUCt2Swj8dFoDJnHNMxigcEy4wgUO5W3CIkZ6rYBcAMy56zzWeXqtnKRez19ODkULUPjTzI0mX/IKW0vCU8i80aLVyJSjF4Wmq+L8cpS8Y24dlXhpV+l/Y/8gvUC6PEZTl3M4v2ZpbhApfkZ0ftLOEQjelEAlXT43g50+Vn/gNvPR1AbmMtZFRh+cu/j/qWIugGDtLaIcfytX1VkoD1wGAKpfBKNCJp4wCZBwFyPgEuKzDfClZlAR9w1iwjHcgXjBfigKOvmEsWCZQCoMxFiyTiEBCwXwpARBRgExIATKaFu9TIFweo4JSgqOLvmEsWCbTGUSUwZvK5TEKlOPooG8YC5Yp70h3aEWyhPQDgmJ6T4HBeFroG8ZmWOZkmhYGpUvTXBYjQMggOvsmWMZWWEbhmY43G91oGURTraCYXqoGKGcoTXTQJ4wFy4jq2yd1IaM4WK2Y3hOUoQzjU9oApS8YC5Zxx+JsPIF1byim1x5VYCwJjgOC0ieMBcsc0XaZOCRFF6bX1ijcMZUuDtFHjAXLKNSfXXyEKU3j2POIoJjeEJQhjKOZwxQk4yhERqp9vFPLmYbpPQGmMIw9NsHqYxYso3uk2c0Jy36rCKY3PMRzcOwAHH3EWLCMwmPH2M84naKYXhFgVDCDo+wHlAJkRClIRtA3F7kn2MzzmF5YLmh0v7vP/5k/hYLSl4wN3U240x9hZjiJA+scHnMJ1YIyKF7gWsJN9DljKywj6G9v8Y+wljpML9ZXXbcHy937vEHBMmFMYTIBkNzQscwtYAO7Nzg8l2Drq5Zhqeu1Ofi4f7aMGlthGUFX3aDf8Fs3PYuvEZQeGRW040G5W9/hrTJB6Q/GZlim65PUQle1eAnrLxYsU+3wTZOT18nJ6H36i7EVlql1+KWz46flbPALGh/sKVlGUMLWZ8I50du8Vyko/cdYsMzby7ndr+UVeFRQLmBU0KY7ggfZVvkcWQSlnxgLlhG0rqL0e36cvs7ajT2M3u1w8NT0kqeIo19yeFiB58o4CpvRWtfQxp/JcA8TFnkcJqda8KcrEw/E5bI60f+5MjZ0N9VehO1v/V0e4OH0c1XNDQ6PAaoFJeBrfjJrKz/AWLBMvli+5u1Rel1i+aaXiKoFxQgKp+6XJbJ76O9QBMXYDMvkAUH/XN71NNPj93jLhu8gAujRW4MHpVGe4+gIh8dYsEz+bHCoGpl40o3VNfweHhZ0oK+uDl8fLJd0/DI7xwmKsWCZ/ErWognuCT+cv/GnAZ0sQeHYUh4W4tfZaLmyYJk8Tdb8qe6bDNHV/BE2O/wAHbVz6Fq+5sS9xfoxlisLlslTgr4+NVjB8Pj9Lb/F4/ADMVf7bnX3O88q1sEEC5YFK5/ZKuvaSZlv6GhZl11F5wDb5ODw8OT97k7XyVtsnCwCStEwQpExKujvR2cf02nscG9xYrkAOlBi/ZPy5oeCZXI6eovtFB0jOyg25iWHv25Q+jHm6zHeZueA2OYgKGwbEy6XmbJf3+DwdEEpEMYOCW2TQzJ1X3yTZnln87tEuBpFKVI1Dg+PLgnvD4axqW0Vzb91eIqOkRpM8Q6fV10bPSCD/Kb4j5yCFYIW69pqc7nc424Q7945/neidwoxV8aCZcl6eXLp/TpDT+nfWQePFdk8S6RG8PDQ7PAemeyOBX9iK8wpyDAbOyQ0gv6hJH2X3qwJNrGaY7DF1ShaPAeCtw8ZdAs3uGRYr3+mEeYXcq6MBcumWTBvtrubqXom/qB9LV3wHUELP8VQ6+5f5O5w48Nj0TvL1qG1Dk/hMnZIaKpFQFeVdd0iN8gg3Re9v30LHnD4gj3YBYU105O3hLOJ3Aa/hjNwnaAUB2MrLFtnzR+vd7h5im+Qj9gFsNXhC3EyBx+Ni26QxWGK3bqG7XBjEcXKWLCMAFrrFs2NbmYa6fjTcC17oXAG8SIKCvDeGL1WFjHYHZZ/XPMJaSi+PVfGgmUEhbqkW8z1OpG0bGP98N1EcIeAgJKnNBfVv04Mlun8YBAnZH2wjla4uShjZSxYJrcNYGlZ1yJZphPIsjf+JLODdoCnBdD8/IihKlk2zS0JZ1LhTrChZD2N8DdXrSjFyliwjIiCQl0pVcFSP5mEP0qDbOU4McCKfMnWeau+VSN0bljFJHFyJKhnC81wjwDKQGEsWBatNeGJGcHCeA4Vrk33akPFbhrptt5Vq4DSD1RqBU+3qorkFKpkphsiXbI72JTdTgc8NMBiZSxYRgAFeH5Mcq7OkXEEeob98fbEQc7yTw19E65cqHKbWnl+UGqsnyNTg5EukONuZ7hl7WEiqB7AsTKiGBvEw5rUqUlxFTPdUA31rD/g9gUHGk+SpduPhG4CetV+ApVudUHX8GCCm8Lk4BqQFtlT0hDsowXgARFQBiwjDHhGBVCAFwaFU9wMnRSPEtEOfzLYr4c40XqWLDk/klqp1q8YL1G634qSUxd0DvEjmeAmyVipCBxn3EG3K9zDGYBHBSxWRjAGIHc2DiZUlo/xU3VKMDKuFNFmPSPH/XF3PHGGTjJc4HFRequn5KwOPy5NDS25hjHBGBkuQ10gbZwJDsoeOUwj3Z4QQDEGUYz54uZMqAviUYzV8X6cjKJUVb20+jNyijP+rG9xrb6dLr6UA8lryrOVDEoMjYe74X5kMMiFiGTcKTkih/Vox3HSdPuvlipjwTK9Wncr3f5QcnqwG+VG6+h4uFRSqQnJ+i66tFNafZu0ura4I+iM00Fastko8FnNKECpxq5LvCsJE2E2KakolSjLVlAhlb5SyrREUpok9u3S4ho5yfH42KhGOi9YtynGWLBML0mt4MkZU5YcFA72w9wwHaZDqCRF4AMJ1IF4jX0skXqNiVVBhQBHIIGG6jQA/Ll7SdMmTXGjP5s8k21yLbSRc+oKbAU1Fixjc04lB1kZlpdqeVRBuZT7UiklpSUkCAhwJOIESOSzeGKJNCJNl3bREXfSJm3aEXWczeLJqRbOUa4EY8EyRnLn9uiZ1LlGN1Qaw3QIQ+KmaLQ2+OoYvfgKrg+3pxo7S2jsX3W92+Sg8tlLgvT/WspYsIy5sEVCN0tTUfh/7cGBAAAAAACQ/2sjqKqqqqqqqqqqqqqqqqqqqqqqqgAE+l9n12nSTQAAAABJRU5ErkJggg==) no-repeat;
+  background-position: 50% 40px; }
 
-.checkmark__circle {
+.sdc-interactive-missing-men__pitch:after {
+  content: "";
+  display: block;
+  padding-bottom: 90%; }
+
+.sdc-interactive-missing-men__position {
+  position: absolute;
+  width: 19%;
+  transform: translate(-50%, -15%); }
+
+.sdc-interactive-missing-men__position-name {
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  padding: 4px 0;
+  border: 0;
+  text-align: center;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  color: #282b70;
+  background: linear-gradient(177deg, #f2f2f2 0%, #f2f2f2 38%, #ffffff 39%, #ffffff 100%); }
+
+.sdc-interactive-missing-men__position-name[disabled] {
+  pointer-events: none;
+  user-select: none;
+  color: #282b70;
+  border: 0; }
+
+.sdc-interactive-missing-men__position-thumb-wrap {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative; }
+
+.sdc-interactive-missing-men__position-thumb {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  visibility: hidden;
+  will-change: filter;
+  transition: filter 0.33s; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-men__position-thumb-wrap {
+    width: 50px;
+    height: 40px; } }
+
+@supports (filter: brightness(0)) {
+  .sdc-interactive-missing-men__position-thumb {
+    visibility: visible;
+    filter: brightness(0); } }
+
+.sdc-interactive-missing-men__position[data-correct] .sdc-interactive-missing-men__position-thumb {
+  filter: none; }
+
+@keyframes tick-stroke {
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes tick-scale {
+  0%, 100% {
+    transform: none; }
+  50% {
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@keyframes tick-fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #62a02f; } }
+
+.sdc-interactive-missing-men__position-tick {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #62a02f;
+  animation: tick-fill .33s ease-in-out .33s forwards, tick-scale .33s ease-in-out .33s both;
+  display: none; }
+
+.sdc-interactive-missing-men__position-tick-circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
   stroke-width: 2;
   stroke-miterlimit: 10;
   stroke: #62a02f;
   fill: none;
-  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
-}
+  animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
 
-.checkmark {
-  border-radius: 50%;
-  stroke-width: 2;
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  box-shadow: inset 0px 0px 0px #62a02f;
-  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-}
-
-.checkmark__check {
+.sdc-interactive-missing-men__position-tick-check {
   transform-origin: 50% 50%;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
-  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
-}
+  animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) 0.66s forwards; }
 
-@keyframes stroke {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes scale {
-  0%, 100% {
-    transform: none;
-  }
-  50% {
-    transform: scale3d(1.1, 1.1, 1);
-  }
-}
-@keyframes fill {
-  100% {
-    box-shadow: inset 0px 0px 0px 30px #62a02f;
-  }
-}
+.sdc-interactive-missing-men__position[data-correct] .sdc-interactive-missing-men__position-tick {
+  display: block; }
 
-button[data-role="answers"]{
-  font-size: 15px;
-}
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-men__position-tick {
+    width: 20px;
+    height: 20px; } }
 
-</style>
-  
-</head>
+.sdc-interactive-missing-men__footer {
+  position: relative;
+  z-index: 3;
+  margin: 1em 0; }
 
+body {
+  height: 2000px; }
+
+.sdc-interactive-missing-men {
+  max-width: 550px;
+  margin: 0 auto 0; }
+</style></head>
 <body>
-  <h2>Missing Men<br><small>Man City vs Watford</small></h2>
-  <button><span>START</span><time><span data-role="timer">00:00:00</span></time></button>
-  <button data-role="answers" disabled>SHOW CLUES</button>
-  <form action="" novalidate>
-    
-    <ul>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" placeholder required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-      <input type="text" required>
-      </li>
-      <li>
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-        <input type="text" required>
-      </li>
-    </ul>
-  </form>
 
-  <script>
-
-    var formations = {
-      "334":[[50,0],[25,25],[50,25],[75,25],[25,50],[50,50],[75,50],[12,75],[37,75],[62,75],[87,75]],
-      "343":[[50,0],[25,25],[50,25],[75,25],[12,50],[37,50],[62,50],[87,50],[25,75],[50,75],[75,75]],
-      "352":[[50,0],[25,25],[50,25],[75,25],[11,50],[31,50],[51,50],[71,50],[91,50],[32,75],[66,75]],
-      "361":[[50,0],[25,21],[50,21],[75,21],[12,45],[28,57],[42,45],[59,57],[74,45],[88,57],[50,77]],
-      "424":[[50,0],[12,25],[37,25],[62,25],[87,25],[37,50],[63,50],[12,75],[37,75],[62,75],[87,75]],
-      "433":[[50,0],[12,25],[37,25],[62,25],[87,25],[25,50],[50,50],[75,50],[17,75],[50,75],[83,75]],
-      "442":[[50,0],[12,25],[37,25],[62,25],[87,25],[12,50],[37,50],[62,50],[87,50],[37,75],[63,75]],
-      "451":[[50,0],[12,25],[37,25],[62,25],[87,25],[11,50],[31,50],[51,50],[71,50],[91,50],[50,75]],
-      "460":[[50,0],[12,33],[37,33],[62,33],[87,33],[12,58],[28,72],[42,58],[59,72],[74,58],[88,72]],
-      "523":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[30,50],[70,50],[25,75],[50,75],[75,75]],
-      "532":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[25,50],[50,50],[75,50],[30,75],[70,75]],
-      "541":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[12,50],[37,50],[62,50],[87,50],[50,75]],
-      "3142":[[50,0],[25,20],[50,20],[75,20],[50,40],[12,60],[37,60],[62,60],[87,60],[30,80],[70,80]],   
-      "3241":[[50,0],[25,20],[50,20],[75,20],[37,40],[63,40],[12,62],[37,60],[62,60],[87,62],[50,80]],
-      "3331":[[50,0],[20,20],[50,20],[80,20],[27,42],[50,40],[73,42],[15,62],[50,62],[85,62],[50,82]],
-      "3412":[[50,0],[25,20],[50,20],[75,20],[12,40],[37,40],[62,40],[87,40],[50,60],[30,80],[70,80]],
-      "3421":[[50,0],[25,20],[50,20],[75,20],[12,40],[37,40],[62,40],[87,40],[30,60],[70,60],[50,80]],
-      "3511":[[50,0],[25,20],[50,20],[75,20],[11,45],[31,45],[51,45],[71,45],[91,45],[40,70],[60,80]],
-      "4132":[[50,0],[12,20],[37,20],[62,20],[87,20],[50,40],[25,60],[50,60],[75,60],[37,80],[63,80]],
-      "4141":[[50,0],[12,20],[37,20],[62,20],[87,20],[50,40],[12,60],[37,60],[62,60],[87,60],[50,80]],
-      "4222":[[50,0],[12,20],[37,20],[62,20],[87,20],[30,40],[70,40],[25,60],[75,60],[30,80],[70,80]],
-      "4231":[[50,0],[12,20],[37,20],[62,20],[87,20],[37,40],[63,40],[25,60],[50,60],[75,60],[50,80]],
-      "4312":[[50,0],[12,20],[37,20],[62,20],[87,20],[25,40],[50,40],[75,40],[50,60],[37,80],[63,80]],
-      "4321":[[50,0],[12,20],[37,20],[62,20],[87,20],[25,40],[50,40],[75,40],[37,60],[63,60],[50,80]],
-      "4411":[[50,0],[12,21],[37,21],[62,21],[87,21],[12,42],[37,42],[62,42],[87,42],[32,69],[66,75]],
-      "31312":[[50,0],[25,18],[50,18],[75,18],[50,36],[25,54],[50,54],[75,54],[50,72],[33,81],[66,81]],
-      "41212":[[50,0],[12,18],[37,18],[62,18],[87,18],[50,37],[33,52],[66,52],[50,69],[33,81],[66,81]]
-    }
-
-    var answers = ['Ederson','Walker','Stones','Otamendi','Delph','De Bruyne','Fernandinho','Silva','Sterling','Aguero','Sane'];
-    
-    var items =  document.querySelectorAll('li');
-    var form = document.querySelector('form');
-    var button = document.querySelector('button');
-    var clues = document.querySelector('[data-role="answers"]');
-    var timer = document.querySelector('[data-role="timer"]');
-    var interval;
-
-    form.onchange = function(){
-      checkAnswers();
-    }
-
-    function checkAnswers(){
-      if(form.checkValidity() === true){
-        clearInterval(interval);
-      }
-    }
-
-    items.forEach(function(item, index){
-
-      var input = item.querySelector('input');
-      input.onclick = function(){
-        button.click();
-      }
-      input.onkeyup = checkValidity.bind(input,index);
-      input.placeholder = answers[index].replace(/\S/g, '_');
-
-      item.style.left = formations['442'][index][0] + '%';
-      item.style.top = formations['442'][index][1] + '%';
-    });
-    
-    function checkValidity(index){
-
-      var reg = new RegExp('\\b'+answers[index]+'\\b', 'i');
-                            
-      if(this.value.match(reg)){
-
-        this.setCustomValidity("");
-        this.disabled = 'disabled';
-        
-        items[index].setAttribute('data-correct', true);
-
-        if(items[index+1]){
-          items[index+1].querySelector('input').focus();
-        }
-      }
-      
-      else {
-        this.setCustomValidity("Wrong anwser");
-      }
-    }
-
-  clues.onclick = showClues;
-
-  function showClues(){
-    this.textContent = 'SHOW ANSWERS';
-    this.onclick = showAnswers;
-    items.forEach(function(item, index){
-      var input = item.querySelector('input');
-      var placeholder = input.getAttribute('placeholder');
-      input.setAttribute('placeholder', placeholder.replace('_', answers[index].slice(0,1)));
-    })
-  }
-
-  function showAnswers(){
-    this.disabled = 'disabled';
-    this.onclick = null;
-    items.forEach(function(item, index){
-      item.setAttribute('data-correct', true);
-      var input = item.querySelector('input');
-      input.value = answers[index];
-    })
-
-    checkAnswers();
-  }
-
-  button.onclick = function(e){
-    e.preventDefault();
-    this.setAttribute('data-started', true);
-    interval = setInterval(countTimer, 1000);
-    this.onclick = null;
-    clues.removeAttribute('disabled');
-  }
-
-  var totalSeconds = 0;
-
-  function countTimer() {
-
-    ++totalSeconds;
-    var hour = Math.floor(totalSeconds /3600);
-    var minute = Math.floor((totalSeconds - hour*3600)/60);
-    var seconds = totalSeconds - (hour*3600 + minute*60);
-
-    timer.textContent = pad(hour) + ":" + pad(minute) + ":" + pad(seconds);
-  }
-
-  function pad(num){
-    if(num<10){
-      return "0"+num;
-    }
-
-    return num;
-  }
-
+  <div id="container"></div>
+  <div class="sdc-interactive-missing-men" data-component-name="sdc-interactive-missing-men">
+  <script data-role="answers">
+    ["Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson"]
   </script>
-</body>
-</html>
+  <div class="sdc-interactive-missing-men__inner">
+
+    <div class="sdc-interactive-missing-men__head">
+      <h2 class="sdc-interactive-missing-men__title">Missing Men</h2>
+      <h3 class="sdc-interactive-missing-men__sub-title">Man City Starting XI</h3>
+      <p class="sdc-interactive-missing-men__description">Man City 3 - 1 Arsenal, Premier League, 7th Nov 2017</p>
+      <ul class="sdc-interactive-missing-men__badges">
+        <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/345.png" alt="Man City" class="sdc-interactive-missing-men__badge"></li>
+        <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/413.png" alt="Arsenal" class="sdc-interactive-missing-men__badge"></li>
+      </ul>
+    </div>
+
+    <div class="sdc-interactive-missing-men__nav">
+      <button type="button" name="button" class="sdc-interactive-missing-men__start" data-role="start">
+        <span class="sdc-interactive-missing-men__start-label">Start</span>
+        <time class="sdc-interactive-missing-men__start-timer" data-role="timer">00:00:00</time>
+      </button>
+    </div>
+
+    <div class="sdc-interactive-missing-men__body">
+      <form class="sdc-interactive-missing-men__form" data-role="form">
+        <ul class="sdc-interactive-missing-men__pitch" data-role="pitch" data-position="442">
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 50%; top: 5%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 30%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 30%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 30%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 30%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 55%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 55%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 55%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 55%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 80%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 80%;">
+              <div class="sdc-interactive-missing-men__position-thumb-wrap">
+                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
+              </div>
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            </li>
+        </ul>
+      </form>
+    </div>
+
+    <p class="sdc-interactive-missing-men__footer" data-role="footer" data-complete="Congratulations, you completed the quiz in"></p>
+
+  </div>
+</div>
+
+
+  <script src="./index_files/bundle.js"></script>
+
+
+
+</body></html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<style >
+
+  html {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background: #eee;
+  }
+  
+  h1,h2 {
+    font-weight: normal
+  }
+  
+  ul {
+    padding: 1em 0;
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+    background: yellowgreen;
+    position: relative;
+  }
+
+  ul:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  li {
+    font-size: 16px;
+    width: 19%;
+    padding: 0;
+    position: absolute;
+    transform: translate(-50%,20%);
+    text-align: center;
+  }
+
+  li > svg {
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    display: none;
+    position: absolute
+  }
+
+  li[data-correct] > svg {
+    display: block;
+  }
+
+  li:before {
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(http://img.skysports.com/football/players/home/head/h_head_19950.png);
+    background-size: auto 112%;
+    background-position: center bottom;
+    filter: brightness(0);
+    will-change: filter;
+    transition: filter 0.33s;
+  }
+
+  li[data-correct]:before {
+    filter: brightness(100%)
+  }
+  
+  input {
+    font-size: 16px;
+    padding: 0.32em 2px;
+    margin: 4px 3px;
+    width: 100%;
+    background: white;
+    border: 0;
+    text-align: center;
+    line-height: 1;
+    box-sizing: border-box;
+    text-transform: capitalize
+  }
+  
+  input:valid {
+    color: green;
+  }
+
+  input[disabled] {
+    pointer-events: none;
+    user-select: none;
+    color: green;
+    background: white;
+    border: 0;
+  }
+  
+  input:invalid {
+    color: red
+  }
+
+  button {
+    font-size: 20px;
+    background: white;
+    -webkit-appearance: none;
+  }
+
+  button[data-started] {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  button > time,
+  button[data-started] > span {
+    display: none;
+  }
+
+  button[data-started] > time {
+    display: block;
+  }
+
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #62a02f;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #62a02f;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #62a02f;
+  }
+}
+
+button[data-role="answers"]{
+  font-size: 15px;
+}
+
+</style>
+  
+</head>
+
+<body>
+  <h2>Missing Men<br><small>Man City vs Watford</small></h2>
+  <button><span>START</span><time><span data-role="timer">00:00:00</span></time></button>
+  <button data-role="answers" disabled>SHOW CLUES</button>
+  <form action="" novalidate>
+    
+    <ul>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" placeholder required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+      <input type="text" required>
+      </li>
+      <li>
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+        <input type="text" required>
+      </li>
+    </ul>
+  </form>
+
+  <script>
+
+    var formations = {
+      "334":[[50,0],[25,25],[50,25],[75,25],[25,50],[50,50],[75,50],[12,75],[37,75],[62,75],[87,75]],
+      "343":[[50,0],[25,25],[50,25],[75,25],[12,50],[37,50],[62,50],[87,50],[25,75],[50,75],[75,75]],
+      "352":[[50,0],[25,25],[50,25],[75,25],[11,50],[31,50],[51,50],[71,50],[91,50],[32,75],[66,75]],
+      "361":[[50,0],[25,21],[50,21],[75,21],[12,45],[28,57],[42,45],[59,57],[74,45],[88,57],[50,77]],
+      "424":[[50,0],[12,25],[37,25],[62,25],[87,25],[37,50],[63,50],[12,75],[37,75],[62,75],[87,75]],
+      "433":[[50,0],[12,25],[37,25],[62,25],[87,25],[25,50],[50,50],[75,50],[17,75],[50,75],[83,75]],
+      "442":[[50,0],[12,25],[37,25],[62,25],[87,25],[12,50],[37,50],[62,50],[87,50],[37,75],[63,75]],
+      "451":[[50,0],[12,25],[37,25],[62,25],[87,25],[11,50],[31,50],[51,50],[71,50],[91,50],[50,75]],
+      "460":[[50,0],[12,33],[37,33],[62,33],[87,33],[12,58],[28,72],[42,58],[59,72],[74,58],[88,72]],
+      "523":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[30,50],[70,50],[25,75],[50,75],[75,75]],
+      "532":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[25,50],[50,50],[75,50],[30,75],[70,75]],
+      "541":[[50,0],[11,25],[31,25],[51,25],[71,25],[91,25],[12,50],[37,50],[62,50],[87,50],[50,75]],
+      "3142":[[50,0],[25,20],[50,20],[75,20],[50,40],[12,60],[37,60],[62,60],[87,60],[30,80],[70,80]],   
+      "3241":[[50,0],[25,20],[50,20],[75,20],[37,40],[63,40],[12,62],[37,60],[62,60],[87,62],[50,80]],
+      "3331":[[50,0],[20,20],[50,20],[80,20],[27,42],[50,40],[73,42],[15,62],[50,62],[85,62],[50,82]],
+      "3412":[[50,0],[25,20],[50,20],[75,20],[12,40],[37,40],[62,40],[87,40],[50,60],[30,80],[70,80]],
+      "3421":[[50,0],[25,20],[50,20],[75,20],[12,40],[37,40],[62,40],[87,40],[30,60],[70,60],[50,80]],
+      "3511":[[50,0],[25,20],[50,20],[75,20],[11,45],[31,45],[51,45],[71,45],[91,45],[40,70],[60,80]],
+      "4132":[[50,0],[12,20],[37,20],[62,20],[87,20],[50,40],[25,60],[50,60],[75,60],[37,80],[63,80]],
+      "4141":[[50,0],[12,20],[37,20],[62,20],[87,20],[50,40],[12,60],[37,60],[62,60],[87,60],[50,80]],
+      "4222":[[50,0],[12,20],[37,20],[62,20],[87,20],[30,40],[70,40],[25,60],[75,60],[30,80],[70,80]],
+      "4231":[[50,0],[12,20],[37,20],[62,20],[87,20],[37,40],[63,40],[25,60],[50,60],[75,60],[50,80]],
+      "4312":[[50,0],[12,20],[37,20],[62,20],[87,20],[25,40],[50,40],[75,40],[50,60],[37,80],[63,80]],
+      "4321":[[50,0],[12,20],[37,20],[62,20],[87,20],[25,40],[50,40],[75,40],[37,60],[63,60],[50,80]],
+      "4411":[[50,0],[12,21],[37,21],[62,21],[87,21],[12,42],[37,42],[62,42],[87,42],[32,69],[66,75]],
+      "31312":[[50,0],[25,18],[50,18],[75,18],[50,36],[25,54],[50,54],[75,54],[50,72],[33,81],[66,81]],
+      "41212":[[50,0],[12,18],[37,18],[62,18],[87,18],[50,37],[33,52],[66,52],[50,69],[33,81],[66,81]]
+    }
+
+    var answers = ['Ederson','Walker','Stones','Otamendi','Delph','De Bruyne','Fernandinho','Silva','Sterling','Aguero','Sane'];
+    
+    var items =  document.querySelectorAll('li');
+    var form = document.querySelector('form');
+    var button = document.querySelector('button');
+    var clues = document.querySelector('[data-role="answers"]');
+    var timer = document.querySelector('[data-role="timer"]');
+    var interval;
+
+    form.onchange = function(){
+      checkAnswers();
+    }
+
+    function checkAnswers(){
+      if(form.checkValidity() === true){
+        clearInterval(interval);
+      }
+    }
+
+    items.forEach(function(item, index){
+
+      var input = item.querySelector('input');
+      input.onclick = function(){
+        button.click();
+      }
+      input.onkeyup = checkValidity.bind(input,index);
+      input.placeholder = answers[index].replace(/\S/g, '_');
+
+      item.style.left = formations['442'][index][0] + '%';
+      item.style.top = formations['442'][index][1] + '%';
+    });
+    
+    function checkValidity(index){
+
+      var reg = new RegExp('\\b'+answers[index]+'\\b', 'i');
+                            
+      if(this.value.match(reg)){
+
+        this.setCustomValidity("");
+        this.disabled = 'disabled';
+        
+        items[index].setAttribute('data-correct', true);
+
+        if(items[index+1]){
+          items[index+1].querySelector('input').focus();
+        }
+      }
+      
+      else {
+        this.setCustomValidity("Wrong anwser");
+      }
+    }
+
+  clues.onclick = showClues;
+
+  function showClues(){
+    this.textContent = 'SHOW ANSWERS';
+    this.onclick = showAnswers;
+    items.forEach(function(item, index){
+      var input = item.querySelector('input');
+      var placeholder = input.getAttribute('placeholder');
+      input.setAttribute('placeholder', placeholder.replace('_', answers[index].slice(0,1)));
+    })
+  }
+
+  function showAnswers(){
+    this.disabled = 'disabled';
+    this.onclick = null;
+    items.forEach(function(item, index){
+      item.setAttribute('data-correct', true);
+      var input = item.querySelector('input');
+      input.value = answers[index];
+    })
+
+    checkAnswers();
+  }
+
+  button.onclick = function(e){
+    e.preventDefault();
+    this.setAttribute('data-started', true);
+    interval = setInterval(countTimer, 1000);
+    this.onclick = null;
+    clues.removeAttribute('disabled');
+  }
+
+  var totalSeconds = 0;
+
+  function countTimer() {
+
+    ++totalSeconds;
+    var hour = Math.floor(totalSeconds /3600);
+    var minute = Math.floor((totalSeconds - hour*3600)/60);
+    var seconds = totalSeconds - (hour*3600 + minute*60);
+
+    timer.textContent = pad(hour) + ":" + pad(minute) + ":" + pad(seconds);
+  }
+
+  function pad(num){
+    if(num<10){
+      return "0"+num;
+    }
+
+    return num;
+  }
+
+  </script>
+</body>
+</html>
