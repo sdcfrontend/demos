@@ -1,0 +1,134 @@
+// Temporary include for Sky News styles:
+@import url("http://news.sky.com/styles/bundle.css");
+
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.custom-story-picker {
+    // Simulate News Story Grid 
+    margin: 20px auto;
+    width: 664px;
+
+    .sdc-news-story-grid {
+        overflow: initial;
+    }
+
+    &__toggle {
+        float: right;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transform: translateZ(0);
+        transition: all .15s ease-in-out;
+        transform-origin: 51.5% 41.5%;
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        &:after {
+            font-family: FontAwesome;
+            display: inline-block;
+            content: "\f013";
+            font-size: 26px;
+            padding: 2px 5px 4px 5px;
+            margin-top: -3px;
+            color: #2f53a1;
+        }
+
+        &--active {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__list-options {
+        margin-bottom: 5px;
+        margin-top: -17px;
+
+        input[type=checkbox] { 
+            display:none; 
+
+            + label {
+                &:before {
+                    font-family: FontAwesome;
+                    display: inline-block;
+                    content: "\F204";
+                    color: #9c9c9c;
+                    vertical-align: middle;
+                    font-size: 26px;
+                    margin-right: 5px;
+                }
+            }
+
+            &:checked {
+                + label {
+                    &:before {
+                        content: "\f205";
+                        color: #2f53a1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__option-label--last {
+        margin-left: 15px;
+    }
+
+    &__list-wrapper {
+        margin-bottom: 20px;
+        
+        &--show {
+            display: block;
+        }
+
+        &--hide {
+            display: none;
+        }
+    }
+    
+    &__list {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        width: 25%;
+    }
+
+    &__list-item {
+        font-size: 18px;
+        margin-bottom: 10px;
+
+        input[type=checkbox] { 
+            display:none; 
+
+            + label {
+                &:before {
+                    font-family: FontAwesome;
+                    display: inline-block;
+                    content: "\F067";
+                    margin-right: 10px;
+                    background-color: #eaeaea;
+                    color: #9c9c9c;
+                    padding: 5px 11px 4px 11px;
+                    box-sizing: content-box;
+                    width: 16px;
+                    border-radius: 3px;
+                    font-size:20px;
+                }
+            }
+
+            &:checked {
+                + label {
+                    &:before {
+                        content: "\f00c";
+                        color: #ffffff;
+                        background-color: #2f53a1;
+                        padding: 5px 13px 4px 9px;
+                    }
+                }
+            }
+        }
+    }
+}
