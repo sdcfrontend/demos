@@ -14,7 +14,6 @@ Custom story grid component for Sky News
 ## Requirements
 
 - Toolbelt
-- Allow-Control-Allow-Origin: * - Chrome Extension (Fixes the CORS errors when calling the News API)
 
 ## Usage
 

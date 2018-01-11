@@ -14,7 +14,7 @@ class CustomStoryGrid extends Component {
   }
 
   // fetchSectionStories(section) {
-  //   return axios.get(`https://feeds.skynews.com/feeds/mobile/${section}.json`)
+  //   return axios.get(`[API_ENPOINT_HERE]${section}.json`)
   //     .then(res => {
   //       if (res.status === 200) {
   //         return res.data;
