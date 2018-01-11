@@ -26,7 +26,3 @@ then run
 ```
 toolbelt preview
 ```
-
-## Authors
-
-* SDC Core Web
