@@ -276,23 +276,13 @@ ul {
   line-height: 1.08; }
 
 .sdc-interactive-missing-men {
-  font-family: sans-serif;
   font-size: 1em;
   position: relative;
   text-align: center;
-  background: #1f2583;
+  background: #010d7e;
+  background: linear-gradient(#010d7e 0%, #101151 100%);
   color: white;
   overflow: hidden; }
-
-.sdc-interactive-missing-men:before {
-  content: "";
-  background: linear-gradient(5deg, #0f0f50 0%, #090f6a 100%);
-  position: absolute;
-  width: 150%;
-  height: 70%;
-  left: -10%;
-  bottom: -10%;
-  transform: rotate(-5deg); }
 
 .sdc-interactive-missing-men__inner {
   padding: 2em 1em; }
@@ -303,17 +293,30 @@ ul {
 
 .sdc-interactive-missing-men__head {
   margin-bottom: 24px;
-  padding: 0 1em; }
+  padding: 0 1em;
+  position: relative;
+  z-index: 3; }
 
 .sdc-interactive-missing-men__title {
-  font-size: 2.5em;
-  margin: 0 0 18px;
-  font-weight: 400; }
+  font-size: 3em;
+  margin: 0.2em 0 0.45em;
+  font-weight: 400;
+  font-family: "Sky Sports Display", "Sky Text";
+  line-height: 1;
+  display: none; }
 
 .sdc-interactive-missing-men__sub-title {
-  font-size: 1.5em;
-  margin: 0 0 8px;
-  font-weight: 400; }
+  font-size: 2.5em;
+  margin: 0 0 0.25em;
+  font-weight: 400;
+  font-family: "Sky Sports Display", "Sky Text";
+  line-height: 1.1; }
+
+.sdc-interactive-missing-men__fixture {
+  line-height: 1.1;
+  margin: 0 0 0.1em;
+  font-size: 1.1em;
+  font-weight: 500; }
 
 .sdc-interactive-missing-men__description {
   font-size: 1em;
@@ -322,7 +325,8 @@ ul {
 
 .sdc-interactive-missing-men__badges {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0 0 9px; }
 
 .sdc-interactive-missing-men__badge-item {
   display: inline-block;
@@ -335,25 +339,38 @@ ul {
 
 @media all and (max-width: 600px) {
   .sdc-interactive-missing-men__title {
-    font-size: 2em;
-    margin-bottom: 12px; }
+    font-size: 2.2em; }
+  .sdc-interactive-missing-men__sub-title {
+    font-size: 1.8em; }
   .sdc-interactive-missing-men__badge-item {
     width: 50px;
     height: 50px; } }
 
 .sdc-interactive-missing-men__nav {
-  margin-bottom: 24px; }
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 3; }
 
-.sdc-interactive-missing-men__start {
-  font-size: 1.4em;
-  padding: 5px 12px;
-  background: green;
+.sdc-interactive-missing-men__start,
+.sdc-interactive-missing-men__clues {
+  font-size: 1.25em;
+  font-family: inherit;
+  padding: 3px 11px;
+  background: #d0021b;
   color: white;
   border: 0;
+  font-weight: 500;
   cursor: pointer; }
 
 .sdc-interactive-missing-men__start[disabled] {
   cursor: default; }
+
+.sdc-interactive-missing-men__clues[disabled][class] {
+  cursor: default;
+  opacity: 0.5; }
+
+.sdc-interactive-missing-men[data-completed] .sdc-interactive-missing-men__clues {
+  display: none; }
 
 .sdc-interactive-missing-men__start-timer {
   display: none; }
@@ -364,17 +381,37 @@ ul {
 .sdc-interactive-missing-men__start[data-started] .sdc-interactive-missing-men__start-timer {
   display: block; }
 
+.sdc-interactive-missing-men__clues {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  padding: 2px 12px;
+  display: block;
+  margin: 9px auto 0;
+  transition: opacity 0.166s; }
+
+.sdc-interactive-missing-men__clues[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0; }
+
+.sdc-interactive-missing-men__clues[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1; }
+
+.sdc-interactive-missing-men__clues:active {
+  background-color: rgba(255, 255, 255, 0.3); }
+
 .sdc-interactive-missing-men__pitch {
   list-style: none;
   padding: 0;
   position: relative;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAD9CAQAAADKIcEjAAAsX0lEQVR4AeTUsW7TUBTG8f85106SijCwMyMxsvAcMCAep6/CzAoDTEjdeArEyESFREvjcz6G9srXiesObOEnRf5yzpfrIZaNkydDH878MVwbi8K3wNVio9g1S4qFhzbAfT353u6aYtZgVmpe84c11Yp6F4pbO1tR9ezp6dWVwaBvdj3QC8xuW17M+rs5M1ew0vs46dp9ZRSWOQVxZOmMgY6BUViZNCKLotQuQEcULIBCcA8Pr3HstN+Kp9d8vPdB4oyNlDiQMycE3rFtN8mUpKIzGrmYW87Iin3m63ND/EdMnDhDXx79fqunlrMPRJvsoUdHNub5U8xyftNkGYDCDM/Zhqlmrx/86MrBzI5a0B30zLES0B2dXTvW/KITs3edEPP+uZFtEqrZyS3GFWpbKVeaCwbz2jXdzSDNc3jg//VUps3vMO0wXWrvVmfHr6yCUnF7hjN/kqRwtbPgkDLlC68sC57Yxt7x/X1TO312zik7NwQf3+gFF/5TReLAQCNS43xW3KhbOoEhLZmxp0pZhpUbvbRnXMS30u2ZCvXBxGqSBuu0ahrrZjdOLFa6sXG/xofY+St+lE9dASghbbhVrwdZmbClqqkhAmOJCB6STPxiaifykipi91p/2bsL7yqudo/j32fPnOAVLKRolRJW6PtSd6SkvG2Ku7tc+xeS/A1XcNe6ozVcqkA4wd1dGjs5s5/r91L3Yc90PktwsjN7r2ft+W05re2iykuNvf//3VuDS/y4wFrlR1kNfvBvXAsa9w7+mllw177DdbLKD8polfITDll+wkArPz6ubd/mZoJUySy+js8sK5lhCfr+E6Yva1mDU46nzN/jtfwXaghR8zzzT7qJ94i4joXSRedygFBdup/Rupl3ccAdgqbzdRRfsRw6/mlKlk+MlRrsI3f7L7Cz51pQg5YKDsgXAu8RWtt3TtTc5qWVX6FY+YVeNQR5razhAhz0BlqiSrCZk6S81hzwDUpYNO/gqZNaULuBK+0EFeH7KaFQyU/vXi0vyCnWJxlWHAi68haZLOLN4Oomg3XnNfWVnKsT9XadzoVJgob3PD7tabrIbA50FjTK/UrzzD+SZhkhyhH0zLO2yL7GtjkOjKZiQZGy4eR789j/yp8kyfJLiadiQUvNI330NpkXXN3qUHcqMLO9aSub5MKEMAuHguYG1cElou+aXLC5depRRailt6K8XhevIO+z4oCbX/IVQVNv1+bafnZmv8tvRLlkJa+EAqzqpgXmTQ4UyvMWdyh4nbXW+4IwCXqgjt7uX7pYQbQpUK3nJL/iFqoaEBqFu8+d3q8Fp1tyLA8HaKnhet83/PFen/wFBRZBk1fCyKZXj3VkFJ/zCvR0qCNV0DltZZItZzEhmiDol80yU+UAS4m4RwSt7mJeZAFlOWH2raAnOvnDWceKFq6MKUF3Pe710w9YTfzh7yZ+XjPYR5ppX3My8x4Uiapj86sH1eNzOBniJL5U0J63aQPOw6OCEnFymlptSRlh2x+clfwr6y+5splAoWBLWZ7XzZxm53KDTfZhRTC9ejXn1jHkBXM4sd1g3Wrb9OY5kzl/12yyhKiLoJsfl37+Er5aYbBR7+Frjev+gxxjPqFKCXqqB4W6mB2zDdaVp7Gl3q3j5facGZxbbLBJwYqcJ3vbp3QZXzgStn9jcM0tpJDlfDZOUEK1ubc8aGdz7Mk4ZB1e7SRtlPOvVBD2S2FLM0kPtlyEuhSAFOXVn8CFevOobidokmFFKr16/EEzxK7nXRxTKOjcRjLV2pxpVIwUNNwn022838T+K9djUbDI9OE/y+/RuqF/NyfHcLedxqnWgroz6gc8IMNlC29CnHe++0KclBjss62yL7Hv6moY6GDHST7Nzapsxdhw2ybo4/W0iV59sgJBSoVfqBinCIGcpp5tzlFCf5Jmp3b0OnIKZxRbYEdZK7qak2wviXPBKolXemVfbZgdoBnzRuPMRlNqXTvXOCOV8yBXzZfcBP5tpkE2vd4C2pVfaj2uefBIqsa/A1BCdm1/gwtex2DjiapW7pQGQS+sbporRZwddDS+20ilJGYHnT8aZDuzkPRG97rMYNvkM9pu4S1CNl7QDZ1kkN3llaX8zI2X0Xzj4HTqh3/3m9fU3PA7Kf5otdzov1uvQdAo1V3PpOaTDX+OdeolnpZ5lM80WJfy0XRjJmlNNA5EJxmWoB8+Lb1YyUfdnewulbkjvXvNLI6FnV8h6Lq/STev1qZuvExGvnEdjdzwcwPf+DWYb15fc8O/DYv95s8s1lbWTONCo9AL1pl2wQQpYzlOmWWwQ9oHY9jF0rgmWaIxCtufuNeMJd19CYp7nSXo0raZSexhETfFXffaXLI3XMZ3w8/+5+c/8Hs+P3CJ3zf+nzBnWQBZkBT+bq7dhN42Jyd4uUznfAu3Rpqge7rYF4P3WFeQFCzHr+m7LZhEkJnFtb+5GLYLuqCvfVznkx4b7aGUEPTEo97A4F3WtXKuYMHuoVLgLWBvHLeRSklctop6TUZxd3YOh7cYrIstnNfMTOV8zWxqJwtK6FRKhd+sGMdYwifoldsq/k6uVc6i5h7nSla6IZNs3coZXFzpaslKQvenC02P4A22uJleIeiibvYFfY2tYwQl2hKCnu6vj9hZHGglqGvhyOB2wXg5lL+A2B2I9otjkV491Um6my1mC4ijw/uVhrazOV23DISoSyjg78w+5D3AARxTbBGOpN+VAeU9WYESK5Im2l4x2B7Na6bo5YuzqRro7vzqUTuQlXw4WlCiLiFoOqfxRL2ldjqX2zjZp+V99QmW8FW8PqTCfyXi6VWxXVkn0w/qvH5H1QdubRX9xobR+p3NtexOEvGgSH7m9E56m/vY5mZBrbeyKo+X9MzAM3EqWVIS/a2i/XiMJexYb7CuLgksydcx2a28EZf1wYQKeropUzi3dy7ZLoK6F5T0z/UmcenKXKoed6J9ybYGQdc9LIPtJ7yH046PlPuzsziSBO7xIYKeHKoF3kyOtBDUxWx3SCc7QrbyBnSIycjzJdIHnZ9rY4o0zSro4mqHCPpqG3Of7h1zFFASMaHAsR3+X20njuCgYgvsTH8k3fUUW0sETV4Jb/bJqYbnJ5k6Mp3LTzndHUt72yeDBew+EqMsIVEs6Il63mTNyZnG9aYujkBB8dKj5C6Zw5GXDTYpWDc1vdowlE7VCynfZLDuDuplTXWKXqqY9c0No4l45FinesjzmSV82dbZ9eldt/uTpFZmcb39TWtjkmEJuuXZbFHwPp90EdTldi59TnvaV9k2MilXcSPohbzMZI4yD0fNMthB98pYLe+wGCXyY9CP6lbR59prT/Ol+cT1Ab2ogXlAz18pJxE/Ck1Pnzmk91S04sQ9gjqZZAn7y9b4RXuO88n9RJ0fzXJV2Nj2lXO173wjbHdSqkOQJ2saXxsuKIm4EdR8ZQsadOQEjhKAT9K5Upg9W1b+usEmGVboB51bjQ7uNLM5utb1x+/fM4HmdjrnYvlCmBD0bAOdiuo0KvMcXqne2SA1ifoynYuhh+9J6F7Y03bX19jm9toggr7cIRjNdt4gphLDBD1Z5D0jCynLFdTdt5JBbRnP0Q7zCRA0Cd1De/A9/qLDzGbeIgKOjLD5MoOjwwQlEdd7G9rYySbNEhyWJ2jZQ94g1vF+cvg5xIPOz7ZITdKL2TlUd3F+frWklUxlP/OJrcRwQV/xnhord8h0zuUKisP29bFP2qV8Gd3Thf4rkTro/Gq9nH7Y2tepXmfWWadbC8iDkrKfQ3wD98QwRQjO7ND7s/mcc36BYGW2heklZ4eciuptpFISqa2im/qbRzKL2fWxwbq+NLCwSZ0pwdWLs6j5pxgXrIQKeujW+lO0qmLGN+8fdTJ8b56aJFcazuEP/oiyJMMSdNNj3oDgQ1bivCcFXd5Fi3idLUMFJRH3HKuvPFo9nz2Of1C8we4p0BHmU16DKO5896MTtne9M+dFyk6tgYGOP2gRdGED/0FztqKMxJ+Ct8M+murEHsFpFmFX+Yf00FNsTlYJ/yiC7m10cZLx687gyl8Edb+8tn9Ih3hrWT1IUOItISipMxO1cfBvXGrl/GIQ3p6Reo+Zw+HoJVl+aSS2iops7SNNZW7NlVXmbet82mZLfHmQr4OviL8EghpqdZf0lvZswW2KEFS/VW+i9s+ZNfLqXYImM6zfl6DbupoXeJf1DwsahfYubp8ap/+VE/ziBEv4AyixI3/styu/+H853tj7Oy5snEWA49IGO/AeM0735C9CNVIlSzQC6dXzHWQUO1gOj0Xk4S4bZjr6czjUT1DiLiEA6JkB8gBzOZzrfq8LWv6MeYmVfNQ+KVi/b7kqahpM1gp/JpUPRmR+9UarYKLuZzE/YLD8OzvnwCvdFYbR9bx7rjNfbds246S27b/R/ozatsIGtW3btu6c92lzsjOo3fthDXbWXmPzePRciiE2HLGnR2yFvq3r5/VdwPJ+V7TbXdFnRt8GfSb1fXQN8IW6/i7GBLA4AJ32UAZ0aaGISuN55FgJ6JRJfwNIk5YUAFO0SIU+kkrXA6XAr1qMWAcA99sf3V/01HEPBI1KNCqGRsO7rFbaUq0T34uWQvOTw8wC0NAWVOiTyiELMgAaq6uVfQ/XMOdZURiePdhb5sU8NT/9jFSnzfk/Oq92nFaNc3j95iCZL9hgP3b2y/4oooEWKQuVBqkphUEjoF/DQ5ZixFzvRIP9Zb9FBFCAoEhBa0GAIiAotoJAUefb1sbWh8fSi54UijGFrAgFaHgXHQB1jKI/pzqG6kiL/tCbOQE9GqDQ+Y39eWBJOIEgqc0pqDiH9mJj95udDqj7S2MqA6vVkakEwinSo7tMWpLAs2748qsr+Hzt+eI11kPT06fEjM7gw8uCXPSA9Y+w+17sypU8uK0wc592CaNxFJMSnXrnsQ2QAMh20qc2arfBBrBIe1BIqjWA2ib395WQBGEp6guAAAol7YEplQFAqVaAUptdzdGJNdSN2fiEV9TrTNjRhNtGh0hnB6qV7BkmDIBK0jba3mlIRG0kWZNHDIT5jlnWYDOm+YT7+IyASmIYshy176AyMdK+NfmtJg3w45geal97svlGVKbyS8/wFTADODHA58wDbJvKF0p38zNRSaeXBOBjABZ36PGv6TEfcFuQR60yexJvfXUes/PFuxdAntvPAVtyuO/kBuYjXpkqize9ekcBvslODu4aJccSvhLMeFwT+aaXGbqDfWP6jOdy1V4EPvYKps873nDInvapZoD5B3hkRe+iDWU9rvt5k/+ATcfYhp1YnKe4hQ/491mE8LNb6dC4nZuZT9DzzE0uDXKvFXxKvvfRefzA3l3+x3VdDd//rX3OjEZkdszMMkOY+cqT1IHWaRu6yu1zM72X9Dfc71wONwq7THa4jq0YIzMzimFmztnr/lxyMx87kV05saWZ0foWMtKI4Zd91tmjk35AUK4qI0KOgsL6WeGNzHGR2574eNZesoAgKFeOAB4oZT63MJ7DrGEDikMpVEpB2bGcW/Vl6mcXxO+YaB4fYfsfSGWwklOLBaWQSO/uVCRvfw1UUBDZOIPrZXYQ6n42RQ00ASwSAAH9Cm8dQAEoZx7XM5GzrGUtbYCgmD675L77LmPdSo4UwiRLavJ02A71K3QZz7H1dw6P6bfvg8imyX5ZWBVW0Kjb5NPUQbro9mtXrYByeQTBc841zGMxo2lhA2s5Bdh3ux8eEF3yQ2ku+9IPiLYVlqDrb3aP+D/zl/7dKmpUUICdI/xc5jMuEDmuu4OdXUdpO38jRq1U60VXggKAoCifGcwU5jGVSk6yiU84DQigmD7fOrSiKnjGb+A3MEdQC9ZlfwEfm5r9vu5c+hweC1b/ExSgLjlvkpvjZsoIJ+4sB+SAP5o4SScXmCB6qUPZJCMZx3SmMJgMB9jIdlotVv2+jfRe+Td5nQ9mWbC+xPRqMD8U0ZU0583JVpMLyuby1IRwukxitCt1nUGznnTH9ZScLW/tTI/qIuaLkqQoZQijGM0YhlFGJ8fYxQ6OEvd7rIygdcG8J90M90v2vujwNsO6jKlJrXv4aT9Tf8Ge/NwqalMtgPpExcjE2OQExslQVyoJ4rCDdtrDLu2StEaBDwmcJEhJaVBKuasgRUyaZg5zgEOcJAKLVR49XnfQsB/hun5K43xBbYXVO4JuuJsH9C3eWyIo+ccIAEq3NeGMwTIiHKbDZWhQIeWUuoQEziEOpxITh2nXoe1BM2c4xWnOkO7p7Zh+5vC7p/nvs51nYaagFqxeTa8emeufop5XIZ+DZbSH3NQnxidLEkEYJLpCEUh5H/lsZZZsXYaYnBWWqnwk6I6becT9ib/OsGD1LlfLR/ITmrt+SueNlqtC8dk5QuXSBCxU+Uv++YBolvnn2PqKw9sM619NR8KN39Xx0c849HuHp8CYauHiFEwhPCC64geuUlZy6gWHt2Bd0vLlcjMvsXGRoBhj+uEo59vj+KEej39BpkpQOyTsmaBblkbf1ndYRT8xxiwRdPcS/Za8xyrykOyi/73g8I+M0x9yJP5Vf/+hC2PMrgf97VLHupmC2gqrxyNn9wMpz6zkTL//3StjbJKVGPRdxstKDk93eAvW+QSFTY+zOH6Wbascnn5mjG0P3j3S/1DbBv2MjjGCcj4L1sabeUR+z+qFgmJMPrDh+2z+nU28nF/bSF3/52rzFL2PDQvXLMQYkw+qfbXM3C5/41putRnWhaurIXxH4sQvacubk6jGGEFxO55ws7O/Ynedww/4fVjVgiIbvsU0/2z+XRPHGJtknapo/LELkytpnCjoQF9hCfrJrXIHf2B93v0RZGOMw++aqt+XXS8+i68WdCAHS9BNM+NH2MSfMCZP2TbS7TcGj8pf+XN+XGsx7Med7UO5wx1OrgabXhmTjwTgo51j9e742PYtswUdmCssQQm3PBiN8G9x2na2G5O3BN2fyvxAhqZXcuI1hx+gQ/flN8rceDV7LFf5ztierMfHJH6oJ7N58IBo0f4Ztk93N/ut1JPnjDGrHP6JRXxbPuDtAffg5+mCfjw8cQenF79n18QpBMaIoDseCO6MX+Xj/t33LtoPV5rtuoVk+B7tCwohV8YYQdeEY7/jJvBTDr/g8ANohvXoEh3r1xbQBeiNMYJuHy4/cJ2dP+/PpYZoHy8s1011VbqNPcsKKFfGmBqHf3qG/47fzG9gpqDFHqzu6VWw1J1gEwXGGLNY0O13hPfLKj6cVvTBEvRw6cllEvn1ZG19VWiMUUFhx+Myxz3PnumCFvkKa9OieKjW2wXoC5Qxgm4uT30ncPIszVMFLeJgfTLdTZEGjtg1cQqZsUnW1yeknvD7Z9b1x7aksK+6vHWUTHIHOQKblMJkjPELhEO7/8wDe2/i/Wn0NembI981FYMW07FkI7EISkEzxuy8V+bJKnZPE7ToDgnXhMMW+FK3sVi2ihpj19UZ/Iir7HqTs1WCFlmwNs7QsTQUyVZRY4ygR4Z3fI3TM/5AjKBFEiwR9NPR8cz4IPspEsaYRYLumOJu1wY+pg/JDq6emYLuqEzPjVsWb0MpKsaYXYuCqvgf7J0haFGssOoTJXPioLyB9AxBKRLGGBW0Llh4kwxOvE/TZEELPlgi9dPc0PQOWq4vxlwZY8P3soobSM9aR0YELfBtDf8YlZyQOMQJipAxZp6gO0eEC/1xPi34P+AXV7ZPkWYOUMSMsevqNExKTPG7OFLQQ/co2TY59Ev2EVPUjDH7ZkVDWrbnHiVcgDMsWTuupLTzMJ03CUqxMsYIqok9szLM2Xn1J1nCVfHhsOTQ6BQtFDljzPWCbi6vnOZaJ+0vyBVWfVnJcNfOWYwxA4QbnhyrJzjJVRXu4Uo7FJZWVnbObMQYM3Cc2ZYMhmknrVxFsp0ra5asGTw6ON5MhDFmAHnHPTUuCuMjZLhq5FOurEGl+1PD2slgjBlokjKmNP3rk/gCuczXQ4mKVJAhjTFmACovOzM8aqWJq0Q2cOUscvWp4Z4ujDEDVDQoW17ZRCdXRTiCK2W8NIQn46UZjDEDV+teoXR3loirQFZzxYTXuKoIjzFmIHN7K7N+Vhuax/uwal21w1uujDH1icGlYYYurjjZx5UwWercCsWDMcY0JKNENkOWK0zWcyUsdYDHGGP+mawyNzmDz8NDwtoLcmWMMdXSkOjUpRGaZxdSFamhRjHGmJwa1Wx9iCPmCnJX5kNDOY8xxogujdcIrjD+prsxxrg6WeHR/g2WMcb0w4RbajDGmKvIAT4vhu41gmKMMRenNWIrrAJhjKkRQOlXgmCMMdYLY4wlq7+utmOMMYIUyjs2xhixXBljjOXKGGO5MsYYG7YXIGOMra+MMbZiEkC5gDEqdKsVLqpa6SagGPOlWyKWq8tiRIGvkh8VzqcMQEYEUAuWuUpUoFbwfM6YxNCSYSXtJclklEiFUULCMEgKQIiqi6M4kZWIbEnGZ8q64jQZPqdKbO1lq6wrESzLlZEaqVaUnPrEkVS6PBqSHMwQHRRUaEVQEiQkIQlCFwQOEXEIDocDAi9evYvCLFmyYZoO1xq0SpNvDpvCNt9FmpzpUpt7b6bYiQCgXz1YlisjesGqpyYcM8SNDEcEI91whrpBUuLAB544SLsu7XBdQSdpybisxMSJ2PsQ74LAuSAklKQrkZRLUeZKJRUEuMA5cRlapVHOymk5FZzOniVNLlwAKMYOCy8/WDXO/q03UJfqK8ui4YnR8fhwrAwNSkmJSptrCVqkyTVps2uhraxD050R8aX/DK7IK26qy4SlJXFpUFFS6Qe7IW4Ig2SwVAaBS9PlmjgWHg6OBadppdsIW29Zsi4/WCq1YheZGEDjdAVYE+4enpnoJ8sYucaVScZ1SJM7HhzPngobffuhdjw9qhHlC5SL2FxOecVgHcmoYLQMc+UuJWk5FZyID+iBjpOkbbVlybpksGx9ZauqlYnM+HCSTvcTXKl30sxROeqOBsf9WbLk/FgUcqQ3SRG9RMjqgpuGxKMYE4xz42SoE0m7Y7Lb7x9xkM7iHkoYkSsYLJVawWOKVo1oblW1c6zOYoYfo+W0cdIf9HuDY6ebifin6nMHaaBcGQKfO+xzjZUdo9zUYJIbxZCgS07o3mD72UN0AUy2bA34NZb04l7FFKdcrJ4d3l7FLJlCiXbqQbcr3nfNMTJ0W9E3s6QLftbqgjtHuUluup8aVODlkO5IfMpRgLIBGC1LVu+DpZiipAIo1AUtU6IFMpthmvEHZWe488hxIoDq/tgfJcp54ZK2kTo9nuWmBOXS7PbEm8t30TWQDxAtWcKAZbFaWSZzdaFMJaGnpEG3HTtE5rNUCWg+fIyAnB1XMov5jAmFg7oltYmmARUt25NlwbLDwLqKloW6VCZ4L3vY3LadJoD/0XOq8iFbZe0zggXMllRwgg3hBk5btIp8jWXBMjUODyMrUov0Wsb7Drct+KR8Lxl4XBQBzecVIdI1UZck5jLUnfIbwnqLVvGyS9UbQaEu2baYm3S8b5ctup59AD+QfE1VT+er/8/o1BJd7Ia506xlHa1FNms1FiwjoqDwsznBrTpdM+5T/yEHAL4vAlpAszdQaB+Vuj5YyGAO8wGfEFu0LFimaNQ6PEwa7W+TRTi28R57Ab4raKGuFIEx3MwikmznHfYADo+xYJkCJ2hd0HJDcLuM0AP6XsUmYlghaBHszJ/Jbcymg494l/bCXmcZC5YRFJ4d5+91Vb6dteXv0wYNDk/BqxYUSHAdtzCS/fyV7QW+zjIWLDsUnH5DdA9DdAd/YT98R1CKh8MDI7iHJaR5nzWkERRjwTIFRtBfVCb+TZdqWt9vfZf0fxVAKS6C4BGu5S5GsJ1VnLCtDhYsU4Db8F6ZmF7up3Aw+zt2w2GHpyhVCwqM4kGqOMXv2VI40yxjwTKCwouL9MF4iNTHf6TpO8W+5hBASXIXt+H5G6stWRYsU0C5eu527gX+/sxqtMbhKXrVDg8s5QEG8SG/J1MIA3hjwbJcyXMPya3aEvyWjfCEoAMp1UzmESawkdfosGRZsEw+E7TWTX+Ymzmpr7P7qYE3fnZ4RvINprOVV2m1ZFmwTD7nKpzxKNdxKHqNI88IysDj8FTydeaxk9/QbMmyYJl8JCi89HW9iQOJlzjVi+2hxTzNSvFNFtLAS7RbsixYJs+IoPDyQ/HtHJaXObHT4QEGcLJKeZz5bOYVuhAUY8Ey+eSFu939nIhf5NieXK4GdLLKeII5rKUOtWQVB4cpBgIvLgrukhZ9w1mugFqPo4PXOMi13I2xFZbJp8cMVk2MnpaUvMqmbwoKgHF4JvAklbzKBgSlnxkLlhH0ufLEd9zk+A/8/fxdV0YdngU8Tju/4lheDN+NBcv85mG5Pap/4sUvzGqMoNzHfWzjWbIISr8xNsMyAi8tkOs5Mvj3v+s5V2Y1DczhVvqVsRWWEfSFQeH35JrgZTZvdXhMT+cLx/EdAn7FwX5NurFgmVcf0jv9B7zORZhvCsqtPMxWniO2ZBWyEFO4BH15QnCtnvbvwrcF5WLMWuZSxYJ+PFtobIVlXv2WXyareOeSF5UwDk8VT3GEX9BpybKhu+l7Am9O03kcLF1XirkkDzSwlckspB8YC5ZR8MskpR+3dzwkKOZSHLCWNMsoRRGMBcv0IYGXJ/i5cqh8czn/kvHAHnYwkdkYC5bpe4n5Uu63dPZufWUE2AAsBBRjwTJ9RtC6CmbRHG4N6TWzh0NMYTwgGDtLaPru4c6z54X/7up5mV4yjwrK3TzIKlYjKMb2YZm+UO3htelOZRdscnh6wTwKsJtWZvIeEcaC9dWJgGIupVbwS8tkmjZ1HQCoFnrDCHCUk4xhFEdwKJfFCIDSjwRTkN6YrD9gJ89ymcyj93A/r7AOU4BCpX+IKAC1Uk2dwArWSKWUSlIglGMygROSEIBQoFFgBE1Ct+EANMtgbRYuYijQIgBNDMn9P0BPzwuEz2kGYDDNfBXNwODc7ZSjWwsAg8g9dZm6wrArniWJoDEzLAzbAKigrft/lyN2XJYOAMro4HwZSbmsJDQrkFCAUJKakcH62f1Jhf94+twtcm+ljM+UAmlJuNQFzyGn5+enyDn/PkkHKc4p4XOEDIoyixOE/CsBvZKmBIA0lyeNOHEAaS5X5kvcJ04kA4Aq3ZKqChlANaEZEoqe00XCq6omvVfV2HtN+WYt9bHGWtH9/5FmNaNjNNKMQl2Epw+IOoA64TwrOKeO861QgFouVKP0RC+2jquRamCNq5STbogrd52BD10iFWpCkiRIxiWSJEmChIZBIk6II9QwEO9coKGId14C8SLi8AIOla+8fhR1TsHzGQ893I7JwV/ilkrP96lz+J7fQ4/P9cIFPAAe51RVRVR689H0/JRHBFH5wutc8i04fA/fXsQD4HCAw+HOuy1fuAeQUBGnwXn3iTjJvU7u5c//p+CAEC546yKiDiRUhz/3dkVyL9EDTxqhBLms4w9Be7wNeEF7/k4BKAKA9vQdkot/17Sn73xPPze55yuCfu4eAFFQwAuAUw+q6kGdjxVFncZeY1Q8scbqJY7jIOsjiTQiq7Fk46xk40iykpVIslEURO1xWRT5MIp8Mvba2Up2maAI52hezLBq6SVB+RcmaZm2MEQz2qptmvIlcSZIRLELiEGdj+LIu1idBBJ6EecDDcQ5AomcQ53/wk+VF3AKXs79Pyr+cj5c5TPS44+QnPeUENMzVdQpxIBwjkcAAfSCj9rnbscEfF7gVVVysSQgBhyqzulIde6Uz4p4QOiWexnOiwuoipJz/kemOEAuCLKjZwpeNCAGpIevDCgKgKDEKAEeQXF4hAAAj0Ac4AEhwiHEBHgCUE+AoiCqAV5A1OEAT3DBVyoSp+JVlQAHgOa+hgJ4hItwTKSEBrpwnBOjCF+k9IoD4i+WzqMAnp7F5CBAdNF7ISYgvujbUlDvA+9Fe/jpDBQgAgQA1ZgQNCDGa6gRqCfwkQaKZjXwsTrvFR/E6tUHsf8PcRg7H8QdPogTsY/TvszHmvUlHs1oVpfGxT7DEgXIHRZCnaxgjcAd1AuUCt2Swj8dFoDJnHNMxigcEy4wgUO5W3CIkZ6rYBcAMy56zzWeXqtnKRez19ODkULUPjTzI0mX/IKW0vCU8i80aLVyJSjF4Wmq+L8cpS8Y24dlXhpV+l/Y/8gvUC6PEZTl3M4v2ZpbhApfkZ0ftLOEQjelEAlXT43g50+Vn/gNvPR1AbmMtZFRh+cu/j/qWIugGDtLaIcfytX1VkoD1wGAKpfBKNCJp4wCZBwFyPgEuKzDfClZlAR9w1iwjHcgXjBfigKOvmEsWCZQCoMxFiyTiEBCwXwpARBRgExIATKaFu9TIFweo4JSgqOLvmEsWCbTGUSUwZvK5TEKlOPooG8YC5Yp70h3aEWyhPQDgmJ6T4HBeFroG8ZmWOZkmhYGpUvTXBYjQMggOvsmWMZWWEbhmY43G91oGURTraCYXqoGKGcoTXTQJ4wFy4jq2yd1IaM4WK2Y3hOUoQzjU9oApS8YC5Zxx+JsPIF1byim1x5VYCwJjgOC0ieMBcsc0XaZOCRFF6bX1ijcMZUuDtFHjAXLKNSfXXyEKU3j2POIoJjeEJQhjKOZwxQk4yhERqp9vFPLmYbpPQGmMIw9NsHqYxYso3uk2c0Jy36rCKY3PMRzcOwAHH3EWLCMwmPH2M84naKYXhFgVDCDo+wHlAJkRClIRtA3F7kn2MzzmF5YLmh0v7vP/5k/hYLSl4wN3U240x9hZjiJA+scHnMJ1YIyKF7gWsJN9DljKywj6G9v8Y+wljpML9ZXXbcHy937vEHBMmFMYTIBkNzQscwtYAO7Nzg8l2Drq5Zhqeu1Ofi4f7aMGlthGUFX3aDf8Fs3PYuvEZQeGRW040G5W9/hrTJB6Q/GZlim65PUQle1eAnrLxYsU+3wTZOT18nJ6H36i7EVlql1+KWz46flbPALGh/sKVlGUMLWZ8I50du8Vyko/cdYsMzby7ndr+UVeFRQLmBU0KY7ggfZVvkcWQSlnxgLlhG0rqL0e36cvs7ajT2M3u1w8NT0kqeIo19yeFiB58o4CpvRWtfQxp/JcA8TFnkcJqda8KcrEw/E5bI60f+5MjZ0N9VehO1v/V0e4OH0c1XNDQ6PAaoFJeBrfjJrKz/AWLBMvli+5u1Rel1i+aaXiKoFxQgKp+6XJbJ76O9QBMXYDMvkAUH/XN71NNPj93jLhu8gAujRW4MHpVGe4+gIh8dYsEz+bHCoGpl40o3VNfweHhZ0oK+uDl8fLJd0/DI7xwmKsWCZ/ErWognuCT+cv/GnAZ0sQeHYUh4W4tfZaLmyYJk8Tdb8qe6bDNHV/BE2O/wAHbVz6Fq+5sS9xfoxlisLlslTgr4+NVjB8Pj9Lb/F4/ADMVf7bnX3O88q1sEEC5YFK5/ZKuvaSZlv6GhZl11F5wDb5ODw8OT97k7XyVtsnCwCStEwQpExKujvR2cf02nscG9xYrkAOlBi/ZPy5oeCZXI6eovtFB0jOyg25iWHv25Q+jHm6zHeZueA2OYgKGwbEy6XmbJf3+DwdEEpEMYOCW2TQzJ1X3yTZnln87tEuBpFKVI1Dg+PLgnvD4axqW0Vzb91eIqOkRpM8Q6fV10bPSCD/Kb4j5yCFYIW69pqc7nc424Q7945/neidwoxV8aCZcl6eXLp/TpDT+nfWQePFdk8S6RG8PDQ7PAemeyOBX9iK8wpyDAbOyQ0gv6hJH2X3qwJNrGaY7DF1ShaPAeCtw8ZdAs3uGRYr3+mEeYXcq6MBcumWTBvtrubqXom/qB9LV3wHUELP8VQ6+5f5O5w48Nj0TvL1qG1Dk/hMnZIaKpFQFeVdd0iN8gg3Re9v30LHnD4gj3YBYU105O3hLOJ3Aa/hjNwnaAUB2MrLFtnzR+vd7h5im+Qj9gFsNXhC3EyBx+Ni26QxWGK3bqG7XBjEcXKWLCMAFrrFs2NbmYa6fjTcC17oXAG8SIKCvDeGL1WFjHYHZZ/XPMJaSi+PVfGgmUEhbqkW8z1OpG0bGP98N1EcIeAgJKnNBfVv04Mlun8YBAnZH2wjla4uShjZSxYJrcNYGlZ1yJZphPIsjf+JLODdoCnBdD8/IihKlk2zS0JZ1LhTrChZD2N8DdXrSjFyliwjIiCQl0pVcFSP5mEP0qDbOU4McCKfMnWeau+VSN0bljFJHFyJKhnC81wjwDKQGEsWBatNeGJGcHCeA4Vrk33akPFbhrptt5Vq4DSD1RqBU+3qorkFKpkphsiXbI72JTdTgc8NMBiZSxYRgAFeH5Mcq7OkXEEeob98fbEQc7yTw19E65cqHKbWnl+UGqsnyNTg5EukONuZ7hl7WEiqB7AsTKiGBvEw5rUqUlxFTPdUA31rD/g9gUHGk+SpduPhG4CetV+ApVudUHX8GCCm8Lk4BqQFtlT0hDsowXgARFQBiwjDHhGBVCAFwaFU9wMnRSPEtEOfzLYr4c40XqWLDk/klqp1q8YL1G634qSUxd0DvEjmeAmyVipCBxn3EG3K9zDGYBHBSxWRjAGIHc2DiZUlo/xU3VKMDKuFNFmPSPH/XF3PHGGTjJc4HFRequn5KwOPy5NDS25hjHBGBkuQ10gbZwJDsoeOUwj3Z4QQDEGUYz54uZMqAviUYzV8X6cjKJUVb20+jNyijP+rG9xrb6dLr6UA8lryrOVDEoMjYe74X5kMMiFiGTcKTkih/Vox3HSdPuvlipjwTK9Wncr3f5QcnqwG+VG6+h4uFRSqQnJ+i66tFNafZu0ura4I+iM00Fastko8FnNKECpxq5LvCsJE2E2KakolSjLVlAhlb5SyrREUpok9u3S4ho5yfH42KhGOi9YtynGWLBML0mt4MkZU5YcFA72w9wwHaZDqCRF4AMJ1IF4jX0skXqNiVVBhQBHIIGG6jQA/Ll7SdMmTXGjP5s8k21yLbSRc+oKbAU1Fixjc04lB1kZlpdqeVRBuZT7UiklpSUkCAhwJOIESOSzeGKJNCJNl3bREXfSJm3aEXWczeLJqRbOUa4EY8EyRnLn9uiZ1LlGN1Qaw3QIQ+KmaLQ2+OoYvfgKrg+3pxo7S2jsX3W92+Sg8tlLgvT/WspYsIy5sEVCN0tTUfh/7cGBAAAAAACQ/2sjqKqqqqqqqqqqqqqqqqqqqqqqqgAE+l9n12nSTQAAAABJRU5ErkJggg==) no-repeat;
+  background: url(data:image/png;base64,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) no-repeat;
   background-position: 50% 40px; }
 
 .sdc-interactive-missing-men__pitch:after {
   content: "";
   display: block;
-  padding-bottom: 90%; }
+  padding-bottom: 82%; }
 
 .sdc-interactive-missing-men__position {
   position: absolute;
@@ -386,7 +423,7 @@ ul {
   display: block;
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: -1px;
+  font-family: inherit;
   padding: 4px 0;
   border: 0;
   text-align: center;
@@ -394,6 +431,20 @@ ul {
   text-transform: capitalize;
   color: #282b70;
   background: linear-gradient(177deg, #f2f2f2 0%, #f2f2f2 38%, #ffffff 39%, #ffffff 100%); }
+
+.sdc-interactive-missing-men__position-name::-webkit-input-placeholder {
+  color: #282b70;
+  font-size: 13px; }
+
+.sdc-interactive-missing-men__position-name::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #282b70;
+  font-size: 13px; }
+
+.sdc-interactive-missing-men__position-name:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #282b70;
+  font-size: 13px; }
 
 .sdc-interactive-missing-men__position-name[disabled] {
   pointer-events: none;
@@ -404,7 +455,8 @@ ul {
 .sdc-interactive-missing-men__position-thumb-wrap {
   width: 60px;
   height: 60px;
-  display: inline-block;
+  display: block;
+  margin: 0 auto 0;
   position: relative; }
 
 .sdc-interactive-missing-men__position-thumb {
@@ -415,7 +467,8 @@ ul {
   object-fit: cover;
   visibility: hidden;
   will-change: filter;
-  transition: filter 0.33s; }
+  transition: filter 0.33s;
+  opacity: 0.8; }
 
 @media all and (max-width: 600px) {
   .sdc-interactive-missing-men__position-thumb-wrap {
@@ -425,10 +478,12 @@ ul {
 @supports (filter: brightness(0)) {
   .sdc-interactive-missing-men__position-thumb {
     visibility: visible;
-    filter: brightness(0); } }
+    filter: brightness(0);
+    opacity: 0.8; } }
 
 .sdc-interactive-missing-men__position[data-correct] .sdc-interactive-missing-men__position-thumb {
-  filter: none; }
+  filter: none;
+  opacity: 1; }
 
 @keyframes tick-stroke {
   100% {
@@ -486,6 +541,10 @@ ul {
   z-index: 3;
   margin: 1em 0; }
 
+@font-face {
+  font-family: 'Sky Sports Display';
+  src: url(/assets/08e945cc8114e6dc1632925df88bb8ed.woff) format("woff"); }
+
 body {
   height: 2000px; }
 
@@ -498,18 +557,20 @@ body {
   <div id="container"></div>
   <div class="sdc-interactive-missing-men" data-component-name="sdc-interactive-missing-men">
   <script data-role="answers">
-    ["Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson","Ederson"]
+    ["Ederson","Walker","Stones","Otamendi","Delph","De Bruyne","Fernandinho","Silva","Sterling","Aguero","Sane"]
   </script>
   <div class="sdc-interactive-missing-men__inner">
 
     <div class="sdc-interactive-missing-men__head">
       <h2 class="sdc-interactive-missing-men__title">Missing Men</h2>
-      <h3 class="sdc-interactive-missing-men__sub-title">Man City Starting XI</h3>
-      <p class="sdc-interactive-missing-men__description">Man City 3 - 1 Arsenal, Premier League, 7th Nov 2017</p>
       <ul class="sdc-interactive-missing-men__badges">
         <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/345.png" alt="Man City" class="sdc-interactive-missing-men__badge"></li>
         <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/413.png" alt="Arsenal" class="sdc-interactive-missing-men__badge"></li>
       </ul>
+      <h3 class="sdc-interactive-missing-men__sub-title">Man City XI</h3>
+      <h4 class="sdc-interactive-missing-men__fixture">Man City 3 - 1 Arsenal</h4>
+      <p class="sdc-interactive-missing-men__description">Premier League, 7th Nov 2017</p>
+      
     </div>
 
     <div class="sdc-interactive-missing-men__nav">
@@ -526,85 +587,86 @@ body {
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 30%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 30%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 30%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 30%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 55%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●● ●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 55%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 55%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 55%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 80%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
             <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 80%;">
               <div class="sdc-interactive-missing-men__position-thumb-wrap">
                 <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
               </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="·······">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●">
               <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
             </li>
         </ul>
       </form>
     </div>
-
-    <p class="sdc-interactive-missing-men__footer" data-role="footer" data-complete="Congratulations, you completed the quiz in"></p>
-
+    <div class="sdc-interactive-missing-men__footer" data-role="footer">
+      <button class="sdc-interactive-missing-men__clues" data-role="clues" aria-hidden="true">Clues</button>
+      <p data-role="complete-message" data-message="Congratulations, you completed the quiz in"></p>
+    </div>
   </div>
 </div>
 
