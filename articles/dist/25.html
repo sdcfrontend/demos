@@ -152,6 +152,23 @@
         margin-bottom: 1em;
       }
 
+      .gallery {
+          position: relative
+        }
+
+        .gallery:before {
+          content: "Scroll v";
+          padding: 1em;
+          background: black;
+          color: white;
+          font-size: 15px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1000
+
+        }
+
       @media all and (max-width: 600px){
         .page-body h1 {
           font-size: 2.25em;
@@ -167,6 +184,24 @@
 
         .video {
           margin-bottom: 2em;
+        }
+
+        .slideshow {
+          overflow: scroll
+        }
+
+        .pic-horizontal[class],
+        .slideshow[class]
+        .slideshow__inner[class] {
+          height: 400px!important;
+        }
+
+        .slideshow > img {
+          transform: none!important;
+        }
+
+        .gallery:before {
+          content: "Scroll >";
         }
       }
 
