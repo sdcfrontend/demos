@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css">
+
+  <style>
+    body {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 1em 5vw 0.9em;
+    font-size: 2.8em;
+    font-weight: 500;
+    line-height: 1.1
+  }
+
+  p {
+    margin: 0 5vw 30px;
+    line-height: 1.4
+  }
+
+  .panel {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 30px
+  }
+
+  .panel__inner {
+    height: 100vh;
+    top: 0;
+    background:black;
+    white-space: nowrap;
+    overflow: hidden;
+    position: sticky
+  }
+
+
+  .scroll {
+    position: relative;
+    height: 100vh;
+    white-space: nowrap;
+  }
+
+  .scroll img {
+    height: 100vh;
+    max-width: 1000000px
+  }
+
+  @media all and (max-width: 480px){
+
+    h1 {
+      font-size: 2.2em;
+    }
+
+    .panel,
+    .panel__inner,
+    .scroll,
+    .scroll > img {
+      height: 400px!important;
+      transform: none!important
+    }
+
+    .panel__inner {
+      overflow: scroll;
+    }
+  }
+  </style>
+</head>
+<body>
+  <h1>Usain Bolt: Anatomy of a race</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    
+    <div class="panel">
+      <div class="panel__inner">
+        <div class="scroll"><img src="https://static01.nyt.com/newsgraphics/2016/08/14/men-100-meters-bolt-horizontal/09c0dfe010da583c01f23709a11f6153e10cbb7b/bolt-100m-race-a3698x450.jpg" alt=""></div>
+      </div>
+      
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ratione ipsa, alias illum eum veritatis aliquam corrupti modi consequuntur, perferendis voluptatum facilis deleniti quae. Ea odio voluptate repellat delectus magnam.</p>
+    
+    <script>
+      var scroll = document.querySelector('.scroll');
+      var img = scroll.querySelector('img');
+      var panel = document.querySelector('.panel');
+
+      function tick(){
+        
+        var dims = panel.getBoundingClientRect();
+        
+        panel.style.height = ((img.offsetWidth) + "px");
+        
+        if(dims.top < 1){
+          img.style.transform = "translateX("+ Math.max(dims.top, (img.offsetWidth - dims.width)*-1) +"px)"
+        }
+        
+        requestAnimationFrame(tick)
+      }
+
+      tick();
+    </script>
+</body>
+</html>
