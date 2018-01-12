@@ -57,6 +57,7 @@
         will-change: transform;
         transform: translateY(0);
         height: 100vh;
+        position: relative
       }
 
       .slideshow__inner > img {
@@ -169,6 +170,21 @@
 
         }
 
+        .slideshow__title {
+          color: white;
+          font-weight: 400;
+          font-size: 3em;
+          width: 80vw;
+          max-width: 400px;
+          white-space: normal;
+          position: absolute;
+          top: 50%;
+          left: 10vw;
+          transform: translateY(-50%);
+          z-index: 10000;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.596);
+        }
+
       @media all and (max-width: 600px){
         .page-body h1 {
           font-size: 2.25em;
@@ -203,6 +219,10 @@
 
         .gallery:before {
           content: "Scroll >";
+        }
+
+        .slideshow__title {
+          font-size: 2em;
         }
       }
 
@@ -834,6 +854,7 @@
                   <div class="pic pic-horizontal">
                       <div class="slideshow">
                         <div class="slideshow__inner">
+                          <h3 class="slideshow__title">Usain Bolt: How he came from behind to win</h3>
                           <img src="https://static01.nyt.com/newsgraphics/2016/08/14/men-100-meters-bolt-horizontal/09c0dfe010da583c01f23709a11f6153e10cbb7b/bolt-100m-race-a3698x450.jpg" alt="">
                         </div>
                       </div>
