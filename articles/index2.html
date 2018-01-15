@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title></title>
+    <link rel="stylesheet" href="../index.css">
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-size: 20px;
+        background: #eee;
+      }
+
+      h1 {
+        font-size: 1em;
+        color: white;
+        font-family: "Sky Text", sans-serif;
+        font-weight: 400
+      }
+
+      h2 {
+        font-size: 24px;
+        color: white;
+      }
+
+      ul {
+        list-style: none;
+        margin-bottom: 2em;
+      }
+
+      li,
+      a {
+        padding: 0.2em 0;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.2em;
+      }
+
+      @media all and (max-width: 600px){
+        body {
+          font-size: 18px;
+        }
+      }
+
+      .sdc-site-tile-hero__inner {
+        position: relative;
+        height: 100vh;
+      }
+
+      .sdc-site-tile-hero__image-wrap {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+
+      .sdc-site-tile-hero__image-wrap > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+
+      .sdc-site-tile-hero__body {
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(0deg,rgba(0,0,0,.8) 5%,transparent) no-repeat;
+        background-size: 100% 50%;
+        background-position: 0 bottom;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 2.8em;
+        padding: 1em 5vw;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .sdc-site-tile-hero__body-inner {
+        max-width: 1024px;
+        margin: 0 auto;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      }
+
+      .sdc-site-tile-hero__body a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media all and (max-width: 740px){
+        .sdc-site-tile-hero__body {
+          font-size: 2.5em;
+        }
+      }
+
+      @media all and (max-width: 480px){
+        .sdc-site-tile-hero__body {
+          font-size: 2.2em;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+      <div class="sdc-site-tile-hero">
+        <div class="sdc-site-tile-hero__inner">
+          <div class="sdc-site-tile-hero__image-wrap"><img src="https://e3.365dm.com/18/01/2048x1152/skynews-woburn-safari-park_4196626.jpg?bypass-service-worker&20180102092022" alt=""></div>
+          <div class="sdc-site-tile-hero__body">
+            <div class="sdc-site-tile-hero__body-inner">
+              <h1><a href="dist/24.html">Vertical and horizontal scrolling slides</a></h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="sdc-site-tile-hero">
+          <div class="sdc-site-tile-hero__inner">
+            <div class="sdc-site-tile-hero__image-wrap"><img src="https://e3.365dm.com/18/01/2048x1152/skynews-woburn-safari-park_4196626.jpg?bypass-service-worker&20180102092022" alt=""></div>
+            <div class="sdc-site-tile-hero__body">
+              <div class="sdc-site-tile-hero__body-inner">
+                <h1><a href="dist/24.html">Vertical and horizontal scrolling slides</a></h1>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+
+  </body>
+</html>
