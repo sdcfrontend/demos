@@ -44,6 +44,7 @@
     position: relative;
     height: 100vh;
     white-space: nowrap;
+    width: fit-content
   }
 
   .scroll img {
@@ -58,15 +59,19 @@
     }
 
     .panel,
-    .panel__inner,
-    .scroll,
     .scroll > img {
       height: 400px!important;
       transform: none!important
     }
 
+    .scroll {
+      height: auto!important;
+      transform: none!important
+    }
+
     .panel__inner {
       overflow: scroll;
+      height: auto!important
     }
   }
   </style>
