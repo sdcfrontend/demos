@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:9876/ -->
+<!-- saved from url=(0026)http://10.23.200.145:9876/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -25,8 +25,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-size: 100%;
-  }
+  font-size: 100%; }
 
 html {
   font-size: 18px;
@@ -348,7 +347,7 @@ ul {
     height: 50px; } }
 
 .sdc-interactive-missing-men__nav {
-  margin-bottom: 15px;
+  margin-bottom: 36px;
   position: relative;
   z-index: 3; }
 
@@ -386,10 +385,11 @@ ul {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.8);
   font-size: 1em;
-  padding: 2px 12px;
+  padding: 6px 15px;
   display: block;
   margin: 9px auto 0;
-  transition: opacity 0.166s; }
+  transition: opacity 0.166s;
+  border-radius: 3px; }
 
 .sdc-interactive-missing-men__clues[aria-hidden="true"] {
   visibility: hidden;
@@ -412,12 +412,12 @@ ul {
 .sdc-interactive-missing-men__pitch:after {
   content: "";
   display: block;
-  padding-bottom: 82%; }
+  padding-bottom: 70%; }
 
 .sdc-interactive-missing-men__position {
   position: absolute;
   width: 19%;
-  transform: translate(-50%, -15%); }
+  transform: translate(-50%, 0); }
 
 .sdc-interactive-missing-men__position-name {
   width: 100%;
@@ -432,6 +432,9 @@ ul {
   text-transform: capitalize;
   color: #282b70;
   background: linear-gradient(177deg, #f2f2f2 0%, #f2f2f2 38%, #ffffff 39%, #ffffff 100%); }
+
+.sdc-interactive-missing-men__position-name:focus {
+  outline-inset: -3px; }
 
 .sdc-interactive-missing-men__position-name::-webkit-input-placeholder {
   color: #282b70;
@@ -452,6 +455,23 @@ ul {
   user-select: none;
   color: #282b70;
   border: 0; }
+
+.sdc-interactive-missing-men__position-name-validity {
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  background: #d0021b;
+  position: relative; }
+
+.sdc-interactive-missing-men__position-name-validity-bar {
+  background: #62a02f;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  overflow: hidden;
+  transition: width;
+  will-change: width; }
 
 .sdc-interactive-missing-men__position-thumb-wrap {
   width: 60px;
@@ -540,7 +560,7 @@ ul {
 .sdc-interactive-missing-men__footer {
   position: relative;
   z-index: 3;
-  margin: 1em 0; }
+  margin: 0 0 1em 0; }
 
 @font-face {
   font-family: 'Sky Sports Display';
@@ -552,11 +572,11 @@ body {
 .sdc-interactive-missing-men {
   max-width: 550px;
   margin: 0 auto 0; }
-</style></head>
+</style><script type="text/javascript" charset="utf-8" src="./index_files/0.d2f46e7c7fab4b3548fa.hot-update.js"></script><script type="text/javascript" charset="utf-8" src="./index_files/0.3b0e653be51bb02283d7.hot-update.js"></script></head>
 <body>
 
   <div id="container"></div>
-  <div class="sdc-interactive-missing-men" data-component-name="sdc-interactive-missing-men">
+  <div class="sdc-interactive-missing-men" data-component-name="sdc-interactive-missing-men" data-completed="true">
   <script data-role="answers">
     ["Ederson","Walker","Stones","Otamendi","Delph","De Bruyne","Fernandinho","Silva","Sterling","Aguero","Sane"]
   </script>
@@ -575,98 +595,54 @@ body {
     </div>
 
     <div class="sdc-interactive-missing-men__nav">
-      <button type="button" name="button" class="sdc-interactive-missing-men__start" data-role="start">
+      <button type="button" name="button" class="sdc-interactive-missing-men__start" data-role="start" data-started="true" disabled="">
         <span class="sdc-interactive-missing-men__start-label">Start</span>
-        <time class="sdc-interactive-missing-men__start-timer" data-role="timer">00:00:00</time>
+        <time class="sdc-interactive-missing-men__start-timer" data-role="timer" data-time-string="11 minutes, 27 seconds.">00:11:27</time>
       </button>
     </div>
 
     <div class="sdc-interactive-missing-men__body">
       <form class="sdc-interactive-missing-men__form" data-role="form">
         <ul class="sdc-interactive-missing-men__pitch" data-role="pitch" data-position="442">
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 50%; top: 5%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 50%; top: 5%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 30%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 30%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 30%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 30%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 30%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 30%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 30%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 30%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 55%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●● ●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 55%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●● ●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 55%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 55%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 55%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 55%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 55%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 55%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 80%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 80%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 80%;">
-              <div class="sdc-interactive-missing-men__position-thumb-wrap">
-                <img src="./index_files/h_head_19950.png" alt="" class="sdc-interactive-missing-men__position-thumb" aria-hidden="true">
-              </div>
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●">
-              <svg class="sdc-interactive-missing-men__position-tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="sdc-interactive-missing-men__position-tick-circle" cx="26" cy="26" r="25" fill="none"></circle><path class="sdc-interactive-missing-men__position-tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 80%;" data-correct="true">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●" disabled=""><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar" style="width: 100%;"></span></span>
             </li>
         </ul>
       </form>
     </div>
     <div class="sdc-interactive-missing-men__footer" data-role="footer">
-      <button class="sdc-interactive-missing-men__clues" data-role="clues" aria-hidden="true">Clues</button>
-      <p data-role="complete-message" data-message="Congratulations, you completed the quiz in"></p>
+      <button class="sdc-interactive-missing-men__clues" data-role="clues" aria-hidden="false">Clues</button>
+      <p data-role="complete-message" data-message="Congratulations, you completed the quiz in">Congratulations, you completed the quiz in 11 minutes, 27 seconds.</p>
     </div>
   </div>
 </div>
