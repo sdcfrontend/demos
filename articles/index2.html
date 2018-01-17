@@ -25,6 +25,19 @@
         overflow: hidden;
       }
 
+      .sdc-site-tile-hero:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 12;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.25);
+        pointer-events: none;
+      }
+
       .sdc-site-tile-hero__inner {
         position: relative;
         min-height: 500px;
