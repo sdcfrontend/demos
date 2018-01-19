@@ -275,7 +275,7 @@ ul {
   font-weight: bold;
   line-height: 1.08; }
 
-.sdc-interactive-missing-men {
+.sdc-interactive-missing-names {
   font-size: 1em;
   position: relative;
   text-align: center;
@@ -284,20 +284,20 @@ ul {
   color: white;
   overflow: hidden; }
 
-.sdc-interactive-missing-men__inner {
+.sdc-interactive-missing-names__inner {
   padding: 2em 1em; }
 
 @media all and (max-width: 600px) {
-  .sdc-interactive-missing-men__inner {
+  .sdc-interactive-missing-names__inner {
     padding: 1.6em 0; } }
 
-.sdc-interactive-missing-men__head {
+.sdc-interactive-missing-names__head {
   margin-bottom: 24px;
   padding: 0 1em;
   position: relative;
   z-index: 3; }
 
-.sdc-interactive-missing-men__title {
+.sdc-interactive-missing-names__title {
   font-size: 3em;
   margin: 0.2em 0 0.45em;
   font-weight: 400;
@@ -305,54 +305,54 @@ ul {
   line-height: 1;
   display: none; }
 
-.sdc-interactive-missing-men__sub-title {
+.sdc-interactive-missing-names__sub-title {
   font-size: 2.5em;
   margin: 0 0 0.25em;
   font-weight: 400;
   font-family: "Sky Sports Display", "Sky Text";
   line-height: 1.1; }
 
-.sdc-interactive-missing-men__fixture {
+.sdc-interactive-missing-names__fixture {
   line-height: 1.1;
   margin: 0 0 0.1em;
   font-size: 1.1em;
   font-weight: 500; }
 
-.sdc-interactive-missing-men__description {
+.sdc-interactive-missing-names__description {
   font-size: 1em;
   margin: 0 0 18px;
   line-height: 1.4; }
 
-.sdc-interactive-missing-men__badges {
+.sdc-interactive-missing-names__badges {
   list-style: none;
   padding: 0;
   margin: 0 0 9px; }
 
-.sdc-interactive-missing-men__badge-item {
+.sdc-interactive-missing-names__badge-item {
   display: inline-block;
   width: 68px;
   height: 68px;
   position: relative; }
 
-.sdc-interactive-missing-men__badge {
+.sdc-interactive-missing-names__badge {
   width: 100%; }
 
 @media all and (max-width: 600px) {
-  .sdc-interactive-missing-men__title {
+  .sdc-interactive-missing-names__title {
     font-size: 2.2em; }
-  .sdc-interactive-missing-men__sub-title {
+  .sdc-interactive-missing-names__sub-title {
     font-size: 1.8em; }
-  .sdc-interactive-missing-men__badge-item {
+  .sdc-interactive-missing-names__badge-item {
     width: 50px;
     height: 50px; } }
 
-.sdc-interactive-missing-men__nav {
+.sdc-interactive-missing-names__nav {
   margin-bottom: 36px;
   position: relative;
   z-index: 3; }
 
-.sdc-interactive-missing-men__start,
-.sdc-interactive-missing-men__clues {
+.sdc-interactive-missing-names__start,
+.sdc-interactive-missing-names__clues {
   font-size: 1.25em;
   font-family: inherit;
   padding: 3px 11px;
@@ -362,26 +362,23 @@ ul {
   font-weight: 500;
   cursor: pointer; }
 
-.sdc-interactive-missing-men__start[disabled] {
+.sdc-interactive-missing-names__start[disabled] {
   cursor: default; }
 
-.sdc-interactive-missing-men__clues[disabled][class] {
+.sdc-interactive-missing-names__clues[disabled][class] {
   cursor: default;
   opacity: 0.5; }
 
-.sdc-interactive-missing-men[data-completed] .sdc-interactive-missing-men__clues {
+.sdc-interactive-missing-names[data-cheated] .sdc-interactive-missing-names__start,
+.sdc-interactive-missing-names[data-completed] .sdc-interactive-missing-names__clues,
+.sdc-interactive-missing-names__start-timer,
+.sdc-interactive-missing-names__start[data-started] .sdc-interactive-missing-names__start-label {
   display: none; }
 
-.sdc-interactive-missing-men__start-timer {
-  display: none; }
-
-.sdc-interactive-missing-men__start[data-started] .sdc-interactive-missing-men__start-label {
-  display: none; }
-
-.sdc-interactive-missing-men__start[data-started] .sdc-interactive-missing-men__start-timer {
+.sdc-interactive-missing-names__start[data-started] .sdc-interactive-missing-names__start-timer {
   display: block; }
 
-.sdc-interactive-missing-men__clues {
+.sdc-interactive-missing-names__clues {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.8);
   font-size: 1em;
@@ -391,35 +388,48 @@ ul {
   transition: opacity 0.166s;
   border-radius: 3px; }
 
-.sdc-interactive-missing-men__clues[aria-hidden="true"] {
+.sdc-interactive-missing-names__clues[aria-hidden="true"] {
   visibility: hidden;
   opacity: 0; }
 
-.sdc-interactive-missing-men__clues[aria-hidden="false"] {
+.sdc-interactive-missing-names__clues[aria-hidden="false"] {
   visibility: visible;
   opacity: 1; }
 
-.sdc-interactive-missing-men__clues:active {
+.sdc-interactive-missing-names__clues:active {
   background-color: rgba(255, 255, 255, 0.3); }
 
-.sdc-interactive-missing-men__pitch {
+@keyframes shake {
+  10%, 90% {
+    margin-left: -1px; }
+  20%, 80% {
+    margin-left: 2px; }
+  30%, 50%, 70% {
+    margin-left: -3px; }
+  40%, 60% {
+    margin-left: 3px; } }
+
+.sdc-interactive-missing-names__pitch {
   list-style: none;
   padding: 0;
   position: relative;
   background: url(data:image/png;base64,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) no-repeat;
   background-position: 50% 40px; }
 
-.sdc-interactive-missing-men__pitch:after {
+.sdc-interactive-missing-names__pitch:after {
   content: "";
   display: block;
   padding-bottom: 70%; }
 
-.sdc-interactive-missing-men__position {
+.sdc-interactive-missing-names__position {
   position: absolute;
   width: 19%;
   transform: translate(-50%, 0); }
 
-.sdc-interactive-missing-men__position-name {
+.sdc-interactive-missing-names__position[data-wrong] {
+  animation: shake 0.66s; }
+
+.sdc-interactive-missing-names__position-name {
   width: 100%;
   display: block;
   font-size: 15px;
@@ -433,54 +443,59 @@ ul {
   color: #282b70;
   background: linear-gradient(177deg, #f2f2f2 0%, #f2f2f2 38%, #ffffff 39%, #ffffff 100%); }
 
-.sdc-interactive-missing-men__position-name:focus {
+.sdc-interactive-missing-names__position-name:focus {
   outline-inset: -3px; }
 
-.sdc-interactive-missing-men__position-name::-webkit-input-placeholder {
+.sdc-interactive-missing-names__position-name::-ms-clear {
+  display: none; }
+
+.sdc-interactive-missing-names__position-name::-webkit-input-placeholder {
   color: #282b70;
   font-size: 13px; }
 
-.sdc-interactive-missing-men__position-name::-moz-placeholder {
+.sdc-interactive-missing-names__position-name::-moz-placeholder {
   /* Firefox 19+ */
   color: #282b70;
   font-size: 13px; }
 
-.sdc-interactive-missing-men__position-name:-ms-input-placeholder {
+.sdc-interactive-missing-names__position-name:-ms-input-placeholder {
   /* IE 10+ */
   color: #282b70;
   font-size: 13px; }
 
-.sdc-interactive-missing-men__position-name[disabled] {
+.sdc-interactive-missing-names__position-name[disabled] {
   pointer-events: none;
   user-select: none;
   color: #282b70;
   border: 0; }
 
-.sdc-interactive-missing-men__position-name-validity {
-  display: block;
+.sdc-interactive-missing-names__position-name-validity {
+  display: flex;
   height: 5px;
   overflow: hidden;
-  background: #d0021b;
   position: relative; }
 
-.sdc-interactive-missing-men__position-name-validity-bar {
-  background: #62a02f;
-  position: absolute;
-  height: 100%;
-  width: 0;
-  left: 0;
-  overflow: hidden;
-  transition: 0.16s width;
-  will-change: width; }
+.sdc-interactive-missing-names__position-name-validity > span {
+  flex: 1;
+  transition: 0.16s background;
+  will-change: background; }
 
-.sdc-interactive-missing-men__position-thumb-wrap {
+.sdc-interactive-missing-names__position-name-validity > span[data-valid="false"] {
+  background: #d0021b;
+  border-color: #d0021b; }
+
+.sdc-interactive-missing-names__position-name-validity > span[data-valid="true"] {
+  background: #62a02f;
+  border-color: #62a02f; }
+
+.sdc-interactive-missing-names__position-thumb-wrap {
   width: 60px;
   height: 60px;
   display: block;
   margin: 0 auto 0;
   position: relative; }
 
-.sdc-interactive-missing-men__position-thumb {
+.sdc-interactive-missing-names__position-thumb {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -492,17 +507,17 @@ ul {
   opacity: 0.8; }
 
 @media all and (max-width: 600px) {
-  .sdc-interactive-missing-men__position-thumb-wrap {
+  .sdc-interactive-missing-names__position-thumb-wrap {
     width: 50px;
     height: 40px; } }
 
 @supports (filter: brightness(0)) {
-  .sdc-interactive-missing-men__position-thumb {
+  .sdc-interactive-missing-names__position-thumb {
     visibility: visible;
     filter: brightness(0);
     opacity: 0.8; } }
 
-.sdc-interactive-missing-men__position[data-correct] .sdc-interactive-missing-men__position-thumb {
+.sdc-interactive-missing-names__position[data-correct] .sdc-interactive-missing-names__position-thumb {
   filter: none;
   opacity: 1; }
 
@@ -520,7 +535,7 @@ ul {
   100% {
     box-shadow: inset 0px 0px 0px 30px #62a02f; } }
 
-.sdc-interactive-missing-men__position-tick {
+.sdc-interactive-missing-names__position-tick {
   position: absolute;
   top: 1px;
   right: 0;
@@ -534,7 +549,7 @@ ul {
   animation: tick-fill .33s ease-in-out .33s forwards, tick-scale .33s ease-in-out .33s both;
   display: none; }
 
-.sdc-interactive-missing-men__position-tick-circle {
+.sdc-interactive-missing-names__position-tick-circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
   stroke-width: 2;
@@ -543,21 +558,21 @@ ul {
   fill: none;
   animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
 
-.sdc-interactive-missing-men__position-tick-check {
+.sdc-interactive-missing-names__position-tick-check {
   transform-origin: 50% 50%;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
   animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) 0.66s forwards; }
 
-.sdc-interactive-missing-men__position[data-correct] .sdc-interactive-missing-men__position-tick {
+.sdc-interactive-missing-names__position[data-correct] .sdc-interactive-missing-names__position-tick {
   display: block; }
 
 @media all and (max-width: 600px) {
-  .sdc-interactive-missing-men__position-tick {
+  .sdc-interactive-missing-names__position-tick {
     width: 20px;
     height: 20px; } }
 
-.sdc-interactive-missing-men__footer {
+.sdc-interactive-missing-names__footer {
   position: relative;
   z-index: 3;
   margin: 0 0 1em 0; }
@@ -569,79 +584,79 @@ ul {
 body {
   height: 2000px; }
 
-.sdc-interactive-missing-men {
+.sdc-interactive-missing-names {
   max-width: 550px;
   margin: 0 auto 0; }
 </style></head>
 <body>
 
   <div id="container"></div>
-  <div class="sdc-interactive-missing-men" data-component-name="sdc-interactive-missing-men">
+  <div class="sdc-interactive-missing-names" data-component-name="sdc-interactive-missing-names">
   <script data-role="answers">
     ["Ederson","Walker","Stones","Otamendi","Delph","De Bruyne","Fernandinho","Silva","Sterling","Aguero","Sane"]
   </script>
-  <div class="sdc-interactive-missing-men__inner">
+  <div class="sdc-interactive-missing-names__inner">
 
-    <div class="sdc-interactive-missing-men__head">
-      <h2 class="sdc-interactive-missing-men__title">Missing Men</h2>
-      <ul class="sdc-interactive-missing-men__badges">
-        <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/345.png" alt="Man City" class="sdc-interactive-missing-men__badge"></li>
-        <li class="sdc-interactive-missing-men__badge-item"><img src="./index_files/413.png" alt="Arsenal" class="sdc-interactive-missing-men__badge"></li>
+    <div class="sdc-interactive-missing-names__head">
+
+      <ul class="sdc-interactive-missing-names__badges">
+        <li class="sdc-interactive-missing-names__badge-item"><img src="./index_files/345.png" alt="Man City" class="sdc-interactive-missing-names__badge"></li>
+        <li class="sdc-interactive-missing-names__badge-item"><img src="./index_files/413.png" alt="Arsenal" class="sdc-interactive-missing-names__badge"></li>
       </ul>
-      <h3 class="sdc-interactive-missing-men__sub-title">Man City XI</h3>
-      <h4 class="sdc-interactive-missing-men__fixture">Man City 3 - 1 Arsenal</h4>
-      <p class="sdc-interactive-missing-men__description">Premier League, 7th Nov 2017</p>
+      <h3 class="sdc-interactive-missing-names__sub-title">Man City XI</h3>
+      <h4 class="sdc-interactive-missing-names__fixture">Man City 3 - 1 Arsenal</h4>
+      <p class="sdc-interactive-missing-names__description">Premier League, 7th Nov 2017</p>
       
     </div>
 
-    <div class="sdc-interactive-missing-men__nav">
-      <button type="button" name="button" class="sdc-interactive-missing-men__start" data-role="start">
-        <span class="sdc-interactive-missing-men__start-label">Start</span>
-        <time class="sdc-interactive-missing-men__start-timer" data-role="timer">00:00:00</time>
+    <div class="sdc-interactive-missing-names__nav">
+      <button type="button" name="button" class="sdc-interactive-missing-names__start" data-role="start">
+        <span class="sdc-interactive-missing-names__start-label">Start</span>
+        <time class="sdc-interactive-missing-names__start-timer" data-role="timer">00:00:00</time>
       </button>
     </div>
 
-    <div class="sdc-interactive-missing-men__body">
-      <form class="sdc-interactive-missing-men__form" data-role="form">
-        <ul class="sdc-interactive-missing-men__pitch" data-role="pitch" data-position="442">
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 50%; top: 5%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+    <div class="sdc-interactive-missing-names__body">
+      <form class="sdc-interactive-missing-names__form" data-role="form">
+        <ul class="sdc-interactive-missing-names__pitch" data-role="pitch" data-position="442">
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 50%; top: 5%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 30%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 12%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 30%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 30%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 30%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 88%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 12%; top: 55%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●● ●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 12%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●● ●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 55%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 55%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 88%; top: 55%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 88%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 37%; top: 80%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 80%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
             </li>
-            <li class="sdc-interactive-missing-men__position" data-role="position" style="left: 63%; top: 80%;">
-              <input type="text" name="" value="" required="" class="sdc-interactive-missing-men__position-name" data-role="input" placeholder="●●●●"><span class="sdc-interactive-missing-men__position-name-validity"><span class="sdc-interactive-missing-men__position-name-validity-bar" data-role="validation-bar"></span></span>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 80%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span></span>
             </li>
         </ul>
       </form>
     </div>
-    <div class="sdc-interactive-missing-men__footer" data-role="footer">
-      <button class="sdc-interactive-missing-men__clues" data-role="clues" aria-hidden="true">Answers</button>
+    <div class="sdc-interactive-missing-names__footer" data-role="footer">
+      <button class="sdc-interactive-missing-names__clues" data-role="clues" aria-hidden="true">Answers</button>
       <p data-role="complete-message" data-message="Congratulations, you completed the quiz in"></p>
     </div>
   </div>
