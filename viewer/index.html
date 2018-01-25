@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head>
+
+  <style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .view {
+    border: 2px solid hotpink;
+    overflow: hidden;
+    position: relative
+  }
+  
+  .view-frame {
+    background: #eee;
+    min-width: 500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  
+  .view-image {
+    width: 100%;
+  }
+
+  .view-overlay {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.1);
+    min-width: 320px;
+    width: 64%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+  }
+
+  .view-spot {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background: rgba(255, 0, 0, 0.897);
+    border: 2px solid white;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.288));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+
+  }
+  
+
+ 
+  
+</style>
+  
+</head>
+  <body>
+  <div class="view">
+    <div class="view-frame">
+      <div class="view-overlay" data-role="overlay">
+      </div>
+      <img class="view-image" src="https://e3.365dm.com/18/01/768x1024/skynews-clones-monkey-china_4214099.jpg?bypass-service-worker&20180124234456" alt="">
+    </div>
+  </div>
+
+  <script>
+    var overlay = document.querySelector('[data-role="overlay"]');
+
+    overlay.onclick = function(e){
+      
+      var width = overlay.offsetWidth;
+      var height = overlay.offsetHeight;
+
+      var x = e.offsetX;
+      var y = e.offsetY;
+
+      var div = document.createElement('div');
+      div.className = 'view-spot';
+      div.style.cssText = "left:"+toPercent(x, width)+"%;top:"+toPercent(y, height)+"%";
+
+      overlay.appendChild(div);    
+    }
+
+    function toPercent(value, total){
+      return (100/total)*value;
+    }
+  </script>
+  </body>
+  </html>
