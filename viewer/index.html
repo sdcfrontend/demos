@@ -18,7 +18,6 @@
   }
   
   .view {
-    border: 2px solid hotpink;
     overflow: hidden;
     position: relative
   }
@@ -115,9 +114,10 @@
       var x = e.offsetX;
       var y = e.offsetY;
 
-      var div = document.createElement('div');
-      div.className = 'view-spot';
-      div.style.cssText = "left:"+toPercent(x, width)+"%;top:"+toPercent(y, height)+"%";
+      var dot = document.createElement('a');
+      dot.href = "#";
+      dot.className = 'view-spot';
+      dot.style.cssText = "left:"+toPercent(x, width)+"%;top:"+toPercent(y, height)+"%";
 
       var caption = document.createElement('div');
       caption.className = 'view-caption';
@@ -127,10 +127,11 @@
         overlay.removeChild(e.target);
       }
       else {
-        overlay.appendChild(div);
+        overlay.appendChild(dot);
         overlay.appendChild(caption); 
-        div.onclick = function(event){
-          positionCaption(event, div, caption, overlay);
+        dot.onclick = function(event){
+          event.preventDefault();
+          positionCaption(event, dot, caption, overlay);
         }
       }  
     }
