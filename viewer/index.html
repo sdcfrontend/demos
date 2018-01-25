@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class=""><head>
+<html lang="en" class="">
+  
+<head>
+
+  <meta name="viewport" id="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,minimal-ui">
 
   <style>
   
@@ -49,7 +53,12 @@
     position: absolute;
     z-index: 10;
     transform: translate(-50%,-50%);
+  }
 
+  .view-caption {
+    background: powderblue;
+    padding: 18px;
+    position: absolute;
   }
   
 
@@ -82,7 +91,12 @@
       div.className = 'view-spot';
       div.style.cssText = "left:"+toPercent(x, width)+"%;top:"+toPercent(y, height)+"%";
 
-      overlay.appendChild(div);    
+      if(e.target.className.match(/view-spot/)){
+        overlay.removeChild(e.target);
+      }
+      else {
+        overlay.appendChild(div);  
+      }  
     }
 
     function toPercent(value, total){
