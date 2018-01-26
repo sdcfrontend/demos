@@ -13,12 +13,16 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: sans-serif;
+    min-height: 3000px;
   }
   
   .view {
-    overflow: hidden;
     position: relative
   }
   
@@ -45,10 +49,23 @@
     height: 100%;
   }
 
+  .view-caption {
+    background: #e3f6f8;
+    color: black;
+    padding: 18px;
+    position: absolute;
+    z-index: 11;
+    line-height: 1.4;
+    margin: 24px 0 0 -24px;
+    width: 300px;
+    visibility: hidden;
+    opacity: 0;
+    filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.288));
+  }
+
   .view-spot {
     width: 20px;
     height: 20px;
-    overflow: hidden;
     background: rgba(255, 0, 0, 0.897);
     border: 2px solid white;
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.288));
@@ -59,30 +76,29 @@
     cursor: pointer;
   }
 
-  .view-caption {
-    background: powderblue;
-    color: black;
-    padding: 18px;
-    position: absolute;
-    z-index: 11;
-    line-height: 1.4;
-    margin: 20px 0 0 -20px;
-    width: 300px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.166s
-  }
-
   .view-spot--open + .view-caption {
     visibility: visible;
     opacity: 1;
   }
 
-  @media all and (max-width: 560px){
+  .view-spot--open:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #e3f6f8;
+    transform: rotate(45deg);
+    top: calc(11px + 100%);
+    z-index: 11;
+    left: calc(50% - 5px);
+  }
+
+  @media all and (max-width: 600px){
     .view-caption {
       left: 50%!important;
       transform: translate(-50%,0);
       margin-left: 0!important;
+      width: 100%;
     }
   }
 
@@ -144,8 +160,13 @@
       var left = value;
       var dims = parent.getBoundingClientRect();
       var offset = (caption.offsetWidth + value) - dims.width;
+      var marginLeft = window.getComputedStyle(caption, null).getPropertyValue('margin-left');
+      marginLeft = Number(marginLeft.replace('px', ''));
       
       if(offset > 0){
+        if((dims.width - left) < Math.abs(marginLeft)){
+          left += Math.abs(marginLeft);
+        };
         left = left - offset;
       }
 
@@ -162,9 +183,22 @@
 
       dot.classList.toggle('view-spot--open');
 
+      if(dot.classList.contains('view-spot--open')){
+        center(dot);
+      }
+
       var x = event.target.offsetLeft;
       var y = event.target.offsetTop;
       caption.style.cssText = "left:"+toPercentConstraint(x, overlay, caption)+"%;top:"+toPercent(y, overlay.offsetHeight)+"%"; 
+    }
+
+    function center(el){
+      var dims = el.getBoundingClientRect();
+      var y = window.pageYOffset;
+      var screeny = window.innerHeight;
+      var top = dims.top;
+      
+      window.scrollTo(0, (y + top) - (screeny/3));
     }
   </script>
   </body>
