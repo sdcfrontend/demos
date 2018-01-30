@@ -153,7 +153,7 @@
     }
 
     function toPercent(value, total){
-      return (100/total)*value;
+      return Math.min((100/total)*value, 97.5);
     }
 
     function toPercentConstraint(value, parent, caption){
