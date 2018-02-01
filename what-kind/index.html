@@ -1,0 +1,174 @@
+<html lang="en" class=""><head>
+
+
+  <style class="cp-pen-styles">body {
+    font-size: 18px;
+    font-family: sans-serif;
+    background: #eee;
+    padding: 2em;
+  }
+  
+  .card ul {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 2em;
+  }
+  
+  ul {
+    padding: 0 0 0 4px  
+  }
+  
+  li {
+    padding: 2px;
+    list-style: none;
+    cursor: pointer
+  }
+  
+  .on {
+    background: #eee
+  }
+  
+  .answer {
+    font-size: 3em;
+    padding: 2px;
+  }
+  
+  .answer h3 {
+    margin: 0;
+    padding: 0
+  }
+  
+  .answer p {
+    margin: 0;
+    font-size: 2rem
+  }</style></head><body>
+  <div class="card">
+    <h2>1 Favourite Food?</h2>
+    <ul>
+      <li tag="1">Beans on toast</li>
+      <li tag="2">Fish and Chips</li>
+      <li tag="3">Spaghetti Bolognese</li>
+      <li tag="4">Vindaloo</li>
+      <li tag="5">Blowfish</li>
+      <li tag="6">Death cap mushrooms</li>
+     </ul>
+    
+     <h2>2 Favourite color?</h2>
+    <ul>
+      <li tag="7">Red</li>
+      <li tag="8">Green</li>
+      <li tag="9">Blue</li>
+      <li tag="10">Yellow</li>
+      <li tag="11">Purple</li>
+      <li tag="12">Orange</li>
+     </ul>
+    
+     <h2>3 Lucky Number</h2>
+    <ul>
+      <li tag="13">42</li>
+      <li tag="14">7</li>
+      <li tag="15">2</li>
+      <li tag="16" class="">13</li>
+      <li tag="17">5</li>
+      <li tag="18">11</li>
+     </ul>
+  </div>
+  
+  <div class="answer"><h3>Old Blue Eyes</h3><p>10/1 - bet with skybet</p></div>
+  <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script>var answers = [
+    {
+      "name": "Fire and Brimstone",
+      "odds": "100/1",
+      "number": "7",
+      "tags": ["5", "6", "7", "12", "14"]
+    },
+    {
+      "name": "Green Man",
+      "odds": "66/1",
+      "number": "2",
+      "tags": ["5", "4", "8", "15"]
+    },
+    {
+      "name": "Old Blue Eyes",
+      "odds": "10/1",
+      "number": "10",
+      "tags": ["1", "2", "3", "9"]
+    },
+    {
+      "name": "Sunset Boulevard",
+      "odds": "5/1",
+      "number": "42",
+      "tags": ["1", "2", "10", "12", "13"]
+    },
+    {
+      "name": "Lucky Jim",
+      "odds": "50/1",
+      "number": "42",
+      "tags": ["3", "4", "11", "14"]
+    }
+  ]
+  
+  var candidates = [];
+  document.querySelectorAll('ul').forEach(function(ul, answerindex){
+    var lis = ul.querySelectorAll('li');
+    
+    lis.forEach(function(item){
+      
+      item.onclick = function(){
+        
+        lis.forEach(function(li){
+          li.classList.remove('on'); 
+        });
+        
+        item.classList.add('on');
+        candidates[answerindex] = item.getAttribute('tag');
+        if(candidates.length === 3){
+          getAnswer()
+        }
+      }
+      
+    })
+  })
+  
+  function getAnswer(){
+    
+    var selections = [];
+    var count = {}
+    
+    answers.forEach(function(answer){
+      count[answer.name] = {
+        count: 0,
+        object: answer
+      }
+    });
+    
+    
+    candidates.forEach(function(candidate){
+      answers.forEach(function(answer){
+        if(answer.tags.indexOf(candidate) > -1){
+          count[answer.name].count ++;
+        }
+      })
+    });
+    
+    Object.keys(count).forEach(function(key, index){
+      selections[index] = [key, count[key]]
+    });
+      
+    selections.sort(function(a, b){
+      return a[1].count < b[1].count;
+    });
+      
+    console.log(selections);
+    
+    var selection = count[selections[0][0]].object;
+    
+    document.querySelector('.answer').innerHTML = "<h3>" + selection.name + "</h3><p>" + selection.odds + " - bet with skybet</p>";
+    
+    document.querySelector('.answer').scrollIntoView();
+    
+  }
+  //# sourceURL=pen.js
+  </script>
+  </body></html>

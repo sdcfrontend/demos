@@ -1028,4 +1028,38 @@ svg {
   .blackjack-sdc-site-tile:not([data-type*="hero"]) {
     padding: 0.8em 16px; } }
 
+.glint-eastwood {
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  transition: .5s ease-out;
+  will-change: transform;
+  overflow: hidden;
+  height: 28px;
+  width: 300px;
+}
+.glint-eastwood:before,
+.glint-eastwood:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.glint-eastwood:before {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.15) 38%, rgba(255, 255, 255, 0) 50%);
+  background-size: 300px 16px;
+}
+
+.glint-eastwood:after {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.25) 35%, rgba(255, 255, 255, 0.15) 40%, rgba(255, 255, 255, 0) 50%);
+  background-size: 60px 28px;
+}
+
 /*# sourceMappingURL=output.css.map */

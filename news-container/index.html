@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9876/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/sdc-site-news-container.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+.site-wrap {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.site-wrap-padding, .section-wrap__article-column {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-indent[class] {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-component-vertical-margin {
+  margin-bottom: 30px; }
+
+.site-component-vertical-margin-negative {
+  margin-top: -30px; }
+
+.site-component-vertical-margin-l {
+  margin-bottom: 70px; }
+
+.site-component-vertical-margin-s {
+  margin-bottom: 18px; }
+
+.section-wrap {
+  background: white; }
+
+.section-wrap--padding {
+  padding: 30px 0; }
+
+.section-wrap--shade {
+  padding: 65px 0 75px; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 5vw;
+    padding-right: 5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 24px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -24px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 50px; } }
+
+@media all and (max-width: 600px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 18px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -18px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 36px; }
+  .section-wrap--shade {
+    padding: 50px 0; }
+  .section-wrap--padding {
+    padding: 30px 0; } }
+
+@media all and (max-width: 480px) {
+  .site-wrap-padding, .section-wrap__article-column,
+  .site-indent[class] {
+    padding-left: 16px;
+    padding-right: 16px; }
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+  @supports (mix-blend-mode: overlay) { }
+
+.glints-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+@supports (pointer-events: none) { }
+
+.glints-box-padding {
+  padding: 1.8em; }
+
+@media all and (max-width: 600px) {
+  .glints-box-padding {
+    padding: 1.4em; } }
+
+@media all and (max-width: 480px) {
+  .glints-box-padding {
+    padding: 1em 16px; } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-site-news-container__item-related {
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  color: #4a4a4a; }
+
+.sdc-site-news-container__item-related > li:not(:last-of-type) {
+  margin-bottom: 0.25em; }
+
+.sdc-site-news-container__item-related > li > a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2em 0;
+  line-height: 1;
+  vertical-align: middle; }
+
+.sdc-site-news-container__item-related > li > a:hover {
+  background: none;
+  text-decoration: underline;
+  text-decoration-skip: ink; }
+
+.sdc-site-news-container__item-related > li > a:after {
+  content: "";
+  width: 0.35em;
+  height: 0.35em;
+  display: inline-block;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: 0.9;
+  margin-left: 0.25em; }
+
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-site-tile__significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--breaking[class] {
+  color: #000000;
+  background: #ffe001;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-site-tile__significance--live[class] {
+  color: #ffffff;
+  background: #d0021b;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--transfer[class] {
+  color: #ffe001;
+  background: #000000;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--update[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-news-container__body {
+  background: #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  display: flex; }
+
+.sdc-site-news-container__item-list {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  max-width: 300px;
+  min-width: 240px;
+  position: relative;
+  z-index: 2; }
+
+.sdc-site-news-container__item {
+  position: relative;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding: 18px 28px; }
+
+.sdc-site-news-container__item-body {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.sdc-site-news-container__item-image {
+  width: 92px;
+  height: 92px;
+  display: none; }
+
+.sdc-site-news-container__item-headline {
+  font-weight: 400;
+  font-size: 1em; }
+
+.sdc-site-news-container__item-headline-link:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4; }
+
+.sdc-site-news-container__item-headline-text {
+  position: relative;
+  z-index: 5; }
+
+@media all and (min-width: 741px) {
+  .sdc-site-news-container__body[data-items="2"] .sdc-site-news-container__item-list .sdc-site-news-container__item-headline {
+    font-size: 1.4em; }
+  .sdc-site-news-container__body[data-items="3"] .sdc-site-news-container__item-list .sdc-site-news-container__item-headline {
+    font-size: 1.25em; } }
+
+@media all and (max-width: 740px) {
+  .sdc-site-news-container__body {
+    display: block; }
+  .sdc-site-news-container__item-list {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px 18px;
+    margin-top: -18px; }
+  .sdc-site-news-container__item {
+    padding: 14px 18px; }
+  .sdc-site-news-container__item-image {
+    display: block; }
+  .sdc-site-news-container__item-list .sdc-site-news-container__item-body {
+    padding-left: 15px; } }
+
+.sdc-site-news-container__item--hero {
+  min-height: 400px;
+  color: white;
+  z-index: 1;
+  padding-bottom: 36px; }
+
+.sdc-site-news-container__item--hero .sdc-site-news-container__item-body {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column; }
+
+.sdc-site-news-container__item--hero .sdc-site-news-container__item-image {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.sdc-site-news-container__item--hero:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 3;
+  background: linear-gradient(0deg, black 5%, transparent); }
+
+.sdc-site-news-container__item--hero .sdc-site-news-container__item-headline {
+  color: white;
+  font-size: 2.1em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  max-width: 90%; }
+
+@media all and (max-width: 800px) {
+  .sdc-site-news-container__item--hero .sdc-site-news-container__item-headline {
+    max-width: 100%; } }
+
+@media all and (max-width: 740px) {
+  .sdc-site-news-container__item--hero {
+    min-height: 45vh;
+    padding-bottom: 45px; } }
+
+@media all and (max-width: 600px) {
+  .sdc-site-news-container__item--hero .sdc-site-news-container__item-headline {
+    font-size: 1.8em; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-news-container__item--hero {
+    padding-bottom: 40px; }
+  .sdc-site-news-container__item--hero .sdc-site-news-container__item-headline {
+    font-size: 1.6em; } }
+
+.sdc-site-news-container__item-info {
+  align-self: flex-start;
+  margin-bottom: 5px;
+  z-index: 5;
+  position: relative; }
+
+.sdc-site-news-container__item-tag,
+.sdc-site-news-container__item-time {
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  font-weight: 500;
+  background: #ccc;
+  line-height: 1;
+  display: inline-block; }
+
+.sdc-site-news-container__item-time {
+  color: #aaa;
+  background: none;
+  font-weight: 400;
+  padding-left: 0; }
+
+.sdc-site-news-container__item-tag--live {
+  background: #ea021a;
+  color: white; }
+
+.sdc-site-news-container__item-tag--breaking {
+  background: #f4d53a;
+  color: black; }
+
+.sdc-site-news-container__item-tag--analysis {
+  background: #002672;
+  color: white; }
+
+.sdc-site-news-container__item--hero .sdc-site-news-container__item-time {
+  color: white; }
+
+.sdc-site-news-container__header {
+  padding: 12px 28px 11px;
+  font-size: 1.44em;
+  font-weight: 500;
+  text-transform: uppercase; }
+
+.sdc-site-news-container__header--breaking {
+  background: #f4d53a;
+  color: black; }
+
+.sdc-site-news-container__body--breaking {
+  background: #f4d53a; }
+
+.sdc-site-news-container__item-related {
+  position: relative;
+  z-index: 5;
+  margin-top: 0.6em; }
+
+.sdc-site-news-container__item-related-link {
+  color: white !important; }
+
+body {
+  padding: 6.5vw;
+  background: #eee; }
+
+@media all and (max-width: 480px) {
+  body {
+    padding: 20px 0; } }
+
+button {
+  padding: 12px; }
+
+.sdc-site-news-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.sdc-site-news-container ~
+.sdc-site-news-container {
+  margin-top: 30px; }
+
+.sdc-site-news-container__body[data-items='2'] .sdc-site-news-container__item:nth-child(n+2) {
+  display: none; }
+
+.sdc-site-news-container__body[data-items='3'] .sdc-site-news-container__item:nth-child(n+3) {
+  display: none; }
+
+.sdc-site-news-container__body[data-items='4'] .sdc-site-news-container__item:nth-child(n+4) {
+  display: none; }
+
+.sdc-site-news-container__body[data-items='5'] .sdc-site-news-container__item:nth-child(n+5) {
+  display: none; }
+
+.sdc-site-news-container__body[data-items='6'] .sdc-site-news-container__item:nth-child(n+6) {
+  display: none; }
+</style></head>
+<body>
+
+  <div id="container"></div>
+  <div class="sdc-site-news-container" data-component-name="sdc-site-news-container">
+  <p class="sdc-site-news-container__header sdc-site-news-container__header--breaking">Breaking News</p>
+  <div class="sdc-site-news-container__body sdc-site-news-container__body--breaking" data-items="7">
+          <div class="sdc-site-news-container__item sdc-site-news-container__item--hero">
+            <picture>
+              
+              <source srcset="https://e3.365dm.com/17/11/1024x768/skynews-new-york-attack_4143846.jpg?20171101013014" media="(min-width: 740px) and (max-width: 1000px)">
+              <source srcset="https://e3.365dm.com/17/11/2048x1152/skynews-new-york-attack_4143846.jpg?20171101013014">
+              <img src="./news-container_files/skynews-new-york-attack_4143846.jpg" alt="" class="sdc-site-news-container__item-image">
+            </picture>
+            <div class="sdc-site-news-container__item-body">
+              <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+              <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">'IS note' found after Manhattan truck attack</span></a></h4>
+              <ul class="sdc-site-news-container__item-related"><li class="sdc-site-news-container__item-related-item"><a href="http://localhost:9876/" class="sdc-site-news-container__item-related-link">Suspect wanted to kill on Brooklyn Bridge</a></li></ul>
+            </div>
+          </div>
+    <div class="sdc-site-news-container__item-list">
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/11/120x120/skynews-sayfullo-saipov-new-york-terror_4143869.jpg?20171101064011" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/11/1024x768/skynews-sayfullo-saipov-new-york-terror_4143869.jpg?20171101064011" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/11/2048x1152/skynews-sayfullo-saipov-new-york-terror_4143869.jpg?20171101064011">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">What we know about NY terror attack suspect</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skynews-new-york-terror-attack_4143831.jpg?20171031232459" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skynews-new-york-terror-attack_4143831.jpg?20171031232459" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skynews-new-york-terror-attack_4143831.jpg?20171031232459">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--breaking">breaking</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">How the Manhattan terror attack unfolded</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/Ut_HKthATH4eww8X4xMDoxOjA4MTsiGN_4143642.jpg?20171031203028" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/Ut_HKthATH4eww8X4xMDoxOjA4MTsiGN_4143642.jpg?20171031203028" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/Ut_HKthATH4eww8X4xMDoxOjA4MTsiGN_4143642.jpg?20171031203028">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--breaking">breaking</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Witness thought attack was 'Halloween prank'</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skynews-new-york-de-blasio_4143688.jpg?20171031213038" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skynews-new-york-de-blasio_4143688.jpg?20171031213038" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skynews-new-york-de-blasio_4143688.jpg?20171031213038">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--analysis">analysis</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">New Yorkers urged to carry on after attack</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/11/120x120/skynews-new-york-terror-school_4143896.jpg?20171101072808" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/11/1024x768/skynews-new-york-terror-school_4143896.jpg?20171101072808" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/11/2048x1152/skynews-new-york-terror-school_4143896.jpg?20171101072808">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--breaking">breaking</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Kids injured in New York terror attack</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/11/120x120/skynews-new-york-sayfullo-saipov_4143847.jpg?20171101192658" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/11/1024x768/skynews-new-york-sayfullo-saipov_4143847.jpg?20171101192658" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/11/2048x1152/skynews-new-york-sayfullo-saipov_4143847.jpg?20171101192658">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Suspect filmed fleeing after terror attack</span></a></h4>
+                
+              </div>
+            </div>
+    </div>
+  </div>
+
+</div>
+<br><div class="sdc-site-news-container" data-component-name="sdc-site-news-container">
+  
+  <div class="sdc-site-news-container__body sdc-site-news-container__body--" data-items="7">
+          <div class="sdc-site-news-container__item sdc-site-news-container__item--hero">
+            <picture>
+              
+              <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+              <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+              <img src="./news-container_files/skysports-manchester-united-mctominay-foot_4143758.jpg" alt="" class="sdc-site-news-container__item-image">
+            </picture>
+            <div class="sdc-site-news-container__item-body">
+              <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+              <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Saturday Football LIVE!</span></a></h4>
+              <ul class="sdc-site-news-container__item-related"><li class="sdc-site-news-container__item-related-item"><a href="http://localhost:9876/" class="sdc-site-news-container__item-related-link">All of todays live scores</a></li></ul>
+            </div>
+          </div>
+    <div class="sdc-site-news-container__item-list">
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Chelsea 0 - 0 Man Utd</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Arsenal 1 - 0 Everton</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">West Ham 0 - 3 Liverpool</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Bournemouth 1 - 1 Burnley</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Swansea 0 - 0 Brighton</span></a></h4>
+                
+              </div>
+            </div>
+            <div class="sdc-site-news-container__item ">
+              <picture>
+                <source srcset="https://e3.365dm.com/17/10/120x120/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(max-width: 740px)">
+                <source srcset="https://e3.365dm.com/17/10/1024x768/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257" media="(min-width: 740px) and (max-width: 1000px)">
+                <source srcset="https://e3.365dm.com/17/10/2048x1152/skysports-manchester-united-mctominay-foot_4143758.jpg?20171031222257">
+                <img src="./news-container_files/skynews-prue-leith-great-british-bake-off_4143179.jpg" alt="" class="sdc-site-news-container__item-image">
+              </picture>
+              <div class="sdc-site-news-container__item-body">
+                <div class="sdc-site-news-container__item-info"><span class="sdc-site-news-container__item-tag sdc-site-news-container__item-tag--live">live</span> <time class="sdc-site-news-container__item-time">13 Jul</time></div>
+                <h4 class="sdc-site-news-container__item-headline"><a href="http://localhost:9876/" class="sdc-site-news-container__item-headline-link"><span class="sdc-site-news-container__item-headline-text">Tottenham 2 - 1 Crystal Palace</span></a></h4>
+                
+              </div>
+            </div>
+    </div>
+  </div>
+
+</div>
+<br>
+
+  <script src="./news-container_files/bundle.js"></script>
+
+
+
+</body></html>

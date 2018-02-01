@@ -102,6 +102,28 @@
         margin-bottom: 1em;
       }
 
+      @media all and (max-width: 700px){
+        .page-col {
+          padding: 0 3vw;
+        }
+
+        .page-body h1 {
+          font-size: 2.6em;
+          margin-bottom: 0.7em;
+        }
+
+        .page-body h2 {
+          font-size: 1.8em;
+          margin-bottom: 0.5em!important;
+        }
+
+        .zoom {
+          
+          margin-bottom: 1em;
+        
+        }
+      }
+
     </style>
    </head>
    <body>
@@ -726,7 +748,11 @@
                   <div class="pic-mask">
                     <div class="pic-bg"></div>
                     <div class="pic-content">
-                      <img src="royal-route1.jpg" alt="">
+                      <picture>
+                        <source srcset="royal-route1-mob.jpg" media="(max-aspect-ratio: 1/1)">
+                        <source srcset="royal-route1.jpg" media="(min-aspect-ratio: 1/1)">
+                        <img src="royal-route1.jpg" alt="">
+                      </picture>
                     </div>
                   </div>
                 </div>
@@ -735,7 +761,11 @@
                   <div class="pic-mask">
                     <div class="pic-bg"></div>
                     <div class="pic-content">
-                      <img src="royal-route2.jpg" alt="">
+                        <picture>
+                            <source srcset="royal-route2-mob.jpg" media="(max-aspect-ratio: 1/1)">
+                            <source srcset="royal-route2.jpg" media="(min-aspect-ratio: 1/1)">
+                            <img src="royal-route2.jpg" alt="">
+                          </picture>
                     </div>
                     </div>
                 </div>
@@ -744,7 +774,11 @@
                     <div class="pic-mask">
                         <div class="pic-bg"></div>
                         <div class="pic-content">
-                      <img src="royal-route3.jpg" alt="">
+                          <picture>
+                              <source srcset="royal-route3-mob.jpg" media="(max-aspect-ratio: 1/1)">
+                              <source srcset="royal-route3.jpg" media="(min-aspect-ratio: 1/1)">
+                              <img src="royal-route3.jpg" alt="">
+                            </picture>
                     </div>
                     </div>
                   </div>
@@ -753,7 +787,11 @@
                       <div class="pic-mask">
                           <div class="pic-bg"></div>
                           <div class="pic-content">
-                        <img src="royal-route4.jpg" alt="">
+                              <picture>
+                                  <source srcset="royal-route4-mob.jpg" media="(max-aspect-ratio: 1/1)">
+                                  <source srcset="royal-route4.jpg" media="(min-aspect-ratio: 1/1)">
+                                  <img src="royal-route4.jpg" alt="">
+                                </picture>
                       </div>
                       </div>
                     </div>

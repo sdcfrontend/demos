@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://10.23.200.145:9876/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/sdc-interactive-missing-men.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+.site-wrap {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.site-wrap-padding, .section-wrap__article-column {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-indent[class] {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-component-vertical-margin {
+  margin-bottom: 30px; }
+
+.site-component-vertical-margin-negative {
+  margin-top: -30px; }
+
+.site-component-vertical-margin-l {
+  margin-bottom: 70px; }
+
+.site-component-vertical-margin-s {
+  margin-bottom: 18px; }
+
+.section-wrap {
+  background: white; }
+
+.section-wrap--padding {
+  padding: 30px 0; }
+
+.section-wrap--shade {
+  padding: 65px 0 75px; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 5vw;
+    padding-right: 5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 24px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -24px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 50px; } }
+
+@media all and (max-width: 600px) {
+  .site-wrap-padding, .section-wrap__article-column {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 18px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -18px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 36px; }
+  .section-wrap--shade {
+    padding: 50px 0; }
+  .section-wrap--padding {
+    padding: 30px 0; } }
+
+@media all and (max-width: 480px) {
+  .site-wrap-padding, .section-wrap__article-column,
+  .site-indent[class] {
+    padding-left: 16px;
+    padding-right: 16px; }
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+  @supports (mix-blend-mode: overlay) { }
+
+.glints-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+@supports (pointer-events: none) { }
+
+.glints-box-padding {
+  padding: 1.8em; }
+
+@media all and (max-width: 600px) {
+  .glints-box-padding {
+    padding: 1.4em; } }
+
+@media all and (max-width: 480px) {
+  .glints-box-padding {
+    padding: 1em 16px; } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-site-tile__significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--breaking[class] {
+  color: #000000;
+  background: #ffe001;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-site-tile__significance--live[class] {
+  color: #ffffff;
+  background: #d0021b;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--transfer[class] {
+  color: #ffe001;
+  background: #000000;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--update[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-interactive-missing-names {
+  font-size: 1em;
+  position: relative;
+  text-align: center;
+  background: #010d7e;
+  background: linear-gradient(#010d7e 0%, #101151 100%);
+  color: white;
+  overflow: hidden; }
+
+.sdc-interactive-missing-names__inner {
+  padding: 2em 1em; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-names__inner {
+    padding: 1.6em 0; } }
+
+.sdc-interactive-missing-names__head {
+  margin-bottom: 24px;
+  padding: 0 1em;
+  position: relative;
+  z-index: 3; }
+
+.sdc-interactive-missing-names__title {
+  font-size: 3em;
+  margin: 0.2em 0 0.45em;
+  font-weight: 400;
+  font-family: "Sky Sports Display", "Sky Text";
+  line-height: 1;
+  display: none; }
+
+.sdc-interactive-missing-names__sub-title {
+  font-size: 2.5em;
+  margin: 0 0 0.25em;
+  font-weight: 400;
+  font-family: "Sky Sports Display", "Sky Text";
+  line-height: 1.1; }
+
+.sdc-interactive-missing-names__fixture {
+  line-height: 1.1;
+  margin: 0 0 0.1em;
+  font-size: 1.1em;
+  font-weight: 500; }
+
+.sdc-interactive-missing-names__description {
+  font-size: 1em;
+  margin: 0 0 18px;
+  line-height: 1.4; }
+
+.sdc-interactive-missing-names__badges {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 9px; }
+
+.sdc-interactive-missing-names__badge-item {
+  display: inline-block;
+  width: 68px;
+  height: 68px;
+  position: relative; }
+
+.sdc-interactive-missing-names__badge {
+  width: 100%; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-names__title {
+    font-size: 2.2em; }
+  .sdc-interactive-missing-names__sub-title {
+    font-size: 1.8em; }
+  .sdc-interactive-missing-names__badge-item {
+    width: 50px;
+    height: 50px; } }
+
+.sdc-interactive-missing-names__nav {
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 3; }
+
+.sdc-interactive-missing-names__start,
+.sdc-interactive-missing-names__clues {
+  font-size: 1.25em;
+  font-family: inherit;
+  padding: 3px 11px;
+  background: #d0021b;
+  color: white;
+  border: 0;
+  font-weight: 500;
+  cursor: pointer; }
+
+.sdc-interactive-missing-names__start[disabled] {
+  cursor: default; }
+
+.sdc-interactive-missing-names__clues[disabled][class] {
+  cursor: default;
+  opacity: 0.5; }
+
+.sdc-interactive-missing-names[data-cheated] .sdc-interactive-missing-names__start,
+.sdc-interactive-missing-names[data-completed] .sdc-interactive-missing-names__clues,
+.sdc-interactive-missing-names__start-timer,
+.sdc-interactive-missing-names__start[data-started] .sdc-interactive-missing-names__start-label {
+  display: none; }
+
+.sdc-interactive-missing-names__start[data-started] .sdc-interactive-missing-names__start-timer {
+  display: block; }
+
+.sdc-interactive-missing-names__clues {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  padding: 6px 15px;
+  display: block;
+  margin: 9px auto 0;
+  transition: opacity 0.166s;
+  border-radius: 3px; }
+
+.sdc-interactive-missing-names__clues[aria-hidden="true"] {
+  visibility: hidden;
+  opacity: 0; }
+
+.sdc-interactive-missing-names__clues[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1; }
+
+.sdc-interactive-missing-names__clues:active {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+@keyframes shake {
+  10%, 90% {
+    margin-left: -1px; }
+  20%, 80% {
+    margin-left: 2px; }
+  30%, 50%, 70% {
+    margin-left: -3px; }
+  40%, 60% {
+    margin-left: 3px; } }
+
+.sdc-interactive-missing-names__pitch {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  background: url(data:image/png;base64,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) no-repeat;
+  background-position: 50% 40px; }
+
+.sdc-interactive-missing-names__pitch:after {
+  content: "";
+  display: block;
+  padding-bottom: 70%; }
+
+.sdc-interactive-missing-names__position {
+  position: absolute;
+  width: 19%;
+  transform: translate(-50%, 0); }
+
+.sdc-interactive-missing-names__position[data-wrong] {
+  animation: shake 0.66s; }
+
+.sdc-interactive-missing-names__position-name {
+  width: 100%;
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 4px 0;
+  border: 0;
+  text-align: center;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  color: #282b70;
+  background: linear-gradient(177deg, #f2f2f2 0%, #f2f2f2 38%, #ffffff 39%, #ffffff 100%); }
+
+.sdc-interactive-missing-names__position-name:focus {
+  outline-inset: -3px; }
+
+.sdc-interactive-missing-names__position-name::-ms-clear {
+  display: none; }
+
+.sdc-interactive-missing-names__position-name::-webkit-input-placeholder {
+  color: #282b70;
+  font-size: 13px; }
+
+.sdc-interactive-missing-names__position-name::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #282b70;
+  font-size: 13px; }
+
+.sdc-interactive-missing-names__position-name:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #282b70;
+  font-size: 13px; }
+
+.sdc-interactive-missing-names__position-name[disabled] {
+  pointer-events: none;
+  user-select: none;
+  color: #282b70;
+  border: 0; }
+
+.sdc-interactive-missing-names__position-name-validity {
+  display: flex;
+  height: 5px;
+  overflow: hidden;
+  position: relative; }
+
+.sdc-interactive-missing-names__position-name-validity > span {
+  flex: 1;
+  transition: 0.16s background;
+  will-change: background; }
+
+.sdc-interactive-missing-names__position-name-validity > span[data-valid="false"] {
+  background: #d0021b;
+  border-color: #d0021b; }
+
+.sdc-interactive-missing-names__position-name-validity > span[data-valid="true"] {
+  background: #62a02f;
+  border-color: #62a02f; }
+
+.sdc-interactive-missing-names__position-thumb-wrap {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 0 auto 0;
+  position: relative; }
+
+.sdc-interactive-missing-names__position-thumb {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  object-fit: cover;
+  visibility: hidden;
+  will-change: filter;
+  transition: filter 0.33s;
+  opacity: 0.8; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-names__position-thumb-wrap {
+    width: 50px;
+    height: 40px; } }
+
+@supports (filter: brightness(0)) {
+  .sdc-interactive-missing-names__position-thumb {
+    visibility: visible;
+    filter: brightness(0);
+    opacity: 0.8; } }
+
+.sdc-interactive-missing-names__position[data-correct] .sdc-interactive-missing-names__position-thumb {
+  filter: none;
+  opacity: 1; }
+
+@keyframes tick-stroke {
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes tick-scale {
+  0%, 100% {
+    transform: none; }
+  50% {
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@keyframes tick-fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #62a02f; } }
+
+.sdc-interactive-missing-names__position-tick {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #62a02f;
+  animation: tick-fill .33s ease-in-out .33s forwards, tick-scale .33s ease-in-out .33s both;
+  display: none; }
+
+.sdc-interactive-missing-names__position-tick-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #62a02f;
+  fill: none;
+  animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
+
+.sdc-interactive-missing-names__position-tick-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: tick-stroke 0.33s cubic-bezier(0.65, 0, 0.45, 1) 0.66s forwards; }
+
+.sdc-interactive-missing-names__position[data-correct] .sdc-interactive-missing-names__position-tick {
+  display: block; }
+
+@media all and (max-width: 600px) {
+  .sdc-interactive-missing-names__position-tick {
+    width: 20px;
+    height: 20px; } }
+
+.sdc-interactive-missing-names__footer {
+  position: relative;
+  z-index: 3;
+  margin: 0 0 1em 0; }
+
+@font-face {
+  font-family: 'Sky Sports Display';
+  src: url(skysports-display-medium.woff) format("woff"); }
+
+body {
+  height: 2000px; }
+
+.sdc-interactive-missing-names {
+  max-width: 550px;
+  margin: 0 auto 0; }
+</style></head>
+<body>
+
+  <div id="container"></div>
+  <div class="sdc-interactive-missing-names" data-component-name="sdc-interactive-missing-names">
+  <script data-role="answers">
+    ["Ederson","Walker","Stones","Otamendi","Delph","De Bruyne","Fernandinho","Silva","Sterling","Aguero","Sane"]
+  </script>
+  <div class="sdc-interactive-missing-names__inner">
+
+    <div class="sdc-interactive-missing-names__head">
+
+      <ul class="sdc-interactive-missing-names__badges">
+        <li class="sdc-interactive-missing-names__badge-item"><img src="./index_files/345.png" alt="Man City" class="sdc-interactive-missing-names__badge"></li>
+        <li class="sdc-interactive-missing-names__badge-item"><img src="./index_files/413.png" alt="Arsenal" class="sdc-interactive-missing-names__badge"></li>
+      </ul>
+      <h3 class="sdc-interactive-missing-names__sub-title">Man City XI</h3>
+      <h4 class="sdc-interactive-missing-names__fixture">Man City 3 - 1 Arsenal</h4>
+      <p class="sdc-interactive-missing-names__description">Premier League, 7th Nov 2017</p>
+      
+    </div>
+
+    <div class="sdc-interactive-missing-names__nav">
+      <button type="button" name="button" class="sdc-interactive-missing-names__start" data-role="start">
+        <span class="sdc-interactive-missing-names__start-label">Start</span>
+        <time class="sdc-interactive-missing-names__start-timer" data-role="timer">00:00:00</time>
+      </button>
+    </div>
+
+    <div class="sdc-interactive-missing-names__body">
+      <form class="sdc-interactive-missing-names__form" data-role="form">
+        <ul class="sdc-interactive-missing-names__pitch" data-role="pitch" data-position="442">
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 50%; top: 5%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 12%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 88%; top: 30%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 12%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●● ●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 88%; top: 55%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 37%; top: 80%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span><span></span><span></span></span>
+            </li>
+            <li class="sdc-interactive-missing-names__position" data-role="position" style="left: 63%; top: 80%;">
+              <input type="text" name="" value="" required="" class="sdc-interactive-missing-names__position-name" data-role="input" placeholder="●●●●"><span class="sdc-interactive-missing-names__position-name-validity" data-role="validity-bar"><span></span><span></span><span></span><span></span></span>
+            </li>
+        </ul>
+      </form>
+    </div>
+    <div class="sdc-interactive-missing-names__footer" data-role="footer">
+      <button class="sdc-interactive-missing-names__clues" data-role="show-answers" aria-hidden="true">Answers</button>
+      <p data-role="complete-message" data-message="Congratulations, you completed the quiz in"></p>
+    </div>
+  </div>
+</div>
+
+
+  <script src="./index_files/bundle.js"></script>
+
+
+
+</body></html>

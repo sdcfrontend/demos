@@ -39,13 +39,46 @@
 
       h1 {
         font-weight: 400;
-        font-size: 3.4em;
+        font-size: 3em;
         margin-bottom: 0.5em;
       }
+
       h2 {
         color: white-space;
         font-size: 2em;
         margin-bottom: 1em;
+      }
+
+      .desktop-hidden {
+        display: none;
+      }
+
+      @media all and (max-width: 800px){
+
+        .desktop-hidden {
+          display: block;
+          margin: 0 0 1em;
+        }
+
+        h1 {
+          font-size: 2.25em
+        }
+
+        h2 {
+          font-size: 1.75em
+        }
+
+        .page {
+          display: block;
+        }
+
+        .page-body {
+          padding: 1em 4vw
+        }
+
+        .page-col + .page-col {
+          display: none;
+        }
       }
 
 
@@ -971,6 +1004,9 @@
     <div class="page">
       <div class="page-col page-body">
         <h1>Qualifying Zones</h1>
+        <div class="desktop-hidden"> <div class="page-vid">
+          <video src="vid.mp4"></video>
+        </div></div>
           <h2 cue="0">Europe</h2>
           <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
             </p><p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.
@@ -1093,7 +1129,7 @@
     </div>
 
     <script>
-      var video = document.querySelector('video');
+      var video = document.querySelectorAll('video')[1];
       var headers = document.querySelectorAll('h2');
 
       var current = 0;

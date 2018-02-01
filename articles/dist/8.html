@@ -10,18 +10,21 @@
 
     <style media="screen">
     h1 {
-      font-size:3.6em;
+      font-size:3em;
       font-weight: 400;
       text-align: center;
       margin: 0.8em 0 0.8em;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows:  repeat(6, 30vh) 45vh;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
+    @media all and (min-width: 800px){
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows:  repeat(6, 30vh) 45vh;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
     }
 
     .grid-item {
@@ -225,6 +228,35 @@
       bottom: 0;
       line-height: 1em;
       transition: transform 1s ease-in-out;
+    }
+    
+    @media all and (max-width: 800px){
+      h1 {
+        font-size: 2em;
+        font-weight: 400;
+        text-align: center;
+        margin: 0.8em 0 0.7em;
+        padding: 0 3vw;
+      }
+
+      .grid {
+        font-size: 0.5em;
+      }
+
+      .grid-item {
+        height: auto;
+        padding: 2.8em 0 3.2em;
+      }
+
+      .grid-item h2 {
+        font-size: 24px;
+      }
+
+      .grid-item:after {
+        content: none;
+      }
+
+
     }
     
 
