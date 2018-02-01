@@ -138,6 +138,9 @@
     dots.forEach(function(dot, index){
      
       dot.onclick = function(){
+        
+      setCarouselHighlight(index);
+
        dots.forEach(function(item){
        item.classList.remove('on');
         carousel.scrollLeft = getCarouselPos(carousel, items[index], index);
@@ -158,10 +161,6 @@
     
     items.forEach(function(item, index){
       item.onclick = function(){
-        items.forEach(function(it){
-          it.classList.remove('on')
-        })
-        item.classList.add('on');
         dots[index].click();
       }
     })
@@ -169,6 +168,14 @@
     
     function getCarouselPos(carousel, item, index){
       return item.offsetWidth * index;
+    }
+
+    function setCarouselHighlight(index){
+      items.forEach(function(item){
+        item.classList.remove('on');
+      })
+
+      items[index].classList.add('on');
     }
       
     //# sourceURL=pen.js
