@@ -14,6 +14,8 @@
     
     .view {
       max-width: 600px;
+      height: calc(100vh - 100px);
+      max-height: 600px;
       overflow: hidden;
       position: relative; 
       margin: 0 auto;
@@ -22,7 +24,7 @@
     .view:after {
       content: "";
       display: block;
-      padding-bottom: 90%;
+      padding-bottom: 100%;
     }
     
     .frame {
@@ -65,7 +67,7 @@
       background: #aaa;
       max-width: 600px;
       margin: 0 auto;
-      overflow: scroll;
+      overflow: auto;
       padding: 0;
       scroll-behavior: smooth;
     }
@@ -92,7 +94,13 @@
       display: block;
       background: #eee;
       height: 100px;
-    }</style></head><body>
+    }
+    
+    </style>
+    
+  </head>
+  
+  <body>
     <div class="view">
       <div class="frame">
         <div class="frame-bound" style="transform: translate(4.75%, 8.72093%) scale(1.2);">
