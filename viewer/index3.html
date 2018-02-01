@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+    <style type="text/css" class="cp-pen-styles">body {
+      padding: 0;
+      margin: 0;
+      background: #eee;
+    }
+    
+    .view {
+      max-width: 600px;
+      overflow: hidden;
+      position: relative; 
+      margin: 0 auto;
+    }
+    
+    .view:after {
+      content: "";
+      display: block;
+      padding-bottom: 90%;
+    }
+    
+    .frame {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 200%;
+    }
+    
+    .frame-bound {
+      position: relative;
+      border: 10px solid hotpink;
+      transition: transform 0.33s
+    }
+    
+    .image {
+      top: 0;
+      left: 0;
+      max-width: 100%;
+    }
+    
+    .dot {
+      background: white;
+      border: 2px solid black;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 10;
+      transform: translate(-50%,-50%);
+      cursor: pointer;
+    }
+    
+    .dot.on {
+      background: #aaa
+    }
+    
+    .carousel {
+      background: #aaa;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: scroll;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    
+    .carousel ul {
+      list-style: none;
+      white-space: nowrap;
+      padding: 0;
+      margin: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .carousel ul li {
+      width: 150px;
+      display: inline-block;
+      padding: 2px;
+    }
+    
+    li.on span {
+      background-color: #ccc
+    }
+    
+    li span {
+      display: block;
+      background: #eee;
+      height: 100px;
+    }</style></head><body>
+    <div class="view">
+      <div class="frame">
+        <div class="frame-bound" style="transform: translate(4.75%, 8.72093%) scale(1.2);">
+          <div class="dot" style="left: 50%; top: 32%"></div>
+          <div class="dot" style="left: 46%; top: 42%"></div>
+          <div class="dot" style="left: 55%; top: 45%"></div>
+          <div class="dot" style="left: 52%; top: 52%"></div>
+          <div class="dot" style="left: 60%; top: 55%"></div>
+          <div class="dot" style="left: 52%; top: 60%"></div>
+          <div class="dot" style="left: 61%; top: 64%"></div>
+        <img class="image" src="http://i68.tinypic.com/algp4p.png" alt="">
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="carousel">
+      <ul>
+        <li><span>1</span></li><li class=""><span>2</span></li><li class=""><span>3</span></li><li class=""><span>4</span></li><li><span>5</span></li><li class=""><span>6</span></li><li><span>7</span></li>
+      </ul>
+      
+    </div>
+    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+    <script>var bound = document.querySelector('.frame-bound');
+    
+    var dots = document.querySelectorAll('.dot');
+    
+    var carousel = document.querySelector('.carousel');
+    
+    var items = document.querySelectorAll('.carousel ul li');
+    
+    var frame = document.querySelector('.view');
+    
+    
+    dots.forEach(function(dot, index){
+     
+      dot.onclick = function(){
+       dots.forEach(function(item){
+       item.classList.remove('on');
+        carousel.scrollLeft = getCarouselPos(carousel, items[index], index);
+      });
+      
+      dot.classList.add('on');
+        
+      var width = bound.offsetWidth;
+      var height = bound.offsetHeight;
+       
+      var valx = ((100/width)*(dot.offsetLeft)) - 50;
+      var valy = ((100/height)*(dot.offsetTop)) - 50;
+      
+      bound.style.transform = "translate("+(valx*-1)+"%, "+(valy*-1)+"%) scale(1.2)";
+      }
+      
+    })
+    
+    items.forEach(function(item, index){
+      item.onclick = function(){
+        items.forEach(function(it){
+          it.classList.remove('on')
+        })
+        item.classList.add('on');
+        dots[index].click();
+      }
+    })
+    
+    
+    function getCarouselPos(carousel, item, index){
+      return item.offsetWidth * index;
+    }
+      
+    //# sourceURL=pen.js
+    </script>
+    </body></html>
