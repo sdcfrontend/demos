@@ -6,15 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 
-    <style type="text/css" class="cp-pen-styles">body {
+    <style type="text/css" class="cp-pen-styles">
+    * {
+      padding: 0;
+      margin: 0
+    }
+
+    body {
       padding: 0;
       margin: 0;
       background: #eee;
+      line-height: 1.1;
+      font-family: sans-serif;
+      font-size: 18px;
     }
     
     .view {
       max-width: 600px;
-      height: calc(100vh - 100px);
       max-height: 600px;
       overflow: hidden;
       position: relative; 
@@ -60,7 +68,7 @@
     }
     
     .dot.on {
-      background: #aaa
+      background: #333
     }
     
     .carousel {
@@ -84,17 +92,26 @@
       width: 150px;
       display: inline-block;
       padding: 2px;
+      vertical-align: top;
+      white-space: normal;
+      cursor: pointer    
     }
     
     li.on span {
-      background-color: #ccc
+      background-color: #fff
     }
     
     li span {
       display: block;
       background: #eee;
       height: 100px;
+      padding: 12px;
     }
+
+    h4 {
+      margin: 0 0 4px
+    }
+
     
     </style>
     
@@ -103,7 +120,7 @@
   <body>
     <div class="view">
       <div class="frame">
-        <div class="frame-bound" style="transform: translate(4.75%, 8.72093%) scale(1.2);">
+        <div class="frame-bound">
           <div class="dot" style="left: 50%; top: 32%"></div>
           <div class="dot" style="left: 46%; top: 42%"></div>
           <div class="dot" style="left: 55%; top: 45%"></div>
@@ -111,7 +128,21 @@
           <div class="dot" style="left: 60%; top: 55%"></div>
           <div class="dot" style="left: 52%; top: 60%"></div>
           <div class="dot" style="left: 61%; top: 64%"></div>
-        <img class="image" src="http://i68.tinypic.com/algp4p.png" alt="">
+
+          <div class="dot" style="left: 47%; top: 40%"></div>
+          <div class="dot" style="left: 50%; top: 39%"></div>
+          <div class="dot" style="left: 49%; top: 45%"></div>
+          <div class="dot" style="left: 40%; top: 46%"></div>
+          <div class="dot" style="left: 57%; top: 50%"></div>
+
+          <div class="dot" style="left: 55%; top: 56%"></div>
+          <div class="dot" style="left: 48%; top: 64%"></div>
+
+          <div class="dot" style="left: 57%; top: 59%"></div>
+          <div class="dot" style="left: 63%; top: 61%"></div>
+          <div class="dot" style="left: 47%; top: 54%"></div>
+          <div class="dot" style="left: 46%; top: 59%"></div>
+          <img class="image" src="http://i64.tinypic.com/5cx43p.png" alt="">
         </div>
       </div>
       
@@ -119,7 +150,25 @@
     
     <div class="carousel">
       <ul>
-        <li><span>1</span></li><li class=""><span>2</span></li><li class=""><span>3</span></li><li class=""><span>4</span></li><li><span>5</span></li><li class=""><span>6</span></li><li><span>7</span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
+        
       </ul>
       
     </div>
@@ -138,7 +187,7 @@
     dots.forEach(function(dot, index){
      
       dot.onclick = function(){
-        
+
       setCarouselHighlight(index);
 
        dots.forEach(function(item){
