@@ -20,13 +20,18 @@
       font-family: sans-serif;
       font-size: 18px;
     }
+
+    .container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+
+    }
     
     .view {
-      max-width: 600px;
-      max-height: 600px;
+      max-height: 100vh;
       overflow: hidden;
       position: relative; 
-      margin: 0 auto;
     }
     
     .view:after {
@@ -46,38 +51,56 @@
     .frame-bound {
       position: relative;
       border: 10px solid hotpink;
-      transition: transform 0.33s
+      transition: transform 0.33s;
+      counter-reset: number;
     }
     
     .image {
       top: 0;
       left: 0;
       max-width: 100%;
+      width: 100%;
     }
     
-    .dot {
+    .dot,
+    .card__image:after {
       background: white;
-      border: 2px solid black;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
+      border: 1px solid #aaa;
+      filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.4));
+      width: 22px;
+      height: 22px;
       position: absolute;
       z-index: 10;
       transform: translate(-50%,-50%);
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #114985
+    }
+
+    .dot:after {
+      content: counter(number);
+      counter-increment: number;
+      color: inherit; 
+      font-weight: bold;
+      font-size: 15px;
     }
     
     .dot.on {
-      background: #333
+      background: #114985;
+      color: white;
+      border-color: #114985
     }
     
     .carousel {
-      background: #aaa;
-      max-width: 600px;
       margin: 0 auto;
       overflow: auto;
       padding: 0;
       scroll-behavior: smooth;
+      bottom: 0;
+      left: 0;
+      width: 100%;
     }
     
     .carousel ul {
@@ -86,30 +109,69 @@
       padding: 0;
       margin: 0;
       -webkit-overflow-scrolling: touch;
+      counter-reset: card-number
     }
     
     .carousel ul li {
       width: 150px;
       display: inline-block;
-      padding: 2px;
+      padding: 8px 4px 8px;
       vertical-align: top;
       white-space: normal;
       cursor: pointer    
     }
     
-    li.on span {
-      background-color: #fff
+    li.on .card {
+      background-color: #114985;
+      color: white;
     }
     
-    li span {
+    .card {
       display: block;
-      background: #eee;
-      height: 100px;
-      padding: 12px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
     }
 
-    h4 {
-      margin: 0 0 4px
+    .card__image {
+      max-width: 100%;
+      position: relative;
+      padding-bottom: 56.25%;
+      display: block;
+    }
+
+    .card__image:after {
+      content: counter(card-number);
+      counter-increment: card-number;
+      position: absolute;
+      z-index: 2;
+      bottom: 3px;
+      left: 3px;
+      transform: scale(0.75);
+    }
+
+    .card__image > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .card h5 {
+      margin: 4px 0;
+      font-weight: normal;
+      color: inherit;
+    }
+
+    .view-reset {
+      position: absolute;
+      z-index: 4;
+      top: 10px;
+      right: 10px;
+      border: 1px solid #ccc;
+      background: white;
+      padding: 4px 9px;
+      cursor: pointer;
     }
 
     
@@ -118,7 +180,9 @@
   </head>
   
   <body>
+    <div class="container">
     <div class="view">
+      <button class="view-reset">reset</button>
       <div class="frame">
         <div class="frame-bound">
           <div class="dot" style="left: 50%; top: 32%"></div>
@@ -142,7 +206,7 @@
           <div class="dot" style="left: 63%; top: 61%"></div>
           <div class="dot" style="left: 47%; top: 54%"></div>
           <div class="dot" style="left: 46%; top: 59%"></div>
-          <img class="image" src="http://i64.tinypic.com/5cx43p.png" alt="">
+          <img class="image" src="bg.jpg" alt="">
         </div>
       </div>
       
@@ -150,28 +214,11 @@
     
     <div class="carousel">
       <ul>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        <li><span><h4>Aberdeen</h4><h5>Are machines putting us out of a job?</h5></span></li>
-        
+        <li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li><li><span class="card"><span class="card__image"><img src="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/NYb7kUs2eilnatqf0/4k-traffic-street-public-library-building-manchester-city-center-pedestrian-walk-_editorial-footage_nvfudik6x__S0000.jpg"></span><h5>Aberdeen - Are machines putting us out of a job?</h5></span></li>        
       </ul>
       
     </div>
+  </div>
     <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
     <script>var bound = document.querySelector('.frame-bound');
     
@@ -188,14 +235,10 @@
      
       dot.onclick = function(){
 
-      setCarouselHighlight(index);
-
-       dots.forEach(function(item){
-       item.classList.remove('on');
-        carousel.scrollLeft = getCarouselPos(carousel, items[index], index);
-      });
-      
-      dot.classList.add('on');
+      setHighlights(items, index);
+      setHighlights(dots, index);
+       
+      carousel.scrollLeft = getCarouselPos(carousel, items[index], index);
         
       var width = bound.offsetWidth;
       var height = bound.offsetHeight;
@@ -219,14 +262,20 @@
       return item.offsetWidth * index;
     }
 
-    function setCarouselHighlight(index){
+
+    function setHighlights(items, index, none){
       items.forEach(function(item){
         item.classList.remove('on');
       })
-
-      items[index].classList.add('on');
+      if(!none){
+        items[index].classList.add('on');
+      }
     }
       
-    //# sourceURL=pen.js
+    document.querySelector('.view-reset').onclick = function(){
+      setHighlights(dots, 0, true);
+      setHighlights(items, 0, true);
+      bound.style.cssText = "";
+    }
     </script>
     </body></html>
