@@ -7,6 +7,12 @@
   <title>Document</title>
 
     <style type="text/css" class="cp-pen-styles">
+
+    @font-face {
+      font-family: skytext;
+      src: url(http://sport.sky.de/assets/fonts/sky-regular.woff) format("woff");
+    }
+
     * {
       padding: 0;
       margin: 0
@@ -15,9 +21,9 @@
     body {
       padding: 0;
       margin: 0;
-      background: #eee;
+      background: #f3f3f3;
       line-height: 1.1;
-      font-family: sans-serif;
+      font-family: skytext, sans-serif;
       font-size: 18px;
     }
 
@@ -25,6 +31,7 @@
       position: relative;
       max-width: 600px;
       margin: 0 auto;
+      background: #f3f3f3
 
     }
     
@@ -65,7 +72,7 @@
     .dot,
     .card__image:after {
       background: white;
-      border: 1px solid #aaa;
+      /* border: 1px solid #aaa; */
       filter: drop-shadow(1px 1px 3px rgba(0,0,0,0.4));
       width: 22px;
       height: 22px;
@@ -76,7 +83,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #114985
+      color: #114985;
+      text-decoration: none;
+    }
+
+    .line {
+      width: 3px;
+      background: red;
+      overflow: hidden;
+      height: 100px;
+      position: absolute;
+      z-index: 9;
+      transform-origin: 0 0
     }
 
     .dot:after {
@@ -185,34 +203,41 @@
       <button class="view-reset">reset</button>
       <div class="frame">
         <div class="frame-bound">
-          <div class="dot" style="left: 50%; top: 32%"></div>
-          <div class="dot" style="left: 51%; top: 38%"></div>
-          <div class="dot" style="left: 47%; top: 40%"></div>
-          <div class="dot" style="left: 44%; top: 43%"></div>
-          <div class="dot" style="left: 39%; top: 46%"></div>
-          <div class="dot" style="left: 49%; top: 46%"></div>
-          <div class="dot" style="left: 55%; top: 45%"></div>
-          <div class="dot" style="left: 57%; top: 50%"></div>
-          
-          
-          <div class="dot" style="left: 52%; top: 52%"></div>
-          <div class="dot" style="left: 47%; top: 54%"></div>
-         
-          <div class="dot" style="left: 46%; top: 59%"></div>
-          <div class="dot" style="left: 52%; top: 58%"></div>
-    
-          
-
-          <div class="dot" style="left: 57%; top: 57%"></div>
-          <div class="dot" style="left: 63%; top: 58%"></div>
-
-          <div class="dot" style="left: 58%; top: 61%"></div>
-          <div class="dot" style="left: 51%; top: 65%"></div>
-
-          <div class="dot" style="left: 57%; top: 66%"></div>
-
-
-          <div class="dot" style="left: 63%; top: 65%"></div>
+          <a href="#" class="dot" style="left: 50%; top: 32%"></a>
+          <span class="line" style="left: 50%; top: 32%; height: 6%;transform: rotate(-9deg)"></span>
+          <a href="#" class="dot" style="left: 51%; top: 38%"></a>
+          <span class="line" style="left: 51%; top: 38%; height: 5%;transform: rotate(67deg)"></span>
+          <a href="#" class="dot" style="left: 47%; top: 40%"></a>
+          <span class="line" style="left: 47%; top: 40%; height: 4%;transform: rotate(46deg)"></span>
+          <a href="#" class="dot" style="left: 44%; top: 43%"></a>
+          <span class="line" style="left: 44%; top: 43%; height: 6%;transform: rotate(63deg)"></span>
+          <a href="#" class="dot" style="left: 39%; top: 46%"></a>
+          <span class="line" style="left: 39%; top: 46%; height: 10%;transform: rotate(-90deg)"></span>
+          <a href="#" class="dot" style="left: 49%; top: 46%"></a>
+          <span class="line" style="left: 49%; top: 46%; height: 6%;transform: rotate(-100deg)"></span>
+          <a href="#" class="dot" style="left: 55%; top: 45%"></a>
+          <span class="line" style="left: 55%; top: 45%; height: 6%;transform: rotate(-20deg)"></span>
+          <a href="#" class="dot" style="left: 57%; top: 50%"></a>
+          <span class="line" style="left: 57%; top: 50%; height: 5%;transform: rotate(67deg)"></span>
+          <a href="#" class="dot" style="left: 52%; top: 52%"></a>
+          <span class="line" style="left: 52%; top: 52%; height: 5%;transform: rotate(67deg)"></span>
+          <a href="#" class="dot" style="left: 47%; top: 54%"></a>
+          <span class="line" style="left: 47%; top: 54.5%; height: 5%;transform: rotate(17deg)"></span>
+          <a href="#" class="dot" style="left: 46%; top: 59%"></a>
+          <span class="line" style="left: 46%; top: 59%; height: 6%;transform: rotate(-95deg)"></span>
+          <a href="#" class="dot" style="left: 52%; top: 58%"></a>
+          <span class="line" style="left: 52%; top: 58%; height: 6%;transform: rotate(-100deg)"></span>
+          <a href="#" class="dot" style="left: 57%; top: 57%"></a>
+          <span class="line" style="left: 57%; top: 57%; height: 6%;transform: rotate(-78deg)"></span>
+          <a href="#" class="dot" style="left: 63%; top: 58%"></a>
+          <span class="line" style="left: 63%; top: 58%; height: 6%;transform: rotate(58deg)"></span>
+          <a href="#" class="dot" style="left: 58%; top: 61%"></a>
+          <span class="line" style="left: 58%; top: 61%; height: 8%;transform: rotate(60deg)"></span>
+          <a href="#" class="dot" style="left: 51%; top: 65%"></a>
+          <span class="line" style="left: 51%; top: 65%; height: 6%;transform: rotate(-77deg)"></span>
+          <a href="#" class="dot" style="left: 57%; top: 66%"></a>
+          <span class="line" style="left: 57%; top: 66%; height: 6%;transform: rotate(-100deg)"></span>
+          <a href="#" class="dot" style="left: 63%; top: 65%"></a>
           <img class="image" src="bg.png" alt="">
         </div>
       </div>
@@ -226,8 +251,10 @@
       
     </div>
   </div>
-    <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
-    <script>var bound = document.querySelector('.frame-bound');
+  
+    <script>
+    
+    var bound = document.querySelector('.frame-bound');
     
     var dots = document.querySelectorAll('.dot');
     
@@ -240,7 +267,9 @@
     
     dots.forEach(function(dot, index){
      
-      dot.onclick = function(){
+      dot.onclick = function(event){
+
+      event.preventDefault();
 
       setHighlights(items, index);
       setHighlights(dots, index);
