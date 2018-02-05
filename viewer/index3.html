@@ -15,13 +15,15 @@
 
     * {
       padding: 0;
-      margin: 0
+      margin: 0;
+      box-sizing: border-box;
+
     }
 
     body {
-      padding: 0;
+      padding: 12px;
       margin: 0;
-      background: #f3f3f3;
+      background: #fff;
       line-height: 1.1;
       font-family: skytext, sans-serif;
       font-size: 18px;
@@ -117,18 +119,17 @@
     .carousel {
       margin: 0 auto;
       overflow: auto;
-      padding: 0;
+      overflow-y: hidden;
       scroll-behavior: smooth;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
       position: absolute;
     }
     
     .carousel ul {
       list-style: none;
       white-space: nowrap;
-      padding: 0;
       margin: 0;
       -webkit-overflow-scrolling: touch;
       counter-reset: card-number
@@ -137,7 +138,7 @@
     .carousel ul li {
       width: 150px;
       display: inline-block;
-      padding: 8px 4px 8px;
+      padding: 0 4px;
       vertical-align: text-bottom;
       white-space: normal;
       cursor: pointer    
