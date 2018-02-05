@@ -1,0 +1,240 @@
+body {
+	background-color: #000;
+	margin:0px;
+}
+
+.size{
+	top:0px;
+	left:0px;
+	cursor:pointer;
+}
+
+/*remove whats not needed - from here*/
+
+#logo{
+	background: url("images/logo.png");
+	opacity:1;
+}
+
+#leg{
+	background: url("images/legibility.png");
+	opacity:0;
+	visibility: hidden;
+}
+
+#logo2{
+	background: url("images/logo2.png");
+	opacity:1;
+}
+
+#cta{
+	background: url("images/cta.png");
+	display:none;
+	opacity:0;
+}
+
+#arrow{
+	background: url("images/arrow.png");
+	display:none;
+	
+	opacity:0;
+}
+
+#copy1_1{
+	background: url("images/copy1.png");
+	opacity: 0;
+}
+
+#copy2_1{
+	background: url("images/copy2.png");
+	opacity: 0;
+}
+
+#copy3_1{
+	background: url("images/copy3.png");
+	opacity: 0;
+}
+
+
+
+#copy4_1{
+	background: url("images/copy4.png");
+	opacity: 0;
+}
+
+/*remove whats not needed - to here*/
+
+/*added following class to prevent the iphone putting the play icon over the banner*/
+
+*::-webkit-media-controls-start-playback-button {
+	display: none!important;
+	-webkit-appearance: none;
+}
+
+#ad {
+	-khtml-user-select: none;
+	display: block;
+	overflow:hidden;
+	position:absolute;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#banner {
+	display: block;
+	overflow: hidden;
+	position:absolute;
+	background: url(images/video.jpg);
+	width: 100%;
+	height: 100%;
+}
+
+.pos{
+	position:absolute;
+	transition-property: opacity, transform;
+}
+
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	border: none;
+	outline: none;
+	background-color: #0068FF;
+	cursor: pointer;
+	user-select: none;
+}
+
+#end {
+	background: url(images/end.jpg) no-repeat;
+	display:none;
+	cursor:pointer;
+	width: 100%;
+	height: 100%;
+	/*z-index:111;*/
+}
+
+#play_video {
+	position: absolute;
+	background: url(images/play.png) no-repeat;
+	background-position:50%;
+	opacity: 0.8;
+	display:none;
+	cursor:pointer;
+	/*z-index:101;*/
+	width: 100%;
+	height: 100%;
+}
+
+#clickTag{
+	position: absolute;
+	cursor:pointer;
+	/*z-index:97*/;
+}
+
+#videoContainer {
+	position: absolute;
+	top: 311px;
+	width: 300px;
+	height: 242px;
+/*	color: #000;*/
+	transform: scale(1);
+	-o-transition: .3s ease transform;
+	-ms-transition: .3s ease transform;
+	-moz-transition: .3s ease transform;
+	-webkit-transition: .3s ease transform;
+	transition: .3s ease transform;
+	/*z-index:98*/;
+	background: url(images/video.jpg);
+}
+
+#videoContainer > video {
+/*	position: absolute;*/
+/*	left:0px;*/
+}
+
+#out {
+	position: absolute;
+	left:0px;
+	background: url(images/out.png);
+}
+
+#white {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 290px;
+	height: 250px;
+	background-color: #000;
+/*	visibility: hidden;*/
+}
+
+.centered {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*z-index:90;*/
+	cursor:pointer;
+}
+
+#controls{
+	height:30px;
+	width:50px;
+	position:absolute;
+	background:url(images/controls.png) 0 0 no-repeat;
+	background-size:60%;
+	bottom:-100px;
+	right:-10px;
+	/*z-index:103;*/
+	cursor:pointer;
+	display:none;
+}
+#controls.play{
+	background-position:0 -30px;
+}
+#muteunmute{
+	height:30px;
+	width:50px;
+	position:absolute;
+	background:url(images/mute.png) 0 0 no-repeat;
+	background-size:60%;
+	left:5px;
+	bottom:-100px;
+	/*z-index:103;*/
+	cursor:pointer;
+	display:none;
+}
+#muteunmute.unmute{
+	background-position:0 -30px;			
+}
+/* hide iphone play button */
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}

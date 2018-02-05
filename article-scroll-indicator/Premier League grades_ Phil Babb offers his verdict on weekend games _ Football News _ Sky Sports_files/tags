@@ -1,0 +1,56 @@
+(function (doc, win) {
+    if (win.parent === win || true) {
+        win.babaTagLoaded = win.babaTagLoaded || false;
+        if (!win.babaTagLoaded) {
+            win.babaTagLoaded = true;
+            var USER_UUID, USER_ID;
+            var keepalive = function () {
+                var kaReq = new XMLHttpRequest();
+                kaReq.open("POST", 'https://services.babator.com/keepalive');
+                kaReq.withCredentials = true;
+                kaReq.setRequestHeader("x-user-uuid", USER_UUID);
+                kaReq.send();
+            };
+            var live = function () {
+                keepalive();
+                setInterval((function () {
+                    keepalive()
+                }), 1800000);
+            };
+            var load = function () {
+                var sdkSrc = 'https://services.babator.com/tags/init?apiKey=f962fbb0-5a40-11e7-a98c-cba9d95a6a5b' + '&userUUID=' + USER_UUID + '&userId=' + USER_ID;
+                var sdk = doc.createElement('script');
+                var firstElmByType = doc.getElementsByTagName('script')[0];
+                sdk.async = 1;
+                //sdk.onload = function () {
+                //    live();
+                //};
+                sdk.src = sdkSrc;
+                sdk.id = 'bbtrtag';
+                firstElmByType.parentNode.insertBefore(sdk, firstElmByType);
+            };
+            var loadUser = function () {
+                var userReq = new XMLHttpRequest();
+
+                function userReqListener() {
+                    var data = JSON.parse(userReq.responseText).data;
+                    USER_UUID = data.userUUID;
+                    USER_ID = data.userId;
+                    load();
+                }
+
+                userReq.addEventListener("load", userReqListener);
+                userReq.open("GET", 'https://services.babator.com/users/id');
+                userReq.setRequestHeader("x-api-key", 'f962fbb0-5a40-11e7-a98c-cba9d95a6a5b');
+                userReq.send();
+            };
+            USER_UUID = '';
+            if (USER_UUID) {
+                USER_ID = '';
+                load();
+            } else {
+                loadUser();
+            }
+        }
+    }
+})(document, window);

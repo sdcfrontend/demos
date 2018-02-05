@@ -1205,27 +1205,27 @@ svg {
       }
 
       .pic-content h3 {
-        background: white;
-        color: black;
         position: absolute;
         top: 70%;
         left: 50%;
         z-index: 10;
         font-weight: 400;
-        font-size: 3em;;
-        display: flex;
-        transform: translateX(-50%)
+        font-size: 3em;
       }
 
       .pic-content h3 span {
-        flex: 1;
-        display: block;
-        padding: 3px 6px;
-        width: 50%;
+        background: white;
+        color: black;
+        display: inline-block;
+        position: absolute;
+        right: 100%;
+        padding: 0.1em 0.25em;
         white-space: nowrap
       }
 
       .pic-content h3 span + span {
+        right: auto;
+        left: 100%;
         background:#a9050e;
         color: white;
       }
@@ -1324,7 +1324,7 @@ svg {
 <body>
 
   <div id="container"></div>
-  <div class="sdc-site-hero" data-type="index">
+  <div class="sdc-site-hero" data-type="index" data-parallax-role="frame">
   <div class="sdc-site-hero__inner">
     <div class="sdc-site-hero__body">
       <time class="sdc-site-hero__time" data-role="live-date" data-live="LIVE"><span>24.08.16 | 12:03</span></time>
@@ -1337,7 +1337,7 @@ svg {
   <picture>
     <source srcset="https://e3.365dm.com/17/11/2048x1152/skynews-prince-harry-meghan-markle_4167951.jpg?bypass-service-worker&20171127144044" media="(min-width: 600px)">
     <source srcset="https://e3.365dm.com/17/11/512x512/skynews-prince-harry-meghan-markle_4167951.jpg?bypass-service-worker&20171127144044" media="(max-width: 600px)">
-    <img src="https://e3.365dm.com/17/11/1024x768/skynews-prince-harry-meghan-markle_4167951.jpg?bypass-service-worker&20171127144044" alt="Manchester City&#39;s Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St" class="sdc-site-hero__image">
+    <img src="https://e3.365dm.com/17/11/1024x768/skynews-prince-harry-meghan-markle_4167951.jpg?bypass-service-worker&20171127144044" data-parallax-role="subject" data-multiplier="0.25" alt="Manchester City&#39;s Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St" class="sdc-site-hero__image">
   </picture>
 </div>
 
@@ -1433,29 +1433,29 @@ svg {
 
       <div class="gallery">
 
-          <div class="pic">
+          <div class="pic" data-parallax-role="frame">
             <div class="pic-mask">
               <div class="pic-bg"></div>
               <div class="pic-content">
-                <h3><span>Soldier</span> <span>Actress</span></h3>
+                <h3 data-parallax-role="subject" data-multiplier="0.05"><span data-parallax-role="subject" data-multiplier="0.1">Soldier</span> <span data-parallax-role="subject" data-multiplier="0.15">Actress</span></h3>
                 <img src="hero_2.jpg" alt="">
               </div>
             </div>
           </div>
 
-          <div class="pic">
+          <div class="pic" data-parallax-role="frame">
               <div class="pic-mask">
                 <div class="pic-bg"></div>
                 <div class="pic-content">
-                    <h3><span>Harry</span> <span>Megan</span></h3>
+                    <h3 data-parallax-role="subject" data-multiplier="0.05"><span data-parallax-role="subject" data-multiplier="0.1">Harry</span> <span data-parallax-role="subject" data-multiplier="0.15">Megan</span></h3>
                   <img src="hero_1.jpg" alt="">
                 </div>
               </div>
             </div>
 
-        
-        
-          
+
+
+
         </div>
 
         <div class="image-con"><div class="image" data-scroll-action  style="background-image:url(PL_BG.jpg)">
@@ -1473,7 +1473,6 @@ function tick(){
   var h = window.innerHeight;
   items.forEach(function(item){
     var dims = item.getBoundingClientRect();
-    console.log(dims.top);
     if(dims.top < 10){
       item.setAttribute('data-scroll-action-active', 'true');
     }
@@ -1489,6 +1488,7 @@ tick();
 scrollAction();
 
 </script>
+<script src="../sticky-images/js/parallax.js"></script>
 </body>
 
 </html>

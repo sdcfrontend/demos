@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<!-- saved from url=(0173)https://s0.2mdn.net/ads/richmedia/studio/pv2/60520280/20180115021710611/GB_SUV_Convince_CHR_300x600/index.html?e=69&renderingType=2&leftOffset=0&topOffset=0&c=5haX0AdYd6&t=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css">
+<script src="./Enabler_01_209.js"></script>
+<script src="./tweenmax_1.19.1_92cf05aba6ca4ea5cbc62b5a7cb924e3_min.js"></script>
+
+<style type="text/css">
+
+/*banner dimentions*/
+
+.size{
+	width:300px;
+	height:600px;
+}
+
+</style>
+
+<script type="text/javascript">
+
+var isIphone = (/iPhone/i).test(navigator.userAgent); <!--this is to detect if the ad is shown on a iphone-->
+var videoContainer;
+var video;
+var sdkVideoPlayer;
+var sdkVideoPlayButton;
+var fade = true;
+var html1, html2, ad, vid, clickTag, videoContainer, ht1, ht2;
+var iphone10 = once = played = playing = ended = clicked = videoEnd = framelock1 = framelock2 = framelock3 = framelock4 = framelock5 = ctalock = false;
+
+/*Set this to true if copy is required*/
+
+var copy = true; 	
+
+/*List all the ellements to be cleared on clickThru*/
+
+var assetArray = ["copy1_1", "copy2_1", "copy3_1"];
+
+/*List all the ellements to appear on end frame upon clickThru*/
+
+var endArray = ["cta", "copy4_1"];
+
+/*times when the copy appears*/
+
+var timesArray = [0, 0, 1.9, 3.9, 5.6, 11];
+
+/*Set this to false before uploading to Studio*/
+
+var local = false;
+
+//***** Start of code *****
+
+window.onload = function() {
+  if (Enabler.isInitialized()) {
+      enablerInitHandler();
+  } else {
+      Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+  }
+}
+
+function enablerInitHandler() {
+  if (Enabler.isPageLoaded()) {
+    pageLoadedHandler();
+  } else {
+    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, pageLoadedHandler);
+  }
+}
+
+function pageLoadedHandler() {	
+	document.getElementById("banner").style.visibility = "visible";
+	ad = document.getElementById("ad");
+	vid = document.getElementById("vid");
+	videoContainer = document.getElementById("videoContainer");
+	clickTag = document.getElementById("clickTag");
+	videoContainer = document.getElementById("videoContainer");
+	appendVideo(); <!--this adds the video to the stage id required-->
+	//imgSize(); <!--this gets the banner size and sets it-->
+	
+	Enabler.loadModule(studio.module.ModuleId.VIDEO, function() {
+	  studio.video.Reporter.attach('vid', video);
+	});
+}
+
+function appendVideo() {
+	<!--we have removed the video tags from within the HTML and add them in once the JS has loaded. This is because if the ad is displaced on an iphone it will put a play icon over the top of the video which conflicts with the clickTag-->
+	
+	ht1 = "poster='images/video.jpg' muted playsinline webkit-playsinline onclick='clickMe()' onEnded='finvideo()'><source src='" //+ Enabler.getUrl('contentVideos/video.mp4') + "
+	ht2 = "' type='video/mp4'></video>"   
+	
+	if(local){
+		html2 = ht1 + "videos/video.mp4" + ht2
+	}else{
+		html2 = ht1 + Enabler.getUrl('videos/video.mp4') + ht2
+	}
+	
+	<!--If its an iphone then detect version, because IO10+ can autoplay video-->
+	
+	if(isIphone){
+		ver = iOSversion();
+		if (ver[0] >= 5) {
+			///alert("IOS v"+ver[0])
+			if(ver[0]>=Number(10)){
+				iphone10=true;
+			}
+		}
+	}
+	
+	//decides the HTML video tags to insert into the banner
+	 
+	if(isIphone!=iphone10){ //iphone IOS9 or lower
+		html1 = "<video id='video'"
+		console.log("iphone")
+		document.getElementById("play_video").style.display = "block"; //adds custom play icon
+	}else{ //all other devices and IOS10+
+		html1 = "<video autoplay id='video'"
+		console.log("not iphone")
+		document.getElementById("videoContainer").innerHTML = html1+html2 //adds autoplay video handled by browser
+		addVideo();
+	}    
+}
+
+function onProgress(){
+	//This is the eventListener firing whilst the video is playing
+	console.log("progress ",video.currentTime)
+	
+	/*Copy frames*/
+	
+	if(copy){
+		if(video.currentTime>timesArray[0]&&!framelock1){
+			framelock1 = true;
+		}else if(video.currentTime>timesArray[1]&&!framelock2){
+			framelock2 = true;
+			TweenMax.to("#copy1_1", 0.1, {opacity:1,delay:0});
+			TweenMax.to("#copy1_1", 0.1, {opacity:0,delay:1.5});
+		}else if(video.currentTime>timesArray[2]&&!framelock3){
+			framelock3 = true;
+			document.getElementById("copy2_1").style.display = "block";
+			TweenMax.to("#copy2_1", 0.1, {opacity:1,delay:0});
+			TweenMax.to("#copy2_1", 0.1, {opacity:0,delay:1.5});
+		}else if(video.currentTime>timesArray[3]&&!framelock4){
+			framelock4 = true;
+			document.getElementById("copy3_1").style.display = "block";
+			TweenMax.to("#copy3_1", 0.1, {opacity:1,delay:0});
+			TweenMax.to("#copy3_1", 0.1, {opacity:0,delay:1.5});
+		}else if(video.currentTime>timesArray[4]&&!framelock5){
+			framelock5 = true;
+			document.getElementById("copy4_1").style.display = "block";
+			TweenMax.to("#copy4_1", 0.1, {opacity:1,delay:0});
+		}else if(video.currentTime>timesArray[5]&&!ctalock){
+			ctalock = true;
+			document.getElementById("cta").style.display = "block";
+			document.getElementById("arrow").style.display = "block";
+			
+			TweenMax.to("#cta", 0.1, {opacity:1,delay:0.9});
+//			TweenMax.to("#arrow", 0.1, {opacity:1, delay:0.9});
+			
+//			TweenMax.to("#arrow", .15,{left:'+=5', delay:1.5, yoyo:true, repeat:3})
+		}
+	}else{
+		console.log("NO COPY WILL BE ANIMATED OVER THE VIDEO")	
+	}
+	
+	//if a second has past and the video hasnt started playing then autoplay probably isnt supported (IPAD/Andriod) then show custom play button
+	
+	if(!once){ //This adds the play icon if the video doesn't autoplay
+		once=true;
+		console.log("play video");
+		
+		setTimeout(function(){
+			if(video.currentTime<0.1&&!clicked&&!playing&&!iphone10){
+				//alert("this is running")
+				document.getElementById("play_video").style.display = "block";
+				document.getElementById("controls").style.display = "none";
+				document.getElementById("muteunmute").style.display = "none"; 
+				//video.pause();
+			}
+		}, 1000); 
+	} 
+	
+	if(fade&&video.currentTime>0){ //This fades out the start frame so there's not sure a hard transition for the start frame to the video
+		fade=false;
+		TweenMax.to("#vid", .1,{opacity:0})
+	}
+		
+	//Sets the video controls on if its not an IOS 9 or lower
+		
+	if(video.currentTime>0&&video.currentTime<1&&!isIphone){
+		setControls()
+	}else if(iphone10){
+		setControls()
+	}
+		
+	if(video.currentTime>=video.duration){ //Stops the listener at the end of the video
+		played = videoEnd = true;
+		once = false;
+		clearInterval(prog)
+		ended = true;
+	}
+	
+	//On the iphone 9 and lower the video goes into the iphones own video player, so when the video ends the user needs to close the player.
+	//The following function detects the user closing that video and makes the in-page show as the end frame.  
+	
+	video.addEventListener('webkitendfullscreen', function(){  
+		document.getElementById("controls").style.display = "none";
+		document.getElementById("muteunmute").style.display = "none"; 
+		document.getElementById("play_video").style.display = "none";
+		video.style.display = "block";
+		video.currentTime = video.duration;
+		ended = true;
+		//alert("video end");
+	});
+}
+
+
+function clearAll(){
+	for(var i=0; i<assetArray.length;i++){
+		document.getElementById(assetArray[i]).style.display = "none";
+		document.getElementById(assetArray[i]).style.opacity = 0;
+		console.log(assetArray[i])
+	}
+	
+	for(var i=0; i<endArray.length;i++){
+		document.getElementById(endArray[i]).style.display = "block";
+		document.getElementById(endArray[i]).style.opacity = 1;
+		console.log(endArray[i])
+	}
+	
+}
+		
+function clickMe() {
+	console.log("clickThru")
+	Enabler.exit('BackgroundExit');
+	clearInterval(prog);
+	if(!ended){
+		ended = true;
+		video.pause()
+		clearAll();
+//		document.getElementById("end").style.display = "block";
+		video.muted = true;
+		console.log("send to end "+video.duration)
+	}
+	muteunmute.className = "mute";
+	controls.className= "play";
+} 
+
+function finvideo() {//
+	controls.style.display = "none";
+	muteunmute.style.display = "none";
+	ended = true;
+}
+
+function addVideo(){
+	video = document.getElementById("video");
+	initVideo();
+}
+
+function initVideo() { // This is a Sizmek function
+	
+	videoContainer.style.visibility = "visible";
+
+	// Init page load after init video
+	initPageLoad();
+}
+
+function initPageLoad(){
+	document.getElementById("clickTag").addEventListener('click', clickMe)
+	prog = setInterval(onProgress, 100);
+}
+	
+function letsGo(){
+	console.log("lets go")
+		
+	if(isIphone){
+		console.log("show no controls")
+			
+		document.getElementById("videoContainer").innerHTML = html1+html2;
+		addVideo();
+		video.addEventListener('pause', iphonePauseFunction);
+			
+			
+	document.getElementById("play_video").style.display = "none";
+			
+		}else{
+			<!--only show controls if not shown on iphone because iphone uses device controls-->
+			
+			document.getElementById("controls").style.display = "block";
+			document.getElementById("muteunmute").style.display = "block";   
+		}
+		clicked = true;
+		playPause();
+		muteUnmute();
+}	
+
+</script>
+
+<script type="text/javascript" charset="UTF-8" src="./prod_studio_01_209_videomodule.js"></script></head>
+<body>
+	<div id="ad" class="pos size">
+		<div id="banner" class="pos size" style="visibility: visible;">
+			<div id="videoContainer" class="pos size" style="visibility: visible;"><video autoplay="" id="video" poster="images/video.jpg" muted="" playsinline="" webkit-playsinline="" onclick="clickMe()" onended="finvideo()"><source src="https://gcdn.2mdn.net/videoplayback/id/a7765133d907076c/itag/15/source/doubleclick/ratebypass/yes/mime/video%2Fmp4/acao/yes/ip/0.0.0.0/ipbits/0/expire/3660652925/sparams/id,itag,source,ratebypass,mime,acao,ip,ipbits,expire/signature/686352EE3B6AAB4156D17A1BC67E81480761508A.B66DB6630D9D820A8E6B975564B6B0EDADC39888/key/ck2/file/file.mp4" type="video/mp4"></video></div>
+            <img id="vid" class="pos size" src="./video.jpg" style="opacity: 0;">
+			<div id="clickTag" class="pos size"></div>
+            <div id="end" class="pos size" onclick="clickMe()"></div>
+<!--            <div id="white" class="pos size"></div>-->
+			<div id="copy1_1" class="pos size" style="opacity: 0;"></div>
+            <div id="copy2_1" class="pos size" style="display: block; opacity: 0;"></div>
+            <div id="copy3_1" class="pos size" style="display: block; opacity: 0;"></div>
+            <div id="copy4_1" class="pos size" style="display: block; opacity: 1;"></div>
+<!--            <div id="leg" class="size pos"></div>-->
+            <div id="cta" class="size pos" style="display: block; opacity: 1;"></div>
+            <div id="arrow" class="size pos" style="display: block;"></div>
+<!--            <div id="logo2" class="size pos"></div>-->
+            <div id="logo" class="size pos" onclick="clickMe()"></div>
+			<div id="controls" onclick="playPause()" style="display: none;"></div>
+			<div id="muteunmute" onclick="muteUnmute()" style="display: none;"></div> 
+			<div id="play_video" class="pos size" onclick="letsGo()" style="display: none;"></div>
+	  </div>
+	</div>
+
+
+
+<script type="text/javascript">
+
+function setControls(){
+	playing = true;
+	document.getElementById("controls").style.display = "block";
+	document.getElementById("muteunmute").style.display = "block"; 
+	document.getElementById("play_video").style.display = "none";
+}
+  
+function playPause(){
+	document.getElementById("play_video").style.display = "none";
+	
+	if (video.paused) {
+		video.play();
+		controls.className= "pause";
+		  
+		console.log("play "+ video.duration)
+		clearInterval(prog)
+		prog = setInterval(onProgress, 100);
+	}else {
+		video.pause();
+		controls.className= "play";
+	}
+}
+        
+function muteUnmute(){
+	if (video.muted) {
+		video.muted = false;
+		muteunmute.className= "unmute";
+	}else {
+		video.muted = true;
+		muteunmute.className= "mute";
+	}
+}
+
+function iphonePauseFunction(){
+	<!--if shown on iphone and user pauses (using the device controls), or exits the video, show the custom play icon again so the user can continue to play video else they end up with an ad you cant resume-->
+	
+	if(video.currentTime<10){
+		document.getElementById("video").style.display = "none";
+		document.getElementById("play_video").style.display = "block";
+	}
+}
+
+// This detects IOS version
+
+function iOSversion() {
+	if (/iP(hone|od|ad)/.test(navigator.platform)) {
+		// supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
+		var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+		return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+	}
+}
+
+// This detects banner dimentions
+
+function imgSize(){
+	var realWidth = vid.naturalWidth;
+	var realHeight = vid.naturalHeight;
+	ad.style.width = videoContainer.style.width = clickTag.style.width = realWidth+"px";
+	ad.style.height = videoContainer.style.height =  clickTag.style.height = realHeight+"px";
+}
+
+</script></body></html>

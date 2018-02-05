@@ -1,0 +1,61 @@
+(function (doc, sdkSrc) {
+    if (!window.Babator || !window.Babator.isLoaded) {
+        window.Babator = window.Babator || {};
+        window.Babator.isLoaded = true;
+        var sdk = doc.createElement('script');
+        var firstElmByType = doc.getElementById('bbtrtag');
+        sdk.async = 1;
+        sdk.onload = function () {
+            function loadLayouts(cb) {
+                var uiTagUrls = ["https://cdn.babator.com/layouts/external/sky.min.js?version=27"];
+                var uiCount = uiTagUrls.length;
+                var errors = [];
+                var onerror = function (err) {
+                    errors.push(err);
+                    finishIfNeed();
+                };
+                var onload = function () {
+                    finishIfNeed();
+                };
+                var finishIfNeed = function () {
+                    uiCount--;
+                    if (uiCount == 0) {
+                        if (errors.length > 0) {
+                            cb(errors);
+                        } else {
+                            cb();
+                        }
+                    }
+                };
+                for (var iUrl = 0; iUrl < uiTagUrls.length; iUrl++) {
+                    var uiSdkUrl = uiTagUrls[iUrl];
+                    (function (sdkUiSrc) {
+                        var sdkUi = doc.createElement('script');
+                        sdk = doc.getElementById('bbtrtaginit');
+                        sdkUi.async = 1;
+                        sdkUi.src = sdkUiSrc;
+                        sdkUi.addEventListener('error', onerror);
+                        sdkUi.addEventListener('load', onload);
+                        sdk.parentNode.insertBefore(sdkUi, sdk);
+                    }(uiSdkUrl));
+                }
+            }
+
+            var sdkConfig = {"apiUrl":"https://services.babator.com","cdn":"https://cdn.babator.com","showUI":false,"ads":{"vpaidMode":2,"adTimeout":30000,"loadVideoTimeout":20000,"vastLoadTimeout":10000,"numRedirects":100},"switchPlayer":false,"pauseOnVisibilityLoss":false,"showOnClipEnd":false,"autoplayOnClipEnd":true,"autoplayOnStart":false,"showOnHover":true,"showOnPause":true,"pageScanPeriod":10000,"stopAfterPlayerDetection":true,"preEndRecommendationTimes":[{"start":-10}],"customerHandler":"SkyHandler","playerSelector":"","logging":{"key":"AIzaSyAJU0BK9LKVDyCmQxOxYI7FOpo2jHr1k48"},"pixelConfig":{"pixelEnabled":false,"adapterClass":""},"apiKey":"f962fbb0-5a40-11e7-a98c-cba9d95a6a5b","userUUID":"85a298b0-fd0c-11e7-8679-7da35cebdab4","userId":"85a298b1-fd0c-11e7-8679-7da35cebdab4","autorun":true};
+            var uiConfig = {"layouts":[{"layoutClass":"layout_sky_external"}],"layoutsConfig":{"internal":{"showToggle":false,"textDirection":"ltr","showCloseButton":true,"showPreviewValue":true,"playerResponsiveSize":{"small":{"min":0,"max":360,"tiles":1,"shrinkPlayer":false},"medium":{"min":360,"max":600,"tiles":3,"shrinkPlayer":true},"large":{"min":600,"max":960,"tiles":6,"shrinkPlayer":true},"full":{"min":960,"max":4000,"tiles":6,"shrinkPlayer":true}},"categories":{"foryou":{"prefix":"WATCHED BY","suffix":"of viewers like you","backgroundColor":"rgba(17, 171, 224, 0.8)","textColor":"#FFFFFF"},"mostrecent":{"prefix":"NEW VIDEO","suffix":"already watched it","backgroundColor":"rgba(62, 215, 150, 0.8)","textColor":"#FFFFFF"},"mostviewed":{"prefix":"TOP VIEWED BY","suffix":"of viewers like you","backgroundColor":"rgba(221, 75, 161, 0.8)","textColor":"#FFFFFF"}},"dictionary":{"YouMightAlsoLike":"YOU MIGHT ALSO LIKE:","NextUp":"UP NEXT:"}},"external":{"textDirection":"ltr","pauseOnClick":false,"showPoweredBy":true,"showToggle":true,"showCurrentMovieOverlay":false,"showPreviewValue":true,"animatedThumbnailOver":true,"playerResponsiveSize":{"small":{"min":0,"max":360,"tiles":1,"shrinkPlayer":false},"medium":{"min":360,"max":600,"tiles":3,"shrinkPlayer":true},"large":{"min":600,"max":960,"tiles":6,"shrinkPlayer":true},"full":{"min":960,"max":4000,"tiles":6,"shrinkPlayer":true}},"categories":{"foryou":{"flag":"4U","prefix":"WATCHED BY","suffix":"of viewers like you","backgroundColor":"#498dfc","textColor":"#FFFFFF"},"mostrecent":{"flag":"NEW","prefix":"IN TOP","suffix":"New Videos","backgroundColor":"#299934","textColor":"#FFFFFF"},"mostviewed":{"flag":"HOT","prefix":"RANKED","suffix":"In Last 24H","backgroundColor":"#ea021a","textColor":"#FFFFFF"}},"dictionary":{"YouMightAlsoLike":"","NextUp":"","NowWatching":"NOW WATCHING:","Resume":"RESUME"}},"widget":{"textDirection":"ltr","showPreviewValue":true,"playerResponsiveSize":{"small":{"min":0,"max":360,"tiles":3},"medium":{"min":360,"max":600,"tiles":3},"large":{"min":600,"max":960,"tiles":5},"full":{"min":960,"max":4000,"tiles":5}},"categories":{"foryou":{"prefix":"WATCHED BY","suffix":"of viewers like you","backgroundColor":"rgba(17, 171, 224, 0.8)","textColor":"#FFFFFF"},"mostrecent":{"prefix":"NEW VIDEO","suffix":"already watched it","backgroundColor":"rgba(62, 215, 150, 0.8)","textColor":"#FFFFFF"},"mostviewed":{"prefix":"TOP VIEWED BY","suffix":"of viewers like you","backgroundColor":"rgba(221, 75, 161, 0.8)","textColor":"#FFFFFF"}},"dictionary":{"YouMightAlsoLike":"YOU MIGHT ALSO LIKE:","NextUp":"UP NEXT:","NowWatching":"NOW WATCHING:","Resume":"RESUME"}}}};
+            if (Babator.__features && Babator.__features.lazyLayouts) {
+                Babator.loadLayouts = loadLayouts;
+                Babator.config(sdkConfig);
+                Babator.config('layout', uiConfig);
+            } else {
+                loadLayouts(function () {
+                    Babator.config(sdkConfig);
+                    Babator.config('layout', uiConfig);
+                });
+            }
+        };
+        sdk.src = sdkSrc;
+        sdk.id = 'bbtrtaginit';
+        firstElmByType.parentNode.insertBefore(sdk, firstElmByType);
+    }
+})(document, 'https://cdn.babator.com/customers/sky/Babator-Connector.min.js?version=9');
