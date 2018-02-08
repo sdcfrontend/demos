@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  
+<head>
+
+  <meta name="viewport" id="viewport" content="width=device-width,maximum-scale=1,minimum-scale=1,minimal-ui">
+
+  <style>
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @font-face {
+    font-family: skytext;
+    src: url(sky-regular.woff) format("woff");
+  }
+
+  body {
+    font-family: skytext;
+    min-height: 3000px;
+  }
+  
+  .view {
+    position: relative;
+    max-width: 640px;
+    margin: 20px auto;
+  }
+  
+  .view-frame {
+    background: #eee;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .view-image {
+    width: 100%;
+  }
+
+  .view-overlay {
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    /* background: rgba(255, 0, 0, 0.297) */
+  }
+
+  .view-caption {
+    background: white;
+    color: black;
+    padding: 18px 36px;
+    position: absolute;
+    z-index: 11;
+    line-height: 1.4;
+    margin: 26px 0 0 0;
+    width: 90%;
+    left: 5%;
+    visibility: hidden;
+    opacity: 0;
+    border: 1px solid #ccc;
+    /* filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.588)); */
+  }
+
+  .view-caption__next,
+  .view-caption__previous {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    padding: 9px;
+  }
+
+  .view-caption__previous {
+    right: auto;
+    left: 0
+  }
+
+  .view-spot {
+    width: 26px;
+    height: 26px;
+    background: #053e7a;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    text-decoration: none;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .view-spot--open {
+    z-index: 12;
+    background: #146bc9
+  }
+
+  .view-spot--open + .view-caption {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .view-spot--open:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: rotate(45deg);
+    top: calc(8px + 100%);
+    z-index: 11;
+    left: calc(50% - 5px);
+    border: 1px solid #ccc;
+    border-right: 0;
+    border-bottom: 0;
+
+  }
+
+  .view-caption__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+  }
+
+  @media all and (max-width: 600px){
+    .view-caption {
+      left: 50%!important;
+      transform: translate(-50%,0)!important;
+      margin-left: 0!important;
+      width: 100%;
+    }
+
+    .view-spot {
+      height: 22px;
+      width: 22px;
+    }
+
+    .view-spot:after {
+      top: calc(10px + 100%);
+    }
+  }
+
+</style>
+  
+</head>
+  <body>
+  <div class="view">
+    <div class="view-frame">
+        <div class="view-overlay" data-role="overlay">
+          
+          
+          <a href="#" class="view-spot" style="left: 49.2325%; top: 32.1429%;">1</a>
+          
+          <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Eye</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.</p><a href="#" class="view-caption__next" data-index="0">></a></div>
+          
+          <a href="#" class="view-spot" style="left: 52.6316%; top: 38.0252%;">2</a>
+          
+          <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Nose</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="1"><</a><a href="#" class="view-caption__next" data-index="1">></a></div>
+            
+            <a href="#" class="view-spot" style="left: 40.5702%; top: 51.313%;">3</a>
+            
+            <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Mouth</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="2"><</a><a href="#" class="view-caption__next" data-index="2">></a></div>
+              
+              <a href="#" class="view-spot" style="left: 26.0965%; top: 45.6933%;">4</a>
+            
+              <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Ear</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="3"><</a><a href="#" class="view-caption__next" data-index="3">></a></div>
+                
+                <a href="#" class="view-spot" style="left: 50%; top: 63.7605%;">5</a>
+            
+              <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Hand</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="4"><</a><a href="#" class="view-caption__next" data-index="4">></a></div>
+                
+                <a href="#" class="view-spot" style="left: 85.5%; top: 71.1261%;">6</a>
+            
+              <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Tail</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="5"><</a><a href="#" class="view-caption__next" data-index="5">></a></div>
+                
+                <a href="#" class="view-spot" style="left: 74.3991%; top: 50.7353%;">7</a>
+            
+              <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Belly</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="6"><</a></div></div>
+          <img class="view-image" src="map-1.png" alt="">
+    </div>
+
+  </div>
+
+  <script>
+    var overlay = document.querySelector('[data-role="overlay"]');
+    var dots = document.querySelectorAll('.view-spot');
+    var caption = document.querySelectorAll('.view-caption');
+    var closebuttons = document.querySelectorAll('.view-caption__close');
+    var nextButtons = document.querySelectorAll('.view-caption__next');
+    var prevButtons = document.querySelectorAll('.view-caption__previous');
+
+
+    nextButtons.forEach(function(button){
+      button.onclick = function(event){
+        event.preventDefault();
+        var index = parseInt(button.getAttribute('data-index'), 10);
+        if(dots[index+1]){
+          dots[index+1].click();
+          dots[index+1].focus();
+        }
+      }
+    });
+
+    prevButtons.forEach(function(button){
+      button.onclick = function(event){
+        event.preventDefault();
+        var index = parseInt(button.getAttribute('data-index'), 10);
+        if(dots[index-1]){
+          dots[index-1].click();
+          dots[index-1].focus();
+        }
+      }
+    });
+
+    dots.forEach(function(dot, index){
+      dot.onclick = function(event){
+        event.preventDefault();
+        positionCaption(event, dot, caption[index], overlay);
+      }
+    })
+
+    closebuttons.forEach(function(closebutton, index){
+      closebutton.onclick = function(event){
+        event.preventDefault();
+        dots[index].click();
+      }
+    });
+
+    function toPercent(value, total){
+      return (100/total)*value;
+    }
+
+    function toPercentConstraint(value, parent, caption){
+      var left = value;
+      var dims = parent.getBoundingClientRect();
+      var offset = (caption.offsetWidth + value) - dims.width;
+      var marginLeft = window.getComputedStyle(caption, null).getPropertyValue('margin-left');
+      marginLeft = Number(marginLeft.replace('px', ''));
+      
+      if(offset > 0){
+        if((dims.width - left) < Math.abs(marginLeft)){
+          left += Math.abs(marginLeft);
+        };
+        left = left - offset;
+      }
+
+      return toPercent(left, dims.width);
+    }
+
+    function positionCaption(event, dot, caption, overlay){
+
+      document.querySelectorAll('.view-spot').forEach(function(item){
+        if(item!==dot){
+          item.classList.remove('view-spot--open');
+        }
+      });
+
+      dot.classList.toggle('view-spot--open');
+
+      if(dot.classList.contains('view-spot--open')){
+        center(dot);
+      }
+
+      // var x = event.target.offsetLeft;
+      // var y = event.target.offsetTop;
+      var css = [];
+      // css.push("left:" + dot.style.left);
+      css.push("top:" + dot.style.top);
+
+      // if(parseInt(dot.style.left, 10) > 75){
+      //   css.push("transform: translateX(-60%)");
+      // }
+
+      caption.style.cssText = css.join(";");
+      // caption.style.cssText = "left:"+toPercentConstraint(x, overlay, caption)+"%;top:"+toPercent(y, overlay.offsetHeight)+"%"; 
+    }
+
+    function center(el){
+      var dims = el.getBoundingClientRect();
+      var y = window.pageYOffset;
+      var screeny = window.innerHeight;
+      var top = dims.top;
+      
+      window.scrollTo(0, (y + top) - (screeny/3));
+    }
+  </script>
+  </body>
+  </html>
