@@ -295,8 +295,36 @@
       animation: target4 11000ms linear;
       animation-fill-mode: both
     }
+
+
+    @keyframes panel {
+      0% {
+        height: 0;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      1% {
+        height: 60px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      20% {
+        opacity: 0;
+        height: 60px;
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        height: 60px;
+      }
+    }
+
     .con__info {
       overflow: auto;
+      height: 300px;
     }
 
     .con__info li {
@@ -304,15 +332,14 @@
       margin: 7px;
       background: #444;
       list-style: none;
-      will-change: all;
-      transform: scale(0.7);
+      will-change: opacity, transform;
       height: 60px;
-      display: flex;
       flex-direction: column;
       justify-content: center;
       padding-left: 80px;
-      opacity: 0;
-      transition: all 0.33s
+      display: flex;
+      height: 1px;
+      overflow: hidden;
     }
 
     .con__info li:after {
@@ -340,27 +367,36 @@
       font-size: 15px;
     }
 
-    .active li:first-child {
-      transform: scale(1);
-      opacity: 1;
+    li {
+    
     }
 
-    .active  li:first-child + li   {
-      transform: scale(1);
-      opacity: 1;
-      transition-delay: 0.25s
+    li:first-child {
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 5s;
+
     }
 
-    .active li:first-child + li + li{
-      transform: scale(1);
-      opacity: 1;
-      transition-delay: 5s
+     li:first-child + li   {
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 5.25s;
+
     }
 
-    .active li:first-child + li + li + li{
-      transform: scale(1);
-      opacity: 1;
-      transition-delay: 5.25s
+    li:first-child + li + li{
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 0.1s;
+
+    }
+
+   li:first-child + li + li + li{
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 0.35s;
+
     }
 
    
@@ -380,18 +416,18 @@
         <span class="target target--4"></span>
         <span class="caption caption--4">David Furnish</span>
       </div>
-      <video src="clip2.mp4" autoplay muted></video>
+      <video src="clip2.mp4" autoplay muted preload></video>
     </div>
     <div class="con__info">
 
       <ul>
-          <li><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-            <p>Socialite</p></li>
-            <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-            <p>Author</p></li>
+        
         <li><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
         <li><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-        
+        <li><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+          <p>Socialite</p></li>
+          <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+          <p>Author</p></li>
       </ul>
     </div>
 
