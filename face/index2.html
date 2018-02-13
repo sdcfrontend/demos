@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face recognition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  @font-face {
+    font-family: skytext;
+    src: url(sky-regular.woff) format("woff");
+  }
+
+  html {
+    font-family: skytext;
+    font-size: 18px;
+    text-align: center;
+  }
+
+    .con {
+      background: #333;
+      margin: 10px auto;
+      max-width: 680px;
+      display: inline-block;
+      text-align: left
+    }
+
+    .video {
+  position: relative;
+  display: inline-block
+}
+
+.dot {
+  position: absolute;
+  left: 46%;
+  top: 22%;
+  will-change: left, top;
+  transition: left 1s, top 1s;
+  transform: translate(-100%, 0);
+  z-index: 10
+}
+
+.dot__spot {
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transform: translate(50%, -50%);
+}
+
+.dot__spot:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+.dot__spot:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+
+.dot__caption {
+  background: white;
+  padding: 4px 9px;
+  font-size: 14px;
+  font-family: sans-serif;
+  transform: translate(-10%, 100%)
+} 
+
+.dot--2 {
+  left: 65.5%;
+  top: 25%
+}
+
+.dot--2  .dot__caption {
+  transform: translate(75%, 140%)
+}
+
+.dot--3 {
+  visibility: hidden;
+  left: 22%;
+  top: 20%;
+}
+
+.dot--4 {
+  visibility: hidden;
+  left: 84%;
+  top: 17%;
+}
+
+video {
+  width: 100%;
+}
+
+.con__info {
+      overflow: auto;
+      height: 300px;
+    }
+
+    .con__info li {
+      color: #fff;
+      margin: 7px;
+      background: #444;
+      list-style: none;
+      will-change: opacity, transform;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+      display: flex;
+      height: 1px;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    .con__info li:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .con__info img {
+      width: 60px;
+      height: 60px;
+      float: left;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .con__info h3 {
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    .con__info p {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+
+    @keyframes panel {
+      0% {
+        height: 1px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      1% {
+        height: 60px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      20% {
+        opacity: 0;
+        height: 60px;
+      }
+
+      100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        height: 60px;
+      }
+    }
+
+    .con__info li.active {
+      animation: panel 0.25s linear;
+      animation-fill-mode: both;
+    }
+
+  
+
+
+</style>
+<body>
+  <div class="con">
+    <div class="video">
+ 
+        <span class="dot">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Santa Montefiore</div>
+        </span>
+        
+        <span class="dot dot--2">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Tara Palmer-Tomkinson</div>
+        </span>
+        
+        <span class="dot dot--3">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Elton John</div>
+        </span>
+        
+         <span class="dot dot--4">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">David Furnish</div>
+        </span>
+        
+        <video controls  src="https://sdcfrontend.github.io/demos/face/clip2.mp4"></video>
+      
+      </div>
+
+      <div class="con__info">
+
+          <ul>
+            
+            <li><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+            <li><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+            <li><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+              <p>Socialite</p></li>
+              <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <p>Author</p></li>
+          </ul>
+        </div>
+
+    </div>
+      
+      <script>
+        var video = document.querySelector('video');
+        var list = document.querySelectorAll('.con__info li');
+
+        var dot = document.querySelector('.dot');
+        var dot2 = document.querySelector('.dot--2');
+        var dot3 = document.querySelector('.dot--3');
+        var dot4 = document.querySelector('.dot--4');
+
+        video.addEventListener('timeupdate', function(ev){
+
+          
+          if(video.currentTime < 1){
+            dot.style.cssText = "left: 51%;top: 22%";
+          }
+          
+          if(video.currentTime > 1 && video.currentTime < 2){
+            dot.style.cssText = "left: 53%;top: 19%";
+            dot2.style.cssText = "left: 66%;top: 22%"
+            list[3].classList.add('active');
+          }
+          
+          if(video.currentTime > 2 && video.currentTime < 3){
+            dot.style.cssText = "left: 51%;top: 16%";
+            dot2.style.cssText = "left: 61%;top: 20%;";
+            list[2].classList.add('active');
+          }
+          
+          if(video.currentTime > 3 && video.currentTime < 4){
+            dot.style.cssText = "left: 51%;top: 16%";
+            dot2.style.cssText = "left: 58%;top: 18%"
+          }
+          
+          if(video.currentTime > 4 && video.currentTime < 4.5){
+            dot.style.cssText = "left: 47%;top: 17%"
+          }
+          
+          if(video.currentTime > 4.5){
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 5.2 & video.currentTime < 6){
+            dot4.style.cssText = "visibility: visible; left:74%;top:17%";
+          }
+
+          if(video.currentTime > 5.5 & video.currentTime < 6){
+            // dot4.style.cssText = "visibility: visible; left:84%;top:17%";
+          }
+
+          if(video.currentTime > 5 & video.currentTime < 6){
+            dot3.style.cssText = "visibility: visible; left: 22%;top: 20%";
+            list[1].classList.add('active');
+          }
+          
+          if(video.currentTime > 6 & video.currentTime < 7){
+            dot3.style.cssText = "visibility: visible; left: 35%;top: 24%";
+            dot4.style.cssText = "visibility: visible; left:75%;top: 20%";
+            list[0].classList.add('active');
+          }
+          
+          if(video.currentTime > 7 & video.currentTime < 8){
+            dot3.style.cssText = "visibility: visible; left: 41%;top: 28%";
+            dot4.style.cssText = "visibility: visible; left: 74%;top: 18%";
+          }
+          
+          if(video.currentTime > 8 & video.currentTime < 9){
+            dot3.style.cssText = "visibility: visible; left: 34%;top: 26%";
+            dot4.style.cssText = "visibility: visible; left: 64%;top: 20%";
+          }
+          
+          if(video.currentTime > 9 & video.currentTime < 10){
+            dot3.style.cssText = "visibility: visible; left: 34%;top: 28%";
+            dot4.style.cssText = "visibility: visible; left: 59%;top: 24%";
+          }
+          
+            if(video.currentTime > 10 & video.currentTime < 11){
+            dot3.style.cssText = "visibility: visible; left: 38%;top: 34%";
+            dot4.style.cssText = "visibility: visible; left: 71%;top: 27%";
+          }
+          
+        })
+
+
+  </script>
+</body>
+</html>
