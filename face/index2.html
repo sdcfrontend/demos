@@ -21,17 +21,20 @@
     font-family: skytext;
     font-size: 18px;
     text-align: center;
+    overflow: hidden;
   }
 
     .con {
       background: #444;
       margin: 10px auto;
       max-width: 680px;
-      display: inline-block;
-      text-align: left
+      display: inline-flex;
+      flex-direction: column;
+      text-align: left;
+      height: 100vh;
     }
 
-    .video {
+.video {
   position: relative;
   display: inline-block
 }
@@ -109,15 +112,28 @@
       width: 100%;
     }
 
-    .con__info {
+    .con__info,
+    .con__detail {
       overflow: auto;
-      min-height: 350px;
-      padding-top: 6px;
+      flex: 1;
+      padding: 0 12px 12px
+    }
+
+    .con[data-tab="0"] .con__detail {
+      position: absolute;
+      visibility: hidden;
+      left: -1000vw;
+    }
+
+    .con[data-tab="1"] .con__info {
+      position: absolute;
+      visibility: hidden;
+      left: -1000vw;
     }
 
     .con__info li {
       color: #fff;
-      margin: 2px 12px;
+      margin: 2px 0;
       background: #222;
       list-style: none;
       will-change: opacity, transform;
@@ -152,7 +168,7 @@
 
     .con__info p {
       font-weight: 500;
-      font-size: 15px;
+      font-size: 14px;
       color: #ccc
     }
 
@@ -311,13 +327,50 @@
       background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTYuODY2IDMuMDJjNy43MiAwIDE0IDYuMjggMTQgMTRzLTYuMjggMTQtMTQgMTQtMTQtNi4yOC0xNC0xNCA2LjI4LTE0IDE0LTE0bTAtMmMtOC44MzcgMC0xNiA3LjE2NC0xNiAxNnM3LjE2MyAxNiAxNiAxNiAxNi03LjE2MiAxNi0xNi03LjE2My0xNi0xNi0xNnoiLz4KICA8cGF0aCBzdHlsZT0iZmlsbDogd2hpdGUiIGQ9Ik0yMC40NTIgMjQuODc1Yy0uMjg2IDAtLjU2Ny0uMDE0LS44NDMtLjA0LS4yNzgtLjAyNy0uNDg4LS4wNi0uNjMtLjA5NFYxMS4xNTRjMC0uMzU3LjExLS42NTYuMzM0LS44OTguMjIzLS4yNC42Mi0uMzYgMS4xOTItLjM2LjI4NSAwIC41NjcuMDEzLjg0NC4wNC4yNzYuMDI2LjQ4Ni4wNTguNjMuMDkzdjEzLjU4N2MwIC4zNTgtLjExMy42NTctLjMzNi44OTgtLjIyMy4yNC0uNjIuMzYyLTEuMTkyLjM2MnptLTcgMGMtLjI4NiAwLS41NjctLjAxNC0uODQzLS4wNC0uMjc4LS4wMjctLjQ4OC0uMDYtLjYzLS4wOTRWMTEuMTU0YzAtLjM1Ny4xMS0uNjU2LjMzNC0uODk4LjIyMy0uMjQuNjItLjM2IDEuMTkyLS4zNi4yODUgMCAuNTY2LjAxMy44NDQuMDQuMjc2LjAyNi40ODYuMDU4LjYzLjA5M3YxMy41ODdjMCAuMzU4LS4xMTMuNjU3LS4zMzYuODk4LS4yMjMuMjQtLjYyLjM2Mi0xLjE5Mi4zNjJ6Ii8+Cjwvc3ZnPgo=)
     }
 
+    .con__nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .con__nav-list {
+      display: inline-flex;
+      list-style: none;
+      padding: 0;
+    }
+
+    .con__nav-list a {
+      display: inline-block;
+      padding: 7px 12px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      background: #222;
+      border-radius: 12px;
+    }
+
+    .con__nav-list li:first-of-type a {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0
+    }
+
+    .con__nav-list li:first-of-type + li a {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0
+    }
+
+    .con__nav-list a.on {
+      background: #666;
+      color: #fff
+    }
 
   
 
 
 </style>
 <body>
-  <div class="con">
+  <div class="con" data-tab="0">
     <div class="video">
  
         <span class="dot">
@@ -348,6 +401,13 @@
       
       </div>
 
+      <div class="con__nav">
+        <ul class="con__nav-list">
+          <li><a href="#" class="on">Live Stream</a></li>
+          <li><a href="#">Who's Who?</a></li>
+        </ul>
+      </div>
+
       <div class="con__info">
 
           <ul>
@@ -359,6 +419,10 @@
               <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
               <p>Author</p></li>
           </ul>
+        </div>
+
+        <div class="con__detail">
+          detail
         </div>
 
     </div>
@@ -374,6 +438,21 @@
 
         var range = document.querySelector('.controls__track');
         var play = document.querySelector('.controls__play');
+
+        var nav = document.querySelectorAll('.con__nav-list li a');
+        var con = document.querySelector('.con');
+
+        nav.forEach(function(item, index){
+
+          item.onclick = function(event){
+            nav.forEach(function(navitem){
+              navitem.classList.remove('on');
+            })
+
+            this.classList.add('on');
+            con.setAttribute('data-tab', index);
+          }
+        })
 
         range.oninput = function(){
           video.currentTime = (video.duration/100) * range.value;
