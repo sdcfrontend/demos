@@ -24,7 +24,7 @@
   }
 
     .con {
-      background: #333;
+      background: #444;
       margin: 10px auto;
       max-width: 680px;
       display: inline-block;
@@ -81,7 +81,6 @@
   background: white;
   padding: 4px 9px;
   font-size: 14px;
-  font-family: sans-serif;
   transform: translate(-10%, 100%)
 } 
 
@@ -106,19 +105,20 @@
   top: 17%;
 }
 
-video {
-  width: 100%;
-}
+    video {
+      width: 100%;
+    }
 
-.con__info {
+    .con__info {
       overflow: auto;
-      height: 300px;
+      min-height: 350px;
+      padding-top: 6px;
     }
 
     .con__info li {
       color: #fff;
-      margin: 7px;
-      background: #444;
+      margin: 2px 12px;
+      background: #222;
       list-style: none;
       will-change: opacity, transform;
       flex-direction: column;
@@ -127,7 +127,8 @@ video {
       display: flex;
       height: 1px;
       overflow: hidden;
-      visibility: hidden;
+      visibility: hidden;;
+      position: absolute
     }
 
     .con__info li:after {
@@ -137,12 +138,11 @@ video {
     }
 
     .con__info img {
-      width: 60px;
-      height: 60px;
-      float: left;
+      width: 50px;
+      height: 50px;
       position: absolute;
-      left: 0;
-      top: 0;
+      left: 12px;
+      top: 12px;
     }
 
     .con__info h3 {
@@ -153,6 +153,7 @@ video {
     .con__info p {
       font-weight: 500;
       font-size: 15px;
+      color: #ccc
     }
 
 
@@ -164,21 +165,25 @@ video {
       }
 
       1% {
-        height: 60px;
+        height: 74px;
         opacity: 0;
         transform: scale(0.7);
       }
 
       20% {
         opacity: 0;
-        height: 60px;
+        height: 74px;
+        position: relative
       }
 
       100% {
         opacity: 1;
         visibility: visible;
         transform: scale(1);
-        height: 60px;
+        height: 74px;
+        position: relative
+
+      
       }
     }
 
@@ -186,6 +191,126 @@ video {
       animation: panel 0.25s linear;
       animation-fill-mode: both;
     }
+
+    .controls {
+      position: absolute;
+      height: 45px;
+      width: 100%;
+      bottom: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 10
+    }
+
+    input[type=range].controls__track {
+      -webkit-appearance: none;
+      width: 100%;
+      margin:  0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    input[type=range].controls__track:focus {
+      outline: none;
+    }
+
+    input[type=range].controls__track::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      background: #ccc;
+      border-radius: 0px;
+      border: 0px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range].controls__track::-webkit-slider-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background: #d1021b;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -2.5px;
+      box-shadow: -100vw 0 0 100vw #d1021b;
+    }
+    input[type=range].controls__track:focus::-webkit-slider-runnable-track {
+      background: #fbfbfb;
+    }
+    input[type=range].controls__track::-moz-range-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      background: #eeeeee;
+      border-radius: 0px;
+      border: 0px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range].controls__track::-moz-range-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50px;
+      background: #d1021b;
+      cursor: pointer;
+    }
+    input[type=range].controls__track::-ms-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    input[type=range].controls__track::-ms-fill-lower {
+      background: #e1e1e1;
+      border: 0px solid rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+    }
+    input[type=range].controls__track::-ms-fill-upper {
+      background: #eeeeee;
+      border: 0px solid rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+    }
+    input[type=range].controls__track::-ms-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50px;
+      background: #d1021b;
+      cursor: pointer;
+      height: 5px;
+    }
+    input[type=range].controls__track:focus::-ms-fill-lower {
+      background: #eeeeee;
+    }
+    input[type=range].controls__track:focus::-ms-fill-upper {
+      background: #fbfbfb;
+    }
+
+    .controls__play {
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: white;
+      top: 10px;
+      left: 12px;
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTYuODY2IDMuMDIyYzcuNzIgMCAxNCA2LjI4IDE0IDE0cy02LjI4IDE0LTE0IDE0LTE0LTYuMjgtMTQtMTQgNi4yOC0xNCAxNC0xNG0wLTJjLTguODM3IDAtMTYgNy4xNjMtMTYgMTZzNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTYtNy4xNjMtMTYtMTYtMTZ6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMjIuMTc3IDE2LjI2bC01LjUxNS01LjQ5M2MtLjg1LS44NDgtMi4wOTMtMS44NTItMy4xNjgtLjc4djE0LjA3YzEuMDc1IDEuMDcyIDIuMzE3LjA2NyAzLjE2OC0uNzhsNS41MTUtNS40OTNjLjQyMi0uNDIuNDIyLTEuMTAzIDAtMS41MjV6Ii8+Cjwvc3ZnPgo=);
+      background-size: 100% 100%;
+    }
+
+    .controls__play.playing {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTYuODY2IDMuMDJjNy43MiAwIDE0IDYuMjggMTQgMTRzLTYuMjggMTQtMTQgMTQtMTQtNi4yOC0xNC0xNCA2LjI4LTE0IDE0LTE0bTAtMmMtOC44MzcgMC0xNiA3LjE2NC0xNiAxNnM3LjE2MyAxNiAxNiAxNiAxNi03LjE2MiAxNi0xNi03LjE2My0xNi0xNi0xNnoiLz4KICA8cGF0aCBzdHlsZT0iZmlsbDogd2hpdGUiIGQ9Ik0yMC40NTIgMjQuODc1Yy0uMjg2IDAtLjU2Ny0uMDE0LS44NDMtLjA0LS4yNzgtLjAyNy0uNDg4LS4wNi0uNjMtLjA5NFYxMS4xNTRjMC0uMzU3LjExLS42NTYuMzM0LS44OTguMjIzLS4yNC42Mi0uMzYgMS4xOTItLjM2LjI4NSAwIC41NjcuMDEzLjg0NC4wNC4yNzYuMDI2LjQ4Ni4wNTguNjMuMDkzdjEzLjU4N2MwIC4zNTgtLjExMy42NTctLjMzNi44OTgtLjIyMy4yNC0uNjIuMzYyLTEuMTkyLjM2MnptLTcgMGMtLjI4NiAwLS41NjctLjAxNC0uODQzLS4wNC0uMjc4LS4wMjctLjQ4OC0uMDYtLjYzLS4wOTRWMTEuMTU0YzAtLjM1Ny4xMS0uNjU2LjMzNC0uODk4LjIyMy0uMjQuNjItLjM2IDEuMTkyLS4zNi4yODUgMCAuNTY2LjAxMy44NDQuMDQuMjc2LjAyNi40ODYuMDU4LjYzLjA5M3YxMy41ODdjMCAuMzU4LS4xMTMuNjU3LS4zMzYuODk4LS4yMjMuMjQtLjYyLjM2Mi0xLjE5Mi4zNjJ6Ii8+Cjwvc3ZnPgo=)
+    }
+
 
   
 
@@ -216,6 +341,10 @@ video {
         </span>
         
         <video muted autoplay preload src="https://sdcfrontend.github.io/demos/face/clip2.mp4"></video>
+        <div class="controls">
+          <a href="#" class="controls__play playing"></a>
+          <input type="range" class="controls__track" value="0" step="11">
+        </div>
       
       </div>
 
@@ -243,32 +372,65 @@ video {
         var dot3 = document.querySelector('.dot--3');
         var dot4 = document.querySelector('.dot--4');
 
+        var range = document.querySelector('.controls__track');
+        var play = document.querySelector('.controls__play');
+
+        range.oninput = function(){
+          video.currentTime = (video.duration/100) * range.value;
+        }
+
+        play.onclick = function(){
+          if(video.paused){
+            video.play();
+            play.classList.add('playing');
+          }
+          else {
+            video.pause();
+            play.classList.remove('playing');
+          }
+        }
+
+        video.onended = function(){
+          play.classList.remove('playing');
+        }
+
         video.addEventListener('timeupdate', function(ev){
 
+          range.value = (100/video.duration) * video.currentTime;
           
           if(video.currentTime < 1){
             dot.style.cssText = "left: 51%;top: 22%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
           }
           
           if(video.currentTime > 1 && video.currentTime < 2){
             dot.style.cssText = "left: 53%;top: 19%";
             dot2.style.cssText = "left: 66%;top: 22%"
             list[3].classList.add('active');
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
           }
           
           if(video.currentTime > 2 && video.currentTime < 3){
             dot.style.cssText = "left: 51%;top: 16%";
             dot2.style.cssText = "left: 61%;top: 20%;";
             list[2].classList.add('active');
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
           }
           
           if(video.currentTime > 3 && video.currentTime < 4){
             dot.style.cssText = "left: 51%;top: 16%";
-            dot2.style.cssText = "left: 58%;top: 18%"
+            dot2.style.cssText = "left: 58%;top: 18%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
           }
           
           if(video.currentTime > 4 && video.currentTime < 4.5){
-            dot.style.cssText = "left: 47%;top: 17%"
+            dot.style.cssText = "left: 47%;top: 17%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
           }
           
           if(video.currentTime > 4.5){
@@ -278,37 +440,51 @@ video {
           
           if(video.currentTime > 5.2 & video.currentTime < 6){
             dot4.style.cssText = "visibility: visible; left:74%;top:17%";
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
 
           if(video.currentTime > 5 & video.currentTime < 6){
             dot3.style.cssText = "visibility: visible; left: 22%;top: 20%";
             list[1].classList.add('active');
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
           if(video.currentTime > 6 & video.currentTime < 7){
             dot3.style.cssText = "visibility: visible; left: 35%;top: 24%";
             dot4.style.cssText = "visibility: visible; left:75%;top: 20%";
             list[0].classList.add('active');
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
           if(video.currentTime > 7 & video.currentTime < 8){
             dot3.style.cssText = "visibility: visible; left: 41%;top: 28%";
             dot4.style.cssText = "visibility: visible; left: 74%;top: 18%";
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
           if(video.currentTime > 8 & video.currentTime < 9){
             dot3.style.cssText = "visibility: visible; left: 34%;top: 26%";
             dot4.style.cssText = "visibility: visible; left: 64%;top: 20%";
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
-          if(video.currentTime > 9 & video.currentTime < 10){
+          if(video.currentTime > 9 & video.currentTime < 10.3){
             dot3.style.cssText = "visibility: visible; left: 34%;top: 28%";
             dot4.style.cssText = "visibility: visible; left: 59%;top: 24%";
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
-            if(video.currentTime > 10 & video.currentTime < 11){
-            dot3.style.cssText = "visibility: visible; left: 38%;top: 34%";
-            dot4.style.cssText = "visibility: visible; left: 71%;top: 27%";
+            if(video.currentTime > 10.4 & video.currentTime < 11.5){
+            dot3.style.cssText = "visibility: visible; left: 37%;top: 35%";
+            dot4.style.cssText = "visibility: visible; left: 72%;top: 27%";
+            dot.style.cssText = "display: none";
+            dot2.style.cssText = "display: none";
           }
           
         })
