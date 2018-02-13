@@ -25,7 +25,7 @@
   }
 
     .con {
-      background: #444;
+      background: #111111;
       margin: 10px auto;
       max-width: 680px;
       display: inline-flex;
@@ -131,10 +131,10 @@
       left: -1000vw;
     }
 
-    .con__info li {
+    .filter__grid-item {
       color: #fff;
       margin: 2px 0;
-      background: #222;
+      background: #333;
       list-style: none;
       will-change: opacity, transform;
       flex-direction: column;
@@ -147,13 +147,13 @@
       position: absolute
     }
 
-    .con__info li:after {
+    .filter__grid-item:after {
       content: "";
       clear: both;
       display: table;
     }
 
-    .con__info img {
+    .filter__grid-item img {
       width: 50px;
       height: 50px;
       position: absolute;
@@ -161,12 +161,12 @@
       top: 12px;
     }
 
-    .con__info h3 {
+    .filter__grid-item h3 {
       font-weight: 500;
       font-size: 17px;
     }
 
-    .con__info p {
+    .filter__grid-item p {
       font-weight: 500;
       font-size: 14px;
       color: #ccc
@@ -203,7 +203,7 @@
       }
     }
 
-    .con__info li.active {
+    .filter__grid-item.active {
       animation: panel 0.25s linear;
       animation-fill-mode: both;
     }
@@ -334,23 +334,28 @@
       justify-content: center;
     }
 
+
     .con__nav-list {
       display: inline-flex;
       list-style: none;
       padding: 0;
+      border: 1px solid #555;
+      border-radius: 4px;
+      overflow: hidden;
+
     }
 
     .con__nav-list a {
       display: inline-block;
-      padding: 7px 12px;
+      padding: 10px 12px;
       color: #ccc;
       text-decoration: none;
       font-size: 14px;
-      background: #222;
-      border-radius: 12px;
+      background: #111;
+      /* border-radius: 12px; */
     }
 
-    .con__nav-list li:first-of-type a {
+    /* .con__nav-list li:first-of-type a {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0
     }
@@ -358,15 +363,143 @@
     .con__nav-list li:first-of-type + li a {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0
-    }
+    } */
 
     .con__nav-list a.on {
-      background: #666;
+      background: #555;
       color: #fff
     }
 
-  
+    .con__detail {
+      display: flex;
+      flex-direction: row;
+      overflow: none;
+      padding-bottom: 28px;
+    }
 
+    .con__detail-col1 {
+      width: 200px;
+      padding-right: 18px;
+    }
+
+    .con__detail-col2 {
+      flex: 1;
+      overflow: auto;
+    }
+
+
+    .filter__search {
+      background: #333;
+      border: 0;
+      padding: 8px 6px;
+      width: 100%;
+      color: #ddd;
+      font-family: inherit;
+      font-size: 15px;
+      margin: 2px 0 15px;
+
+    }
+
+    .filter__tags li {
+      color: #ccc;
+      font-size: 16px;
+      padding: 4px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .filter__grid-header {
+      color: white;
+      font-size: 20px;
+      margin: 0 0 18px;
+      font-weight: 500;
+      background: url()
+    }
+    
+    .filter__grid-header ~ .filter__grid-header {
+      margin-top: 28px;
+    }
+
+    .filter__header {
+      display: none;
+    }
+
+    .filter__search-con {
+      position: relative
+    }
+
+    .filter__search-con svg {
+      width: 15px;
+      height: 15px;
+      fill: #8c8c8c;
+      position: absolute;
+      left: 9px;
+      top: 11px;
+    }
+
+    .filter__search-con input {
+      padding-left: 32px;
+    }
+
+    @media all and (max-width: 540px){
+      .con__detail {
+        display: block;
+      }
+
+      .con__detail-col1 {
+        padding: 0;
+        width: auto;
+      }
+
+      .filter {
+        position: relative;
+        margin-bottom: 18px;
+      }
+
+      .filter__header {
+        color: white;
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 15px;
+        background: #333;
+        border: 0;
+        padding: 8px 6px;
+        width: 100%;
+        color: #ddd;
+      }
+
+      .filter__dropdown {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        transition: opacity 0.166s;
+        will-change: transition;
+        background: #111;
+        z-index: 11;
+        padding-bottom: 18px;
+      }
+
+      .filter__header.on + .filter__dropdown {
+        visibility: visible;
+        opacity: 1
+      }
+
+      .filter__header svg {
+        width: 20px;
+        height: 20px;
+        fill: #ccc;
+        position: absolute;
+        right: 9px;
+        top: 5px;
+      }
+
+      .filter__header.on svg {
+        transform: rotate(180deg)
+      }
+    }
 
 </style>
 <body>
@@ -404,25 +537,91 @@
       <div class="con__nav">
         <ul class="con__nav-list">
           <li><a href="#" class="on">Live Stream</a></li>
-          <li><a href="#">Who's Who?</a></li>
+          <li><a href="#">Guestlist</a></li>
         </ul>
       </div>
 
       <div class="con__info">
 
-          <ul>
+          <ul class="filter__grid">
             
-            <li><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-            <li><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-            <li><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+            <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+            <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+            <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
               <p>Socialite</p></li>
-              <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
               <p>Author</p></li>
           </ul>
         </div>
 
         <div class="con__detail">
-          detail
+          <div class="con__detail-col1">
+          <div class="filter"> 
+            <h3 class="filter__header">Filters <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-localnav__icon"><path d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z"></path></svg></h3>        
+            <div class="filter__dropdown">
+            <div class="filter__search-con"><svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg><input type="text" class="filter__search" placeholder="Search"></div>
+            <ul class="filter__tags">
+              <li>Royals</li>
+              <li>Friends &amp; Family</li>
+              <li>Sport</li>
+              <li>Entertainment</li>
+              <li>Politics</li>
+              <li>Dignataries</li>
+            </ul>
+          </div>
+        </div>
+ 
+
+          </div>
+          <div class="con__detail-col2">
+            <h4 class="filter__grid-header">Royals</h4>
+            <ul class="filter__grid">
+              <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+            </ul>
+
+            <h4 class="filter__grid-header">Friends &amp; Family</h4>
+            <ul class="filter__grid">
+              <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <p>Socialite</p></li>
+              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+                  <p>Author</p></li>
+                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+            </ul>
+          </div>
         </div>
 
     </div>
@@ -441,6 +640,10 @@
 
         var nav = document.querySelectorAll('.con__nav-list li a');
         var con = document.querySelector('.con');
+
+        document.querySelector('.filter__header').onclick = function(){
+          this.classList.toggle('on');
+        }
 
         nav.forEach(function(item, index){
 
