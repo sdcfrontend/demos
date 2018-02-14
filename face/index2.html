@@ -411,7 +411,7 @@
     .filter__grid-header {
       color: white;
       font-size: 20px;
-      margin: 0 0 18px;
+      margin: 2px 2px 18px;
       font-weight: 500;
       background: url()
     }
@@ -439,6 +439,57 @@
 
     .filter__search-con input {
       padding-left: 32px;
+    }
+
+    .filter__grid--grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .filter__grid--grid .filter__grid-item {
+      width: calc(50% - 9px);
+      border-radius: 5px;
+      position: relative;
+      height: auto;
+      animation: none;
+      visibility: visible;
+      opacity: 1;
+      margin-bottom: 9px!important;
+      padding: 0;
+    }
+
+    .filter__grid--grid .filter__grid-item img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: contain
+    }
+
+    .filter__grid--grid .filter__grid-item h3 {
+      position: absolute;
+      bottom: 1.9em;
+      padding-left: 9px;
+      width: 100%;
+    }
+
+    .filter__grid--grid .filter__grid-item p {
+      position: absolute;
+      bottom: 1em;
+      padding-left: 9px;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .filter__grid--grid .filter__grid-item:after {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    .filter__grid--grid .filter__grid-item:nth-child(odd){
+      margin: 0 9px 0 0;
     }
 
     @media all and (max-width: 540px){
@@ -575,51 +626,51 @@
           </div>
           <div class="con__detail-col2">
             <h4 class="filter__grid-header">Royals</h4>
-            <ul class="filter__grid">
-              <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
             </ul>
 
             <h4 class="filter__grid-header">Friends &amp; Family</h4>
-            <ul class="filter__grid">
-              <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item active"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
                   <p>Socialite</p></li>
-              <li class="filter__grid-item active"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
                   <p>Author</p></li>
-                  <li class="filter__grid-item active"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item active"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
             </ul>
           </div>
         </div>
