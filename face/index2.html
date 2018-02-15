@@ -526,11 +526,18 @@
     @media all and (max-width: 540px){
       .con__detail {
         display: block;
+        overflow: hidden
       }
 
       .con__detail-col1 {
         padding: 0;
         width: auto;
+      }
+
+      .con__detail-col2 {
+        overflow: auto;
+        height: 90%;
+
       }
 
       .filter {
@@ -754,6 +761,8 @@
         var headers = document.querySelectorAll('.filter__grid-header');
         var filters = document.querySelectorAll('.filter__tags a');
 
+        var filterheader = document.querySelector('.filter__header');
+
         filters.forEach(function(item){
 
           item.onclick = function(event){
@@ -767,13 +776,14 @@
             })
 
             this.classList.add('on');
+            filterheader.classList.remove('on');
             
             document.querySelector(this.getAttribute('href')).classList.remove('hidden');
           }
 
         })
 
-        document.querySelector('.filter__header').onclick = function(){
+        filterheader.onclick = function(){
           this.classList.toggle('on');
         }
 
