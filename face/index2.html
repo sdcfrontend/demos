@@ -626,7 +626,7 @@
       <div class="con__nav">
         <ul class="con__nav-list">
           <li><a href="#" class="on">Live Stream</a></li>
-          <li><a href="#">Guestlist</a></li>
+          <li><a href="#">All Guests</a></li>
         </ul>
       </div>
 
@@ -650,6 +650,7 @@
             <div class="filter__dropdown">
             <div class="filter__search-con"><svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg><input type="text" class="filter__search" placeholder="Search"></div>
             <ul class="filter__tags">
+              <li><a href="#all">All guests</a></li>
               <li><a href="#bride">Bride and Groom</a></li>
               <li><a href="#royal">Royals</a></li>
               <li><a href="#friends">Friends &amp; Family</a></li>
@@ -766,9 +767,18 @@
         filters.forEach(function(item){
 
           item.onclick = function(event){
+
+            var attr = this.getAttribute('href');
+
             event.preventDefault();
+
             headers.forEach(function(header){
-              header.classList.add('hidden');
+              if(attr === '#all'){
+                header.classList.remove('hidden');
+              }
+              else {
+                header.classList.add('hidden');
+              }
             });
 
             filters.forEach(function(filter){
@@ -778,7 +788,8 @@
             this.classList.add('on');
             filterheader.classList.remove('on');
             
-            document.querySelector(this.getAttribute('href')).classList.remove('hidden');
+            document.querySelector(attr).classList.remove('hidden');
+
           }
 
         })
