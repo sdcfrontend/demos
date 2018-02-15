@@ -27,7 +27,7 @@
     .con {
       background: #111111;
       margin: 10px auto;
-      max-width: 680px;
+      max-width: 700px;
       display: inline-flex;
       flex-direction: column;
       text-align: left;
@@ -385,6 +385,8 @@
     .con__detail-col2 {
       flex: 1;
       overflow: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch
     }
 
 
@@ -403,10 +405,21 @@
     .filter__tags li {
       color: #ccc;
       font-size: 16px;
-      padding: 4px;
       list-style: none;
       cursor: pointer;
     }
+
+    .filter__tags li a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      padding: 4px;
+    }
+
+    .filter__tags li a.on {
+      background: rgba(255,255,255,0.1)
+    }
+
 
     .filter__grid-header {
       color: white;
@@ -416,8 +429,13 @@
       background: url()
     }
     
-    .filter__grid-header ~ .filter__grid-header {
-      margin-top: 28px;
+    .filter__tags {
+      margin-bottom: 28px;
+    }
+
+    .filter__grid-header.hidden,
+    .filter__grid-header.hidden + ul {
+      display: none;
     }
 
     .filter__header {
@@ -464,7 +482,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      object-fit: contain
+      object-fit: cover
     }
 
     .filter__grid--grid .filter__grid-item h3 {
@@ -472,6 +490,7 @@
       bottom: 1.9em;
       padding-left: 9px;
       width: 100%;
+      z-index: 3;
     }
 
     .filter__grid--grid .filter__grid-item p {
@@ -480,12 +499,24 @@
       padding-left: 9px;
       width: 100%;
       white-space: nowrap;
+      z-index: 3;
+    }
+
+    .filter__grid--grid .filter__grid-item:before {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
     }
 
     .filter__grid--grid .filter__grid-item:after {
       content: "";
-      padding-bottom: 100%;
+      position: absolute;
       display: block;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(0deg,rgba(0,0,0,0.7) 34%,transparent);
+      bottom: 0;
+      z-index: 2;
     }
 
     .filter__grid--grid .filter__grid-item:nth-child(odd){
@@ -612,12 +643,13 @@
             <div class="filter__dropdown">
             <div class="filter__search-con"><svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg><input type="text" class="filter__search" placeholder="Search"></div>
             <ul class="filter__tags">
-              <li>Royals</li>
-              <li>Friends &amp; Family</li>
-              <li>Sport</li>
-              <li>Entertainment</li>
-              <li>Politics</li>
-              <li>Dignataries</li>
+              <li><a href="#bride">Bride and Groom</a></li>
+              <li><a href="#royal">Royals</a></li>
+              <li><a href="#friends">Friends &amp; Family</a></li>
+              <li><a href="#sport">Sport</a></li>
+              <li><a href="#entertainment">Entertainment</a></li>
+              <li><a href="#politicians">Politicians</a></li>
+              <li><a href="#foreign">Foreign dignataries</a></li>
             </ul>
           </div>
         </div>
@@ -625,53 +657,80 @@
 
           </div>
           <div class="con__detail-col2">
-            <h4 class="filter__grid-header">Royals</h4>
-            <ul class="filter__grid filter__grid--grid">
-              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <h4 class="filter__grid-header" id="bride">Bride and Groom</h4>
+              <ul class="filter__grid filter__grid--grid">
+                <li class="filter__grid-item"><img src="http://static.celebuzz.com/uploads/2015/03/prince-harry-army.jpg"><h3>Prince Harry</h3><p>Prince Henry of Wales</p></li>
+                <li class="filter__grid-item"><img src="http://i2.wp.com/wikimarried.com/files/blogs/Meghan%20Markle.jpg?resize=250,250"><h3>Meghan Markle</h3><p>Actress</p></li>
             </ul>
 
-            <h4 class="filter__grid-header">Friends &amp; Family</h4>
+            <h4 class="filter__grid-header" id="royal">Royals</h4>
             <ul class="filter__grid filter__grid--grid">
-              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
-              <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
-                  <p>Socialite</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
-                  <p>Author</p></li>
-                  <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
-              <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+              <li class="filter__grid-item"><img src="https://vz.cnwimg.com/thumbc-250x250/wp-content/uploads/2016/05/GettyImages-487366160.jpg"><h3>The Queen</h3><p>Queen</p></li>
+              <li class="filter__grid-item"><img src="https://knownetworth.com/uploads/thumb/Prince-Philip-Duke-Edinburgh-250-250.jpeg"><h3>Prince Phillip</h3><p>Prince Phillip</p></li>
+              <li class="filter__grid-item"><img src="http://topnews.in/light/files/Prince-William_14.jpg"><h3>Prince William</h3>
+                  <p>Duke of Cambridge</p></li>
+              <li class="filter__grid-item"><img src="http://www.skinsheen.com/ArticleImages/large/L_347.jpg"><h3>Kate Middleton</h3>
+                  <p>Duchess of Cambridge</p></li>
+                  
             </ul>
+
+            <h4 class="filter__grid-header" id="friends">Friends &amp; Family</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://skinsheen.com/ArticleImages/large/L_1412.jpg"><h3>Pippa Middleston</h3><p>Kate Middleton's sister</p></li>
+              <li class="filter__grid-item"><img src="https://i2-prod.mirror.co.uk/incoming/article11651603.ece/ALTERNATES/s615b/PROD-Thomas-Markle-ed.jpg"><h3>Tom Markle</h3><p>Meghan's Father</p></li>
+              <li class="filter__grid-item"><img src="http://i63.tinypic.com/vo515d.png"><h3>Doria Radlan</h3>
+                  <p>Meghan's Mother</p></li>
+              <li class="filter__grid-item"><img src="https://www.afiniti.com/wp-content/uploads/2015/12/thomas-inskip-global-head-of-sales.jpg"><h3>Tom Inskip</h3>
+                  <p>Prince Harry's best friend</p></li>
+                  
+            </ul>
+
+
+            <h4 class="filter__grid-header" id="sport">Sport</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="https://www.famousbirthdays.com/headshots/david-beckham-4.jpg"><h3>David Beckham</h3><p>Footballer</p></li>
+              <li class="filter__grid-item"><img src="https://cml.sad.ukrd.com/image/310559-640x380.scale_type-center_crop.jpg"><h3>Dave Wiseman</h3><p>Invictus Games captain</p></li>
+              <li class="filter__grid-item"><img src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/14/2013/07/Luke-Tomlinson.jpg"><h3>Luke Tomlsinson</h3>
+                  <p>Polo player</p></li>
+                  <li class="filter__grid-item"><img src="https://media.ents24network.com/image/000/050/502/dad9b498261fc4f1fd6881d45575b3d041d4647e.jpg"><h3>Jimmy White</h3>
+                    <p>Snooker</p></li>
+                  
+            </ul>
+
+            <h4 class="filter__grid-header" id="entertainment">Entertainment</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"><h3>Rowan Atkinson</h3><p>Actor and Comedian</p></li>
+              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="http://resize1-parismatch.ladmedia.fr/rcrop/250,250/img/var/news/storage/images/paris-match/people-a-z/guy-ritchie/6038292-8-fre-FR/Guy-Ritchie.jpg"><h3>Guy Ritchie</h3>
+                  <p>Film director</p></li>
+              <li class="filter__grid-item"><img src="https://qt.azureedge.net/resources/authors-images-large/joss-stone.jpg"><h3>Joss Stone</h3>
+                  <p>Musician</p></li>
+                  
+            </ul>
+
+            <h4 class="filter__grid-header" id="politicians">Politicians</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://talkradio.co.uk/sites/talkradio.co.uk/files/styles/taxonomy-img/public/field/image/201802/theresa_may_angry.jpg?itok=v53nGfaW"><h3>Theresa May</h3><p>Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="http://londonwebnews.com/wp-content/uploads/2017/06/5QODwULN-300x300.jpg"><h3>Boris Johnson</h3><p>Foreign Secratary</p></li>
+              <li class="filter__grid-item"><img src="http://www.pinknews.co.uk/images/2012/12/Sir-John-Major.jpg"><h3>Sir John Major</h3>
+                  <p>Former Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="https://pbs.twimg.com/profile_images/800447720305651720/sYpQtMYb_400x400.jpg"><h3>Nicola Sturgeon</h3>
+                  <p>Scottish First Minister</p></li>
+                  
+            </ul>
+
+
+            <h4 class="filter__grid-header" id="foreign">Foreign Dignataries</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://www.abc.net.au/news/image/8764028-3x2-940x627.jpg"><h3>Malcolm Turnball</h3><p>Australian Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"><h3>Donald Trump</h3><p>American President</p></li>
+              <li class="filter__grid-item"><img src="http://cdn.newsapi.com.au/image/v1/dbda69709884760094fe2ad082076b1f"><h3>Jacinda Ardern</h3>
+                  <p>New Zealand PM</p></li>
+              <li class="filter__grid-item"><img src="http://www.gbf.com/gbf-2014/wp-content/uploads/Ammon-portrait-web.jpg"><h3>Peter Ammon</h3>
+                  <p>German Ambassador</p></li>
+                  
+            </ul>
+
           </div>
         </div>
 
@@ -691,6 +750,28 @@
 
         var nav = document.querySelectorAll('.con__nav-list li a');
         var con = document.querySelector('.con');
+
+        var headers = document.querySelectorAll('.filter__grid-header');
+        var filters = document.querySelectorAll('.filter__tags a');
+
+        filters.forEach(function(item){
+
+          item.onclick = function(event){
+            event.preventDefault();
+            headers.forEach(function(header){
+              header.classList.add('hidden');
+            });
+
+            filters.forEach(function(filter){
+              filter.classList.remove('on');
+            })
+
+            this.classList.add('on');
+            
+            document.querySelector(this.getAttribute('href')).classList.remove('hidden');
+          }
+
+        })
 
         document.querySelector('.filter__header').onclick = function(){
           this.classList.toggle('on');
