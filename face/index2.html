@@ -143,8 +143,9 @@
       display: flex;
       height: 1px;
       overflow: hidden;
-      visibility: hidden;;
-      position: absolute
+      visibility: hidden;
+      position: absolute;
+      cursor: pointer;
     }
 
     .filter__grid-item:after {
@@ -375,6 +376,7 @@
       flex-direction: row;
       overflow: none;
       padding-bottom: 28px;
+      position: relative
     }
 
     .con__detail-col1 {
@@ -386,7 +388,8 @@
       flex: 1;
       overflow: auto;
       scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch
+      -webkit-overflow-scrolling: touch;
+      position: relative
     }
 
 
@@ -523,7 +526,86 @@
       margin: 0 9px 0 0;
     }
 
+    .overlay {
+      background: rgba(0, 0, 0, 0.953);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      padding: 36px;
+      color: white;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      will-change: all;
+      transition: transform 0.33s, opacity 0.33s;
+    }
+
+    .overlay.on {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay__head {
+      display: flex;
+      margin-bottom: 25px;
+    }
+
+    .overlay__head h2 {
+      margin-bottom: 0.25em;
+      font-size: 22px;
+    }
+
+    .overlay__head > div:last-of-type {
+      padding: 0 0 0 26px;
+    }
+
+    .overlay__head img {
+      width: 120px;
+      border-radius: 5px;
+    }
+
+    .overlay__body {
+      line-height: 1.5
+    }
+
+    .overlay__close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 20px;
+      top: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
     @media all and (max-width: 540px){
+
+    .overlay {
+      padding: 22px;
+    }
+
+    .overlay__close {
+      top: 20px;
+      right: 10px;
+    }
+
+    .overlay__head h2 {
+      font-size: 22px;
+    }
+
+    .overlay__body {
+      font-size: 16px;
+    }
+
+    .overlay__head > div:last-of-type {
+      padding: 0 0 0 16px;
+    }
+
+
       .con__detail {
         display: block;
         overflow: hidden
@@ -644,6 +726,28 @@
         </div>
 
         <div class="con__detail">
+
+
+            <div class="overlay">
+
+              <a href="#" class="overlay__close">✕</a>
+
+              <div class="overlay__head">
+                <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
+                <div>
+                  <h2>Elton John</h2>
+                  <p>Singer and Pianist</p>
+                </div>
+                
+              </div>
+
+              <div class="overlay__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
+              </div>
+
+            </div>
+
+
           <div class="con__detail-col1">
           <div class="filter"> 
             <h3 class="filter__header">Filters <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-localnav__icon"><path d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z"></path></svg></h3>        
@@ -665,6 +769,7 @@
 
           </div>
           <div class="con__detail-col2">
+              
               <h4 class="filter__grid-header" id="bride">Bride and Groom</h4>
               <ul class="filter__grid filter__grid--grid">
                 <li class="filter__grid-item"><img src="http://static.celebuzz.com/uploads/2015/03/prince-harry-army.jpg"><h3>Prince Harry</h3><p>Prince Henry of Wales</p></li>
@@ -763,6 +868,36 @@
         var filters = document.querySelectorAll('.filter__tags a');
 
         var filterheader = document.querySelector('.filter__header');
+
+        var guests = document.querySelectorAll('.filter__grid-item');
+
+        var overlay = document.querySelector('.overlay');
+
+
+        function toggleOverlay(close, name, desc, img){
+
+          overlay.querySelector('h2').textContent = name;
+          overlay.querySelector('p').textContent = desc;
+          overlay.querySelector('img').src = img;
+
+          if(close){
+            overlay.classList.remove('on');
+          }
+
+          else {
+            overlay.classList.add('on');
+          }
+        }
+
+        document.querySelector('.overlay__close').onclick = function(){
+          toggleOverlay(true, '','','');
+        }
+
+        guests.forEach(function(item){
+          item.onclick = function(){
+            toggleOverlay(false, item.querySelector('h3').textContent, item.querySelector('p').textContent, item.querySelector('img').src);
+          }
+        })
 
         filters.forEach(function(item){
 
