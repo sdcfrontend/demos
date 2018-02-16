@@ -628,15 +628,26 @@
                   color: white;                 
                 }
 
+                .info__head {
+                  background: #111; 
+                  position: relative;
+                  z-index: 1000;
+                  padding-bottom: 1em;
+                }
+
                 .info__inner {
                   margin: 0 auto;
                 }
 
                 .info__row {
-                  padding: 40px 20px 40px;
+                  padding: 40px 20vw 40px;
                   color: white;
-                  max-width: 760px;
                   margin: 0 auto;
+                  background: #111;
+                  position: relative;
+                  z-index: 1000;
+                  /* transform: translateY( calc( var(--scrollparallax) * 1px ) );
+  will-change: transform; */
                 }
 
                 .info__row h2 {
@@ -752,7 +763,10 @@
   position: relative;
   margin: 2em 0;
   padding-bottom: 56.25%;
+  transform: translateY( calc( var(--scrollparallax) * 1px ) );
+  will-change: transform;
 }
+
 
 .image-block img {
   object-fit: cover;
@@ -760,8 +774,8 @@
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%
 }
-
 
 
 @media all and (max-width: 600px){
@@ -781,6 +795,10 @@
 
   .image-block {
     margin: 1em 0
+  }
+
+  .image-block {
+    padding-bottom: 100%;
   }
 }
 
@@ -886,12 +904,17 @@
       <div class="page-col page-body">
         
         <div class="info">
+            <div class="info__head">
+
             <h1>The terrible toll of mass shootings</h1>
             <h2>2018 deaths: <span  data-role="number-counter">23</span></h2>
-            <p>Below we break down the stats of 150 shootings since 1966 in which 4 or more people were killed.</p>
+            <p class="first-para">Below we break down the stats of 150 shootings since 1966 in which 4 or more people were killed.</p>
+            </div>
+
+
             <div class="image-block">
                 <img src="https://e3.365dm.com/18/02/2048x1152/skynews-aftermath-florida-school-shooting_4232036.jpg" alt="">
-              </div>
+          </div>
             
         <div class="info__inner">
             <div class="info__row">
@@ -1347,6 +1370,21 @@ function triggerCounters() {
   findScrollPosition();
 
 }
+
+const speed = -0.2;
+var images = document.querySelectorAll('.image-block');
+   
+function setScrollParallax() {
+  images.forEach(function(image){
+    image.style.setProperty("--scrollparallax", image.getBoundingClientRect().top * speed);
+  });
+
+  window.requestAnimationFrame( setScrollParallax );
+}
+
+setScrollParallax();
+
+setScrollParallax();
 
 createDigitsMarkup();
 triggerCounters();
