@@ -23,6 +23,7 @@
       h2 {
         font-size: 1.25em;
         margin-bottom: 0.5em;
+        color: #ccc
       }
 
       .gallery {
@@ -81,14 +82,13 @@
       .page-body p,
       .page-body h1,
       .page-body h2 {
-        max-width: 760px;
         padding: 0 3vw;
         margin: 0 auto 2em;
         font-weight: normal;
       }
 
       .page-body h1 {
-        font-size: 3em;
+        font-size: 4em;
         margin: 0.5em auto 0.5em;
         text-align: center;
         line-height: 1
@@ -107,7 +107,7 @@
         }
 
         .info__row {
-          padding: 30px 0!important
+          padding: 30px 15px!important
         }
       }
 
@@ -629,14 +629,14 @@
                 }
 
                 .info__inner {
-                  max-width: 1024px;
-                  padding: 0 14px;
                   margin: 0 auto;
                 }
 
                 .info__row {
                   padding: 40px 20px 40px;
                   color: white;
+                  max-width: 760px;
+                  margin: 0 auto;
                 }
 
                 .info__row h2 {
@@ -668,11 +668,11 @@
                 }
 
                 .info__row--med img {
-                  width: 54px
+                  width: 47px
                 }
 
                 .info__row--big img {
-                  width: 78px
+                  width: 76px
                 }
 
                 .info__row--bigger img {
@@ -738,7 +738,8 @@
   max-width: 300px;
   text-align: left;
   line-height: 1.3;
-  transform: translate(10%, 0)
+  transform: translate(10%, 0);
+  visibility: hidden;
 }
 
 .tooltip a {
@@ -746,11 +747,40 @@
   color: #3157a1
 }
 
+.image-block {
+  filter: saturate(0);
+  position: relative;
+  margin: 2em 0;
+  padding-bottom: 56.25%;
+}
+
+.image-block img {
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+
+
 @media all and (max-width: 600px){
   .tooltip {
     transform: translate(0, 50%);
     width: 80%;
     left: 10%!important;
+  }
+
+  .info h1 {
+    font-size: 2.8em;
+  }
+
+  .info p {
+    margin-bottom: 0
+  }
+
+  .image-block {
+    margin: 1em 0
   }
 }
 
@@ -859,284 +889,305 @@
             <h1>The terrible toll of mass shootings</h1>
             <h2>2018 deaths: <span  data-role="number-counter">23</span></h2>
             <p>Below we break down the stats of 150 shootings since 1966 in which 4 or more people were killed.</p>
+            <div class="image-block">
+                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-aftermath-florida-school-shooting_4232036.jpg" alt="">
+              </div>
+            
         <div class="info__inner">
             <div class="info__row">
                 <h2><em data-role="number-counter">1,077</em>  killed</h2>
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
-                <img src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+                <img class="icon-image" src="guns/figure.png" alt="">
+              </div>
+
+              <div class="image-block">
+                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-virginia-tech-us-shooting_4231853.jpg?bypass-service-worker&20180215145443" alt="">
               </div>
 
               <div class="info__row info__row--big">
                   <h2><em data-role="number-counter">292</em> guns</h2> 
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
-                  <img src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
+                  <img class="icon-image" src="guns/gun.png" alt="">
                 
                 </div>
+                <div class="image-block">
+                    <img src="https://e3.365dm.com/18/02/2048x1152/skynews-columbine-school-shooting_4231848.jpg?bypass-service-worker&20180215145149" alt="">
+                  </div>
+                
+
           <div class="info__row info__row--med">
             <h2><em data-role="number-counter">153</em> shooters</h2>
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
-            <img src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
+            <img class="icon-image" src="guns/shooter.png" alt="">
            
             
           </div>
 
+          <div class="image-block">
+              <img src="https://e3.365dm.com/18/02/2048x1152/skynews-isla-vista-shootings_4231990.jpg?bypass-service-worker&20180215182604" alt="">
+            </div>
+
             <div class="info__row info__row--bigger">
                 <h2><em data-role="number-counter">150</em> shootings</h2>
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
-                <img src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
+                <img class="icon-image" src="guns/police.png" alt="">
             
               </div>
 
+              <div class="image-block">
+                  <img src="https://e3.365dm.com/18/02/2048x1152/skynews-vigil-oregon_4231987.jpg?bypass-service-worker&20180215170708" alt="">
+                </div>
+
               <div class="info__row info__row--biggest">
                   <h2><em  data-role="number-counter">37</em> states</h2>
-                  <img src="guns/usa.png" alt="">
-                  <img src="guns/usa.png" alt="">
-                  <img src="guns/usa.png" alt="">
-                  <img src="guns/usa.png" alt="">
-                  <img src="guns/usa.png" alt="">
-                  <img src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
+                  <img class="icon-image" src="guns/usa.png" alt="">
                   
                 
                 </div>
@@ -1198,8 +1249,17 @@ imgs.forEach(function(img){
   }
 })
 
-function showToolTip(x, y){
-  tooltip.style.cssText = "left:"+ x +"px; top:"+ (y + window.pageYOffset) +"px";
+function showToolTip(x, y, hide){
+  tooltip.style.cssText = "visibility:visible; left:"+ x +"px; top:"+ (y + window.pageYOffset) +"px";
+  if(hide){
+    tooltip.style.cssText = "visibility: hidden;"
+  }
+}
+
+document.body.onclick = function(e){
+  if(e.target.className !== 'icon-image'){
+    showToolTip(0,0,true)
+  }
 }
 
 function cleanNumber(number) {
