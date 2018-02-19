@@ -32,11 +32,14 @@
       flex-direction: column;
       text-align: left;
       height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
 .video {
   position: relative;
-  display: inline-block
+  display: inline-block;
+  width: 100%;
 }
 
 .dot {
@@ -164,6 +167,7 @@
       position: absolute;
       left: 12px;
       top: 12px;
+      object-fit: cover
     }
 
     .filter__grid-item h3 {
@@ -545,6 +549,7 @@
       visibility: hidden;
       will-change: all;
       transition: transform 0.33s, opacity 0.33s;
+      margin-top: 56.25%
     }
 
     .overlay.on {
@@ -679,6 +684,26 @@
 </style>
 <body>
   <div class="con" data-tab="0">
+
+      <div class="overlay">
+
+          <a href="#" class="overlay__close">✕</a>
+
+          <div class="overlay__head">
+            <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
+            <div>
+              <h2>John Bercow</h2>
+              <p>Speaker of the Commons</p>
+            </div>
+            
+          </div>
+
+          <div class="overlay__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
+          </div>
+
+        </div>
+
     <div class="video">
  
         <span class="dot">
@@ -720,11 +745,11 @@
 
           <ul class="filter__grid">
             
-            <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Marina Fogle</h3><p>Parenting guru</p></li>
-            <li class="filter__grid-item"><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>Ben Fogle</h3><p>TV presenter</p></li>
-            <li class="filter__grid-item"><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Sally Bercow</h3>
+            <li class="filter__grid-item"><img src="http://www.telegraph.co.uk/content/dam/women/2015/11/10/marina-fogle_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450"><h3>Marina Fogle</h3><p>Parenting guru</p></li>
+            <li class="filter__grid-item"><img src="http://img.sharetv.com/shows/characters/thumbnails/countrywise_uk.ben_fogle_presenter.jpg"><h3>Ben Fogle</h3><p>TV presenter</p></li>
+            <li class="filter__grid-item"><img src="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fb8d79b1d-924c-3b90-a522-71f99235d2ea.jpg?crop=780%2C520%2C0%2C0&resize=685"><h3>Sally Bercow</h3>
               <p>Journalist</p></li>
-              <li class="filter__grid-item"><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>John Bercow</h3>
+              <li class="filter__grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/John_Bercow_Senate_of_Poland_01.JPG/512px-John_Bercow_Senate_of_Poland_01.JPG"><h3>John Bercow</h3>
               <p>Speaker of the Commons</p></li>
           </ul>
         </div>
@@ -732,24 +757,7 @@
         <div class="con__detail">
 
 
-            <div class="overlay">
-
-              <a href="#" class="overlay__close">✕</a>
-
-              <div class="overlay__head">
-                <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
-                <div>
-                  <h2>John Bercow</h2>
-                  <p>Speaker of the Commons</p>
-                </div>
-                
-              </div>
-
-              <div class="overlay__body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
-              </div>
-
-            </div>
+            
 
 
           <div class="con__detail-col1">
@@ -890,7 +898,7 @@
 
           else {
             overlay.classList.add('on');
-            nav[1].click();
+            // nav[1].click();
           }
         }
 
