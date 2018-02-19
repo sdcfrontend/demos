@@ -893,7 +893,8 @@
           }
         }
 
-        document.querySelector('.overlay__close').onclick = function(){
+        document.querySelector('.overlay__close').onclick = function(e){
+          e.preventDefault();
           toggleOverlay(true, '','','');
         }
 
@@ -906,6 +907,8 @@
         filters.forEach(function(item){
 
           item.onclick = function(event){
+
+            event.preventDefault();
 
             var attr = this.getAttribute('href');
 
@@ -933,7 +936,8 @@
 
         })
 
-        filterheader.onclick = function(){
+        filterheader.onclick = function(e){
+          e.preventDefault();
           this.classList.toggle('on');
         }
 
@@ -953,7 +957,8 @@
           video.currentTime = (video.duration/100) * range.value;
         }
 
-        play.onclick = function(){
+        play.onclick = function(e){
+          e.preventDefault();
           if(video.paused){
             video.play();
             play.classList.add('playing');
