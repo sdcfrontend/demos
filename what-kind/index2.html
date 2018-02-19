@@ -112,7 +112,16 @@
             background: white;
             border:1px solid #ccc;
             min-height: 500px;
-            padding: 2em 1.6em;
+            padding: 3em 2.6em;
+        }
+
+        .con__questions-card-form {
+            display: block;
+            margin-bottom: 2em;
+        }
+
+        .con__questions-card-button-bar {
+            text-align: center;
         }
 
         .con__questions-card-head {
@@ -148,8 +157,10 @@
             top: 1px
         }
 
+
         .con__questions-results {
             display: flex;
+            margin-bottom: 2.4em;
         }
 
         .con__questions-results-col1 {
@@ -179,6 +190,39 @@
             font-size: 19px;
         }
 
+        .con__questions-results-bar {
+            text-align: center;
+            padding-bottom: 2em;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 2em;
+        }
+
+        .con__questions-results-share {
+            text-align: center
+        }
+
+        .con__questions-results-share-head {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 2em;
+            font-weight: 400
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: white;
+            background: #002770;
+            margin: 0 4px;
+        }
+
+        .button--light {
+            background: white;
+            color: #002770;
+            border: 1px solid #002770
+        }
+
 
     </style>
 </head>
@@ -202,13 +246,16 @@
                     <li class="con__questions-item">
                         <div class="con__questions-card">
                             <h4 class="con__questions-card-head">1. What is your favourite food?</h4>
-                            <form action="" class="con__questions-card-form"></form>
+                            <form action="" class="con__questions-card-form">
                                 <ul class="con__questions-card-items">
                                     <li class="con__questions-card-item"><label><input type="radio" value="a1" name="q1"><span class="con__questions-card-item-text">Pasta</span></label></li>
                                     <li class="con__questions-card-item"><label><input type="radio" value="a2" name="q1"><span class="con__questions-card-item-text">Pizza</span></label></li>
                                     <li class="con__questions-card-item"><label><input type="radio" value="a3" name="q1"><span class="con__questions-card-item-text">Curry</span></label></li>
                                 </ul>
                             </form>
+                            <div class="con__questions-card-button-bar">
+                                    <a href="#" class="button" data-role="answer">Next</a> 
+                                </div> 
                             
                         </div>
                     </li>
@@ -224,6 +271,9 @@
                                     <li class="con__questions-card-item"><label><input type="radio" value="b3" name="q2"><span class="con__questions-card-item-text">Green</span></label></li>
                                 </ul>
                             </form>
+                            <div class="con__questions-card-button-bar">
+                                <a href="#" class="button" data-role="answer">Next</a> 
+                            </div>
                         </div>
                     </li>
                     <li class="con__questions-item">
@@ -236,6 +286,9 @@
                                     <li class="con__questions-card-item"><label><input type="radio" value="b3" name="q2"><span class="con__questions-card-item-text">Extreme Sport</span></label></li>
                                 </ul>
                             </form>
+                            <div class="con__questions-card-button-bar">
+                                    <a href="#" class="button" data-role="answer">Next</a> 
+                                </div>
                         </div>
                     </li>
                     <li class="con__questions-item">
@@ -252,6 +305,14 @@
                                 </div>
 
                             </div>
+                            <div class="con__questions-results-bar">
+                                <a href="#" class="button" data-role="bet-now">Bet Now</a> 
+                                <a href="#" class="button button--light" data-role="again">Try again</a> 
+                            </div>
+
+                            <div class="con__questions-results-share">
+                                <h5 class="con__questions-results-share-head">Share your result on social media</h5>
+                             </div>
                             
                         </div>
                     </li>
@@ -276,8 +337,8 @@
         })
 
         cards.forEach(function(card, cardindex){
-            card.querySelectorAll('input').forEach(function(input){
-                input.onclick = pickAnswer.bind(cardindex);
+            card.querySelectorAll('[data-role="answer"]').forEach(function(button){
+                button.onclick = pickAnswer.bind(cardindex);
             })
         })
 
@@ -292,6 +353,7 @@
         }
 
         function pickAnswer(event){
+            event.preventDefault();
             goTo(this+1)
         }
     </script>
