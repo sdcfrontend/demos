@@ -32,6 +32,8 @@
       flex-direction: column;
       text-align: left;
       height: 100vh;
+      position: relative;
+      overflow: hidden;
     }
 
 .video {
@@ -541,6 +543,7 @@
       visibility: hidden;
       will-change: all;
       transition: transform 0.33s, opacity 0.33s;
+      margin-top: 56.25%;
     }
 
     .overlay.on {
@@ -604,7 +607,6 @@
     .overlay__head > div:last-of-type {
       padding: 0 0 0 16px;
     }
-
 
       .con__detail {
         display: block;
@@ -675,6 +677,26 @@
 </style>
 <body>
   <div class="con" data-tab="0">
+
+      <div class="overlay">
+
+          <a href="#" class="overlay__close">✕</a>
+
+          <div class="overlay__head">
+            <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
+            <div>
+              <h2>Elton John</h2>
+              <p>Singer and Pianist</p>
+            </div>
+            
+          </div>
+
+          <div class="overlay__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
+          </div>
+
+        </div>
+
     <div class="video">
  
         <span class="dot">
@@ -713,6 +735,7 @@
       </div>
 
       <div class="con__info">
+         
 
           <ul class="filter__grid">
             
@@ -726,27 +749,6 @@
         </div>
 
         <div class="con__detail">
-
-
-            <div class="overlay">
-
-              <a href="#" class="overlay__close">✕</a>
-
-              <div class="overlay__head">
-                <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
-                <div>
-                  <h2>Elton John</h2>
-                  <p>Singer and Pianist</p>
-                </div>
-                
-              </div>
-
-              <div class="overlay__body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
-              </div>
-
-            </div>
-
 
           <div class="con__detail-col1">
           <div class="filter"> 
@@ -846,6 +848,7 @@
 
           </div>
         </div>
+        
 
     </div>
       
@@ -886,7 +889,7 @@
 
           else {
             overlay.classList.add('on');
-            nav[1].click();
+            // nav[1].click();
           }
         }
 
