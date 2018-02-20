@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://discovery.ideas.aha.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+<script type="text/javascript" src="./Sky News and Sports Digital - Discovery_files/bb11f95faf"></script><script src="./Sky News and Sports Digital - Discovery_files/nr-1071.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bb11f95faf","applicationID":"1751334","transactionName":"JQ5cREZdCAoDRUxeAQMAbUBbQBAHCkRMXgEDAEEfXVwAAx4=","queueTime":2,"applicationTime":472,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vw4GV1ZbGwIHUVBRBAU="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Sky News and Sports Digital - Discovery</title>
+<meta name="description" content="Customer Feedback for Sky News and Sports Digital . Add a new product idea or vote on an existing idea using the Sky News and Sports Digital customer feedback">
+    <link rel="stylesheet" media="all" href="./Sky News and Sports Digital - Discovery_files/idea_portals-cf147a960159c0ab7fb3c7cc9e54b240.css" data-turbolinks-track="true">
+    <script src="./Sky News and Sports Digital - Discovery_files/runtime-f50926c9e0e19b90b771.js" data-turbolinks-track="true"></script>
+    <script src="./Sky News and Sports Digital - Discovery_files/vendor-5fadbd429ad0c8df466b.js" data-turbolinks-track="true"></script>
+    <script src="./Sky News and Sports Digital - Discovery_files/idea_portals-17ca04cfaa2aa245df4b.js" data-turbolinks-track="true"></script>
+    <link href="./Sky News and Sports Digital - Discovery_files/css" rel="stylesheet" type="text/css">
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="R22lIGdFDApj3UKLQEP64gezSTwx1rkq9zn15c2rF/YI1jXJ42btHkRTEtWGoPkBIyc6Tg3f312I5lj2V7WP1Q==">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="locale" content="en">
+    <meta name="portal-token" content="a2f3bf4317f7d84bc8476232eed3c7e4">
+    <meta name="idea-portal-id" content="6517551976758296738">
+      <meta name="robots" content="noindex,nofollow">
+      <link rel="icon" href="https://aha-attachments-prod.s3.amazonaws.com/ideas/idea_portals/5510c38b2f7462ff96026bece9d7ae5425440d99/thumb16.ico?1517993350">
+    
+  </head>
+  <body class="private ideas-portal">
+    <style>
+  
+</style>
+
+  <header class="portal-aha-header">
+  <div class="container">
+    <a href="https://discovery.ideas.aha.io/ideas">
+      <div class="logo pull-left">
+        <img alt="Sky News and Sports Digital Ideas Portal Logo" src="./Sky News and Sports Digital - Discovery_files/thumb40.png">
+      </div>
+    </a>
+    <div class="title pull-left">
+      <h1>
+        Sky News and Sports Digital - Discovery
+      </h1>
+      <h3>
+        <p>Delivering the best ideas, not the first</p>
+      </h3>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</header>
+
+ 
+<div class="container">
+  
+
+
+  <div class="portal-sidebar" id="portal-sidebar">
+      <a class="btn btn-primary btn-outline add-idea-button" href="https://discovery.ideas.aha.io/ideas/new">Add a new idea</a>
+    <button class="btn btn-link btn-navbar" data-show-text="Show menu" data-hide-text="Hide menu" type="button"></button>
+
+    <div id="sidebar-rollup">
+      <div class="my-ideas-filters-wrapper">
+          <ul class="filters">
+    <a class="filter " href="https://discovery.ideas.aha.io/?my_ideas=true">
+      My ideas
+      <span class="pull-right">
+          10
+      </span>
+</a>    <a class="filter " href="https://discovery.ideas.aha.io/?my_votes=true">
+      My votes
+      <span class="pull-right">
+          <span class="endorsements_remaining_text">
+            0
+          </span>
+      </span>
+</a>      <a class="filter " href="https://discovery.ideas.aha.io/?my_subscriptions=true">
+        My subscriptions
+        <span class="pull-right">
+            0
+        </span>
+        <div class="clearfix"></div>
+</a>  </ul>
+
+      </div>
+        <div class="statuses-filters-wrapper">
+          <h4>
+            Filter by Status
+          </h4>
+          <ul class="statuses filters">
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519737539523665717">
+    Awaiting review
+    <span class="pull-right">
+        1777
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519805008292386846">
+    Get involved!
+    <span class="pull-right">
+        0
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519737540086954985">
+    Never gonna happen :(
+    <span class="pull-right">
+        0
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519743266080837994">
+    We're working on this!
+    <span class="pull-right">
+        4
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519737539707044832">
+    Possibly one for the future
+    <span class="pull-right">
+        0
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519737540257487833">
+    We're getting this on a roadmap!
+    <span class="pull-right">
+        0
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+              <li>
+  <a class="filter " href="https://discovery.ideas.aha.io/?status=6519737540431835954">
+    Your idea is live!
+    <span class="pull-right">
+        1
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+          </ul>
+        </div>
+        <div class="categories-filters-wrapper">
+          <h4>
+            Filter by Category
+          </h4>
+          <ul class="categories filters">
+                  <li id="category-6519730300006165387">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519730300006165387">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    Capabilities
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">959</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6520097687301138978">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6520097687301138978">
+    Accessibility
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. dynamic font sizes, dark mode&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">2</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521258795136480694">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521258795136480694">
+    Community
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. live chat, user commenting&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">44</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732769439248749">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732769439248749">
+    Data
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. tables, scores&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732624690922066">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732624690922066">
+    Live
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. blogs, streams&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">53</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521680266350148629">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521680266350148629">
+    Notifications
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. rich notifications, mute notifications&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">15</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519916650454639939">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519916650454639939">
+    Off-platform
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g social, content creators&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732803967611053">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732803967611053">
+    Performance
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. page speeds, load times&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">5</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519729786660355791">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519729786660355791">
+    Personalisation
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g customisation, login&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">167</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732843743067617">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732843743067617">
+    Revenue
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. advertising, sponsorship&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">157</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732661540217401">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732661540217401">
+    Storytelling
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. articles, editorial toolkit&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">131</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6520097985850038813">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6520097985850038813">
+    User experience
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. universal linking, touch id&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">45</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732690732953330">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732690732953330">
+    Video
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g playback, discovery&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">334</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+    <li id="category-6521259154335588797">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521259154335588797">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    Culture
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">7</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6521260384382458831">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521260384382458831">
+    Behaviours
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. improve communication, lead by example&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">2</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521259767532014605">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521259767532014605">
+    Empowerment
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. autonomy to solve problems, freedom to think&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6522377984920583133">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6522377984920583133">
+    Leadership
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. more visibility around the office, clear direction&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6522378509114477252">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6522378509114477252">
+    Other
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g reduce staff turnover, promote equality&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521260709448675627">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521260709448675627">
+    Purpose
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. clear product vision, understanding of business strategy&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">5</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6522378355982912851">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6522378355982912851">
+    Recognition
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. more stakeholder feedback, more praise&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6522378684935880635">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6522378684935880635">
+    Transparency
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g more visibility around company direction, more visibility around kpis&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521259633504628725">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521259633504628725">
+    Wellbeing
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. health checks, wellbeing monitoring&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521259342543667969">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521259342543667969">
+    Workplace
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. noise reduction, heating&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+    <li id="category-6519733717045047191">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733717045047191">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    Innovation
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">88</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6519793545276362740">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519793545276362740">
+    Big ideas
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. build an innovation centre, merge tech and product&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519957041897779095">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519957041897779095">
+    Features
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. in-car voice ui, virtual reality f1&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">43</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733761000744332">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733761000744332">
+    Future Tech
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g artificial intelligence, blockchain&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">33</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519734006049553189">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519734006049553189">
+    Incentives
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. ownership of ideas, budget&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733811759797708">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733811759797708">
+    Process
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. innovation squads, hackathons&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">11</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733857466409097">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733857466409097">
+    Work environment
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. creative space, visibility of ideas&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+    <li id="category-6519958036900204070">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519958036900204070">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    KPIs
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">287</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6519958676997686824">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519958676997686824">
+    Login
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. improved onboarding, social sign-in&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">42</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519958888721593625">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519958888721593625">
+    Page views
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. more content, related stories&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">243</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519959383195467149">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519959383195467149">
+    Time spent
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. interactive articles, video archives&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519959176512731192">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519959176512731192">
+    Watch live
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. improve user journeys, add match areas&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+    <li id="category-6519734275495706043">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519734275495706043">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    Other
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">5</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6519734398293178223">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519734398293178223">
+    Discovery process
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. track ideas, showcases&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">1</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519734457268617657">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519734457268617657">
+    Random
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. visit Alton Towers, erect a statue&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">4</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+    <li id="category-6519732943077448984">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732943077448984">
+      <i class="category-collapser fa fa-chevron-right"></i>
+    Products
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">435</span>
+    </span>
+    <div class="clearfix"></div>
+</a>    <ul class="categories-collapsed">
+        <li id="category-6519916480853888396">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519916480853888396">
+    Apps
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. single sign-on, face recognition&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">102</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519916524963808458">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519916524963808458">
+    CMS
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. image tools, editorial workflows&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6520097249602847305">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6520097249602847305">
+    Football Score Centre
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. data visualisation, team pages&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521665933159045354">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521665933159045354">
+    Sky Bet
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. link bet id with sky id, add bet slip to apps&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">76</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521665622063666060">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521665622063666060">
+    Sky News
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. create new tone of voice, less opinions&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">122</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519732993634139930">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519732993634139930">
+    Sky News App
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. explore feature, weather notifications&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">1</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733098740979015">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733098740979015">
+    Sky News Web
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. debate section, 360˚ video&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6521665884186430969">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6521665884186430969">
+    Sky Sports
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. partner with football clubs, change sports colours to be more accessible&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">47</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733044482584145">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733044482584145">
+    Sky Sports App
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. full season calendar, remove deep linking to FSC&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519733154056571355">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519733154056571355">
+    Sky Sports Web
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. My Sky Sports, enhanced live experience&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519793312749582918">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519793312749582918">
+    Something new
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g sports fitness app, royal wedding companion&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">62</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+        <li id="category-6519916438846799751">
+  <a class="filter category-filter" href="https://discovery.ideas.aha.io/?category=6519916438846799751">
+    Web
+      <i class="fa fa-question-circle popover-icon" data-content="&lt;p&gt;e.g. user commenting, share sections&lt;/p&gt;" data-html="true" data-original-title="" title=""></i>
+    <span class="pull-right">
+        <span class="close hide">×</span>
+        <span class="category-count">0</span>
+    </span>
+    <div class="clearfix"></div>
+</a></li>
+
+    </ul>
+</li>
+
+
+
+          </ul>
+        </div>
+        <div class="current-user-info">
+    <span class="avatar">
+      <img alt="" src="./Sky News and Sports Digital - Discovery_files/27936a6782310c5f51ea081e0c48a144" width="32" height="32">
+    </span>
+
+    <span class="user-name dropdown">
+      <span class="dropdown-toggle" data-toggle="dropdown">
+        Aidan Zealley
+        <span class="caret"></span>
+      </span>
+      <ul class="dropdown-menu">
+        <li>
+            <a href="https://discovery.ideas.aha.io/portal_users/6521636386698546450/edit"><i class="fa fa-wrench"></i> Edit profile</a>
+          <a href="https://discovery.ideas.aha.io/portal_session/logout"><i class="fa fa-sign-out"></i> Sign out</a>
+        </li>
+      </ul>
+    </span>
+  </div>
+
+    </div>
+  </div>
+  <div class="portal-content">
+    <div class="portal-nav">
+      <ul class="nav nav-tabs">
+            <li class="">
+              <a href="https://discovery.ideas.aha.io/?sort=recent">Latest</a>
+            </li>
+            <li class="active">
+              <a href="https://discovery.ideas.aha.io/?sort=trending">Hot now</a>
+            </li>
+            <li class="">
+              <a href="https://discovery.ideas.aha.io/?sort=popular">Most votes</a>
+            </li>
+      </ul>
+      <div class="search-form">
+  <form class="form-horizontal idea-search-form" action="https://discovery.ideas.aha.io/ideas/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+    <div class="search-field">
+      <input type="text" name="query" id="query" class="input-medium search-query" placeholder="Search Ideas" aria-label="Search Ideas">
+</div></form></div>
+
+    </div>
+    <ul class="list-ideas ideas">
+          <li class="idea" id="6522346865664929918">
+  <div class="idea-endorsement" id="idea-6522346865664929918-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-1806/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            2
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-1806">
+    <div class="idea-details">
+      <h3>
+        Seasonal/Topical Highlighted Content
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          The winter games promo within Apple News was really nicely done. Not the snowflakes as such but the way it was presented in a different way, outside of the normal content area (rather than just dressing up/branding the normal news content slots).L...
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/7c141b19ab890ffcd13dc88c5ac474dd" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created about 4 hours ago
+              by Chris Vernon
+          </div>
+          <div class="idea-meta-secondary">
+            Storytelling
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6522056944781418476">
+  <div class="idea-endorsement" id="idea-6522056944781418476-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-1777/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            2
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-1777">
+    <div class="idea-details">
+      <h3>
+        Association - do more to leverage talent within the business, more exclusives - MNF, carry on conversations on social channels, Wayne Rooney&nbsp;
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Session board - https://sky.invisionapp.com/boards/GS3IE9W9U24/
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/avatar32.5fb70cce7410889e661286fd7f1897de.png">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created about 23 hours ago
+              by Spencer Hudson
+          </div>
+          <div class="idea-meta-secondary">
+            Storytelling
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6522056942013633421">
+  <div class="idea-endorsement" id="idea-6522056942013633421-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-1774/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            2
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-1774">
+    <div class="idea-details">
+      <h3>
+        Company - world class technology centre!? needs to be more innovative and leading the way
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Session board - https://sky.invisionapp.com/boards/GS3IE9W9U24/
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/d3fa90f9a78b17eaea7ba874514c40fa" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created about 23 hours ago
+              by Ivan Seed
+          </div>
+          <div class="idea-meta-secondary">
+            Purpose
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6521636916955448276">
+  <div class="idea-endorsement" id="idea-6521636916955448276-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-492/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            4
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-492">
+    <div class="idea-details">
+      <h3>
+        Fostering an environment of failing fast - get features out sooner
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Creating features to attract new users
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/cbdb098f24a622595554d761387b2fe5" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created 2 days ago
+              by Gaz Ward
+          </div>
+          <div class="idea-meta-secondary">
+            Features
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6521598839516317180">
+  <div class="idea-endorsement" id="idea-6521598839516317180-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-69/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            4
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-69">
+    <div class="idea-details">
+      <h3>
+        Explore "fixed interaction" community features.
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Creating a community with free format comments requires moderation.
+We could explore different types of "fixed interaction" as an alternative that doesn't require moderation.
+Examples: Thumbs-up thumbs-down, Tags, Score predictions, Emoji, Anima...
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/08a910eed0ddf30bdfe03dab5a68fad7" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created 2 days ago
+              by Rory O'Bryan
+          </div>
+          <div class="idea-meta-secondary">
+            Community
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6521294874992649007">
+  <div class="idea-endorsement" id="idea-6521294874992649007-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-68/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            5
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-68">
+    <div class="idea-details">
+      <h3>
+        Open Source Components
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          It would be nice if we could raise recognition for our work and publicly share some open source components!
+It allows us to give something back to the community that we rely on, and allows people to get involved in our products - People could add...
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/e6182ce013324874d170b4e0abd79592" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created 3 days ago
+              by James Sherlock
+          </div>
+          <div class="idea-meta-secondary">
+            Process
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6521636918098455683">
+  <div class="idea-endorsement" id="idea-6521636918098455683-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-493/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            3
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-493">
+    <div class="idea-details">
+      <h3>
+        Disrupting our own industry
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Disruption to an industry is often the cause of great companies to fail, This is discussed in great detail in “The Innovator's Dilemma”.
+Netflix are a great example of this. They first disrupted the video rental industry by creating a mail order ...
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/cbdb098f24a622595554d761387b2fe5" width="32" height="32">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created 2 days ago
+              by Gaz Ward
+          </div>
+          <div class="idea-meta-secondary">
+            Features
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6520206654500133948">
+  <div class="idea-endorsement" id="idea-6520206654500133948-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-59/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            7
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-59">
+    <div class="idea-details">
+      <h3>
+        Text annotations in article text
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          In an effort to give our news stories more factual weight, we should enable journalists to add annotations for references or enhanced detail to parts of their story.
+ 
+This would go well with our aims to get involved in the Trust Project, and woul...
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/avatar32.5fb70cce7410889e661286fd7f1897de.png">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created 6 days ago
+              by Djenan Kozic
+          </div>
+          <div class="idea-meta-secondary">
+            Storytelling
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #64b80a; background-color: #c1e29d; color: #284904;">We're working on this!</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6522056970390484784">
+  <div class="idea-endorsement" id="idea-6522056970390484784-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-1805/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            1
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-1805">
+    <div class="idea-details">
+      <h3>
+        Nostalgia - surface archive content&nbsp;
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Session board - https://sky.invisionapp.com/boards/GS3IE9W9U24/
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/avatar32.5fb70cce7410889e661286fd7f1897de.png">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created about 23 hours ago
+              by Djenan Kozic
+          </div>
+          <div class="idea-meta-secondary">
+            Storytelling
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+          <li class="idea" id="6522056969627784591">
+  <div class="idea-endorsement" id="idea-6522056969627784591-endorsement">
+        <a class="btn-vote" data-disable="true" data-count="1" data-remote="true" rel="nofollow" data-method="post" href="https://discovery.ideas.aha.io/ideas/DIS-I-1804/idea_endorsements?idea_ids%5B%5D=6522346865664929918&amp;idea_ids%5B%5D=6522056944781418476&amp;idea_ids%5B%5D=6522056942013633421&amp;idea_ids%5B%5D=6521636916955448276&amp;idea_ids%5B%5D=6521598839516317180&amp;idea_ids%5B%5D=6521294874992649007&amp;idea_ids%5B%5D=6521636918098455683&amp;idea_ids%5B%5D=6520206654500133948&amp;idea_ids%5B%5D=6522056970390484784&amp;idea_ids%5B%5D=6522056969627784591">
+          <span class="vote-count">
+            1
+          </span>
+          <span class="vote-status">
+            VOTE
+          </span>
+</a>  <div class="popover vote-popover portal-user"></div>
+</div>
+
+  <a class="idea-link" href="https://discovery.ideas.aha.io/ideas/DIS-I-1804">
+    <div class="idea-details">
+      <h3>
+        Innovative - share and upload content, express themselves - delighters, snapchat filters, games&nbsp;
+          <span class="label-private-idea">Private</span>
+      </h3>
+      <div class="description">
+          Session board - https://sky.invisionapp.com/boards/GS3IE9W9U24/
+      </div>
+      <div class="idea-meta">
+        <span class="avatar">
+          <img alt="" src="./Sky News and Sports Digital - Discovery_files/avatar32.5fb70cce7410889e661286fd7f1897de.png">
+        </span>
+        <div class="idea-meta-created">
+          <div class="idea-meta-secondary">
+            Created about 23 hours ago
+              by Djenan Kozic
+          </div>
+          <div class="idea-meta-secondary">
+            Innovation
+          </div>
+        </div>
+        <span class="comment-count">
+          <i class="fa fa-comments"></i>
+          0
+        </span>
+          <span class="status-pill" style="border-color: #000000; background-color: #999999; color: #000000;">Awaiting review</span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </a>
+  <div class="clearfix"></div>
+</li>
+
+    </ul>
+        <div class="pagination">
+      <ul>
+        
+        
+            <li class="active">
+  <a href="https://discovery.ideas.aha.io/#">1</a>
+</li>
+
+            <li class="">
+  <a rel="next" href="https://discovery.ideas.aha.io/?page=2">2</a>
+</li>
+
+            <li class="">
+  <a href="https://discovery.ideas.aha.io/?page=3">3</a>
+</li>
+
+            <li class="">
+  <a href="https://discovery.ideas.aha.io/?page=4">4</a>
+</li>
+
+            <li class="">
+  <a href="https://discovery.ideas.aha.io/?page=5">5</a>
+</li>
+
+            <li class="disabled">
+  <a href="https://discovery.ideas.aha.io/#">…</a>
+</li>
+
+        <li>
+  <a rel="next" href="https://discovery.ideas.aha.io/?page=2">Next ›</a>
+</li>
+
+        <li>
+  <a href="https://discovery.ideas.aha.io/?page=179">Last »</a>
+</li>
+
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="portal-aha-footer">
+  <div class="container">
+    <footer>
+      <div class="powered-by">
+        Idea Management by
+        <a href="http://www.aha.io/product/features/ideas">Aha!</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  
+</script>
+
+
+    <div class="modal hide fade" id="modal-window"></div>
+  
+
+
+
+<svg id="SvgjsSvg1001" width="2" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" style="opacity: 0; position: fixed; left: 100%; top: 100%; overflow: hidden;"><defs id="SvgjsDefs1002"></defs><polyline id="SvgjsPolyline1003" points="0,0"></polyline><path id="SvgjsPath1004" d="M0 0 "></path></svg><div id="user-css"><style>.ideas .idea {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  border: 1px solid #eee;
+  padding: 1em;
+  box-sizing: border-box;
+  margin-bottom: 3%;
+}
+
+.ideas .idea:nth-of-type(2n) {
+  margin-left: 3%;<p><br data-mce-bogus="1"></p>
+}<p><br data-mce-bogus="1"></p>
+
+.idea-endorsement {
+  float: none;
+  width: 100%;
+}
+
+.ideas .idea .idea-details {
+  float: none;
+  width: 100%;
+}
+
+.ideas .idea .idea-details .idea-meta .comment-count {
+  display: block;
+  float: none;
+  width: auto;
+  margin: 0 -1em;
+  padding: 1em;
+  background: #eee;
+  text-align: right;
+}
+
+.ideas .idea .idea-details .idea-meta .status-pill {
+  
+}</style></div><div id="ucss-code-wrapper" class="ucss-dock-to-bottom" style="opacity: 1; bottom: 0px; height: 353px;"><div id="ucss-code-inner"><div id="aha-editor-link-edit-panel-370040" class="aha-editor-link-edit-panel " data-reactive-preserve="true"><div id="mceu_17" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; display: none;"><div id="mceu_17-body" class="mce-container-body mce-stack-layout"><div id="mceu_18" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group"><div id="mceu_18-body" class="mce-container-body mce-stack-layout"><div id="mceu_70" class="mce-container mce-toolbar" role="toolbar"><div id="mceu_70-body" class="mce-container-body mce-flow-layout"><div id="mceu_71" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_71-body"><div id="mceu_53" class="mce-widget mce-btn mce-control-styleselect mce-btn-small mce-menubtn mce-first mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_53" role="button" aria-haspopup="true"><button id="mceu_53-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Formats</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_72" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_72-body"><div id="mceu_54" class="mce-widget mce-btn mce-control-bold mce-btn-small mce-first" tabindex="-1" aria-labelledby="mceu_54" role="button" aria-label="Bold"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_55" class="mce-widget mce-btn mce-control-italic mce-btn-small" tabindex="-1" aria-labelledby="mceu_55" role="button" aria-label="Italic"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div id="mceu_56" class="mce-widget mce-btn mce-control-underline mce-btn-small" tabindex="-1" aria-labelledby="mceu_56" role="button" aria-label="Underline"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-underline"></i></button></div><div id="mceu_57" class="mce-widget mce-btn mce-control-strikethrough mce-btn-small mce-last" tabindex="-1" aria-labelledby="mceu_57" role="button" aria-label="Strikethrough"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div></div></div><div id="mceu_73" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_73-body"><div id="mceu_58" class="mce-widget mce-btn mce-control-alignleft mce-btn-small mce-first" tabindex="-1" aria-labelledby="mceu_58" role="button" aria-label="Align left"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_59" class="mce-widget mce-btn mce-control-aligncenter mce-btn-small" tabindex="-1" aria-labelledby="mceu_59" role="button" aria-label="Align center"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_60" class="mce-widget mce-btn mce-control-alignright mce-btn-small" tabindex="-1" aria-labelledby="mceu_60" role="button" aria-label="Align right"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_61" class="mce-widget mce-btn mce-control-alignjustify mce-btn-small mce-last" tabindex="-1" aria-labelledby="mceu_61" role="button" aria-label="Justify"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div id="mceu_74" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_74-body"><div id="mceu_62" class="mce-widget mce-btn mce-control-bullist mce-btn-small mce-first" tabindex="-1" aria-labelledby="mceu_62" role="button" aria-label="Bullet list"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button></div><div id="mceu_63" class="mce-widget mce-btn mce-control-numlist mce-btn-small" tabindex="-1" aria-labelledby="mceu_63" role="button" aria-label="Numbered list"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-numlist"></i></button></div><div id="mceu_64" class="mce-widget mce-btn mce-control-outdent mce-btn-small" tabindex="-1" aria-labelledby="mceu_64" role="button" aria-label="Decrease indent"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-outdent"></i></button></div><div id="mceu_65" class="mce-widget mce-btn mce-control-indent mce-btn-small mce-last" tabindex="-1" aria-labelledby="mceu_65" role="button" aria-label="Increase indent"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-indent"></i></button></div></div></div><div id="mceu_75" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_75-body"><div id="mceu_66" class="mce-widget mce-btn mce-control-table mce-btn-small mce-menubtn mce-first" tabindex="-1" aria-labelledby="mceu_66" role="button" aria-label="Table" aria-haspopup="true"><button id="mceu_66-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-table"></i> <i class="mce-caret"></i></button></div><div id="mceu_67" class="mce-widget mce-btn mce-control-link mce-btn-small mce-last" tabindex="-1" aria-labelledby="mceu_67" role="button" aria-label="Insert/edit link"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div></div></div><div id="mceu_76" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_76-body"><div id="mceu_68" class="mce-widget mce-btn mce-control-removeformat mce-btn-small mce-first mce-last" tabindex="-1" aria-labelledby="mceu_68" role="button" aria-label="Clear formatting"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-removeformat"></i></button></div></div></div><div id="mceu_77" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_77-body"></div></div><div id="mceu_78" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_78-body"><div id="mceu_69" class="mce-widget mce-btn mce-control-fullscreen mce-btn-small mce-first mce-last" tabindex="-1" aria-labelledby="mceu_69" role="button" aria-label="Fullscreen"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-fullscreen"></i></button></div></div></div></div></div></div></div><div id="mceu_28" class="mce-edit-area mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px; width: calc(100% - 1px);"><iframe id="ucss-code_rand370040_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" src="javascript:&quot;&quot;" style="width: 100%; height: 50px; display: block;" src="./Sky News and Sports Digital - Discovery_files/saved_resource.html"></iframe></div></div></div></div><textarea id="ucss-code_rand370040" placeholder="User CSS goes here..." style="display: none; visibility: hidden;" data-editor-id="370040" aria-hidden="true"></textarea><div class="CodeMirror CodeMirror-wrap cm-s-base16-dark"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 96px; left: 190px;"><div id="aha-editor-link-edit-panel-460681" class="aha-editor-link-edit-panel " data-reactive-preserve="true"><div id="mceu_34" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px;"><div id="mceu_34-body" class="mce-container-body mce-stack-layout"><div id="mceu_35" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group"><div id="mceu_35-body" class="mce-container-body mce-stack-layout"><div id="mceu_84" class="mce-container mce-toolbar" role="toolbar"><div id="mceu_84-body" class="mce-container-body mce-flow-layout"><div id="mceu_85" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_85-body"><div id="mceu_79" class="mce-widget mce-btn mce-control-styleselect mce-btn-small mce-menubtn mce-first mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_79" role="button" aria-haspopup="true"><button id="mceu_79-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Formats</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_86" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_86-body"><div id="mceu_80" class="mce-widget mce-btn mce-control-ahameagadropdown mce-btn-small mce-menubtn mce-first mce-last" tabindex="-1" aria-labelledby="mceu_80" role="button" aria-label="Style" aria-haspopup="true"><button id="mceu_80-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i> <i class="mce-caret"></i></button></div></div></div><div id="mceu_87" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_87-body"><div id="mceu_81" class="mce-widget mce-btn mce-control-table mce-btn-small mce-menubtn mce-first" tabindex="-1" aria-labelledby="mceu_81" role="button" aria-label="Table" aria-haspopup="true"><button id="mceu_81-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-table"></i> <i class="mce-caret"></i></button></div><div id="mceu_82" class="mce-widget mce-btn mce-control-ahainsert mce-btn-small mce-menubtn mce-last" tabindex="-1" aria-labelledby="mceu_82" role="button" aria-label="insert" aria-haspopup="true"><button id="mceu_82-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i> <i class="mce-caret"></i></button></div></div></div><div id="mceu_88" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_88-body"><div id="mceu_83" class="mce-widget mce-btn mce-control-fullscreen mce-btn-small mce-first mce-last" tabindex="-1" aria-labelledby="mceu_83" role="button" aria-label="Fullscreen"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-fullscreen"></i></button></div></div></div></div></div></div></div><div id="mceu_41" class="mce-edit-area mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px; width: calc(100% - 1px);"><iframe id="aha-editor-460681_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" src="javascript:&quot;&quot;" style="width: 100%; height: 50px; display: block;" src="./Sky News and Sports Digital - Discovery_files/saved_resource(1).html"></iframe></div></div></div></div><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none; visibility: hidden; display: none;" tabindex="0" id="aha-editor-460681" data-editor-id="460681" aria-hidden="true"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 746px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -14px; border-right-width: 16px; min-height: 760px; padding-right: 14px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"><div class="CodeMirror-selected" style="position: absolute; left: 190px; top: 220px; width: 1093px; height: 20px;"></div><div class="CodeMirror-selected" style="position: absolute; left: 17px; top: 240px; width: 297.594px; height: 20px;"></div></div><div class="CodeMirror-cursors" style=""></div><div class="CodeMirror-code" role="presentation" style=""><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.ideas</span> <span class="cm-qualifier">.idea</span> {</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">display</span>: <span class="cm-atom">inline-block</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-number">48%</span>;</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">vertical-align</span>: <span class="cm-atom">top</span>;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">border</span>: <span class="cm-number">1px</span> <span class="cm-atom">solid</span> <span class="cm-atom">#eee</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">padding</span>: <span class="cm-number">1em</span>;</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>;</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">margin-bottom</span>: <span class="cm-number">3%</span>;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.ideas</span> <span class="cm-qualifier">.idea</span>:<span class="cm-variable-3">nth-of-type</span>(<span class="cm-number">2n</span>) {</span></pre><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">margin-left</span>: <span class="cm-number">3%</span>;&lt;<span class="cm-property cm-error">p</span>&gt;&lt;<span class="cm-property cm-error">br</span> <span class="cm-property cm-error">data-mce-bogus</span>=<span class="cm-string">"1"</span>&gt;&lt;/<span class="cm-property cm-error">p</span>&gt;</span></pre></div><div class="" style="position: relative;"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}&lt;<span class="cm-tag">p</span>&gt;&lt;<span class="cm-tag">br</span> <span class="cm-tag">data-mce-bogus</span>=<span class="cm-string">"1"</span>&gt;&lt;/<span class="cm-tag">p</span>&gt;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.idea-endorsement</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">float</span>: <span class="cm-atom">none</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-number">100%</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.ideas</span> <span class="cm-qualifier">.idea</span> <span class="cm-qualifier">.idea-details</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">float</span>: <span class="cm-atom">none</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-number">100%</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.ideas</span> <span class="cm-qualifier">.idea</span> <span class="cm-qualifier">.idea-details</span> <span class="cm-qualifier">.idea-meta</span> <span class="cm-qualifier">.comment-count</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">display</span>: <span class="cm-atom">block</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">float</span>: <span class="cm-atom">none</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">width</span>: <span class="cm-atom">auto</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">margin</span>: <span class="cm-number">0</span> <span class="cm-number">-1em</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">padding</span>: <span class="cm-number">1em</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">background</span>: <span class="cm-atom">#eee</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-property">text-align</span>: <span class="cm-atom">right</span>;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.ideas</span> <span class="cm-qualifier">.idea</span> <span class="cm-qualifier">.idea-details</span> <span class="cm-qualifier">.idea-meta</span> <span class="cm-qualifier">.status-pill</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 16px; width: 1px; border-bottom: 0px solid transparent; top: 760px;"></div><div class="CodeMirror-gutters" style="display: none; height: 776px;"></div></div></div></div><div class="ucss-panel"><div class="ucss-options" title="Options"></div><div class="ucss-position"><div class="ucss-position__item ucss-position__item--bottom ucss-position__item--active" title="Dock to bottom"></div><div class="ucss-position__item  ucss-position__item--right" title="Dock to right"></div></div><div class="ucss-toggle  ucss-toggle--active" title="Toggle styles"></div><div class="ucss-opacity"><input type="range" min="30" max="100" value="100" title="Editor opacity"><div class="ucss-opacity__number">100%</div></div></div><div id="ucss-editor-resize"></div><div id="ucss-code-theme"><link href="chrome-extension://okpjlejfhacmgjkmknjhadmkdbcldfcb/css/themes/base16-dark.css" rel="stylesheet"></div><div id="ucss-font-style"><style>#ucss-code-wrapper .CodeMirror * {font: 16px/20px monospace !important}</style></div></div><div id="mceu_42" class="mce-container mce-panel mce-floatpanel mce-menu mce-menu-align" hidefocus="1" tabindex="-1" role="application" aria-labelledby="mceu_42" aria-describedby="mceu_42-none" style="border-width: 1px; z-index: 65535; left: 4px; top: 1292px; width: 1296px; display: none;"><div id="mceu_42-body" class="mce-container-body mce-stack-layout" role="menu" style="width: 1296px;"><div id="mceu_43" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item mce-first mce-active" tabindex="-1" role="menuitem" aria-checked="true" aria-pressed="true"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_43-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:12px;font-weight:400;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Paragraph</span></div><div id="mceu_44" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_44-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:24px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 1</span></div><div id="mceu_45" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_45-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:21px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 2</span></div><div id="mceu_46" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_46-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:18px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 3</span></div><div id="mceu_47" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_47-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:15px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:uppercase;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 4</span></div><div id="mceu_48" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_48-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:12px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 5</span></div><div id="mceu_49" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_49-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:10.2px;font-weight:700;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Heading 6</span></div><div id="mceu_50" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_50-text" class="mce-text" style="font-family:Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace;font-size:13px;font-weight:400;font-style:normal;text-decoration:none solid rgb(51, 51, 51);text-transform:none;color:rgb(51, 51, 51);background-color:rgb(251, 250, 248);padding:0 2px;border:1px solid rgba(0, 0, 0, 0.15);border-radius:4px;outline:rgb(51, 51, 51) none 0px;text-shadow:none;">Preformatted</span></div><div id="mceu_51" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_51-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:12px;font-weight:400;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);border:;border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Quote</span></div><div id="mceu_52" class="mce-menu-item mce-menu-item-preview mce-stack-layout-item mce-last" tabindex="-1" role="menuitem" aria-checked="false"><i class="mce-ico mce-i-none"></i>&nbsp;<span id="mceu_52-text" class="mce-text" style="font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:12px;font-weight:400;font-style:normal;text-decoration:none solid rgb(85, 85, 85);text-transform:none;color:rgb(85, 85, 85);background-color:rgb(255, 255, 157);padding:0 2px;border:0px none rgb(85, 85, 85);border-radius:0px;outline:rgb(85, 85, 85) none 0px;text-shadow:none;">Highlight</span></div></div></div></body></html>
