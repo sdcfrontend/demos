@@ -7,14 +7,19 @@
     <title>Document</title>
     <style>
 
+        @font-face {
+          font-family: skytext;
+          src: url(sky-regular.woff) format("woff");
+        }
+
         * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
         }
 
         body {
-            font-family: sans-serif;
+          font-family: skytext, sans-serif;
         }
 
         a {
@@ -111,7 +116,6 @@
         .con__questions-card {
             background: white;
             border:1px solid #ccc;
-            min-height: 500px;
             padding: 3em 2.6em;
         }
 
@@ -180,6 +184,7 @@
             font-size: 2em;
             font-weight: 400;
             margin-bottom: 8px;
+            line-height: 1.1
         }
 
         .con__questions-results-odd {
@@ -223,6 +228,32 @@
             border: 1px solid #002770
         }
 
+        @media all and (max-width: 480px){
+            .con__body {
+                padding: 1.8em 1.2em;
+            }
+
+            .con__questions-card {
+                padding: 2em 1.5em;
+            }
+
+            .con__questions-card-head {
+                font-size: 1.4em;
+            }
+
+            .con__questions-results-col2 {
+              width: 90px;
+            }
+
+            .con__questions-card-head h5 {
+              font-size: 1.8em;
+            }
+
+            .con__questions-results-odd {
+              font-size: 18px;
+            }
+        }
+
 
     </style>
 </head>
@@ -248,9 +279,11 @@
                             <h4 class="con__questions-card-head">1. What is your favourite food?</h4>
                             <form action="" class="con__questions-card-form">
                                 <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="a1" name="q1"><span class="con__questions-card-item-text">Pasta</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="a2" name="q1"><span class="con__questions-card-item-text">Pizza</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="a3" name="q1"><span class="con__questions-card-item-text">Curry</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="1" name="q1"><span class="con__questions-card-item-text">Beans on toast</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="2" name="q1"><span class="con__questions-card-item-text">Fish and Chips</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="3" name="q1"><span class="con__questions-card-item-text">Spaghetti Bolognese</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="4" name="q1"><span class="con__questions-card-item-text">Vindaloo</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="5" name="q1"><span class="con__questions-card-item-text">Blowfish</span></label></li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
@@ -261,14 +294,16 @@
                     </li>
                     <li class="con__questions-item">
                         <div class="con__questions-card">
-                            <h4 class="con__questions-card-head">2. What is your favourite color?</h4>
+                            <h4 class="con__questions-card-head">2. What kind of holiday do you prefer?</h4>
                             
                             <form action="" class="con__questions-card-form">
 
                                 <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b1" name="q2"><span class="con__questions-card-item-text">Blue</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b2" name="q2"><span class="con__questions-card-item-text">Red</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b3" name="q2"><span class="con__questions-card-item-text">Green</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="6" name="q2"><span class="con__questions-card-item-text">Beach</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="7" name="q2"><span class="con__questions-card-item-text">Backpacking</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="8" name="q2"><span class="con__questions-card-item-text">Adventure</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="9" name="q2"><span class="con__questions-card-item-text">Extreme Sport</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="10" name="q2"><span class="con__questions-card-item-text">In a warzone</span></label></li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
@@ -278,12 +313,14 @@
                     </li>
                     <li class="con__questions-item">
                         <div class="con__questions-card">
-                            <h4 class="con__questions-card-head">3. What is your kind of holiday?</h4>
+                            <h4 class="con__questions-card-head">3. What would be your ideal pet?</h4>
                             <form action="" class="con__questions-card-form">
                                  <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b1" name="q2"><span class="con__questions-card-item-text">Beach</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b2" name="q2"><span class="con__questions-card-item-text">Backpacking</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="b3" name="q2"><span class="con__questions-card-item-text">Extreme Sport</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="11" name="q3"><span class="con__questions-card-item-text">Goldfish</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="12" name="q3"><span class="con__questions-card-item-text">Hamster</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="13" name="q3"><span class="con__questions-card-item-text">Dog</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="14" name="q3"><span class="con__questions-card-item-text">Snake</span></label></li>
+                                    <li class="con__questions-card-item"><label><input type="radio" value="15" name="q3"><span class="con__questions-card-item-text">Tarantula</span></label></li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
@@ -296,12 +333,12 @@
                             <div class="con__questions-results">
                                 <div class="con__questions-results-col1">
                                     <h4 class="con__questions-card-head">You've got:</h4>
-                                    <h5>Splash of Ginge</h5>
-                                    <a href="#" class="con__questions-results-odd">40/1</a>
+                                    <h5 data-role="result-title">Splash of Ginge</h5>
+                                    <a href="#" class="con__questions-results-odd" data-role="result-odds">40/1</a>
                                 </div>
 
                                 <div class="con__questions-results-col2">
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Racing_silks_of_Cheveley_Park_Stud.png" alt="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Racing_silks_of_Cheveley_Park_Stud.png" alt="" data-role="result-image">
                                 </div>
 
                             </div>
@@ -323,9 +360,43 @@
 
     </div>
     <script>
+
+        var answers = [{
+                "name": "Fire and Brimstone",
+                "odds": "100/1",
+                "number": "7",
+                "tags": ["5", "6", "7", "12", "14"]
+            },
+            {
+                "name": "Green Man",
+                "odds": "66/1",
+                "number": "2",
+                "tags": ["5", "4", "8", "15"]
+            },
+            {
+                "name": "Old Blue Eyes",
+                "odds": "10/1",
+                "number": "10",
+                "tags": ["1", "2", "3", "9"]
+            },
+            {
+                "name": "Sunset Boulevard",
+                "odds": "5/1",
+                "number": "42",
+                "tags": ["1", "2", "10", "12", "13"]
+            },
+            {
+                "name": "Lucky Jim",
+                "odds": "50/1",
+                "number": "42",
+                "tags": ["3", "4", "11", "14"]
+            }
+        ];
+
         var list = document.querySelector('.con__questions-list');
         var nav = document.querySelectorAll('.con__nav-link');
         var cards = document.querySelectorAll('.con__questions-card');
+        var forms = document.querySelectorAll('.con__questions-card-form');
 
         nav.forEach(function(item, index){
             item.onclick = function(e){
@@ -347,14 +418,65 @@
         }
 
         function goTo(index){
-            console.log(index);
             nav[index].parentNode.setAttribute('data-answerable', true);
             nav[index].click();
         }
 
         function pickAnswer(event){
             event.preventDefault();
-            goTo(this+1)
+            goTo(this+1);
+            var selection = matchSelection(getAnswers(forms));
+            writeSelection(selection);
+        }
+
+        function getAnswers(forms){
+          var answers = [];
+          forms.forEach(function(form){
+            var data = new FormData(form);
+            for(var item of data.entries()){
+              answers.push(item[1]);
+            }
+          });
+
+          return answers;
+
+        }
+
+        function matchSelection(selections){
+
+          var matches = [];
+
+          answers.forEach(function(answer){
+
+            var tags = answer.tags;
+
+            selections.forEach(function(selection){
+
+              if(tags.indexOf(selection) > -1){
+              
+                if(matches.indexOf(answer) > -1){
+                  answer.count ++;
+                }
+
+                else {
+                  matches.push(answer);
+                  answer.count = 1;
+                }
+              }
+            })
+          })
+
+          matches.sort(function(a,b){
+            return b.count - a.count;
+          });
+
+          return matches[0];
+
+        }
+
+        function writeSelection(obj){
+          document.querySelector('[data-role="result-title"]').textContent = obj.name;
+          document.querySelector('[data-role="result-odds"]').textContent = obj.odds;
         }
     </script>
 </body>
