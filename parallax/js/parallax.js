@@ -14,12 +14,31 @@ function framePercentageValue(frameDimensions, startFromBottom) {
 
 }
 
+function setProperties(parallaxFrames) {
+
+  var parallaxFrames = document.querySelectorAll('[data-parallax-role="frame"]');
+
+  parallaxFrames.forEach(function(parallaxFrame) {
+
+    var parallaxSubjects = parallaxFrame.querySelectorAll('[data-parallax-role="subject"]');
+
+    parallaxSubjects.forEach(function(parallaxSubject) {
+
+      parallaxSubject.classList.add('parallax-subject--' + parallaxSubject.getAttribute('data-parallax-property'));
+      parallaxSubject.style.setProperty('--parallaxMultiplier', parallaxSubject.getAttribute('data-parallax-multiplier'));
+
+    });
+
+  });
+
+}
+
 function triggerParallax() {
 
   function findScrollPosition() {
 
-    var height = window.innerHeight;
     var parallaxFrames = document.querySelectorAll('[data-parallax-role="frame"]');
+    var height = window.innerHeight;
 
     parallaxFrames.forEach(function(parallaxFrame) {
 
@@ -33,10 +52,8 @@ function triggerParallax() {
 
           if (parallaxSubject.dataset.parallaxStart == "bottom") {
             parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, true));
-            parallaxSubject.style.setProperty('--parallaxMultiplier', parallaxSubject.getAttribute('data-parallax-multiplier'));
           } else {
             parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, false));
-            parallaxSubject.style.setProperty('--parallaxMultiplier', parallaxSubject.getAttribute('data-parallax-multiplier'));
           }
 
         });
@@ -52,5 +69,7 @@ function triggerParallax() {
   findScrollPosition();
 
 }
+
+setProperties();
 
 triggerParallax();

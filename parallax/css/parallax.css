@@ -3,7 +3,7 @@
 }
 
 .parallax-subject--translateY {
-  transform: translate3d(0,calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1% ),0);
+  transform: translate3d(0,calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1px ),0);
   will-change: transform;
 }
 
@@ -13,11 +13,11 @@
 }
 
 .parallax-subject--rotate {
-  transform: translate3d( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 3.6deg ),0,0);
+  transform: rotate( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 0.36deg ));
   will-change: transform;
 }
 
-.parallax-subject--blur {
+/* .parallax-subject--blur {
   filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * 1px ) );
   will-change: filter;
 }
@@ -25,7 +25,7 @@
 .parallax-subject--blur-reverse {
   filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * -1px ) );
   will-change: filter;
-}
+} */
 
 .parallax-subject--fade {
   opacity: calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/100));
