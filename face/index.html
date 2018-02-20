@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face recognition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  @font-face {
+    font-family: skytext;
+    src: url(sky-regular.woff) format("woff");
+  }
+
+  html {
+    font-family: skytext;
+    font-size: 18px;
+  }
+
+    .con {
+      background: #333;
+      max-width: 375px;
+      margin: 10px auto;
+    }
+
+    video {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .con__media {
+      position: relative;
+    }
+
+    .con__overlay {
+      position: absolute;
+      /* background: rgba(0, 0, 0, 0.142);  */
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .target {
+      width: 50px;
+      height: 50px;
+      display: block;
+      border: 2px solid white;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.103);
+      filter: brightness(210%)
+    }
+
+    @keyframes target1 {
+      0% {
+        left: 38%;
+        top: 11%;
+        visibility: visible
+      }
+
+      10% {
+        left: 43%;
+        top: 10%;
+      }
+
+      20% {
+        left: 45%;
+        top: 6%
+      }
+
+      35% {
+        left: 43%;
+        top: 6%
+      }
+
+      47% {
+        left: 39%;
+        top: 5%;
+      }
+
+      48% {
+        visibility: hidden
+      }
+
+      100% {
+        visibility: hidden
+      }
+    }
+
+    @keyframes target2 {
+      0% {
+        left: 59%;
+        top: 11%;
+        visibility: visible
+      }
+
+
+      19% {
+        left: 59%;
+        top: 11%
+      }
+
+      30% {
+        left: 57%;
+        top: 10%
+      }
+
+      40% {
+        left: 53%;
+        top: 9.5%;
+      }
+
+      47% {
+        left: 51%;
+        top: 9%;
+       
+      }
+      
+      48% {
+        visibility: hidden;
+      }
+
+      100% {
+        visibility: hidden;
+      }
+    }
+
+    @keyframes target3 {
+      0% {
+        visibility: hidden;
+        left: 14%;
+        top: 7%
+      }
+
+      50% {
+        visibility: hidden;
+        left: 14%;
+        top: 7%
+      }
+
+      51% {
+        visibility: visible;
+        left: 14%;
+        top: 7%
+      }
+
+      70% {
+        left: 30%;
+        top: 11%;
+      }
+
+      80% {
+        left: 28%;
+        top: 15%;
+      }
+
+      90% {
+        left: 25%;
+        top: 16%;
+      }
+
+      95% {
+        left: 27%;
+        top: 15%;
+      }
+
+      100% {
+        left: 28%;
+        top: 19%;
+      }
+    }
+
+
+    @keyframes target4 {
+      0% {
+        visibility: hidden;
+        left: 77%;
+        top: 7%
+      }
+
+      50% {
+        visibility: hidden;
+        left: 76%;
+        top: 8%;
+      }
+
+      51% {
+        visibility: visible;
+        left: 76%;
+        top: 8%;
+      }
+
+      52% {
+        left: 70%;
+        top: 8%;
+      }
+
+      53% {
+        left: 72%
+      }
+
+      58% {
+        left: 72%
+      }
+
+      62% {
+        left: 71%;
+        top: 8%;
+      }
+
+      70% {
+        left: 68%;
+        top: 8%;
+      }
+
+      80% {
+        left: 63%;
+        top: 11%;
+      }
+
+      88% {
+        left: 56%;
+        top: 9%
+      } 
+
+      92% {
+        left: 53%;
+        top: 13%;
+      }
+
+      100% {
+        left: 63%;
+        top: 13%;
+      }
+    }
+
+ 
+    .caption {
+      background: white;
+      color: black;
+      padding: 6px 9px;
+      font-size: 12px;
+      box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+      position: absolute;
+      z-index: 4;
+    }
+
+    .caption--1 {
+      /* transform: translate(-125%, 50%) */
+      margin-left: -35%;
+      margin-top: 2.5%;
+    }
+
+    .caption--2 {
+      margin-top: 18%;
+    }
+
+    .caption--3 {
+      margin-left: -15%;
+      margin-top: 16%
+    }
+
+    .caption--4 {
+      margin-top: 16%
+    }
+
+    .target--1,
+    .caption--1 {
+      animation: target1 11000ms linear;
+      animation-fill-mode: both
+    }
+
+    .target--2 ,
+    .caption--2{
+      animation: target2 11000ms linear;
+      animation-fill-mode: both
+    }
+
+    .target--3 ,
+    .caption--3{
+      animation: target3 11000ms linear;
+      animation-fill-mode: both
+    }
+
+    .target--4 ,
+    .caption--4{
+      animation: target4 11000ms linear;
+      animation-fill-mode: both
+    }
+
+
+    @keyframes panel {
+      0% {
+        height: 0;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      1% {
+        height: 60px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      20% {
+        opacity: 0;
+        height: 60px;
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+        height: 60px;
+      }
+    }
+
+    .con__info {
+      overflow: auto;
+      height: 300px;
+    }
+
+    .con__info li {
+      color: #fff;
+      margin: 7px;
+      background: #444;
+      list-style: none;
+      will-change: opacity, transform;
+      height: 60px;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+      display: flex;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .con__info li:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .con__info img {
+      width: 60px;
+      height: 60px;
+      float: left;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .con__info h3 {
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    .con__info p {
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    li {
+    
+    }
+
+    li:first-child {
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 5s;
+
+    }
+
+     li:first-child + li   {
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 5.25s;
+
+    }
+
+    li:first-child + li + li{
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 0.1s;
+
+    }
+
+   li:first-child + li + li + li{
+      animation: panel 0.3s;
+      animation-fill-mode: both;
+      animation-delay: 0.35s;
+
+    }
+
+   
+  </style>
+</head>
+<body>
+  <div class="con">
+    <div class="con__media">
+      <div class="con__overlay">
+        <span class="target target--1"></span>
+        <span class="caption caption--1">Santa Montefiore</span>
+        <span class="target target--2"></span>
+        <span class="caption caption--2">Tara Palmer-Tomkinson</span>
+
+        <span class="target target--3"></span>
+        <span class="caption caption--3">Elton John</span>
+        <span class="target target--4"></span>
+        <span class="caption caption--4">David Furnish</span>
+      </div>
+      <video src="clip2.mp4" autoplay muted preload></video>
+    </div>
+    <div class="con__info">
+
+      <ul>
+        
+        <li><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+        <li><img src="https://yt3.ggpht.com/cK4JEEb7tfQXFGArdzEnvwqMQXkcP8C_Gd-OLsR7F44afVRKGzbYE4Ds_3HKIl0sF_MZuPNsSaonGtEi=s100-nd-c-c0xffffffff-rj-k-no"><h3>David Furnish</h3><p>Elton John's husband</p></li>
+        <li><img src="https://content4.promiflash.de/article-images/square-100/tara-palmer-tomkinson-mit-neuer-nase.jpg"><h3>Tara Palmer Tomkinson</h3>
+          <p>Socialite</p></li>
+          <li><img src="https://storage.googleapis.com/hebban-website-eu.appspot.com/portraits/thumb/SantaMontefiore.jpg"><h3>Santa Montefiore</h3>
+          <p>Author</p></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+  
+  setTimeout(function(){
+
+    document.querySelector('ul').classList.add('active');
+  }, 500)</script>
+</body>
+</html>

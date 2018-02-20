@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Face recognition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  @font-face {
+    font-family: skytext;
+    src: url(sky-regular.woff) format("woff");
+  }
+
+  html {
+    font-family: skytext;
+    font-size: 18px;
+    text-align: center;
+    overflow: hidden;
+  }
+
+    .con {
+      background: #111111;
+      margin: 10px auto;
+      max-width: 700px;
+      display: inline-flex;
+      flex-direction: column;
+      text-align: left;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+.video {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dot {
+  position: absolute;
+  left: 39%;
+  top: 35%;
+  will-change: left, top;
+  transition: left 1s, top 1s;
+  transform: translate(-100%, 0);
+  z-index: 10
+}
+
+.dot__spot {
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: 0;
+  position: absolute;
+  transform: translate(50%, -50%);
+}
+
+.dot__spot:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+
+.dot__spot:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  right: 0;
+  bottom: 0
+}
+
+.dot__caption {
+  background: white;
+  padding: 4px 9px;
+  font-size: 14px;
+  transform: translate(-10%, 100%)
+} 
+
+.dot--2 {
+  left: 63%;
+  top: 24%
+}
+
+.dot--2  .dot__caption {
+  transform: translate(75%, 140%)
+}
+
+.dot--3 {
+  display: none;
+  left: 54%;
+  top: 33%;
+}
+
+.dot--4 {
+  display: none;
+  left: 70%;
+  top: 54%;
+}
+
+.dot--4  .dot__caption {
+  transform: translate(75%, 140%)
+}
+
+    video {
+      width: 100%;
+    }
+
+    .con__info,
+    .con__detail {
+      overflow: auto;
+      flex: 1;
+      padding: 0 12px 12px
+    }
+
+    .con[data-tab="0"] .con__detail {
+      position: absolute;
+      visibility: hidden;
+      left: -1000vw;
+    }
+
+    .con[data-tab="1"] .con__info {
+      position: absolute;
+      visibility: hidden;
+      left: -1000vw;
+    }
+
+    .filter__grid-item {
+      color: #fff;
+      margin: 2px 0;
+      background: #333;
+      list-style: none;
+      will-change: opacity, transform;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 80px;
+      display: flex;
+      height: 1px;
+      overflow: hidden;
+      visibility: hidden;
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .filter__grid-item:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .filter__grid-item img {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      object-fit: cover
+    }
+
+    .filter__grid-item h3 {
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    .filter__grid-item p {
+      font-weight: 500;
+      font-size: 14px;
+      color: #ccc
+    }
+
+
+    @keyframes panel {
+      0% {
+        height: 1px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      1% {
+        height: 74px;
+        opacity: 0;
+        transform: scale(0.7);
+      }
+
+      20% {
+        opacity: 0;
+        height: 74px;
+        position: relative
+      }
+
+      100% {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+        height: 74px;
+        position: relative
+
+      
+      }
+    }
+
+    .filter__grid-item.active {
+      animation: panel 0.25s linear;
+      animation-fill-mode: both;
+    }
+
+    .controls {
+      position: absolute;
+      height: 45px;
+      width: 100%;
+      bottom: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 10
+    }
+
+    input[type=range].controls__track {
+      -webkit-appearance: none;
+      width: 100%;
+      margin:  0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    input[type=range].controls__track:focus {
+      outline: none;
+    }
+
+    input[type=range].controls__track::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      background: #ccc;
+      border-radius: 0px;
+      border: 0px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range].controls__track::-webkit-slider-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background: #d1021b;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -2.5px;
+      box-shadow: -100vw 0 0 100vw #d1021b;
+    }
+    input[type=range].controls__track:focus::-webkit-slider-runnable-track {
+      background: #fbfbfb;
+    }
+    input[type=range].controls__track::-moz-range-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      background: #eeeeee;
+      border-radius: 0px;
+      border: 0px solid rgba(0, 0, 0, 0);
+    }
+    input[type=range].controls__track::-moz-range-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50px;
+      background: #d1021b;
+      cursor: pointer;
+    }
+    input[type=range].controls__track::-ms-track {
+      width: 100%;
+      height: 5px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+    input[type=range].controls__track::-ms-fill-lower {
+      background: #e1e1e1;
+      border: 0px solid rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+    }
+    input[type=range].controls__track::-ms-fill-upper {
+      background: #eeeeee;
+      border: 0px solid rgba(0, 0, 0, 0);
+      border-radius: 0px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+    }
+    input[type=range].controls__track::-ms-thumb {
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+      border: 0px solid rgba(0, 0, 0, 0);
+      height: 12px;
+      width: 12px;
+      border-radius: 50px;
+      background: #d1021b;
+      cursor: pointer;
+      height: 5px;
+    }
+    input[type=range].controls__track:focus::-ms-fill-lower {
+      background: #eeeeee;
+    }
+    input[type=range].controls__track:focus::-ms-fill-upper {
+      background: #fbfbfb;
+    }
+
+    .controls__play {
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background: white;
+      top: 10px;
+      left: 12px;
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTYuODY2IDMuMDIyYzcuNzIgMCAxNCA2LjI4IDE0IDE0cy02LjI4IDE0LTE0IDE0LTE0LTYuMjgtMTQtMTQgNi4yOC0xNCAxNC0xNG0wLTJjLTguODM3IDAtMTYgNy4xNjMtMTYgMTZzNy4xNjMgMTYgMTYgMTYgMTYtNy4xNjMgMTYtMTYtNy4xNjMtMTYtMTYtMTZ6Ii8+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMjIuMTc3IDE2LjI2bC01LjUxNS01LjQ5M2MtLjg1LS44NDgtMi4wOTMtMS44NTItMy4xNjgtLjc4djE0LjA3YzEuMDc1IDEuMDcyIDIuMzE3LjA2NyAzLjE2OC0uNzhsNS41MTUtNS40OTNjLjQyMi0uNDIuNDIyLTEuMTAzIDAtMS41MjV6Ii8+Cjwvc3ZnPgo=);
+      background-size: 100% 100%;
+    }
+
+    .controls__play.playing {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTYuODY2IDMuMDJjNy43MiAwIDE0IDYuMjggMTQgMTRzLTYuMjggMTQtMTQgMTQtMTQtNi4yOC0xNC0xNCA2LjI4LTE0IDE0LTE0bTAtMmMtOC44MzcgMC0xNiA3LjE2NC0xNiAxNnM3LjE2MyAxNiAxNiAxNiAxNi03LjE2MiAxNi0xNi03LjE2My0xNi0xNi0xNnoiLz4KICA8cGF0aCBzdHlsZT0iZmlsbDogd2hpdGUiIGQ9Ik0yMC40NTIgMjQuODc1Yy0uMjg2IDAtLjU2Ny0uMDE0LS44NDMtLjA0LS4yNzgtLjAyNy0uNDg4LS4wNi0uNjMtLjA5NFYxMS4xNTRjMC0uMzU3LjExLS42NTYuMzM0LS44OTguMjIzLS4yNC42Mi0uMzYgMS4xOTItLjM2LjI4NSAwIC41NjcuMDEzLjg0NC4wNC4yNzYuMDI2LjQ4Ni4wNTguNjMuMDkzdjEzLjU4N2MwIC4zNTgtLjExMy42NTctLjMzNi44OTgtLjIyMy4yNC0uNjIuMzYyLTEuMTkyLjM2MnptLTcgMGMtLjI4NiAwLS41NjctLjAxNC0uODQzLS4wNC0uMjc4LS4wMjctLjQ4OC0uMDYtLjYzLS4wOTRWMTEuMTU0YzAtLjM1Ny4xMS0uNjU2LjMzNC0uODk4LjIyMy0uMjQuNjItLjM2IDEuMTkyLS4zNi4yODUgMCAuNTY2LjAxMy44NDQuMDQuMjc2LjAyNi40ODYuMDU4LjYzLjA5M3YxMy41ODdjMCAuMzU4LS4xMTMuNjU3LS4zMzYuODk4LS4yMjMuMjQtLjYyLjM2Mi0xLjE5Mi4zNjJ6Ii8+Cjwvc3ZnPgo=)
+    }
+
+    .con__nav {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .con__nav-list {
+      display: inline-flex;
+      list-style: none;
+      padding: 0;
+      border: 1px solid #555;
+      border-radius: 4px;
+      overflow: hidden;
+
+    }
+
+    .con__nav-list a {
+      display: inline-block;
+      padding: 10px 12px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      background: #111;
+      /* border-radius: 12px; */
+    }
+
+    /* .con__nav-list li:first-of-type a {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0
+    }
+
+    .con__nav-list li:first-of-type + li a {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0
+    } */
+
+    .con__nav-list a.on {
+      background: #555;
+      color: #fff
+    }
+
+    .con__detail {
+      display: flex;
+      flex-direction: row;
+      overflow: none;
+      padding-bottom: 28px;
+      position: relative
+    }
+
+    .con__detail-col1 {
+      width: 200px;
+      padding-right: 18px;
+    }
+
+    .con__detail-col2 {
+      flex: 1;
+      overflow: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      position: relative
+    }
+
+
+    .filter__search {
+      background: #333;
+      border: 0;
+      padding: 8px 6px;
+      width: 100%;
+      color: #ddd;
+      font-family: inherit;
+      font-size: 15px;
+      margin: 2px 0 15px;
+
+    }
+
+    .filter__tags li {
+      color: #ccc;
+      font-size: 16px;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .filter__tags li a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+      padding: 4px;
+    }
+
+    .filter__tags li a.on {
+      background: rgba(255,255,255,0.1)
+    }
+
+
+    .filter__grid-header {
+      color: white;
+      font-size: 20px;
+      margin: 2px 2px 18px;
+      font-weight: 500;
+      background: url()
+    }
+    
+    .filter__tags {
+      margin-bottom: 28px;
+    }
+
+    .filter__grid-header.hidden,
+    .filter__grid-header.hidden + ul {
+      display: none;
+    }
+
+    .filter__header {
+      display: none;
+    }
+
+    .filter__search-con {
+      position: relative
+    }
+
+    .filter__search-con svg {
+      width: 15px;
+      height: 15px;
+      fill: #8c8c8c;
+      position: absolute;
+      left: 9px;
+      top: 11px;
+    }
+
+    .filter__search-con input {
+      padding-left: 32px;
+    }
+
+    .filter__grid--grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    .filter__grid--grid .filter__grid-item {
+      width: calc(50% - 9px);
+      border-radius: 5px;
+      position: relative;
+      height: auto;
+      animation: none;
+      visibility: visible;
+      opacity: 1;
+      margin-bottom: 9px!important;
+      padding: 0;
+    }
+
+    .filter__grid--grid .filter__grid-item img {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover
+    }
+
+    .filter__grid--grid .filter__grid-item h3 {
+      position: absolute;
+      bottom: 1.9em;
+      padding-left: 9px;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .filter__grid--grid .filter__grid-item p {
+      position: absolute;
+      bottom: 1em;
+      padding-left: 9px;
+      width: 100%;
+      white-space: nowrap;
+      z-index: 3;
+    }
+
+    .filter__grid--grid .filter__grid-item:before {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    .filter__grid--grid .filter__grid-item:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(0deg,rgba(0,0,0,0.7) 34%,transparent);
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .filter__grid--grid .filter__grid-item:nth-child(odd){
+      margin: 0 9px 0 0;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.953);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      padding: 36px;
+      color: white;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      will-change: all;
+      transition: transform 0.33s, opacity 0.33s;
+      margin-top: 56.25%
+    }
+
+    .overlay.on {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .overlay__head {
+      display: flex;
+      margin-bottom: 25px;
+    }
+
+    .overlay__head h2 {
+      margin-bottom: 0.25em;
+      font-size: 22px;
+    }
+
+    .overlay__head > div:last-of-type {
+      padding: 0 0 0 26px;
+    }
+
+    .overlay__head img {
+      width: 120px;
+      border-radius: 5px;
+    }
+
+    .overlay__body {
+      line-height: 1.5
+    }
+
+    .overlay__close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 20px;
+      top: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
+    @media all and (max-width: 540px){
+
+    .overlay {
+      padding: 22px;
+    }
+
+    .overlay__close {
+      top: 20px;
+      right: 10px;
+    }
+
+    .overlay__head h2 {
+      font-size: 22px;
+    }
+
+    .overlay__body {
+      font-size: 16px;
+    }
+
+    .overlay__head > div:last-of-type {
+      padding: 0 0 0 16px;
+    }
+
+
+      .con__detail {
+        display: block;
+        overflow: hidden
+      }
+
+      .con__detail-col1 {
+        padding: 0;
+        width: auto;
+      }
+
+      .con__detail-col2 {
+        overflow: auto;
+        height: 90%;
+
+      }
+
+      .filter {
+        position: relative;
+        margin-bottom: 18px;
+      }
+
+      .filter__header {
+        color: white;
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 15px;
+        background: #333;
+        border: 0;
+        padding: 8px 6px;
+        width: 100%;
+        color: #ddd;
+      }
+
+      .filter__dropdown {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        transition: opacity 0.166s;
+        will-change: transition;
+        background: #111;
+        z-index: 11;
+        padding-bottom: 18px;
+      }
+
+      .filter__header.on + .filter__dropdown {
+        visibility: visible;
+        opacity: 1
+      }
+
+      .filter__header svg {
+        width: 20px;
+        height: 20px;
+        fill: #ccc;
+        position: absolute;
+        right: 9px;
+        top: 5px;
+      }
+
+      .filter__header.on svg {
+        transform: rotate(180deg)
+      }
+    }
+
+</style>
+<body>
+  <div class="con" data-tab="0">
+
+      <div class="overlay">
+
+          <a href="#" class="overlay__close">✕</a>
+
+          <div class="overlay__head">
+            <div><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"></div>
+            <div>
+              <h2>John Bercow</h2>
+              <p>Speaker of the Commons</p>
+            </div>
+            
+          </div>
+
+          <div class="overlay__body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae necessitatibus delectus ex nisi hic in dolorum sint! Fugiat quisquam corrupti officia accusantium tenetur distinctio qui illo doloremque atque commodi!</p>
+          </div>
+
+        </div>
+
+    <div class="video">
+ 
+        <span class="dot">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">John Bercow</div>
+        </span>
+        
+        <span class="dot dot--2">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Sally Bercow</div>
+        </span>
+        
+        <span class="dot dot--3">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Ben Fogle</div>
+        </span>
+        
+         <span class="dot dot--4">
+          <div class="dot__spot"></div>
+          <div class="dot__caption">Marina Fogle</div>
+        </span>
+        
+        <video muted autoplay preload src="clip3.mp4"></video>
+        <div class="controls">
+          <a href="#" class="controls__play playing"></a>
+          <input type="range" class="controls__track" value="0" step="11">
+        </div>
+      
+      </div>
+
+      <div class="con__nav">
+        <ul class="con__nav-list">
+          <li><a href="#" class="on">Live Stream</a></li>
+          <li><a href="#">All Guests</a></li>
+        </ul>
+      </div>
+
+      <div class="con__info">
+
+          <ul class="filter__grid">
+            
+            <li class="filter__grid-item"><img src="http://www.telegraph.co.uk/content/dam/women/2015/11/10/marina-fogle_trans_NvBQzQNjv4BqqVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg?imwidth=450"><h3>Marina Fogle</h3><p>Parenting guru</p></li>
+            <li class="filter__grid-item"><img src="http://img.sharetv.com/shows/characters/thumbnails/countrywise_uk.ben_fogle_presenter.jpg"><h3>Ben Fogle</h3><p>TV presenter</p></li>
+            <li class="filter__grid-item"><img src="https://www.thetimes.co.uk/imageserver/image/methode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2Fb8d79b1d-924c-3b90-a522-71f99235d2ea.jpg?crop=780%2C520%2C0%2C0&resize=685"><h3>Sally Bercow</h3>
+              <p>Journalist</p></li>
+              <li class="filter__grid-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/John_Bercow_Senate_of_Poland_01.JPG/512px-John_Bercow_Senate_of_Poland_01.JPG"><h3>John Bercow</h3>
+              <p>Speaker of the Commons</p></li>
+          </ul>
+        </div>
+
+        <div class="con__detail">
+
+
+            
+
+
+          <div class="con__detail-col1">
+          <div class="filter"> 
+            <h3 class="filter__header">Filters <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-localnav__icon"><path d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z"></path></svg></h3>        
+            <div class="filter__dropdown">
+            <div class="filter__search-con"><svg class="site-nav-desktop__icon" width="2048" height="2048" viewBox="0 0 2048 2048"><path d="M2038.957 1834.615l-636.008-634.508c83.804-123.102 133.1-271.75 133.1-432.1 0-424.353-343.702-768.01-768-768.01-2.655 0-5.202.407-7.905.407C564.7-2.252 368.395 70.45 219.293 219.552 69.145 369.452-3.457 567.21.246 763.71c0 1.444-.203 2.75-.203 4.296 0 424.203 343.75 768.007 768.008 768.007 159.353 0 307.298-48.602 430-131.5l636.204 634.398c12 12.103 31.703 12.103 43.703.103l161-160.797c12-12 12-31.702 0-43.6zm-896.805-693.008c-187.852 187.805-476.805 212.102-691.555 74.398-143.25-107.797-245.75-277.296-245.75-448 0-282.805 280.398-563.203 563.203-563.203 171.602 0 341.898 103.5 449.703 247.898 136.4 214.658 111.595 501.806-75.6 688.907z"></path></svg><input type="text" class="filter__search" placeholder="Search"></div>
+            <ul class="filter__tags">
+              <li><a href="#all">All guests</a></li>
+              <li><a href="#bride">Bride and Groom</a></li>
+              <li><a href="#royal">Royals</a></li>
+              <li><a href="#friends">Friends &amp; Family</a></li>
+              <li><a href="#sport">Sport</a></li>
+              <li><a href="#entertainment">Entertainment</a></li>
+              <li><a href="#politicians">Politicians</a></li>
+              <li><a href="#foreign">Foreign dignataries</a></li>
+            </ul>
+          </div>
+        </div>
+ 
+
+          </div>
+          <div class="con__detail-col2">
+              
+              <h4 class="filter__grid-header" id="bride">Bride and Groom</h4>
+              <ul class="filter__grid filter__grid--grid">
+                <li class="filter__grid-item"><img src="http://static.celebuzz.com/uploads/2015/03/prince-harry-army.jpg"><h3>Prince Harry</h3><p>Prince Henry of Wales</p></li>
+                <li class="filter__grid-item"><img src="http://i2.wp.com/wikimarried.com/files/blogs/Meghan%20Markle.jpg?resize=250,250"><h3>Meghan Markle</h3><p>Actress</p></li>
+            </ul>
+
+            <h4 class="filter__grid-header" id="royal">Royals</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="https://vz.cnwimg.com/thumbc-250x250/wp-content/uploads/2016/05/GettyImages-487366160.jpg"><h3>The Queen</h3><p>Queen</p></li>
+              <li class="filter__grid-item"><img src="https://knownetworth.com/uploads/thumb/Prince-Philip-Duke-Edinburgh-250-250.jpeg"><h3>Prince Phillip</h3><p>Prince Phillip</p></li>
+              <li class="filter__grid-item"><img src="http://topnews.in/light/files/Prince-William_14.jpg"><h3>Prince William</h3>
+                  <p>Duke of Cambridge</p></li>
+              <li class="filter__grid-item"><img src="http://www.skinsheen.com/ArticleImages/large/L_347.jpg"><h3>John Bercow</h3>
+                  <p>Speaker of the Commons</p></li>
+                  
+            </ul>
+
+            <h4 class="filter__grid-header" id="friends">Friends &amp; Family</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://skinsheen.com/ArticleImages/large/L_1412.jpg"><h3>Pippa Middleston</h3><p>Kate Middleton's sister</p></li>
+              <li class="filter__grid-item"><img src="https://i2-prod.mirror.co.uk/incoming/article11651603.ece/ALTERNATES/s615b/PROD-Thomas-Markle-ed.jpg"><h3>Tom Markle</h3><p>Meghan's Father</p></li>
+              <li class="filter__grid-item"><img src="http://i63.tinypic.com/vo515d.png"><h3>Doria Radlan</h3>
+                  <p>Meghan's Mother</p></li>
+              <li class="filter__grid-item"><img src="https://www.afiniti.com/wp-content/uploads/2015/12/thomas-inskip-global-head-of-sales.jpg"><h3>Tom Inskip</h3>
+                  <p>Prince Harry's best friend</p></li>
+                  
+            </ul>
+
+
+            <h4 class="filter__grid-header" id="sport">Sport</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="https://www.famousbirthdays.com/headshots/david-beckham-4.jpg"><h3>David Beckham</h3><p>Footballer</p></li>
+              <li class="filter__grid-item"><img src="https://cml.sad.ukrd.com/image/310559-640x380.scale_type-center_crop.jpg"><h3>Dave Wiseman</h3><p>Invictus Games captain</p></li>
+              <li class="filter__grid-item"><img src="http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/14/2013/07/Luke-Tomlinson.jpg"><h3>Luke Tomlsinson</h3>
+                  <p>Polo player</p></li>
+                  <li class="filter__grid-item"><img src="https://media.ents24network.com/image/000/050/502/dad9b498261fc4f1fd6881d45575b3d041d4647e.jpg"><h3>Jimmy White</h3>
+                    <p>Snooker</p></li>
+                  
+            </ul>
+
+            <h4 class="filter__grid-header" id="entertainment">Entertainment</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://www.femalefirst.co.uk/image-library/partners/bang/square/250/r/rowan-atkinson-3e0948aaa650dd0a2b7b9d83ff9d9d331296dcf4.jpg"><h3>Rowan Atkinson</h3><p>Actor and Comedian</p></li>
+              <li class="filter__grid-item"><img src="https://cdn.inquisitr.com/wp-content/uploads/2014/06/eltonjohn-100x100.jpg"><h3>Elton John</h3><p>Singer and pianist</p></li>
+              <li class="filter__grid-item"><img src="http://resize1-parismatch.ladmedia.fr/rcrop/250,250/img/var/news/storage/images/paris-match/people-a-z/guy-ritchie/6038292-8-fre-FR/Guy-Ritchie.jpg"><h3>Guy Ritchie</h3>
+                  <p>Film director</p></li>
+              <li class="filter__grid-item"><img src="https://qt.azureedge.net/resources/authors-images-large/joss-stone.jpg"><h3>Joss Stone</h3>
+                  <p>Musician</p></li>
+                  
+            </ul>
+
+            <h4 class="filter__grid-header" id="politicians">Politicians</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://talkradio.co.uk/sites/talkradio.co.uk/files/styles/taxonomy-img/public/field/image/201802/theresa_may_angry.jpg?itok=v53nGfaW"><h3>Theresa May</h3><p>Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="http://londonwebnews.com/wp-content/uploads/2017/06/5QODwULN-300x300.jpg"><h3>Boris Johnson</h3><p>Foreign Secratary</p></li>
+              <li class="filter__grid-item"><img src="http://www.pinknews.co.uk/images/2012/12/Sir-John-Major.jpg"><h3>Sir John Major</h3>
+                  <p>Former Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="https://pbs.twimg.com/profile_images/800447720305651720/sYpQtMYb_400x400.jpg"><h3>Nicola Sturgeon</h3>
+                  <p>Scottish First Minister</p></li>
+                  
+            </ul>
+
+
+            <h4 class="filter__grid-header" id="foreign">Foreign Dignataries</h4>
+            <ul class="filter__grid filter__grid--grid">
+              <li class="filter__grid-item"><img src="http://www.abc.net.au/news/image/8764028-3x2-940x627.jpg"><h3>Malcolm Turnball</h3><p>Australian Prime Minister</p></li>
+              <li class="filter__grid-item"><img src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_400x400.jpg"><h3>Donald Trump</h3><p>American President</p></li>
+              <li class="filter__grid-item"><img src="http://cdn.newsapi.com.au/image/v1/dbda69709884760094fe2ad082076b1f"><h3>Jacinda Ardern</h3>
+                  <p>New Zealand PM</p></li>
+              <li class="filter__grid-item"><img src="http://www.gbf.com/gbf-2014/wp-content/uploads/Ammon-portrait-web.jpg"><h3>Peter Ammon</h3>
+                  <p>German Ambassador</p></li>
+                  
+            </ul>
+
+          </div>
+        </div>
+
+    </div>
+      
+      <script>
+        var video = document.querySelector('video');
+        var list = document.querySelectorAll('.con__info li');
+
+        var dot = document.querySelector('.dot');
+        var dot2 = document.querySelector('.dot--2');
+        var dot3 = document.querySelector('.dot--3');
+        var dot4 = document.querySelector('.dot--4');
+
+        var range = document.querySelector('.controls__track');
+        var play = document.querySelector('.controls__play');
+
+        var nav = document.querySelectorAll('.con__nav-list li a');
+        var con = document.querySelector('.con');
+
+        var headers = document.querySelectorAll('.filter__grid-header');
+        var filters = document.querySelectorAll('.filter__tags a');
+
+        var filterheader = document.querySelector('.filter__header');
+
+        var guests = document.querySelectorAll('.filter__grid-item');
+
+        var overlay = document.querySelector('.overlay');
+
+
+        function toggleOverlay(close, name, desc, img){
+
+          overlay.querySelector('h2').textContent = name;
+          overlay.querySelector('p').textContent = desc;
+          overlay.querySelector('img').src = img;
+
+          if(close){
+            overlay.classList.remove('on');
+          }
+
+          else {
+            overlay.classList.add('on');
+            // nav[1].click();
+          }
+        }
+
+        document.querySelector('.overlay__close').onclick = function(){
+          toggleOverlay(true, '','','');
+        }
+
+        guests.forEach(function(item){
+          item.onclick = function(){
+            toggleOverlay(false, item.querySelector('h3').textContent, item.querySelector('p').textContent, item.querySelector('img').src);
+          }
+        })
+
+        filters.forEach(function(item){
+
+          item.onclick = function(event){
+
+            var attr = this.getAttribute('href');
+
+            event.preventDefault();
+
+            headers.forEach(function(header){
+              if(attr === '#all'){
+                header.classList.remove('hidden');
+              }
+              else {
+                header.classList.add('hidden');
+              }
+            });
+
+            filters.forEach(function(filter){
+              filter.classList.remove('on');
+            })
+
+            this.classList.add('on');
+            filterheader.classList.remove('on');
+            
+            document.querySelector(attr).classList.remove('hidden');
+
+          }
+
+        })
+
+        filterheader.onclick = function(){
+          this.classList.toggle('on');
+        }
+
+        nav.forEach(function(item, index){
+
+          item.onclick = function(event){
+            nav.forEach(function(navitem){
+              navitem.classList.remove('on');
+            })
+
+            this.classList.add('on');
+            con.setAttribute('data-tab', index);
+          }
+        })
+
+        range.oninput = function(){
+          video.currentTime = (video.duration/100) * range.value;
+        }
+
+        play.onclick = function(){
+          if(video.paused){
+            video.play();
+            play.classList.add('playing');
+          }
+          else {
+            video.pause();
+            play.classList.remove('playing');
+          }
+        }
+
+        video.onended = function(){
+          play.classList.remove('playing');
+        }
+
+        video.addEventListener('timeupdate', function(ev){
+
+          range.value = (100/video.duration) * video.currentTime;
+          
+          if(video.currentTime < 1){
+            dot.style.cssText = "display: block;left: 39%;top: 37%";
+            dot2.style.cssText = "display: block;left: 62%;top: 26%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 1 && video.currentTime < 2){
+            dot.style.cssText = "display: block;left: 39%;top: 37%";
+            dot2.style.cssText = "display: block;left: 60%;top: 26%";
+            list[3].classList.add('active');
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 2 && video.currentTime < 3){
+            dot.style.cssText = "display: block;left: 37%;top: 35%";
+            dot2.style.cssText = "display: block;left: 65%;top: 23%";
+            list[2].classList.add('active');
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 3 && video.currentTime < 4){
+            dot.style.cssText = "display: block;left: 42%;top: 44%";
+            dot2.style.cssText = "display: block;left: 64%;top: 24%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 4 && video.currentTime < 5){
+            dot.style.cssText = "display: block;left: 49%;top: 44%";
+            dot2.style.cssText = "display: block;left: 61%;top: 28%";
+            dot3.style.cssText = "display: none";
+            dot4.style.cssText = "display: none";
+          }
+          
+          if(video.currentTime > 5 && video.currentTime < 6){
+            dot.style.cssText = "display: block;left: 50%;top: 44%";
+            dot2.style.cssText = "display: block;left: 59%;top: 32%";
+            // dot2.style.cssText = "display: none";
+          }
+
+          if(video.currentTime > 6 && video.currentTime < 7){
+            dot.style.cssText = "display: block;left: 49%;top: 43%";
+            dot2.style.cssText = "display: block;left: 53%;top: 28%";
+            // dot.style.cssText = "display: block;display: none";
+            // dot2.style.cssText = "display: none";
+          }
+
+          if(video.currentTime > 7){
+            dot.style.cssText = "display: block;display: none";
+            dot2.style.cssText = "display: block;display: none";
+          }
+
+          if(video.currentTime > 7 && video.currentTime < 8){
+            dot3.style.cssText = "display: block;left: 53%;top: 37%";
+            dot4.style.cssText = "display: block;left: 70%;top: 54%";
+            list[1].classList.add('active');
+          }
+
+          if(video.currentTime > 8 && video.currentTime < 9){
+            dot3.style.cssText = "display: block;left: 45%;top: 38%";
+            dot4.style.cssText = "display: block;left: 85%;top: 48%";
+            list[0].classList.add('active');
+          }
+
+          if(video.currentTime > 9 && video.currentTime < 10){
+            dot3.style.cssText = "display: block;left: 50%;top: 39%";
+            dot4.style.cssText = "display: block;left: 91%;top: 46%";
+          }
+
+          if(video.currentTime > 10 && video.currentTime < 11){
+            dot3.style.cssText = "display: block;left: 52%;top: 36%";
+            dot4.style.cssText = "display: block;left: 87%;top: 41%";
+          }
+
+          if(video.currentTime > 11 && video.currentTime < 12){
+            dot3.style.cssText = "display: block;left: 51%;top: 29%";
+            dot4.style.cssText = "display: block;left: 75%;top: 37%";
+          }
+
+          if(video.currentTime > 12 && video.currentTime < 13){
+            dot3.style.cssText = "display: block;left: 47%;top: 25%";
+            dot4.style.cssText = "display: block;left: 68%;top: 34%";
+          }
+          
+        })
+
+
+  </script>
+</body>
+</html>
