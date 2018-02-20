@@ -17,7 +17,7 @@
   will-change: transform;
 }
 
-/* .parallax-subject--blur {
+.parallax-subject--blur {
   filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * 1px ) );
   will-change: filter;
 }
@@ -25,7 +25,7 @@
 .parallax-subject--blur-reverse {
   filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * -1px ) );
   will-change: filter;
-} */
+}
 
 .parallax-subject--fade {
   opacity: calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/100));
