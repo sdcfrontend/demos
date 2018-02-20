@@ -1,0 +1,38 @@
+:root {
+  --parallaxMultiplier: 1;
+}
+
+.parallax-subject--translateY {
+  transform: translate3d(0,calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1% ),0);
+  will-change: transform;
+}
+
+.parallax-subject--translateX {
+  transform: translate3d( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1px ),0,0);
+  will-change: transform;
+}
+
+.parallax-subject--rotate {
+  transform: translate3d( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 3.6deg ),0,0);
+  will-change: transform;
+}
+
+.parallax-subject--blur {
+  filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * 1px ) );
+  will-change: filter;
+}
+
+.parallax-subject--blur-reverse {
+  filter: blur( calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/10) * -1px ) );
+  will-change: filter;
+}
+
+.parallax-subject--fade {
+  opacity: calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/100));
+  will-change: opacity;
+}
+
+.parallax-subject--saturate {
+  filter: saturate( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1% ) );
+  will-change: filter;
+}
