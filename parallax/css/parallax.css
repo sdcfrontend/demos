@@ -27,12 +27,12 @@
   will-change: filter;
 }
 
-.parallax-subject--fade {
-  opacity: calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/100));
-  will-change: opacity;
-}
-
 .parallax-subject--saturate {
   filter: saturate( calc( var(--frameScrollDepth) * var(--parallaxMultiplier) * 1% ) );
   will-change: filter;
+}
+
+.parallax-subject--fade {
+  opacity: calc( var(--frameScrollDepth) * (var(--parallaxMultiplier)/100));
+  will-change: opacity;
 }
