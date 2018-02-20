@@ -37,11 +37,15 @@ function setProperties() {
 
 function setPropertyValue(parallaxSubject, value) {
 
-  var property = parallaxSubject.getAttribute('data-parallax-property');
+  var property = 'translateY';
   var multiplier = 1
 
   if (parallaxSubject.getAttribute('data-parallax-multiplier') !== null) {
     multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
+  }
+
+  if (parallaxSubject.getAttribute('data-parallax-property') !== null) {
+    property = parallaxSubject.getAttribute('data-parallax-property');
   }
 
   switch (property) {
