@@ -149,18 +149,12 @@
             cursor: pointer
         }
 
-        .con__questions-card-items label input {
-            vertical-align: middle;
-            margin-right: 12px;
-        }
-
         .con__questions-card-item-text {
             display: inline-block;
             vertical-align: middle;
             position: relative;
             top: 1px
         }
-
 
         .con__questions-results {
             display: flex;
@@ -255,6 +249,44 @@
         }
 
 
+        .con__questions-radio {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 7px;
+          width: 18px;
+          height: 18px;
+        }
+
+        .con__questions-radio-button {
+          opacity: 0
+        }
+
+        .con__questions-radio-shim {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background: white;
+          border: 2px solid #ccc;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+        }
+
+        .con__questions-radio-button:checked +
+        .con__questions-radio-shim {
+          border: 6px solid #033da8!important
+        } 
+
+        .con__questions-radio-button:focus +
+        .con__questions-radio-shim {
+          border: 6px solid #ccc
+        } 
+
+
     </style>
 </head>
 <body>
@@ -279,11 +311,55 @@
                             <h4 class="con__questions-card-head">1. What is your favourite food?</h4>
                             <form action="" class="con__questions-card-form">
                                 <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="1" name="q1"><span class="con__questions-card-item-text">Beans on toast</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="2" name="q1"><span class="con__questions-card-item-text">Fish and Chips</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="3" name="q1"><span class="con__questions-card-item-text">Spaghetti Bolognese</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="4" name="q1"><span class="con__questions-card-item-text">Vindaloo</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="5" name="q1"><span class="con__questions-card-item-text">Blowfish</span></label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                          <input type="radio" value="1" name="q1" class="con__questions-radio-button">
+                                          <span class="con__questions-radio-shim"></span>
+                                        </span>
+                                        <span class="con__questions-card-item-text">Beans on toast</span>
+                                      </label>
+                                    </li>
+
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                          <input type="radio" value="2" name="q1" class="con__questions-radio-button">
+                                          <span class="con__questions-radio-shim"></span>
+                                        </span>
+                                        <span class="con__questions-card-item-text">Fish and Chips</span>
+                                      </label>
+                                    </li>
+
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                          <input type="radio" value="3" name="q1" class="con__questions-radio-button">
+                                          <span class="con__questions-radio-shim"></span>
+                                        </span>
+                                        <span class="con__questions-card-item-text">Spaghetti Bolognese</span>
+                                      </label>
+                                    </li>
+
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                          <input type="radio" value="4" name="q1" class="con__questions-radio-button">
+                                          <span class="con__questions-radio-shim"></span>
+                                        </span>
+                                        <span class="con__questions-card-item-text">Vindaloo</span>
+                                      </label>
+                                    </li>
+
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                          <input type="radio" value="5" name="q1" class="con__questions-radio-button">
+                                          <span class="con__questions-radio-shim"></span>
+                                        </span>
+                                        <span class="con__questions-card-item-text">Blowfish</span>
+                                      </label>
+                                    </li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
@@ -299,11 +375,46 @@
                             <form action="" class="con__questions-card-form">
 
                                 <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="6" name="q2"><span class="con__questions-card-item-text">Beach</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="7" name="q2"><span class="con__questions-card-item-text">Backpacking</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="8" name="q2"><span class="con__questions-card-item-text">Adventure</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="9" name="q2"><span class="con__questions-card-item-text">Extreme Sport</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="10" name="q2"><span class="con__questions-card-item-text">In a warzone</span></label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="6" name="q2" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Beach</span>
+                                      </label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="7" name="q2" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Backpacking</span>
+                                      </label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="8" name="q2" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Adventure</span>
+                                      </label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="9" name="q2" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Extreme Sport</span>
+                                      </label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="10" name="q2" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">In a warzone</span>
+                                      </label></li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
@@ -316,11 +427,51 @@
                             <h4 class="con__questions-card-head">3. What would be your ideal pet?</h4>
                             <form action="" class="con__questions-card-form">
                                  <ul class="con__questions-card-items">
-                                    <li class="con__questions-card-item"><label><input type="radio" value="11" name="q3"><span class="con__questions-card-item-text">Goldfish</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="12" name="q3"><span class="con__questions-card-item-text">Hamster</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="13" name="q3"><span class="con__questions-card-item-text">Dog</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="14" name="q3"><span class="con__questions-card-item-text">Snake</span></label></li>
-                                    <li class="con__questions-card-item"><label><input type="radio" value="15" name="q3"><span class="con__questions-card-item-text">Tarantula</span></label></li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="11" name="q3" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Goldfish</span>
+                                      </label>
+                                    </li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="12" name="q3" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Hamster</span>
+                                      </label>
+                                    </li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="13" name="q3" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Dog</span>
+                                      </label>
+                                    </li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="14" name="q3" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Snake</span>
+                                      </label>
+                                    </li>
+                                    <li class="con__questions-card-item">
+                                      <label>
+                                        <span class="con__questions-radio">
+                                        <input type="radio" value="15" name="q3" class="con__questions-radio-button">
+                                        <span class="con__questions-radio-shim"></span>
+                                      </span>
+                                        <span class="con__questions-card-item-text">Tarantula</span>
+                                      </label>
+                                    </li>
                                 </ul>
                             </form>
                             <div class="con__questions-card-button-bar">
