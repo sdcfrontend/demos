@@ -25,8 +25,19 @@ function setProperties() {
     if (window.CSS.supports('--var', 0)) {
       parallaxSubjects.forEach(function(parallaxSubject) {
 
-        parallaxSubject.classList.add('parallax-subject--' + parallaxSubject.getAttribute('data-parallax-property'));
-        parallaxSubject.style.setProperty('--parallaxMultiplier', parallaxSubject.getAttribute('data-parallax-multiplier'));
+        var property = 'translateY';
+        var multiplier = 1
+
+        if (parallaxSubject.getAttribute('data-parallax-multiplier') != null) {
+          multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
+        }
+
+        if (parallaxSubject.getAttribute('data-parallax-property') != null) {
+          property = parallaxSubject.getAttribute('data-parallax-property');
+        }
+
+        parallaxSubject.classList.add('parallax-subject--' + property);
+        parallaxSubject.style.setProperty('--parallaxMultiplier', multiplier);
 
       });
     }
@@ -40,11 +51,11 @@ function setPropertyValue(parallaxSubject, value) {
   var property = 'translateY';
   var multiplier = 1
 
-  if (parallaxSubject.getAttribute('data-parallax-multiplier') !== null) {
+  if (parallaxSubject.getAttribute('data-parallax-multiplier') != null) {
     multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
   }
 
-  if (parallaxSubject.getAttribute('data-parallax-property') !== null) {
+  if (parallaxSubject.getAttribute('data-parallax-property') != null) {
     property = parallaxSubject.getAttribute('data-parallax-property');
   }
 
