@@ -663,6 +663,22 @@
         background-origin: content-box;
         background-repeat: no-repeat; } }
 
+      .tape-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+      }
+      .tape {
+        width: 50px;
+        height: 50px;
+      }
+      .tape img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
   </style>
    <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header" data-init="true">
           <div class="site-header site-header--rainbow">
@@ -958,6 +974,13 @@
             <p class="sticky-images__text">Reach 78"</p>
           </div>
         </div>
+
+        <div class="tape-wrap" data-parallax-role="subject" data-parallax-property="translateY" data-parallax-multiplier="12">
+          <div class="tape" data-parallax-role="subject" data-parallax-property="rotate" data-parallax-multiplier="10">
+            <img src="https://slack-imgs.com/?c=1&o1=gu&url=https%3A%2F%2Femoji.slack-edge.com%2FT02GEFU92%2Fnoel%2Fb8d6a378ae46b233.png">
+          </div>
+        </div>
+
       </div>
 
       <div class="sticky-images__strip">
