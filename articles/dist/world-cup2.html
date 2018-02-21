@@ -18,6 +18,8 @@
         max-width: 700px;
         margin: 0 auto;
         padding: 2em;
+      }
+      .article-body--wipes .article-body__section-text {
         position: sticky;
         bottom: 0;
       }
@@ -25,49 +27,82 @@
         position: relative;
         z-index: 2;
         height: 100vh;
+        overflow: hidden;
       }
       .article-body__section-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      
+
     </style>
 
+    <div class="article-body--wipes">
+      <div class="article-body__section">
+        <div class="article-body__section-image-wrap">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+        </div>
+
+        <div class="article-body__section-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
+          <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
+        </div>
+      </div>
+
+      <div class="article-body__section">
+        <div class="article-body__section-image-wrap">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+        </div>
+
+        <div class="article-body__section-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
+          <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
+        </div>
+      </div>
+
+      <div class="article-body__section">
+        <div class="article-body__section-image-wrap">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+        </div>
+
+        <div class="article-body__section-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
+          <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="article-body">
-      <div class="article-body__section">
+      <div class="article-body__section" data-parallax-role="frame">
         <div class="article-body__section-image-wrap">
-          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image" data-parallax-role="subject" data-parallax-multiplier="2">
         </div>
 
         <div class="article-body__section-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
           <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
-          <p>Donec tincidunt porttitor ipsum, sit amet gravida purus molestie quis. Nulla quis gravida lorem. Fusce nec lacus eu sapien euismod interdum. Nulla facilisi. Nunc non ante elit. Etiam molestie molestie orci, sed sagittis massa tempus in. Sed vel accumsan odio.</p>
         </div>
       </div>
 
-      <div class="article-body__section">
+      <div class="article-body__section" data-parallax-role="frame">
         <div class="article-body__section-image-wrap">
-          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image" data-parallax-role="subject" data-parallax-multiplier="2">
         </div>
 
         <div class="article-body__section-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
           <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
-          <p>Donec tincidunt porttitor ipsum, sit amet gravida purus molestie quis. Nulla quis gravida lorem. Fusce nec lacus eu sapien euismod interdum. Nulla facilisi. Nunc non ante elit. Etiam molestie molestie orci, sed sagittis massa tempus in. Sed vel accumsan odio.</p>
         </div>
       </div>
 
-      <div class="article-body__section">
+      <div class="article-body__section" data-parallax-role="frame">
         <div class="article-body__section-image-wrap">
-          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image">
+          <img src="http://video.skysports.com/Q2c3Z0YzE6J9dHGLsSAPyt96nROCUrMx/promo330817699" class="article-body__section-image" data-parallax-role="subject" data-parallax-multiplier="2">
         </div>
 
         <div class="article-body__section-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac pulvinar quam. In venenatis risus consequat ligula feugiat, ut molestie nulla lacinia. Donec ante neque, eleifend eu luctus ut, facilisis in metus.</p>
           <p>Aliquam ac ante quis lorem facilisis pretium. Suspendisse et bibendum orci, vitae condimentum urna. Praesent rhoncus, risus at lobortis imperdiet, eros leo mattis metus, quis mollis urna sem sit amet urna.</p>
-          <p>Donec tincidunt porttitor ipsum, sit amet gravida purus molestie quis. Nulla quis gravida lorem. Fusce nec lacus eu sapien euismod interdum. Nulla facilisi. Nunc non ante elit. Etiam molestie molestie orci, sed sagittis massa tempus in. Sed vel accumsan odio.</p>
         </div>
       </div>
     </div>
