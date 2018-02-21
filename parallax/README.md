@@ -7,6 +7,7 @@ A script to apply css adjustments to elements based on scroll position
 
 * [Basic Implementation](#basic-implementation)
 * [Advanced Options](#advanced-options)
+* [Limitations](#limitations)
 
 
 ## Basic Implementation
@@ -45,8 +46,6 @@ Preset properties that can be selected:
 * saturate
 * fade
 
-Certain properties, for example blur/blur-reverse, are more resource hungry and can negatively affect the frame rate if used excessively.
-
 
 ### Start Location
 
@@ -54,3 +53,15 @@ Sometimes, depending on the effect you are looking for, you may wish to specify 
 To do this, use the data attribute data-parallax-start. For example:
 
 `data-parallax-start="bottom"`
+
+
+## Limitations
+
+### Performance
+
+Certain properties, for example blur/blur-reverse, are more resource hungry and can negatively affect the frame rate if used excessively.
+
+
+### Adjusting multiple properties
+
+To simplify the script and implementation of the script, only one adjustment can be made per subject. But, as many subjects can be adjusted within a given frame, multiple adjustments can be applied by adding additional wrapping elements and applying the further adjustments to those.
