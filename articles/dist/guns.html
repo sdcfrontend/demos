@@ -4,13 +4,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
     <link rel="stylesheet" href="output.css">
-  
+    <link rel="stylesheet" href="../../parallax/css/parallax.css">
+
     <style media="screen">
-    
-      
+
+
       .page {
         display: flex;
 
@@ -120,10 +121,10 @@
             position: relative;
             color: black;
             min-height: 74px; }
-        
+
           .sdc-news-header--has-toolbar {
             padding-top: .75em; }
-        
+
           .sdc-news-header__logo {
             position: absolute;
             min-width: 50px;
@@ -133,12 +134,12 @@
                 -ms-transform: translate(-501px, -50%);
                     transform: translate(-501px, -50%);
             z-index: 11; }
-        
+
           .sdc-news-header__logo-image {
             position: absolute;
             height: 100%;
             border: 0; }
-        
+
           .sdc-news-header__nav-wrap {
             padding-top: 74px;
             width: 100%;
@@ -148,17 +149,17 @@
             padding: 0 14px;
             position: relative;
             z-index: 10; }
-        
+
           .sdc-news-header__nav-group {
             list-style: none;
             padding: 0; }
-        
+
           .sdc-news-header__nav-item {
             color: inherit;
             display: inline-block;
             font-size: 1.125em;
             position: relative; }
-        
+
           .sdc-news-header__nav-item-link {
             color: inherit;
             text-decoration: none;
@@ -166,17 +167,17 @@
             padding: .7em .6em .9em;
             position: relative;
             line-height: 1.14; }
-        
+
           .sdc-news-header__nav-item-link--menu-icon {
             display: inline-block;
             width: .85em;
             height: .85em;
             fill: currentColor;
             vertical-align: middle; }
-        
+
           .sdc-news-header__nav-menu {
             display: none; }
-        
+
           .sdc-news-header__nav-menu-group {
             -webkit-column-count: 2;
                -moz-column-count: 2;
@@ -185,7 +186,7 @@
                -moz-column-gap: .25em;
                     column-gap: .25em;
             list-style: none; }
-        
+
           .sdc-news-header__nav-menu-item-link {
             color: inherit;
             text-decoration: none;
@@ -195,7 +196,7 @@
             display: inline-block;
             width: 100%;
             opacity: .9; }
-        
+
           .sdc-news-header__components {
             height: 36px;
             position: absolute;
@@ -211,7 +212,7 @@
             -webkit-justify-content: space-between;
                 -ms-flex-pack: justify;
                     justify-content: space-between; }
-        
+
           .sdc-news-header__search {
             position: relative;
             margin: 0 1em 0 0;
@@ -222,7 +223,7 @@
             vertical-align: middle;
             overflow: hidden;
             border-radius: 3px; }
-        
+
           .sdc-news-header__search-input {
             position: absolute;
             width: 100%;
@@ -233,7 +234,7 @@
             font-weight: 400;
             background: white;
             border-radius: 0; }
-        
+
           .sdc-news-header__search-button {
             background: #3157a1;
             position: absolute;
@@ -244,10 +245,10 @@
             padding: 0 1.2em;
             border: 0;
             border-radius: 0; }
-        
+
           .sdc-news-header__search-button-label {
             display: none; }
-        
+
           .sdc-news-header__search-button-icon {
             fill: white;
             position: absolute;
@@ -255,12 +256,12 @@
             height: 60%;
             top: 20%;
             left: 20%; }
-        
+
           .sdc-news-header__components,
           .sdc-news-header__logo {
             top: -webkit-calc(74px / 2);
             top: calc(74px / 2); }
-        
+
           .sdc-news-header__toolbar {
             color: inherit;
             text-decoration: none;
@@ -270,19 +271,19 @@
             right: 14px;
             min-width: 25%;
             line-height: 1; }
-        
+
           .sdc-news-header__edition,
           .sdc-news-header__login {
             color: inherit;
             display: inline-block;
             text-decoration: none; }
-        
+
           .sdc-news-header__edition:hover {
             border-bottom: 2px solid #3157a1; }
-        
+
           .sdc-news-header__login {
             padding-right: 2em; }
-        
+
           .sdc-news-header__watch-link {
             display: inline-block;
             background: #9f202d;
@@ -293,7 +294,7 @@
             text-decoration: none;
             border-radius: 3px;
             -webkit-font-smoothing: subpixel-antialiased; }
-        
+
           @media all and (min-width: 900px) {
             .sdc-news-header__body {
               position: relative; }
@@ -331,7 +332,7 @@
             .sdc-news-header__logo {
               top: -webkit-calc((74px + 26px) / 2);
               top: calc((74px + 26px) / 2); } }
-        
+
           @media all and (max-width: 1030px) {
             .sdc-news-header__logo {
               left: 18px;
@@ -350,7 +351,7 @@
               max-width: 100%; }
             .sdc-news-header__toolbar {
               right: 18px; } }
-        
+
           @media all and (max-width: 899px) {
             .sdc-news-header__nav-wrap {
               position: absolute;
@@ -416,7 +417,7 @@
               float: left; }
             .sdc-news-header__watch-link {
               margin: 0; } }
-        
+
           @media all and (max-width: 500px) {
             .sdc-news-header {
               min-height: 55px; }
@@ -424,10 +425,10 @@
               height: 30px;
               top: -webkit-calc(55px / 2);
               top: calc(55px / 2); } }
-        
+
           .sdc-news-header__nav-action {
             display: none; }
-        
+
           @media all and (max-width: 899px) {
             .sdc-news-header__nav-action {
               cursor: pointer;
@@ -524,7 +525,7 @@
                 -webkit-transform: translate(5px, 5px) rotate(-45deg);
                     -ms-transform: translate(5px, 5px) rotate(-45deg);
                         transform: translate(5px, 5px) rotate(-45deg); } }
-        
+
           @media all and (max-width: 500px) {
             .sdc-news-header__nav-action {
               width: 55px; }
@@ -558,11 +559,11 @@
               -webkit-transform: translate(3px, 3px) rotate(-45deg);
                   -ms-transform: translate(3px, 3px) rotate(-45deg);
                       transform: translate(3px, 3px) rotate(-45deg); } }
-        
+
           /* Mobile/Tablet menu */
           .sdc-news-header__logo {
             width: 204px; }
-        
+
           @media screen and (max-width: 899px) {
             .sdc-news-header {
               background-size: auto 100%; }
@@ -620,16 +621,16 @@
                 left: 20px;
                 border-bottom: 2px solid transparent;
                 color: #2f53a1; } }
-      
+
                 .info {
-                  background: #111; 
+                  background: #111;
                   min-height: 100vh;
                   padding: 2em 0;
-                  color: white;                 
+                  color: white;
                 }
 
                 .info__head {
-                  background: #111; 
+                  background: #111;
                   position: relative;
                   z-index: 1000;
                   padding-bottom: 1em;
@@ -672,7 +673,7 @@
                   opacity: 0;
                   cursor: pointer;
                   filter: brightness(110%)
-                } 
+                }
 
                 .info__row img:hover {
                   filter: brightness(200%) contrast(200%)
@@ -763,8 +764,7 @@
   position: relative;
   margin: 2em 0;
   padding-bottom: 56.25%;
-  transform: translateY( calc( var(--scrollparallax) * 1px ) );
-  will-change: transform;
+  overflow: hidden;
 }
 
 
@@ -808,31 +808,31 @@
           <strong>Lorem ipsum dolor</strong> Sit amet consectetur adipisicing elit. Adipisci maxime cumque nihil odit doloribus ab, incidunt. <a href="#">Full story</a>
         </p>
         <div class="sdc-news-header callfn " data-component-name="sdc-news-header">
-        
+
           <div class="sdc-news-header__body">
-        
+
             <a href="/" class="sdc-news-header__logo"><img src="https://news.sky.com/assets/sky-news-logo.png?bypass-service-worker" alt="Sky News" class="sdc-news-header__logo-image" data-lazy-loaded="true"></a>
-        
+
             <a href="" class="sdc-news-header__nav-action" data-role="mobile-nav-action">
               <span class="sdc-news-header__nav-action-icon">
                 <span class="sdc-news-header__nav-action-icon-label">Menu</span>
                 <span class="sdc-news-header__nav-action-icon-symbol"></span>
               </span>
             </a>
-        
+
             <div class="sdc-news-header__nav-wrap" data-role="mobile-nav-body">
-        
-        
+
+
               <div class="sdc-news-header__nav" role="navigation" aria-labelledby="main-site-navigation">
-        
+
                 <div class="sdc-news-header__toolbar">
-        
-        
-        
+
+
+
                 </div>
-        
+
                 <div class="sdc-news-header__components">
-        
+
                   <div class="sdc-news-header__search">
                         <form action="/search" method="get" class="site-search">
                             <input type="text" name="q" placeholder="Search" accesskey="q" autocomplete="off" autocorrect="off" autocapitalize="off" value="" class="sdc-news-header__search-input">
@@ -843,66 +843,66 @@
                             </button>
                         </form>
                   </div>
-        
+
                       <a class="sdc-news-header__watch-link" href="/watch-live">Watch Live</a>
-        
+
                 </div>
-        
+
                 <ul class="sdc-news-header__nav-group" role="menubar"><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link  sdc-news-header__nav-item-link--active" href="/" role="menuitem">Home</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/uk" role="menuitem">UK</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/world" role="menuitem">World</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/politics" role="menuitem">Politics</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/us" role="menuitem">US</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/ocean-rescue" role="menuitem">Ocean Rescue</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/technology" role="menuitem">Tech</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/business" role="menuitem">Business</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/entertainment" role="menuitem">Entertainment</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/strangenews" role="menuitem">Offbeat</a>
-        
+
                   </li><li class="sdc-news-header__nav-item" role="presentation">
-        
+
                       <a class="sdc-news-header__nav-item-link " href="/weather" role="menuitem">Weather</a>
-        
+
                   </li></ul>
               </div>
-        
+
             </div>
-        
+
           </div>
-        
+
         </div>
-        
+
       <div class="page-col page-body">
-        
+
         <div class="info">
             <div class="info__head">
 
@@ -912,10 +912,10 @@
             </div>
 
 
-            <div class="image-block">
-                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-aftermath-florida-school-shooting_4232036.jpg" alt="">
+            <div class="image-block" data-parallax-role="frame">
+                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-aftermath-florida-school-shooting_4232036.jpg" alt="" data-parallax-role="subject">
           </div>
-            
+
         <div class="info__inner">
             <div class="info__row">
                 <h2><em data-role="number-counter">1,077</em>  killed</h2>
@@ -1076,12 +1076,12 @@
                 <img class="icon-image" src="guns/figure.png" alt="">
               </div>
 
-              <div class="image-block">
-                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-virginia-tech-us-shooting_4231853.jpg?bypass-service-worker&20180215145443" alt="">
+              <div class="image-block" data-parallax-role="frame">
+                <img src="https://e3.365dm.com/18/02/2048x1152/skynews-virginia-tech-us-shooting_4231853.jpg?bypass-service-worker&20180215145443" alt="" data-parallax-role="subject">
               </div>
 
               <div class="info__row info__row--big">
-                  <h2><em data-role="number-counter">292</em> guns</h2> 
+                  <h2><em data-role="number-counter">292</em> guns</h2>
                   <img class="icon-image" src="guns/gun.png" alt="">
                   <img class="icon-image" src="guns/gun.png" alt="">
                   <img class="icon-image" src="guns/gun.png" alt="">
@@ -1130,12 +1130,12 @@
                   <img class="icon-image" src="guns/gun.png" alt="">
                   <img class="icon-image" src="guns/gun.png" alt="">
                   <img class="icon-image" src="guns/gun.png" alt="">
-                
+
                 </div>
-                <div class="image-block">
-                    <img src="https://e3.365dm.com/18/02/2048x1152/skynews-columbine-school-shooting_4231848.jpg?bypass-service-worker&20180215145149" alt="">
+                <div class="image-block" data-parallax-role="frame">
+                    <img src="https://e3.365dm.com/18/02/2048x1152/skynews-columbine-school-shooting_4231848.jpg?bypass-service-worker&20180215145149" alt="" data-parallax-role="subject">
                   </div>
-                
+
 
           <div class="info__row info__row--med">
             <h2><em data-role="number-counter">153</em> shooters</h2>
@@ -1172,12 +1172,12 @@
             <img class="icon-image" src="guns/shooter.png" alt="">
             <img class="icon-image" src="guns/shooter.png" alt="">
             <img class="icon-image" src="guns/shooter.png" alt="">
-           
-            
+
+
           </div>
 
-          <div class="image-block">
-              <img src="https://e3.365dm.com/18/02/2048x1152/skynews-isla-vista-shootings_4231990.jpg?bypass-service-worker&20180215182604" alt="">
+          <div class="image-block" data-parallax-role="frame">
+              <img src="https://e3.365dm.com/18/02/2048x1152/skynews-isla-vista-shootings_4231990.jpg?bypass-service-worker&20180215182604" alt="" data-parallax-role="subject">
             </div>
 
             <div class="info__row info__row--bigger">
@@ -1196,11 +1196,11 @@
                 <img class="icon-image" src="guns/police.png" alt="">
                 <img class="icon-image" src="guns/police.png" alt="">
                 <img class="icon-image" src="guns/police.png" alt="">
-            
+
               </div>
 
-              <div class="image-block">
-                  <img src="https://e3.365dm.com/18/02/2048x1152/skynews-vigil-oregon_4231987.jpg?bypass-service-worker&20180215170708" alt="">
+              <div class="image-block" data-parallax-role="frame">
+                  <img src="https://e3.365dm.com/18/02/2048x1152/skynews-vigil-oregon_4231987.jpg?bypass-service-worker&20180215170708" alt="" data-parallax-role="subject">
                 </div>
 
               <div class="info__row info__row--biggest">
@@ -1211,8 +1211,8 @@
                   <img class="icon-image" src="guns/usa.png" alt="">
                   <img class="icon-image" src="guns/usa.png" alt="">
                   <img class="icon-image" src="guns/usa.png" alt="">
-                  
-                
+
+
                 </div>
         </div>
         </div>
@@ -1236,13 +1236,13 @@
 
       rows.forEach(function(row){
         var length = 1500 / row.querySelectorAll('img').length;
-        
+
         row.querySelectorAll('img').forEach(function(img, index){
           img.style.cssText = "transition-delay:" + (length * index) +  "ms";
         })
       });
 
-    
+
       function tick(){
 
         rows.forEach(function(item){
@@ -1255,7 +1255,7 @@
       }
 
       tick();
-            
+
     </script>
 
 
@@ -1371,25 +1371,11 @@ function triggerCounters() {
 
 }
 
-const speed = -0.2;
-var images = document.querySelectorAll('.image-block');
-   
-function setScrollParallax() {
-  images.forEach(function(image){
-    image.style.setProperty("--scrollparallax", image.getBoundingClientRect().top * speed);
-  });
-
-  window.requestAnimationFrame( setScrollParallax );
-}
-
-setScrollParallax();
-
-setScrollParallax();
-
 createDigitsMarkup();
 triggerCounters();
 
 </script>
+<script src="../../parallax/js/parallax.js"></script>
    </body>
 
 </html>
