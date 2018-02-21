@@ -1,12 +1,16 @@
 NodeList.prototype.forEach = Array.prototype.forEach;
 
+// Calculates scroll depth percentage through a given frame
 function framePercentageValue(frameDimensions, startFromBottom) {
 
   var value = '';
 
+  // Start applying adjusted css values from when a frame enters the window at the bottom or from when it begins to leave the window at the top
   if (startFromBottom) {
+    // Value will be at 100% when top of frame reaches top of window
     value = 100 - (frameDimensions.top/frameDimensions.height)*100;
   } else {
+    // Value will be at 100% when bottom of frame reaches bottom of window
     value = 100 - (frameDimensions.bottom/frameDimensions.height)*100;
   }
 
@@ -14,6 +18,7 @@ function framePercentageValue(frameDimensions, startFromBottom) {
 
 }
 
+// Sets properties to be used in scroll-based calculations
 function setProperties() {
 
   var parallaxFrames = document.querySelectorAll('[data-parallax-role="frame"]');
@@ -22,40 +27,43 @@ function setProperties() {
 
     var parallaxSubjects = parallaxFrame.querySelectorAll('[data-parallax-role="subject"]');
 
-    parallaxSubjects.forEach(function(parallaxSubject) {
+      parallaxSubjects.forEach(function(parallaxSubject) {
 
-      var property = 'translateY';
-      var multiplier = 1
+        var property = 'translateY';
+        var multiplier = 1
 
-      if (parallaxSubject.getAttribute('data-parallax-multiplier') != null) {
-        multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
-      }
+        // Find the chosen property to ajust from the subject's data attribute, or set that attribute to a default value if not found
+        if (parallaxSubject.getAttribute('data-parallax-property') != null) {
+          property = parallaxSubject.getAttribute('data-parallax-property');
+          parallaxSubject.setAttribute('data-parallax-property', property);
+        }
 
-      if (parallaxSubject.getAttribute('data-parallax-property') != null) {
-        property = parallaxSubject.getAttribute('data-parallax-property');
-      }
+        // Find the chosen multiplier to apply from the subject's data attribute, or set that attribute to a default value if not found
+        if (parallaxSubject.getAttribute('data-parallax-multiplier') != null) {
+          multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
+        }
 
-      parallaxSubject.classList.add('parallax-subject--' + property);
-      parallaxSubject.style.setProperty('--parallaxMultiplier', multiplier);
+        // Set the css class related to the specified property. Used by css calculate adjustments when css variables are supported and the will-change property when js calculations are required
+        parallaxSubject.classList.add('parallax-subject--' + property);
 
-    });
+        // Set multiplier to be used in css calculations, or as a data attribute to be used in js calculations when css variables are not supported
+        if (window.CSS.supports('--var', 0)) {
+          parallaxSubject.style.setProperty('--parallaxMultiplier', multiplier);
+        } else {
+          parallaxSubject.setAttribute('data-parallax-multiplier', multiplier);
+        }
+
+      });
 
   });
 
 }
 
+// Function used as a fallback to calculate and set css adjustments via js when css variables are not supported
 function setPropertyValue(parallaxSubject, value) {
 
-  var property = 'translateY';
-  var multiplier = 1
-
-  if (parallaxSubject.getAttribute('data-parallax-multiplier') != null) {
-    multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
-  }
-
-  if (parallaxSubject.getAttribute('data-parallax-property') != null) {
-    property = parallaxSubject.getAttribute('data-parallax-property');
-  }
+  var property = parallaxSubject.getAttribute('data-parallax-property');
+  var multiplier = parallaxSubject.getAttribute('data-parallax-multiplier');
 
   switch (property) {
 
@@ -94,6 +102,7 @@ function setPropertyValue(parallaxSubject, value) {
 
 }
 
+// Tracks page scrolling and applies adjusted css values accordingly
 function triggerParallax() {
 
   function findScrollPosition() {
@@ -105,13 +114,16 @@ function triggerParallax() {
 
       var parallaxFrameDimensions = parallaxFrame.getBoundingClientRect();
 
+      // Only adjust values inside frames that are currently in view
       if (parallaxFrameDimensions.top < height && (parallaxFrameDimensions.top + parallaxFrameDimensions.height) > 0) {
 
         var parallaxSubjects = parallaxFrame.querySelectorAll('[data-parallax-role="subject"]');
 
         if (window.CSS.supports('--var', 0)) {
+          // Write scroll depth percentage value to an inline css variable if css variables are supported
           parallaxSubjects.forEach(function(parallaxSubject) {
 
+            // A parallaxStart value of "bottom" indictates it must begin adjustments as soon as it enters the bottom of the window
             if (parallaxSubject.dataset.parallaxStart == "bottom") {
               parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, true));
             } else {
@@ -120,8 +132,10 @@ function triggerParallax() {
 
           });
         } else {
+          // Write specific css to each subject based on the scroll depth percentage value if css variables are not supported
           parallaxSubjects.forEach(function(parallaxSubject) {
 
+            // A parallaxStart value of "bottom" indictates it must begin adjustments as soon as it enters the bottom of the window
             if (parallaxSubject.dataset.parallaxStart == "bottom") {
               setPropertyValue(parallaxSubject, framePercentageValue(parallaxFrameDimensions, true));
             } else {
@@ -143,8 +157,6 @@ function triggerParallax() {
 
 }
 
-if (window.CSS.supports('--var', 0)) {
-  setProperties();
-}
+setProperties();
 
 triggerParallax();
