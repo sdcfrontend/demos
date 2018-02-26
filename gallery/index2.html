@@ -62,7 +62,16 @@
       .gallery__slide-caption {
         margin-left: 60%;
         background: #222;
+        opacity: 1;
+      }
 
+      .gallery__slide-caption > * {
+        will-change: opacity;
+        transition: opacity 0.33s
+      }
+
+      .gallery__slide-caption[hidden] > * {
+        opacity: 0
       }
     }
 
@@ -235,22 +244,26 @@
   <script>
     var images = document.querySelectorAll('.gallery__slide-image');
     var slides = document.querySelectorAll('.gallery__slide');
+    var captions = document.querySelectorAll('.gallery__slide-caption');
 
     function showImage(index){
       console.log(index);
+
       images.forEach(function(image, index){
         image.style.opacity = 0;
+        captions[index].setAttribute('hidden', true);
         image.index = index;
       })
 
       images[index].style.opacity = 1;
+      captions[index].removeAttribute('hidden');
     }
 
     function tick(){
       var imind = 0;
       var h = window.innerHeight;
       slides.forEach(function(slide, index){
-        if(slide.getBoundingClientRect().top < (h/2)){
+        if(slide.getBoundingClientRect().top < (h/1.5)){
           imind = index;
         }
       });
