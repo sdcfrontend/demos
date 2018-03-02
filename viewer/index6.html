@@ -30,18 +30,25 @@
   .view {
     position: relative;
     max-width: 640px;
-    margin: 20px auto;
+    height: 100vh;
+    margin: 0 auto;
+    border: 2px solid red;
   }
   
   .view-frame {
     background: #eee;
     position: relative;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden
   }
   
   .view-image {
-    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
   }
 
   .view-overlay {
@@ -51,6 +58,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
+    z-index: 10
     /* background: rgba(255, 0, 0, 0.297) */
   }
 
@@ -64,7 +72,7 @@
     margin: 26px 0 0 0;
     width: 100%;
     left: 0;
-    top: 90%;
+    bottom: 0%;
     height: 45%;
     visibility: hidden;
     opacity: 0;
@@ -202,7 +210,7 @@
                 <a href="#" class="view-spot" style="left: 74.3991%; top: 50.7353%;">7</a>
             
               <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Belly</h3><p>The organisation’s charitable trust has two joint chairmen: Bruce Ritchie, a Mayfair property developer who founded Residential Land, and David Meller, from the luxury good specialist Meller Group, who also sits on the board of the Department for Education and the Mayor’s Fund for London.<a href="#" class="view-caption__previous" data-index="6"><</a></div></div>
-          <img class="view-image" src="map-1.png" alt="">
+          <img class="view-image" src="https://e3.365dm.com/18/03/2048x1152/skynews-uk-snow-winter-weather_4243825.jpg?bypass-service-worker&20180301124504" alt="">
     </div>
 
   </div>
@@ -210,6 +218,7 @@
   <script>
     var overlay = document.querySelector('[data-role="overlay"]');
     var dots = document.querySelectorAll('.view-spot');
+    var image = document.querySelector('.view-image');
     var caption = document.querySelectorAll('.view-caption');
     var closebuttons = document.querySelectorAll('.view-caption__close');
     var nextButtons = document.querySelectorAll('.view-caption__next');
@@ -275,6 +284,7 @@
 
     function positionCaption(event, dot, caption, overlay){
 
+    
       document.querySelectorAll('.view-spot').forEach(function(item){
         if(item!==dot){
           item.classList.remove('view-spot--open');
@@ -284,14 +294,16 @@
       dot.classList.toggle('view-spot--open');
 
       if(dot.classList.contains('view-spot--open')){
-        // center(dot);
+        var x = dot.offsetLeft;
+        var y = dot.offsetTop;
+        overlay.style.cssText = "translate("+x+"px,"+y+"px)"
       }
 
       // var x = event.target.offsetLeft;
       // var y = event.target.offsetTop;
-      var css = [];
+      // var css = [];
       // css.push("left:" + dot.style.left);
-      css.push("top:" + dot.style.top);
+      // css.push("top:" + dot.style.top);
 
       // if(parseInt(dot.style.left, 10) > 75){
       //   css.push("transform: translateX(-60%)");
