@@ -30,16 +30,23 @@
   .view {
     position: relative;
     max-width: 640px;
-    height: 100vh;
     margin: 0 auto;
     border: 2px solid red;
     overflow: hidden;
+    max-height: 100vh;
+  }
+
+  .view:after {
+    content: "";
+    padding-bottom: 125%;
+    display: block;
   }
   
   .view-frame {
     background: #eee;
-    position: relative;
+    position: absolute;
     height: 100%;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
     border: 2px solid limegreen;
@@ -81,7 +88,6 @@
     transform: translateY(100%);
     transition: 0.33s transform;
     border: 1px solid #ccc;
-    text-align: center;
     line-height: 1.5;
     display: flex;
     align-items: center;
@@ -110,6 +116,13 @@
   .view-caption h3 {
     font-size: 1.4em;
     margin-bottom: 0.5em;
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .view-caption p {
+    width: 90%;
+    max-width: 300px;
   }
 
   .view-spot {
@@ -120,6 +133,7 @@
     position: absolute;
     z-index: 10;
     transform: translate(-50%,-50%);
+    transform-origin: center;
     cursor: pointer;
     text-decoration: none;
     color:white;
@@ -129,7 +143,7 @@
   }
 
   .view-spot--open {
-    background: #146bc9
+    background: #146bc9;
   }
 
   .view-caption--open {
@@ -157,12 +171,13 @@
 
   .view-caption__close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2px;
+    right: 2px;
     z-index: 2;
     padding: 12px;
     color: black;
     text-decoration: none;
+    font-size: 24px;
   }
 
   @media all and (max-width: 600px){
@@ -199,7 +214,7 @@
         <div class="view-overlay" data-role="overlay">
           
           
-          <a href="#" class="view-spot" style="left: 49.2325%; top: 32.1429%;">1</a>
+          <a href="#" class="view-spot" style="left: 49.2325%; top: 12.1429%;">1</a>
           
           
           
@@ -219,18 +234,18 @@
             
              
                 
-                <a href="#" class="view-spot" style="left: 85.5%; top: 71.1261%;">6</a>
+                <a href="#" class="view-spot" style="left: 65.5%; top: 68.1261%;">6</a>
             
              
                 
-                <a href="#" class="view-spot" style="left: 74.3991%; top: 50.7353%;">7</a>
+                <a href="#" class="view-spot" style="left: 64.3991%; top: 50.7353%;">7</a>
             
              
-                <img class="view-image" src="https://e3.365dm.com/18/03/2048x1152/skynews-uk-snow-winter-weather_4243825.jpg?bypass-service-worker&20180301124504" alt="">
+                <img class="view-image" src="bg.png" alt="">
               </div>
               
     </div>
-    <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Highlighted headline</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ullam aspernatur, porro similique quos cupiditate ipsum! Temporibus, illo eaque sit harum est ex sunt expedita tempore, pariatur iure quis. Possimus.</div>
+    <div class="view-caption"><a href="#" class="view-caption__close">✕</a><h3>Highlighted headline</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ullam aspernatur, porro similique quos cupiditate ipsum! Temporibus, illo eaque sit harum est ex sunt expedita tempore, pariatur iure quis. Possimus.<a href="#" class="view-caption__previous"><</a><a href="#" class="view-caption__next">></a></div>
   </div>
 
   <script>
@@ -240,48 +255,57 @@
     var view = document.querySelector('.view');
     var frame = document.querySelector('.view-frame');
     var caption = document.querySelector('.view-caption');
-    var closebuttons = document.querySelectorAll('.view-caption__close');
+    var closebutton = document.querySelector('.view-caption__close');
     var nextButtons = document.querySelectorAll('.view-caption__next');
     var prevButtons = document.querySelectorAll('.view-caption__previous');
+    
+    var index = 0;
 
 
     nextButtons.forEach(function(button){
       button.onclick = function(event){
         event.preventDefault();
-        var index = parseInt(button.getAttribute('data-index'), 10);
-        if(dots[index+1]){
-          dots[index+1].click();
-          dots[index+1].focus()
+        index ++;
+        if(index > (dots.length-1)){
+          index = 0
         }
+        
+        dots[index].click();
+        dots[index].focus()
+        
       }
     });
 
     prevButtons.forEach(function(button){
       button.onclick = function(event){
         event.preventDefault();
-        var index = parseInt(button.getAttribute('data-index'), 10);
-        if(dots[index-1]){
-          dots[index-1].click();
-          dots[index-1].focus();
+        
+        index --;
+        if(index < 0){
+          index = dots.length-1;
         }
+
+        dots[index].click();
+        dots[index].focus();
+        
       }
     });
 
     dots.forEach(function(dot, index){
       dot.onclick = function(event){
         event.preventDefault();
-        positionCaption(event, dot, caption, overlay);
+        positionCaption(event, dot, caption, overlay, index);
       }
     })
 
-    closebuttons.forEach(function(closebutton, index){
-      closebutton.onclick = function(event){
-        event.preventDefault();
-        dots[index].click();
-        caption.classList.remove('view-caption--open');
-        overlay.style.cssText = ""
-      }
-    });
+    
+    closebutton.onclick = function(event){
+      event.preventDefault();
+      document.querySelector('.view-spot--open').classList.remove('view-spot--open');
+      caption.classList.remove('view-caption--open');
+      overlay.style.cssText = ""
+    }
+    
 
     function toPercent(value, total){
       return (100/total)*value;
@@ -304,9 +328,9 @@
       return toPercent(left, dims.width);
     }
 
-    function positionCaption(event, dot, caption, overlay){
+    function positionCaption(event, dot, caption, overlay, ind){
 
-     
+      index = ind;
 
       document.querySelectorAll('.view-spot').forEach(function(item){
         if(item!==dot){
@@ -314,20 +338,19 @@
         }
       });
 
-      dot.classList.toggle('view-spot--open');
+      dot.classList.add('view-spot--open');
       caption.classList.add('view-caption--open');
 
       if(dot.classList.contains('view-spot--open')){
+
         var x = dot.offsetLeft;
         var y = dot.offsetTop;
-        var viewx = view.getBoundingClientRect().left;
-        var framex = image.getBoundingClientRect().left;
-        var offsetx = (viewx-framex);
 
-        var y = dot.offsetTop;
+        overlay.style.cssText = "transform: translate(-"+(x)+"px,"+((overlay.offsetHeight/4)-y)+"px)"
+      }
 
-        console.log(x);
-        overlay.style.cssText = "transform: translate(-"+(x)+"px,-"+(y/2)+"px)"
+      else {
+        closebutton.click();
       }
 
       // var x = event.target.offsetLeft;
