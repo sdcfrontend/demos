@@ -478,7 +478,8 @@ ul {
 
 @media all and (max-width: 600px) {
   .sdc-site-hero {
-    height: 38vh; }
+    height: 38vh;
+    min-height: 0 }
   .sdc-site-hero__body {
     padding-bottom: 4vh; }
   .sdc-site-hero__title {
@@ -1690,15 +1691,19 @@ svg {
   <style>
   
   .sdc-site-hero__description {
+    /* background: #db9000;
+    color: white; */
     background: #e9e8ee;
     font-size: 18px;
     line-height: 1.4;
-    padding: 2em 0;
-    text-align: center
+    padding: 1.9em 0;
+    text-align: center;
+    margin-bottom: 1.6em;
   }
 
   .sdc-site-hero__description--bottom {
     background: none;
+    color: inherit;
     padding-top: 0;
     margin-top: -10px;
   }
@@ -1709,49 +1714,22 @@ svg {
     line-height: 1.5
   }
 
-  .sdc-site-tiles--line18 {
-    background: #2c2c2c
+  .sdc-site-tile__body {
+    background: #db9000!important;
+    color: white!important;
   }
 
-  
-.sdc-site-component-header--h2 {
-  font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: .75em!important;
-    font-size: 2em!important;
-    text-align: auto;
-    padding: 0.7em 0 0em
-}
-
-.sdc-site-component-header__body {
-  display: block;
-  text-align: center;
-  color: #b6995e;
-}
-
+  .sdc-site-tile__body * {
+    color: white;
+  }
 
 
 @media all and (max-width: 480px){
-  .sdc-site-tiles--line18 {
-    padding: 0 9px;
-    margin-bottom: 0;
-  }
-
-  .sdc-site-tiles--line18 > 
-  .sdc-site-tiles {
-    margin-bottom: 18px
-  }
-
-  .sdc-site-component-header--h2 {
-    font-size: 1.7em!important;
-    padding: 0.6em 0 0em
-  }
-
   .sdc-site-hero__description {
-    padding: 1.5em 0;
+    padding: 0.94em 0 1em;
+    margin-bottom: 0;
+    line-height: 1.2
   }
-
-
 
 }
   </style>
@@ -1856,7 +1834,8 @@ svg {
       </div>
     
     </div>
-  <div class="sdc-site-hero">
+
+    <div class="sdc-site-hero">
   <div class="sdc-site-hero__inner">
     <div class="sdc-site-hero__body">
       <!-- <time class="sdc-site-hero__time" data-role="live-date" data-live="LIVE"><span>24.08.16 | 12:03</span></time>
@@ -1874,57 +1853,40 @@ svg {
 <div class="sdc-site-hero__description">
   <p class="site-wrap site-wrap-padding">Sky News examines the state of Modern Britain in 2018</p>
 </div>
-<div class="sdc-site-tiles--line18">
-    <h2 class="sdc-site-component-header--h2">
-    
-        <span href="/watch" class="sdc-site-component-header__body site-wrap site-wrap-padding">
-          <span data-role="short-text-target">
-                  Latest Story
-          </span>
-        </span>
-    
-      </h2>
-<div class="sdc-site-tiles">
-  
-    <div class="sdc-site-tiles__inner">
-        <div class="sdc-site-tiles__group">
-            <div class="sdc-site-tiles__item sdc-site-tile sdc-site-tile--has-link" data-type="hero-horizontal" data-role="load-more-item">
-                <figure class="sdc-site-tile__figure" aria-hidden="true">
-                    <div class="sdc-site-tile__image-wrap">
-                          
-                      <picture>
-                        <source srcset="https://e3.365dm.com/18/01/384x216/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 400w, https://e3.365dm.com/18/01/768x432/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 1000w" data-srcset="https://e3.365dm.com/18/01/384x216/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 400w, https://e3.365dm.com/18/01/768x432/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 1000w" media="(min-width: 600px)" sizes="(max-width: 599px) 150px, (min-width: 600px) 300px">
-                        <source srcset="https://e3.365dm.com/18/01/192x144/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411" data-srcset="https://e3.365dm.com/18/01/192x144/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411" media="(max-width: 599px)">
-                        <img src="./index_files/sebastian-vettel-ferrari_4145370.jpg" alt=" " class="sdc-site-tile__image">
-                      </picture>
-                    </div>
-                  </figure>
-        
-                  <div class="sdc-site-tile__body">
-                    <div class="sdc-site-tile__body-main">
-                      <div class="sdc-site-tile__info"><div class="sdc-site-tile__tag sdc-site-tile__tag--haslink"><a href="http://localhost:9876/f1" class="sdc-site-tile__tag-link">Manchester</a></div><time data-update="" class="sdc-site-tile__date-time"></time>
-                      </div>
-                      <h3 class="sdc-site-tile__headline">
-                          <a href="/demos/line18/article2/" class="sdc-site-tile__headline-link">
-                        <span class="sdc-site-tile__headline-text">The high cost of automation</span>
-                          </a>
-                      </h3>
-        
-                    </div>
-                  </div>
-              </div>
-        </div>
-    </div>
- </div>
-</div>
 
+
+   
 <div class="sdc-site-tiles sdc-site-tiles sdc-site-tiles--alt">
 
   <div class="sdc-site-tiles__inner">
 
 
       <div class="sdc-site-tiles__group">
-
+          <div class="sdc-site-tiles__item sdc-site-tile sdc-site-tile--has-link" data-type="hero-horizontal" data-role="load-more-item">
+              <figure class="sdc-site-tile__figure" aria-hidden="true">
+                  <div class="sdc-site-tile__image-wrap">
+                        
+                    <picture>
+                      <source srcset="https://e3.365dm.com/18/01/384x216/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 400w, https://e3.365dm.com/18/01/768x432/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 1000w" data-srcset="https://e3.365dm.com/18/01/384x216/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 400w, https://e3.365dm.com/18/01/768x432/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411 1000w" media="(min-width: 600px)" sizes="(max-width: 599px) 150px, (min-width: 600px) 300px">
+                      <source srcset="https://e3.365dm.com/18/01/192x144/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411" data-srcset="https://e3.365dm.com/18/01/192x144/skynews-ocado-c-3po-robot_4203650.jpg?20180112100411" media="(max-width: 599px)">
+                      <img src="./index_files/sebastian-vettel-ferrari_4145370.jpg" alt=" " class="sdc-site-tile__image">
+                    </picture>
+                  </div>
+                </figure>
+      
+                <div class="sdc-site-tile__body">
+                  <div class="sdc-site-tile__body-main">
+                    <div class="sdc-site-tile__info"><div class="sdc-site-tile__tag sdc-site-tile__tag--haslink"><a href="http://localhost:9876/f1" class="sdc-site-tile__tag-link">Manchester</a></div><time data-update="" class="sdc-site-tile__date-time"></time>
+                    </div>
+                    <h3 class="sdc-site-tile__headline">
+                        <a href="/demos/line18/article2/" class="sdc-site-tile__headline-link">
+                      <span class="sdc-site-tile__headline-text">The high cost of automation</span>
+                        </a>
+                    </h3>
+      
+                  </div>
+                </div>
+            </div>
           <div class="sdc-site-tiles__item sdc-site-tile sdc-site-tile--has-link" data-role="load-more-item">
                 <figure class="sdc-site-tile__figure" aria-hidden="true">
                     <div class="sdc-site-tile__image-wrap">
