@@ -1053,11 +1053,21 @@
                   </div>
                 </div>
                 <style>
+                .scroll-indicator__inner {
+                  content:"start";
+                  width: 50px;
+                  height: 60px;
+                  background: url(http://www.slate.com/features/2014/10/run/img/icon_20027/icon_20027.png) rgb(182, 182, 182);
+                  background-size: auto 100%;
+                  background-position: 100% center;
+                  background-repeat: no-repeat;
+                  right: 0;
+                }
+
                 .scroll-indicator {
                   width: 100%;
                   height: 30px;
                   background: #eee;
-                  margin-bottom: 20px;
                   position: relative;
                   position: sticky;
                   top: 0;
@@ -1085,8 +1095,7 @@
                 }
 
                 .scroll-indicator__inner {
-                  position: absolute;
-                  background: rgb(182, 182, 182);
+                  position: absolute; 
                   top: 0;
                   left: 0;
                   height: 100%;
@@ -1094,18 +1103,19 @@
                   transition: width 0.1s
                 }
                 </style>
-              <div class="scroll-indicator">
-                <div class="scroll-indicator__inner"></div>
-                <div class="scroll-indicator__marks">
-                  <p>0:56.3</p>
-                  <p>1:52.0</p>
-                  <p>2:59.9</p>
-                  <p>3:59.4</p>
-                </div>
-              </div>
+              
       <div class="page-col page-body">
         <h1>The four minute mile: How Roger Bannister redefined athletics</h1>
-        <div class="video">
+        <div class="scroll-indicator">
+            <div class="scroll-indicator__inner"></div>
+            <div class="scroll-indicator__marks">
+              <p>0:56.3</p>
+              <p>1:52.0</p>
+              <p>2:59.9</p>
+              <p>3:59.4</p>
+            </div>
+          </div>
+          <div class="video">
           <video src="videos/bannister1.mp4" loop preload autoplay playsinline mute></video>
         </div>
           <h2 id="1" cue="[51.50085005203554, -0.12362409461901334]" text="The incident occured in Westminister">Four minutes that changeds the world</h2>
