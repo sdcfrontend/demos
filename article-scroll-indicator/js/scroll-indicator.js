@@ -35,21 +35,24 @@ function adjustSubjectProperties(parallaxFrame, parallaxSubject) {
 
 }
 
-function triggerParallax(progressIndicator) {
+function triggerIndicator(progressIndicator) {
 
   function findScrollPosition() {
 
     var height = window.innerHeight;
-    var parallaxFrame = document.querySelector('[data-parallax-role="frame"]');
-    var parallaxSubject = document.querySelector('[data-parallax-role="subject"]');
+    var parallaxFrame = document.querySelector('[data-role="scroll-frame"]');
+    var parallaxSubject = document.querySelector('[data-role="scroll-bar"]');
 
     var parallaxFrameDimensions = parallaxFrame.getBoundingClientRect();
+
     adjustSubjectProperties(parallaxFrame, parallaxSubject);
 
     if (parallaxFrameDimensions.height < (parallaxFrameDimensions.top + parallaxFrameDimensions.height)) {
       progressIndicator.style.height = '0';
+      progressIndicator.style.overflow = 'hidden';
     } else {
       progressIndicator.style.height = '5px';
+      progressIndicator.style.overflow = 'visible';
     }
 
     requestAnimationFrame(findScrollPosition);
@@ -63,23 +66,31 @@ function triggerParallax(progressIndicator) {
 function addScrollIndicator() {
 
   var article = document.querySelector('.article');
-  article.setAttribute('data-parallax-role', 'frame');
+  article.setAttribute('data-role', 'scroll-frame');
 
-  var progressIndicator = document.createElement('div');
-  progressIndicator.classList.add('progress-indicator');
+  var progressIndicator = document.querySelector('.progress-indicator');
+  var progressBar = document.querySelector('[data-role="scroll-bar"]');
+
+  if (!progressIndicator) {
+    progressIndicator = document.createElement('div');
+    progressIndicator.classList.add('progress-indicator');
+
+    progressBar = document.createElement('div');
+    progressBar.classList.add('progress-indicator__bar');
+    progressBar.setAttribute('data-role', 'scroll-bar');
+
+    progressIndicator.appendChild(progressBar);
+    document.body.appendChild(progressIndicator);
+  }
+
   progressIndicator.style.cssText = "position: fixed; top: 0; width: 100%; height: 5px; background-color: #002672; transform: none; transition: height 0.33s ease-in-out";
+  // progressIndicator.style.backgroundColor = color from data attr
 
-  var progressBar = document.createElement('div');
-  progressBar.classList.add('progress-indicator__bar');
-  progressBar.setAttribute('data-parallax-role', 'subject');
-  progressBar.setAttribute('data-actions', 'translateX');
-  progressBar.setAttribute('data-start', 'top');
   progressBar.style.cssText = "position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background-color: #EA021A; will-change: transform;";
+  // progressBar.style.backgroundColor = color from data attr
 
-  progressIndicator.appendChild(progressBar);
-  document.body.appendChild(progressIndicator);
 
-  triggerParallax(progressIndicator);
+  triggerIndicator(progressIndicator);
 
 }
 

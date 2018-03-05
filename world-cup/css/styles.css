@@ -1,0 +1,124 @@
+html {
+  font-family: 'Sky Text', sans-serif;
+  color: #4a4a4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.article-body {
+}
+
+.article-body p {
+  font-size: 22px;
+  line-height: 1.5em;
+  margin: 0 0 1.5em 0;
+}
+
+.article-body__section--yellow-blue-grad {
+  padding: 2em;
+  background-image: linear-gradient(0deg, #f7dfcb 7%, #02324c 63%, #b6d8e8 97%);
+  color: #000;
+}
+
+.stars-background {
+  position: sticky;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.stars-background__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+
+.article-body__section--image {
+  height: 300vh;
+  position: relative;
+}
+
+.article-body__section--image .article-body__section-col {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 2em 0;
+  overflow: hidden;
+}
+
+.article-body__section--image .article-body__section-col-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-body__section--static {
+  height: 300vh;
+  position: relative;
+  background: #000;
+}
+
+.article-body__section--static .article-body__section-col {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 2em 0;
+  overflow: hidden;
+}
+
+.article-body__section--static video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.article-body__section-text-block {
+  position: absolute;
+  right: 2em;
+  bottom: 15%;
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.article-body__section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-body__section-col-image {
+  max-width: 100%;
+}
+
+@media all and (min-width: 600px) {
+  .article-body__section--split {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  .article-body__section-col {
+    display: table-cell;
+    vertical-align: top;
+    position: relative;
+    padding-right: 2em;
+  }
+  .article-body__section-col + .article-body__section-col {
+    padding-right: 0;
+    left: 2em;
+  }
+  .article-body__section--split .article-body__section-col-image {
+    position: sticky;
+    top: 3em;
+  }
+
+}
