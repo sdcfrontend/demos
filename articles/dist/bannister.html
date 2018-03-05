@@ -1182,7 +1182,7 @@
         var h = document.documentElement.offsetHeight;
         var y = (window.pageYOffset > 500) ?  (window.pageYOffset + window.innerHeight) : window.pageYOffset;
 
-        var p = Math.ceil((100/h) * y);
+        var p = Math.ceil((100/h) * y); 
 
         requestAnimationFrame(tick);
         indicatorBar.style.width = Math.min(100,p) + "%";
