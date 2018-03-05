@@ -499,7 +499,7 @@
       items.forEach(function(item){
         var dims = item.getBoundingClientRect();
         console.log(dims.top);
-        if(dims.top < (h/3)){
+        if(dims.top < (h/4)){
           item.setAttribute('data-scroll-action-active', 'true');
         }
       });
