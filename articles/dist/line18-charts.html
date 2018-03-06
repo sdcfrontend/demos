@@ -968,11 +968,20 @@
                        z-index: 2;
                      }
 
-                     @media all and (max-width: 600px) {
+                     @media all and (max-width: 800px) {
                        .bar-chart {
-                         font-size: 0.75em;
+                         font-size: 0.9em;
                        }
+                       .carousel-nav-prev,
+                       .carousel-nav-next {
+                         top: 2.75em;
+                       }
+                     }
 
+                     @media all and (max-width: 500px) {
+                       .bar-chart {
+                         font-size: 0.7em;
+                       }
                        .carousel-nav-prev,
                        .carousel-nav-next {
                          top: 2.2em;
@@ -984,12 +993,6 @@
 
                        .carousel-nav-next {
                          right: 0.25em;
-                       }
-                     }
-
-                     @media all and (max-width: 500px) {
-                       .bar-chart {
-                         font-size: 0.7em;
                        }
                      }
                     </style>
