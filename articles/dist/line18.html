@@ -23,7 +23,8 @@
         margin-bottom: 0.5em;
       }
 
-      .gallery {
+      .gallery,
+      .carousel {
         margin: 0 auto 3em;
         top: 0;
         max-width: 992px;
@@ -814,6 +815,9 @@
 
                                   <h3>East of England</h3>
                                   <h4>Median household wealth</h4>
+
+
+             
               <div class="gallery">
                 <div class="pic">
                   
@@ -839,6 +843,96 @@
               </div>
               <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
                 </p>
+
+                <style>
+                    .carousel {
+                      position: relative;
+                      overflow: hidden;
+                    }
+
+                    .carousel-nav {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      background: #ddd;
+                      height: 50px;
+                      width: 100%;
+                      z-index: 1000
+                    }
+
+                    .carousel-nav-prev,
+                    .carousel-nav-next {
+                      position: absolute;
+                      height: 100%;
+                      width: 50px;
+                      left: 0;
+                      top: 0;
+                      background: #ccc
+                    }
+
+                     .carousel-nav-next {
+                       left: auto;
+                       right: 0;
+                     }
+
+                     .carousel-wrap {
+                       width: 500%;
+                       display: flex;
+                       min-height: 300px;
+                       padding-top: 50px;
+                       transition: transform 0.33s;
+                       z-index: 2
+                     }
+
+                     .carousel-slide {
+                       flex: 1;
+                       background: #eee
+                     }
+                    </style>
+                  <div class="carousel">
+                    <div class="carousel-nav"><a href="#" class="carousel-nav-prev"><</a><a href="#" class="carousel-nav-next">></a></div>
+                    <div class="carousel-wrap">
+                      <div class="carousel-slide">1</div>
+                      <div class="carousel-slide">2</div>
+                      <div class="carousel-slide">3</div>
+                      <div class="carousel-slide">4</div>
+                      <div class="carousel-slide">5</div>
+                    </div>
+                    </div>
+
+                    <script>
+                      (function(){
+
+                        var slide = 0;
+                        var rail = document.querySelector('.carousel-wrap');
+                        var length = document.querySelectorAll('.carousel-slide').length;
+
+                        function next(e){
+                          e.preventDefault();
+                          slide++;
+                          if(slide===length){
+                            slide = 0
+                          }
+                          
+                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)"
+                        }
+
+                        function prev(e){
+                          e.preventDefault();
+                          slide--;
+                          if(slide===-1){
+                            slide = length-1
+                          }
+
+                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
+                        }
+
+
+                          document.querySelector('.carousel-nav-prev').onclick = prev;
+                          document.querySelector('.carousel-nav-next').onclick = next;
+                      })();
+                    </script>
+
                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                           <p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
                             </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
@@ -855,7 +949,10 @@
                           <h2 id="3" cue="[51.40787322231393, -0.13552186436644986]" text="A dramatic siege took place in Streatham">Dramatic capture</h2>
                         </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                           </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
-                            </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                            </p>
+
+                                                       
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                             </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
                             </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
                 <h2 id="4" cue="[51.30564243635965, 0.041709527965701564]" text="Biggin Hill aerodrome was razed to the ground">Carnage</h2>
@@ -877,7 +974,9 @@
                       </p><p>I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.
                       </p><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                       </p><p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-                      </p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
+                      </p>
+                      
+                      <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
                       </p><p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
                         </p>><p>I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents.
                             <p>It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
@@ -925,7 +1024,7 @@
         requestAnimationFrame(tick);
       }
 
-      tick();
+      // tick();
             
     </script>
    </body>
