@@ -873,6 +873,12 @@
                       top: 0;
                     }
 
+                    .carousel-nav-prev[disabled],
+                    .carousel-nav-next[disabled] {
+                      opacity: 0.25;
+                      pointer-events: none;
+                    }
+
                     .carousel-nav-prev svg,
                     .carousel-nav-next svg {
                       position: absolute;
@@ -995,32 +1001,67 @@
                         var slides = document.querySelectorAll('.carousel-slide');
                         var length = slides.length;
                         var h2 = document.querySelector('.carousel-nav h2');
+                        var prevbutton = document.querySelector('.carousel-nav-prev');
+                        var nextbutton = document.querySelector('.carousel-nav-next');
 
                         function next(e){
+
                           e.preventDefault();
+
+                          if(this.hasAttribute('disabled')){
+                            return;
+                          }
+
                           slide++;
+
                           if(slide===length){
                             slide = 0
                           }
+
+                          if(slide === length-1){
+                            nextbutton.setAttribute('disabled', true);
+                          }
+
+                          else {
+                            nextbutton.removeAttribute('disabled')
+                          }
+
+                          prevbutton.removeAttribute('disabled');
 
                           rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
                           h2.textContent = slides[slide].title;
                         }
 
                         function prev(e){
+
                           e.preventDefault();
+                          if(this.hasAttribute('disabled')){
+                            return;
+                          }
+
                           slide--;
                           if(slide===-1){
                             slide = length-1
                           }
+
+                           if(slide === 0){
+                            prevbutton.setAttribute('disabled', true);
+                          }
+
+                          else {
+                            prevbutton.removeAttribute('disabled')
+                          }
+
+                          nextbutton.removeAttribute('disabled');
+
 
                           rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
                           h2.textContent = slides[slide].title;
                         }
 
 
-                          document.querySelector('.carousel-nav-prev').onclick = prev;
-                          document.querySelector('.carousel-nav-next').onclick = next;
+                         prevbutton.onclick = prev;
+                         nextbutton.onclick = next;
                       })();
                     </script>
 
