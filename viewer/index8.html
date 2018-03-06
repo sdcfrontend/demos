@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+body {
+  margin: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+  color: black;
+  font-family: sans-serif
+}
+
+.container {
+  overflow: hidden;
+  border: 3px solid #666;
+  position: relative;
+}
+
+.container-wrap {
+  border: 2px solid red;
+  transition: transform 0.33s
+}
+
+img {
+  max-width: 100%
+}
+
+.reset {
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 6px;
+  position: absolute;
+  background: #ccc;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  
+}
+
+.container-wrap--zoom {
+  transform: scale(2)
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="reset">reset</a>
+        <div class="container-wrap">
+            <img src="https://webassets2.tomtom.com/image/635829992538886208BC.png" alt="">
+        </div>
+
+    </div>
+    <script>
+    
+    var wrap = document.querySelector('.container-wrap');
+
+    var reset = document.querySelector('.reset');
+
+    wrap.onclick = function(e){
+
+        var w = wrap.offsetWidth;
+        var h = wrap.offsetWidth;
+
+        var x = e.layerX;
+        var y = e.layerY;
+
+        wrap.style.cssText = "transform: scale(3) translateX("+((w/2) + x)+"px)"
+    }
+
+    reset.onclick = function(){
+        wrap.style.cssText = ""
+    }
+
+</script>
+</body>
+</html>
