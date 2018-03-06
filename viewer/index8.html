@@ -22,13 +22,12 @@ body {
 
 .container {
   overflow: hidden;
-  border: 3px solid #666;
   position: relative;
 }
 
 .container-wrap {
-  border: 2px solid red;
-  transition: transform 0.33s
+  will-change: transform;
+  /* transition: transform 0.33s */
 }
 
 img {
@@ -47,39 +46,91 @@ img {
   
 }
 
-.container-wrap--zoom {
-  transform: scale(2)
+.container-wrap--zoomer {
+  transition: transform 0.33s;
+  cursor: zoom-in
 }
 </style>
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 <body>
     <div class="container">
         <a href="#" class="reset">reset</a>
-        <div class="container-wrap">
-            <img src="https://webassets2.tomtom.com/image/635829992538886208BC.png" alt="">
+        <div class="container-wrap container-wrap--zoomer" draggable="false">
+            <img src="https://webassets2.tomtom.com/image/635829992538886208BC.png" alt="" draggable="false">
         </div>
 
     </div>
     <script>
     
+   
     var wrap = document.querySelector('.container-wrap');
-
     var reset = document.querySelector('.reset');
 
-    wrap.onclick = function(e){
+    wrap.x = 0;
+    wrap.y = 0;
+    newx = 0;
+    newy = 0;
+
+    function zoom(e){
+
+        setTimeout(function(){
+            wrap.classList.remove('container-wrap--zoomer');
+        }, 400);
+
+
+        wrap.onclick = null;
 
         var w = wrap.offsetWidth;
-        var h = wrap.offsetWidth;
+        var h = wrap.offsetHeight;
 
         var x = e.layerX;
         var y = e.layerY;
 
-        wrap.style.cssText = "transform: scale(3) translateX("+((w/2) + x)+"px)"
+        var xoffset = (w/2) - x;
+        var yoffset = (h/2) - y;
+
+        wrap.style.cssText = "transform: scale(3) translateX("+xoffset+"px) translateY("+yoffset+"px); cursor: move ";
+        wrap.x = xoffset;
+        wrap.y = yoffset;
+
+        hammertime.on('panend', panend);
+        hammertime.on('pan', pan);
     }
 
     reset.onclick = function(){
-        wrap.style.cssText = ""
+        wrap.classList.add('container-wrap--zoomer');
+        wrap.style.cssText = "";
+        wrap.onclick = zoom;
+        hammertime.off('pan', pan);
+        hammertime.off('panend', panend);
     }
+
+    var hammertime = new Hammer(wrap, {});
+    
+    function pan(ev) {
+
+        newx = wrap.x + (ev.deltaX/3);
+        newy = wrap.y + (ev.deltaY/3);
+
+        newx = Math.min(newx, wrap.offsetWidth/3);
+        newx = Math.max(newx, (wrap.offsetWidth/3)*-1);
+
+        newy = Math.min(newy, wrap.offsetHeight/3);
+        newy = Math.max(newy, (wrap.offsetHeight/3)*-1);
+
+        wrap.style.cssText = "transform: scale(3) translateX("+newx+"px) translateY("+newy+"px); cursor: move"
+    };
+
+    function panend(ev){
+        wrap.x = newx;
+        wrap.y = newy;
+    }
+
+    wrap.onclick = zoom;
+
+
+  
 
 </script>
 </body>
