@@ -893,15 +893,23 @@
                      }
 
                      .carousel-wrap {
-                       width: 500%;
-                       display: flex;
+                       width: 100%;
                        min-height: 300px;
                        transition: transform 0.33s;
                        z-index: 2
                      }
 
                      .carousel-slide {
-                       flex: 1;
+                       position: absolute;
+                       top: 0;
+                       left: 0;
+                       width: 100%;
+                       height: 100%;
+                       transition: opacity 0.33s
+                     }
+
+                     .carousel-slide:first-child {
+                       position: relative
                      }
 
                      .carousel-slide img {
@@ -934,8 +942,13 @@
                           if(slide===length){
                             slide = 0
                           }
-                          
-                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
+
+                          slides.forEach(function(item){
+                            item.style.cssText = "opacity:0";
+                          });
+
+                          slides[slide].style.cssText = "opacity: 1";
+                          // rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
                           h2.textContent = slides[slide].title;
                         }
 
@@ -946,7 +959,13 @@
                             slide = length-1
                           }
 
-                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
+                          slides.forEach(function(item){
+                            item.style.cssText = "opacity:0";
+                          });
+
+                          slides[slide].style.cssText = "opacity: 1";
+
+                          // rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
                           h2.textContent = slides[slide].title;
                         }
 
