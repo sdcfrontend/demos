@@ -848,16 +848,20 @@
                     .carousel {
                       position: relative;
                       overflow: hidden;
+                      max-width: 760px;
                     }
 
                     .carousel-nav {
                       position: absolute;
                       top: 0;
                       left: 0;
-                      background: #ddd;
                       height: 50px;
                       width: 100%;
                       z-index: 1000
+                    }
+
+                    .carousel-nav h2 {
+                      text-align: center;
                     }
 
                     .carousel-nav-prev,
@@ -879,24 +883,26 @@
                        width: 500%;
                        display: flex;
                        min-height: 300px;
-                       padding-top: 50px;
                        transition: transform 0.33s;
                        z-index: 2
                      }
 
                      .carousel-slide {
                        flex: 1;
-                       background: #eee
+                     }
+
+                     .carousel-slide img {
+                       width: 100%;
                      }
                     </style>
                   <div class="carousel">
-                    <div class="carousel-nav"><a href="#" class="carousel-nav-prev"><</a><a href="#" class="carousel-nav-next">></a></div>
+                    <div class="carousel-nav"><a href="#" class="carousel-nav-prev"><</a><a href="#" class="carousel-nav-next">></a><h2>Financial Wealth</h2></div>
                     <div class="carousel-wrap">
-                      <div class="carousel-slide">1</div>
-                      <div class="carousel-slide">2</div>
-                      <div class="carousel-slide">3</div>
-                      <div class="carousel-slide">4</div>
-                      <div class="carousel-slide">5</div>
+                      <div class="carousel-slide" title="Financial Wealth"><img src="infographics/Stats-1.png" alt=""></div>
+                      <div class="carousel-slide" title="Physical Wealth"><img src="infographics/Stats-2.png" alt=""></div>
+                      <div class="carousel-slide" title="Property Wealth"><img src="infographics/Stats-3.png" alt=""></div>
+                      <div class="carousel-slide" title="Pension Wealth"><img src="infographics/Stats-4.png" alt=""></div>
+                      <div class="carousel-slide" title="Total Wealth"><img src="infographics/Stats-5.png" alt=""></div>
                     </div>
                     </div>
 
@@ -905,7 +911,9 @@
 
                         var slide = 0;
                         var rail = document.querySelector('.carousel-wrap');
-                        var length = document.querySelectorAll('.carousel-slide').length;
+                        var slides = document.querySelectorAll('.carousel-slide');
+                        var length = slides.length;
+                        var h2 = document.querySelector('.carousel-nav h2');
 
                         function next(e){
                           e.preventDefault();
@@ -914,7 +922,8 @@
                             slide = 0
                           }
                           
-                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)"
+                          rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
+                          h2.textContent = slides[slide].title;
                         }
 
                         function prev(e){
@@ -925,6 +934,7 @@
                           }
 
                           rail.style.cssText = "transform: translateX("+(slide*(100/length))*-1+"%)";
+                          h2.textContent = slides[slide].title;
                         }
 
 
