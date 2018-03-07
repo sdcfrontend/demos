@@ -28,6 +28,8 @@ function setRotation(segments) {
     var fillRotation = (value/100) * 180;
     var fixRotation = fillRotation * 2;
 
+    segment.style.opacity = 1;
+
     fills.forEach(function(fill) {
       fill.style.transform = 'rotate('+fillRotation+'deg)'
     });

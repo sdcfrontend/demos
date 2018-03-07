@@ -50,6 +50,7 @@
   transition: transform 1s;
   will-change: transform;
   backface-visibility: hidden;
+  opacity: 0;
 }
 
 .pie__mask,
