@@ -13,16 +13,23 @@
 }
 
 body {
-  margin: 5px;
-  max-width: 500px;
-  margin: 0 auto;
   color: black;
   font-family: sans-serif
 }
 
 .container {
+  max-width: 996px;
+  margin: 0 auto;
+  position: relative;
+  max-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+
+.container-inner {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .container-wrap {
@@ -31,8 +38,28 @@ body {
   /* transition: transform 0.33s */
 }
 
+.container-overlay {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative
+}
+
+@media all and (max-width: 600px){
+  .container-inner {
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+  }
+}
+
 img {
-  max-width: 100%
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2
 }
 
 .reset {
@@ -44,43 +71,147 @@ img {
   top: 12px;
   left: 12px;
   z-index: 100;
-  
+  visibility: hidden
+}
+
+.reset--visible {
+  visibility: visible;
 }
 
 .container-wrap--zoomer {
   transition: transform 0.33s;
-  cursor: zoom-in
 }
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 31%;
+  left: 24%;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  transition: transform 0.33s
+}
+
+.zoomed .dot {
+  transform: translate(-50%,-50%) scale(0.5);
+}
+
+.dot:after {
+  background: white;
+  content: attr(title);
+  display: block;
+  position: absolute;
+  padding: 3px 8px;
+  font-size: 13px;
+  left: 100%;
+  margin: -2px 0 0 2px;
+  white-space: nowrap;
+}
+
+.dot + .dot {
+  top: 50%;
+  left: 44%;
+}
+
+.container-caption {
+  height: 40%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  transition: transform 0.33s;
+  transform: translateY(100%);
+}
+
+.container-caption-inner {
+  background: white;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.container-caption-title {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
 </style>
 <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <a href="#" class="reset">reset</a>
+      <a href="#" class="reset">reset</a>
+      <div class="container-inner">
         <div class="container-wrap container-wrap--zoomer" draggable="false">
-            <img src="map-1.png" alt="" draggable="false">
+            <div class="container-overlay"> 
+              <a href="#" class="dot" draggable="false" title="St Petersburg"></a>
+              <a href="#" class="dot" draggable="false" title="Moscow"></a>
+            </div>
+            <img src="allmap.png" alt="" draggable="false">
         </div>
+      </div>
+      <div class="container-caption">
+        <div class="container-caption-inner">
+          <h4 class="container-caption-title"></h4>
+        </div>
+      </div>
 
     </div>
     <script>
     
    
     var wrap = document.querySelector('.container-wrap');
+    var overlay = document.querySelector('.container-overlay');
     var reset = document.querySelector('.reset');
+    var dots = document.querySelectorAll('.dot');
+    var caption = document.querySelector('.container-caption');
+    var captiontitle = document.querySelector('.container-caption-title');
+
+    var data = [
+      {
+        "title": ""
+      }
+    ]
 
     wrap.x = 0;
     wrap.y = 0;
     newx = 0;
     newy = 0;
+    
+    function rendercaption(close, data){
+
+      captiontitle.textContent = data.title;
+
+      if(close){
+        caption.style.cssText = "transform: translateY(100%)";
+      }
+
+      else {
+        caption.style.cssText = "transform: translateY(0)";
+      }
+    }
 
     function zoom(e){
+
+        
+        if(!overlay.contains(e.target)){
+          return;
+        }
+
+        e.preventDefault();
+
+        overlay.classList.add('zoomed');
 
         setTimeout(function(){
             wrap.classList.remove('container-wrap--zoomer');
         }, 400);
 
-
-        wrap.onclick = null;
+        // wrap.onclick = null;
+        reset.classList.add('reset--visible');
 
         var w = wrap.offsetWidth;
         var h = wrap.offsetHeight;
@@ -88,39 +219,43 @@ img {
         var x = e.layerX;
         var y = e.layerY;
 
-        var xoffset = (w/2) - x;
-        var yoffset = (h/2) - y;
+        if(e.target.className === 'dot'){
+          x = e.target.offsetLeft;
+          y = e.target.offsetTop;
+          rendercaption(false, {
+            title: e.target.title
+          });
+        }
 
-        wrap.style.cssText = "transform: scale(3) translateX("+xoffset+"px) translateY("+yoffset+"px); cursor: move ";
+        var xoffset = (w/2) - x;
+        var yoffset = (h/2.5) - y;
+
+        xoffset = Math.min(xoffset, wrap.offsetWidth/4);
+        xoffset = Math.max(xoffset, (wrap.offsetWidth/4)*-1);
+
+        yoffset = Math.min(yoffset, wrap.offsetHeight/4);
+        yoffset = Math.max(yoffset, (wrap.offsetHeight/4)*-1);
+
+        wrap.style.cssText = "transform: scale(2) translateX("+xoffset+"px) translateY("+yoffset+"px); cursor: move ";
         wrap.x = xoffset;
         wrap.y = yoffset;
 
         hammertime.on('panend', panend);
         hammertime.on('pan', pan);
     }
-
-    reset.onclick = function(){
-        wrap.classList.add('container-wrap--zoomer');
-        wrap.style.cssText = "";
-        wrap.onclick = zoom;
-        hammertime.off('pan', pan);
-        hammertime.off('panend', panend);
-    }
-
-    var hammertime = new Hammer(wrap, {});
     
     function pan(ev) {
 
-        newx = wrap.x + (ev.deltaX/3);
-        newy = wrap.y + (ev.deltaY/3);
+        newx = wrap.x + (ev.deltaX/2);
+        newy = wrap.y + (ev.deltaY/2);
 
-        newx = Math.min(newx, wrap.offsetWidth/3);
-        newx = Math.max(newx, (wrap.offsetWidth/3)*-1);
+        newx = Math.min(newx, wrap.offsetWidth/4);
+        newx = Math.max(newx, (wrap.offsetWidth/4)*-1);
 
-        newy = Math.min(newy, wrap.offsetHeight/3);
-        newy = Math.max(newy, (wrap.offsetHeight/3)*-1);
+        newy = Math.min(newy, wrap.offsetHeight/4);
+        newy = Math.max(newy, (wrap.offsetHeight/4)*-1);
 
-        wrap.style.cssText = "transform: scale(3) translateX("+newx+"px) translateY("+newy+"px); cursor: move"
+        wrap.style.cssText = "transform: scale(2) translateX("+newx+"px) translateY("+newy+"px); cursor: move"
     };
 
     function panend(ev){
@@ -128,7 +263,22 @@ img {
         wrap.y = newy;
     }
 
+    function resetmap(ev){
+        wrap.classList.add('container-wrap--zoomer');
+        wrap.style.cssText = "";
+        wrap.onclick = zoom;
+        hammertime.off('pan', pan);
+        hammertime.off('panend', panend);
+        reset.classList.remove('reset--visible');
+        rendercaption(true, {});
+        overlay.classList.remove('zoomed');
+    }
+
+    var hammertime = new Hammer(wrap, {});
+    reset.onclick = resetmap;
     wrap.onclick = zoom;
+
+   
 
 
   
