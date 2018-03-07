@@ -66,9 +66,9 @@
 }
 
 .pie__mask {
-  clip: rect(0px, 300px, 300px, 150px);
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .pie__segment-fill {
-  clip: rect(0px, 150px, 300px, 0);
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
