@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=div, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: sans-serif;
+      font-size: 16px
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .super6 {
+      max-width: 500px;
+      margin: 1em auto;
+      background: #eee;
+      padding: 1em;
+    }
+
+    .super6__list {
+      margin-top: 1em;
+    }
+
+    .super6__list-item {
+      display: flex;
+      align-items: center;
+      height: 2em;
+      background: white;
+      margin: 0 0 6px
+    }
+
+    .super6__list-item > span {
+      text-align: right;
+      flex: 1;
+    }
+
+    .super6__list-item > span + span {
+      text-align: center;
+      width: 3em;
+      flex: 0 0 45px
+    }
+
+    .super6__list-item > span + span + span {
+      text-align: left;
+      flex: 1;
+    }
+
+    h2,h3 {
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="super6">
+    <h2>Super 6</h2>
+    <h3>Round <span class="super6__round"></span></h3>
+    <ul class="super6__list"></ul>
+  </div>
+
+  <script>
+
+    var url = "30.json";
+    var super6 = document.querySelector('.super6__list');
+
+    fetch(url).then(function(response){
+      return response.json();
+    }).then(function(json){
+      render(json)
+    })
+
+    function render(json){
+
+      document.querySelector('.super6__round').textContent = json['round_id'];
+
+      var html = "";
+      json['match_predictions'].forEach(function(line){
+         html += "<li class='super6__list-item'><span>"+(line['team1_name'])+"</span><span>v</span><span>"+(line['team2_name'])+"</span></li>";
+      });
+
+      super6.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
