@@ -1,25 +1,100 @@
-@keyframes zoom {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+html {
+  font-family: 'Sky Text', Sans-seif
 }
 
-.pie-container {
-  max-width: 300px;
-  margin: 0 auto;
-  margin-top: 2em;
+body {
+  margin: 0;
+  color: #4a4a4a;
+  min-height: 100vh;
+}
+
+.pie-factory {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pie-factory__body {
+  display: flex;
+  flex: 1;
+}
+
+.pie-factory h2,
+.pie-factory h3 {
+  font-weight: normal;
+}
+
+.pie-factory__preview {
+  flex: 1;
+  text-align: center;
+  background: #fafafa;
+  padding: 1.5em;
+  background: #fafafa;
+}
+
+.pie-factory__preview:after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.pie-factory__header {
+  margin-bottom: 0;
+  padding: 1.5em;
+  border-bottom: 1px solid #e2e2e2;
+  background: #fff;
+  text-align: center;
+}
+
+.pie-factory__preview .pie {
+  max-width: 400px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pie-factory__options {
+  min-width: 300px;
+  padding: 1.5em;
+  text-align: center;
+  color: #fff;
+  background: #4a4a4a;
+}
+
+.pie-factory__button {
+  font-size: 1em;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  padding: 0.75em 1.5em;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.pie-factory__button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.pie-factory__button[active-flavour] {
+  border-color: #3E6990;
+  background: #3E6990;
+  color: #fff;
+}
+
+.pie-factory__options .pie-factory__button {
+  width: 100%;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
 }
 
 .pie {
+  display: inline-block;
   width: 100%;
   background: #eee;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  margin-bottom: 2em;
 }
 
 .pie:before {
@@ -47,9 +122,6 @@
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  transition: transform 1s;
-  will-change: transform;
-  backface-visibility: hidden;
   opacity: 0;
 }
 
@@ -61,6 +133,11 @@
   bottom: 0;
   left: 0;
   border-radius: 50%;
+}
+
+.pie[animated] .pie__segment,
+.pie[animated] .pie__mask,
+.pie[animated] .pie__segment-fill {
   transition: transform 1s;
   will-change: transform;
   backface-visibility: hidden;
