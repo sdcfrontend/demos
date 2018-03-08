@@ -13,26 +13,55 @@
 }
 
 body {
-  margin: 5px;
-  max-width: 500px;
-  margin: 0 auto;
   color: black;
   font-family: sans-serif
 }
 
 .container {
+  max-width: 996px;
+  margin: 0 auto;
+  position: relative;
+  max-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+  border: 3px solid #aaa
+}
+
+.container-inner {
   overflow: hidden;
   position: relative;
+  height: 100vh;
 }
 
 .container-wrap {
   will-change: transform;
   touch-action: none !important;
-  /* transition: transform 0.33s */
+  transform-origin: 50% 0;
+}
+
+.container-overlay {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative
+}
+
+@media all and (max-width: 600px){
+  .container-inner {
+    overflow: hidden;
+    position: relative;
+    max-height: 70vh;
+  }
 }
 
 img {
-  max-width: 100%
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  border: 1px solid red;
 }
 
 .reset {
@@ -44,83 +73,201 @@ img {
   top: 12px;
   left: 12px;
   z-index: 100;
-  
+  visibility: hidden
+}
+
+.reset--visible {
+  visibility: visible;
 }
 
 .container-wrap--zoomer {
   transition: transform 0.33s;
-  cursor: zoom-in
 }
+
+.dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  transition: transform 0.33s
+}
+
+.zoomed .dot {
+  transform: translate(-50%,-50%) scale(0.5);
+}
+
+.dot:after {
+  background: white;
+  content: attr(title);
+  display: block;
+  position: absolute;
+  padding: 3px 8px;
+  font-size: 13px;
+  left: 100%;
+  margin: -2px 0 0 2px;
+  white-space: nowrap;
+}
+
+.container-caption {
+  height: 40%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  transition: transform 0.33s;
+  transform: translateY(100%);
+}
+
+.container-caption-inner {
+  background: white;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 12px;
+}
+
+.container-caption-title {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+p {
+  margin: 1em
+}
+
 </style>
 <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <a href="#" class="reset">reset</a>
-        <div class="container-wrap container-wrap--zoomer" draggable="false">
-            <img src="map-1.png" alt="" draggable="false">
+      <a href="#" class="reset">reset</a>
+      <div class="container-inner">
+        <div class="container-wrap container-wrap--zoomer">
+            <div class="container-overlay"> 
+              <a href="#" class="dot" title="St Petersburg" style="top: 24%;left: 31%;"></a>
+              <a href="#" class="dot" title="Moscow" style="top: 40%;left: 21%;"></a>
+            </div>
+            <img src="allmap.png" alt="" draggable="false">
         </div>
+      </div>
+      <div class="container-caption">
+        <div class="container-caption-inner">
+          <h4 class="container-caption-title"></h4>
+        </div>
+      </div>
 
     </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
+    
+    
     <script>
     
-   
+    var container = document.querySelector('.container');
     var wrap = document.querySelector('.container-wrap');
+    var overlay = document.querySelector('.container-overlay');
     var reset = document.querySelector('.reset');
+    var dots = document.querySelectorAll('.dot');
+    var caption = document.querySelector('.container-caption');
+    var captiontitle = document.querySelector('.container-caption-title');
+
+    var data = [
+      {
+        "title": ""
+      }
+    ]
 
     wrap.x = 0;
     wrap.y = 0;
     newx = 0;
     newy = 0;
-
-    function zoom(e){
-
-        setTimeout(function(){
-            wrap.classList.remove('container-wrap--zoomer');
-        }, 400);
-
-
-        wrap.onclick = null;
-
-        var w = wrap.offsetWidth;
-        var h = wrap.offsetHeight;
-
-        var x = e.layerX;
-        var y = e.layerY;
-
-        var xoffset = (w/2) - x;
-        var yoffset = (h/2) - y;
-
-        wrap.style.cssText = "transform: scale(3) translateX("+xoffset+"px) translateY("+yoffset+"px); cursor: move ";
-        wrap.x = xoffset;
-        wrap.y = yoffset;
-
-        hammertime.on('panend', panend);
-        hammertime.on('pan', pan);
-    }
-
-    reset.onclick = function(){
-        wrap.classList.add('container-wrap--zoomer');
-        wrap.style.cssText = "";
-        wrap.onclick = zoom;
-        hammertime.off('pan', pan);
-        hammertime.off('panend', panend);
-    }
-
-    var hammertime = new Hammer(wrap, {});
     
+    function rendercaption(close, data){
+
+      captiontitle.textContent = data.title;
+
+      if(close){
+        caption.style.cssText = "transform: translateY(100%)";
+      }
+
+      else {
+        caption.style.cssText = "transform: translateY(0)";
+      }
+    }
+
+    function zoomme(e){
+
+      e.preventDefault();
+
+      overlay.classList.add('zoomed');
+      reset.classList.add('reset--visible');
+      wrap.classList.add('container-wrap--zoomer');
+
+      setTimeout(function(){
+        wrap.classList.remove('container-wrap--zoomer');
+      }, 400);
+
+      var w = container.offsetWidth;
+      var h = container.offsetHeight;
+
+      var x = this.offsetLeft;
+      var y = this.offsetTop;
+
+      center(w,h,x,y);
+      
+      hammertime.on('panend', panend);
+      hammertime.on('pan', pan);
+
+      rendercaption(false, {
+        title: e.target.title
+      });
+
+    }
+
+    function center(w,h,x,y){
+
+      var xoffset = (w/2) - x;
+      var yoffset = ((h*0.6)/4) - y;
+
+      var coords = correctedges(xoffset, yoffset);
+
+      requestAnimationFrame(function(){
+        wrap.style.cssText = "transform: scale(2) translateX("+coords.x+"px) translateY("+coords.y+"px); cursor: move ";
+      });
+    
+      wrap.x = coords.x;
+      wrap.y = coords.y;
+    }
+
+    function correctedges(x,y){
+
+      var newx = Math.min(x, wrap.offsetWidth/4);
+      newx = Math.max(newx, (wrap.offsetWidth/4)*-1);
+
+      var newy = Math.min(y, 0);
+      newy = Math.max(newy, container.offsetHeight*-1);
+
+      return {
+        x:newx,
+        y:newy
+      };
+    }
+
     function pan(ev) {
 
-        newx = wrap.x + (ev.deltaX/3);
-        newy = wrap.y + (ev.deltaY/3);
+      newx = wrap.x + (ev.deltaX/2);
+      newy = wrap.y + (ev.deltaY/2);
 
-        newx = Math.min(newx, wrap.offsetWidth/3);
-        newx = Math.max(newx, (wrap.offsetWidth/3)*-1);
+      var coords = correctedges(newx, newy);
 
-        newy = Math.min(newy, wrap.offsetHeight/3);
-        newy = Math.max(newy, (wrap.offsetHeight/3)*-1);
-
-        wrap.style.cssText = "transform: scale(3) translateX("+newx+"px) translateY("+newy+"px); cursor: move"
+      wrap.style.cssText = "transform: scale(2) translateX("+coords.x+"px) translateY("+coords.y+"px); cursor: move";
     };
 
     function panend(ev){
@@ -128,10 +275,21 @@ img {
         wrap.y = newy;
     }
 
-    wrap.onclick = zoom;
+    function resetmap(ev){
+        wrap.classList.add('container-wrap--zoomer');
+        wrap.style.cssText = "";
+        hammertime.off('pan', pan);
+        hammertime.off('panend', panend);
+        reset.classList.remove('reset--visible');
+        rendercaption(true, {});
+        overlay.classList.remove('zoomed');
+    }
 
-
-  
+    var hammertime = new Hammer(wrap, {});
+    reset.onclick = resetmap;
+    dots.forEach(function(dot){
+      dot.onclick = zoomme;
+    })
 
 </script>
 </body>
