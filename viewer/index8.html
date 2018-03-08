@@ -61,6 +61,7 @@ img {
   left: 0;
   top: 0;
   z-index: 2;
+  border: 1px solid red;
 }
 
 .reset {
@@ -234,27 +235,39 @@ p {
 
       var xoffset = (w/2) - x;
       var yoffset = ((h*0.6)/4) - y;
-      
+
+      var coords = correctedges(xoffset, yoffset);
+
       requestAnimationFrame(function(){
-        wrap.style.cssText = "transform: scale(2) translateX("+xoffset+"px) translateY("+yoffset+"px); cursor: move ";
+        wrap.style.cssText = "transform: scale(2) translateX("+coords.x+"px) translateY("+coords.y+"px); cursor: move ";
       });
     
-      wrap.x = xoffset;
-      wrap.y = yoffset;
+      wrap.x = coords.x;
+      wrap.y = coords.y;
+    }
+
+    function correctedges(x,y){
+
+      var newx = Math.min(x, wrap.offsetWidth/4);
+      newx = Math.max(newx, (wrap.offsetWidth/4)*-1);
+
+      var newy = Math.min(y, 0);
+      newy = Math.max(newy, container.offsetHeight*-1);
+
+      return {
+        x:newx,
+        y:newy
+      };
     }
 
     function pan(ev) {
 
-        newx = wrap.x + (ev.deltaX/2);
-        newy = wrap.y + (ev.deltaY/2);
+      newx = wrap.x + (ev.deltaX/2);
+      newy = wrap.y + (ev.deltaY/2);
 
-        newx = Math.min(newx, wrap.offsetWidth/4);
-        newx = Math.max(newx, (wrap.offsetWidth/4)*-1);
+      var coords = correctedges(newx, newy);
 
-        newy = Math.min(newy, wrap.offsetHeight/4);
-        newy = Math.max(newy, (wrap.offsetHeight/4)*-1);
-
-        wrap.style.cssText = "transform: scale(2) translateX("+newx+"px) translateY("+newy+"px); cursor: move"
+      wrap.style.cssText = "transform: scale(2) translateX("+coords.x+"px) translateY("+coords.y+"px); cursor: move";
     };
 
     function panend(ev){
