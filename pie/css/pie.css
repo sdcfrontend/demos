@@ -54,7 +54,7 @@ body {
 }
 
 .pie-factory__options {
-  min-width: 300px;
+  max-width: 300px;
   padding: 1.5em;
   text-align: center;
   color: #fff;
