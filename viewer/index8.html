@@ -102,6 +102,10 @@ img {
   filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
 }
 
+.dot--on {
+  background-color: black
+}
+
 .zoomed .dot {
   transform: translate(-50%,-50%) scale(0.5);
 }
@@ -158,8 +162,6 @@ img {
   font-weight: 200;
   text-decoration: none;
 }
-
-
 
 @media all and (max-width: 600px){
   .container-inner {
@@ -227,7 +229,8 @@ img {
     var captiontitle = document.querySelector('.container-caption-title');
     var captiontext = document.querySelector('.container-caption-text');
     var close = document.querySelector('.container-caption-close');
-    var selected = 0;
+    var selected = -1;
+    var resize;
 
     var data = [
       {
@@ -266,9 +269,15 @@ img {
       }
     }
 
-    function zoomme(e){
+    function zoom(e){
 
       e.preventDefault();
+      
+      dots.forEach(function(dot){
+        dot.classList.remove('dot--on');
+      });
+
+      this.classList.add('dot--on');
 
       overlay.classList.add('zoomed');
       reset.classList.add('reset--visible');
@@ -347,15 +356,25 @@ img {
         reset.classList.remove('reset--visible');
         rendercaption(true, 0);
         overlay.classList.remove('zoomed');
+        selected = -1;
     }
 
     var hammertime = new Hammer(wrap, {});
     reset.onclick = resetmap;
     close.onclick = resetmap;
     dots.forEach(function(dot){
-      dot.onclick = zoomme;
+      dot.onclick = zoom;
     })
 
+
+  window.onresize = function(){
+    clearInterval(resize);
+    resize = setTimeout(function(){
+      if(selected > -1){
+        dots[selected].click();
+      }
+    }, 250)
+  }
 </script>
 </body>
 </html>
