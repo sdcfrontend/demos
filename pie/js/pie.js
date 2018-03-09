@@ -6,12 +6,33 @@ var flavours = {
     '#F76F8E',
     '#FFEAD0'
   ],
+  "skynews": [
+    '#F1F1F1',
+    '#D7D5D5',
+    '#EF0420',
+    '#D0021B',
+    '#B20318'
+  ],
   "skysports": [
-    '#381D2A',
-    '#3E6990',
-    '#AABD8C',
-    '#E9E3B4',
-    '#F39B6D'
+    '#446CCC',
+    '#2653BB',
+    '#103A9D',
+    '#072B7B',
+    '#002369'
+  ],
+  "premierleague": [
+    '#353C97',
+    '#222989',
+    '#090E66',
+    '#0F1151',
+    '#020440'
+  ],
+  "line18": [
+    '#B35011',
+    '#C18418',
+    '#E4A71C',
+    '#6842BE',
+    '#303D7E'
   ]
 }
 
@@ -20,17 +41,17 @@ function setSegmentTopping(segment, flavourToppings, toppingCount) {
   var fills = segment.querySelectorAll('[data-role="fill"]');
   var fix = segment.querySelector('[data-role="fix"]');
 
-  if (toppingCount < flavourToppings.length-1) {
-    toppingCount++;
-  } else {
-    toppingCount = 0;
-  }
-
   fills.forEach(function(fill) {
     fill.style.backgroundColor = flavourToppings[toppingCount];
   });
 
   fix.style.backgroundColor = flavourToppings[toppingCount];
+
+  if (toppingCount < flavourToppings.length-1) {
+    toppingCount++;
+  } else {
+    toppingCount = 0;
+  }
 
   return toppingCount;
 
