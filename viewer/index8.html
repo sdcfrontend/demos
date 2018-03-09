@@ -6,15 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-    * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box
-}
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+  }
+
+  @font-face {
+    font-family: skytext;
+    src: url(sky-regular.woff) format("woff");
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
 body {
   color: black;
-  font-family: sans-serif
+  font-family: skytext, sans-serif;
+  min-height: 200vh;
+  background: #eee;
+}
+
+a {
+  color: inherit
 }
 
 .container {
@@ -24,7 +39,6 @@ body {
   max-height: 100vh;
   background: #fff;
   overflow: hidden;
-  border: 3px solid #aaa
 }
 
 .container-inner {
@@ -45,14 +59,6 @@ body {
   position: relative
 }
 
-@media all and (max-width: 600px){
-  .container-inner {
-    overflow: hidden;
-    position: relative;
-    max-height: 70vh;
-  }
-}
-
 img {
   max-width: 100%;
   width: 100%;
@@ -61,7 +67,6 @@ img {
   left: 0;
   top: 0;
   z-index: 2;
-  border: 1px solid red;
 }
 
 .reset {
@@ -69,7 +74,8 @@ img {
   display: inline-block;
   padding: 4px 6px;
   position: absolute;
-  background: #ccc;
+  background: #111;
+  color: white;
   top: 12px;
   left: 12px;
   z-index: 100;
@@ -107,12 +113,11 @@ img {
   padding: 3px 8px;
   font-size: 13px;
   left: 100%;
-  margin: -2px 0 0 2px;
+  margin: -2px 0 0 3px;
   white-space: nowrap;
 }
 
 .container-caption {
-  height: 40%;
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -120,22 +125,60 @@ img {
   display: flex;
   transition: transform 0.33s;
   transform: translateY(100%);
+  pointer-events: none;
 }
 
 .container-caption-inner {
   background: white;
   flex: 1;
   border: 1px solid #ccc;
-  padding: 12px;
+  padding: 3em;
+  max-width: 600px;
+  margin: 0 auto 1em;
+  pointer-events: all;
+  position: relative;
 }
 
 .container-caption-title {
-  font-size: 1.4em;
+  font-size: 1.8em;
   font-weight: 500;
+  margin-bottom: 0.5em
 }
 
-p {
-  margin: 1em
+.container-caption-text {
+  line-height: 1.5
+}
+
+.container-caption-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-size: 25px;
+  font-weight: 200;
+  text-decoration: none;
+}
+
+
+
+@media all and (max-width: 600px){
+  .container-inner {
+    overflow: hidden;
+    position: relative;
+    max-height: 70vh;
+  }
+
+  .container-caption {
+    height: 50%;
+  }
+
+  .container-caption-inner  {
+    padding: 1.5em 1em;
+    margin: 0
+  }
+
+  .container-caption-title {
+    font-size: 1.4em;
+  }
 }
 
 </style>
@@ -147,25 +190,24 @@ p {
       <div class="container-inner">
         <div class="container-wrap container-wrap--zoomer">
             <div class="container-overlay"> 
-              <a href="#" class="dot" title="St Petersburg" style="top: 24%;left: 31%;"></a>
-              <a href="#" class="dot" title="Moscow" style="top: 40%;left: 21%;"></a>
+              <a href="#" class="dot" title="St Petersburg" style="top: 24%;left: 31%;" data-index="0"></a>
+              <a href="#" class="dot" title="Moscow" style="top: 40%;left: 21%;" data-index="1"></a>
+              <a href="#" class="dot" title="Ekaterinburg" style="top: 40%;left: 71%;" data-index="2"></a>
             </div>
             <img src="allmap.png" alt="" draggable="false">
         </div>
       </div>
       <div class="container-caption">
+        
         <div class="container-caption-inner">
+            <a href="#" class="container-caption-close">×</a>
           <h4 class="container-caption-title"></h4>
+          <p class="container-caption-text"></p>
         </div>
       </div>
 
     </div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?</p>
     
     
     <script>
@@ -177,10 +219,22 @@ p {
     var dots = document.querySelectorAll('.dot');
     var caption = document.querySelector('.container-caption');
     var captiontitle = document.querySelector('.container-caption-title');
+    var captiontext = document.querySelector('.container-caption-text');
+    var close = document.querySelector('.container-caption-close');
+    var selected = 0;
 
     var data = [
       {
-        "title": ""
+        "title": "St Petersburg",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+      },
+      {
+        "title": "Moscow",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+      },
+      {
+        "title": "Ekaterinburg",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
       }
     ]
 
@@ -189,9 +243,9 @@ p {
     newx = 0;
     newy = 0;
     
-    function rendercaption(close, data){
-
-      captiontitle.textContent = data.title;
+    function rendercaption(close, index){
+      captiontitle.textContent = data[index].title;
+      captiontext.textContent = data[index].text;
 
       if(close){
         caption.style.cssText = "transform: translateY(100%)";
@@ -224,17 +278,17 @@ p {
       
       hammertime.on('panend', panend);
       hammertime.on('pan', pan);
-
-      rendercaption(false, {
-        title: e.target.title
-      });
+      
+      var index = parseInt(this.getAttribute('data-index', 10));
+      selected = index;
+      rendercaption(false, index);
 
     }
 
     function center(w,h,x,y){
 
       var xoffset = (w/2) - x;
-      var yoffset = ((h*0.6)/4) - y;
+      var yoffset = ((h*0.5)/4) - y;
 
       var coords = correctedges(xoffset, yoffset);
 
@@ -281,12 +335,13 @@ p {
         hammertime.off('pan', pan);
         hammertime.off('panend', panend);
         reset.classList.remove('reset--visible');
-        rendercaption(true, {});
+        rendercaption(true, 0);
         overlay.classList.remove('zoomed');
     }
 
     var hammertime = new Hammer(wrap, {});
     reset.onclick = resetmap;
+    close.onclick = resetmap;
     dots.forEach(function(dot){
       dot.onclick = zoomme;
     })
