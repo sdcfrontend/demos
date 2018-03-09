@@ -98,7 +98,8 @@ img {
   position: absolute;
   transform: translate(-50%,-50%);
   z-index: 4;
-  transition: transform 0.33s
+  transition: transform 0.33s;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
 }
 
 .zoomed .dot {
@@ -111,7 +112,7 @@ img {
   display: block;
   position: absolute;
   padding: 3px 8px;
-  font-size: 13px;
+  font-size: 14px;
   left: 100%;
   margin: -2px 0 0 3px;
   white-space: nowrap;
@@ -179,6 +180,10 @@ img {
   .container-caption-title {
     font-size: 1.4em;
   }
+
+  .dot:after { 
+    font-size: 13px;
+  }
 }
 
 </style>
@@ -193,6 +198,7 @@ img {
               <a href="#" class="dot" title="St Petersburg" style="top: 24%;left: 31%;" data-index="0"></a>
               <a href="#" class="dot" title="Moscow" style="top: 40%;left: 21%;" data-index="1"></a>
               <a href="#" class="dot" title="Ekaterinburg" style="top: 40%;left: 71%;" data-index="2"></a>
+              <a href="#" class="dot" title="Kaliningrad" style="top: 18%;left: 4%;" data-index="3"></a>
             </div>
             <img src="allmap.png" alt="" draggable="false">
         </div>
@@ -234,6 +240,10 @@ img {
       },
       {
         "title": "Ekaterinburg",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+      },
+      {
+        "title": "Kaliningrad",
         "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
       }
     ]
