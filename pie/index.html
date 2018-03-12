@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pie</title>
-    <link rel="stylesheet" href="css/pie.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/manager.css">
   </head>
 
   <body>
@@ -14,57 +15,13 @@
       </div>
 
       <div class="pie-factory__body">
-        <div class="pie-factory__preview">
-          <div class="pie" data-role="pie" data-flavour="skynews" animated>
-            <div class="pie__segment" data-role="segment" data-value="15">
-              <div class="pie__mask pie__mask--full" data-role="mask">
-                <div class="pie__segment-fill" data-role="fill"></div>
-              </div>
-              <div class="pie__mask pie__mask--half">
-                <div class="pie__segment-fill" data-role="fill"></div>
-                <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-              </div>
-            </div>
-
-            <div class="pie__segment" data-role="segment" data-value="15">
-              <div class="pie__mask pie__mask--full" data-role="mask">
-                <div class="pie__segment-fill" data-role="fill"></div>
-              </div>
-              <div class="pie__mask pie__mask--half">
-                <div class="pie__segment-fill" data-role="fill"></div>
-                <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-              </div>
-            </div>
-
-            <div class="pie__segment" data-role="segment" data-value="20">
-              <div class="pie__mask pie__mask--full" data-role="mask">
-                <div class="pie__segment-fill" data-role="fill"></div>
-              </div>
-              <div class="pie__mask pie__mask--half">
-                <div class="pie__segment-fill" data-role="fill"></div>
-                <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-              </div>
-            </div>
-
-            <div class="pie__segment" data-role="segment" data-value="20">
-              <div class="pie__mask pie__mask--full" data-role="mask">
-                <div class="pie__segment-fill" data-role="fill"></div>
-              </div>
-              <div class="pie__mask pie__mask--half">
-                <div class="pie__segment-fill" data-role="fill"></div>
-                <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-              </div>
-            </div>
-
-            <div class="pie__segment" data-role="segment" data-value="30">
-              <div class="pie__mask pie__mask--full" data-role="mask">
-                <div class="pie__segment-fill" data-role="fill"></div>
-              </div>
-              <div class="pie__mask pie__mask--half">
-                <div class="pie__segment-fill" data-role="fill"></div>
-                <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-              </div>
-            </div>
+        <div class="pie-factory__preview" data-role="preview">
+          <div class="chart" data-role="chart" data-type="pie" data-key="true" data-skin="skynews" data-title="Age Groups" animated>
+            <div class="chart__point" data-role="chart-point" data-value="15" data-label="Under 18"></div>
+            <div class="chart__point" data-role="chart-point" data-value="15" data-label="18 - 25"></div>
+            <div class="chart__point" data-role="chart-point" data-value="20" data-label="25 - 40"></div>
+            <div class="chart__point" data-role="chart-point" data-value="20" data-label="40 - 65"></div>
+            <div class="chart__point" data-role="chart-point" data-value="30" data-label="65+"></div>
           </div>
         </div>
 
@@ -72,193 +29,16 @@
           <div class="pie-factory__option">
             <h3>Styling</h3>
 
-            <button class="pie-factory__button" data-role="flavour-option" data-flavour="skynews" active-flavour>Sky News</button>
-            <button class="pie-factory__button"data-role="flavour-option" data-flavour="skysports">Sky Sports</button>
-            <button class="pie-factory__button"data-role="flavour-option" data-flavour="premierleague">Premier League</button>
-            <button class="pie-factory__button"data-role="flavour-option" data-flavour="line18">Line 18</button>
+            <button class="pie-factory__button" data-role="skin-option" data-skin="skynews" active-skin>Sky News</button>
+            <button class="pie-factory__button"data-role="skin-option" data-skin="skysports">Sky Sports</button>
+            <button class="pie-factory__button"data-role="skin-option" data-skin="premierleague">Premier League</button>
+            <button class="pie-factory__button"data-role="skin-option" data-skin="line18">Line 18</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <div class="pie-container">
-      <div class="pie" data-role="pie">
-        <div class="pie__segment" data-role="segment" data-value="30">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="10">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="60">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pie" data-role="pie">
-        <div class="pie__segment" data-role="segment" data-value="10">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="5">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="20">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="15">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="40">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="2">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="8">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pie pie--linear" data-role="pie">
-        <div class="pie__segment" data-role="segment" data-value="10">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="5">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="20">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="15">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="40">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="2">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-
-        <div class="pie__segment" data-role="segment" data-value="8">
-          <div class="pie__mask pie__mask--full" data-role="mask">
-            <div class="pie__segment-fill" data-role="fill"></div>
-          </div>
-          <div class="pie__mask pie__mask--half">
-            <div class="pie__segment-fill" data-role="fill"></div>
-            <div class="pie__segment-fill pie__segment-fill--fix" data-role="fix"></div>
-          </div>
-        </div>
-      </div> -->
-    </div>
-
-    <script src="js/pie.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/manager.js"></script>
   </body>
 </html>

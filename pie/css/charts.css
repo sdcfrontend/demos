@@ -30,6 +30,7 @@ body {
   background: #fafafa;
   padding: 1.5em;
   background: #fafafa;
+  position: relative;
 }
 
 .pie-factory__preview:after {
@@ -47,7 +48,8 @@ body {
   text-align: center;
 }
 
-.pie-factory__preview .pie {
+.pie-factory__preview .chart {
+  width: 100%;
   max-width: 400px;
   display: inline-block;
   vertical-align: middle;
@@ -76,7 +78,7 @@ body {
   background: rgba(255,255,255,0.1);
 }
 
-.pie-factory__button[active-flavour] {
+.pie-factory__button[active-skin] {
   border-color: #3E6990;
   background: #3E6990;
   color: #fff;
@@ -88,7 +90,21 @@ body {
   font-size: 1.2em;
 }
 
-.pie {
+.chart__key-list {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
+.chart__key-indicator {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+
+.chart[data-type="pie"] .chart__body {
   display: inline-block;
   width: 100%;
   background: #eee;
@@ -97,13 +113,13 @@ body {
   position: relative;
 }
 
-.pie:before {
+.chart[data-type="pie"] .chart__body:before {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
 
-.pie--linear:after {
+.chart--linear:after {
   content: "";
   display: block;
   position: absolute;
@@ -115,7 +131,7 @@ body {
   border-radius: 50%;
 }
 
-.pie__segment {
+.chart[data-type="pie"] .chart__point {
   position: absolute;
   top: 0;
   right: 0;
@@ -125,8 +141,8 @@ body {
   opacity: 0;
 }
 
-.pie__mask,
-.pie__segment-fill {
+.chart__pie-mask,
+.chart__pie-segment-fill {
   position: absolute;
   top: 0;
   right: 0;
@@ -135,18 +151,18 @@ body {
   border-radius: 50%;
 }
 
-.pie[animated] .pie__segment,
-.pie[animated] .pie__mask,
-.pie[animated] .pie__segment-fill {
+.chart[animated] .chart__point,
+.chart[animated] .chart__pie-mask,
+.chart[animated] .chart__pie-segment-fill {
   transition: transform 1s;
   will-change: transform;
   backface-visibility: hidden;
 }
 
-.pie__mask {
+.chart__pie-mask {
   clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
-.pie__segment-fill {
+.chart__pie-segment-fill {
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
