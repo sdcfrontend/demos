@@ -61,10 +61,15 @@ body {
 
 .charts__options {
   max-width: 300px;
+  width: 100%;
   padding: 1.5em;
   text-align: center;
   color: #fff;
   background: #4a4a4a;
+}
+
+.charts__options h3 {
+  font-size: 1.4em;
 }
 
 .charts__button {
@@ -102,6 +107,7 @@ body {
   position: relative;
   list-style: none;
   padding: 2.75em 0 0 0;
+  text-align: left;
 }
 
 .charts__select-box[closed] {
@@ -135,7 +141,7 @@ body {
 .charts__select-box-item {
   display: block;
   height: 2.75em;
-  padding: 0 1.5em;
+  padding: 0 1em;
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
@@ -152,6 +158,76 @@ body {
 .charts__select-box-item:hover,
 .charts__select-box:not([closed]) .charts__select-box-item[active] {
   background: rgba(255,255,255,0.1);
+}
+
+.charts__accordion {
+  border: 2px solid #eee;
+  border-radius: 4px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.charts__accordion:not(:last-of-type) {
+  margin-bottom: 1em;
+}
+
+.charts__accordion-heading {
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 2.75em;
+  padding: 0 1em;
+  margin: 0;
+  position: relative;
+}
+
+.charts__accordion-heading:after {
+  content: url(../img/up-arrow.svg);
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  pointer-events: none;
+}
+
+.charts__accordion[closed] .charts__accordion-heading:after {
+  content: url(../img/down-arrow.svg);
+  top: 0.45em;
+}
+
+.charts__accordion-list {
+  font-size: 1.2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid #eee;
+}
+
+.charts__accordion[closed] .charts__accordion-list {
+  height: 0;
+  border: 0;
+}
+
+.charts__accordion-item {
+  display: block;
+  line-height: 2.75em;
+  padding: 0 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.charts__accordion-item:hover,
+.charts__accordion-item[active],
+.charts__accordion[closed] .charts__accordion-heading:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.charts__accordion[active] .charts__accordion-heading,
+.charts__accordion[active] .charts__accordion-heading:hover {
+  background: #3E6990;
+  color: #fff;
 }
 
 .charts__option {

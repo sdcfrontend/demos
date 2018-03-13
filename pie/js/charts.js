@@ -496,13 +496,6 @@ function setTypeEvents(charts) {
 
     typeOption.addEventListener('click', function() {
       changeType(charts, type);
-
-      typeOptions.forEach(function(typeOption) {
-        typeOption.removeAttribute('active');
-      });
-
-      typeOption.setAttribute('active', '');
-
     }, false);
 
   });
@@ -525,9 +518,53 @@ function setSelectBoxEvents() {
 
 }
 
+function setAccordionEvents(charts) {
+
+  var accordions = document.querySelectorAll('[data-role="accordion"]');
+
+  accordions.forEach(function(accordion) {
+    var heading = accordion.querySelector('[data-role="accordion-heading"]');
+    var items = accordion.querySelectorAll('[data-accordion-role="accordion-item"]');
+
+    heading.addEventListener('click', function() {
+      if (accordion.hasAttribute('closed')) {
+        accordion.removeAttribute('closed');
+      } else {
+        accordion.setAttribute('closed', '');
+      }
+    }, false);
+
+    items.forEach(function(item) {
+      item.addEventListener('click', function() {
+        if (!accordion.hasAttribute('active')) {
+          accordions.forEach(function(accordion) {
+            accordion.removeAttribute('active');
+          });
+
+          accordion.setAttribute('active', '');
+        }
+
+        if (!item.hasAttribute('active')) {
+          accordions.forEach(function(accordion) {
+            var items = accordion.querySelectorAll('[data-role="accordion-items"]');
+
+            items.forEach(function(item) {
+              item.removeAttribute('active');
+            });
+          });
+
+          item.setAttribute('active', '');
+        }
+      }, false);
+    });
+  });
+
+}
+
 var charts = document.querySelectorAll('[data-role="chart"]');
 
 createCharts(charts);
 setTypeEvents(charts);
 setSkinEvents(charts);
 setSelectBoxEvents();
+setAccordionEvents(charts);
