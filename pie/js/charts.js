@@ -36,7 +36,7 @@ var skins = {
   ]
 }
 
-function resetPie(pie) {
+function zeroPie(pie) {
 
   var segments = pie.querySelectorAll('[data-role="chart-point"]');
 
@@ -241,30 +241,6 @@ function createChart(chart) {
 
   var type = chart.getAttribute('data-type');
 
-  var chartHeader = document.createElement('div');
-
-  chartHeader.classList.add('chart__header');
-  chartHeader.setAttribute('data-role', 'chart-header');
-  chart.appendChild(chartHeader);
-
-  var chartBody = document.createElement('div');
-
-  chartBody.classList.add('chart__body');
-  chartBody.setAttribute('data-role', 'chart-body');
-  chart.appendChild(chartBody);
-
-  var chartInfo = document.createElement('div');
-
-  chartInfo.classList.add('chart__info');
-  chartInfo.setAttribute('data-role', 'chart-info');
-  chart.appendChild(chartInfo);
-
-  var points = chart.querySelectorAll('[data-role="chart-point"]');
-
-  points.forEach(function(point) {
-    chartBody.appendChild(point);
-  });
-
   switch (type) {
     case "pie":
       createPie(chart);
@@ -278,23 +254,48 @@ function createChart(chart) {
 
 }
 
-function resetChart(chart) {
+function zeroChart(chart) {
   var type = chart.getAttribute('data-type');
 
   chart.removeAttribute('animated');
 
   switch (type) {
     case "pie":
-      resetPie(chart);
+      zeroPie(chart);
 
       break;
   }
 
 }
 
-function createCharts(charts) {
+function createCharts(charts, newChart) {
 
   charts.forEach(function(chart) {
+
+    var chartHeader = document.createElement('div');
+
+    chartHeader.classList.add('chart__header');
+    chartHeader.setAttribute('data-role', 'chart-header');
+    chart.appendChild(chartHeader);
+
+    var chartBody = document.createElement('div');
+
+    chartBody.classList.add('chart__body');
+    chartBody.setAttribute('data-role', 'chart-body');
+    chart.appendChild(chartBody);
+
+    var chartInfo = document.createElement('div');
+
+    chartInfo.classList.add('chart__info');
+    chartInfo.setAttribute('data-role', 'chart-info');
+    chart.appendChild(chartInfo);
+
+    var points = chart.querySelectorAll('[data-role="chart-point"]');
+
+    points.forEach(function(point) {
+      chartBody.appendChild(point);
+    });
+
     createChart(chart);
 
     var showKey = chart.getAttribute('data-key');
@@ -311,12 +312,34 @@ function changeSkin(charts, skin) {
   charts.forEach(function(chart) {
     chart.setAttribute('data-skin', skin);
 
-    resetChart(chart)
+    zeroChart(chart)
 
     setTimeout(function() {
       updateChart(chart);
     }, 100)
     updateKey(chart);
+  });
+
+}
+
+function resetChart(chart) {
+
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
+
+  points.forEach(function(point) {
+    point.innerHTML = '';
+  });
+
+}
+
+function changeType(charts, type) {
+
+  charts.forEach(function(chart) {
+    chart.setAttribute('data-type', type);
+
+    resetChart(chart);
+
+    createChart(chart, type);
   });
 
 }
