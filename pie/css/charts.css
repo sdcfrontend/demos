@@ -93,11 +93,11 @@ body {
 }
 
 .charts__toggle-switch .charts__button {
-  border: 2px solid #3E6990;
+  border: 2px solid #4a4a4a;
 }
 
-.charts__toggle-switch .charts__button:not([active]) {
-  color: #3E6990;
+.charts__toggle-switch .charts__button[active] {
+  background: #4a4a4a;
 }
 
 .charts__toggle-switch .charts__button:first-of-type {
@@ -110,7 +110,6 @@ body {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0
-
 }
 
 .charts__select-box {
