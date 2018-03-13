@@ -390,6 +390,7 @@ function createCharts(charts) {
 
     chartHeader.classList.add('chart__header');
     chartHeader.setAttribute('data-role', 'chart-header');
+    chartHeader.innerHTML = '<h2 class="chart__heading">' + chart.getAttribute('data-title') + '</h2>'
     chart.appendChild(chartHeader);
 
     var chartBody = document.createElement('div');
@@ -473,13 +474,6 @@ function setSkinEvents(charts) {
 
     skinOption.addEventListener('click', function() {
       changeSkin(charts, skin);
-
-      skinOptions.forEach(function(skinOption) {
-        skinOption.removeAttribute('active');
-      });
-
-      skinOption.setAttribute('active', '');
-
     }, false);
 
   });
@@ -496,6 +490,12 @@ function setTypeEvents(charts) {
 
     typeOption.addEventListener('click', function() {
       changeType(charts, type);
+
+      typeOptions.forEach(function(typeOption) {
+        typeOption.removeAttribute('active');
+      });
+
+      typeOption.setAttribute('active', '');
     }, false);
 
   });
@@ -545,15 +545,53 @@ function setAccordionEvents(charts) {
         }
 
         if (!item.hasAttribute('active')) {
-          accordions.forEach(function(accordion) {
-            var items = accordion.querySelectorAll('[data-role="accordion-items"]');
+          var items = document.querySelectorAll('[data-accordion-role="accordion-item"]');
 
-            items.forEach(function(item) {
-              item.removeAttribute('active');
-            });
+          items.forEach(function(item) {
+            item.removeAttribute('active');
           });
 
           item.setAttribute('active', '');
+        }
+      }, false);
+    });
+  });
+
+}
+
+function setToggleClassEvents() {
+
+  var toggleClasses = document.querySelectorAll('[data-role="toggle-class"]');
+
+  toggleClasses.forEach(function(toggleClass) {
+    var toggles = toggleClass.querySelectorAll('[data-role="toggle"]');
+
+    toggles.forEach(function(toggle) {
+      var cssClass = toggle.getAttribute('data-class');
+      var target = document.querySelector('.' + toggle.getAttribute('data-target'));
+      var toggleCommand = toggle.getAttribute('data-toggle');
+
+      toggle.addEventListener('click', function() {
+        toggles.forEach(function(toggle) {
+          toggle.removeAttribute('disabled');
+          toggle.removeAttribute('active');
+        });
+
+        if (toggleCommand !== 'auto') {
+          toggle.setAttribute('disabled', '');
+          toggle.setAttribute('active', '');
+        }
+
+        switch (toggleCommand) {
+          case 'on':
+            target.classList.add(cssClass);
+            break;
+          case 'off':
+            target.classList.remove(cssClass);
+            break;
+          case 'auto':
+            target.classList.toggle(cssClass);
+            break;
         }
       }, false);
     });
@@ -568,3 +606,4 @@ setTypeEvents(charts);
 setSkinEvents(charts);
 setSelectBoxEvents();
 setAccordionEvents(charts);
+setToggleClassEvents();
