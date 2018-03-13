@@ -23,13 +23,29 @@
             <div class="chart__point" data-role="chart-point" data-value="20" data-label="40 - 65"></div>
             <div class="chart__point" data-role="chart-point" data-value="30" data-label="65+"></div>
           </div>
+<!--
+          <div class="chart" data-role="chart" data-type="pie" data-key="true" data-skin="skynews" data-title="Age Groups" animated>
+            <div class="chart__point" data-role="chart-point" data-value="25" data-label="Under 18"></div>
+            <div class="chart__point" data-role="chart-point" data-value="10" data-label="18 - 25"></div>
+            <div class="chart__point" data-role="chart-point" data-value="15" data-label="25 - 40"></div>
+            <div class="chart__point" data-role="chart-point" data-value="30" data-label="40 - 65"></div>
+            <div class="chart__point" data-role="chart-point" data-value="20" data-label="65+"></div>
+          </div> -->
         </div>
 
         <div class="pie-factory__options">
           <div class="pie-factory__option">
+            <h3>Type</h3>
+
+            <button class="pie-factory__button" data-role="type-option" data-type="pie" active>Pie Chart</button>
+            <button class="pie-factory__button"data-role="type-option" data-type="barvert">Vertical Bar Chart</button>
+            <button class="pie-factory__button"data-role="type-option" data-type="barhori">Horizontal Bar Chart</button>
+          </div>
+
+          <div class="pie-factory__option">
             <h3>Styling</h3>
 
-            <button class="pie-factory__button" data-role="skin-option" data-skin="skynews" active-skin>Sky News</button>
+            <button class="pie-factory__button" data-role="skin-option" data-skin="skynews" active>Sky News</button>
             <button class="pie-factory__button"data-role="skin-option" data-skin="skysports">Sky Sports</button>
             <button class="pie-factory__button"data-role="skin-option" data-skin="premierleague">Premier League</button>
             <button class="pie-factory__button"data-role="skin-option" data-skin="line18">Line 18</button>

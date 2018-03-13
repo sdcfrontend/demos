@@ -78,7 +78,7 @@ body {
   background: rgba(255,255,255,0.1);
 }
 
-.pie-factory__button[active-skin] {
+.pie-factory__button[active] {
   border-color: #3E6990;
   background: #3E6990;
   color: #fff;
@@ -88,6 +88,10 @@ body {
   width: 100%;
   margin-bottom: 0.5em;
   font-size: 1.2em;
+}
+
+.pie-factory__option {
+  margin-bottom: 1em;
 }
 
 .chart__key-list {
@@ -141,6 +145,54 @@ body {
   opacity: 0;
 }
 
+.chart[data-type="barvert"] .chart__body {
+  display: table;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  table-layout: fixed;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 1em;
+  background: #fff;
+}
+
+.chart[data-type="barvert"] .chart__point {
+  display: table-cell;
+  position: relative;
+}
+
+.chart[data-type="barvert"] .chart__bar {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.5em;
+  width: 1em;
+  height: 100%;
+}
+
+.chart[data-type="barhori"] .chart__body {
+  overflow: hidden;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-right: 1em;
+  background: #fff;
+}
+
+.chart[data-type="barhori"] .chart__point {
+  height: 2em;
+  position: relative;
+}
+
+.chart[data-type="barhori"] .chart__bar {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -0.5em;
+  height: 1em;
+  width: 100%;
+}
+
 .chart__pie-mask,
 .chart__pie-segment-fill {
   position: absolute;
@@ -151,9 +203,11 @@ body {
   border-radius: 50%;
 }
 
-.chart[animated] .chart__point,
-.chart[animated] .chart__pie-mask,
-.chart[animated] .chart__pie-segment-fill {
+.chart[data-type="pie"][animated] .chart__point,
+.chart[data-type="pie"][animated] .chart__pie-mask,
+.chart[data-type="pie"][animated] .chart__pie-segment-fill,
+.chart[data-type="barvert"][animated] .chart__bar,
+.chart[data-type="barhori"][animated] .chart__bar {
   transition: transform 1s;
   will-change: transform;
   backface-visibility: hidden;

@@ -36,17 +36,31 @@ var skins = {
   ]
 }
 
-function zeroPie(pie) {
+function zeroBarChart(chart) {
 
-  var segments = pie.querySelectorAll('[data-role="chart-point"]');
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
 
-  pie.removeAttribute('animated');
+  chart.removeAttribute('animated');
 
-  segments.forEach(function(segment) {
+  var bars = chart.querySelectorAll('[data-role="chart-bar"]');
 
-    var masks = segment.querySelectorAll('[data-role="mask"]');
-    var fills = segment.querySelectorAll('[data-role="fill"]');
-    var fix = segment.querySelector('[data-role="fix"]');
+  bars.forEach(function(bar) {
+    bar.style.transform = 'translateY(0)';
+  });
+
+}
+
+function zeroPieChart(chart) {
+
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
+
+  chart.removeAttribute('animated');
+
+  points.forEach(function(point) {
+
+    var masks = point.querySelectorAll('[data-role="mask"]');
+    var fills = point.querySelectorAll('[data-role="fill"]');
+    var fix = point.querySelector('[data-role="fix"]');
 
     masks.forEach(function(mask) {
       mask.style.transform = 'rotate(0deg)';
@@ -58,15 +72,31 @@ function zeroPie(pie) {
 
     fix.style.transform = 'rotate(0deg)';
 
-    segment.style.transform = 'rotate(0deg)'
+    point.style.transform = 'rotate(0deg)'
   });
 
 }
 
-function setSegmentColour(pie, segment, skin, currentColourIndex) {
+function setBarColour(point, skin, currentColourIndex) {
 
-  var fills = segment.querySelectorAll('[data-role="fill"]');
-  var fix = segment.querySelector('[data-role="fix"]');
+  var bar = point.querySelector('[data-role="chart-bar"]');
+
+  bar.style.backgroundColor = skin[currentColourIndex];
+
+  if (currentColourIndex < skin.length-1) {
+    currentColourIndex++;
+  } else {
+    currentColourIndex = 0;
+  }
+
+  return currentColourIndex;
+
+}
+
+function setSegmentColour(point, skin, currentColourIndex) {
+
+  var fills = point.querySelectorAll('[data-role="fill"]');
+  var fix = point.querySelector('[data-role="fix"]');
 
   fills.forEach(function(fill) {
     fill.style.backgroundColor = skin[currentColourIndex];
@@ -84,16 +114,35 @@ function setSegmentColour(pie, segment, skin, currentColourIndex) {
 
 }
 
-function setSegmentSizeAndRotation(segments, segment, totalValue, index) {
+function setBarSize(point, bar, type, highestValue) {
 
-  var masks = segment.querySelectorAll('[data-role="mask"]');
-  var fills = segment.querySelectorAll('[data-role="fill"]');
-  var fix = segment.querySelector('[data-role="fix"]');
-  var value = segment.getAttribute('data-value');;
+  var value = point.getAttribute('data-value');
+  var size = (value / highestValue) * 100;
+
+  switch (type) {
+    case "barvert":
+      bar.style.transform = 'translateY(-' + size + '%)';
+
+      break;
+
+    case "barhori":
+      bar.style.transform = 'translateX(' + size + '%)';
+
+      break;
+  }
+
+}
+
+function setSegmentSizeAndRotation(points, point, totalValue, index) {
+
+  var masks = point.querySelectorAll('[data-role="mask"]');
+  var fills = point.querySelectorAll('[data-role="fill"]');
+  var fix = point.querySelector('[data-role="fix"]');
+  var value = point.getAttribute('data-value');
   var rotation = (value/100) * 180;
   var fixRotation = rotation * 2;
 
-  segment.style.opacity = 1;
+  point.style.opacity = 1;
 
   masks.forEach(function(mask) {
     mask.style.transform = 'rotate('+rotation+'deg)';
@@ -106,11 +155,11 @@ function setSegmentSizeAndRotation(segments, segment, totalValue, index) {
   fix.style.transform = 'rotate('+rotation*2+'deg)';
 
   if (index > 0) {
-    var prevValue = parseFloat(segments[index-1].getAttribute('data-value'));
+    var prevValue = parseFloat(points[index-1].getAttribute('data-value'));
 
     totalValue = totalValue + prevValue;
 
-    segment.style.transform = 'rotate('+(totalValue/100) * 360+'deg)'
+    point.style.transform = 'rotate('+(totalValue/100) * 360+'deg)'
   }
 
   return totalValue;
@@ -136,28 +185,65 @@ function lookupChartSkin(chart) {
 
 }
 
-function updatePie(pie) {
+function updatePieChart(chart) {
 
-  var segments = pie.querySelectorAll('[data-role="chart-point"]');
-  var skin = lookupChartSkin(pie);
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
+  var skin = lookupChartSkin(chart);
   var currentColourIndex = 0;
   var totalValue = 0;
 
-  pie.setAttribute('animated', '');
+  chart.setAttribute('animated', '');
 
-  segments.forEach(function(segment, index) {
-    totalValue = setSegmentSizeAndRotation(segments, segment, totalValue, index);
-    currentColourIndex = setSegmentColour(pie, segment, skin, currentColourIndex);
+  points.forEach(function(point, index) {
+    totalValue = setSegmentSizeAndRotation(points, point, totalValue, index);
+    currentColourIndex = setSegmentColour(point, skin, currentColourIndex);
   });
 
 }
 
-function createPie(chart) {
+function createPieChart(chart) {
 
   var points = chart.querySelectorAll('[data-role="chart-point"]');
 
   points.forEach(function(point) {
     point.innerHTML = '<div class="chart__pie-mask chart__pie-mask--full" data-role="mask"><div class="chart__pie-segment-fill" data-role="fill"></div></div><div class="chart__pie-mask chart__pie-mask--half"><div class="chart__pie-segment-fill" data-role="fill"></div><div class="chart__pie-segment-fill chart__pie-segment-fill--fix" data-role="fix"></div></div>';
+  });
+
+}
+
+function updateBarChart(chart) {
+
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
+  var skin = lookupChartSkin(chart);
+  var type = chart.getAttribute('data-type');
+  var highestValue = 0;
+  var currentColourIndex = 0;
+
+  chart.setAttribute('animated', '');
+
+  points.forEach(function(point) {
+    var value = point.getAttribute('data-value');
+
+    if (value > highestValue) {
+      highestValue = value;
+    }
+  });
+
+  points.forEach(function(point) {
+    var bar = point.querySelector('[data-role="chart-bar"]');
+
+    setBarSize(point, bar, type, highestValue);
+    currentColourIndex = setBarColour(point, skin, currentColourIndex);
+  });
+
+}
+
+function createBarChart(chart) {
+
+  var points = chart.querySelectorAll('[data-role="chart-point"]');
+
+  points.forEach(function(point) {
+    point.innerHTML = '<div class="chart__bar" data-role="chart-bar"></div>';
   });
 
 }
@@ -193,7 +279,7 @@ function createKey(chart) {
 
   var points = chart.querySelectorAll('[data-role="chart-point"]');
   var keyList = document.createElement('ul');
-  var chartInfo = document.querySelector('[data-role="chart-info"]');
+  var chartInfo = chart.querySelector('[data-role="chart-info"]');
 
   keyList.classList.add('chart__key-list');
   keyList.setAttribute('data-role', 'key');
@@ -221,7 +307,17 @@ function updateChart(chart) {
 
   switch (type) {
     case "pie":
-      updatePie(chart);
+      updatePieChart(chart);
+
+      break;
+
+    case "barvert":
+      updateBarChart(chart);
+
+      break;
+
+    case "barhori":
+      updateBarChart(chart);
 
       break;
   }
@@ -237,13 +333,21 @@ function updateCharts(charts) {
 
 }
 
-function createChart(chart) {
-
-  var type = chart.getAttribute('data-type');
+function createChart(chart, type) {
 
   switch (type) {
     case "pie":
-      createPie(chart);
+      createPieChart(chart);
+
+      break;
+
+    case "barvert":
+      createBarChart(chart);
+
+      break;
+
+    case "barhori":
+      createBarChart(chart);
 
       break;
   }
@@ -261,14 +365,24 @@ function zeroChart(chart) {
 
   switch (type) {
     case "pie":
-      zeroPie(chart);
+      zeroPieChart(chart);
+
+      break;
+
+    case "barvert":
+      zeroBarChart(chart);
+
+      break;
+
+    case "barhori":
+      zeroBarChart(chart);
 
       break;
   }
 
 }
 
-function createCharts(charts, newChart) {
+function createCharts(charts) {
 
   charts.forEach(function(chart) {
 
@@ -296,7 +410,9 @@ function createCharts(charts, newChart) {
       chartBody.appendChild(point);
     });
 
-    createChart(chart);
+    var type = chart.getAttribute('data-type');
+
+    createChart(chart, type);
 
     var showKey = chart.getAttribute('data-key');
 
@@ -312,7 +428,7 @@ function changeSkin(charts, skin) {
   charts.forEach(function(chart) {
     chart.setAttribute('data-skin', skin);
 
-    zeroChart(chart)
+    zeroChart(chart);
 
     setTimeout(function() {
       updateChart(chart);
@@ -328,6 +444,7 @@ function resetChart(chart) {
 
   points.forEach(function(point) {
     point.innerHTML = '';
+    point.style = '';
   });
 
 }
@@ -339,7 +456,9 @@ function changeType(charts, type) {
 
     resetChart(chart);
 
-    createChart(chart, type);
+    setTimeout(function() {
+      createChart(chart, type);
+    }, 100)
   });
 
 }
@@ -356,10 +475,33 @@ function setSkinEvents(charts) {
       changeSkin(charts, skin);
 
       skinOptions.forEach(function(skinOption) {
-        skinOption.removeAttribute('active-skin');
+        skinOption.removeAttribute('active');
       });
 
-      skinOption.setAttribute('active-skin', '');
+      skinOption.setAttribute('active', '');
+
+    }, false);
+
+  });
+
+}
+
+function setTypeEvents(charts) {
+
+  var typeOptions = document.querySelectorAll('[data-role="type-option"]');
+
+  typeOptions.forEach(function(typeOption) {
+
+    var type = typeOption.getAttribute('data-type');
+
+    typeOption.addEventListener('click', function() {
+      changeType(charts, type);
+
+      typeOptions.forEach(function(typeOption) {
+        typeOption.removeAttribute('active');
+      });
+
+      typeOption.setAttribute('active', '');
 
     }, false);
 
@@ -370,4 +512,5 @@ function setSkinEvents(charts) {
 var charts = document.querySelectorAll('[data-role="chart"]');
 
 createCharts(charts);
+setTypeEvents(charts);
 setSkinEvents(charts);
