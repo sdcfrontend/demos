@@ -9,13 +9,13 @@
   </head>
 
   <body>
-    <div class="pie-factory">
-      <div class="pie-factory__header">
+    <div class="charts">
+      <div class="charts__header">
         <h2>Flexible Data Visualisation</h2>
       </div>
 
-      <div class="pie-factory__body">
-        <div class="pie-factory__preview" data-role="preview">
+      <div class="charts__body">
+        <div class="charts__preview" data-role="preview">
           <div class="chart" data-role="chart" data-type="pie" data-key="true" data-skin="skynews" data-title="Age Groups" animated>
             <div class="chart__point" data-role="chart-point" data-value="15" data-label="Under 18"></div>
             <div class="chart__point" data-role="chart-point" data-value="15" data-label="18 - 25"></div>
@@ -33,22 +33,27 @@
           </div> -->
         </div>
 
-        <div class="pie-factory__options">
-          <div class="pie-factory__option">
+        <div class="charts__options">
+          <div class="charts__option">
             <h3>Type</h3>
 
-            <button class="pie-factory__button" data-role="type-option" data-type="pie" active>Pie Chart</button>
-            <button class="pie-factory__button"data-role="type-option" data-type="barvert">Vertical Bar Chart</button>
-            <button class="pie-factory__button"data-role="type-option" data-type="barhori">Horizontal Bar Chart</button>
+            <ul class="charts__select-box" closed data-role="select-box">
+              <li class="charts__select-box-item" data-role="type-option" data-type="pie" active>Pie Chart</li>
+              <li class="charts__select-box-item" data-role="type-option" data-type="barvert">Vertical Bar Chart</li>
+              <li class="charts__select-box-item" data-role="type-option" data-type="barhori">Horizontal Bar Chart</li>
+            </ul>
           </div>
 
-          <div class="pie-factory__option">
+          <div class="charts__option">
             <h3>Styling</h3>
 
-            <button class="pie-factory__button" data-role="skin-option" data-skin="skynews" active>Sky News</button>
-            <button class="pie-factory__button"data-role="skin-option" data-skin="skysports">Sky Sports</button>
-            <button class="pie-factory__button"data-role="skin-option" data-skin="premierleague">Premier League</button>
-            <button class="pie-factory__button"data-role="skin-option" data-skin="line18">Line 18</button>
+            <div class="charts__accordian">
+
+            </div>
+            <button class="charts__button" data-role="skin-option" data-skin="skynews" active>Sky News</button>
+            <button class="charts__button"data-role="skin-option" data-skin="skysports">Sky Sports</button>
+            <button class="charts__button"data-role="skin-option" data-skin="premierleague">Premier League</button>
+            <button class="charts__button"data-role="skin-option" data-skin="line18">Line 18</button>
           </div>
         </div>
       </div>

@@ -8,23 +8,27 @@ body {
   min-height: 100vh;
 }
 
-.pie-factory {
+* {
+  box-sizing: border-box;
+}
+
+.charts {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.pie-factory__body {
+.charts__body {
   display: flex;
   flex: 1;
 }
 
-.pie-factory h2,
-.pie-factory h3 {
+.charts h2,
+.charts h3 {
   font-weight: normal;
 }
 
-.pie-factory__preview {
+.charts__preview {
   flex: 1;
   text-align: center;
   background: #fafafa;
@@ -33,14 +37,14 @@ body {
   position: relative;
 }
 
-.pie-factory__preview:after {
+.charts__preview:after {
   content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 
-.pie-factory__header {
+.charts__header {
   margin-bottom: 0;
   padding: 1.5em;
   border-bottom: 1px solid #e2e2e2;
@@ -48,14 +52,14 @@ body {
   text-align: center;
 }
 
-.pie-factory__preview .chart {
+.charts__preview .chart {
   width: 100%;
   max-width: 400px;
   display: inline-block;
   vertical-align: middle;
 }
 
-.pie-factory__options {
+.charts__options {
   max-width: 300px;
   padding: 1.5em;
   text-align: center;
@@ -63,7 +67,7 @@ body {
   background: #4a4a4a;
 }
 
-.pie-factory__button {
+.charts__button {
   font-size: 1em;
   border: 2px solid #eee;
   border-radius: 4px;
@@ -74,23 +78,83 @@ body {
   cursor: pointer;
 }
 
-.pie-factory__button:hover {
+.charts__button:hover {
   background: rgba(255,255,255,0.1);
 }
 
-.pie-factory__button[active] {
+.charts__button[active] {
   border-color: #3E6990;
   background: #3E6990;
   color: #fff;
 }
 
-.pie-factory__options .pie-factory__button {
+.charts__options .charts__button {
   width: 100%;
   margin-bottom: 0.5em;
   font-size: 1.2em;
 }
 
-.pie-factory__option {
+.charts__select-box {
+  font-size: 1.2em;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  line-height: 2.75em;
+  position: relative;
+  list-style: none;
+  padding: 2.75em 0 0 0;
+}
+
+.charts__select-box[closed] {
+  height: 2.75em;
+  overflow: hidden;
+  cursor: pointer;
+  background: none;
+}
+
+.charts__select-box[closed]:hover {
+  background: rgba(255,255,255,0.1);
+
+}
+
+.charts__select-box:after {
+  content: url(../img/up-arrow.svg);
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  pointer-events: none;
+}
+
+.charts__select-box[closed]:after {
+  content: url(../img/down-arrow.svg);
+  top: 0.45em;
+}
+
+.charts__select-box-item {
+  display: block;
+  height: 2.75em;
+  padding: 0 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.charts__select-box-item[active] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.charts__select-box-item:hover,
+.charts__select-box:not([closed]) .charts__select-box-item[active] {
+  background: rgba(255,255,255,0.1);
+}
+
+.charts__option {
   margin-bottom: 1em;
 }
 

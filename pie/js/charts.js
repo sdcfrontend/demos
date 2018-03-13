@@ -509,8 +509,25 @@ function setTypeEvents(charts) {
 
 }
 
+function setSelectBoxEvents() {
+
+  var selectBoxes = document.querySelectorAll('[data-role="select-box"]');
+
+  selectBoxes.forEach(function(selectBox) {
+    selectBox.addEventListener('click', function() {
+      if (selectBox.hasAttribute('closed')) {
+        selectBox.removeAttribute('closed');
+      } else {
+        selectBox.setAttribute('closed', '');
+      }
+    }, false);
+  });
+
+}
+
 var charts = document.querySelectorAll('[data-role="chart"]');
 
 createCharts(charts);
 setTypeEvents(charts);
 setSkinEvents(charts);
+setSelectBoxEvents();
