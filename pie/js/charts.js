@@ -249,10 +249,10 @@ function updateBarChart(chart) {
 
   chart.setAttribute('animated', '');
 
-  points.forEach(function(point) {
+  points.forEach(function(point, index) {
     var value = point.getAttribute('data-value');
 
-    if (value > highestValue) {
+    if (parseInt(value, 10) > highestValue) {
       highestValue = value;
     }
   });
