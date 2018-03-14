@@ -72,14 +72,15 @@ img {
 .reset {
   text-decoration: none;
   display: inline-block;
-  padding: 4px 6px;
+  padding: 6px 8px;
   position: absolute;
-  background: #111;
-  color: white;
-  top: 12px;
-  left: 12px;
+  background: #fff;
+  color: #222;
+  top: 20px;
+  left: 20px;
   z-index: 100;
-  visibility: hidden
+  visibility: hidden;
+  border-radius: 3px;
 }
 
 .reset--visible {
@@ -94,32 +95,48 @@ img {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: white;
+  background: #ffcc01;
   position: absolute;
   transform: translate(-50%,-50%);
+  will-change: transform;
   z-index: 4;
   transition: transform 0.33s;
-  filter: drop-shadow(0 0 2px rgba(0,0,0,0.5))
+  box-sizing: content-box;
+  background-clip: content-box
 }
 
 .dot--on {
-  background-color: black
+  background-color: white;
+  z-index: 5
+}
+
+.dot--on:after {
+  visibility: visible!important;
 }
 
 .zoomed .dot {
-  transform: translate(-50%,-50%) scale(0.5);
+  transform: translate(-50%,-50%) scale(0.75);
 }
 
 .dot:after {
-  background: white;
-  content: attr(title);
+  background: #306197;
+  color:white;
+  content: attr(data-title);
   display: block;
   position: absolute;
-  padding: 3px 8px;
+  padding: 4px 8px;
   font-size: 14px;
   left: 100%;
-  margin: -2px 0 0 3px;
+  margin: -3px 0 0 4px;
   white-space: nowrap;
+  border-radius: 3px;
+  filter: none;
+}
+
+.dot--mirror:after {
+  right: 100%;
+  left: auto;
+  margin: -3px 4px 0 0;
 }
 
 .container-caption {
@@ -142,6 +159,8 @@ img {
   margin: 0 auto 1em;
   pointer-events: all;
   position: relative;
+  border-radius: 3px;
+  box-sizing: 1px 1px 3px rgba(0,0,0,0.1)
 }
 
 .container-caption-title {
@@ -167,7 +186,7 @@ img {
   .container-inner {
     overflow: hidden;
     position: relative;
-    max-height: 70vh;
+    max-height: 450px
   }
 
   .container-caption {
@@ -175,8 +194,8 @@ img {
   }
 
   .container-caption-inner  {
-    padding: 1.5em 1em;
-    margin: 0
+    padding: 1.2em 1em;
+    margin: 0 12px 12px 12px;
   }
 
   .container-caption-title {
@@ -185,7 +204,14 @@ img {
 
   .dot:after { 
     font-size: 13px;
+    visibility: hidden;
   }
+
+  .zoomed .dot {
+    transform: translate(-50%,-50%) scale(0.55);
+  }
+
+
 }
 
 </style>
@@ -193,16 +219,24 @@ img {
 </head>
 <body>
     <div class="container">
-      <a href="#" class="reset">reset</a>
+      <a href="#" class="reset">Reset</a>
       <div class="container-inner">
         <div class="container-wrap container-wrap--zoomer">
             <div class="container-overlay"> 
-              <a href="#" class="dot" title="St Petersburg" style="top: 24%;left: 31%;" data-index="0"></a>
-              <a href="#" class="dot" title="Moscow" style="top: 40%;left: 21%;" data-index="1"></a>
-              <a href="#" class="dot" title="Ekaterinburg" style="top: 40%;left: 71%;" data-index="2"></a>
-              <a href="#" class="dot" title="Kaliningrad" style="top: 18%;left: 4%;" data-index="3"></a>
+              <a href="#" class="dot" data-title="St Petersburg" style="top: 15%;left: 28%;" data-index="0"></a>
+              <a href="#" class="dot" data-title="Moscow" style="top: 33%;left: 41%;" data-index="1"></a>
+              <a href="#" class="dot" data-title="Kaliningrad" style="top: 34%;left: 12%;" data-index="2"></a>
+              <a href="#" class="dot" data-title="Sochi" style="top: 65%;left: 46%;" data-index="3"></a>
+              <a href="#" class="dot dot--mirror" data-title="Rostov on Don" style="top: 51%;left: 47%;" data-index="4"></a>
+              <a href="#" class="dot" data-title="Volgograd" style="top: 50%;left: 57%;" data-index="5"></a>
+              <a href="#" class="dot dot--mirror" data-title="Nizhny Novgorod" style="top: 28%;left: 57%;" data-index="6"></a>
+              <a href="#" class="dot" data-title="Saransk" style="top: 34%;left: 59%;" data-index="7"></a>
+              <a href="#" class="dot" data-title="Kazan" style="top: 30%;left: 66%;" data-index="8"></a>
+              <a href="#" class="dot" data-title="Samara" style="top: 36%;left: 68%;" data-index="9"></a>
+              <a href="#" class="dot" data-title="Ekaterinburg" style="top: 28%;left: 83%;" data-index="10"></a>
+
             </div>
-            <img src="allmap.png" alt="" draggable="false">
+            <img src="map-russia.svg" alt="" draggable="false">
         </div>
       </div>
       <div class="container-caption">
@@ -234,22 +268,49 @@ img {
 
     var data = [
       {
-        "title": "St Petersburg",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+        "title":"St Petersburg",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
       },
       {
-        "title": "Moscow",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+        "title":"Moscow",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
       },
       {
-        "title": "Ekaterinburg",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
+        "title":"Kaliningrad",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
       },
       {
-        "title": "Kaliningrad",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis. Libero nam nostrum accusantium corporis eligendi temporibus, sint, tempore voluptatibus rem porro, natus nihil a ducimus iste?"
-      }
-    ]
+        "title":"Sochi",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Rostov on Don",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Volgograd",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Nizhny Novgorod",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Saransk",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Kazan",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Samara",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      },
+      {
+        "title":"Ekaterinburg",
+        "text":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia distinctio at accusamus nobis."
+      }]
 
     wrap.x = 0;
     wrap.y = 0;
@@ -272,12 +333,6 @@ img {
     function zoom(e){
 
       e.preventDefault();
-      
-      dots.forEach(function(dot){
-        dot.classList.remove('dot--on');
-      });
-
-      this.classList.add('dot--on');
 
       overlay.classList.add('zoomed');
       reset.classList.add('reset--visible');
@@ -300,7 +355,9 @@ img {
       
       var index = parseInt(this.getAttribute('data-index', 10));
       selected = index;
+
       rendercaption(false, index);
+      highlightdot(index);
 
     }
 
@@ -357,6 +414,17 @@ img {
         rendercaption(true, 0);
         overlay.classList.remove('zoomed');
         selected = -1;
+        highlightdot(selected);
+    }
+
+    function highlightdot(index){
+      dots.forEach(function(dot){
+        dot.classList.remove('dot--on');
+      });
+      
+      if(index > -1){
+        dots[index].classList.add('dot--on');
+      }
     }
 
     var hammertime = new Hammer(wrap, {});
