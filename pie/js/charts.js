@@ -110,6 +110,7 @@ function setBarColour(point, skin, currentColourIndex) {
   var bar = point.querySelector('[data-role="chart-bar"]');
 
   bar.style.backgroundColor = skin[currentColourIndex];
+  bar.style.setProperty('--backgroundColour', skin[currentColourIndex]);
 
   if (currentColourIndex < skin.length-1) {
     currentColourIndex++;
