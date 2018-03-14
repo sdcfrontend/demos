@@ -44,7 +44,7 @@ a {
 .container-inner {
   overflow: hidden;
   position: relative;
-  height: 100vh;
+  height: 90vh;
 }
 
 .container-wrap {
@@ -115,8 +115,13 @@ img {
 }
 
 .zoomed .dot {
+  transform: translate(-50%,-50%) scale(0.5);
+}
+
+.zoomed .dot--on {
   transform: translate(-50%,-50%) scale(0.75);
 }
+
 
 .dot:after {
   background: #306197;
@@ -156,7 +161,7 @@ img {
   border: 1px solid #ccc;
   padding: 3em;
   max-width: 600px;
-  margin: 0 auto 15%;
+  margin: 0 auto 12%;
   pointer-events: all;
   position: relative;
   border-radius: 3px;
