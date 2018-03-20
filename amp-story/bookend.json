@@ -1,0 +1,21 @@
+{
+  "share-providers": {
+    "facebook": true,
+    "twitter": true,
+    "email": true
+  },
+  "related-articles": {
+    "Articles": [
+      {
+        "title": "Sky News",
+        "url": "https://www.skynews.com",
+        "image": "https://news.sky.com/assets/2018/apple-touch-icon-180x180.png"
+      },
+      {
+        "title": "Sky Sports",
+        "url": "http://www.skysports.com",
+        "image": "http://www.skysports.com/assets/apple-touch-icon-180x180.png"
+      }
+    ]
+  }
+}
