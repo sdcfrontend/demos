@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       max-width: 600px;
       margin: 10px auto
@@ -67,6 +72,20 @@
 
     .zoom a + a {
       top: 50%;
+    }
+
+    .map h3 {
+      padding: 1em;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: calc(16px + 1.1vw);
+      background: white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+      margin: 0;
     }
   </style>
 </head>
@@ -1416,12 +1435,18 @@
       </svg>
 
       </div>
+  
+  
+  
+   <h3 data-role="title"></h3> 
+  
   </div>
 
   <script>
     var layers = document.querySelectorAll('#layer1 path');
     var map = document.querySelector('.map');
     var svg = map.querySelector('svg');
+    var title = document.querySelector('[data-role="title"]');
     var zoomed = false;
 
     svg.currentX = 0;
@@ -1429,6 +1454,7 @@
 
     layers.forEach(function(layer){
       layer.onclick = function(event){
+        title.textContent = this.dataset.name;
         highlight(this, layers)
         var dims = center(event.layerX - svg.currentX, event.layerY - svg.currentY);
         svg.style.cssText = "transform: translate(" + (dims[0]) + "px,"+ (dims[1]) +"px)";
@@ -1476,6 +1502,7 @@
         svg.currentY = 0;
         svg.currentX = 0;
         svg.style.cssText = "";
+        title.textContent = "";
       }
 
       if(direction === 'in'){
