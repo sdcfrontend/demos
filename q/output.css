@@ -330,10 +330,12 @@ ul {
 .sdc-site-tile__significance--live[class] {
   color: #ffffff;
   background: #d0021b;
-  padding: 2px 6px;
+  letter-spacing: 1px;
+  padding: 3px 5px 2px;
   font-size: 13px;
   font-weight: bold;
-  line-height: 1.08; }
+  line-height: 1.08;
+  margin-bottom: 2px; }
 
 .sdc-site-tile__significance--analysis[class] {
   color: #ffffff;
@@ -685,7 +687,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   cursor: default;
   z-index: 5;
   pointer-events: none;
-  margin: 0 0 2px 1px; }
+  margin: 0 0 4px 1px; }
 
 .sdc-site-tile__info:empty {
   display: none; }
@@ -717,7 +719,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   padding: .2em 0; }
 
 .sdc-site-tile__date-time {
-  font-size: 15px;
+  font-size: 17px;
   color: #707070;
   padding: .2em 0;
   white-space: nowrap;
@@ -809,7 +811,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
 
 @media all and (max-width: 599px) {
   .sdc-site-tile__body {
-    padding: 18px 21px; } }
+    padding: 32px 20px 40px } }
 
 @media all and (max-width: 480px) {
   .sdc-site-tile__body {
@@ -988,7 +990,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
   padding: 0.2em 0; }
 
 .blackjack-sdc-site-tile__date-time {
-  font-size: 15px;
+  font-size: 20px;
   color: #999;
   padding: 0.2em 0;
   white-space: nowrap;
