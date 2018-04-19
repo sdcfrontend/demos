@@ -32,10 +32,6 @@
       margin-bottom: 0.3em!important;
     }
 
-    .sdc-site-tile__snippet {
-      font-size: 16px
-    }
-
     .sdc-site-tile__figure {
       will-change: all;
       transition: all 0.33s;
@@ -93,6 +89,8 @@
 
     .sdc-site-tile__related-buttons {
       margin-top: 0.75em;
+      position: relative;
+      z-index: 1000
     }
 
 
@@ -103,8 +101,15 @@
       font-family: inherit;
       font-weight: 600;
       font-size: 16px;
-      padding: 6px 10px
+      padding: 6px 10px;
+      transition: all 0.33s
     }
+
+     .sdc-site-tile__related-button[class]:hover {
+       text-decoration: none!important;
+       background: white;
+       color: #444!important;
+     }
 
     .sdc-site-tile__date-time {
       color: white;
@@ -142,9 +147,9 @@
           <figure class="sdc-site-tile__figure" aria-hidden="true">
           <div class="sdc-site-tile__image-wrap">
             <picture>
-              <source srcset="https://e1.365dm.com/17/12/384x216/skysports-paul-pogba-rory-mcilroy-anya-shrubsole-golf-football-cricket-manchester-united_4190896.jpg?20171223185621 400w, https://e1.365dm.com/17/12/768x432/skysports-paul-pogba-rory-mcilroy-anya-shrubsole-golf-football-cricket-manchester-united_4190896.jpg?20171223185621 1000w" sizes="100vw">
+              <source srcset="https://e1.365dm.com/18/01/384x216/skysports-aj-anthony-joshua-joseph-parker-ssbo_4204535.jpg 400w, https://e1.365dm.com/18/01/768x432/skysports-aj-anthony-joshua-joseph-parker-ssbo_4204535.jpg 1000w" sizes="100vw">
               
-              <img src="https://e1.365dm.com/17/12/768x432/skysports-paul-pogba-rory-mcilroy-anya-shrubsole-golf-football-cricket-manchester-united_4190896.jpg?20171223185621" alt="Feel it all on Sky Sports in 2018" class="sdc-site-tile__image">
+              <img src="https://e1.365dm.com/18/01/768x432/skysports-aj-anthony-joshua-joseph-parker-ssbo_4204535.jpg" alt="Feel it all on Sky Sports in 2018" class="sdc-site-tile__image">
             </picture>
           </div>
         </figure>
@@ -156,7 +161,7 @@
             </div></div>
             <h3 class="sdc-site-tile__headline">
                 <a href="https://www.sky.com/shop/tv/sports/?DCMP=bac-SS.com_NewSkySports_Homepage_Commercial" class="sdc-site-tile__headline-link" target="_blank">
-              <span class="sdc-site-tile__headline-text">Get Sky Sports</span>
+              <span class="sdc-site-tile__headline-text">Joshua v Parker</span>
                 </a>
             </h3>
             <p class="sdc-site-tile__snippet">Joshua puts his WBA and IBF titles on the line to take on WBO champion Parker</p>
@@ -194,7 +199,7 @@
                 </div>
                 <ul class="sdc-site-tile__related-buttons">
                   <li class="sdc-site-tile__related-item">
-                      <a href="#" class="sdc-site-tile__related-button" target="_blank">Watch Now</a>
+                      <a href="#" class="sdc-site-tile__related-button" target="_blank">Book Now</a>
                   </li>
           </ul>
               </div>
