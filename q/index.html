@@ -17,18 +17,22 @@
       color: white;
     }
 
-    .header {
-      background-image: linear-gradient(to bottom, #002672, #001e5b);
+  .header {
+    background-image: linear-gradient(to bottom, #002672, #001e5b);
+  }
+    .header__inner {
       height: calc(4vw + 50px);
       margin-bottom: calc(2vw + 18px);
       display: flex;
       align-items: center;
-      justify-content: center;
+      max-width: 1024px;
     }
+
 
     .sdc-site-tile__headline[class] {
       font-family: display;
-      font-size: calc(2vw + 16px)!important;
+      
+      /* font-size: calc(2vw + 16px)!important; */
       margin-bottom: 0.3em!important;
     }
 
@@ -78,6 +82,7 @@
       transition: transform 0.33s
     }
 
+  @media all and (min-width: 480px){
     .sdc-site-tile:hover
     .sdc-site-tile__figure {
       transform: scale(1.02)
@@ -88,6 +93,11 @@
       transform: scale(1.0);
       box-shadow: 0 10px 20px rgba(0,0,0,0.5)
     }
+
+    .sdc-site-tiles--divider {
+      display: block!important;
+    }
+  }
 
     .sdc-site-tile__info-dot {
       font-size: 0.9em;
@@ -144,6 +154,7 @@
       width: 100%;
       height: 1px;
       overflow: hidden;
+      display: none;
     }
 
     .sdc-site-tiles__item,
@@ -152,20 +163,22 @@
     }
 
     .header img {
-      width: calc(15vw + 120px);
+      width: calc(15vw + 140px);
       display: block
     }
 
     @media all and (max-width: 1200px){
       .sdc-site-tile__headline[class] {
-        font-size: 40px
+        /* font-size: 40px */
       }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="box-office-no-keyline.svg" alt="box office logo">
+    <div class="header__inner site-wrap site-wrap-padding">
+      <img src="box-office-no-keyline.svg" alt="box office logo">
+    </div>
   </div>
   <div class="sdc-site-tiles
         sdc-site-tiles--alt2">
