@@ -858,7 +858,9 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
     width: 33.5%;
     padding: 0 34px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column; 
+    height: 100%;
+  }
   .sdc-site-tile[data-type~="hero-horizontal-t2"] .sdc-site-tile__body,
   .sdc-site-tile[data-type~="hero-horizontal-t2"] .sdc-site-tile__figure {
     width: 50%; }
@@ -1115,7 +1117,9 @@ svg {
     width: 33.5%;
     padding: 0 1.9em;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    height: 100%;
+  }
   .blackjack-sdc-site-tile[data-type~="hero-horizontal-t2"] .blackjack-sdc-site-tile__body,
   .blackjack-sdc-site-tile[data-type~="hero-horizontal-t2"] .blackjack-sdc-site-tile__figure {
     width: 50%; }
