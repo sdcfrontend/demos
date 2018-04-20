@@ -844,6 +844,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
     display: table;
     display: flex;
     width: calc(100% - 24px);
+    align-items: start;
     font-size: 1.3em; }
   .sdc-site-tile[data-type~="hero-horizontal"] .sdc-site-tile__figure {
     display: table-cell;
