@@ -856,7 +856,7 @@ div[data-advert-rendered="300x600"] > .sdc-site-au__grid-mpu {
     display: table-cell;
     vertical-align: middle;
     width: 33.5%;
-    padding: 0 34px;
+    padding: 0 24px 0 44px;
     display: flex;
     flex-direction: column; 
     height: 100%;
