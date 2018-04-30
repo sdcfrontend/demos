@@ -51,7 +51,7 @@
             </svg>
           </button>
           <div class="video__controls-volume">
-            <input type="range" name="" steps="10" data-role="volume-slider">
+            <input type="range" name="" steps="10" data-role="volume-slider" class="video__controls-volume-slider">
           </div>
         </div>
 
@@ -108,11 +108,12 @@
   });
 
   function togglevolume() {
-    if (videoplayer.volume === 0) {
-      videoplayer.volume = buttonvolume.volume;
+
+    if (videoplayer.volume > 0) {
+      videoplayer.volume = 0;
     }
     else {
-      videoplayer.volume = 0;
+      videoplayer.volume = buttonvolume.volume;
     }
   }
 
@@ -138,12 +139,14 @@
 
   function changevolume() {
     videoplayer.volume = this.value / 100;
-    buttonvolume.volume = videoplayer.volume;
   }
 
   function setvolumestate() {
     volumeslider.value = videoplayer.volume * 100;
-    buttonvolume.volume = videoplayer.volume;
+    if (videoplayer.volume > 0) {
+      buttonvolume.volume = videoplayer.volume
+    }
+
     window.localStorage.setItem('video-volume', videoplayer.volume);
 
     if (videoplayer.volume > 0) {

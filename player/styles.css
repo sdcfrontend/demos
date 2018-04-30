@@ -76,8 +76,10 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.166s;
-  border: 1px solid red;
   max-width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .video__controls-volume > input {
@@ -141,3 +143,56 @@
   content: "Unmute"
 }
 
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 0;
+  display: block;
+  overflow: hidden
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5.1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #ccc;
+  border-radius: 0px;
+  border: 0px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.06), -400px 0px 0px 400px white;
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 12px;
+  width: 7px;
+  border-radius: 1px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.45px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5.1px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: #ccc;
+  border-radius: 0px;
+  border: 0px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.06), 0px 0px 0px rgba(13, 13, 13, 0.06);
+  border: 0px solid rgba(0, 0, 0, 0);
+  height: 12px;
+  width: 7px;
+  border-radius: 1px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-progress {
+  background-color: white; 
+}
