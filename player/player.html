@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      max-width: 650px;
+      margin: 10px auto;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="video" data-role="video-container">
+    <div class="video__container">
+      <div class="video__controls">
+
+        <div class="video__controls-cell">
+          <button class="video__button video__button--play" data-role="play">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M20.452 24.875c-.286 0-.567-.014-.843-.041a4.64 4.64 0 0 1-.63-.093V11.153c0-.357.111-.656.335-.898.223-.241.62-.361 1.192-.361.285 0 .567.014.844.04.276.027.486.059.629.094v13.587c0 .358-.112.657-.335.898-.223.24-.62.362-1.192.362zm-7 0c-.286 0-.567-.014-.843-.041a4.64 4.64 0 0 1-.63-.093V11.153c0-.357.111-.656.335-.898.223-.241.62-.361 1.192-.361.285 0 .566.014.844.04.276.027.486.059.629.094v13.587c0 .358-.112.657-.335.898-.223.24-.62.362-1.192.362z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M22.177 16.259l-5.515-5.492c-.851-.848-2.093-1.852-3.168-.781v14.071c1.075 1.072 2.317.067 3.168-.781l5.515-5.492a1.077 1.077 0 0 0 0-1.525z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="video__controls-cell video__controls-cell--volume">
+          <button class="video__button video__button--volume" data-role="volume">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M15.312 10.785l-2.264 2.255H8.979c-.828 0-1.5.172-1.5 1V19.541a1.5 1.5 0 0 0 1.5 1.5h4.068l2.264 2.255c.851.848 2.093 1.852 3.168.781V10.005c-1.075-1.072-2.317-.067-3.167.78zM21.997 11.881l.012-.015-.894-.523-.136.141a1.81 1.81 0 0 0-.156.192 3.235 3.235 0 0 0-.167.257c-.134.229-.173.426-.119.603a.66.66 0 0 0 .123.229l-.022.037.219.127c1.097.634 1.881 1.658 2.209 2.886s.16 2.507-.475 3.604a4.734 4.734 0 0 1-1.719 1.723.686.686 0 0 0-.32.388c-.055.176-.018.373.113.603.051.09.106.177.165.26.063.089.115.154.156.195l.135.139.511-.291a6.247 6.247 0 0 0 2.258-2.265 6.215 6.215 0 0 0-1.893-8.29z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M24.509 17.04l2.759-2.759-.102-.167a1.809 1.809 0 0 0-.147-.201 3.313 3.313 0 0 0-.206-.226c-.181-.181-.355-.27-.553-.27h-.001a.676.676 0 0 0-.456.206l-2.354 2.354-2.755-2.755-.166.096a1.594 1.594 0 0 0-.204.149 2.911 2.911 0 0 0-.227.206c-.188.188-.275.368-.269.553.007.172.079.33.206.457l2.354 2.355-2.759 2.759.102.167c.03.05.079.116.148.2.064.078.133.154.205.226.181.181.355.27.55.27a.676.676 0 0 0 .459-.206l2.355-2.354 2.759 2.759.167-.102c.049-.029.116-.078.2-.147.078-.064.154-.133.226-.206.188-.188.276-.369.269-.551a.672.672 0 0 0-.206-.459l-2.354-2.354zM15.312 10.785l-2.264 2.255H8.979c-.828 0-1.5.172-1.5 1V19.541a1.5 1.5 0 0 0 1.5 1.5h4.068l2.264 2.255c.587.585 1.361 1.245 2.138 1.245.348 0 .697-.133 1.03-.465V10.005c-.333-.332-.682-.465-1.03-.465-.776 0-1.55.66-2.137 1.245zm1.667 11.989a6.047 6.047 0 0 1-.609-.543l-2.264-2.255-.439-.437H8.979V14.54H13.666l.439-.437 2.265-2.255c.251-.25.451-.423.609-.542v11.468z"
+              />
+            </svg>
+          </button>
+          <div class="video__controls-volume">
+            <input type="range" name="" steps="10" data-role="volume-slider">
+          </div>
+        </div>
+
+        <div class="video__controls-cell">
+          <button class="video__button video__button--fullscreen" data-role="fullscreen">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M28.083 19.029l-.203-.002h-7.994a.989.989 0 0 0-.988.988v8.13l.002.101c.002.23.071.415.21.566.136.147.405.222.797.222a6.622 6.622 0 0 0 .966-.071V22.429l.341.338 6.459 6.392a7.31 7.31 0 0 0 .727-.64c.274-.276.419-.524.418-.716a.701.701 0 0 0-.222-.512l-6.012-5.948-.345-.342h6.557a6.2 6.2 0 0 0 .071-.966c0-.392-.075-.661-.222-.797a.8.8 0 0 0-.562-.209zM5.685 14.99l.203.002h7.994a.989.989 0 0 0 .988-.988v-8.13l-.002-.101a.808.808 0 0 0-.21-.566c-.138-.147-.406-.221-.798-.221a6.622 6.622 0 0 0-.966.071V11.591l-.341-.338L6.094 4.86a7.063 7.063 0 0 0-.727.64c-.275.276-.419.524-.419.716a.7.7 0 0 0 .222.511l6.012 5.948.345.342H4.97a6.2 6.2 0 0 0-.07.967c0 .392.075.661.222.797a.8.8 0 0 0 .563.209z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M14.079 5.029l-.203-.002H5.882a.989.989 0 0 0-.988.988v8.13l.002.101c.002.23.071.415.21.566.136.147.405.222.797.222a6.622 6.622 0 0 0 .966-.071V8.429l.341.338 6.459 6.392a7.31 7.31 0 0 0 .727-.64c.274-.276.419-.524.418-.716a.701.701 0 0 0-.222-.512L8.581 7.344l-.344-.342h6.557a6.2 6.2 0 0 0 .071-.966c0-.392-.075-.661-.222-.797a.807.807 0 0 0-.564-.21zM19.68 28.99l.203.002h7.994a.989.989 0 0 0 .988-.988v-8.13l-.002-.101a.808.808 0 0 0-.21-.566c-.136-.147-.405-.222-.797-.222a6.622 6.622 0 0 0-.966.071V25.59l-.341-.338-6.459-6.392a7.31 7.31 0 0 0-.727.64c-.274.276-.419.524-.418.716a.701.701 0 0 0 .222.512l6.012 5.948.345.342h-6.557a6.2 6.2 0 0 0-.071.966c0 .392.075.661.222.797a.798.798 0 0 0 .562.209z"
+              />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+      <video src="video.mp4" autoplay preload muted class="video__player" data-role="video-player"></video>
+    </div>
+  </div>
+</body>
+
+<script>
+  const videocontainer = document.querySelector('[data-role="video-container"]');
+  const videoplayer = document.querySelector('[data-role="video-player"]');
+  const buttonplay = document.querySelector('[data-role="play"]');
+  const buttonvolume = document.querySelector('[data-role="volume"]');
+  const buttonfullscreen = document.querySelector('[data-role="fullscreen"]');
+  const volumeslider = document.querySelector('[data-role="volume-slider"]');
+
+  buttonplay.onclick = toggleplay;
+  videoplayer.onclick = toggleplay;
+  videoplayer.onvolumechange = setvolumestate;
+  videoplayer.ontimeupdate = setplaystate;
+  buttonvolume.onclick = togglevolume;
+  buttonfullscreen.onclick = togglefullscreen;
+  volumeslider.oninput = changevolume;
+
+  let volume = window.localStorage.getItem('video-volume');
+  if (volume) {
+    videoplayer.volume = volume;
+  }
+
+  setvolumestate();
+
+  document.addEventListener('fullscreenchange', function () {
+    if (document.fullscreenElement === videocontainer) {
+      buttonfullscreen.setAttribute('data-active', true);
+    }
+    else {
+      buttonfullscreen.removeAttribute('data-active');
+    }
+  });
+
+  function togglevolume() {
+    if (videoplayer.volume === 0) {
+      videoplayer.volume = buttonvolume.volume;
+    }
+    else {
+      videoplayer.volume = 0;
+    }
+  }
+
+  function toggleplay() {
+    if (videoplayer.paused) {
+      videoplayer.play();
+    }
+
+    else {
+      videoplayer.pause();
+    }
+  }
+
+  function togglefullscreen() {
+    if ((document.fullscreenElement === videocontainer)) {
+      document.webkitCancelFullScreen();
+    }
+
+    else {
+      videocontainer.requestFullscreen();
+    }
+  }
+
+  function changevolume() {
+    videoplayer.volume = this.value / 100;
+    buttonvolume.volume = videoplayer.volume;
+  }
+
+  function setvolumestate() {
+    volumeslider.value = videoplayer.volume * 100;
+    buttonvolume.volume = videoplayer.volume;
+    window.localStorage.setItem('video-volume', videoplayer.volume);
+
+    if (videoplayer.volume > 0) {
+      buttonvolume.setAttribute('data-active', true);
+    }
+
+    else {
+      buttonvolume.removeAttribute('data-active');
+    }
+
+  }
+
+  function setplaystate() {
+
+    console.log(videoplayer.paused);
+    if (videoplayer.paused) {
+      buttonplay.removeAttribute('data-active')
+    }
+
+    else {
+      buttonplay.setAttribute('data-active', true);
+    }
+  }
+
+
+
+</script>
+
+</html>
