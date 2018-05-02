@@ -104,10 +104,15 @@
 
 .video__button > svg {
   pointer-events: none;
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   fill: currentColor;
   display: block
+}
+
+.video__button--fullscreen > svg {
+  width: 26px;
+  height: 26px;
 }
 
 .video__button:not([data-active]) > svg:first-child {
