@@ -10,7 +10,19 @@ html {
 
 .article-header {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 138px);
+}
+
+@media all and (max-width: 900px) {
+  .article-header {
+    height: calc(100vh - 74px);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .article-header {
+    height: calc(100vh - 55px);
+  }
 }
 
 .article-header:after {
