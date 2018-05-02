@@ -1,0 +1,34 @@
+{
+  "charts": [
+    {
+      "id": 1,
+      "type": "pie",
+      "title": "Age Groups",
+      "skin": "skynews",
+      "animated": true,
+      "key": true,
+      "points": [
+        {
+          "value": 15,
+          "label": "Under 18"
+        },
+        {
+          "value": 15,
+          "label": "18 - 25"
+        },
+        {
+          "value": 20,
+          "label": "25 - 40"
+        },
+        {
+          "value": 20,
+          "label": "40 - 65"
+        },
+        {
+          "value": 30,
+          "label": "65+"
+        }
+      ]
+    }
+  ]
+}
