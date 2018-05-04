@@ -78,6 +78,14 @@
   const buttonfullscreen = document.querySelector('[data-role="fullscreen"]');
   const volumeslider = document.querySelector('[data-role="volume-slider"]');
 
+  let src = "video.mp4";
+  const search = window.location.search;
+
+  if (search) {
+    src = search.replace(/^\?/, '');
+    videoplayer.src = src;
+  }
+
   buttonplay.onclick = toggleplay;
   videoplayer.onclick = toggleplay;
   videoplayer.onvolumechange = setvolumestate;
