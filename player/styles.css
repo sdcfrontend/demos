@@ -132,7 +132,7 @@
 }
 
 .video__button--volume:before {
-  content: "Mute";
+  content: "Unmute";
   position: absolute;
   background: rgba(0,0,0,0.7);
   color: white;
@@ -145,7 +145,7 @@
 }
 
 .video__button--volume[data-active]:before {
-  content: "Unmute"
+  content: "Mute"
 }
 
 input[type=range] {
