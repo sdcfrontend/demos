@@ -1,0 +1,124 @@
+
+.timeline {
+  height: 48px;
+  background: repeating-linear-gradient(to right, rgb(0, 0, 0, 0), rgb(0, 0, 0, 0) 29px, #6EFFE9 30px);
+  background-size: 100% 60%;
+  background-position: 0 9px;
+  background-repeat: no-repeat;
+  position: relative;
+  min-width: 2730px;
+  overflow: hidden;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 1350px;
+  width: 1px;
+  height: 60%;
+  background-color: white;
+  top: 20%;
+}
+
+.timeline__inner {
+  display: inline-flex;
+  height: 100%;
+  overflow: hidden;
+  transform: translateY(-1px)
+}
+
+.timeline__item {
+  width: 30px;
+  position: relative;
+}
+
+.timeline__item:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: white;
+  top: calc(50% - 1px);
+}
+
+.timeline__item--event:after {
+  content: attr(data-time);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 0);
+  font-size: 10px;
+  color: #6EFFE9;
+  background: #0a132c
+}
+
+.timeline__item--event-goal 
+.timeline__icon {
+  background-image: url(goal.svg);
+  background-size: 80%;
+  background-position: 50%;
+  background-repeat: no-repeat
+}
+
+.timeline__item--event-yellow {
+  color: #ffcc00;
+  fill: #ffcc00;
+}
+
+.timeline__item--event-red {
+  color: #d30909;
+  fill: #d30909;
+}
+
+.timeline__icon {
+  background-color: #0a132c;
+  bordeR: 1px solid white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: block;
+  transform: translate(50%, -50%);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 2;
+}
+
+.timeline__icon--multi {
+  margin-top: -5px
+}
+
+.timeline__icon+.timeline__icon {
+  z-index: 3;
+  margin-top: 5px
+}
+
+.timeline__icon-svg {
+  width: 90%;
+  height: 90%;
+}
+
+.timeline__icon:hover {
+  z-index: 4;
+}
+
+.timeline__scroll {
+  overflow: auto;
+  position: relative;
+  background: #0a132c;
+  scroll-behavior: smooth;
+}
+
+.timeline__scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+  
+.timeline__scroll::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+.timeline__scroll::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #6EFFE9; 
+}
