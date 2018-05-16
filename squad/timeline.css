@@ -23,8 +23,19 @@
 .timeline__inner {
   display: inline-flex;
   height: 100%;
-  overflow: hidden;
   transform: translateY(-1px)
+}
+
+.timeline__inner:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+  right: 0;
+  top: 50%;
+  transform: translate(50%,-50%)
 }
 
 .timeline__item {
