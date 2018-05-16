@@ -52,36 +52,21 @@
   background: #0a132c
 }
 
-.timeline__item--event-goal 
-.timeline__icon {
-  background-image: url(goal.svg);
-  background-size: 80%;
-  background-position: 50%;
-  background-repeat: no-repeat
-}
-
-.timeline__item--event-yellow {
-  color: #ffcc00;
-  fill: #ffcc00;
-}
-
-.timeline__item--event-red {
-  color: #d30909;
-  fill: #d30909;
-}
-
 .timeline__icon {
   background-color: #0a132c;
   bordeR: 1px solid white;
   border-radius: 50%;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: block;
   transform: translate(50%, -50%);
   position: absolute;
   right: 0;
   top: 50%;
   z-index: 2;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .timeline__icon--multi {
@@ -93,14 +78,57 @@
   margin-top: 5px
 }
 
-.timeline__icon-svg {
-  width: 90%;
-  height: 90%;
-}
-
 .timeline__icon:hover {
   z-index: 4;
 }
+
+.timeline__item--event-goal 
+.timeline__icon {
+  background-image: url(goal.svg);
+}
+
+.timeline__item--event-freekick 
+.timeline__icon {
+  background-image: url(freekick.svg);
+}
+
+.timeline__item--event-ontarget 
+.timeline__icon {
+  background-image: url(ontarget.svg);
+}
+
+.timeline__item--event-offtarget 
+.timeline__icon {
+  background-image: url(offtarget.svg);
+}
+
+.timeline__item--event-injury 
+.timeline__icon {
+  background-image: url(injury.svg);
+  background-size: 70%;
+ 
+}
+
+/* .timeline__item[data-side="1"]
+.timeline__icon {
+  margin-top: -10%
+}
+
+.timeline__item[data-side="2"]
+.timeline__icon {
+  margin-top: 10%
+} */
+
+.timeline__item--event-yellow {
+  color: #ffcc00;
+  fill: #ffcc00;
+}
+
+.timeline__item--event-red {
+  color: #d30909;
+  fill: #d30909;
+}
+
 
 .timeline__scroll {
   overflow: auto;
