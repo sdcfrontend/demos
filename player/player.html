@@ -11,11 +11,15 @@
       padding: 0;
       margin: 0;
       box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
     }
 
-    body {
-      max-width: 650px;
-      margin: 10px auto;
+    body,
+    html {
+      overflow: hidden;
+      height: 100%;
     }
   </style>
   <link rel="stylesheet" href="styles.css">
@@ -24,6 +28,9 @@
 <body>
   <div class="video" data-role="video-container">
     <div class="video__container">
+      <div class="video__live">
+        </span><span class="video__live-text">LIVE</span>
+      </div>
       <div class="video__controls">
 
         <div class="video__controls-cell">
@@ -56,6 +63,20 @@
         </div>
 
         <div class="video__controls-cell">
+          <button class="video__button video__button--swap" data-role="swap">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M28.083 19.029l-.203-.002h-7.994a.989.989 0 0 0-.988.988v8.13l.002.101c.002.23.071.415.21.566.136.147.405.222.797.222a6.622 6.622 0 0 0 .966-.071V22.429l.341.338 6.459 6.392a7.31 7.31 0 0 0 .727-.64c.274-.276.419-.524.418-.716a.701.701 0 0 0-.222-.512l-6.012-5.948-.345-.342h6.557a6.2 6.2 0 0 0 .071-.966c0-.392-.075-.661-.222-.797a.8.8 0 0 0-.562-.209zM5.685 14.99l.203.002h7.994a.989.989 0 0 0 .988-.988v-8.13l-.002-.101a.808.808 0 0 0-.21-.566c-.138-.147-.406-.221-.798-.221a6.622 6.622 0 0 0-.966.071V11.591l-.341-.338L6.094 4.86a7.063 7.063 0 0 0-.727.64c-.275.276-.419.524-.419.716a.7.7 0 0 0 .222.511l6.012 5.948.345.342H4.97a6.2 6.2 0 0 0-.07.967c0 .392.075.661.222.797a.8.8 0 0 0 .563.209z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
+              <path d="M14.079 5.029l-.203-.002H5.882a.989.989 0 0 0-.988.988v8.13l.002.101c.002.23.071.415.21.566.136.147.405.222.797.222a6.622 6.622 0 0 0 .966-.071V8.429l.341.338 6.459 6.392a7.31 7.31 0 0 0 .727-.64c.274-.276.419-.524.418-.716a.701.701 0 0 0-.222-.512L8.581 7.344l-.344-.342h6.557a6.2 6.2 0 0 0 .071-.966c0-.392-.075-.661-.222-.797a.807.807 0 0 0-.564-.21zM19.68 28.99l.203.002h7.994a.989.989 0 0 0 .988-.988v-8.13l-.002-.101a.808.808 0 0 0-.21-.566c-.136-.147-.405-.222-.797-.222a6.622 6.622 0 0 0-.966.071V25.59l-.341-.338-6.459-6.392a7.31 7.31 0 0 0-.727.64c-.274.276-.419.524-.418.716a.701.701 0 0 0 .222.512l6.012 5.948.345.342h-6.557a6.2 6.2 0 0 0-.071.966c0 .392.075.661.222.797a.798.798 0 0 0 .562.209z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="video__controls-cell">
           <button class="video__button video__button--fullscreen" data-role="fullscreen">
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" aria-hidden="true">
@@ -70,18 +91,31 @@
         </div>
 
       </div>
-      <video src="video.mp4" autoplay preload muted class="video__player" data-role="video-player"></video>
+      <video id="event" src="video.mp4" autoplay preload muted class="hidden__player" data-role="video-player"></video>
+      <video id="streamer" src="second.mp4" autoplay preload muted class="hidden__player" data-role="video-player"></video>
     </div>
   </div>
 </body>
 
 <script>
+  const targetWindow = window.parent;
+
+  let videoplayer = document.getElementById('event');
+
   const videocontainer = document.querySelector('[data-role="video-container"]');
-  const videoplayer = document.querySelector('[data-role="video-player"]');
   const buttonplay = document.querySelector('[data-role="play"]');
   const buttonvolume = document.querySelector('[data-role="volume"]');
   const buttonfullscreen = document.querySelector('[data-role="fullscreen"]');
+  const buttonswap = document.querySelector('[data-role="swap"]');
   const volumeslider = document.querySelector('[data-role="volume-slider"]');
+
+  let src = "video.mp4";
+  const search = window.location.search;
+
+  if (search) {
+    src = search.replace(/^\?/, '');
+    videoplayer.src = src;
+  }
 
   buttonplay.onclick = toggleplay;
   videoplayer.onclick = toggleplay;
@@ -89,6 +123,7 @@
   videoplayer.ontimeupdate = setplaystate;
   buttonvolume.onclick = togglevolume;
   buttonfullscreen.onclick = togglefullscreen;
+  buttonswap.onclick = onSwapBtnPress;
   volumeslider.oninput = changevolume;
 
   let volume = window.localStorage.getItem('video-volume');
@@ -106,6 +141,45 @@
       buttonfullscreen.removeAttribute('data-active');
     }
   });
+
+  window.addEventListener('message', receiveMessage, false);
+
+  function receiveMessage(e) {
+    if (e.data === 'swap') {
+      swapStreams();
+    } else if (e.data === 'event') {
+      let toSwap = document.getElementById('event');
+
+      toSwap.classList.remove('hidden__player');
+      toSwap.classList.add('video__player');
+
+      videoplayer = toSwap;
+    } else if (e.data === 'streamer') {
+      let toSwap = document.getElementById('streamer');
+
+      toSwap.classList.remove('hidden__player');
+      toSwap.classList.add('video__player');
+
+      videoplayer = toSwap;
+    }
+  };
+
+  function onSwapBtnPress() {
+    targetWindow.postMessage('swap', '*');
+  }
+
+  function swapStreams() {
+    let current = document.getElementsByClassName('video__player')[0];
+    let swap = document.getElementsByClassName('hidden__player')[0];
+
+    current.classList.remove('video__player');
+    current.classList.add('hidden__player');
+
+    swap.classList.remove('hidden__player');
+    swap.classList.add('video__player');
+
+    videoplayer = swap;
+  }
 
   function togglevolume() {
 
@@ -161,7 +235,6 @@
 
   function setplaystate() {
 
-    console.log(videoplayer.paused);
     if (videoplayer.paused) {
       buttonplay.removeAttribute('data-active')
     }

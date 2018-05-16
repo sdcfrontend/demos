@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="timeline.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      font-family: sans-serif
+    }
+
+    body {
+      max-width: 800px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="timeline__scroll">
+    <div class="timeline">
+      <div class="timeline__inner">
+
+        <div class="timeline__item" data-time="1"></div>
+
+        <div class="timeline__item timeline__item--event timeline__item--event-goal" data-time="2" data-side="1">
+          <a href="" class="timeline__icon" title="Goal '2"></a>
+        </div>
+
+        <div class="timeline__item" data-time="3"></div>
+        <div class="timeline__item" data-time="4"></div>
+
+        <div class="timeline__item timeline__item--event timeline__item--event-goal" data-time="5" data-side="2">
+          <a href="" class="timeline__icon" title="Goal '5"></a>
+        </div>
+
+        <div class="timeline__item" data-time="6"></div>
+        <div class="timeline__item" data-time="7"></div>
+        <div class="timeline__item timeline__item--event timeline__item--event-injury" data-time="8" data-side="2">
+          <a href="" class="timeline__icon" title="Injury '8"></a>
+        </div>
+        <div class="timeline__item" data-time="9"></div>
+        <div class="timeline__item" data-time="10"></div>
+        <div class="timeline__item timeline__item--event timeline__item--event-ontarget" data-time="11" data-side="2">
+          <a href="" class="timeline__icon" title="Chance '11"></a>
+        </div>
+        <div class="timeline__item" data-time="12"></div>
+        <div class="timeline__item" data-time="13"></div>
+        <div class="timeline__item timeline__item--event timeline__item--event-freekick" data-time="14" data-side="1">
+          <a href="" class="timeline__icon" title="Free Kick '14"></a>
+        </div>
+        <div class="timeline__item" data-time="15"></div>
+        <div class="timeline__item" data-time="16"></div>
+        <div class="timeline__item timeline__item--event timeline__item--event-offtarget" data-time="17" data-side="2">
+          <a href="" class="timeline__icon" title="Missed chance '17"></a>
+        </div>
+        <div class="timeline__item" data-time="18"></div>
+        <div class="timeline__item" data-time="19"></div>
+        <div class="timeline__item timeline__item--event timeline__item--event-goal" data-time="20" data-side="1">
+          <a href="" class="timeline__icon" title="Goal '20"></a>
+        </div>
+        <div class="timeline__item" data-time="21"></div>
+        <div class="timeline__item" data-time="22"></div>
+        <div class="timeline__item" data-time="23"></div>
+        <div class="timeline__item" data-time="24"></div>
+        <div class="timeline__item" data-time="25"></div>
+        <div class="timeline__item timeline__item--event" data-time="26"></div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  const timeline = document.querySelector('.timeline__scroll');
+
+  function goto(time) {
+    let left = (time * 30);
+    timeline.scrollLeft = (left - timeline.offsetWidth) + 45;
+  }
+
+
+  goto(26);
+</script>
+
+</html>
