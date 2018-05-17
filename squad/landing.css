@@ -40,6 +40,8 @@ img {
 
 .landing-block--3 {
   /* background: linear-gradient(135deg, #8efff0 0%, #02fee4 100%); */
+  background: linear-gradient(135deg, #fdfdfd 0%, #F2F3F6 100%);
+  /* background: #F2F3F6; */
 }
 
 .landing-row {
