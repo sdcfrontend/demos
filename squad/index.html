@@ -6,109 +6,258 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box
-    }
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="squad-tile.css">
 
-    html {
-      font-family: sans-serif
-    }
-
-    .header {
-      height: 60px;
-      background: #777;
-      position: sticky;
-      top: 0;
-    }
-
-    .layout {
-      display: flex;
-      min-height: 200vh
-    }
-
-    .col1 {
-      width: 180px;
-      background: #aaa
-    }
-
-    .col2 {
-      flex: 1;
-    }
-
-    .col3 {
-      width: 25%;
-      min-width: 300px;
-      background: #ccc
-    }
-
-    .module {
-      background: #ddd;
-      border: 1px solid #eee;
-      margin: 1em;
-      min-height: 300px;
-    }
-
-    .video-module {
-      background: black;
-      position: relative;
-    }
-
-    .video-module:after {
-      content: "";
-      display: block;
-      padding-bottom: 56.25%;
-    }
-
-    .docked {
-      position: fixed;
-      top: 0;
-      width: 200px;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="header"></div>
-  <div class="layout">
-    <div class="col col1"></div>
-    <div class="col col2">
-      <div class="video">
-        <div class="module" data-role="dock">
-          <div class="video-module"></div>
+  <header class="landing-head">
+    <div class="landing-wrap">
+
+      <h1 class="landing-logo">
+        <img src="landing-logo.png" alt="">
+      </h1>
+      <p class="landing-byline">Something something something</p>
+      <div class="landing-buttons">
+        <a href="#" class="squad-button nav-li-button">Log In</a>
+        <a href="#" class="squad-button nav-su-button">Discover</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="landing-block landing-block--1">
+    <div class="landing-wrap">
+
+      <div class="landing-row landing-row--3 landing-row--text-cols">
+        <div class="landing-col">
+          <h4 class="landing-header-4 landing-header-icon-watch">Watch</h4>
+          <p class="landing-row-text-col">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores velit suscipit, necessitatibus, laborum consequatur
+            fuga perspiciatis qui voluptas dolore quo culpa exercitationem dolorem incidunt minus cupiditate vel temporibus
+            nesciunt obcaecati! </p>
+        </div>
+        <div class="landing-col">
+          <h4 class="landing-header-4 landing-header-icon-chat">Chat</h4>
+          <p class="landing-row-text-col">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo neque aperiam totam aspernatur harum. Quis corporis
+            obcaecati at alias molestiae harum cumque, quasi aut facilis, architecto veniam culpa a eaque.</p>
+        </div>
+        <div class="landing-col">
+          <h4 class="landing-header-4 landing-header-icon-engage">Engage</h4>
+          <p class="landing-row-text-col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus itaque perferendis, architecto dolorum totam
+            temporibus sit animi hic veritatis nostrum ab inventore minus, sequi quod repellendus repudiandae illum aliquid
+            esse.
+          </p>
         </div>
       </div>
-      <div class="module"></div>
-      <div class="module"></div>
-
-    </div>
-    <div class="col col3">
-      <div class="module"></div>
-      <div class="module"></div>
     </div>
   </div>
+
+  <div class="landing-block landing-block--2">
+    <div class="landing-wrap">
+      <h4 class="landing-header-3">Current live events</h4>
+      <div class="landing-row landing-row--2">
+        <div class="landing-col">
+          <div class="site-browse__list-event">
+            <div class="site-browse__list-event__info-container">
+              <img draggable="false" class="site-browse__list-event__info-container__img" width="280px" height="158px" src="https://squad-poc.herokuapp.com/assets/img/previews/football.jpg"
+                alt="">
+              <div class="site-browse__list-event__info-container__logo">
+                <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/sky-sports-football-logo.png"
+                  alt="">
+              </div>
+              <div class="site-browse__list-event__info-container__info">
+                <div class="site-browse__list-event__info-container__info__teams">
+                  <div class="site-browse__list-event__info-container__info__teams-home">
+                    <img draggable="false" height="26px" src="https://squad-poc.herokuapp.com/assets/img/teams/tottenham.png" alt="">
+                    <span>Tottenham</span>
+                  </div>
+                  <span>v</span>
+                  <div class="site-browse__list-event__info-container__info__teams-away">
+                    <span>Man Utd</span>
+                    <img draggable="false" height="26px" src="https://squad-poc.herokuapp.com/assets/img/teams/manu.png" alt="">
+                  </div>
+                </div>
+                <span class="site-browse__list-event__info-container__info__desc">Barclays Premier League, 3pm</span>
+                <a href="/#/sky-sports-football" class="site-browse__list-event__reset site-browse__list-event__info-container__info__btn">Watch event</a>
+              </div>
+            </div>
+            <div class="site-browse__list-event__streams">
+              <div class="site-browse__list-event__streams__title">
+                <span>Suggested streams</span>
+              </div>
+              <div class="site-browse__list-event__streams__break"></div>
+              <div class="site-browse__list-event__streams__stream">
+                <div class="site-browse__list-event__streams__stream__details">
+                  <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg"
+                    alt="">
+                  <div class="site-browse__list-event__streams__stream__details__text">
+                    <span class="site-browse__list-event__streams__stream__details__text__name">Football Daily</span>
+                    <span class="site-browse__list-event__streams__stream__details__text__title">C'MON UNITED!!! - @footballdailyuk</span>
+                  </div>
+                </div>
+                <a href="/#/football-daily" class="site-browse__list-event__reset site-browse__list-event__streams__stream__details__btn">Watch</a>
+              </div>
+              <div class="site-browse__list-event__streams__break"></div>
+              <div class="site-browse__list-event__streams__stream">
+                <div class="site-browse__list-event__streams__stream__details">
+                  <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/fulltime.jpg"
+                    alt="">
+                  <div class="site-browse__list-event__streams__stream__details__text">
+                    <span class="site-browse__list-event__streams__stream__details__text__name">FullTimeDEVILS</span>
+                    <span class="site-browse__list-event__streams__stream__details__text__title">Tottenham v Man Utd - watch along</span>
+                  </div>
+                </div>
+                <a href="/#/fulltime-devils" class="site-browse__list-event__reset site-browse__list-event__streams__stream__details__btn">Watch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="landing-col">
+          <div class="site-browse__list-event">
+            <div class="site-browse__list-event__info-container">
+              <img draggable="false" class="site-browse__list-event__info-container__img" width="280px" height="158px" src="https://squad-poc.herokuapp.com/assets/img/previews/football.jpg"
+                alt="">
+              <div class="site-browse__list-event__info-container__logo">
+                <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/sky-sports-football-logo.png"
+                  alt="">
+              </div>
+              <div class="site-browse__list-event__info-container__info">
+                <div class="site-browse__list-event__info-container__info__teams">
+                  <div class="site-browse__list-event__info-container__info__teams-home">
+                    <img draggable="false" height="26px" src="https://squad-poc.herokuapp.com/assets/img/teams/tottenham.png" alt="">
+                    <span>Tottenham</span>
+                  </div>
+                  <span>v</span>
+                  <div class="site-browse__list-event__info-container__info__teams-away">
+                    <span>Man Utd</span>
+                    <img draggable="false" height="26px" src="https://squad-poc.herokuapp.com/assets/img/teams/manu.png" alt="">
+                  </div>
+                </div>
+                <span class="site-browse__list-event__info-container__info__desc">Barclays Premier League, 3pm</span>
+                <a href="/#/sky-sports-football" class="site-browse__list-event__reset site-browse__list-event__info-container__info__btn">Watch event</a>
+              </div>
+            </div>
+            <div class="site-browse__list-event__streams">
+              <div class="site-browse__list-event__streams__title">
+                <span>Suggested streams</span>
+              </div>
+              <div class="site-browse__list-event__streams__break"></div>
+              <div class="site-browse__list-event__streams__stream">
+                <div class="site-browse__list-event__streams__stream__details">
+                  <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg"
+                    alt="">
+                  <div class="site-browse__list-event__streams__stream__details__text">
+                    <span class="site-browse__list-event__streams__stream__details__text__name">Football Daily</span>
+                    <span class="site-browse__list-event__streams__stream__details__text__title">C'MON UNITED!!! - @footballdailyuk</span>
+                  </div>
+                </div>
+                <a href="/#/football-daily" class="site-browse__list-event__reset site-browse__list-event__streams__stream__details__btn">Watch</a>
+              </div>
+              <div class="site-browse__list-event__streams__break"></div>
+              <div class="site-browse__list-event__streams__stream">
+                <div class="site-browse__list-event__streams__stream__details">
+                  <img draggable="false" height="50px" width="50px" src="https://squad-poc.herokuapp.com/assets/img/influencers/fulltime.jpg"
+                    alt="">
+                  <div class="site-browse__list-event__streams__stream__details__text">
+                    <span class="site-browse__list-event__streams__stream__details__text__name">FullTimeDEVILS</span>
+                    <span class="site-browse__list-event__streams__stream__details__text__title">Tottenham v Man Utd - watch along</span>
+                  </div>
+                </div>
+                <a href="/#/fulltime-devils" class="site-browse__list-event__reset site-browse__list-event__streams__stream__details__btn">Watch</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="landing-link-promo">
+        <a href="#" class="landing-link-promo-link">View all live events</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="landing-block landing-block--3">
+    <div class="landing-wrap">
+      <h4 class="landing-header-3">Partner channels</h4>
+      <div class="landing-row landing-row--6">
+        <div class="landing-col">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+        <div class="landing-col site-browse__list-item">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+        <div class="landing-col site-browse__list-item">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+        <div class="landing-col site-browse__list-item">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+        <div class="landing-col site-browse__list-item">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+        <div class="landing-col site-browse__list-item">
+          <a href="#/football-daily">
+            <img height="148px" width="148px" src="https://squad-poc.herokuapp.com/assets/img/influencers/football-daily-logo.jpg" alt="">
+            <div class="site-browse__list-item__name">
+              <span>Football Daily</span>
+            </div>
+            <div class="site-browse__list-item__viewers">
+              <span>8,011 viewers</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="landing-link-promo">
+        <a href="#" class="landing-link-promo-link">View all channels</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="landing-footer">
+    <div class="landing-wrap">
+      <img src="ss-logo-white.png" class="landing-footer-logo" alt="">
+    </div>
+  </footer>
 </body>
-<script>
-  var dock = document.querySelector('[data-role="dock"]');
-  var video = document.querySelector('.video-module');
-
-  function tick() {
-
-    var dims = dock.getBoundingClientRect();
-    if (dims.top < 1) {
-      video.classList.add('docked');
-    }
-
-    else {
-      video.classList.remove('docked');
-    }
-    requestAnimationFrame(tick)
-  }
-
-  tick();
-
-</script>
 
 </html>

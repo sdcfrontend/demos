@@ -1,0 +1,235 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+html {
+  font-family: Quicksand;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #0a132c;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+img {
+  display: block;
+}
+
+.landing-wrap {
+  max-width: 1024px;
+  padding: 38px calc(10px + 1vw);
+  margin: 0 auto;
+}
+
+.landing-footer {
+  background: #09132c
+}
+
+.landing-block--1 {
+  background: linear-gradient(135deg, #b9fff4 0%, #68ffee 100%);
+}
+
+.landing-block--2 {
+  /* background: linear-gradient(135deg, #d0fff7 0%, #75fff0 100%); */
+}
+
+.landing-block--3 {
+  /* background: linear-gradient(135deg, #8efff0 0%, #02fee4 100%); */
+}
+
+.landing-row {
+  display: grid;
+  grid-column-gap: 18px;
+}
+
+.landing-row--2 {
+  grid-template-columns: repeat(2, 1fr)
+}
+
+.landing-row--3 {
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.landing-row--6 {
+  grid-template-columns: repeat(6, 1fr)
+}
+
+.landing-row--text-cols .landing-col {
+  padding: 0 38px
+}
+
+.landing-header-4 {
+  font-size: calc(10px + 1vw);
+  font-weight: 500;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 50%;
+  position: relative;
+}
+
+.landing-header-4:before {
+  width: 1.5em;
+  height: 1em;
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translateX(-125%);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  top: 0.22em;
+}
+
+.landing-header-icon-watch:before {
+  background-image: url(TV-icon.svg)
+}
+
+.landing-header-icon-engage:before {
+  background-image: url(click.svg)
+}
+
+.landing-header-icon-chat:before {
+  background-image: url(speech.svg)
+}
+
+.landing-header-3 {
+  font-size: calc(16px + 1vw);
+  font-weight: 500;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+
+.squad-button {
+  display: inline-block;
+  border: none;
+  overflow: visible;
+  color: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  transition: 0.5s ease all;
+  font-family: Quicksand;
+  font-weight: 400;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 14px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0, rgba(255, 255, 255, 0.2));
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+
+.nav-su-button {
+  color: #6EFFE9;
+}
+
+.nav-su-button:hover {
+  background: #6EFFE9;
+  color: #0a132c;
+}
+
+.nav-li-button {
+  color: white;
+}
+
+.nav-li-button:hover {
+  background: #ffffff;
+  color: #0a132c;
+}
+
+.landing-head {
+  background: url(landing-header-bg.jpg) #09132c;
+  background-size: cover;
+  text-align: center;
+}
+
+.landing-head .landing-wrap {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.landing-buttons .squad-button {
+  width: 135px;
+  margin: 0 8px;
+}
+
+.landing-byline {
+  font-size: 1.25em;
+  color: white;
+  margin: 0 auto 1em;
+}
+
+.landing-logo {
+  max-width: 250px;
+  width: 22vw;
+  min-width: 150px;
+  margin: 0 auto 0.4em;
+}
+
+.landing-logo img {
+  width: 100%
+}
+
+.site-browse__list-item {
+  text-align: center;
+  background: #383F53
+}
+
+.site-browse__list-item__name {
+  padding: 0.75em 0;
+  background: #212121;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-browse__list-item__viewers {
+  padding: 0.5em 0;
+  background: #e2e2e2;
+  color: #212121;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-link-promo {
+  text-align: center;
+  margin: 1.25em auto 0;
+}
+
+.landing-link-promo-link {
+  font-weight: 500;
+  display: inline-block;
+  padding: 0.2em
+}
+
+.landing-link-promo-link:after {
+  content: "";
+  width: .35em;
+  height: .35em;
+  display: inline-block;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  -webkit-transform: rotate(-45deg) translateY(-1px);
+  -ms-transform: rotate(-45deg) translateY(-1px);
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: .9;
+  margin-left: .5em;
+  position: relative;
+  top: -1px
+}
+
+.landing-footer-logo {
+  height: 20px;
+  margin: 0 auto;
+}

@@ -1,0 +1,156 @@
+.site-browse__list-event {
+  /* height: 284px;
+  width: 494px; */
+  background: #0a132c;
+  /* margin-right: 16px; */
+  display: flex; 
+}
+
+  .site-browse__list-event__reset {
+    border: none;
+    /* height: 45px;
+    width: 240px; */
+    margin: 10px;
+    font-size: 20px;
+    overflow: visible;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+    transition: 0.5s ease all; }
+    .site-browse__list-event__reset:hover {
+      cursor: pointer; }
+  .site-browse__list-event__info-container {
+    /* height: 284px;
+    width: 280px; */
+    background: #F2F3F6;
+    position: relative; }
+    .site-browse__list-event__info-container__info {
+      margin-top: 19px;
+      color: #0a132c;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column; }
+      .site-browse__list-event__info-container__info__event {
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 6px; }
+      .site-browse__list-event__info-container__info__desc {
+        margin-top: 1px;
+        font-size: 12px;
+        font-weight: 300;
+        width: 100%;
+        text-align: center; }
+      .site-browse__list-event__info-container__info__btn {
+        text-align: center;
+        background: transparent;
+        color: #0a132c;
+        border: 1px solid #0a132c;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0.5em;
+        margin: 13px auto; }
+        .site-browse__list-event__info-container__info__btn:hover {
+          background: #0a132c;
+          color: #ffffff; }
+      .site-browse__list-event__info-container__info__teams {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 26px; }
+        .site-browse__list-event__info-container__info__teams-home {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+           }
+        .site-browse__list-event__info-container__info__teams-away {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-weight: 500;
+          }
+        .site-browse__list-event__info-container__info__teams img {
+          margin: 0 10px 0 10px; }
+    .site-browse__list-event__info-container__logo {
+      height: 54px;
+      width: 54px;
+      background: #ffffff;
+      position: absolute;
+      top: 120px;
+      left: calc(50% - 27px);
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .site-browse__list-event__streams {
+    /* height: 284px;
+    width: 214px; */
+    box-sizing: border-box;
+    color: #F2F3F6;
+    position: relative; }
+    .site-browse__list-event__streams__stream {
+      /* height: 120px;
+      width: 214px; */
+      display: flex;
+      flex-direction: column;
+    padding-bottom: 1em }
+      .site-browse__list-event__streams__stream__details {
+        margin: 16px 16px auto 16px;
+        display: flex; }
+        .site-browse__list-event__streams__stream__details img {
+          min-width: 50px;
+          min-height: 50px; }
+        .site-browse__list-event__streams__stream__details__btn {
+          text-align: center;
+          line-height: 26px;
+          width: 98px;
+          height: 26px;
+          background: transparent;
+          color: #F2F3F6;
+          border: 1px solid #F2F3F6;
+          border-radius: 5px;
+          font-size: 12px;
+          margin: 6px auto auto 15px; }
+          .site-browse__list-event__streams__stream__details__btn:hover {
+            background: #F2F3F6;
+            color: #0a132c; }
+        .site-browse__list-event__streams__stream__details img {
+          margin-right: 10px; }
+        .site-browse__list-event__streams__stream__details__text {
+          display: flex;
+          flex-direction: column; }
+          .site-browse__list-event__streams__stream__details__text__name {
+            font-size: 12px;
+            font-weight: 300; }
+          .site-browse__list-event__streams__stream__details__text__title {
+            font-size: 14px;
+            font-weight: 500; }
+    .site-browse__list-event__streams__break {
+      /* width: 214px; */
+      height: 1px;
+      background: #F2F3F6;
+      opacity: 0.15; }
+    .site-browse__list-event__streams__title {
+      font-size: 14px;
+      color: #F2F3F6;
+      font-weight: 500;
+      height: 41px;
+      width: 100%;
+      display: flex;
+      align-items: center; }
+      .site-browse__list-event__streams__title span {
+        margin-left: 15px; }
+    .site-browse__list-event__streams:after {
+      content: '';
+      width: 12px;
+      height: 120px;
+      opacity: 0.3;
+      background-image: linear-gradient(to left, transparent, #000000);
+      position: absolute;
+      top: 0;
+      left: 0; }
