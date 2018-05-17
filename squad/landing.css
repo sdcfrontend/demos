@@ -213,6 +213,10 @@ img {
   padding: 0.2em
 }
 
+.landing-link-promo-link:hover {
+  text-decoration: underline;
+}
+
 .landing-link-promo-link:after {
   content: "";
   width: .35em;
