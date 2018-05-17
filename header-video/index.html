@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9876/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/sdc-site-charts.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: #333;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+.site-wrap, .sdc-site-match-header__wrapper {
+  max-width: 1024px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.site-wrap-padding, .section-wrap__article-column, .sdc-site-match-header__wrapper {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-indent[class] {
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.site-component-vertical-margin {
+  margin-bottom: 30px; }
+
+.site-component-vertical-margin-negative {
+  margin-top: -30px; }
+
+.site-component-vertical-margin-l {
+  margin-bottom: 70px; }
+
+.site-component-vertical-margin-s {
+  margin-bottom: 18px; }
+
+.section-wrap {
+  background: white; }
+
+.section-wrap--padding {
+  padding: 30px 0; }
+
+.section-wrap--shade {
+  padding: 65px 0 75px; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (min-width: 600px) and (max-width: 899px) {
+  .site-wrap-padding, .section-wrap__article-column, .sdc-site-match-header__wrapper {
+    padding-left: 5vw;
+    padding-right: 5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 24px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -24px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 50px; } }
+
+@media all and (max-width: 600px) {
+  .site-wrap-padding, .section-wrap__article-column, .sdc-site-match-header__wrapper {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw; }
+  .site-component-vertical-margin {
+    margin-bottom: 18px; }
+  .site-component-vertical-margin-negative {
+    margin-top: -18px; }
+  .site-component-vertical-margin-l {
+    margin-bottom: 36px; }
+  .section-wrap--shade {
+    padding: 50px 0; }
+  .section-wrap--padding {
+    padding: 30px 0; } }
+
+@media all and (max-width: 480px) {
+  .site-wrap-padding, .section-wrap__article-column, .sdc-site-match-header__wrapper,
+  .site-indent[class] {
+    padding-left: 16px;
+    padding-right: 16px; }
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner, .sdc-site-tiles__inner.sdc-site-match-header__wrapper {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+  @supports (mix-blend-mode: overlay) { }
+
+.glints-box, .sdc-site-match-header__body {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before, .sdc-site-match-header__body:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+@supports (pointer-events: none) { }
+
+.glints-box-padding {
+  padding: 1.8em; }
+
+@media all and (max-width: 600px) {
+  .glints-box-padding {
+    padding: 1.4em; } }
+
+@media all and (max-width: 480px) {
+  .glints-box-padding {
+    padding: 1em 16px; } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-site-match-header__links {
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  color: #4a4a4a; }
+
+.sdc-site-match-header__links > li:not(:last-of-type) {
+  margin-bottom: 0.25em; }
+
+.sdc-site-match-header__links > li > a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2em 0;
+  line-height: 1;
+  vertical-align: middle; }
+
+.sdc-site-match-header__links > li > a:hover {
+  background: none;
+  text-decoration: underline;
+  text-decoration-skip: ink; }
+
+.sdc-site-match-header__links > li > a:after {
+  content: "";
+  width: 0.35em;
+  height: 0.35em;
+  display: inline-block;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: 0.9;
+  margin-left: 0.25em; }
+
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-site-tile__significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--breaking[class] {
+  color: #000000;
+  background: #ffe001;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-site-tile__significance--live[class] {
+  color: #ffffff;
+  background: #d0021b;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--transfer[class] {
+  color: #ffe001;
+  background: #000000;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+.sdc-site-tile__significance--update[class] {
+  color: #ffffff;
+  background: #0a1388;
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08; }
+
+/* SDC site match area skin
+  =========================================== */
+/* sdc-site-match-header */
+/* ========= */
+/* SKIN */
+/* Default styling paramters for this component that can be overwritten at project level */
+/* ========= */
+/* COMPONENT */
+/* The main structural styles to create a vanilla version of this component */
+/* ========= */
+@keyframes goalflash {
+  0 {
+    color: black; }
+  50% {
+    color: transparent; }
+  100% {
+    color: black; } }
+
+.sdc-site-match-header {
+  background: linear-gradient(to bottom, #101050 0%, #15156a 100%);
+  font-size: 1em;
+  padding: 1em 0;
+  color: #f4f5f7; }
+
+.sdc-site-match-header__body {
+  max-width: 1024px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  padding: 0 1em 2em; }
+
+.sdc-site-match-header__detail {
+  text-align: center;
+  font-weight: normal;
+  padding: 1.75em 0 1.25em;
+  line-height: 1.4; }
+
+.sdc-site-match-header__detail-time,
+.sdc-site-match-header__detail-competition {
+  display: inline-block;
+  padding: 0 0.2em; }
+
+.sdc-site-match-header__status {
+  text-align: center; }
+
+.sdc-site-match-header__status-result:after {
+  background-color: white;
+  color: #222222; }
+
+.sdc-site-match-header__status-live:after {
+  background-color: #d0021b;
+  color: white;
+  content: attr(data-label-live); }
+
+.sdc-site-match-header__status-result:after,
+.sdc-site-match-header__status-live:after {
+  font-size: 0.8em;
+  padding: 0.6em 0.9em;
+  margin-bottom: -0.5em;
+  display: inline-block; }
+
+.sdc-article-video__media-icon {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 2;
+  pointer-events: none; }
+
+.sdc-article-video__media-icon-body {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 14%;
+  min-width: 50px;
+  max-width: 115px;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  z-index: 2;
+  pointer-events: none; }
+  .sdc-article-video__media-icon-body:after {
+    content: '';
+    padding-bottom: 100%;
+    display: block; }
+  .sdc-article-video__media-icon-body > svg {
+    position: absolute;
+    width: 100%;
+    fill: white; }
+  .sdc-article-video__media-icon-body svg[data-role="icon-play"] {
+    display: block; }
+
+.sdc-site-match-header__content-wrapper {
+  display: flex;
+  margin: 1em 2em;
+  overflow: hidden; }
+
+.sdc-site-match-header__video-viewer {
+  height: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 2em -1em 1em -1em;
+  position: relative; }
+
+.sdc-site-match-header__video-viewer .sdc-site-match-header__button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: block !important;
+  z-index: 2; }
+
+.sdc-site-match-header__video-player {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s; }
+
+.sdc-site-match-header__video-player-image {
+  display: block; }
+
+.sdc-site-match-header__match-info {
+  flex: 1;
+  padding-top: 0.5em;
+  transition: flex-basis 1s; }
+
+.sdc-site-match-header__video {
+  flex: 0 0 220px;
+  transition: margin 1s, border 1s;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  margin-left: 2em;
+  padding-left: 2em; }
+
+.sdc-site-match-header__video-thumbnail {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden; }
+
+.sdc-site-match-header__video-image {
+  width: 100%;
+  height: auto;
+  position: absolute; }
+
+.sdc-site-match-header__video-details {
+  margin-top: 1em; }
+
+.sdc-site-match-header__video-title {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin: 0 0 0.3em 0; }
+
+.sdc-site-match-header__button {
+  border: 1px solid #fff;
+  background: none;
+  border-radius: 4px;
+  padding: 0.35em 0.8em 0.45em 0.8em;
+  font-family: inherit;
+  font-weight: 500;
+  color: #fff;
+  pointer: cursor; }
+
+.sdc-site-match-header__button--small {
+  font-size: 0.8em; }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__video-viewer[docked] {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 0; }
+  .sdc-site-match-header__content[expanded] .sdc-site-match-header__video-viewer[docked] .sdc-site-match-header__button {
+    background: #000; }
+  .sdc-site-match-header__content[expanded] .sdc-site-match-header__video-viewer[docked] .sdc-site-match-header__video-player {
+    max-width: 300px;
+    transition: max-width 0.5s;
+    opacity: 1; }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__match-info {
+  flex-basis: 100%; }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__video {
+  margin-right: -220px;
+  border-color: rgba(255, 255, 255, 0); }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__video-viewer {
+  height: auto; }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__video-player {
+  opacity: 1; }
+
+.sdc-site-match-header__content[expanded] .sdc-site-match-header__video-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden; }
+
+@media all and (max-width: 850px) {
+  .sdc-site-match-header__content .sdc-site-match-header__team-name-block:after {
+    content: attr(data-short-name); }
+  .sdc-site-match-header__content .sdc-site-match-header__team-name-block-target {
+    display: none; }
+  .sdc-site-match-header__content .sdc-site-match-header__teams {
+    padding-top: 83px; }
+  .sdc-site-match-header__content .sdc-site-match-header__team-badge {
+    position: absolute;
+    top: 2px; }
+  .sdc-site-match-header__content .sdc-site-match-header__team-badge--away {
+    margin-left: 84px; }
+  .sdc-site-match-header__content .sdc-site-match-header__team {
+    position: static; }
+  .sdc-site-match-header__content .sdc-site-match-header__team-name {
+    position: relative; }
+  .sdc-site-match-header__content .sdc-site-match-header__team-synopsis {
+    position: static;
+    margin-top: 0;
+    padding-left: 0; }
+  .sdc-site-match-header__content .sdc-site-match-header__status-result:after, .sdc-site-match-header__content .sdc-site-match-header__status-live:after {
+    margin-bottom: -0.64em; }
+  .sdc-site-match-header__content .sdc-site-match-header__note + .sdc-site-match-header__note {
+    padding-top: 0.5em; }
+  .sdc-site-match-header__content .sdc-site-match-header__detail {
+    padding: 1.5em 0 1em; }
+  .sdc-site-match-header__content-wrapper {
+    display: block;
+    margin-right: 1em;
+    margin-left: 1em; }
+  .sdc-site-match-header__video {
+    max-width: 600px;
+    margin: 1.5em auto 0.5em auto;
+    display: table;
+    table-layout: fixed; }
+  .sdc-site-match-header__video-thumbnail {
+    width: 50%;
+    padding-bottom: 28.125%;
+    display: table-cell; }
+  .sdc-site-match-header__video-details {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 1em;
+    width: 100%; }
+  .sdc-site-match-header__video-image {
+    position: absolute; }
+  .sdc-site-match-header__match-info {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 0;
+    padding-bottom: 2em;
+    padding-right: 0;
+    max-width: 600px;
+    margin: 0 auto; } }
+
+@media all and (max-width: 450px) {
+  .sdc-site-match-header__content-wrapper {
+    margin-bottom: 0; }
+  .sdc-site-match-header__video-thumbnail {
+    width: 4em;
+    height: 4em;
+    padding: 0;
+    display: block; }
+  .sdc-site-match-header__video-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%; }
+  .sdc-site-match-header__video-details {
+    padding-left: 1em; } }
+
+.sdc-site-match-header__teams {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto 12px; }
+
+.sdc-site-match-header__team {
+  display: table;
+  width: 100%;
+  position: relative; }
+
+.sdc-site-match-header__team ~ .sdc-site-match-header__team {
+  margin-top: 0.5em; }
+
+.sdc-site-match-header__team > span {
+  display: table-cell;
+  vertical-align: top;
+  line-height: 1; }
+
+.sdc-site-match-header__team-name-block {
+  font-size: 1.8em;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.3em 0; }
+
+.sdc-site-match-header__team-name-block[href]:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0; }
+
+.sdc-site-match-header__team-badge {
+  width: 80px;
+  vertical-align: top !important;
+  position: relative;
+  top: -5px; }
+
+.sdc-site-match-header__team-badge-image {
+  width: 68px;
+  height: 68px;
+  max-width: 68px; }
+
+.sdc-site-match-header__team-score {
+  width: 1.6em; }
+
+.sdc-site-match-header__team-score-block {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 1.6em;
+  height: 1.4em;
+  font-size: 2em;
+  background-color: #d0021b;
+  color: white; }
+
+.sdc-site-match-header__team-score-block:after {
+  position: absolute;
+  padding: 1px;
+  background-color: inherit;
+  color: inherit;
+  left: 50%;
+  top: 50%;
+  margin-left: -20%;
+  margin-top: -35%; }
+
+.sdc-site-match-header__note {
+  text-align: center;
+  padding: 1em 0 0; }
+
+.sdc-site-match-header__note[data-label]:before {
+  content: attr(data-label) " "; }
+
+.sdc-site-match-header__note:empty {
+  display: none; }
+
+.sdc-site-match-header__team-synopsis {
+  font-size: 0.9em;
+  line-height: 1.34;
+  position: relative;
+  margin-top: -1.25em;
+  list-style: none;
+  padding: 0 0 0 80px; }
+
+.sdc-site-match-header__team-synopsis-item {
+  display: inline-block;
+  margin-right: 0.2em; }
+
+.sdc-site-match-header__team-synopsis-item:first-of-type {
+  margin-left: 0.2em; }
+
+.sdc-site-match-header__team-synopsis-item:not(:last-child):after {
+  content: ", "; }
+
+.sdc-site-match-header__team-synopsis:empty {
+  display: none; }
+
+.sdc-site-match-header__icon-red {
+  display: inline-block;
+  background-color: #d0021b;
+  width: 0.6em;
+  height: 0.8em;
+  vertical-align: baseline;
+  position: relative;
+  top: 1px; }
+
+/* STATUS CHANGES
+for reference see here https://tools.skybet.net/confluence/display/SSDM/Football+Statuses
+0: "KO", // is a fixture
+1: "IP", // kick off
+2: "HT", // half time (could change to HT if we want to show that)
+3: "IP", // second half started
+4: "FT", // full time
+5: "ET", // extra time to be played
+6: "ET", // extra time started
+7: "ET", // extra time 2nd half started
+8: "AET", // extra time full time
+9: "ET", // extra time full time penalties being played
+10: "ET", // penalties
+11: "AET", // penalties complete
+12: "FT", // result
+13: "P-P", // postponed
+14: "IP", // suspended
+15: "IP", // resumed
+16: "C-C", // cancelled
+17: "A-A", // abandonded
+18: "ET", // ET
+21: "ET", // extra time half time
+30: "KO", // teams in
+40: "IP", // second half complete
+50: "ET" // extra time complete
+*/
+.sdc-site-match-header[data-sport="football"][data-status="0"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="30"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="0"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="4"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="8"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="11"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="12"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="13"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="16"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="17"] .sdc-site-match-header__status-live,
+.sdc-site-match-header[data-sport="football"][data-status="30"] .sdc-site-match-header__status-live {
+  display: none; }
+
+.sdc-site-match-header[data-sport="football"][data-status="4"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="8"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="11"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="12"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="13"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="16"] .sdc-site-match-header__team-score-block,
+.sdc-site-match-header[data-sport="football"][data-status="17"] .sdc-site-match-header__team-score-block {
+  background-color: white;
+  color: #222222;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  animation: none !important; }
+
+.sdc-site-match-header[data-sport="football"][data-status="4"] .sdc-site-match-header__status-result:not([data-label-ft=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="12"] .sdc-site-match-header__status-result:not([data-label-ft=""]):after {
+  content: attr(data-label-ft); }
+
+.sdc-site-match-header[data-sport="football"][data-status="8"] .sdc-site-match-header__status-result:not([data-label-aet=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="11"] .sdc-site-match-header__status-result:not([data-label-aet=""]):after {
+  content: attr(data-label-aet); }
+
+.sdc-site-match-header[data-sport="football"][data-status="2"] .sdc-site-match-header__status-live:not([data-label-ht=""]):after {
+  content: attr(data-label-ht); }
+
+.sdc-site-match-header[data-sport="football"][data-status="5"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="6"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="7"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="9"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="10"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="18"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="21"] .sdc-site-match-header__status-live:not([data-label-et=""]):after,
+.sdc-site-match-header[data-sport="football"][data-status="50"] .sdc-site-match-header__status-live:not([data-label-et=""]):after {
+  content: attr(data-label-et); }
+
+.sdc-site-match-header[data-sport="football"][data-status="13"] .sdc-site-match-header__team-score-block:after {
+  content: attr(data-label-postponed); }
+
+.sdc-site-match-header[data-sport="football"][data-status="16"] .sdc-site-match-header__team-score-block:after {
+  content: attr(data-label-cancelled); }
+
+.sdc-site-match-header[data-sport="football"][data-status="17"] .sdc-site-match-header__team-score-block:after {
+  content: attr(data-label-abandoned); }
+
+.sdc-site-match-header__team-score-block[data-updated] {
+  background: #ffcc00 !important;
+  color: black;
+  animation: goalflash 1s ease-in-out 15; }
+
+.sdc-site-match-header__tv-details {
+  text-align: center;
+  padding-top: 1.25em;
+  color: inherit; }
+
+.sdc-site-match-header__tv-details-logo {
+  vertical-align: middle;
+  height: 18px;
+  margin: 0 5px; }
+
+.sdc-site-match-header__links {
+  text-align: center;
+  padding-top: 0.9em;
+  color: inherit;
+  line-height: 1.6; }
+
+.sdc-site-match-header__links > li {
+  display: inline-block;
+  padding: 0 0.5em; }
+
+@media all and (max-width: 600px) {
+  .sdc-site-match-header {
+    font-size: 0.9em; }
+  .sdc-site-match-header__team-synopsis,
+  .sdc-site-match-header__detail,
+  .sdc-site-match-header__note {
+    font-size: 16px; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-match-header__team-name-block:after {
+    content: attr(data-short-name); }
+  .sdc-site-match-header__team-name-block-target {
+    display: none; }
+  .sdc-site-match-header__teams {
+    padding-top: 83px; }
+  .sdc-site-match-header__team-badge {
+    position: absolute;
+    top: 2px; }
+  .sdc-site-match-header__team-badge--away {
+    margin-left: 84px; }
+  .sdc-site-match-header__team {
+    position: static; }
+  .sdc-site-match-header__team-name {
+    position: relative; }
+  .sdc-site-match-header__team-synopsis {
+    position: static;
+    margin-top: 0;
+    padding-left: 0; }
+  .sdc-site-match-header__status-result:after, .sdc-site-match-header__status-live:after {
+    margin-bottom: -0.64em; }
+  .sdc-site-match-header__note + .sdc-site-match-header__note {
+    padding-top: 0.5em; }
+  .sdc-site-match-header__detail {
+    padding: 1.5em 0 1em; } }
+
+@media all and (max-width: 400px) {
+  .sdc-site-match-header {
+    font-size: 0.87em; }
+  .sdc-site-match-header__body {
+    padding-bottom: 1.5em; } }
+</style></head>
+<body>
+
+  <div id="container"></div>
+  <div style="height: 300vh;">
+<div class="sdc-site-match-header" data-component-name="sdc-site-match-header" data-status="1" data-sport="football">
+  <div class="sdc-site-match-header__wrapper">
+    <div class="sdc-site-match-header__body">
+
+      <div class="sdc-site-match-header__status">
+        <div class="sdc-site-match-header__status-result" data-label-ft="FT" data-label-aet="AET"></div>
+
+        <span class="sdc-site-match-header__status-live" data-label-live="LIVE" data-label-et="ET" data-label-ht="HT"></span>
+      </div>
+
+      <div class="sdc-site-match-header__detail">
+        <p class="sdc-site-match-header__detail-fixture">Bayern Munich vs Bayer Leverkusen</p>
+        <p class="sdc-site-match-header__detail-competition">European Championships Semi-final</p>
+        <time class="sdc-site-match-header__detail-time">17:00 Saturday 17th November</time>
+      </div>
+
+        <div class="sdc-site-match-header__content" data-role="match-header-content">
+          <div class="sdc-site-match-header__content-wrapper">
+            <div class="sdc-site-match-header__match-info">
+
+      <div class="sdc-site-match-header__teams">
+
+        <h4 class="sdc-site-match-header__team">
+          <span class="sdc-site-match-header__team-badge sdc-site-match-header__team-badge--home">
+            <img src="./index_files/530.png" alt="" class="sdc-site-match-header__team-badge-image" aria-hidden="true">
+          </span>
+          <span class="sdc-site-match-header__team-name sdc-site-match-header__team-name--home">
+            <a href="http://localhost:9876/bayern-munich/" class="sdc-site-match-header__team-name-block" data-short-name="Bayern">
+              <span class="sdc-site-match-header__team-name-block-target">Bayern Munich</span>
+            </a>
+          </span>
+          <span class="sdc-site-match-header__team-score">
+            <span class="sdc-site-match-header__team-score-block" data-update="score-home" data-label-postponed="P" data-label-cancelled="C" data-label-abandoned="A">1</span>
+          </span>
+        </h4>
+        <ul class="sdc-site-match-header__team-synopsis" data-update="synopsis-home" data-penalty="pen" data-owngoal="og" data-redcard="s/o" data-update-template-event="&lt;li&gt;#{player}&lt;/li&gt;" data-update-template-sent-off="&lt;span class=&#39;sdc-site-match-header__icon-red&#39;&gt;&lt;/span&gt;"></ul>
+
+        <h4 class="sdc-site-match-header__team">
+          <span class="sdc-site-match-header__team-badge sdc-site-match-header__team-badge--away">
+            <img src="./index_files/934.png" alt="" class="sdc-site-match-header__team-badge-image" aria-hidden="true">
+          </span>
+          <span class="sdc-site-match-header__team-name sdc-site-match-header__team-name--away">
+            <a href="http://localhost:9876/bayer-levurkusen/" class="sdc-site-match-header__team-name-block" data-short-name="Leverkusen">
+              <span class="sdc-site-match-header__team-name-block-target">Bayer Leverkusen</span>
+            </a>
+          </span>
+          <span class="sdc-site-match-header__team-score">
+            <span class="sdc-site-match-header__team-score-block" data-update="score-away" data-label-postponed="P" data-label-cancelled="C" data-label-abandoned="A">1</span>
+          </span>
+        </h4>
+        <ul class="sdc-site-match-header__team-synopsis" data-update="synopsis-away" data-penalty="pen" data-owngoal="og" data-redcard="s/o" data-update-template-event="&lt;li&gt;#{player}&lt;/li&gt;" data-update-template-sent-off="&lt;span class=&#39;sdc-site-match-header__icon-red&#39;&gt;&lt;/span&gt;"></ul>
+
+
+      </div>
+
+      <p class="sdc-site-match-header__note" data-update="score-aggregate" data-label="Agg:"></p>
+      <p class="sdc-site-match-header__note" data-update="status-note"></p>
+
+            </div>
+
+            <div class="sdc-site-match-header__video">
+              <div class="sdc-site-match-header__video-thumbnail">
+                <img class="sdc-site-match-header__video-image" src="./index_files/article-0-1AB404BC00000578-195_634x385.jpg" alt="The Blue Corner" data-role="match-header-expand-video">
+              </div>
+
+              <div class="sdc-site-match-header__video-details">
+                <h4 class="sdc-site-match-header__video-title" data-role="match-header-expand-video">The Blue Corner</h4>
+
+                <button class="sdc-site-match-header__button sdc-site-match-header__button--small" data-role="match-header-expand-video">Watch Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="sdc-site-match-header__video-viewer" data-role="video-viewer">
+            <button class="sdc-site-match-header__button sdc-site-match-header__button--small" data-role="match-header-expand-video">Close</button>
+
+            <div class="sdc-site-match-header__video-player">
+              <img class="sdc-site-match-header__video-player-image" src="./index_files/article-0-1AB404BC00000578-195_634x385.jpg" alt="The Blue Corner">
+              <span class="sdc-article-video__media-icon">
+                  <span class="sdc-article-video__media-icon-body">
+                    <svg data-role="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384"><path d="M192 24.001c92.641 0 167.998 75.358 167.998 167.995s-75.357 168.002-167.998 168.002c-92.636 0-167.999-75.365-167.999-168.002 0-92.636 75.363-167.995 167.999-167.995m0-24.001c-106.036 0-192 85.957-192 191.996 0 106.047 85.964 192.004 192 192.004 106.035 0 192-85.957 192-192.004 0-106.039-85.965-191.996-192-191.996z"></path><path d="M255.725 182.848l-66.186-65.91c-10.206-10.173-25.115-22.229-38.009-9.36v168.844c12.894 12.861 27.803.807 38.009-9.367l66.186-65.902c5.068-5.055 5.068-13.258 0-18.305z"></path></svg>
+                  </span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sdc-site-match-header__tv-details" aria-label="Live on - Sky Sports 1">
+          <span aria-hidden="true">Live on <img class="sdc-site-match-header__tv-details-logo" src="./index_files/Sky-Sports-1-Logo.svg" alt="Sky Sports 1"></span>
+        </div>
+        <ul class="sdc-site-match-header__links">
+            <li><a href="http://sky.de/jetzt-sky-bestellen" target="_blank">Jetzt Sky bestellen</a></li>
+            <li><a href="http://sky.de/jetzt-tagesticket-holen" target="_blank">Jetzt Tagesticket holen</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+
+  <script src="./index_files/bundle.js"></script>
+
+
+
+</body></html>
