@@ -205,6 +205,10 @@ img {
   align-items: center;
 }
 
+.site-browse__list-item__image {
+  width: 147px;
+}
+
 .landing-link-promo {
   text-align: center;
   margin: 1.25em auto 0;
