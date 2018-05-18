@@ -47,6 +47,7 @@ img {
 .landing-row {
   display: grid;
   grid-column-gap: 18px;
+  overflow: auto;
 }
 
 .landing-row--2 {
@@ -238,4 +239,13 @@ img {
 .landing-footer-logo {
   height: 20px;
   margin: 0 auto;
+}
+
+@media all and (max-width: 920px){
+  .landing-row--3 {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: none;
+    grid-row-gap: 2em
+  }
+  
 }
