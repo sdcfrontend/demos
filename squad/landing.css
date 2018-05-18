@@ -77,13 +77,13 @@ img {
 }
 
 .landing-header-4:before {
-  width: 1.5em;
+  width: 1.3em;
   height: 1em;
   content: "";
   position: absolute;
   left: 0;
   transform: translateX(-125%);
-  background-size: auto 100%;
+  background-size: auto 90%;
   background-repeat: no-repeat;
   background-position: right center;
   top: 0.22em;
