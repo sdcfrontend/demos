@@ -1,0 +1,29 @@
+[
+  {
+    "id": 12345,
+    "start": "11:45",
+    "status": "ns",
+    "scores": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": 12346,
+    "start": "12:30",
+    "status": "ip",
+    "scores": {
+      "home": 0,
+      "away": 1
+    }
+  },
+  {
+    "id": 12347,
+    "start": "12:30",
+    "status": "ft",
+    "scores": {
+      "home": 1,
+      "away": 1
+    }
+  }
+]

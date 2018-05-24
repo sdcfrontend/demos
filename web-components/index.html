@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      background: #eee
+    }
+  </style>
+</head>
+
+
+<body>
+  <fixture-group data-url="scores.json">
+    <fixture-item data-id="12345" data-status="ns">
+      <span slot="home">Arsenal</span>
+      <span slot="time">vs</span>
+      <span slot="score-home"></span>
+      <span slot="away">Man Utd</span>
+      <span slot="score-away"></span>
+    </fixture-item>
+
+    <fixture-item data-id="12346" data-status="ip">
+      <span slot="home">Arsenal</span>
+      <span slot="time"></span>
+      <span slot="score-home">0</span>
+      <span slot="away">Man Utd</span>
+      <span slot="score-away">0</span>
+    </fixture-item>
+  </fixture-group>
+
+  <fixture-item data-id="12347" data-status="ft">
+    <span slot="home">Arsenal</span>
+    <span slot="time"></span>
+    <span slot="score-home">0</span>
+    <span slot="away">Man Utd</span>
+    <span slot="score-away">0</span>
+  </fixture-item>
+  </fixture-group>
+
+  <script>
+
+    (function () {
+
+      const template = document.createElement('template');
+
+      template.innerHTML = `
+      <style>
+        :host {
+          all: initial;
+          display: block;
+          contain: content;
+          text-align: center;
+          background: #eee;
+          margin: 0 auto 5px;
+          font-family: sans-serif;
+          border: 1px solid #ccc;
+          font-size: 18px;
+        }
+
+        ::slotted([slot]) {
+          all: initial!important;
+        }
+
+        .grid {
+          background: #fff;
+          display: grid;
+          grid-template-columns: 1fr 30px 30px 1fr;
+          height: 37px;
+          grid-column-gap: 2px
+        }
+
+        .cell {
+          display: flex;
+          align-items: center;
+          padding: 0 0.5em
+        }
+
+        .cell:first-of-type {
+          justify-content: flex-end
+        }
+
+        .cell2 {
+          justify-content: center;
+          background: black;
+          color: white;
+          display: none
+        }
+
+        .cell3,
+        .cell4 {
+          background: white;
+          border: 1px solid #ccc;
+          justify-content: center;
+          transition: background 0.33s
+        }
+
+        :host([data-status="ns"]) .grid {
+          grid-template-columns: 1fr 62px 1fr;
+        }
+
+        :host([data-status="ns"]) .cell3,
+        :host([data-status="ns"]) .cell4 {
+          display: none
+        }
+
+        :host([data-status="ns"]) .cell2 {
+          display: flex
+        }
+
+        :host([data-status="ip"]) .grid {
+          grid-template-columns: 1fr 30px 30px 1fr
+        }
+
+        :host([data-status="ip"]) .cell2 {
+          display: none
+        }
+
+        :host([data-status="ft"]) .cell3,
+        :host([data-status="ft"]) .cell4 {
+          background: red;
+          border-color: red;
+          color: white
+        }
+
+        @keyframes goal {
+          50% {
+            background: #ffcc00;
+            color: black;
+          }
+        }
+
+        [data-update] {
+          animation: goal 1s 5
+        }
+      </style>
+      <div class="grid">
+        <div class="cell cell1">
+          <slot name="home"></slot>
+        </div>
+        <div class="cell cell2">
+          <slot name="time"></slot>
+        </div>
+        <div class="cell cell3" data-role="score-home">
+          <slot name="score-home"></slot>
+        </div>
+        <div class="cell cell4" data-role="score-away">
+          <slot name="score-away"></slot>
+        </div>
+        <div class="cell cell5">
+          <slot name="away"></slot>
+        </div>
+      </div>
+      `;
+
+      class FixtureGroup extends HTMLElement {
+        constructor() {
+          super();
+          const root = this;
+          function getdata() {
+            fetch(root.dataset.url)
+              .then(function (response) {
+                return response.json()
+              })
+              .then(function (json) {
+                update(json)
+              })
+          };
+
+          function update(json) {
+            json.forEach(function (item) {
+              let row = root.querySelector(`[data-id="${item.id}"]`);
+              if (row) {
+                row.update = item;
+              }
+            })
+          }
+
+          setInterval(function () {
+            getdata()
+          }, 4000);
+
+          getdata()
+
+        }
+      }
+
+      class FixtureItem extends HTMLElement {
+        constructor() {
+
+          super();
+
+          this.attachShadow({ mode: 'open' });
+          this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+          var observer = new MutationObserver(function (mo) {
+            mo.forEach(function (m) {
+              updateme(m.target.assignedSlot.parentNode)
+            })
+          });
+
+          observer.observe(this.querySelector('[slot="score-home"]'), { attributes: true, childList: true });
+          observer.observe(this.querySelector('[slot="score-away"]'), { attributes: true, childList: true });
+
+        }
+
+        set update(value) {
+          this.querySelector('[slot="score-home"]').textContent = value.scores.home;
+          this.querySelector('[slot="time"]').textContent = value.start;
+          this.querySelector('[slot="score-away"]').textContent = value.scores.away;
+          this.setAttribute('data-status', value.status);
+        }
+
+      }
+
+      window.customElements.define('fixture-item', FixtureItem);
+      window.customElements.define('fixture-group', FixtureGroup);
+
+      function updateme(node, timeout) {
+        node.setAttribute('data-update', true);
+        setTimeout(function () {
+          node.removeAttribute('data-update');
+        }, timeout || 3000)
+      }
+
+    })();
+
+  </script>
+</body>
+
+</html>
