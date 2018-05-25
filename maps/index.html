@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .sdc-map-embed {
+      all: initial;
+      display: block;
+      height: 90vh;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sdc-map-embed" data-role="map-embed"></div>
+  <script>
+
+    var pins = [
+      {
+        "label": "1",
+        "title": "Eastborne",
+        "coords": { lat: 50.618955, lng: 0.166214 },
+        "content": "<p>Something about Eastborne</p>"
+      },
+      {
+        "label": "2",
+        "title": "Brighton",
+        "coords": { lat: 50.68955, lng: -0.5 },
+        "content": "<p>Something about Brighton</p>"
+      },
+      {
+        "label": "3",
+        "title": "Portsmouth",
+        "coords": { lat: 50.58955, lng: -1 },
+        "content": "<p>Something about Portsmouth</p>"
+      }
+    ]
+
+
+    function initMap() {
+
+      var map = document.querySelector('[data-role="map-embed"]');
+      var path = [];
+
+      var map = new google.maps.Map(map, {
+        zoom: 8,
+        center: pins[pins.length - 1].coords
+      });
+
+      pins.forEach(function (pin, index) {
+
+        pin['marker' + [index]] = new google.maps.Marker({
+          position: pin.coords,
+          map: map,
+          label: pin.label,
+          title: pin.title,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 5,
+            strokeColor: 'red',
+            strokeWeight: 10
+          }
+        });
+
+        pin['info' + [index]] = new google.maps.InfoWindow({
+          content: pin.content
+        });
+
+        pin['marker' + [index]].addListener('click', function () {
+          pin['info' + [index]].open(map, pin['marker' + [index]]);
+        });
+
+        path.push(pin.coords);
+
+      })
+
+      var swimpath = new google.maps.Polyline({
+        path: path,
+        geodesic: true,
+        strokeColor: 'red',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      });
+
+      swimpath.setMap(map);
+    }
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxA8_FD_ipxpqI43ow6SRgwibrz-9e0KQ&callback=initMap">
+  </script>
+</body>
+
+</html>
