@@ -73,7 +73,16 @@
         });
 
         pin['marker' + [index]].addListener('click', function () {
+
+          for (var i = -1; ++i < pins.length;) {
+            var otherpin = pins[i]['info' + i];
+            if (otherpin) {
+              otherpin.close();
+            }
+          }
+
           pin['info' + [index]].open(map, pin['marker' + [index]]);
+
         });
 
         path.push(pin.coords);
