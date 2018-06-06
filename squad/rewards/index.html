@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif
+    }
+
+    .rewards {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+      color: white;
+      font-family: inherit
+    }
+    
+    .rewards__rail {
+      height: 400%;
+      display: flex;
+      flex-direction: column
+    }
+
+    .rewards__slide {
+      background: url(pitch-bg.png);
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      transition: 0.4s opacity;
+      will-change: opacity;
+    }
+
+    .rewards__slide--1 {
+      z-index: 10
+    }
+
+    .rewards__slide--2 {
+      z-index: 9
+    }
+
+    .rewards__slide--3 {
+      z-index: 8
+    }
+
+    .rewards__slide--4 {
+      z-index: 7
+    }
+    
+    .rewards__slide-title,
+    .rewards__slide-sub-title {
+      text-align: center;
+      padding: 1em;
+      font-size: 24px;
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative;
+      top: 5px
+    }
+
+    .rewards__slide-sub-title {
+      font-size: 18px;
+      top: -5px;
+
+    }
+
+    .rewards__slide-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 12%;
+      position: relative;
+    }
+
+    .rewards__slide-content--row {
+      flex-direction: row;
+    }
+
+    .rewards__bar {
+      width: 60%;
+      height: 18px;
+      background: #253819;
+      position: relative;
+      border-radius: 9px/50%;
+      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.5))
+    }
+
+    .rewards__bar:before,
+    .rewards__bar:after {
+      content: "";
+      width: 75px;
+      height: 75px;
+      background:url(LVL0.png);
+      background-size: 100%;
+      border-radius: 50%;
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translate(50%, -50%);
+      z-index: 2
+    }
+
+    .rewards__bar:after {
+      right: auto;
+      left: 100%;
+      transform: translate(-50%, -50%);
+      background:url(LVL1.png);
+      background-size: 100%;
+    }
+
+    .rewards__bar span {
+      position: absolute;
+      height: 100%;
+      width: 1%;
+      background: #6effe9;
+      border-radius: 9px/50%;
+      transition: 1.33s width ease-in;
+      will-change: width;
+    }
+
+    .slide1-on .rewards__bar span {
+      width: 100%
+    }
+
+    .rewards__card {
+      width: 20%;
+      background: url(gold-card.png);
+      background-size: 100%;
+      position: relative;
+      z-index: 3;
+      transform-origin: 0;
+      transition: 0.4s transform ease-in;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+      will-change: transform;
+    }
+
+    .rewards__card:before {
+      content: "";
+      display: block;
+      padding-bottom: 140%
+    }
+
+    .rewards__card:after {
+      /* content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: -40px;
+      left: -45px;
+      background: url(top-card-shine.png);
+      background-size: 100%; */
+    } 
+
+    .rewards__card--silver {
+      background-image: url(silver-card.png);
+      z-index: 2;
+      transform-origin: 100%;
+      transform: rotate(-15deg) translateX(30%) scale(0.85)
+    }
+
+    .rewards__card--bronze {
+      background-image: url(bronze-card.png);
+      z-index: 2;
+      transform: rotate(15deg) translateX(-30%) scale(0.85)
+    }
+
+    .rewards__card--now {
+      background-image: url(card-3.png);
+      z-index: 5
+    }
+
+    .rewards__card--offer1 {
+      background-image: url(card-1.png);
+      transform: scale(0.85) translateX(20%);
+      z-index: 4
+    }
+
+    .rewards__card--offer2 {
+      background-image: url(card-2.png);
+      transform: scale(0.85) translateX(10%);
+      z-index: 4
+    }
+
+    .rewards__card--offer3 {
+      background-image: url(card-4.png);
+      transform: scale(0.85) translateX(10%);
+      z-index: 4
+    }
+
+    .rewards__card--offer4 {
+      background-image: url(card-5.png);
+      transform: scale(0.85) translateX(0%);
+      z-index: 4
+    }
+
+    .rewards__button {
+      background: #6effe9;
+      border: 0;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-family: inherit;
+      padding: 0.45em 1em;
+      position: absolute;
+      bottom: 15%;
+      left: 50%;
+      font-weight: 500;
+      transform: translateX(-50%);
+      font-size: 18px;
+      z-index: 4;
+      cursor: pointer;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5))
+    }
+
+    .slide2-on .rewards__card--silver {
+      transform: rotate(0deg) translateX(100%) scale(0.85)
+    }
+
+    .slide2-on .rewards__card--bronze {
+      transform: rotate(0deg) translateX(-100%) scale(0.85)
+    }
+
+    .slide3-on .rewards__card--offer1 {
+      transform: scale(0.85) translateX(240%);
+    }
+
+    .slide3-on .rewards__card--offer2 {
+      transform: scale(0.85) translateX(128%);
+    }
+
+    .slide3-on .rewards__card--offer3 {
+      transform: scale(0.85) translateX(-110%);
+    }
+
+    .slide3-on .rewards__card--offer4 {
+      transform: scale(0.85) translateX(-228%);
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="rewards">
+    <div class="rewards__rail">
+
+      <div class="rewards__slide rewards__slide--1">
+        <h2 class="rewards__slide-title">Level Up</h2>
+        <div class="rewards__slide-content">
+          <h3 class="rewards__slide-sub-title">You are now level 1</h3>
+          <div class="rewards__bar"><span></span></div>
+        </div>
+      </div>
+
+
+
+      <div class="rewards__slide rewards__slide--2">
+        <h2 class="rewards__slide-title">Level Up</h2>
+        <div class="rewards__slide-content rewards__slide-content--row">
+          <div class="rewards__card rewards__card--silver"></div>
+          <div class="rewards__card"></div>
+          <div class="rewards__card rewards__card--bronze"></div>
+
+          <button class="rewards__button">Claim My Reward</button>
+
+        </div>
+      </div>
+
+
+      <div class="rewards__slide rewards__slide--3 slide3-on">
+          <h2 class="rewards__slide-title">Level Up</h2>
+          <div class="rewards__slide-content rewards__slide-content--row">
+              <div class="rewards__card rewards__card--offer1"></div>
+              <div class="rewards__card rewards__card--offer2"></div>
+              <div class="rewards__card rewards__card--now"></div>
+              <div class="rewards__card rewards__card--offer3"></div>
+              <div class="rewards__card rewards__card--offer4"></div>
+            </div>
+      </div>
+
+
+      <div class="rewards__slide rewards__slide--4">4</div>
+
+
+    </div>
+  </div>
+
+  <script>
+
+    var rail = document.querySelector('.rewards__rail');
+    var slides = document.querySelectorAll('.rewards__slide');
+
+    function act1(){
+
+      setTimeout(function(){
+        slides[0].classList.add('slide1-on');
+      }, 1000);
+
+      setTimeout(function(){
+        slides[0].style.cssText = "opacity: 0; pointer-events: none;";
+      }, 3000);
+
+      document.querySelector('.rewards__button').onclick = function(){
+        slides[1].classList.add('slide2-on');
+        setTimeout(function(){
+          act2();
+        },900)
+      }
+
+    }
+
+    function act2(){
+      slides[1].style.cssText = "opacity: 0; pointer-events: none;";
+      setTimeout(function(){
+        slides[2].classList.remove('slide3-on');
+        slides[2].querySelector('h2').textContent = "Your Rewards"
+      }, 650)
+    }
+
+    act1();
+  
+  </script>
+</body>
+</html>
