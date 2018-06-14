@@ -1,0 +1,29 @@
+.sdc-sf-grid {
+  display: grid;
+  grid-gap: 1em;
+  grid-gap: calc(2em + 1vmin) calc(1em + 1vmin) 
+}
+
+.sdc-sf-grid--6 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media all and (max-width: 840px){
+  .sdc-sf-grid--6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 500px){
+  .sdc-sf-grid--6 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.sdc-sf-grid-icons {
+  background: rgba(0,0,0,0.1);
+  padding-bottom: 75%;
+  margin-bottom: 1em;
+  margin-bottom: calc(8px + 1vmin)
+}

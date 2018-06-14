@@ -1,0 +1,11 @@
+.sdc-sf-chart--pie
+.sdc-site-charts__chart svg[data-role="chart-svg"] {
+  margin: 0;
+}
+
+@media all and (min-width: 600px){
+  .sdc-sf-chart--pie
+  .sdc-site-charts__chart {
+    padding-bottom: 0;
+  }
+}

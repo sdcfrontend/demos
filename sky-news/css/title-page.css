@@ -1,0 +1,23 @@
+.sdc-sf-title-page {
+  background: rgb(68, 162, 224);
+}
+
+.sdc-sf-title-page
+.site-wrap  {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sdc-sf-title-page h2 {
+  font-weight: 400;
+  font-size: calc(2em + 3vmin)
+}
+
+@media all and (max-width: 600px){
+  .sdc-sf-title-page
+  .site-wrap {
+    max-height: 500px;
+  }
+}

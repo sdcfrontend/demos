@@ -1,0 +1,87 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 3,
+      "type": "pie",
+      "title": "Nationalities in the NHS",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            18348
+          ],
+          "label": "India"
+        },
+        {
+          "values": [
+            15391
+          ],
+          "label": "Philippines"
+        },
+        {
+          "values": [
+            13016
+          ],
+          "label": "Ireland"
+        },
+        {
+          "values": [
+            8477
+          ],
+          "label": "Poland"
+        },
+        {
+          "values": [
+            6781
+          ],
+          "label": "Spain"
+        },
+        {
+          "values": [
+            6725
+          ],
+          "label": "Portugal"
+        },
+        {
+          "values": [
+            6044
+          ],
+          "label": "Italy"
+        },
+        {
+          "values": [
+            5405
+          ],
+          "label": "Nigeria"
+        },
+        {
+          "values": [
+            3899
+          ],
+          "label": "Zimbabwe"
+        }
+      ]
+    }
+  ]
+}

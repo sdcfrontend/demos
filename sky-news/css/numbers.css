@@ -1,0 +1,65 @@
+.number-counter__punctuation {
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+  line-height: 0;
+}
+
+.number-counter__digit {
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 0.55em;
+  height: 1em;
+  position: relative;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.number-counter__digit--static {
+  color: transparent;
+}
+
+.number-counter__digit--thin {
+  margin-left: 0.1em;
+}
+
+.number-counter__digit-wheel {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  line-height: 1em;
+  transition: transform 1s ease-in-out;
+}
+
+.sdc-sf-big-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -2px
+}
+
+.sdc-sf-big-number__body {
+  font-size: 80px;
+  margin-bottom: 0.1em;
+}
+
+.sdc-sf-big-number:not(:last-child){
+  margin-bottom: 36px
+}
+
+@media all and (max-width: 600px){
+  .sdc-sf-big-number:not(:last-child){
+    margin-bottom: 20px
+  }
+
+  .sdc-sf-big-number__body {
+    font-size: 40px
+  }
+}
+
+@media all and (min-width: 360px) and (max-width: 600px){
+.sdc-sf-big-number__body {
+  font-size: 52px
+}
