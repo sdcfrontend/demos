@@ -20,7 +20,7 @@
 }
 
 .sdc-sf-icon[data-animate]{
-  transform: scale(0.2);
+  transform: scale(0.2)
 }
 
 @supports not (display: grid){
