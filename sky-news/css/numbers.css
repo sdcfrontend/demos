@@ -46,14 +46,11 @@
 }
 
 .sdc-sf-big-number:not(:last-child){
-  margin-bottom: 36px
+  margin-bottom: calc(1em + 2vmin)
 }
 
 @media all and (max-width: 600px){
-  .sdc-sf-big-number:not(:last-child){
-    margin-bottom: 20px
-  }
-
+  
   .sdc-sf-big-number__body {
     font-size: 40px
   }

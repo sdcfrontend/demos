@@ -8,5 +8,5 @@
   text-align: center;
   color: rgba(0,0,0,0.5);
   padding-top: 2em;
-  padding-top: calc(2em + 1vmin);
+  padding-top: calc(1.5em + 3vmin);
 }
