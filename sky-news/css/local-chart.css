@@ -2,6 +2,16 @@
 .sdc-site-charts__chart svg[data-role="chart-svg"] {
   margin: 0;
 }
+ 
+.sdc-site-charts__chart-key-indicator {
+  transition: 0.55s width ease-in;
+  will-change: width; 
+}
+
+.sdc-site-charts__chart-key-list[data-trigger]
+.sdc-site-charts__chart-key-indicator {
+  width: 40px!important;
+}
 
 @media all and (min-width: 600px){
   .sdc-sf-chart--pie

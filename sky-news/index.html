@@ -839,6 +839,11 @@
         }
       }
     });
+
+    var key = slides[0].querySelector('.sdc-site-charts__chart-key-list');
+    if(key.getBoundingClientRect().top < window.innerHeight){
+      key.removeAttribute('data-trigger');
+    }
   })
 
    registerSlide(slides[1], 'track', function (val)  {
@@ -876,7 +881,10 @@
     
     this.querySelectorAll('[data-role="number-counter"]').forEach(function(counter){
       if((val) < 100){
-        triggerCounters([counter]);
+        if(!counter.init){
+          triggerCounters([counter]);
+          counter.init = true;
+        }
       }
     });
   })
