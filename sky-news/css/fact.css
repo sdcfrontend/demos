@@ -6,7 +6,7 @@
 
 .sdc-sf-fact h4 {
   font-size: calc(1em + 1vmin);
-  margin-bottom: 0.5em;
+  margin: 0.25em 0 0.5em;
 }
 
 .sdc-sf-fact p {

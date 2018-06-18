@@ -27,17 +27,63 @@
   }
 
   .sdc-sf-infographic--t1
-  .sdc-sf-infographic__cell:nth-child(3) {
-    
-  }
-
-  .sdc-sf-infographic--t1
   .sdc-sf-infographic__cell:nth-child(1),
   .sdc-sf-infographic--t1
   .sdc-sf-infographic__cell:nth-child(4),
   .sdc-sf-infographic--t1
   .sdc-sf-infographic__cell:nth-child(5) {
     grid-column: span 2
+  }
+
+}
+
+@media all and (max-width: 680px) {
+  .sdc-sf-infographic--t2 {
+    display: block
+  }
+
+  .sdc-sf-infographic--t2
+  .sdc-sf-infographic__cell {
+    padding: calc(10px + 1vmin) 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+@media all and (min-width: 681px) {
+  
+  .sdc-sf-infographic--t2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(auto, 1fr));
+  }
+
+  .sdc-sf-infographic--t2
+  .sdc-sf-infographic__cell:nth-child(1) {
+    background-size: 100% 1px;
+    background-position: right calc(12px + 2vmin) bottom 0;
+    background-clip: border-box; 
+    border-right: 1px solid #ccc;
+    padding: 0 calc(12px + 2vmin) calc(12px + 2vmin) 0;
+  }
+
+  .sdc-sf-infographic--t2
+  .sdc-sf-infographic__cell:nth-child(2) {
+    background-size: 100% 1px;
+    background-position: left calc(12px + 2vmin) bottom 0;
+    background-clip: border-box; 
+    padding: 0 0 calc(12px + 2vmin) calc(12px + 2vmin);
+  }
+
+  .sdc-sf-infographic--t2
+  .sdc-sf-infographic__cell:nth-child(3) {
+    border-right: 1px solid #ccc;
+    background: none;
+    padding: calc(12px + 2vmin) calc(12px + 2vmin) 0 0;
+  }
+
+  .sdc-sf-infographic--t2
+  .sdc-sf-infographic__cell:nth-child(4) {
+    padding: calc(12px + 2vmin) 0 0 calc(12px + 2vmin);
+    background: none;
   }
 
 }
@@ -90,6 +136,7 @@
     padding: calc(12px + 2vmin) 0 0 calc(12px + 2vmin);
     background-clip: border-box
   }
+
 }
 
 @media all and (min-width: 600px) and (max-width: 880px){
@@ -171,16 +218,16 @@
   margin-top: 3px
 }
 
-.sdc-sf-infographic-item__text--s2 {
-  font-size: calc(1rem + 1vmin)
-}
-
 .sdc-sf-infographic-item--s2 {
-  font-size: calc(1.5em + 6vmin)
+  font-size: calc(1.5em + 5vmin)
 }
 
 .sdc-sf-infographic-item--s3 {
-  font-size: calc(1em + 5vmin)
+  font-size: calc(12px + 5vmin)
+}
+
+.sdc-sf-infographic-item__text--s2 {
+  font-size: calc(1rem + 1vmin)
 }
 
 .sdc-sf-infographic-item--right {
