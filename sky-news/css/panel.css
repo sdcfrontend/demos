@@ -11,3 +11,8 @@
 .sdc-sf-panel-con {
   
 }
+
+.sdc-sf-panel:last-child,
+.sdc-sf-panel > .site-wrap > *:last-child {
+  margin-bottom: 0!important
+}
