@@ -22,9 +22,9 @@
 
   function trackSlide(slide) {
     var dims = slide.getBoundingClientRect();
-    var height = window.innerHeight;
-    console.log(dims.top, height);
-    if (dims.top < height && dims.top > (window.innerHeight * -1)) {
+    var height = dims.height;
+
+    if (dims.top < window.innerHeight && dims.top > (height * -1)) {
       return Math.floor((100 / window.innerHeight) * dims.top);
     }
 
