@@ -1,0 +1,37 @@
+.sdc-sf-grid-icons {
+  margin-bottom: 1em;
+  margin-bottom: calc(8px + 1vmin);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sdc-sf-grid-icons--7
+.sdc-sf-icon {
+  width: calc(100% / 7);
+}
+
+.sdc-sf-icon {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  transition: 0.5s transform;
+  padding: 1px 3px
+}
+
+.sdc-sf-icon[data-animate]{
+  transform: scale(0.2)
+}
+
+@supports not (display: grid){
+  .sdc-sf-grid-icons--7 
+  .sdc-sf-icon {
+    width: 13%;
+    display: inline-block;
+  }
+}
+
+.sdc-sf-icon > img {
+  width: 100%;
+  max-height: 100%;
+}

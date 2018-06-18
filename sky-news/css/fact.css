@@ -1,0 +1,15 @@
+.sdc-sf-fact {
+  background: #ccc;
+  padding: calc(1em + 2vmin) 0;
+  text-align: center;
+}
+
+.sdc-sf-fact h4 {
+  font-size: calc(1em + 1vmin);
+  margin-bottom: 0.5em;
+}
+
+.sdc-sf-fact p {
+  margin-bottom: 0.5em;
+  line-height: 1.3
+}

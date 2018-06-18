@@ -1,0 +1,12 @@
+.sdc-sf-value {
+  text-align: center;
+}
+
+.sdc-sf-citation {
+  font-size: 14px;
+  line-height: 1.2em;
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+  padding-top: 2em;
+  padding-top: calc(1.5em + 3vmin);
+}

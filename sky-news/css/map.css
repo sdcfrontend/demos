@@ -1,0 +1,30 @@
+@media all and (min-width: 460px){
+  .sdc-sf-map {
+    display: flex;
+  }
+
+  .sdc-sf-map__col1 {
+    width: 60%;
+    padding-right: calc(1em + 1vmin)
+  }
+}
+
+.sdc-sf-map__col2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.sdc-sf-map
+.sdc-site-charts__chart-key-list {
+  width: 100%;
+  padding: 0;
+  margin: 0
+}
+
+.sdc-sf-map
+.sdc-site-charts__chart-key-indicator {
+  display: block;
+  margin-bottom: 0.25em
+}
