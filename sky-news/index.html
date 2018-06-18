@@ -603,6 +603,48 @@
           </div>
       </div>
 
+      <div class="sdc-sf-panel" data-role="slide" data-type="track" id="patient-lifespan">
+          <div class="site-wrap site-wrap-padding">
+              <h3 class="sdc-sf-header sdc-sf-header--h3"><strong>81.2</strong> Average UK life expectancy</h3>
+
+              <div class="sdc-sf-chart sdc-sf-chart--bar">
+                  <div class="sdc-sf-chart-vertical-bar">
+                    <div class="sdc-sf-chart-bars">
+                      <div class="sdc-sf-chart-bar-group" data-trigger>
+                        <div class="sdc-sf-chart-bar" style="height: 75%" data-label="79.5"><img src="img/icon1.png"></div>
+                        <div class="sdc-sf-chart-bar" style="height: 90.1%" data-label="83.1"><img src="img/icon1.png"></div>
+                      </div>
+                      <p class="sdc-sf-chart-label">England</p>
+                    </div>
+                    <div class="sdc-sf-chart-bars">
+                        <div class="sdc-sf-chart-bar-group" data-trigger>
+                            <div class="sdc-sf-chart-bar" style="height: 51%" data-label="77.1"><img src="img/icon1.png"></div>
+                        <div class="sdc-sf-chart-bar" style="height: 81%" data-label="81.2"><img src="img/icon1.png"></div>
+                          </div>
+                      <p class="sdc-sf-chart-label">Scotland</p>
+                    </div>
+                    <div class="sdc-sf-chart-bars">
+                        <div class="sdc-sf-chart-bar-group" data-trigger>
+                            <div class="sdc-sf-chart-bar" style="height: 64%" data-label="78.4"><img src="img/icon1.png"></div>
+                        <div class="sdc-sf-chart-bar" style="height: 83%" data-label="82.4"><img src="img/icon1.png"></div>
+                          </div>
+                      <p class="sdc-sf-chart-label">Wales</p>
+                    </div>
+                    <div class="sdc-sf-chart-bars">
+                        <div class="sdc-sf-chart-bar-group" data-trigger>
+                            <div class="sdc-sf-chart-bar" style="height: 65%" data-label="78.5"><img src="img/icon1.png"></div>
+                        <div class="sdc-sf-chart-bar" style="height: 82.9%" data-label="82.3"><img src="img/icon1.png"></div>
+                          </div>
+                      <p class="sdc-sf-chart-label">N. Ireland</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+         
+
+      </div>
+
       <div class="sdc-sf-panel" data-role="slide" data-type="track" id="patient-cancer">
 
 
@@ -1151,6 +1193,27 @@
         }
       }
     });
+  });
+
+  registerSlide(document.querySelector('#patient-lifespan'), 'track', function(val){
+
+    var bargroup = this.querySelector('.sdc-sf-chart-bar-group');
+
+    var h = window.innerHeight;
+    var top = bargroup.getBoundingClientRect().top;
+
+    if(top < h && !bargroup.init){
+
+      this.querySelectorAll('.sdc-sf-chart-bar-group').forEach(function(group, index){
+
+        bargroup.init = true;
+
+        setTimeout(function(){
+          group.removeAttribute('data-trigger');
+        }, index * 200)
+      });
+
+    }
   });
 
   //profiles
