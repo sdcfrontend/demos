@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.sdc-sf-panel--no-padding[class]{
+  /* padding: 0; */
+}
+
 .sdc-sf-panel--shaded {
   background: #dedddd
 }

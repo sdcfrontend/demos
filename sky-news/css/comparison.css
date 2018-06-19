@@ -17,7 +17,15 @@
   width: 100%;
   padding: 1em 0 0 ;
   text-align: center;
-  font-size: calc(12px + 1vmin)
+  font-size: calc(12px + 1vmin);
+}
+
+.sdc-sf-comparison__item-cell 
+.sdc-sf-value {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-end
 }
 
 .sdc-sf-comparison__item-cell {
@@ -26,6 +34,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding-right: 12px;
+}
+
+.sdc-sf-comparison__item-cell +
+.sdc-sf-comparison__item-cell {
+  padding: 0 0 0 12px
 }
 
 .sdc-sf-comparison__stat {
@@ -54,10 +69,9 @@
 
 
 @media all and (max-width: 600px){
-  .sdc-sf-comparison__item:nth-child(1) {
+  .sdc-sf-comparison__item:nth-child(1):not(:only-child) {
     width: 100%;
     padding-bottom: calc(12px + 2vmin);
-    border-bottom: 1px solid #ccc
   }
 
   .sdc-sf-comparison__item:nth-child(2) {
@@ -67,10 +81,12 @@
 }
 
 @media all and (min-width: 600px){
-  .sdc-sf-comparison {
+  .sdc-sf-comparison--2 {
     display: flex;
+    flex-wrap: wrap;
   }
 
+  .sdc-sf-comparison--2 
   .sdc-sf-comparison__item:nth-child(1) {
     padding-right: calc(12px + 2vmin);
     border-right: 1px solid #ccc

@@ -11,12 +11,21 @@
   width: calc(100% / 7);
 }
 
+.sdc-sf-grid-icons--10
+.sdc-sf-icon {
+  width: 10%;
+}
+
 .sdc-sf-icon {
   position: relative;
   overflow: hidden;
   will-change: transform;
   transition: 0.5s transform;
-  padding: 1px 3px
+  padding: 3px
+}
+
+.sdc-sf-icon img {
+  display: block;
 }
 
 .sdc-sf-icon[data-animate]{
