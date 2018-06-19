@@ -37,6 +37,37 @@
   width: 100%;
 }
 
+.sdc-sf-title-page__slide-mask {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  clip: rect(auto,auto,auto,auto);
+  overflow-y: scroll;
+}
+
+.sdc-sf-title-page__slide-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  top: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-bottom: 0;
+  background-size: cover;
+  z-index: 0;
+  transform: translate3d(0,0,0);
+}
+
+.sdc-sf-title-page__slide-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+}
+
 @supports (object-fit: cover){
   .sdc-sf-title-page__slide img {
     height: 100vh;
