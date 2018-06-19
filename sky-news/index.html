@@ -1322,6 +1322,75 @@
         </div>
       </div>
 
+      <div class="sdc-sf-panel" data-role="slide" data-type="track" id="treatments-admission">
+        <div class="site-wrap site-wrap-padding">
+
+          <div class="sdc-sf-big-number">
+            <div class="sdc-sf-big-number__body">
+              <span data-role="number-counter">20,500,000</span>
+            </div>
+            <p class="sdc-sf-big-number__context">Hospital admissions a year</p>
+          </div>
+
+          <div class="sdc-sf-chart sdc-sf-chart--bar">
+            <div class="sdc-sf-chart-vertical-bar">
+              <div class="sdc-sf-chart-bars">
+                <div class="sdc-sf-chart-bar-group" data-trigger>
+                  <div class="sdc-sf-chart-bar" data-short style="height: 100%" data-label="16.5m">
+                  </div>
+
+                </div>
+                <p class="sdc-sf-chart-label">England</p>
+              </div>
+              <div class="sdc-sf-chart-bars">
+                <div class="sdc-sf-chart-bar-group" data-trigger>
+                  <div class="sdc-sf-chart-bar" data-short style="height: 30%" data-label="1.3m">
+
+                  </div>
+
+                </div>
+                <p class="sdc-sf-chart-label">Scotland</p>
+              </div>
+              <div class="sdc-sf-chart-bars">
+                <div class="sdc-sf-chart-bar-group" data-trigger>
+                  <div class="sdc-sf-chart-bar" data-short style="height: 25%" data-label="968,000">
+
+                  </div>
+
+                </div>
+                <p class="sdc-sf-chart-label">Wales</p>
+              </div>
+              <div class="sdc-sf-chart-bars">
+                <div class="sdc-sf-chart-bar-group" data-trigger>
+                  <div class="sdc-sf-chart-bar" data-short style="height: 35%" data-label="1.6m">
+
+                  </div>
+
+                </div>
+                <p class="sdc-sf-chart-label">N. Ireland</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="sdc-sf-panel" data-role="slide" data-type="track" id="treatments-admission-breakdown">
+        <div class="site-wrap site-wrap-padding">
+          <h3 class="sdc-sf-header sdc-sf-header--h3">
+            Admissions breakdown (England)</h3>
+
+          <div class="sdc-sf-chart sdc-sf-chart--pie">
+            <div class="sdc-site-charts" data-component-name="sdc-site-charts" data-role="charts-container" data-url="json/admissions.json"></div>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <div class="sdc-sf-fact">
 
         <div class="site-wrap site-wrap-padding">
@@ -1743,42 +1812,88 @@
     }
   });
 
-  //profiles
-  (function () {
 
-    function close(profiles, links, index) {
-      links[index].removeAttribute('aria-selected');
-      profiles[index].setAttribute('aria-hidden', true);
+  registerSlide(document.querySelector('#treatments-admission'), 'track', function (val) {
+
+    this.querySelectorAll('[data-role="number-counter"]').forEach(function (counter) {
+      if ((val) < 100) {
+        if (!counter.init) {
+          triggerCounters([counter]);
+          counter.init = true;
+        }
+      }
+    });
+
+    var bargroup = this.querySelector('.sdc-sf-chart-bar-group');
+
+    var h = window.innerHeight;
+    var top = bargroup.getBoundingClientRect().top;
+
+    if (top < h && !bargroup.init) {
+
+      this.querySelectorAll('.sdc-sf-chart-bar-group').forEach(function (group, index) {
+
+        bargroup.init = true;
+
+        setTimeout(function () {
+          group.removeAttribute('data-trigger');
+        }, index * 200)
+      });
+
     }
 
-    var profiles = document.querySelectorAll('.sdc-sf-profiles');
-    profiles.forEach(function (profile) {
+  });
 
+  registerSlide(document.querySelector('#treatments-admissions-breakdown'), 'track', function (val) {
 
-      var items = profile.querySelectorAll('.sdc-sf-profile-text');
-      var links = profile.querySelectorAll('.sdc-sf-profile');
-
-      links.forEach(function (link, index) {
-
-        link.onclick = function (event) {
-
-          event.preventDefault();
-
-          if (this.hasAttribute('aria-selected')) {
-            close(items, links, index);
-            return;
-          }
-
-          for (var i = items.length; --i > -1;) {
-            close(items, links, i);
-          }
-
-          this.setAttribute('aria-selected', true);
-          items[index].setAttribute('aria-hidden', false);
+    this.querySelectorAll('[data-component-name="sdc-site-charts"]').forEach(function (chart) {
+      if ((val) < 100) {
+        if (chart.start && !chart.init) {
+          chart.start();
+          chart.init = true;
         }
+      }
+    });
+  })
+
+
+
+    //profiles
+    (function () {
+
+      function close(profiles, links, index) {
+        links[index].removeAttribute('aria-selected');
+        profiles[index].setAttribute('aria-hidden', true);
+      }
+
+      var profiles = document.querySelectorAll('.sdc-sf-profiles');
+      profiles.forEach(function (profile) {
+
+
+        var items = profile.querySelectorAll('.sdc-sf-profile-text');
+        var links = profile.querySelectorAll('.sdc-sf-profile');
+
+        links.forEach(function (link, index) {
+
+          link.onclick = function (event) {
+
+            event.preventDefault();
+
+            if (this.hasAttribute('aria-selected')) {
+              close(items, links, index);
+              return;
+            }
+
+            for (var i = items.length; --i > -1;) {
+              close(items, links, i);
+            }
+
+            this.setAttribute('aria-selected', true);
+            items[index].setAttribute('aria-hidden', false);
+          }
+        })
       })
-    })
-  })()
+    })()
 
 
 

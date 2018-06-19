@@ -1,0 +1,74 @@
+{
+  "charts": [
+    {
+      "id": 4,
+      "type": "pie",
+      "title": "Admissions",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            11563
+          ],
+          "label": "Heart disease"
+        },
+        {
+          "values": [
+            35620
+          ],
+          "label": "Breast cancer"
+        },
+        {
+          "values": [
+            11631
+          ],
+          "label": "Lung cancer"
+        },
+        {
+          "values": [
+            16384
+          ],
+          "label": "Colon cancer"
+        },
+        {
+          "values": [
+            16384
+          ],
+          "label": "Prostate cancer"
+        },
+        {
+          "values": [
+            16384
+          ],
+          "label": "Type 1 diabetes"
+        },
+        {
+          "values": [
+            16384
+          ],
+          "label": "Type 2 diabetes"
+        }
+      ]
+    }
+  ]
+}
