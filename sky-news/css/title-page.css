@@ -1,11 +1,20 @@
 .sdc-sf-title-header {
-  padding: 5vmin 0 ;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: calc(1em + 4vmin);
-  font-weight: 400;
+}
+
+.sdc-sf-title-header img {
+  width: 100%;
+  object-fit: cover
+}
+
+@supports (object-fit: cover){
+  .sdc-sf-title-header img {
+    height: 100vh;
+  }
 }
 
 .sdc-sf-title-page {
