@@ -84,7 +84,7 @@
   }
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 599px){
   .sdc-sf-title-page__slide {
     max-height: 400px;
     position: relative;

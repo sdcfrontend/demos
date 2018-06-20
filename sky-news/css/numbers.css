@@ -45,13 +45,26 @@
   margin-bottom: 0.1em;
 }
 
+.sdc-sf-big-number--small
+.sdc-sf-big-number__body {
+  font-size: 68px
+}
+
 .sdc-sf-big-number:not(:last-child){
   margin-bottom: calc(1em + 2vmin)
 }
 
+@media all and (max-width: 700px){
+  .sdc-sf-big-number--small
+  .sdc-sf-big-number__body {
+    font-size: 58px
+  }
+
+}
+
 @media all and (max-width: 600px){
   
-  .sdc-sf-big-number__body {
+  .sdc-sf-big-number__body[class] {
     font-size: 40px
   }
 }

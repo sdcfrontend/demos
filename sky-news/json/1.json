@@ -3,13 +3,16 @@
   "charts": [
     {
       "id": 3,
-      "type": "pie",
+      "type": "donut",
       "title": "Nationalities in the NHS",
       "skin": "nhs",
       "animated": true,
       "key": true,
       "canvasSize": 400,
       "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
       "grid": {
         "majorLines": false,
         "minorLines": false

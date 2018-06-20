@@ -1,14 +1,18 @@
 {
+  "externalTrigger": true,
   "charts": [
     {
       "id": 4,
-      "type": "pie",
+      "type": "donut",
       "title": "Admissions",
       "skin": "nhs",
       "animated": true,
       "key": true,
       "canvasSize": 400,
       "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
       "grid": {
         "majorLines": false,
         "minorLines": false

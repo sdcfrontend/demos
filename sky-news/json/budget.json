@@ -4,7 +4,7 @@
     {
       "id": 4,
       "type": "donut",
-      "title": "Obesity",
+      "title": "Budget",
       "skin": "nhs",
       "animated": true,
       "key": true,
@@ -32,15 +32,27 @@
       "points": [
         {
           "values": [
-            75
+            122
           ],
-          "label": "Not Obese"
+          "label": "England"
         },
         {
           "values": [
-            25
+            13.2
           ],
-          "label": "Obese"
+          "label": "Scotland"
+        },
+        {
+          "values": [
+            7.3
+          ],
+          "label": "Wales"
+        },
+        {
+          "values": [
+            5
+          ],
+          "label": "N. Ireland"
         }
       ]
     }

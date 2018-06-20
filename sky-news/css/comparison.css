@@ -58,7 +58,10 @@
   position: absolute;
   font-size: calc(1em + 3vmin);
   color: white;
+}
 
+.sdc-sf-comparison__stat--s2 span {
+  font-size: calc(10px + 3.2vmin);
 }
 
 .sdc-sf-comparison__stat:after {
