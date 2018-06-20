@@ -32,45 +32,59 @@
       "points": [
         {
           "values": [
-            11563
+            125351
           ],
-          "label": "Heart disease"
+          "label": "Heart disease",
+          "subLabel": "125,351"
         },
         {
           "values": [
-            35620
+            203454
           ],
-          "label": "Breast cancer"
+          "label": "Breast cancer",
+          "subLabel": "203,454"
         },
         {
           "values": [
-            11631
+            28204
           ],
-          "label": "Lung cancer"
+          "label": "Pancreatic cancer",
+          "subLabel": "28,204"
         },
         {
           "values": [
-            16384
+            91902
           ],
-          "label": "Colon cancer"
+          "label": "Lung cancer",
+          "subLabel": "91,902"
         },
         {
           "values": [
-            16384
+            91802
           ],
-          "label": "Prostate cancer"
+          "label": "Colon cancer",
+          "subLabel": "91,802"
         },
         {
           "values": [
-            16384
+            70295
           ],
-          "label": "Type 1 diabetes"
+          "label": "Prostate cancer",
+          "subLabel": "70,295"
         },
         {
           "values": [
-            16384
+            27652
           ],
-          "label": "Type 2 diabetes"
+          "label": "Type 1 diabetes",
+          "subLabel": "27,652"
+        },
+        {
+          "values": [
+            22969
+          ],
+          "label": "Type 2 diabetes",
+          "subLabel": "22,969"
         }
       ]
     }

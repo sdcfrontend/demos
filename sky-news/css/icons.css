@@ -6,6 +6,11 @@
   justify-content: center;
 }
 
+.sdc-sf-grid-icons--5
+.sdc-sf-icon {
+  width: 20%;
+}
+
 .sdc-sf-grid-icons--7
 .sdc-sf-icon {
   width: calc(100% / 7);
@@ -22,6 +27,14 @@
   will-change: transform;
   transition: 0.5s transform;
   padding: 3px
+}
+
+.sdc-sf-icon--50 {
+  clip-path: inset(0 50% 0 0);
+}
+
+.sdc-sf-icon--75 {
+  clip-path: inset(0 25% 0 0);
 }
 
 .sdc-sf-icon img {

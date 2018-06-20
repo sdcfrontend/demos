@@ -34,25 +34,29 @@
           "values": [
             122
           ],
-          "label": "England"
+          "label": "England",
+          "subLabel": "£122bn"
         },
         {
           "values": [
             13.2
           ],
-          "label": "Scotland"
+          "label": "Scotland",
+          "subLabel": "£13.2bn"
         },
         {
           "values": [
             7.3
           ],
-          "label": "Wales"
+          "label": "Wales",
+          "subLabel": "£7.3bn"
         },
         {
           "values": [
             5
           ],
-          "label": "N. Ireland"
+          "label": "N. Ireland",
+          "subLabel": "£5bn"
         }
       ]
     }

@@ -34,25 +34,29 @@
           "values": [
             11563
           ],
-          "label": "Breast cancer"
+          "label": "Breast cancer",
+          "subLabel": "11,563"
         },
         {
           "values": [
             35620
           ],
-          "label": "Lung cancer"
+          "label": "Lung cancer",
+          "subLabel": "35,620"
         },
         {
           "values": [
             11631
           ],
-          "label": "Prostate cancer"
+          "label": "Prostate cancer",
+          "subLabel": "11,631"
         },
         {
           "values": [
             16384
           ],
-          "label": "Bowel cancer"
+          "label": "Bowel cancer",
+          "subLabel": "16,384"
         }
       ]
     }

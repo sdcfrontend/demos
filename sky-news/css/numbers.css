@@ -1,3 +1,7 @@
+[data-role="number-counter"][data-click] {
+  cursor: pointer;
+}
+
 .number-counter__punctuation {
   display: inline-block;
   vertical-align: middle;
