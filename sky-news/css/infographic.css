@@ -462,6 +462,14 @@ small {
 .sdc-sf-infographic__cell-header {
   font-size: calc(1em + 1vmin);
   margin-bottom: 1em;
+  text-align: center
+}
+
+.sdc-sf-infographic__cell-header span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
 }
 
 
