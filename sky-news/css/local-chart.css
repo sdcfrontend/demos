@@ -104,6 +104,12 @@
   font-weight: 400
 }
 
+.sdc-sf-chart--pie svg {
+  background: url(../img/bg-cube-1.png) no-repeat;
+  background-size: 30%;
+  background-position: 50%;
+}
+
 @media all and (min-width: 600px){
   .sdc-sf-chart--pie
   .sdc-site-charts__chart {

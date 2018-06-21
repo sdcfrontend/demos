@@ -166,12 +166,24 @@ figure:after {
   grid-column: span 2;
 }
 
+.sdc-sf-profile-text__close[class] {
+  position: absolute;
+  right: 3vmin;
+  top: calc(12px + 3vmin);
+  width: 32px;
+  height: 32px;
+  background: url(../img/close.svg) no-repeat;
+  background-size: 100%;
+  color: rgba(0,0,0,0);
+}
+
 .sdc-sf-text-block {
-  padding: calc(1em + 3vmin) calc(1.2em + 3vmin);
+  padding: calc(12px + 3vmin) 3vmin calc(12px + 4vmin);
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.4;
   font-size: 1rem;
+  position: relative;
 }
 
 .sdc-sf-text-block--main {

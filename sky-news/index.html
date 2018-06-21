@@ -842,7 +842,9 @@
               </h4>
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
+
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>1 Demie Miller</h3>
                 <ul>
                   <li>
@@ -872,6 +874,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>2 Demie Miller</h3>
                 <ul>
                   <li>
@@ -901,6 +904,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>3 Demie Miller</h3>
                 <ul>
                   <li>
@@ -930,6 +934,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>4 Demie Miller</h3>
                 <ul>
                   <li>
@@ -1268,6 +1273,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>1 Tony Acres</h3>
                 <ul>
                   <li>
@@ -1296,6 +1302,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>2 Tony Acres</h3>
                 <ul>
                   <li>
@@ -1324,6 +1331,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>3 Tony Acres</h3>
                 <ul>
                   <li>
@@ -1352,6 +1360,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>4 Tony Acres</h3>
                 <ul>
                   <li>
@@ -1501,6 +1510,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Cancer</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -1524,6 +1534,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Heart Disease</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -1547,6 +1558,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Obesity</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -1570,6 +1582,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Dementia</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -1594,6 +1607,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Diabetes</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -1618,6 +1632,7 @@
             </a>
             <div class="sdc-sf-profile-text" aria-hidden="true">
               <div class="sdc-sf-text-block">
+                <a href="#" class="sdc-sf-profile-text__close" aria-label="close">×</a>
                 <h3>Mental Health</h3>
 
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptates minima error. Ex quod accusamus
@@ -2833,12 +2848,15 @@
     var image = this.querySelector('.sdc-sf-title-header__image');
     var title = this.querySelector('.sdc-sf-title-header__headline');
 
-
     var dims = image.getBoundingClientRect();
-    var top = dims.top - this.offsetTop
+    // if (!this.init) {
+    //   this.init = dims.top;
+    // }
 
-    image.style.cssText = "transform: translateY(" + (top * -1) / 10 + "%)";
-    title.style.cssText = "transform: translateY(" + (top * -1) / 10 + "%)";
+    // var top = dims.top - this.init;
+
+    image.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
+    title.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
   });
 
   registerSlide(document.querySelector('#resources-gps'), 'track', function (val) {
@@ -2869,8 +2887,14 @@
 
       var items = profile.querySelectorAll('.sdc-sf-profile-text');
       var links = profile.querySelectorAll('.sdc-sf-profile');
+      var closebuttons = profile.querySelectorAll('.sdc-sf-profile-text__close');
 
       links.forEach(function (link, index) {
+
+        closebuttons[index].onclick = function (event) {
+          event.preventDefault();
+          close(items, links, index)
+        }
 
         link.onclick = function (event) {
 
