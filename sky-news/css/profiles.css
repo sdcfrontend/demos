@@ -166,7 +166,7 @@ figure:after {
   grid-column: span 2;
 }
 
-.sdc-sf-profile-text__body {
+.sdc-sf-text-block {
   padding: calc(1em + 3vmin) calc(1.2em + 3vmin);
   max-width: 680px;
   margin: 0 auto;
@@ -174,24 +174,30 @@ figure:after {
   font-size: 1rem;
 }
 
-.sdc-sf-profile-text__body h3 {
+.sdc-sf-text-block--main {
+  padding: calc(12px + 1vmin);
+  font-size: calc(16px + 0.5vmin);
+  max-width: 700px;
+}
+
+.sdc-sf-text-block h3 {
   font-size: calc(1em + 2vmin);
   margin-bottom: 0.5em;
   font-weight: 500
 }
 
-.sdc-sf-profile-text__body a {
+.sdc-sf-text-block a {
   color: #3157a1;
   text-decoration: underline;
   font-weight: 600
 }
 
-.sdc-sf-profile-text__body a:hover {
+.sdc-sf-text-block a:hover {
   text-decoration: none;
 }
 
-.sdc-sf-profile-text__body p:not(:last-child),
-.sdc-sf-profile-text__body ul:not(:last-child) {
+.sdc-sf-text-block p:not(:last-child),
+.sdc-sf-text-block ul:not(:last-child) {
   margin-bottom: 1.5em;
 }
 

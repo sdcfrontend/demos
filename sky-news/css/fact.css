@@ -1,6 +1,11 @@
 .sdc-sf-fact {
-  background: #ccc;
-  padding: calc(1em + 2vmin) 0;
+  background: url(../img/bg-cube-2.png), url(../img/bg-cube-4.png) #005EB8;
+  background-size: 40px auto;
+  background-repeat: repeat-x;
+  background-position: 0 0, 0 bottom;
+  /* background: url(../img/bg-blue-1.png) #005EB8; */
+  color: white;
+  padding: calc(1em + 5vmin) 0;
   text-align: center;
 }
 

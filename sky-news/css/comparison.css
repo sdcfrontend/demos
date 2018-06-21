@@ -1,5 +1,5 @@
 .sdc-sf-comparison  {
-  margin: 0 0 calc(12px + 3vmin);
+  /* margin: 0 0 calc(12px + 3vmin); */
 }
 
 .sdc-sf-comparison__item {
@@ -17,7 +17,7 @@
   width: 100%;
   padding: 1em 0 0 ;
   text-align: center;
-  font-size: calc(12px + 1vmin);
+  font-size: 1rem;
 }
 
 .sdc-sf-comparison__item-cell 
@@ -47,8 +47,8 @@
   min-width: 60px;
   max-width: 100px;
   width: 100%;
-  background: url(../img/icon1.png);
-  background-size: 100% 100%;
+  background: url(../img/bg-cube-1.png);
+  background-size: 100% auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -67,7 +67,7 @@
 .sdc-sf-comparison__stat:after {
   content: "";
   display: block;
-  padding-bottom: 100%;
+  padding-bottom: 115%;
 }
 
 

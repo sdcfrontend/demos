@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.sdc-sf-infographic__cell > .sdc-sf-chart {
+  padding: 0
+}
+
 .sdc-sf-infographic__cell > * {
   margin-bottom: calc(10px + 1vmin)
 }
@@ -367,9 +371,9 @@
 }
 
 .sdc-sf-infographic-item__icon {
-  max-width: 90px;
-  width: 33%;
-  min-width: 50px;
+  max-width: 80px;
+  width: calc(35px + 6vmin);
+  min-width: 40px;
   position: relative;
 }
 
@@ -410,7 +414,7 @@ small {
 }
 
 .sdc-sf-infographic-item__text--s3 {
-  font-size: calc(15px);
+  font-size: 1rem;
   font-weight: 600
 }
 
@@ -467,15 +471,21 @@ small {
 
 .sdc-sf-infographic__cell-header span {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
+  padding-top: 0.25em;
 }
 
 
 .sdc-sf-infographic-item--right {
   direction: rtl;
   text-align: left
+}
+
+.sdc-sf-infographic-item--right
+.sdc-sf-infographic-item__icon {
+  margin-left: 12px;
 }
 
 .sdc-sf-infographic-item--right 
@@ -491,6 +501,11 @@ small {
 .sdc-sf-infographic-item--left > 
 .sdc-sf-infographic-item__text {
   padding-right: calc(12px + 1vmin);
+}
+
+.sdc-sf-infographic-item--left
+.sdc-sf-infographic-item__icon {
+  margin-right: 12px;
 }
 
 

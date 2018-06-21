@@ -1,5 +1,10 @@
 .sdc-sf-chart {
   width: 100%;
+  margin-bottom: calc(12px  + 2vmin)
+}
+
+.sdc-sf-chart:last-child {
+  margin-bottom: 0;
 }
 
 .sdc-sf-chart > *:last-child {
@@ -13,7 +18,11 @@
  
 .sdc-site-charts__chart-key-indicator {
   transition: 0.55s width ease-in;
-  will-change: width; 
+  will-change: width;
+  background-image: url(../img/bg-cube-3.png);
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-size: auto 100%; 
 }
 
 .sdc-site-charts__chart-key-list[data-trigger]
@@ -87,6 +96,14 @@
   font-size: 2.5em
 }
 
+.sdc-site-charts__chart-key-item {
+  font-weight: bold;
+}
+
+.sdc-site-charts__chart-key-value {
+  font-weight: 400
+}
+
 @media all and (min-width: 600px){
   .sdc-sf-chart--pie
   .sdc-site-charts__chart {
@@ -127,7 +144,9 @@
 }
 
 .sdc-sf-chart-bar {
-  background: #2c70b9;
+  background-image: url(../img/bg-cube-2.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
   flex: 1;
   margin: 0 1px;
   position: relative;
@@ -137,6 +156,7 @@
   transition: 0.5s height;
   will-change: height;
 }
+
 
 .sdc-sf-chart-bar-group[data-trigger]
 .sdc-sf-chart-bar {
@@ -165,12 +185,12 @@
 
 .sdc-sf-chart-label {
   font-weight: 600;
-  padding: 1em 0 0;
+  padding: calc(6px + 1vmin) 0 0;
   white-space: nowrap
 } 
 
 @media all and (min-width: 800px){
-  .sdc-sf-chart--pie {
+  .sdc-sf-chart {
     padding: 0 5vw
   }
 }

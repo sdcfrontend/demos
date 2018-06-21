@@ -2,6 +2,8 @@
   padding: 2em 0;
   padding: calc(1em + 3vmin) 0;
   position: relative;
+  background: white;
+  /* background: url(../img/bg-white-1.png) white; */
 }
 
 .sdc-sf-panel--no-padding[class]{
@@ -9,7 +11,8 @@
 }
 
 .sdc-sf-panel--shaded {
-  background: #c8d1d8
+  /* background: #c8d1d8;
+  background: white; */
 }
 
 .sdc-sf-panel-con {

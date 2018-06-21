@@ -20,6 +20,10 @@
   text-align: left;
 }
 
+.sdc-sf-big-number__context {
+  font-size: 1rem;
+}
+
 .number-counter__digit--static {
   color: transparent;
 }
