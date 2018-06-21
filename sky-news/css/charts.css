@@ -139,7 +139,9 @@ body {
     right: auto; }
   .sdc-site-charts__chart-key-list {
     min-width: 40%;
-    margin: 2em;
+    margin-left: 2em;
     align-self: center; } }
+
+  
 
 /*# sourceMappingURL=output.css.map */
