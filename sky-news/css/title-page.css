@@ -48,6 +48,15 @@
   will-change: transform
 }
 
+.sdc-sf-title-header__image:after {
+  content: "";
+  background: rgba(0,0,0,0.2);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 140%;
+}
+
 .sdc-sf-title-header__image img {
   position: absolute;
   width: 100%;

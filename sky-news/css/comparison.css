@@ -11,6 +11,7 @@
 .sdc-sf-comparison__item h5 {
   font-size: calc(1em + 1vmin);
   margin-bottom: 1em;
+  font-weight: 400
 }
 
 .sdc-sf-comparison__item p {
@@ -25,7 +26,8 @@
   display: flex;
   flex: 1;
   justify-content: center;
-  align-items: flex-end
+  align-items: flex-end;
+  font-weight: bold;
 }
 
 .sdc-sf-comparison__item-cell {
