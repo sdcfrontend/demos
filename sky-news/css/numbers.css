@@ -1,3 +1,7 @@
+[data-role="number-counter"][data-click] {
+  cursor: pointer;
+}
+
 .number-counter__punctuation {
   display: inline-block;
   vertical-align: middle;
@@ -14,6 +18,10 @@
   overflow: hidden;
   word-wrap: break-word;
   text-align: left;
+}
+
+.sdc-sf-big-number__context {
+  font-size: 1rem;
 }
 
 .number-counter__digit--static {
@@ -45,14 +53,27 @@
   margin-bottom: 0.1em;
 }
 
+.sdc-sf-big-number--small
+.sdc-sf-big-number__body {
+  font-size: 68px
+}
+
 .sdc-sf-big-number:not(:last-child){
   margin-bottom: calc(1em + 2vmin)
 }
 
+@media all and (max-width: 700px){
+  .sdc-sf-big-number--small
+  .sdc-sf-big-number__body {
+    font-size: 58px
+  }
+
+}
+
 @media all and (max-width: 600px){
 
-  .sdc-sf-big-number__body {
-    font-size: 40px
+  .sdc-sf-big-number__body[class] {
+    font-size: 50px
   }
 }
 

@@ -173,9 +173,11 @@
 
           function update(json) {
             json.forEach(function (item) {
-              let row = root.querySelector(`[data-id="${item.id}"]`);
-              if (row) {
-                row.update = item;
+              let rows = root.querySelectorAll(`[data-id="${item.id}"]`);
+              if (rows.length) {
+                rows.forEach(function (row) {
+                  row.update = item;
+                })
               }
             })
           }

@@ -6,20 +6,44 @@
   justify-content: center;
 }
 
+.sdc-sf-grid-icons--5
+.sdc-sf-icon {
+  width: 20%;
+}
+
 .sdc-sf-grid-icons--7
 .sdc-sf-icon {
   width: calc(100% / 7);
 }
 
+.sdc-sf-grid-icons--10
 .sdc-sf-icon {
+  width: 10%;
+}
+
+.sdc-sf-icon,
+.sdc-sf-comparison__stat {
   position: relative;
   overflow: hidden;
   will-change: transform;
   transition: 0.5s transform;
-  padding: 1px 3px
+  padding: 3px
 }
 
-.sdc-sf-icon[data-animate]{
+.sdc-sf-icon--50 {
+  clip-path: inset(0 50% 0 0);
+}
+
+.sdc-sf-icon--75 {
+  clip-path: inset(0 25% 0 0);
+}
+
+.sdc-sf-icon img {
+  display: block;
+}
+
+.sdc-sf-icon[data-animate],
+.sdc-sf-comparison__stat[data-animate] {
   transform: scale(0.2)
 }
 

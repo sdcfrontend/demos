@@ -2,12 +2,44 @@
   padding: 2em 0;
   padding: calc(1em + 3vmin) 0;
   position: relative;
+  background: white;
+  /* background: url(../img/bg-white-1.png) white; */;
+}
+
+.sdc-sf-panel--no-padding[class]{
+  /* padding: 0; */
 }
 
 .sdc-sf-panel--shaded {
-  background: #dedddd
+  /* background: #c8d1d8;
+  background: white; */
 }
 
 .sdc-sf-panel-con {
   
+}
+
+.sdc-sf-panel:last-child,
+.sdc-sf-panel > .site-wrap > *:last-child {
+  margin-bottom: 0!important
+}
+
+.sdc-sf-panel--sawtooth-top:before,
+.sdc-sf-panel--sawtooth-top:after {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 0;
+  width: 100%;
+  height:11px;
+  z-index: 2;
+  background: url(../img/bg-sawtooth-2.png);
+  background-size: 40px auto;
+}
+
+.sdc-sf-panel--sawtooth-bottom:after {
+  transform: rotate(180deg);
+  top: auto;
+  bottom: -11px;
+  z-index: 3
 }

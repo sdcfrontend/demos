@@ -2,14 +2,17 @@
   "externalTrigger": true,
   "charts": [
     {
-      "id": 3,
-      "type": "pie",
-      "title": "Nationalities in the NHS",
+      "id": 4,
+      "type": "donut",
+      "title": "Admissions",
       "skin": "nhs",
       "animated": true,
       "key": true,
       "canvasSize": 400,
       "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
       "grid": {
         "majorLines": false,
         "minorLines": false
@@ -29,57 +32,59 @@
       "points": [
         {
           "values": [
-            18348
+            125351
           ],
-          "label": "India"
+          "label": "Heart disease",
+          "subLabel": "125,351"
         },
         {
           "values": [
-            15391
+            203454
           ],
-          "label": "Philippines"
+          "label": "Breast cancer",
+          "subLabel": "203,454"
         },
         {
           "values": [
-            13016
+            28204
           ],
-          "label": "Ireland"
+          "label": "Pancreatic cancer",
+          "subLabel": "28,204"
         },
         {
           "values": [
-            8477
+            91902
           ],
-          "label": "Poland"
+          "label": "Lung cancer",
+          "subLabel": "91,902"
         },
         {
           "values": [
-            6781
+            91802
           ],
-          "label": "Spain"
+          "label": "Colon cancer",
+          "subLabel": "91,802"
         },
         {
           "values": [
-            6725
+            70295
           ],
-          "label": "Portugal"
+          "label": "Prostate cancer",
+          "subLabel": "70,295"
         },
         {
           "values": [
-            6044
+            27652
           ],
-          "label": "Italy"
+          "label": "Type 1 diabetes",
+          "subLabel": "27,652"
         },
         {
           "values": [
-            5405
+            22969
           ],
-          "label": "Nigeria"
-        },
-        {
-          "values": [
-            3899
-          ],
-          "label": "Zimbabwe"
+          "label": "Type 2 diabetes",
+          "subLabel": "22,969"
         }
       ]
     }
