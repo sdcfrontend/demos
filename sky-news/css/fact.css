@@ -5,7 +5,7 @@
   background-position: 0 0, 0 bottom;
   /* background: url(../img/bg-blue-1.png) #005EB8; */
   color: white;
-  padding: calc(1em + 5vmin) 0;
+  padding: calc(1em + 4vmin) 0;
   text-align: center;
 }
 
@@ -15,6 +15,24 @@
 }
 
 .sdc-sf-fact p {
-  margin-bottom: 0.5em;
-  line-height: 1.3
+  line-height: 1.4;
+  max-width: 660px;
+  margin: 0 auto;
+  font-size: calc(12px + 1vmin);
+}
+
+.sdc-sf-fact .site-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.sdc-sf-fact figure {
+  width: calc(25px + 9vw);
+  max-width: 150px;
+  min-width: 60px;
+  margin-right: calc(12px + 1vmin)
+}
+
+.sdc-sf-fact__body {
+  flex: 1
 }

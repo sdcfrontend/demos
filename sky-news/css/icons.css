@@ -21,7 +21,8 @@
   width: 10%;
 }
 
-.sdc-sf-icon {
+.sdc-sf-icon,
+.sdc-sf-comparison__stat {
   position: relative;
   overflow: hidden;
   will-change: transform;
@@ -41,7 +42,8 @@
   display: block;
 }
 
-.sdc-sf-icon[data-animate]{
+.sdc-sf-icon[data-animate],
+.sdc-sf-comparison__stat[data-animate] {
   transform: scale(0.2)
 }
 
