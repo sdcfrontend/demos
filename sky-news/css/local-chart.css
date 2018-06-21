@@ -104,12 +104,6 @@
   font-weight: 400
 }
 
-.sdc-sf-chart--pie svg {
-  background: url(../img/bg-cube-1.png) no-repeat;
-  background-size: 30%;
-  background-position: 50%;
-}
-
 .sdc-site-charts__chart[data-type="donut"] {
   background: url(img/bg-cube-1.png) no-repeat;
   background-size: 30%;
