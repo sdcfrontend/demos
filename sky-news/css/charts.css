@@ -1,14 +1,12 @@
-.sdc-site-charts__chart-wrap[data-type="pie"] {
-  padding-bottom: 45%; }
+.sdc-site-charts__chart-wrap[data-type="pie"],
+.sdc-site-charts__chart-wrap[data-type="donut"] {
+  padding-bottom: 70%; }
 
 .sdc-site-charts__chart[data-type="pie"] svg {
   transform: rotate(-90deg); }
 
 .sdc-site-charts__chart[data-type="pie"][animated] .chart__point {
   transition: transform 1s; }
-
-.sdc-site-charts__chart-wrap[data-type="donut"] {
-  padding-bottom: 45%; }
 
 .sdc-site-charts__chart[data-type="donut"] svg {
   transform: rotate(-90deg); }
@@ -127,6 +125,10 @@ body {
   color: #999; }
 
 @media all and (min-width: 600px) {
+  .sdc-site-charts__chart-wrap[data-type="pie"],
+  .sdc-site-charts__chart-wrap[data-type="donut"] {
+  padding-bottom: 45%; }
+
   .sdc-site-charts__chart-container {
     display: flex; }
   .sdc-site-charts__chart-wrap {
@@ -136,7 +138,7 @@ body {
     margin: initial;
     right: auto; }
   .sdc-site-charts__chart-key-list {
-    min-width: 300px;
+    min-width: 40%;
     margin: 2em;
     align-self: center; } }
 

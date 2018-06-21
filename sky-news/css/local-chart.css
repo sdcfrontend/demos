@@ -106,7 +106,7 @@
 
 .sdc-site-charts__chart[data-type="donut"] {
   background: url(../img/bg-cube-1.png) no-repeat;
-  background-size: 30%;
+  background-size: auto 30%;
   background-position: 50%;
 }
 
