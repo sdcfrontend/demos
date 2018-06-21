@@ -174,7 +174,7 @@
 
     <div class="sdc-sf-content">
 
-      <div class="sdc-sf-title-header" id="nhs-title" data-role="slide" data-type="track">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track" id="nhs-title">
         <div class="sdc-sf-title-header__headline">
           <h1>NHS
             <span>in numbers</span>
@@ -227,7 +227,7 @@
 
       </div> -->
 
-      <div class="sdc-sf-title-header">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track">
         <div class="sdc-sf-title-header__headline">
           <h2>Workforce
           </h2>
@@ -980,7 +980,7 @@
         </div>
       </div> -->
 
-      <div class="sdc-sf-title-header">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track" id="nhs-title-patients">
         <div class="sdc-sf-title-header__headline">
           <h2>Patients
           </h2>
@@ -1407,7 +1407,7 @@
         </div>
       </div> -->
 
-      <div class="sdc-sf-title-header">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track">
         <div class="sdc-sf-title-header__headline">
           <h2>Treatments
           </h2>
@@ -1674,7 +1674,7 @@
         </div>
       </div> -->
 
-      <div class="sdc-sf-title-header">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track">
         <div class="sdc-sf-title-header__headline">
           <h2>Resources
           </h2>
@@ -2134,7 +2134,7 @@
         </div>
       </div> -->
 
-      <div class="sdc-sf-title-header">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track">
         <div class="sdc-sf-title-header__headline">
           <h2>Finances
           </h2>
@@ -2888,21 +2888,17 @@
 
   });
 
-  registerSlide(document.querySelector('#nhs-title'), 'track', function (val) {
+  registerSlide(document.querySelectorAll('.sdc-sf-title-header'), 'track', function (val) {
 
     var image = this.querySelector('.sdc-sf-title-header__image');
     var title = this.querySelector('.sdc-sf-title-header__headline');
 
     var dims = image.getBoundingClientRect();
-    // if (!this.init) {
-    //   this.init = dims.top;
-    // }
-
-    // var top = dims.top - this.init;
 
     image.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
     title.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
   });
+
 
   registerSlide(document.querySelector('#resources-gps'), 'track', function (val) {
     this.querySelectorAll('[data-role="number-counter"]').forEach(function (counter) {

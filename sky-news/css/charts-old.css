@@ -1,5 +1,5 @@
-.sdc-site-charts__chart-wrap[data-type="pie"] {
-  padding-bottom: 45%; }
+.sdc-site-charts__chart[data-type="pie"] {
+  padding-bottom: 100%; }
 
 .sdc-site-charts__chart[data-type="pie"] svg {
   transform: rotate(-90deg); }
@@ -7,8 +7,12 @@
 .sdc-site-charts__chart[data-type="pie"][animated] .chart__point {
   transition: transform 1s; }
 
-.sdc-site-charts__chart-wrap[data-type="donut"] {
-  padding-bottom: 45%; }
+@media all and (min-width: 600px) {
+  .sdc-site-charts__chart[data-type="pie"] {
+    padding-bottom: 56.25%; } }
+
+.sdc-site-charts__chart[data-type="donut"] {
+  padding-bottom: 100%; }
 
 .sdc-site-charts__chart[data-type="donut"] svg {
   transform: rotate(-90deg); }
@@ -16,14 +20,9 @@
 .sdc-site-charts__chart[data-type="donut"][animated] .chart__point {
   transition: transform 1s; }
 
-.sdc-site-charts__chart-wrap[data-type="concentric"] {
-  padding-bottom: 45%; }
-
-.sdc-site-charts__chart[data-type="concentric"] svg {
-  transform: rotate(-90deg); }
-
-.sdc-site-charts__chart[data-type="concentric"][animated] .chart__point {
-  transition: transform 1s; }
+@media all and (min-width: 600px) {
+  .sdc-site-charts__chart[data-type="donut"] {
+    padding-bottom: 56.25%; } }
 
 .sdc-site-charts__chart[animated] .sdc-site-charts__chart-bar {
   fill: #4a4a4a; }
@@ -54,28 +53,25 @@ body {
   padding: 0;
   box-sizing: border-box; }
 
+.sdc-site-charts__chart {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  font-size: 1.5em; }
+
 .sdc-site-charts__chart-container {
   text-align: center; }
 
 .sdc-site-charts__chart-container + .sdc-site-charts__chart-container {
   margin-top: 2em; }
 
-.sdc-site-charts__chart-wrap {
-  font-size: 1.5em;
-  position: relative;
-  padding-bottom: 56.25%; }
-
-.sdc-site-charts__chart {
-  display: inline-block;
-  height: 100%;
+.sdc-site-charts__chart svg[data-role="chart-svg"] {
   position: absolute;
-  left: 0;
   right: 0;
-  margin: 0 auto; }
-
-.sdc-site-charts__chart svg {
+  left: 0;
+  height: 100%;
   max-width: 100%;
-  height: 100%; }
+  margin: 0 auto; }
 
 .sdc-site-charts__chart-axis {
   stroke: #ccc; }
@@ -129,14 +125,13 @@ body {
 @media all and (min-width: 600px) {
   .sdc-site-charts__chart-container {
     display: flex; }
-  .sdc-site-charts__chart-wrap {
+  .sdc-site-charts__chart {
     flex: 1;
     font-size: 1em; }
-  .sdc-site-charts__chart-wrap:not(:only-child) .sdc-site-charts__chart {
-    margin: initial;
-    right: auto; }
+  .sdc-site-charts__chart svg[data-role="chart-svg"] {
+    margin: initial; }
   .sdc-site-charts__chart-key-list {
-    min-width: 300px;
+    max-width: 300px;
     margin: 2em;
     align-self: center; } }
 
