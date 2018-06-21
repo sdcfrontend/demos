@@ -2833,11 +2833,12 @@
     var image = this.querySelector('.sdc-sf-title-header__image');
     var title = this.querySelector('.sdc-sf-title-header__headline');
 
-    console.log(image);
-    var dims = image.getBoundingClientRect();
 
-    image.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
-    title.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
+    var dims = image.getBoundingClientRect();
+    var top = dims.top - this.offsetTop
+
+    image.style.cssText = "transform: translateY(" + (top * -1) / 10 + "%)";
+    title.style.cssText = "transform: translateY(" + (top * -1) / 10 + "%)";
   });
 
   registerSlide(document.querySelector('#resources-gps'), 'track', function (val) {
