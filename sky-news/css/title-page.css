@@ -17,11 +17,17 @@
   align-items: center;
   justify-content: center;
   color: white;
-  will-change: transform
+  will-change: transform;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5)
 }
 
 .sdc-sf-title-header__headline h1 {
   font-size: calc(2em + 10vmin);
+  color: white;
+}
+
+.sdc-sf-title-header__headline h2 {
+  font-size: calc(1.5em + 4vmin);
   color: white;
 }
 
