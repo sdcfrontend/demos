@@ -3013,6 +3013,12 @@
       sticky.classList.toggle('sdc-sf-sticky-info--open');
     }
 
+    document.body.addEventListener('click', function(ev){
+      if(!sticky.contains(ev.target)){
+        sticky.classList.remove('sdc-sf-sticky-info--open');
+      }
+    })
+
   })();
 
 
