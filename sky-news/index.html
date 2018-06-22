@@ -2420,6 +2420,11 @@
       </div>
     </div>
 
+    <div class="sdc-sf-sticky-info">
+      <div class="sdc-sf-sticky-info__head">000,000</div>
+      <div class="sdc-sf-sticky-info__body">The amount the NHS has spent since you started reading this article</div>
+    </div>
+
     <div class="sdc-news-footer" data-component-name="sdc-news-footer">
       <div class="sdc-news-footer__wrapper">
         <div class="sdc-news-footer__row">
@@ -2990,7 +2995,25 @@
       this.onclick = null;
       this.removeAttribute('data-click');
     }
-  })
+  });
+
+  (function(){
+    var sticky = document.querySelector('.sdc-sf-sticky-info');
+    var head = sticky.querySelector('.sdc-sf-sticky-info__head');
+
+    var multiplier = 4597;
+    var counter = 0;
+
+    setInterval(function(){
+      counter += 459;
+      head.textContent = counter.toLocaleString('en');
+    }, 100)
+
+    sticky.onclick = function(){
+      sticky.classList.toggle('sdc-sf-sticky-info--open');
+    }
+
+  })();
 
 
 
