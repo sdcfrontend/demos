@@ -19,7 +19,7 @@
   justify-content: center;
   color: white;
   will-change: transform;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5)
+  text-shadow: 0 0 4px rgba(0,0,0,0.25)
 }
 
 .sdc-sf-title-header__headline h1 {

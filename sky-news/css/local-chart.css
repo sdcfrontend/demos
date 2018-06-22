@@ -3,7 +3,7 @@
   margin-bottom: calc(12px  + 2vmin)
 }
 
-.sdc-sf-chart:last-child {
+.sdc-sf-chart:last-of-type {
   margin-bottom: 0;
 }
 

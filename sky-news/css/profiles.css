@@ -126,8 +126,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: calc(1em + 2vmin);
-  line-height: 1;
+  font-size: calc(12px + 2.2vmin);
+  line-height: 1.2;
   width: 100%;
   text-align: center;
 }
@@ -141,11 +141,10 @@ figure:after {
   opacity: 0
 }
 
-
 .sdc-sf-profile h4 span {
   display: block;
-  font-size: 1rem;
-  padding: 0.25em 0
+  font-size: 19px;
+  padding: 0
 }
 
 .sdc-sf-profile-text {
@@ -216,10 +215,15 @@ figure:after {
 @media all and (max-width: 720px){
   .sdc-sf-profiles,
   .sdc-sf-profile {
-    display: block;
+    /* display: block;
     width: 100%;
-    margin-bottom: 1px
+    margin-bottom: 1px */
   }
+
+  .sdc-sf-profile h4 span {
+    font-size: 16px;
+  }
+  
 }
 
 
