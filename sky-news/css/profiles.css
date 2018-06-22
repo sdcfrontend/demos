@@ -178,7 +178,7 @@ figure:after {
 }
 
 .sdc-sf-text-block {
-  padding: calc(12px + 3vmin) 3vmin calc(12px + 4vmin);
+  padding: calc(12px + 3vmin) calc(12px + 3vmin) calc(12px + 4vmin);
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.4;

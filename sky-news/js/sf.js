@@ -3,7 +3,13 @@
   window.slides = document.querySelectorAll('[data-role="slide"]');
 
   function registerSlide(slide, style, func) {
-    slide[style] = func;
+    if (!slide.length) {
+      slide = [slide];
+    }
+
+    slide.forEach(function (item) {
+      item[style] = func;
+    })
   }
 
   function triggerSlide(slide) {

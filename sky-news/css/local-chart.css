@@ -104,17 +104,10 @@
   font-weight: 400
 }
 
-.sdc-sf-chart--pie svg {
+.sdc-site-charts__chart[data-type="donut"] {
   background: url(../img/bg-cube-1.png) no-repeat;
   background-size: 30%;
   background-position: 50%;
-}
-
-@media all and (min-width: 600px){
-  .sdc-sf-chart--pie
-  .sdc-site-charts__chart {
-    padding-bottom: 50%;
-  }
 }
 
 .sdc-sf-chart-vertical-bar {
@@ -209,5 +202,11 @@
 
   .sdc-sf-chart-bars {
     width: 50%;
+  }
+}
+
+@media all and (max-width: 600px){
+  .sdc-site-charts__chart[data-type="donut"] {
+    background-size: auto 30%;
   }
 }
