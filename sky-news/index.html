@@ -174,7 +174,7 @@
 
     <div class="sdc-sf-content">
 
-      <div class="sdc-sf-title-header" data-role="slide" data-type="track" id="nhs-title">
+      <div class="sdc-sf-title-header" data-role="slide" data-type="track" id="nhs-title" data-offset="0">
         <div class="sdc-sf-title-header__headline">
           <h1>NHS
             <span>in numbers</span>
@@ -2910,11 +2910,17 @@
 
     var image = this.querySelector('.sdc-sf-title-header__image');
     var title = this.querySelector('.sdc-sf-title-header__headline');
+    
+    var offset = -100;
+    if(this.getAttribute('data-offset')){
+      offset = 0
+    }
 
     var dims = image.getBoundingClientRect();
+    var top = Math.max(offset, (dims.top * -1) / 10);
 
-    image.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
-    title.style.cssText = "transform: translateY(" + (dims.top * -1) / 10 + "%)";
+    image.style.cssText = "transform: translateY(" + top + "%)";
+    title.style.cssText = "transform: translateY(" + top + "%)";
   });
 
 
