@@ -1,0 +1,12 @@
+.sdc-sf-sticky-nav[class] {
+  position: sticky;
+  top: -1px;
+  margin-bottom: 0
+}
+
+span[data-role="localnav-item"] {
+  visibility: hidden;
+  height: 1px;
+  overflow: hidden;
+  display: block;
+}

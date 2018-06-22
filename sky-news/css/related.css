@@ -1,0 +1,49 @@
+.sdc-sf-related {
+  background: #005EB8;
+  color: white;
+}
+
+.sdc-sf-related__inner {
+  display: flex;
+  display: grid;
+  grid-gap: calc(1em + 2vmin);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sdc-sf-related__cell {
+  flex: 1;
+}
+
+@supports not(display: grid){
+  .sdc-sf-related__cell {
+    padding: 0 10px;
+  }
+}
+
+.sdc-sf-related__item-figure {
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.sdc-sf-related__item-figure > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.sdc-sf-related__headline {
+  font-size: calc(0.75em + 1vmin);
+  margin-top: 0.75em;
+}
+
+@media all and (max-width: 480px){
+  .sdc-sf-related__inner {
+    display: block;
+    font-size: 1.2em
+  }
+
+  .sdc-sf-related__item {
+    margin-bottom: calc(1em + 2vmin)
+  }
+}
