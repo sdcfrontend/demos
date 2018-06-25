@@ -410,6 +410,13 @@ small {
   text-align: center
 }
 
+.sdc-sf-infographic-item__text em {
+  display: block;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 0.5em;
+}
+
 .sdc-sf-infographic-item__text:not(:only-child){
   /* margin-top: 3px */
 }

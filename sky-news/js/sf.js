@@ -38,7 +38,6 @@
   }
 
   function tick() {
-
     for (var i = -1; ++i < slides.length;) {
 
       var type = slides[i].getAttribute('data-type');
@@ -63,7 +62,6 @@
 
 
     requestAnimationFrame(tick);
-
 
   }
 

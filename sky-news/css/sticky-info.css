@@ -1,5 +1,5 @@
 .sdc-sf-sticky-info {
-  background: #000000;
+  background: #002060;
   position: fixed;
   top: 100%;
   right: 0;
@@ -30,8 +30,9 @@
   padding-top: 3px;
 }
 
+
 .sdc-sf-sticky-info:hover {
-  background: #222
+  background: #005EB8
 }
 
 .sdc-sf-sticky-info__head:before {
