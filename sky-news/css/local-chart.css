@@ -4,7 +4,7 @@
 }
 
 .sdc-sf-chart:last-of-type {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 .sdc-sf-chart > *:last-child {
@@ -37,7 +37,8 @@
 .sdc-sf-chart-circle {
   width: 100%;
   position: relative;
-  font-size: calc(11px + 1vmin)
+  font-size: calc(11px + 1vmin);
+
 }
 
 .sdc-sf-chart-circle:after {
@@ -54,7 +55,12 @@
   border-radius: 50%;
   left: 3%;
   top: 60%;
-  font-size: 1.1em
+  font-size: 1.1em;
+  transition: transform 0.33s 
+}
+
+.sdc-sf-chart-circle__item[data-animate]{
+  transform: scale(0.2)
 }
 
 .sdc-sf-chart-circle__text {
@@ -109,6 +115,27 @@
   background-size: 30%;
   background-position: 50%;
 }
+
+.sdc-site-charts--nurse
+.sdc-site-charts__chart[data-type="donut"] {
+  background-image: url(../img/icons/NHSWorker.svg);
+}
+
+.sdc-site-charts--cancer
+.sdc-site-charts__chart[data-type="donut"] {
+  background-image: url(../img/icons/Cancer.svg);
+}
+
+.sdc-site-charts--hospitals
+.sdc-site-charts__chart[data-type="donut"] {
+  background-image: url(../img/icons/Hospitals.svg);
+}
+
+.sdc-site-charts--spending
+.sdc-site-charts__chart[data-type="donut"] {
+  background-image: url(../img/icons/Spending.svg);
+}
+
 
 .sdc-sf-chart-vertical-bar {
   display: flex;
@@ -168,9 +195,10 @@
 }
 
 .sdc-sf-chart-bar img {
-  width: 33%;
+  width: 100%;
+  position: absolute;
+  top: 0;
   min-width: 30px;
-  margin-bottom: 1em;
 }
 
 .sdc-sf-chart-bar:before {

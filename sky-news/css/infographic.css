@@ -411,7 +411,7 @@ small {
 }
 
 .sdc-sf-infographic-item__text:not(:only-child){
-  margin-top: 3px
+  /* margin-top: 3px */
 }
 
 .sdc-sf-infographic-item__text--s2 {

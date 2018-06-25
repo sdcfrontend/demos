@@ -61,7 +61,10 @@
       }
     }
 
+
     requestAnimationFrame(tick);
+
+
   }
 
   window.registerSlide = registerSlide;
