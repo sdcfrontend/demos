@@ -127,7 +127,7 @@ img {
   bottom: 1em;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: calc(11px + 2.1vmin);
+  font-size: calc(14px + 2vmin);
   line-height: 1.2;
   width: 100%;
   text-align: center;
@@ -179,7 +179,7 @@ figure:after {
 }
 
 .sdc-sf-text-block {
-  padding: calc(12px + 3vmin) calc(12px + 3vmin) calc(12px + 4vmin);
+  padding: calc(12px + 3vmin) calc(12px + 3vmin) calc(9px + 3vmin);
   max-width: 680px;
   margin: 0 auto;
   line-height: 1.4;
@@ -221,18 +221,20 @@ figure:after {
 }
 
 .sdc-sf-text-block li {
-  padding-left: 38px;
+  padding-left: 1.5em;
   margin-bottom: 0.7em;
   line-height: 1.25;
   background: url(../img/icons/bullet.svg) no-repeat;
   background-size: 10px;
-  background-position: 14px 6px;
+  background-position: 0.25em 5px;
+  list-style: none
 }
 
 .sdc-sf-text-block
 .sdc-sf-citation {
   padding-top: 0.75em;
   text-align: left;
+  margin-bottom: 0
 }
 
 @media all and (max-width: 520px){
