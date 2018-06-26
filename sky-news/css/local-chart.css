@@ -259,7 +259,8 @@
 .sdc-sf-chart-label {
   font-weight: 600;
   padding: calc(6px + 1vmin) 0 0;
-  white-space: nowrap
+  white-space: nowrap;
+  margin-bottom: 0
 } 
 
 @media all and (min-width: 800px){

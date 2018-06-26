@@ -7,6 +7,10 @@
     width: 60%;
     padding-right: calc(1em + 1vmin)
   }
+
+  .sdc-sf-map__col1 img {
+    width: 100%
+  }
 }
 
 .sdc-sf-map__col2 {
