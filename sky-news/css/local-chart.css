@@ -193,14 +193,16 @@
   background-size: auto 100%;
   color: white;
   margin-bottom: calc(3px + 0.5vmin);
-  height: calc(18px + 4vmin);
+  min-height: calc(18px + 4vmin);
   display: flex;
   align-items: center;
-  max-width: calc(100% - 80px);
+  max-width: calc(100% - 70px);
   position: relative;
-  padding-left: 12px;
-  min-width: 200px;
+  padding-left: 10px;
   transition: width 0.33s;
+  font-size: calc(12px + 1vmin);
+  line-height: 0.9;
+  white-space: nowrap
 }
 
 .sdc-sf-chart-horizontal-bar
@@ -218,9 +220,9 @@
   top: 0;
   bottom: auto;
   height: 100%;
-  width: 80px;
+  width: 70px;
   box-sizing: border-box;
-  padding: 0 0 0 12px;
+  padding: 0 0 0 10px;
   text-align: left;
   align-items: center;
   display: flex;

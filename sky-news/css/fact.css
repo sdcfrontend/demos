@@ -36,3 +36,12 @@
 .sdc-sf-fact__body {
   flex: 1
 }
+
+.sdc-sf-fact__icon {
+  transition: transform 0.3s;
+  will-change: transform;
+}
+
+.sdc-sf-fact__icon[data-animate]{
+  transform: scale(0.2)
+}
