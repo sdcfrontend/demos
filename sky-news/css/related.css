@@ -10,6 +10,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.sdc-sf-related__item {
+  display: block;
+}
+
 .sdc-sf-related__cell {
   flex: 1;
 }

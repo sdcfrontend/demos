@@ -147,7 +147,7 @@
   padding: calc(12px + 3vmin) 0
 }
 
-
+.sdc-sf-chart-vertical-bar
 .sdc-sf-chart-bars {
   width: 25%;
   display: flex;
@@ -169,6 +169,7 @@
   align-items: flex-end
 }
 
+.sdc-sf-chart-vertical-bar
 .sdc-sf-chart-bar {
   background-image: url(../img/bg-cube-2.png);
   background-repeat: no-repeat;
@@ -181,6 +182,48 @@
   justify-content: center;
   transition: 0.5s height;
   will-change: height;
+}
+
+.sdc-sf-chart-horizontal-bar
+.sdc-sf-chart-bar {
+  background-image: url(../img/bg-cube-3.png);
+  background-color: #002060;
+  background-repeat: no-repeat;
+  background-position: right 0;
+  background-size: auto 100%;
+  color: white;
+  margin-bottom: calc(3px + 0.5vmin);
+  height: calc(18px + 4vmin);
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 80px);
+  position: relative;
+  padding-left: 12px;
+  min-width: 200px;
+  transition: width 0.33s;
+}
+
+.sdc-sf-chart-horizontal-bar
+.sdc-sf-chart-bar[data-trigger]{
+  width: 10%!important
+}
+
+.sdc-sf-chart-horizontal-bar
+.sdc-sf-chart-bar:before {
+  content: attr(data-label);
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  width: 80px;
+  box-sizing: border-box;
+  padding: 0 0 0 12px;
+  text-align: left;
+  align-items: center;
+  display: flex;
 }
 
 

@@ -1,15 +1,15 @@
-.sdc-sf-color-england {
+.sdc-sf-color-england[class] {
   background-color: #0072CE
 }
 
-.sdc-sf-color-scotland {
+.sdc-sf-color-scotland[class] {
   background-color: #003087
 }
 
-.sdc-sf-color-nireland {
+.sdc-sf-color-nireland[class] {
   background-color: #005EB8
 }
 
-.sdc-sf-color-wales {
+.sdc-sf-color-wales[class] {
   background-color: #002060
 }
