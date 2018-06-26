@@ -115,7 +115,7 @@ registerSlide(document.querySelector('#workforce-icons'), 'track', function (val
 
 registerSlide(document.querySelector('#workforce-chart'), 'track', function (val) {
 
-  this.querySelectorAll('[data-component-name="sdc-site-charts"]').forEach(function (chart) {
+  this.querySelectorAll('.sdc-site-charts[data-url]').forEach(function (chart) {
     if ((val) < 100) {
       if (chart.start && !chart.init) {
         chart.start();
@@ -178,7 +178,7 @@ registerSlide(document.querySelector('#patient-cancer'), 'track', function (val)
     }
   });
 
-  this.querySelectorAll('[data-component-name="sdc-site-charts"]').forEach(function (chart) {
+  this.querySelectorAll('.sdc-site-charts[data-url]').forEach(function (chart) {
     if ((val) < 100) {
       if (chart.start && !chart.init) {
         chart.start();
@@ -270,7 +270,7 @@ registerSlide(document.querySelector('#treatments-admission'), 'track', function
 
 registerSlide(document.querySelector('#treatments-admissions-breakdown'), 'track', function (val) {
 
-  this.querySelectorAll('[data-component-name="sdc-site-charts"]').forEach(function (chart) {
+  this.querySelectorAll('.sdc-site-charts[data-url]').forEach(function (chart) {
     if ((val) < 100) {
       if (chart.start && !chart.init) {
         chart.start();
@@ -291,7 +291,7 @@ registerSlide(document.querySelector('#finances-budget'), 'track', function (val
     }
   });
 
-  this.querySelectorAll('[data-component-name="sdc-site-charts"]').forEach(function (chart) {
+  this.querySelectorAll('.sdc-site-charts[data-url]').forEach(function (chart) {
 
     var h = window.innerHeight;
     var top = chart.getBoundingClientRect().top;

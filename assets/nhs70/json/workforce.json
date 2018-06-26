@@ -1,0 +1,99 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 3,
+      "type": "donut",
+      "title": "Nationalities in the NHS",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            18348
+          ],
+          "label": "India",
+          "subLabel": "18,348"
+        },
+        {
+          "values": [
+            15391
+          ],
+          "label": "Philippines",
+          "subLabel": "15,391"
+        },
+        {
+          "values": [
+            13016
+          ],
+          "label": "Ireland",
+          "subLabel": "13,016"
+        },
+        {
+          "values": [
+            8477
+          ],
+          "label": "Poland",
+          "subLabel": "8,477"
+        },
+        {
+          "values": [
+            6781
+          ],
+          "label": "Spain",
+          "subLabel": "6,781"
+        },
+        {
+          "values": [
+            6725
+          ],
+          "label": "Portugal",
+          "subLabel": "6,725"
+        },
+        {
+          "values": [
+            6044
+          ],
+          "label": "Italy",
+          "subLabel": "6,044"
+        },
+        {
+          "values": [
+            5405
+          ],
+          "label": "Nigeria",
+          "subLabel": "5,405"
+        },
+        {
+          "values": [
+            3899
+          ],
+          "label": "Zimbabwe",
+          "subLabel": "3,899"
+        }
+      ]
+    }
+  ]
+}

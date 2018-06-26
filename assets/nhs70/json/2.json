@@ -1,0 +1,48 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 4,
+      "type": "donut",
+      "title": "Obesity",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            75
+          ],
+          "label": "Not Obese"
+        },
+        {
+          "values": [
+            25
+          ],
+          "label": "Obese"
+        }
+      ]
+    }
+  ]
+}

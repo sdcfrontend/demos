@@ -171,8 +171,8 @@ figure:after {
   position: absolute;
   right: 3vmin;
   top: calc(12px + 3vmin);
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background: url(../img/icons/close.svg) no-repeat;
   background-size: 100%;
   color: rgba(0,0,0,0);
@@ -199,8 +199,10 @@ figure:after {
 
 .sdc-sf-text-block h3 {
   font-size: calc(1em + 2vmin);
-  margin-bottom: 0.5em;
-  font-weight: 500
+  margin-bottom: 0.7em;
+  font-weight: 500;
+  line-height: 1;
+  padding-right: 30px;
 }
 
 .sdc-sf-text-block a {
