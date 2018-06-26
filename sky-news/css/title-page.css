@@ -50,6 +50,13 @@
   /* will-change: transform */
 }
 
+@media (hover: none){
+  .sdc-sf-title-header__image[class],
+  .sdc-sf-title-header__headline[class] {
+    transform: none!important
+  }
+}
+
 .sdc-sf-title-header__image:after {
   content: "";
   background: rgba(0,0,0,0.2);

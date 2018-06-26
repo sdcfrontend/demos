@@ -104,6 +104,7 @@
 
 .sdc-site-charts__chart-key-item {
   font-weight: bold;
+  font-size: calc(14px + 1vmin)
 }
 
 .sdc-site-charts__chart-key-value {
