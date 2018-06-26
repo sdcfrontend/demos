@@ -163,7 +163,7 @@
 }
 
 .sdc-sf-chart-bar-group {
-  flex: 1;
+  flex: auto;
   display: flex;
   width: 100%;
   align-items: flex-end

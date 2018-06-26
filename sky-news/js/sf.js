@@ -378,6 +378,7 @@ registerSlide(document.querySelector('#workforce-shortfalls'), 'track', function
 
 });
 
+
 registerSlide(document.querySelectorAll('.sdc-sf-title-header'), 'track', function (val) {
 
   var image = this.querySelector('.sdc-sf-title-header__image');
@@ -389,7 +390,7 @@ registerSlide(document.querySelectorAll('.sdc-sf-title-header'), 'track', functi
   }
 
   var dims = image.getBoundingClientRect();
-  var top = Math.max(offset, (dims.top * -1) / 10).toFixed(2);
+  var top = Math.max(offset, (dims.top * -1) / 20).toFixed(2);
 
   image.style.cssText = "transform: translateY(" + top + "%)";
   title.style.cssText = "transform: translateY(" + top + "%)";
