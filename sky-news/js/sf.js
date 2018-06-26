@@ -422,6 +422,22 @@ registerSlide(document.querySelector('#resources-gps'), 'track', function (val) 
 
 });
 
+registerSlide(document.querySelector('#resources-size'), 'track', function (val) {
+
+  this.querySelectorAll('[data-animate]').forEach(function (icon, index) {
+
+    var h = window.innerHeight;
+    var top = icon.getBoundingClientRect().top;
+
+    if (top < h) {
+      icon.style.transitionDelay = 50 + (index * 20) + 'ms';
+      icon.removeAttribute('data-animate');
+    }
+
+  });
+
+});
+
 
 
 //profiles

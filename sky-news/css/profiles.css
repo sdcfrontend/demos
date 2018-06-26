@@ -1,6 +1,7 @@
 .sdc-sf-profiles {
   display: grid;
-  grid-template-columns: repeat(2, 1fr)
+  grid-template-columns: repeat(2, 1fr);
+  background: #e8e8e8
 }
 
 .sdc-sf-profile {
@@ -126,7 +127,7 @@ img {
   bottom: 1em;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: calc(12px + 2.2vmin);
+  font-size: calc(11px + 2.1vmin);
   line-height: 1.2;
   width: 100%;
   text-align: center;
@@ -215,6 +216,21 @@ figure:after {
 .sdc-sf-text-block p:not(:last-child),
 .sdc-sf-text-block ul:not(:last-child) {
   margin-bottom: 1.5em;
+}
+
+.sdc-sf-text-block li {
+  padding-left: 38px;
+  margin-bottom: 0.7em;
+  line-height: 1.25;
+  background: url(../img/icons/bullet.svg) no-repeat;
+  background-size: 10px;
+  background-position: 14px 6px;
+}
+
+.sdc-sf-text-block
+.sdc-sf-citation {
+  padding-top: 0.75em;
+  text-align: left;
 }
 
 @media all and (max-width: 520px){
