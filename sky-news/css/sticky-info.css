@@ -5,17 +5,25 @@
   right: 0;
   width: 60%;
   max-width: 200px;
-  color: white;
   z-index: 99;
   font-size: 15px;
   line-height: 1.3;
   will-change: transform;
   transition: transform 0.33s;
   transform: translateY(-34px);
+  fill: #ddd;
+  color: #ddd;
 }
 
 .sdc-sf-sticky-info--open {
-  transform: translateY(-100%)
+  transform: translateY(-100%);
+  color: white;
+  fill: white;
+}
+
+.sdc-sf-sticky-info--open
+.sdc-sf-sticky-info__head > svg {
+  transform: rotate(0)
 }
 
 .sdc-sf-sticky-info__head {
@@ -32,21 +40,23 @@
 
 
 .sdc-sf-sticky-info:hover {
-  background: #005EB8
+  background: #005EB8;
+  color: white;
+  fill: white;
 }
 
 .sdc-sf-sticky-info__head:before {
   content: "£"
 }
 
-.sdc-sf-sticky-info__head:after {
-  content: "?";
+.sdc-sf-sticky-info__head > svg {
+  width: 12px;
+  height: 12px;
   position: absolute;
-  right: 0;
-  top: 50%;
-  font-weight: 400;
-  transform: translate(-100%, -50%)
-
+  right: 12px;
+  top: 12px;
+  transform: rotate(180deg);
+  fill: inherit;
 }
 
 .sdc-sf-sticky-info__body {
