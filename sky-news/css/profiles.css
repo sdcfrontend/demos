@@ -182,13 +182,17 @@ figure:after {
   padding: calc(12px + 3vmin) calc(12px + 3vmin) calc(9px + 3vmin);
   max-width: 680px;
   margin: 0 auto;
-  line-height: 1.4;
-  font-size: 1rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
   position: relative;
 }
 
 .sdc-sf-text-block > p:first-child {
   font-size: 1.15em
+}
+
+.sdc-sf-text-block > *:last-child {
+  margin-bottom: 0
 }
 
 .sdc-sf-text-block--main {
@@ -199,10 +203,17 @@ figure:after {
 
 .sdc-sf-text-block h3 {
   font-size: calc(1em + 2vmin);
-  margin-bottom: 0.7em;
+  margin-bottom: 0.8em;
   font-weight: 500;
   line-height: 1;
   padding-right: 30px;
+}
+
+.sdc-sf-text-block h3 span {
+  display: block;
+  font-size: 0.75em;
+  margin-top: 0.4em;
+  line-height: 1.2
 }
 
 .sdc-sf-text-block a {

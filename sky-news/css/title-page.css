@@ -23,9 +23,12 @@
 }
 
 .sdc-sf-title-header__headline h1 {
-  font-size: calc(2em + 14vmin);
-  color: white;
-  line-height: 1
+  width: 60%;
+  max-width: 400px;
+}
+
+.sdc-sf-title-header__headline h1 img {
+  width: 100%;
 }
 
 .sdc-sf-title-header__headline h2 {

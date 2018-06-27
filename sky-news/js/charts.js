@@ -9,53 +9,53 @@
 		root["sdc-site-charts"] = factory();
 })(this, function () {
 	return /******/ (function (modules) { // webpackBootstrap
-					/******/ 	// The module cache
-					/******/ 	var installedModules = {};
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
 
-					/******/ 	// The require function
-					/******/ 	function __webpack_require__(moduleId) {
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
 
-					/******/ 		// Check if module is in cache
-					/******/ 		if (installedModules[moduleId])
-					/******/ 			return installedModules[moduleId].exports;
+/******/ 		// Check if module is in cache
+/******/ 		if (installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
 
-					/******/ 		// Create a new module (and put it into the cache)
-					/******/ 		var module = installedModules[moduleId] = {
-					/******/ 			exports: {},
-					/******/ 			id: moduleId,
-					/******/ 			loaded: false
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
 				/******/
-			};
+};
 
-					/******/ 		// Execute the module function
-					/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
-					/******/ 		// Flag the module as loaded
-					/******/ 		module.loaded = true;
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 
-					/******/ 		// Return the exports of the module
-					/******/ 		return module.exports;
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
 			/******/
-		}
+}
 
 
-					/******/ 	// expose the modules object (__webpack_modules__)
-					/******/ 	__webpack_require__.m = modules;
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
 
-					/******/ 	// expose the module cache
-					/******/ 	__webpack_require__.c = installedModules;
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
 
-					/******/ 	// __webpack_public_path__
-					/******/ 	__webpack_require__.p = "";
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
 
-					/******/ 	// Load entry module and return exports
-					/******/ 	return __webpack_require__(0);
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
 		/******/
-	})
-					/************************************************************************/
-					/******/([
-					/* 0 */
-					/***/ (function (module, exports, __webpack_require__) {
+})
+/************************************************************************/
+/******/([
+/* 0 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -127,11 +127,11 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 1 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 1 */
+/***/ (function (module, exports, __webpack_require__) {
 
-						/* WEBPACK VAR INJECTION */(function (setImmediate) {// PROMISE POLYFILL
+	/* WEBPACK VAR INJECTION */(function (setImmediate) {// PROMISE POLYFILL
 
 					'use strict';
 
@@ -375,14 +375,14 @@
 
 					module.exports = exports['default'];
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, __webpack_require__(2).setImmediate))
+}.call(exports, __webpack_require__(2).setImmediate))
 
 				/***/
-			}),
-					/* 2 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 2 */
+/***/ (function (module, exports, __webpack_require__) {
 
-						/* WEBPACK VAR INJECTION */(function (global) {
+	/* WEBPACK VAR INJECTION */(function (global) {
 					"use strict";
 
 					var scope = typeof global !== "undefined" && global || typeof self !== "undefined" && self || window;
@@ -441,14 +441,14 @@
 					exports.setImmediate = typeof self !== "undefined" && self.setImmediate || typeof global !== "undefined" && global.setImmediate || undefined && undefined.setImmediate;
 					exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || typeof global !== "undefined" && global.clearImmediate || undefined && undefined.clearImmediate;
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, (function () { return this; }())))
+}.call(exports, (function () { return this; }())))
 
 				/***/
-			}),
-					/* 3 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 3 */
+/***/ (function (module, exports, __webpack_require__) {
 
-						/* WEBPACK VAR INJECTION */(function (global, process) {
+	/* WEBPACK VAR INJECTION */(function (global, process) {
 					"use strict";
 
 					(function (global, undefined) {
@@ -634,12 +634,12 @@
 						attachTo.clearImmediate = clearImmediate;
 					})(typeof self === "undefined" ? typeof global === "undefined" ? undefined : global : self);
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, (function () { return this; }()), __webpack_require__(4)))
+}.call(exports, (function () { return this; }()), __webpack_require__(4)))
 
 				/***/
-			}),
-					/* 4 */
-					/***/ (function (module, exports) {
+}),
+/* 4 */
+/***/ (function (module, exports) {
 
 				// shim for using process in browser
 				'use strict';
@@ -830,9 +830,9 @@
 				};
 
 				/***/
-			}),
-					/* 5 */
-					/***/ (function (module, exports) {
+}),
+/* 5 */
+/***/ (function (module, exports) {
 
 				// POLYFILL
 				// test = boolean indicating support for feature represented by the polyfill url
@@ -863,9 +863,9 @@
 				// callback to run when script is loaded
 
 				/***/
-			}),
-					/* 6 */
-					/***/ (function (module, exports) {
+}),
+/* 6 */
+/***/ (function (module, exports) {
 
 				// CHECK STATUS AND RETURN
 
@@ -884,9 +884,9 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
-					/* 7 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 7 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -907,7 +907,7 @@
 				exports['default'] = function (rootElement) {
 
 					rootElement.view.data.charts.forEach(function (chart) {
-						var chartShell = '\n      <div class="sdc-site-charts__chart-container" data-role="chart-container" data-chart-id="' + chart.id + '">\n        <div class="sdc-site-charts__chart-wrap" data-type="' + chart.type + '">\n          <div class="sdc-site-charts__chart" data-type="' + chart.type + '" data-role="chart" ' + (chart.animated ? 'animated' : '') + '>\n          </div>\n        </div>\n      </div>\n    ';
+						var chartShell = '\n      <div class="sdc-site-charts__chart-container" data-role="chart-container" data-chart-id="' + chart.id + '" data-type="' + chart.type + '">\n        <div class="sdc-site-charts__chart-wrap">\n          <div class="sdc-site-charts__chart" data-type="' + chart.type + '" data-role="chart" ' + (chart.animated ? 'animated' : '') + '>\n          </div>\n        </div>\n      </div>\n    ';
 
 						rootElement.insertAdjacentHTML('beforeend', chartShell);
 
@@ -931,9 +931,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 8 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 8 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1020,9 +1020,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 9 */
-					/***/ (function (module, exports) {
+}),
+/* 9 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1051,9 +1051,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 10 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 10 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1140,9 +1140,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 11 */
-					/***/ (function (module, exports) {
+}),
+/* 11 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1190,9 +1190,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 12 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 12 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1262,9 +1262,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 13 */
-					/***/ (function (module, exports) {
+}),
+/* 13 */
+/***/ (function (module, exports) {
 
 				"use strict";
 
@@ -1330,9 +1330,9 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
-					/* 14 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 14 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1385,9 +1385,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 15 */
-					/***/ (function (module, exports) {
+}),
+/* 15 */
+/***/ (function (module, exports) {
 
 				"use strict";
 
@@ -1417,9 +1417,9 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
-					/* 16 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 16 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1492,9 +1492,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 17 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 17 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1561,9 +1561,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 18 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 18 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1636,9 +1636,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 19 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 19 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1694,9 +1694,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 20 */
-					/***/ (function (module, exports) {
+}),
+/* 20 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1754,9 +1754,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 21 */
-					/***/ (function (module, exports) {
+}),
+/* 21 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1780,9 +1780,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 22 */
-					/***/ (function (module, exports) {
+}),
+/* 22 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1812,9 +1812,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 23 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 23 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1847,9 +1847,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 24 */
-					/***/ (function (module, exports) {
+}),
+/* 24 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -1861,8 +1861,7 @@
 					"vanilla": ['#113537', '#37505C', '#96616B', '#F76F8E', '#FFEAD0'],
 					"skynews": ['#F1F1F1', '#D7D5D5', '#EF0420', '#D0021B', '#B20318', '#77000e'],
 					"royalwedding": ['#F4F4F4', '#E4E4E4', '#E3C228', '#333333', '#141414'],
-					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
-					"generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
+					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'], "generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
 					"line18": ['#B35011', '#C18418', '#E4A71C', '#6842BE', '#303D7E'],
 					"skysports": ['#446CCC', '#2653BB', '#103A9D', '#072B7B', '#002369'],
 					"premierleague": ['#353C97', '#222989', '#090E66', '#0F1151', '#020440'],
@@ -1872,9 +1871,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 25 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 25 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1929,9 +1928,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 26 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 26 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1981,9 +1980,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 27 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 27 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -2024,9 +2023,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 28 */
-					/***/ (function (module, exports) {
+}),
+/* 28 */
+/***/ (function (module, exports) {
 
 				'use strict';
 
@@ -2059,9 +2058,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 29 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 29 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -2211,9 +2210,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 30 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 30 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -2281,9 +2280,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 31 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 31 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -2319,9 +2318,9 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
-					/* 32 */
-					/***/ (function (module, exports, __webpack_require__) {
+}),
+/* 32 */
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -2363,7 +2362,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			})
-					/******/])
+})
+/******/])
 });
 ;

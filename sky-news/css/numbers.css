@@ -51,7 +51,7 @@
 
 .sdc-sf-big-number__body {
   font-size: 80px;
-  margin-bottom: 0.1em;
+  margin-bottom: -0.1em;
 }
 
 .sdc-sf-big-number--small

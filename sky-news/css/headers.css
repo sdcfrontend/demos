@@ -13,7 +13,8 @@
   font-size: 1.3em;
   font-size: calc(1em + 1vmin);
   margin-bottom: 1em;
-  margin-bottom: calc(12px + 1vmin)
+  margin-bottom: calc(12px + 1vmin);
+  width: 100%
 }
 
 .sdc-sf-header span {

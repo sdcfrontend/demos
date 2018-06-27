@@ -9,7 +9,7 @@
 }
 
 .sdc-sf-comparison__item h5 {
-  font-size: calc(1em + 1vmin);
+  font-size: calc(12px + 1vmin);
   margin-bottom: 1em;
   font-weight: 400
 }

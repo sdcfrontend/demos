@@ -1,6 +1,5 @@
-.sdc-site-charts__chart-wrap[data-type="pie"],
-.sdc-site-charts__chart-wrap[data-type="donut"] {
-  padding-bottom: 70%; }
+.sdc-site-charts__chart-container[data-type="pie"] .sdc-site-charts__chart-wrap {
+  padding-bottom: 75%; }
 
 .sdc-site-charts__chart[data-type="pie"] svg {
   transform: rotate(-90deg); }
@@ -8,20 +7,32 @@
 .sdc-site-charts__chart[data-type="pie"][animated] .chart__point {
   transition: transform 1s; }
 
+@media all and (min-width: 600px) {
+  .sdc-site-charts__chart-container[data-type="pie"] .sdc-site-charts__chart-wrap {
+    padding-bottom: 45%; } }
+
+.sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-wrap {
+  padding-bottom: 75%; }
+
 .sdc-site-charts__chart[data-type="donut"] svg {
   transform: rotate(-90deg); }
 
 .sdc-site-charts__chart[data-type="donut"][animated] .chart__point {
   transition: transform 1s; }
 
-.sdc-site-charts__chart-wrap[data-type="concentric"] {
-  padding-bottom: 45%; }
+@media all and (min-width: 600px) {
+  .sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-wrap {
+    padding-bottom: 45%; } }
+
+.sdc-site-charts__chart-container[data-type="concentric"] .sdc-site-charts__chart-wrap {
+  padding-bottom: 75%; }
 
 .sdc-site-charts__chart[data-type="concentric"] svg {
   transform: rotate(-90deg); }
 
-.sdc-site-charts__chart[data-type="concentric"][animated] .chart__point {
-  transition: transform 1s; }
+@media all and (min-width: 600px) {
+  .sdc-site-charts__chart-container[data-type="concentric"] .sdc-site-charts__chart-wrap {
+    padding-bottom: 45%; } }
 
 .sdc-site-charts__chart[animated] .sdc-site-charts__chart-bar {
   fill: #4a4a4a; }
@@ -125,10 +136,6 @@ body {
   color: #999; }
 
 @media all and (min-width: 600px) {
-  .sdc-site-charts__chart-wrap[data-type="pie"],
-  .sdc-site-charts__chart-wrap[data-type="donut"] {
-  padding-bottom: 45%; }
-
   .sdc-site-charts__chart-container {
     display: flex; }
   .sdc-site-charts__chart-wrap {
@@ -138,10 +145,12 @@ body {
     margin: initial;
     right: auto; }
   .sdc-site-charts__chart-key-list {
-    min-width: 40%;
-    margin-left: 2em;
-    align-self: center; } }
-
-  
+    margin: 2em;
+    align-self: center; }
+  .sdc-site-charts__chart-container[data-type="pie"] .sdc-site-charts__chart-key-list,
+  .sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-key-list,
+  .sdc-site-charts__chart-container[data-type="concentric"] .sdc-site-charts__chart-key-list {
+    max-width: 40%;
+    width: 100%; } }
 
 /*# sourceMappingURL=output.css.map */
