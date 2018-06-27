@@ -6,7 +6,7 @@ const cssnano = require('cssnano');
 var UglifyJS = require("uglify-js");
 
 fs.readFile('css/sdc-sf.css', (err, css) => {
-  postcss([precss, autoprefixer({ grid: true, browsers: ['ie 11'] }), cssnano])
+  postcss([precss, autoprefixer({ grid: true, browsers: ['ie 11'] }), cssnano({ zindex: false })])
     .process(css, { from: 'css/sdc-sf.css', to: 'css/min.css' })
     .then(result => {
       fs.writeFile('css/min.css', result.css, () => true);

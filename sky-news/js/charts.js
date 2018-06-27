@@ -25,7 +25,7 @@
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 				/******/
-			};
+};
 
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -36,7 +36,7 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 			/******/
-		}
+}
 
 
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -51,7 +51,7 @@
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 		/******/
-	})
+})
 /************************************************************************/
 /******/([
 /* 0 */
@@ -127,7 +127,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 1 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -375,10 +375,10 @@
 
 					module.exports = exports['default'];
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, __webpack_require__(2).setImmediate))
+}.call(exports, __webpack_require__(2).setImmediate))
 
 				/***/
-			}),
+}),
 /* 2 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -441,10 +441,10 @@
 					exports.setImmediate = typeof self !== "undefined" && self.setImmediate || typeof global !== "undefined" && global.setImmediate || undefined && undefined.setImmediate;
 					exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || typeof global !== "undefined" && global.clearImmediate || undefined && undefined.clearImmediate;
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, (function () { return this; }())))
+}.call(exports, (function () { return this; }())))
 
 				/***/
-			}),
+}),
 /* 3 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -634,10 +634,10 @@
 						attachTo.clearImmediate = clearImmediate;
 					})(typeof self === "undefined" ? typeof global === "undefined" ? undefined : global : self);
 					/* WEBPACK VAR INJECTION */
-				}.call(exports, (function () { return this; }()), __webpack_require__(4)))
+}.call(exports, (function () { return this; }()), __webpack_require__(4)))
 
 				/***/
-			}),
+}),
 /* 4 */
 /***/ (function (module, exports) {
 
@@ -830,7 +830,7 @@
 				};
 
 				/***/
-			}),
+}),
 /* 5 */
 /***/ (function (module, exports) {
 
@@ -863,7 +863,7 @@
 				// callback to run when script is loaded
 
 				/***/
-			}),
+}),
 /* 6 */
 /***/ (function (module, exports) {
 
@@ -884,7 +884,7 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
+}),
 /* 7 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -931,7 +931,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 8 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1025,7 +1025,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 9 */
 /***/ (function (module, exports) {
 
@@ -1061,27 +1061,29 @@
 						// chartSVG.insertAdjacentHTML('beforeend', chartPoint);
 					});
 
-					chart.points.forEach(function (point) {
-						var pointLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+					if (chart.drawing.percentageLabels) {
+						chart.points.forEach(function (point) {
+							var pointLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 
-						pointLabel.setAttribute('class', 'sdc-site-charts__chart-point-label');
-						pointLabel.setAttribute('data-role', 'chart-point-label');
-						pointLabel.setAttribute('text-anchor', 'middle');
+							pointLabel.setAttribute('class', 'sdc-site-charts__chart-point-label');
+							pointLabel.setAttribute('data-role', 'chart-point-label');
+							pointLabel.setAttribute('text-anchor', 'middle');
 
-						chartSVG.appendChild(pointLabel);
+							chartSVG.appendChild(pointLabel);
 
-						// var pointLabel = `
-						//   <text class="sdc-site-charts__chart-point-label" data-role="chart-point-label" text-anchor="middle"></text>
-						// `;
-						//
-						// chartSVG.insertAdjacentHTML('beforeend', pointLabel);
-					});
+							// var pointLabel = `
+							//   <text class="sdc-site-charts__chart-point-label" data-role="chart-point-label" text-anchor="middle"></text>
+							// `;
+							//
+							// chartSVG.insertAdjacentHTML('beforeend', pointLabel);
+						});
+					}
 				};
 
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 10 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1170,7 +1172,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 11 */
 /***/ (function (module, exports) {
 
@@ -1220,7 +1222,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 12 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1292,7 +1294,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 13 */
 /***/ (function (module, exports) {
 
@@ -1360,7 +1362,7 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
+}),
 /* 14 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1415,7 +1417,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 15 */
 /***/ (function (module, exports) {
 
@@ -1447,7 +1449,7 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
+}),
 /* 16 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1522,7 +1524,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 17 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1591,7 +1593,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 18 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1666,7 +1668,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 19 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1726,7 +1728,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 20 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1764,35 +1766,35 @@
 						var midPercent = (currentTotalValue + value / 2) / chart.totalValue;
 						var endPercent = (currentTotalValue + value) / chart.totalValue;
 
-						var _createCoordsFromValue = createCoordsFromValue(startPercent * arcProgress, 1 - offset + growth * sizeProgress);
+						var _createCoordsFromValue = createCoordsFromValue(startPercent * arcProgress - 0.25, 1 - offset + growth * sizeProgress);
 
 						var _createCoordsFromValue2 = _slicedToArray(_createCoordsFromValue, 2);
 
 						var startX = _createCoordsFromValue2[0];
 						var startY = _createCoordsFromValue2[1];
 
-						var _createCoordsFromValue3 = createCoordsFromValue(endPercent * arcProgress, 1 - offset + growth * sizeProgress);
+						var _createCoordsFromValue3 = createCoordsFromValue(endPercent * arcProgress - 0.25, 1 - offset + growth * sizeProgress);
 
 						var _createCoordsFromValue32 = _slicedToArray(_createCoordsFromValue3, 2);
 
 						var endX = _createCoordsFromValue32[0];
 						var endY = _createCoordsFromValue32[1];
 
-						var _createCoordsFromValue4 = createCoordsFromValue(startPercent * arcProgress, 1 - chart.thickness - offset);
+						var _createCoordsFromValue4 = createCoordsFromValue(startPercent * arcProgress - 0.25, 1 - chart.thickness - offset);
 
 						var _createCoordsFromValue42 = _slicedToArray(_createCoordsFromValue4, 2);
 
 						var startInnerX = _createCoordsFromValue42[0];
 						var startInnerY = _createCoordsFromValue42[1];
 
-						var _createCoordsFromValue5 = createCoordsFromValue(endPercent * arcProgress, 1 - chart.thickness - offset);
+						var _createCoordsFromValue5 = createCoordsFromValue(endPercent * arcProgress - 0.25, 1 - chart.thickness - offset);
 
 						var _createCoordsFromValue52 = _slicedToArray(_createCoordsFromValue5, 2);
 
 						var endInnerX = _createCoordsFromValue52[0];
 						var endInnerY = _createCoordsFromValue52[1];
 
-						var _createCoordsFromValue6 = createCoordsFromValue((midPercent - 0.25) * arcProgress, 1 - offset + growth * 3 * sizeProgress);
+						var _createCoordsFromValue6 = createCoordsFromValue(midPercent * arcProgress - 0.25, 1 - chart.thickness / 1.5 - offset + growth * sizeProgress);
 
 						var _createCoordsFromValue62 = _slicedToArray(_createCoordsFromValue6, 2);
 
@@ -1800,14 +1802,15 @@
 						var midY = _createCoordsFromValue62[1];
 
 						var largeArcFlag = value / chart.totalValue * arcProgress > .5 ? 1 : 0;
-
 						var pathData = ['M ' + startX + ' ' + startY, 'A ' + (1 - offset + growth * sizeProgress) + ' ' + (1 - offset + growth * sizeProgress) + ' 0 ' + largeArcFlag + ' 1 ' + endX + ' ' + endY, 'L ' + endInnerX + ' ' + endInnerY, 'A ' + (1 - chart.thickness - offset) + ' ' + (1 - chart.thickness - offset) + ' 0 ' + largeArcFlag + ' 0 ' + startInnerX + ' ' + startInnerY, 'L ' + startX + ' ' + startY].join(' ');
 
 						point.setAttribute('d', pathData);
 
-						label.setAttribute('x', midX);
-						label.setAttribute('y', midY);
-						label.innerHTML = Math.round(value / chart.totalValue * 100) + '%';
+						if (chart.drawing.percentageLabels) {
+							label.setAttribute('x', midX);
+							label.setAttribute('y', midY);
+							label.innerHTML = Math.round(value / chart.totalValue * 100) + '%';
+						}
 					}
 
 					function drawSegment(progress) {
@@ -1818,13 +1821,18 @@
 						}
 					}
 
-					var duration = 500;
+					var duration = 1000;
 					var reverse = false;
 					var growth = sizing[1] - sizing[0];
 
 					if (growth < 0) {
+						duration = 333;
 						reverse = true;
 						growth = growth * -1;
+					} else {
+						if (growth > 0) {
+							duration = 333;
+						}
 					}
 
 					(0, _toolsEasingAnimateJs2['default'])(duration, drawSegment, reverse);
@@ -1833,7 +1841,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 21 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1882,7 +1890,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 22 */
 /***/ (function (module, exports) {
 
@@ -1900,7 +1908,7 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
+}),
 /* 23 */
 /***/ (function (module, exports) {
 
@@ -1934,7 +1942,7 @@
 				module.exports = exports["default"];
 
 				/***/
-			}),
+}),
 /* 24 */
 /***/ (function (module, exports) {
 
@@ -1960,7 +1968,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 25 */
 /***/ (function (module, exports) {
 
@@ -1992,7 +2000,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 26 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2027,7 +2035,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 27 */
 /***/ (function (module, exports) {
 
@@ -2052,7 +2060,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 28 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2112,7 +2120,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 29 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2164,7 +2172,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 30 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2207,7 +2215,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 31 */
 /***/ (function (module, exports) {
 
@@ -2242,7 +2250,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 32 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2394,7 +2402,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 33 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2464,7 +2472,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 34 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2502,7 +2510,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 35 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2546,7 +2554,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			}),
+}),
 /* 36 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2571,10 +2579,13 @@
 					var keyItems = chartContainer.querySelectorAll('[data-role="key-item"]');
 
 					chart.points.forEach(function (point, index) {
-						chartPoints[index].addEventListener('mouseover', function () {
+						chartPoints[index].addEventListener('mouseenter', function () {
 							if (chart.type == 'pie' || chart.type == 'donut') {
 								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1, 1.1], pointLabels[index], index);
-								pointLabels[index].setAttribute('highlighted', '');
+
+								if (chart.drawing.percentageLabels) {
+									pointLabels[index].setAttribute('highlighted', '');
+								}
 							}
 
 							if (chart.type == 'barvert' || chart.type == 'barhori') {
@@ -2591,7 +2602,9 @@
 						chartPoints[index].addEventListener('mouseleave', function () {
 							if (chart.type == 'pie' || chart.type == 'donut') {
 								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1.1, 1], pointLabels[index], index);
-								pointLabels[index].removeAttribute('highlighted');
+								if (chart.drawing.percentageLabels) {
+									pointLabels[index].removeAttribute('highlighted');
+								}
 							}
 
 							if (chart.type == 'barvert' || chart.type == 'barhori') {
@@ -2607,7 +2620,7 @@
 					});
 
 					keyItems.forEach(function (keyItem, index) {
-						keyItem.addEventListener('mouseover', function () {
+						keyItem.addEventListener('mouseenter', function () {
 							keyItems.forEach(function (keyItem) {
 								if (keyItem !== keyItems[index]) {
 									keyItem.classList.add('sdc-site-charts__chart-key-item--faded');
@@ -2618,7 +2631,10 @@
 								if (chartPoint !== chartPoints[index]) {
 									if (chart.type == 'pie' || chart.type == 'donut') {
 										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1, 1.1], pointLabels[index], index);
-										pointLabels[index].setAttribute('highlighted', '');
+
+										if (chart.drawing.percentageLabels) {
+											pointLabels[index].setAttribute('highlighted', '');
+										}
 									}
 
 									if (chart.type == 'barvert' || chart.type == 'barhori') {
@@ -2639,7 +2655,10 @@
 								if (chartPoint !== chartPoints[index]) {
 									if (chart.type == 'pie' || chart.type == 'donut') {
 										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1.1, 1], pointLabels[index], index);
-										pointLabels[index].removeAttribute('highlighted');
+
+										if (chart.drawing.percentageLabels) {
+											pointLabels[index].removeAttribute('highlighted');
+										}
 									}
 
 									if (chart.type == 'barvert' || chart.type == 'barhori') {
@@ -2654,7 +2673,7 @@
 				module.exports = exports['default'];
 
 				/***/
-			})
+})
 /******/])
 });
 ;

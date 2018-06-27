@@ -1,13 +1,6 @@
 .sdc-site-charts__chart-container[data-type="pie"] .sdc-site-charts__chart-wrap {
   padding-bottom: 75%; }
 
-.sdc-site-charts__chart[data-type="pie"] svg {
-  transform: rotate(-90deg); }
-
-.sdc-site-charts__chart[data-type="pie"][animated] .sdc-site-charts__chart-point {
-  transform: rotate(0deg);
-  transition: transform 1s; }
-
 @media all and (min-width: 600px) {
   .sdc-site-charts__chart-container[data-type="pie"] .sdc-site-charts__chart-wrap {
     padding-bottom: 45%; } }
@@ -15,18 +8,12 @@
 .sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-wrap {
   padding-bottom: 75%; }
 
-.sdc-site-charts__chart[data-type="donut"] svg {
-  transform: rotate(-90deg); }
-
 @media all and (min-width: 600px) {
   .sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-wrap {
     padding-bottom: 45%; } }
 
 .sdc-site-charts__chart-container[data-type="concentric"] .sdc-site-charts__chart-wrap {
   padding-bottom: 75%; }
-
-.sdc-site-charts__chart[data-type="concentric"] svg {
-  transform: rotate(-90deg); }
 
 @media all and (min-width: 600px) {
   .sdc-site-charts__chart-container[data-type="concentric"] .sdc-site-charts__chart-wrap {
@@ -89,12 +76,13 @@ body {
   opacity: 0.5; }
 
 .sdc-site-charts__chart-point-label {
-  font-size: 0.0075em;
-  transform: rotate(90deg);
+  font-size: calc(0.005em + 0.005vw);
   z-index: 2;
   position: relative;
-  transition: opacity 0.5s;
-  opacity: 0; }
+  transition: opacity 0.33s;
+  opacity: 0;
+  pointer-events: none;
+  fill: #fff; }
   .sdc-site-charts__chart-point-label[highlighted] {
     opacity: 1; }
 
@@ -134,14 +122,17 @@ body {
   text-align: left; }
 
 .sdc-site-charts__chart-key-item {
-  line-height: 2em; }
+  display: inline-block;
+  width: 100%;
+  padding: 0.35em 0; }
   .sdc-site-charts__chart-key-item--faded .sdc-site-charts__chart-key-label {
     opacity: 0.25; }
   .sdc-site-charts__chart-key-item--faded .sdc-site-charts__chart-key-indicator {
     transform: scale(0.5); }
 
 .sdc-site-charts__chart-key-label {
-  transition: opacity 0.33s; }
+  transition: opacity 0.33s;
+  display: inline-block; }
 
 .sdc-site-charts__chart-key-indicator {
   display: inline-block;

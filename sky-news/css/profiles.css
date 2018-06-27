@@ -1,6 +1,7 @@
 .sdc-sf-profiles {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: calc(12px + 1vmin)
 }
 
 .sdc-sf-profile {
@@ -141,7 +142,7 @@
 .sdc-sf-profile
 figure {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 75%;
   overflow: hidden;
   width: 100%;
   z-index: 2;
@@ -310,7 +311,7 @@ figure:after {
   }
 
   .sdc-sf-profile h4 {
-    font-size: calc(12px + 3vmin)
+    font-size: calc(12px + 3.5vmin)
   }
   
 }

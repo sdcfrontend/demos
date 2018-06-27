@@ -1,7 +1,6 @@
 .sdc-sf-related {
   background: #005EB8;
   color: white;
-  margin-bottom: calc(12px + 2vmin)
 }
 
 .sdc-sf-related__inner {
@@ -55,6 +54,7 @@
 .sdc-sf-related__headline {
   font-size: calc(0.75em + 1vmin);
   margin-top: 0.75em;
+  line-height: 1.25
 }
 
 @media all and (max-width: 480px){
