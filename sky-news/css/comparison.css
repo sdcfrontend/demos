@@ -49,10 +49,8 @@
   min-width: 60px;
   max-width: 100px;
   width: 100%;
-  background: url(../img/icons/Circle.svg);
-  background: url(/assets/nhs70/img/icons/Circle.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background: #0071ce;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;

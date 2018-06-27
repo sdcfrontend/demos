@@ -178,7 +178,7 @@ img {
   left: 50%;
   transform: translate(-50%, 0);
   font-size: calc(12px + 1.5vmin);
-  line-height: 1.2;
+  line-height: 1.1;
   width: 100%;
   text-align: center;
 }
@@ -196,7 +196,19 @@ figure:after {
   display: block;
   font-size: 19px;
   padding: 0;
-  font-weight: 500
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.sdc-sf-profile h4 span svg {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  fill: #fff;
+  right: 0;
+  left: 48%;
+  bottom: -4px;
 }
 
 .sdc-sf-profile-text {
