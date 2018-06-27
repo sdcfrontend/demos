@@ -25,7 +25,7 @@
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 				/******/
-};
+			};
 
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -36,7 +36,7 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 			/******/
-}
+		}
 
 
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -51,7 +51,7 @@
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 		/******/
-})
+	})
 /************************************************************************/
 /******/([
 /* 0 */
@@ -127,7 +127,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 1 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -375,10 +375,10 @@
 
 					module.exports = exports['default'];
 					/* WEBPACK VAR INJECTION */
-}.call(exports, __webpack_require__(2).setImmediate))
+				}.call(exports, __webpack_require__(2).setImmediate))
 
 				/***/
-}),
+			}),
 /* 2 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -441,10 +441,10 @@
 					exports.setImmediate = typeof self !== "undefined" && self.setImmediate || typeof global !== "undefined" && global.setImmediate || undefined && undefined.setImmediate;
 					exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || typeof global !== "undefined" && global.clearImmediate || undefined && undefined.clearImmediate;
 					/* WEBPACK VAR INJECTION */
-}.call(exports, (function () { return this; }())))
+				}.call(exports, (function () { return this; }())))
 
 				/***/
-}),
+			}),
 /* 3 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -634,10 +634,10 @@
 						attachTo.clearImmediate = clearImmediate;
 					})(typeof self === "undefined" ? typeof global === "undefined" ? undefined : global : self);
 					/* WEBPACK VAR INJECTION */
-}.call(exports, (function () { return this; }()), __webpack_require__(4)))
+				}.call(exports, (function () { return this; }()), __webpack_require__(4)))
 
 				/***/
-}),
+			}),
 /* 4 */
 /***/ (function (module, exports) {
 
@@ -830,7 +830,7 @@
 				};
 
 				/***/
-}),
+			}),
 /* 5 */
 /***/ (function (module, exports) {
 
@@ -863,7 +863,7 @@
 				// callback to run when script is loaded
 
 				/***/
-}),
+			}),
 /* 6 */
 /***/ (function (module, exports) {
 
@@ -884,7 +884,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 7 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -931,7 +931,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 8 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -963,9 +963,13 @@
 
 				var _updateChart2 = _interopRequireDefault(_updateChart);
 
-				var _keysCreateKey = __webpack_require__(31);
+				var _keysCreateKey = __webpack_require__(34);
 
 				var _keysCreateKey2 = _interopRequireDefault(_keysCreateKey);
+
+				var _hoverStates = __webpack_require__(36);
+
+				var _hoverStates2 = _interopRequireDefault(_hoverStates);
 
 				exports['default'] = function (rootElement, chart) {
 
@@ -1014,13 +1018,14 @@
 
 					if (chart.key) {
 						(0, _keysCreateKey2['default'])(rootElement, chart);
+						(0, _hoverStates2['default'])(rootElement, chart);
 					}
 				};
 
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 9 */
 /***/ (function (module, exports) {
 
@@ -1042,16 +1047,41 @@
 					var chartSVG = chartShell.querySelector('[data-role="chart-svg"]');
 
 					chart.points.forEach(function (point) {
-						var chartPoint = '\n      <path class="chart__point" data-role="chart-point"/>\n    ';
+						var chartPoint = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
-						chartSVG.insertAdjacentHTML('beforeend', chartPoint);
+						chartPoint.setAttribute('class', 'sdc-site-charts__chart-point');
+						chartPoint.setAttribute('data-role', 'chart-point');
+
+						chartSVG.appendChild(chartPoint);
+
+						// var chartPoint = `
+						//   <path class="sdc-site-charts__chart-point" data-role="chart-point"/>
+						// `;
+						//
+						// chartSVG.insertAdjacentHTML('beforeend', chartPoint);
+					});
+
+					chart.points.forEach(function (point) {
+						var pointLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+
+						pointLabel.setAttribute('class', 'sdc-site-charts__chart-point-label');
+						pointLabel.setAttribute('data-role', 'chart-point-label');
+						pointLabel.setAttribute('text-anchor', 'middle');
+
+						chartSVG.appendChild(pointLabel);
+
+						// var pointLabel = `
+						//   <text class="sdc-site-charts__chart-point-label" data-role="chart-point-label" text-anchor="middle"></text>
+						// `;
+						//
+						// chartSVG.insertAdjacentHTML('beforeend', pointLabel);
 					});
 				};
 
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 10 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1140,7 +1170,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 11 */
 /***/ (function (module, exports) {
 
@@ -1190,7 +1220,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 12 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1262,7 +1292,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 13 */
 /***/ (function (module, exports) {
 
@@ -1330,7 +1360,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 14 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1385,7 +1415,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 15 */
 /***/ (function (module, exports) {
 
@@ -1417,7 +1447,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 16 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1492,7 +1522,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 17 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1561,7 +1591,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 18 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1577,19 +1607,19 @@
 
 				var _pieChartsUpdatePieChart2 = _interopRequireDefault(_pieChartsUpdatePieChart);
 
-				var _pieChartsUpdateConcentricChart = __webpack_require__(25);
+				var _pieChartsUpdateConcentricChart = __webpack_require__(28);
 
 				var _pieChartsUpdateConcentricChart2 = _interopRequireDefault(_pieChartsUpdateConcentricChart);
 
-				var _barChartsUpdateBarChart = __webpack_require__(26);
+				var _barChartsUpdateBarChart = __webpack_require__(29);
 
 				var _barChartsUpdateBarChart2 = _interopRequireDefault(_barChartsUpdateBarChart);
 
-				var _lineChartsUpdateLineChart = __webpack_require__(29);
+				var _lineChartsUpdateLineChart = __webpack_require__(32);
 
 				var _lineChartsUpdateLineChart2 = _interopRequireDefault(_lineChartsUpdateLineChart);
 
-				var _scatterChartsUpdateScatterChart = __webpack_require__(30);
+				var _scatterChartsUpdateScatterChart = __webpack_require__(33);
 
 				var _scatterChartsUpdateScatterChart2 = _interopRequireDefault(_scatterChartsUpdateScatterChart);
 
@@ -1636,7 +1666,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 19 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1652,15 +1682,15 @@
 
 				var _setSegmentSize2 = _interopRequireDefault(_setSegmentSize);
 
-				var _setSegmentRotation = __webpack_require__(21);
+				var _setSegmentRotation = __webpack_require__(24);
 
 				var _setSegmentRotation2 = _interopRequireDefault(_setSegmentRotation);
 
-				var _setSegmentColour = __webpack_require__(22);
+				var _setSegmentColour = __webpack_require__(25);
 
 				var _setSegmentColour2 = _interopRequireDefault(_setSegmentColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -1669,10 +1699,9 @@
 					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
 					var chartShell = chartContainer.querySelector('[data-role="chart"]');
 					var points = chartShell.querySelectorAll('[data-role="chart-point"]');
+					var pointLabels = chartShell.querySelectorAll('[data-role="chart-point-label"]');
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
-					var totalValue = 0;
-					var currentTotalValue = 0;
 
 					chartShell.setAttribute('animated', '');
 
@@ -1680,13 +1709,16 @@
 						thickness = chart.drawing.thickness;
 					}
 
-					chart.points.forEach(function (point, index) {
-						totalValue = totalValue + parseFloat(point.values[0], 10);
-					});
+					chart.totalValue = 0;
 
 					chart.points.forEach(function (point, index) {
-						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], totalValue, thickness, 0);
-						currentTotalValue = (0, _setSegmentRotation2['default'])(chart, points[index], totalValue, currentTotalValue, index);
+						chart.totalValue = chart.totalValue + parseFloat(point.values[0], 10);
+					});
+
+					chart.thickness = thickness;
+
+					chart.points.forEach(function (point, index) {
+						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], 0, [1, 1], pointLabels[index], index);
 						currentColourIndex = (0, _setSegmentColour2['default'])(points[index], point, skin, currentColourIndex);
 					});
 				};
@@ -1694,9 +1726,9 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 20 */
-/***/ (function (module, exports) {
+/***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
 
@@ -1706,9 +1738,19 @@
 
 				var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
 
-				exports['default'] = function (chart, point, value, totalValue, thickness, offset) {
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-					var percent = value / totalValue;
+				var _toolsEasingAnimateJs = __webpack_require__(21);
+
+				var _toolsEasingAnimateJs2 = _interopRequireDefault(_toolsEasingAnimateJs);
+
+				exports['default'] = function (chart, point, value, offset, sizing, label, index) {
+
+					var currentTotalValue = 0;
+
+					for (var i = 0; i < index; i++) {
+						currentTotalValue = currentTotalValue + chart.points[i].values[0];
+					}
 
 					function createCoordsFromValue(percent, radius) {
 						var x = Math.cos(2 * Math.PI * percent) * radius;
@@ -1716,46 +1758,184 @@
 						return [x, y];
 					}
 
-					var _createCoordsFromValue = createCoordsFromValue(0, 1 - offset);
+					function createSegmentPath(arcProgress, sizeProgress) {
 
-					var _createCoordsFromValue2 = _slicedToArray(_createCoordsFromValue, 2);
+						var startPercent = currentTotalValue / chart.totalValue;
+						var midPercent = (currentTotalValue + value / 2) / chart.totalValue;
+						var endPercent = (currentTotalValue + value) / chart.totalValue;
 
-					var startX = _createCoordsFromValue2[0];
-					var startY = _createCoordsFromValue2[1];
+						var _createCoordsFromValue = createCoordsFromValue(startPercent * arcProgress, 1 - offset + growth * sizeProgress);
 
-					var _createCoordsFromValue3 = createCoordsFromValue(percent, 1 - offset);
+						var _createCoordsFromValue2 = _slicedToArray(_createCoordsFromValue, 2);
 
-					var _createCoordsFromValue32 = _slicedToArray(_createCoordsFromValue3, 2);
+						var startX = _createCoordsFromValue2[0];
+						var startY = _createCoordsFromValue2[1];
 
-					var endX = _createCoordsFromValue32[0];
-					var endY = _createCoordsFromValue32[1];
+						var _createCoordsFromValue3 = createCoordsFromValue(endPercent * arcProgress, 1 - offset + growth * sizeProgress);
 
-					var _createCoordsFromValue4 = createCoordsFromValue(0, 1 - thickness - offset);
+						var _createCoordsFromValue32 = _slicedToArray(_createCoordsFromValue3, 2);
 
-					var _createCoordsFromValue42 = _slicedToArray(_createCoordsFromValue4, 2);
+						var endX = _createCoordsFromValue32[0];
+						var endY = _createCoordsFromValue32[1];
 
-					var startInnerX = _createCoordsFromValue42[0];
-					var startInnerY = _createCoordsFromValue42[1];
+						var _createCoordsFromValue4 = createCoordsFromValue(startPercent * arcProgress, 1 - chart.thickness - offset);
 
-					var _createCoordsFromValue5 = createCoordsFromValue(percent, 1 - thickness - offset);
+						var _createCoordsFromValue42 = _slicedToArray(_createCoordsFromValue4, 2);
 
-					var _createCoordsFromValue52 = _slicedToArray(_createCoordsFromValue5, 2);
+						var startInnerX = _createCoordsFromValue42[0];
+						var startInnerY = _createCoordsFromValue42[1];
 
-					var endInnerX = _createCoordsFromValue52[0];
-					var endInnerY = _createCoordsFromValue52[1];
+						var _createCoordsFromValue5 = createCoordsFromValue(endPercent * arcProgress, 1 - chart.thickness - offset);
 
-					var largeArcFlag = percent > .5 ? 1 : 0;
+						var _createCoordsFromValue52 = _slicedToArray(_createCoordsFromValue5, 2);
 
-					var pathData = ['M ' + startX + ' ' + startY, 'A ' + (1 - offset) + ' ' + (1 - offset) + ' 0 ' + largeArcFlag + ' 1 ' + endX + ' ' + endY, 'L ' + endInnerX + ' ' + endInnerY, 'A ' + (1 - thickness - offset) + ' ' + (1 - thickness - offset) + ' 0 ' + largeArcFlag + ' 0 ' + startInnerX + ' ' + startInnerY, 'L ' + startX + ' ' + startY].join(' ');
+						var endInnerX = _createCoordsFromValue52[0];
+						var endInnerY = _createCoordsFromValue52[1];
 
-					point.setAttribute('d', pathData);
+						var _createCoordsFromValue6 = createCoordsFromValue((midPercent - 0.25) * arcProgress, 1 - offset + growth * 3 * sizeProgress);
+
+						var _createCoordsFromValue62 = _slicedToArray(_createCoordsFromValue6, 2);
+
+						var midX = _createCoordsFromValue62[0];
+						var midY = _createCoordsFromValue62[1];
+
+						var largeArcFlag = value / chart.totalValue * arcProgress > .5 ? 1 : 0;
+
+						var pathData = ['M ' + startX + ' ' + startY, 'A ' + (1 - offset + growth * sizeProgress) + ' ' + (1 - offset + growth * sizeProgress) + ' 0 ' + largeArcFlag + ' 1 ' + endX + ' ' + endY, 'L ' + endInnerX + ' ' + endInnerY, 'A ' + (1 - chart.thickness - offset) + ' ' + (1 - chart.thickness - offset) + ' 0 ' + largeArcFlag + ' 0 ' + startInnerX + ' ' + startInnerY, 'L ' + startX + ' ' + startY].join(' ');
+
+						point.setAttribute('d', pathData);
+
+						label.setAttribute('x', midX);
+						label.setAttribute('y', midY);
+						label.innerHTML = Math.round(value / chart.totalValue * 100) + '%';
+					}
+
+					function drawSegment(progress) {
+						if (sizing[0] == sizing[1]) {
+							createSegmentPath(progress, 1);
+						} else {
+							createSegmentPath(1, progress);
+						}
+					}
+
+					var duration = 500;
+					var reverse = false;
+					var growth = sizing[1] - sizing[0];
+
+					if (growth < 0) {
+						reverse = true;
+						growth = growth * -1;
+					}
+
+					(0, _toolsEasingAnimateJs2['default'])(duration, drawSegment, reverse);
 				};
 
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 21 */
+/***/ (function (module, exports, __webpack_require__) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+				var _cubicInOutJs = __webpack_require__(22);
+
+				var _cubicInOutJs2 = _interopRequireDefault(_cubicInOutJs);
+
+				var _bounceInOutJs = __webpack_require__(23);
+
+				var _bounceInOutJs2 = _interopRequireDefault(_bounceInOutJs);
+
+				exports['default'] = function (duration, draw, reverse) {
+
+					var start = performance.now();
+
+					requestAnimationFrame(function animatePath(time) {
+						var timeFraction = (time - start) / duration;
+						var progress = 0;
+
+						if (timeFraction > 1) {
+							timeFraction = 1;
+						}
+
+						if (reverse) {
+							progress = 1 - (0, _cubicInOutJs2['default'])(timeFraction);
+						} else {
+							progress = (0, _cubicInOutJs2['default'])(timeFraction);
+						}
+
+						draw(progress);
+
+						if (timeFraction < 1) {
+							requestAnimationFrame(animatePath);
+						}
+					});
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 22 */
+/***/ (function (module, exports) {
+
+				"use strict";
+
+				Object.defineProperty(exports, "__esModule", {
+					value: true
+				});
+
+				exports["default"] = function (t) {
+
+					return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+				};
+
+				module.exports = exports["default"];
+
+				/***/
+			}),
+/* 23 */
+/***/ (function (module, exports) {
+
+				"use strict";
+
+				Object.defineProperty(exports, "__esModule", {
+					value: true
+				});
+
+				exports["default"] = function (t) {
+					var magnitude = arguments.length <= 1 || arguments[1] === undefined ? 0.65 : arguments[1];
+
+					var p = 1 - magnitude;
+
+					if (t === 0 || t === 1) {
+						return t;
+					}
+
+					var scaledTime = t * 2;
+					var scaledTime1 = scaledTime - 1;
+
+					var s = p / (2 * Math.PI) * Math.asin(1);
+
+					if (scaledTime < 1) {
+						return -0.5 * (Math.pow(2, 10 * scaledTime1) * Math.sin((scaledTime1 - s) * (2 * Math.PI) / p));
+					}
+
+					return Math.pow(2, -10 * scaledTime1) * Math.sin((scaledTime1 - s) * (2 * Math.PI) / p) * 0.5 + 1;
+				};
+
+				module.exports = exports["default"];
+
+				/***/
+			}),
+/* 24 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -1764,10 +1944,10 @@
 					value: true
 				});
 
-				exports['default'] = function (chart, point, totalValue, currentTotalValue, index) {
+				exports['default'] = function (chart, point, currentTotalValue, index) {
 
 					if (index > 0) {
-						var prevValue = parseFloat(chart.points[index - 1].values[0]) / totalValue * 100;
+						var prevValue = parseFloat(chart.points[index - 1].values[0]) / chart.totalValue * 100;
 
 						currentTotalValue = currentTotalValue + prevValue;
 
@@ -1780,8 +1960,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 22 */
+			}),
+/* 25 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -1812,8 +1992,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 23 */
+			}),
+/* 26 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1824,7 +2004,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skins = __webpack_require__(24);
+				var _skins = __webpack_require__(27);
 
 				var _skins2 = _interopRequireDefault(_skins);
 
@@ -1847,8 +2027,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 24 */
+			}),
+/* 27 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -1861,7 +2041,8 @@
 					"vanilla": ['#113537', '#37505C', '#96616B', '#F76F8E', '#FFEAD0'],
 					"skynews": ['#F1F1F1', '#D7D5D5', '#EF0420', '#D0021B', '#B20318', '#77000e'],
 					"royalwedding": ['#F4F4F4', '#E4E4E4', '#E3C228', '#333333', '#141414'],
-					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'], "generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
+					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
+					"generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
 					"line18": ['#B35011', '#C18418', '#E4A71C', '#6842BE', '#303D7E'],
 					"skysports": ['#446CCC', '#2653BB', '#103A9D', '#072B7B', '#002369'],
 					"premierleague": ['#353C97', '#222989', '#090E66', '#0F1151', '#020440'],
@@ -1871,8 +2052,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 25 */
+			}),
+/* 28 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1887,15 +2068,15 @@
 
 				var _setSegmentSize2 = _interopRequireDefault(_setSegmentSize);
 
-				var _setSegmentRotation = __webpack_require__(21);
+				var _setSegmentRotation = __webpack_require__(24);
 
 				var _setSegmentRotation2 = _interopRequireDefault(_setSegmentRotation);
 
-				var _setSegmentColour = __webpack_require__(22);
+				var _setSegmentColour = __webpack_require__(25);
 
 				var _setSegmentColour2 = _interopRequireDefault(_setSegmentColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -1904,6 +2085,7 @@
 					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
 					var chartShell = chartContainer.querySelector('[data-role="chart"]');
 					var points = chartShell.querySelectorAll('[data-role="chart-point"]');
+					var pointLabels = chartShell.querySelectorAll('[data-role="chart-point-label"]');
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
 					var totalValue = 0;
@@ -1911,16 +2093,18 @@
 
 					chartShell.setAttribute('animated', '');
 
-					thickness = 1 / chart.points.length / 2;
+					chart.thickness = 1 / chart.points.length / 2;
+
+					chart.totalValue = 0;
 
 					chart.points.forEach(function (point, index) {
-						totalValue = totalValue + parseFloat(point.values[0], 10);
+						chart.totalValue = chart.totalValue + parseFloat(point.values[0], 10);
 					});
 
 					chart.points.forEach(function (point, index) {
-						var offset = index * thickness;
+						var offset = index * chart.thickness;
 
-						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], totalValue, thickness, offset);
+						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], offset, [1, 1], pointLabels[index], 0, index);
 						currentColourIndex = (0, _setSegmentColour2['default'])(points[index], point, skin, currentColourIndex);
 					});
 				};
@@ -1928,8 +2112,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 26 */
+			}),
+/* 29 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1940,15 +2124,15 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _setBarSize = __webpack_require__(27);
+				var _setBarSize = __webpack_require__(30);
 
 				var _setBarSize2 = _interopRequireDefault(_setBarSize);
 
-				var _setBarColour = __webpack_require__(28);
+				var _setBarColour = __webpack_require__(31);
 
 				var _setBarColour2 = _interopRequireDefault(_setBarColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -1980,8 +2164,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 27 */
+			}),
+/* 30 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2023,8 +2207,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 28 */
+			}),
+/* 31 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -2058,8 +2242,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 29 */
+			}),
+/* 32 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2070,7 +2254,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2210,8 +2394,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 30 */
+			}),
+/* 33 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2222,7 +2406,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2280,8 +2464,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 31 */
+			}),
+/* 34 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2292,7 +2476,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _colourKeyIndicators = __webpack_require__(32);
+				var _colourKeyIndicators = __webpack_require__(35);
 
 				var _colourKeyIndicators2 = _interopRequireDefault(_colourKeyIndicators);
 
@@ -2307,7 +2491,7 @@
 					var keyList = chartContainer.querySelector('[data-role="key"]');
 
 					chart.points.forEach(function (point, index) {
-						var keyItem = '\n      <li class="sdc-site-charts__chart-key-item" data-role="key-item"><span class="sdc-site-charts__chart-key-indicator" data-role="chart-key-indicator"></span>' + point.label + (point.subLabel ? '<span class="sdc-site-charts__chart-key-value"> (' + point.subLabel + ')</span>' : '') + '</li>\n    ';
+						var keyItem = '\n      <li class="sdc-site-charts__chart-key-item" data-role="key-item"><span class="sdc-site-charts__chart-key-indicator" data-role="chart-key-indicator"></span><span class="sdc-site-charts__chart-key-label">' + point.label + '</span>' + (point.subLabel ? '<span class="sdc-site-charts__chart-key-sublabel"> (' + point.subLabel + ')</span>' : '') + '</li>\n    ';
 
 						keyList.insertAdjacentHTML('beforeend', keyItem);
 					});
@@ -2318,8 +2502,8 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
-/* 32 */
+			}),
+/* 35 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2330,7 +2514,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(23);
+				var _skinsLookupChartSkin = __webpack_require__(26);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2362,7 +2546,115 @@
 				module.exports = exports['default'];
 
 				/***/
-})
+			}),
+/* 36 */
+/***/ (function (module, exports, __webpack_require__) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+				var _pieChartsSetSegmentSize = __webpack_require__(20);
+
+				var _pieChartsSetSegmentSize2 = _interopRequireDefault(_pieChartsSetSegmentSize);
+
+				exports['default'] = function (rootElement, chart) {
+
+					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
+					var chartShell = chartContainer.querySelector('[data-role="chart"]');
+					var chartPoints = chartContainer.querySelectorAll('[data-role="chart-point"]');
+					var pointLabels = chartShell.querySelectorAll('[data-role="chart-point-label"]');
+					var keyItems = chartContainer.querySelectorAll('[data-role="key-item"]');
+
+					chart.points.forEach(function (point, index) {
+						chartPoints[index].addEventListener('mouseover', function () {
+							if (chart.type == 'pie' || chart.type == 'donut') {
+								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1, 1.1], pointLabels[index], index);
+								pointLabels[index].setAttribute('highlighted', '');
+							}
+
+							if (chart.type == 'barvert' || chart.type == 'barhori') {
+								chartPoints[index].classList.add('sdc-site-charts__chart-point--faded');
+							}
+
+							keyItems.forEach(function (keyItem) {
+								if (keyItem !== keyItems[index]) {
+									keyItem.classList.add('sdc-site-charts__chart-key-item--faded');
+								}
+							});
+						}, false);
+
+						chartPoints[index].addEventListener('mouseleave', function () {
+							if (chart.type == 'pie' || chart.type == 'donut') {
+								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1.1, 1], pointLabels[index], index);
+								pointLabels[index].removeAttribute('highlighted');
+							}
+
+							if (chart.type == 'barvert' || chart.type == 'barhori') {
+								chartPoints[index].classList.remove('sdc-site-charts__chart-point--faded');
+							}
+
+							keyItems.forEach(function (keyItem) {
+								if (keyItem !== keyItems[index]) {
+									keyItem.classList.remove('sdc-site-charts__chart-key-item--faded');
+								}
+							});
+						}, false);
+					});
+
+					keyItems.forEach(function (keyItem, index) {
+						keyItem.addEventListener('mouseover', function () {
+							keyItems.forEach(function (keyItem) {
+								if (keyItem !== keyItems[index]) {
+									keyItem.classList.add('sdc-site-charts__chart-key-item--faded');
+								}
+							});
+
+							chartPoints.forEach(function (chartPoint) {
+								if (chartPoint !== chartPoints[index]) {
+									if (chart.type == 'pie' || chart.type == 'donut') {
+										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1, 1.1], pointLabels[index], index);
+										pointLabels[index].setAttribute('highlighted', '');
+									}
+
+									if (chart.type == 'barvert' || chart.type == 'barhori') {
+										chartPoints[index].classList.add('sdc-site-charts__chart-point--faded');
+									}
+								}
+							});
+						}, false);
+
+						keyItem.addEventListener('mouseleave', function () {
+							keyItems.forEach(function (keyItem) {
+								if (keyItem !== keyItems[index]) {
+									keyItem.classList.remove('sdc-site-charts__chart-key-item--faded');
+								}
+							});
+
+							chartPoints.forEach(function (chartPoint) {
+								if (chartPoint !== chartPoints[index]) {
+									if (chart.type == 'pie' || chart.type == 'donut') {
+										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1.1, 1], pointLabels[index], index);
+										pointLabels[index].removeAttribute('highlighted');
+									}
+
+									if (chart.type == 'barvert' || chart.type == 'barhori') {
+										chartPoints[index].classList.remove('sdc-site-charts__chart-point--faded');
+									}
+								}
+							});
+						}, false);
+					});
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			})
 /******/])
 });
 ;

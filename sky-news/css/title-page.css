@@ -70,6 +70,11 @@
   height: 100%;
 }
 
+.sdc-sf-title-header--page-header
+.sdc-sf-title-header__image:after {
+  background: none;
+}
+
 .sdc-sf-title-header__image img {
   position: absolute;
   width: 100%;

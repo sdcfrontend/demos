@@ -4,7 +4,8 @@
 .sdc-site-charts__chart[data-type="pie"] svg {
   transform: rotate(-90deg); }
 
-.sdc-site-charts__chart[data-type="pie"][animated] .chart__point {
+.sdc-site-charts__chart[data-type="pie"][animated] .sdc-site-charts__chart-point {
+  transform: rotate(0deg);
   transition: transform 1s; }
 
 @media all and (min-width: 600px) {
@@ -16,9 +17,6 @@
 
 .sdc-site-charts__chart[data-type="donut"] svg {
   transform: rotate(-90deg); }
-
-.sdc-site-charts__chart[data-type="donut"][animated] .chart__point {
-  transition: transform 1s; }
 
 @media all and (min-width: 600px) {
   .sdc-site-charts__chart-container[data-type="donut"] .sdc-site-charts__chart-wrap {
@@ -84,7 +82,21 @@ body {
 
 .sdc-site-charts__chart svg {
   max-width: 100%;
-  height: 100%; }
+  height: 100%;
+  overflow: visible; }
+
+.sdc-site-charts__chart-point--faded {
+  opacity: 0.5; }
+
+.sdc-site-charts__chart-point-label {
+  font-size: 0.0075em;
+  transform: rotate(90deg);
+  z-index: 2;
+  position: relative;
+  transition: opacity 0.5s;
+  opacity: 0; }
+  .sdc-site-charts__chart-point-label[highlighted] {
+    opacity: 1; }
 
 .sdc-site-charts__chart-axis {
   stroke: #ccc; }
@@ -122,16 +134,24 @@ body {
   text-align: left; }
 
 .sdc-site-charts__chart-key-item {
-  margin: 0 0 0.5em 0; }
+  line-height: 2em; }
+  .sdc-site-charts__chart-key-item--faded .sdc-site-charts__chart-key-label {
+    opacity: 0.25; }
+  .sdc-site-charts__chart-key-item--faded .sdc-site-charts__chart-key-indicator {
+    transform: scale(0.5); }
+
+.sdc-site-charts__chart-key-label {
+  transition: opacity 0.33s; }
 
 .sdc-site-charts__chart-key-indicator {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
   vertical-align: middle;
-  margin-right: 0.5em; }
+  margin-right: 0.5em;
+  transition: transform 0.33s; }
 
-.sdc-site-charts__chart-key-value {
+.sdc-site-charts__chart-key-sublabel {
   font-size: 0.9em;
   color: #999; }
 

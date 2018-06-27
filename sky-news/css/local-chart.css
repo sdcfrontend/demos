@@ -141,9 +141,6 @@
 
 .sdc-sf-chart-vertical-bar {
   display: flex;
-  display: grid;
-  grid-gap: calc(8px + 1vmin);
-  grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;
   width: 100%;
   padding: 12px 0 0
@@ -153,15 +150,10 @@
 .sdc-sf-chart-bars {
   width: 25%;
   display: flex;
+  padding: 0 calc(4px + 0.8vmin);
   justify-content: flex-end;
   align-items: center;
   flex-direction: column
-}
-
-@supports (display: grid){
-  .sdc-sf-chart-bars {
-    width: 100%!important
-  }
 }
 
 .sdc-sf-chart-bar-group {
@@ -246,6 +238,7 @@
   width: 100%;
   position: absolute;
   top: 0;
+  left: 0;
   min-width: 30px;
 }
 
@@ -254,8 +247,9 @@
   width: 100%;
   position: absolute;
   bottom: 100%;
+  left: 0;
   text-align: center;
-  padding: 0.45em 0
+  padding: 0.45em 0;
 }
 
 .sdc-sf-chart-label {
@@ -273,12 +267,16 @@
 
 
 @media all and (max-width: 510px){
-  .sdc-sf-chart-vertical-bar {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .sdc-sf-chart-vertical-bar
   .sdc-sf-chart-bars {
     width: 50%;
+  }
+
+  .sdc-sf-chart-vertical-bar
+  .sdc-sf-chart-bars:nth-child(1),
+  .sdc-sf-chart-vertical-bar
+  .sdc-sf-chart-bars:nth-child(2) {
+    margin-bottom: 12px;
   }
 }
 
