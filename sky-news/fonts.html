@@ -22,9 +22,14 @@
       margin: 0;
       box-sizing: border-box
     }
-    
-    body {
-      padding: 1em 0
+  
+
+    header {
+      background: #ccc;
+      height: calc(18vw);
+      max-height: 120px;
+      min-height: 55px;
+      margin-bottom: calc(12px + 5vmin)
     }
 
     .wrapper {
@@ -33,6 +38,26 @@
       padding: 0 calc(12px + 3vmin);
       overflow: hidden
     }
+    
+    .text-wrapper-head {
+      margin-bottom: calc(12px + 7vmin)
+    }
+
+    .text-wrapper-head > *:not(:last-child) {
+      margin-bottom: calc(10px + 1vmin)
+    }
+
+    .text-wrapper-head h1 {
+      line-height: 1.1;
+      font-weight: 400;
+      font-size: calc(15px + 4.5vmin);
+    }
+
+    .text-wrapper-head h2 {
+      line-height: 1.3;
+      font-weight: 400;
+      font-size: calc(14px + 1.8vmin);
+    }
 
     .text-wrapper {
       max-width: 740px;
@@ -40,30 +65,27 @@
       line-height: 1.45;
       position: relative;
     }
-    
-    .text-wrapper-head {
-      margin-bottom: calc(22px + 7vmin)
+
+    .text-wrapper > *:first-child {
+      margin-top: 0
     }
 
-    .text-wrapper-head > *:not(:last-child) {
-      margin-bottom: calc(10px + 1vmin)
-    }
-
-    .text-wrapper h1 {
-      line-height: 1.1;
-      font-weight: 400;
-      font-size: calc(15px + 4.5vmin);
-    }
-
-    .text-wrapper h2 {
-      line-height: 1.3;
-      font-weight: 400;
-      font-size: calc(14px + 1.8vmin);
-    }
-
-    .text-wrapper p {
+    .text-wrapper p,
+    .text-wrapper h3,
+    .text-wrapper h4 {
       font-size: 1rem;
-      margin-bottom: 1.4em
+      font-weight: 400;
+      margin-bottom: calc(14px + 3vmin);
+    }
+
+    .text-wrapper h3 {
+      font-size: calc(1rem + 1.25vmin);
+      padding-top: 1rem
+    }
+
+    .text-wrapper h4 {
+      padding-top: 1rem;
+      font-size: calc(1rem + 0.6vmin)
     }
     
     .text-wrapper
@@ -71,24 +93,30 @@
       font-size: 0.8rem;
       color: #aaa
     }
-
+    
+    .text-wrapper
     .block {
-      margin: calc(14px + 3vmin + 1.4em) 0 calc(14px + 3vmin - 1.4em);
-      background: #eee;
       min-height: 100px;
       max-height: 100vh;
       position: relative;
-      top: -1.4em;
+      margin-bottom: calc(24px + 3vmin);
+      padding-top: 10px;
     }
-
+    
+    .text-wrapper
     .block--full {
       width: 1024px;
+      max-width: calc(100vw - 15px);
       max-width: var(--vw);
       left: 50%;
       transform: translateX(-50%);
-      margin: calc(18px + 3vmin + 1.4em) 0 calc(18px + 3vmin - 1.4em);
     }
-    
+
+    .text-wrapper-head +
+    .block {
+      padding-top: 0;
+    }
+
     .media {
       position: relative
     }
@@ -107,17 +135,43 @@
     }
 
     .media__caption[class] {
-      font-size: calc(12px + 0.75vmin);
+      background: #eee;
       padding: calc(1em + 1vmin) calc(12px + 3vmin);
       margin-bottom: 0;
       line-height: 1.3;
-      color: #888;
+      font-size: calc(12px + 0.5vmin);
+      color: #777;
       box-sizing: content-box;
+    }
+
+    .media__caption > p {
+      font-size: inherit;
+      margin-bottom: 0;
+      line-height: inherit
+    }
+
+    .text-promo {
+      background: #eee;
+      padding: calc(12px + 3vmin);
+      line-height: 1.4;
+      font-size: calc(14px + 0.5vmin);
+      color: #777;
+    }
+    
+    .text-promo > h4 {
+      margin: 0 0 0.4em;
+      padding: 0
+    }
+
+    .text-promo > p {
+      font-size: inherit;
+      margin-bottom: 0
     }
 
   </style> 
 </head>
 <body>
+  <header></header>
   <div class="wrapper">
     <div class="text-wrapper">
       <div class="text-wrapper-head">
@@ -132,7 +186,7 @@
               <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347558.jpg?bypass-service-worker&20180627221843" alt="">
             </figure>
            
-              <p class="media__caption text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+            <div class="media__caption"><p class="text-wrapper"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> </div>
             
           </div>
         </div>
@@ -140,22 +194,30 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
 
-     
+     <h3>A larger sub headline</h3>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
     
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+
+      <h4>A smaller sub headline</h4>
+
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <div class="block">
           <div class="media media--16-9">
               <figure class="media__item">
           <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347105.jpg?20180627153327" alt="">
         </figure>
-        <p class="media__caption text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        <div class="media__caption"><p class="text-wrapper"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> </div>
         </div>
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <div class="block">
+        <div class="text-promo">
+          <h4>Promo headline</h4>
+          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut obcaecati dicta iste distinctio quis incidunt illum nulla harum excepturi. Dicta molestias fugiat ut expedita quibusdam quo ducimus dolores vitae?</p></div>
+      </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
 
