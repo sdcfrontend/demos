@@ -1,0 +1,64 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 4,
+      "type": "donut",
+      "title": "Cancer",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            11563
+          ],
+          "label": "Breast cancer",
+          "subLabel": "11,563"
+        },
+        {
+          "values": [
+            35620
+          ],
+          "label": "Lung cancer",
+          "subLabel": "35,620"
+        },
+        {
+          "values": [
+            11631
+          ],
+          "label": "Prostate cancer",
+          "subLabel": "11,631"
+        },
+        {
+          "values": [
+            16384
+          ],
+          "label": "Bowel cancer",
+          "subLabel": "16,384"
+        }
+      ]
+    }
+  ]
+}

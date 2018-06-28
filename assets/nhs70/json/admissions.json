@@ -1,0 +1,92 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 4,
+      "type": "donut",
+      "title": "Admissions",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            125351
+          ],
+          "label": "Heart disease",
+          "subLabel": "125,351"
+        },
+        {
+          "values": [
+            203454
+          ],
+          "label": "Breast cancer",
+          "subLabel": "203,454"
+        },
+        {
+          "values": [
+            28204
+          ],
+          "label": "Pancreatic cancer",
+          "subLabel": "28,204"
+        },
+        {
+          "values": [
+            91902
+          ],
+          "label": "Lung cancer",
+          "subLabel": "91,902"
+        },
+        {
+          "values": [
+            91802
+          ],
+          "label": "Colon cancer",
+          "subLabel": "91,802"
+        },
+        {
+          "values": [
+            70295
+          ],
+          "label": "Prostate cancer",
+          "subLabel": "70,295"
+        },
+        {
+          "values": [
+            27652
+          ],
+          "label": "Type 1 diabetes",
+          "subLabel": "27,652"
+        },
+        {
+          "values": [
+            22969
+          ],
+          "label": "Type 2 diabetes",
+          "subLabel": "22,969"
+        }
+      ]
+    }
+  ]
+}

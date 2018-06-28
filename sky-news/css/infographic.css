@@ -123,6 +123,7 @@
     background-position: left calc(12px + 2vmin) bottom 0;
     background-clip: border-box; 
     padding: 0 0 calc(12px + 2vmin) calc(12px + 2vmin);
+    -ms-grid-column: 2
   }
 
   .sdc-sf-infographic--t2
@@ -130,12 +131,15 @@
     border-right: 1px solid #ccc;
     background: none;
     padding: calc(12px + 2vmin) calc(12px + 2vmin) 0 0;
+    -ms-grid-row: 2;
   }
 
   .sdc-sf-infographic--t2
   .sdc-sf-infographic__cell:nth-child(4) {
     padding: calc(12px + 2vmin) 0 0 calc(12px + 2vmin);
     background: none;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
   }
 
 }
@@ -152,7 +156,9 @@
     grid-column: 1/2;
     padding: 0 calc(12px + 2vmin) calc(12px + 2vmin) 0;
     background-position: right calc(12px + 2vmin) bottom 0;
-    background-clip: border-box
+    background-clip: border-box;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
 
   }
 
@@ -161,7 +167,9 @@
     border-left: 1px solid#ccc;
     background-position: -1000px;
     padding: 0 calc(12px + 2vmin) calc(12px + 2vmin);
-    grid-column: 2/4
+    grid-column: 2/4;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1
   }
 
   .sdc-sf-infographic--t1
@@ -170,7 +178,10 @@
     background-position: left 0 bottom calc(12px + 2vmin);
     padding: 0 0 calc(12px + 2vmin) calc(12px + 2vmin);
     background-clip: border-box;
-    grid-column: 4/6
+    grid-column: 4/6;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    -ms-grid-row: 2;
 
   }
 
@@ -179,6 +190,9 @@
     grid-column: 1/2;
     padding: calc(12px + 2vmin) calc(12px + 2vmin) 0 0;
     background: none;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    -ms-grid-row: 2;
   }
 
   .sdc-sf-infographic--t1
@@ -187,7 +201,10 @@
     border-left: 1px solid#ccc;
     background-position: calc(12px + 2vmin) 0;
     padding: calc(12px + 2vmin) 0 0 calc(12px + 2vmin);
-    background-clip: border-box
+    background-clip: border-box;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    -ms-grid-row: 3;
   }
 
 }
@@ -280,6 +297,7 @@
     background: none;
     padding: 0 calc(12px + 2vmin) calc(12px + 2vmin) 0;
     border-right: 1px solid #ccc;
+    -ms-grid-row-span: 3;
   }
 
   .sdc-sf-infographic--t3
@@ -289,7 +307,9 @@
     padding: calc(12px + 2vmin) calc(12px + 2vmin) 0 0;
     border-right: 1px solid #ccc;
     background-clip: border-box;
-    background-position: right calc(12px + 2vmin) top
+    background-position: right calc(12px + 2vmin) top;
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
   }
 
   .sdc-sf-infographic--t3
@@ -308,7 +328,9 @@
     /* background: pink; */
     border: 0;
     padding: calc(12px + 2vmin) 0 calc(12px + 2vmin) calc(12px + 2vmin);
-
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
   }
 
   .sdc-sf-infographic--t3
@@ -316,7 +338,8 @@
     grid-column: 2;
     padding: calc(12px + 2vmin) 0 0 calc(12px + 2vmin);
     background-clip: border-box;
-    background-position: calc(12px + 2vmin) 0
+    background-position: calc(12px + 2vmin) 0;
+    -ms-grid-row: 4
 
   }
 }
@@ -357,6 +380,9 @@
     top: -1px;
     padding: calc(12px + 2vmin) 0;
     margin-bottom: calc(12px + 2vmin);
+    -ms-grid-row: 4;
+    -ms-grid-column-span: 4;
+
   }
 
 }
@@ -389,7 +415,7 @@
 }
 
 .sdc-sf-infographic-item__number {
-  flex: 1;
+  flex: auto;
   text-align: center;
   margin-bottom: calc(12px + 1vmin);
   padding: 0 3px;
@@ -407,7 +433,8 @@ small {
 .sdc-sf-infographic-item__text {
   font-size: 1rem;
   line-height: 1.2;
-  text-align: center
+  text-align: center;
+  margin-bottom: 0
 }
 
 .sdc-sf-infographic-item__text em {

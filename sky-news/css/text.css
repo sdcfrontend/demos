@@ -1,6 +1,7 @@
 .sdc-sf-value {
   text-align: center;
   font-weight: bold;
+  font-size: calc(1em + 1vmin)
 }
 
 .sdc-sf-citation {

@@ -2,7 +2,7 @@
   text-align: center;
   font-weight: 400;
   font-size: 2em;
-  font-size: calc(12px + 3vmin);
+  font-size: calc(13px + 3vmin);
   margin-bottom: 1em;
   margin-bottom: calc(18px + 2vmin)
 }
@@ -13,7 +13,8 @@
   font-size: 1.3em;
   font-size: calc(1em + 1vmin);
   margin-bottom: 1em;
-  margin-bottom: calc(12px + 1vmin)
+  margin-bottom: calc(12px + 1vmin);
+  width: 100%
 }
 
 .sdc-sf-header span {

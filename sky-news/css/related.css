@@ -16,6 +16,21 @@
 
 .sdc-sf-related__cell {
   flex: 1;
+  padding: 0 0.5em;
+}
+
+@supports (grid-gap: 1px){
+  .sdc-sf-related__cell {
+    padding: 0;
+  }
+}
+
+.sdc-sf-related__cell:nth-child(2){
+  -ms-grid-column: 2
+}
+
+.sdc-sf-related__cell:nth-child(3){
+  -ms-grid-column: 3
 }
 
 @supports not(display: grid){
@@ -39,6 +54,7 @@
 .sdc-sf-related__headline {
   font-size: calc(0.75em + 1vmin);
   margin-top: 0.75em;
+  line-height: 1.25
 }
 
 @media all and (max-width: 480px){

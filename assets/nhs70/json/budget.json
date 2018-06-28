@@ -1,0 +1,64 @@
+{
+  "externalTrigger": true,
+  "charts": [
+    {
+      "id": 4,
+      "type": "donut",
+      "title": "Budget",
+      "skin": "nhs",
+      "animated": true,
+      "key": true,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.4
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            122
+          ],
+          "label": "England",
+          "subLabel": "£122bn"
+        },
+        {
+          "values": [
+            13.2
+          ],
+          "label": "Scotland",
+          "subLabel": "£13.2bn"
+        },
+        {
+          "values": [
+            7.3
+          ],
+          "label": "Wales",
+          "subLabel": "£7.3bn"
+        },
+        {
+          "values": [
+            5
+          ],
+          "label": "N. Ireland",
+          "subLabel": "£5bn"
+        }
+      ]
+    }
+  ]
+}

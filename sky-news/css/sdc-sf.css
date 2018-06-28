@@ -1,4 +1,4 @@
-@import "static.css";
+/* @import "static.css"; */
 @import "numbers.css";
 @import "title-page.css";
 @import "panel.css";
@@ -17,3 +17,4 @@
 @import "sticky-nav.css";
 @import "related.css";
 @import "sticky-info.css";
+@import "share-local.css";
