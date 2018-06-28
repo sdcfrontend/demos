@@ -111,8 +111,17 @@
     }
     
     .text-wrapper
-    .block--full {
+    .block--wide {
       width: 1024px;
+      max-width: calc(100vw - 15px);
+      max-width: var(--vw);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .text-wrapper
+    .block--flush {
+      width: var(--vw);
       max-width: calc(100vw - 15px);
       max-width: var(--vw);
       left: 50%;
@@ -192,7 +201,7 @@
         <p class="text-date">Last Updated: 28/06/18 10:56am</p>
       </div>
 
-      <div class="block block--full block--inset">
+      <div class="block block--wide">
           <div class="media media--16-9">
             <figure class="media__item">
               <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347558.jpg?bypass-service-worker&20180627221843" alt="">
