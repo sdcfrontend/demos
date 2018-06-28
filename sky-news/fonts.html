@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    @font-face{
+      font-family:Sky Text;
+      src:url(sky-regular.woff) format("woff")
+    }
+
+    html {
+      font-size: calc(14px + 1vmin);
+      font-family:Sky Text;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+
+    .wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: calc(12px + 3vmin);
+      overflow: hidden
+    }
+
+    .text-wrapper {
+      max-width: 740px;
+      margin: 0 auto;
+      line-height: 1.45;
+      position: relative;
+    }
+
+    .text-wrapper h1 {
+      line-height: 1.1;
+      font-weight: 400;
+      font-size: calc(12px + 4.4vmin);
+      margin-bottom: 1em;
+    }
+
+    .text-wrapper p {
+      font-size: 1rem;
+      margin-bottom: 1.4em; 
+    }
+
+    .block {
+      margin: calc(14px + 3vmin + 1.4em) 0 calc(14px + 3vmin - 1.4em);
+      background: #eee;
+      min-height: 100px;
+      max-height: 100vh;
+      position: relative;
+      top: -1.4em;
+    }
+
+    .block--full {
+      width: 1024px;
+      max-width: 100vw;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+    
+    .media {
+      position: relative
+    }
+
+    .media img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    .media--16-9
+    .media__item {
+      position: relative;
+      padding-bottom: calc(100% / (16 / 9))
+    }
+
+    .media__caption[class] {
+      font-size: calc(10px + 0.8vmin);
+      padding: 1.5em 0;
+      margin-bottom: 0;
+    }
+
+  </style> 
+</head>
+<body>
+  <div class="wrapper">
+    <div class="text-wrapper">
+      <h1>England fans flock to Russia for Belgium game</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <div class="block block--full block--inset">
+        <div class="media media--16-9">
+          <figure class="media__item">
+            <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347558.jpg?bypass-service-worker&20180627221843" alt="">
+          </figure>
+          <p class="media__caption text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, doloremque nemo perferendis delectus rem totam ipsam. Iusto ut eius natus tenetur, incidunt porro vero eligendi corrupti, vitae ducimus mollitia commodi!</p>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <div class="block">
+        <div class="media media--16-9">
+          <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347105.jpg?20180627153327" alt="">
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+
+    </div>
+
+  </div>
+</body>
+</html>
