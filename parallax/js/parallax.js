@@ -11,7 +11,7 @@ function framePercentageValue(frameDimensions, startFromBottom) {
     value = 100 - (frameDimensions.top/frameDimensions.height)*100;
   } else {
     // Value will be at 100% when bottom of frame reaches bottom of window
-    value = 100 - (frameDimensions.bottom/frameDimensions.height)*100;
+    value = 100 - ((frameDimensions.bottom/2)/(frameDimensions.height))*100;
   }
 
   return value;
