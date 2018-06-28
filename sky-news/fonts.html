@@ -22,12 +22,15 @@
       margin: 0;
       box-sizing: border-box
     }
-
+    
+    body {
+      padding: 1em 0
+    }
 
     .wrapper {
       max-width: 1024px;
       margin: 0 auto;
-      padding: calc(12px + 3vmin);
+      padding: 0 calc(12px + 3vmin);
       overflow: hidden
     }
 
@@ -61,7 +64,7 @@
 
     .block--full {
       width: 1024px;
-      max-width: 100vw;
+      max-width: calc(100vw - 15px);
       left: 50%;
       transform: translateX(-50%)
     }
@@ -84,7 +87,7 @@
     }
 
     .media__caption[class] {
-      font-size: calc(10px + 0.8vmin);
+      font-size: calc(12px + 0.75vmin);
       padding: 1.5em 0;
       margin-bottom: 0;
     }
@@ -103,14 +106,18 @@
           <figure class="media__item">
             <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347558.jpg?bypass-service-worker&20180627221843" alt="">
           </figure>
-          <p class="media__caption text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, doloremque nemo perferendis delectus rem totam ipsam. Iusto ut eius natus tenetur, incidunt porro vero eligendi corrupti, vitae ducimus mollitia commodi!</p>
+          <div class="wrapper">
+            <p class="media__caption text-wrapper">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, doloremque nemo perferendis delectus rem totam ipsam. Iusto ut eius natus tenetur, incidunt porro vero eligendi corrupti, vitae ducimus mollitia commodi!</p>
+          </div>
         </div>
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
       <div class="block">
-        <div class="media media--16-9">
+          <div class="media media--16-9">
+              <figure class="media__item">
           <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347105.jpg?20180627153327" alt="">
+        </figure>
         </div>
       </div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>

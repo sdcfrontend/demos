@@ -530,37 +530,6 @@ document.querySelectorAll('[data-role="number-counter"][data-click]').forEach(fu
     sticky.classList.remove('sdc-sf-sticky-info--open');
     open = false;
 
-  })
-
-})();
-
-(function () {
-  // sticky nav
-  var navpoints = document.querySelectorAll('[data-role="localnav-item"]');
-  var navitems = document.querySelectorAll('.sdc-site-localnav li[data-role="nav-item"] a');
-  var selected = 0;
-  var currentnav = document.querySelector('.sdc-site-localnav__current-section-name');
-
-  function navtick() {
-    for (var i = -1; ++i < navpoints.length;) {
-      if (navpoints[i].getBoundingClientRect().top < 100) {
-        selected = i;
-      }
-    }
-
-    currentnav.textContent = navpoints[selected].textContent;
-    navitems.forEach(function (item) {
-      item.removeAttribute('aria-current');
-    })
-
-    navitems[selected].setAttribute('aria-current', true);
-
-    setTimeout(function () {
-      requestAnimationFrame(navtick);
-    }, 200);
-
-  }
-
-  navtick();
+  });
 
 })();
