@@ -1,17 +1,21 @@
 NodeList.prototype.forEach = Array.prototype.forEach;
 
 // Calculates scroll depth percentage through a given frame
-function framePercentageValue(frameDimensions, startFromBottom) {
+function framePercentageValue(frameDimensions, start) {
 
   var value = '';
 
   // Start applying adjusted css values from when a frame enters the window at the bottom or from when it begins to leave the window at the top
-  if (startFromBottom) {
+  if (start == "bottom") {
     // Value will be at 100% when top of frame reaches top of window
     value = 100 - (frameDimensions.top/frameDimensions.height)*100;
   } else {
     // Value will be at 100% when bottom of frame reaches bottom of window
-    value = 100 - ((frameDimensions.bottom/2)/(frameDimensions.height))*100;
+    if (start == "top") {
+      value = 100 - (frameDimensions.bottom/frameDimensions.height)*100;
+    } else {
+      value = 100 - ((frameDimensions.bottom/2)/frameDimensions.height)*100;
+    }
   }
 
   return value;
@@ -124,11 +128,7 @@ function triggerParallax() {
           parallaxSubjects.forEach(function(parallaxSubject) {
 
             // A parallaxStart value of "bottom" indictates it must begin adjustments as soon as it enters the bottom of the window
-            if (parallaxSubject.dataset.parallaxStart == "bottom") {
-              parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, true));
-            } else {
-              parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, false));
-            }
+            parallaxSubject.style.setProperty('--frameScrollDepth', framePercentageValue(parallaxFrameDimensions, parallaxSubject.dataset.parallaxStart));
 
           });
         } else {
