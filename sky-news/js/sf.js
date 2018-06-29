@@ -499,11 +499,11 @@ document.querySelectorAll('[data-role="number-counter"][data-click]').forEach(fu
   var head = sticky.querySelector('.sdc-sf-sticky-info__head');
   var value = sticky.querySelector('.sdc-sf-sticky-info__value');
 
-  var multiplier = 4597;
+  var multiplier = 4677;
   var counter = 0;
 
   setInterval(function () {
-    counter += 459;
+    counter += 467;
     requestAnimationFrame(function () {
       value.textContent = counter.toLocaleString('en');
     })

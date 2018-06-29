@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    :root {
+      --voffset: 0;
+      --vmin: 1vmin;
+    }
 
     @font-face{
       font-family:Sky Text;
@@ -13,7 +17,7 @@
     }
 
     html {
-      font-size: calc(14px + 1vmin);
+      font-size: calc(14px + calc(var(--vmin, 1vmin)));
       font-family:Sky Text;
     }
 
@@ -33,33 +37,33 @@
       height: calc(18vw);
       max-height: 120px;
       min-height: 55px;
-      margin-bottom: calc(12px + 5vmin)
+      margin-bottom: calc(12px + calc(var(--vmin) * 5))
     }
 
     .wrapper {
       max-width: 1024px;
       margin: 0 auto;
-      padding: 0 calc(12px + 3vmin);
+      padding: 0 calc(12px + calc(var(--vmin) * 3));
     }
     
     .text-wrapper-head {
-      margin-bottom: calc(12px + 5vmin)
+      margin-bottom: calc(12px + calc(var(--vmin) * 5))
     }
 
     .text-wrapper-head > *:not(:last-child) {
-      margin-bottom: calc(12px + 1.5vmin)
+      margin-bottom: calc(12px + calc(var(--vmin) * 1.5))
     }
 
     .text-wrapper-head h1 {
       line-height: 1.1;
       font-weight: 400;
-      font-size: calc(15px + 4.5vmin);
+      font-size: calc(15px + calc(var(--vmin) * 4.5));
     }
 
     .text-wrapper-head h2 {
       line-height: 1.3;
       font-weight: 400;
-      font-size: calc(14px + 1.8vmin);
+      font-size: calc(14px + calc(var(--vmin) * 1.8));
     }
 
     .text-wrapper {
@@ -79,7 +83,7 @@
     .block {
       font-size: 1rem;
       font-weight: 400;
-      margin-bottom: calc(14px + 3vmin);
+      margin-bottom: calc(14px + calc(var(--vmin) * 3));
     }
 
     .text-wrapper > p:first-of-type:not(:only-child) {
@@ -88,13 +92,13 @@
     }
 
     .text-wrapper h3 {
-      font-size: calc(1.2rem + 1vmin);
-      padding-top: 5vmin
+      font-size: calc(1.2rem + var(--vmin));
+      padding-top: calc(var(--vmin) * 4);
     }
 
     .text-wrapper h4 {
-      font-size: calc(1rem + 0.8vmin);
-      padding-top: 5vmin;
+      font-size: calc(1rem + calc(var(--vmin) * 0.8));
+      padding-top: calc(var(--vmin) * 4);
     }
     
     .text-wrapper
@@ -106,8 +110,8 @@
     .text-wrapper
     .block {
       position: relative;
-      margin-bottom: calc(24px + 3vmin);
-      padding: 1vmin 0;
+      margin-bottom: calc(24px + calc(var(--vmin) * 3));
+      padding: var(--vmin) 0;
     }
     
     .text-wrapper
@@ -157,7 +161,7 @@
 
     .media__caption[class] {
       background: #eee;
-      padding: calc(1em + 0.8vmin) calc(12px + 3vmin);
+      padding: calc(1em + 0.8vmin) calc(12px + calc(var(--vmin) * 3));
       margin-bottom: 0;
       line-height: 1.3;
       font-size: 0.8rem;
@@ -173,9 +177,9 @@
 
     .text-promo {
       background: #eee;
-      padding: calc(12px + 3vmin);
+      padding: calc(12px + calc(var(--vmin) * 3));
       line-height: 1.4;
-      font-size: calc(14px + 0.5vmin);
+      font-size: calc(14px + calc(var(--vmin) * 0.5));
       color: #777;
     }
     
@@ -189,9 +193,48 @@
       margin-bottom: 0
     }
 
-  </style> 
+  </style>
+  
+  <script>
+  
+    function setCW(){
+      document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
+    }
+
+    window.onresize = function(){
+      setCW();
+    }
+
+    setCW();
+
+    function max(){
+
+      val = "1vmin";
+
+      var w = document.documentElement.clientWidth;
+      var h = document.documentElement.clientHeight;
+      var hmin = w / h > 1;
+
+      if(hmin && h > 1000){
+        val = "10px"
+      }
+
+      if(!hmin && w > 1000){
+        val = "10px"
+      }
+
+      document.documentElement.style.setProperty('--vmin', val);
+
+    }
+
+    max();
+
+    window.addEventListener('resize', max);
+
+</script>
 </head>
 <body>
+   
   <header></header>
   <div class="wrapper">
     <div class="text-wrapper">
@@ -246,18 +289,9 @@
 
   </div>
 
-  <script>
-
-    function setCW(){
-      document.documentElement.style.setProperty('--vw', document.documentElement.clientWidth + 'px');
-    }
-
-    window.onresize = function(){
-      setCW();
-    }
-
-    setCW();
-  
-  </script>
+<script>
+  setCW();
+  </script> 
 </body>
+
 </html>

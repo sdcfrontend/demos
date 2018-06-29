@@ -25,7 +25,7 @@
 /******/ 			id: moduleId,
 /******/ 			loaded: false
 				/******/
-};
+			};
 
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
@@ -36,7 +36,7 @@
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 			/******/
-}
+		}
 
 
 /******/ 	// expose the modules object (__webpack_modules__)
@@ -51,7 +51,7 @@
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
 		/******/
-})
+	})
 /************************************************************************/
 /******/([
 /* 0 */
@@ -127,7 +127,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 1 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -375,10 +375,10 @@
 
 					module.exports = exports['default'];
 					/* WEBPACK VAR INJECTION */
-}.call(exports, __webpack_require__(2).setImmediate))
+				}.call(exports, __webpack_require__(2).setImmediate))
 
 				/***/
-}),
+			}),
 /* 2 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -441,10 +441,10 @@
 					exports.setImmediate = typeof self !== "undefined" && self.setImmediate || typeof global !== "undefined" && global.setImmediate || undefined && undefined.setImmediate;
 					exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || typeof global !== "undefined" && global.clearImmediate || undefined && undefined.clearImmediate;
 					/* WEBPACK VAR INJECTION */
-}.call(exports, (function () { return this; }())))
+				}.call(exports, (function () { return this; }())))
 
 				/***/
-}),
+			}),
 /* 3 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -634,10 +634,10 @@
 						attachTo.clearImmediate = clearImmediate;
 					})(typeof self === "undefined" ? typeof global === "undefined" ? undefined : global : self);
 					/* WEBPACK VAR INJECTION */
-}.call(exports, (function () { return this; }()), __webpack_require__(4)))
+				}.call(exports, (function () { return this; }()), __webpack_require__(4)))
 
 				/***/
-}),
+			}),
 /* 4 */
 /***/ (function (module, exports) {
 
@@ -830,7 +830,7 @@
 				};
 
 				/***/
-}),
+			}),
 /* 5 */
 /***/ (function (module, exports) {
 
@@ -863,7 +863,7 @@
 				// callback to run when script is loaded
 
 				/***/
-}),
+			}),
 /* 6 */
 /***/ (function (module, exports) {
 
@@ -884,7 +884,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 7 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -931,7 +931,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 8 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1025,7 +1025,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 9 */
 /***/ (function (module, exports) {
 
@@ -1083,7 +1083,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 10 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1172,7 +1172,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 11 */
 /***/ (function (module, exports) {
 
@@ -1222,7 +1222,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 12 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1294,7 +1294,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 13 */
 /***/ (function (module, exports) {
 
@@ -1362,7 +1362,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 14 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1417,7 +1417,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 15 */
 /***/ (function (module, exports) {
 
@@ -1449,7 +1449,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 16 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1524,7 +1524,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 17 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1593,7 +1593,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 18 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1668,7 +1668,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 19 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1728,7 +1728,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 20 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1841,7 +1841,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 21 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -1890,7 +1890,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 22 */
 /***/ (function (module, exports) {
 
@@ -1908,7 +1908,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 23 */
 /***/ (function (module, exports) {
 
@@ -1942,7 +1942,7 @@
 				module.exports = exports["default"];
 
 				/***/
-}),
+			}),
 /* 24 */
 /***/ (function (module, exports) {
 
@@ -1968,7 +1968,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 25 */
 /***/ (function (module, exports) {
 
@@ -2000,7 +2000,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 26 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2035,7 +2035,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 27 */
 /***/ (function (module, exports) {
 
@@ -2049,7 +2049,7 @@
 					"vanilla": ['#113537', '#37505C', '#96616B', '#F76F8E', '#FFEAD0'],
 					"skynews": ['#F1F1F1', '#D7D5D5', '#EF0420', '#D0021B', '#B20318', '#77000e'],
 					"royalwedding": ['#F4F4F4', '#E4E4E4', '#E3C228', '#333333', '#141414'],
-					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
+					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE', '#eeff2e'],
 					"generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
 					"line18": ['#B35011', '#C18418', '#E4A71C', '#6842BE', '#303D7E'],
 					"skysports": ['#446CCC', '#2653BB', '#103A9D', '#072B7B', '#002369'],
@@ -2060,7 +2060,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 28 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2120,7 +2120,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 29 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2172,7 +2172,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 30 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2215,7 +2215,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 31 */
 /***/ (function (module, exports) {
 
@@ -2250,7 +2250,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 32 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2402,7 +2402,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 33 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2472,7 +2472,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 34 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2510,7 +2510,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 35 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2554,7 +2554,7 @@
 				module.exports = exports['default'];
 
 				/***/
-}),
+			}),
 /* 36 */
 /***/ (function (module, exports, __webpack_require__) {
 
@@ -2673,7 +2673,7 @@
 				module.exports = exports['default'];
 
 				/***/
-})
+			})
 /******/])
 });
 ;

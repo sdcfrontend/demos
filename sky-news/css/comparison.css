@@ -63,7 +63,7 @@
 }
 
 .sdc-sf-comparison__stat--s2 span {
-  font-size: calc(10px + 3vmin);
+  font-size: calc(22px + 1.2vmin);
 }
 
 .sdc-sf-comparison__stat:after {
