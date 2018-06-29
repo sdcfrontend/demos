@@ -3,10 +3,6 @@
   overflow: hidden;
 }
 
-.sdc-article-header__image {
-  height: 130%;
-}
-
 .sdc-article-image__figure {
   position: relative;
 }
@@ -14,6 +10,10 @@
 .sdc-article-image__caption {
   z-index: 200;
   position: relative;
+}
+
+.sdc-article-image__item {
+  transform: scale(1.5);
 }
 
 @media all and (max-width: 900px) {

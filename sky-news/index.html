@@ -189,7 +189,7 @@
         </div>
       </div>
 
-      <div class="sdc-site-localnav sdc-site-localnav--single-item-mobile-nav sdc-sf-sticky-nav" data-component-name="sdc-site-localnav">
+      <div class="sdc-site-localnav sdc-site-localnav--sticky sdc-site-localnav--single-item-mobile-nav sdc-sf-sticky-nav" data-component-name="sdc-site-localnav">
         <div class="sdc-site-localnav__sticky-content">
           <div class="sdc-site-localnav__inner">
             <div class="sdc-site-localnav__wrap" data-role="nav-wrap">
@@ -2963,11 +2963,12 @@
   <script src="js/charts.js"></script>
   <script src="js/sf.js"></script>
   <script src="https://news.sky.com/scripts/sdc_site_localnav-74a2d0a5eb6e9ec3061f7becbd0f7a23.js"></script> -->
+  <script src="https://news.sky.com/scripts/sdc_site_localnav-74a2d0a5eb6e9ec3061f7becbd0f7a23.js"></script>
 </body>
 
 <script>
   (function(){
-    // sdc_site_localnav(document.querySelector('.sdc-site-localnav'));
+    sdc_site_localnav(document.querySelector('.sdc-site-localnav'));
 
     var slides = document.querySelectorAll('[data-role="slide"]');
     var charts = document.querySelectorAll('.sdc-site-charts[data-url]');
