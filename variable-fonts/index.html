@@ -10,6 +10,11 @@
     @font-face {
       font-family: 'maz';
       src: url('DriveVariable.woff2') format('woff2');
+      font-weight: normal;
+    }
+
+    * {
+      font-weight: normal;
     }
 
     html {
@@ -22,17 +27,50 @@
     }
 
     h1 {
+      font-variation-settings: "wght" 100;
+      text-align: center;
+      font-weight: normal;
+      line-height: 1.1;
+      margin-bottom: 1em;
+      font-size: 1.5em;
+    }
+
+    h1:nth-of-type(2) {
+      font-variation-settings: "wght" 200;
+      
+    }
+
+   h1:nth-of-type(3) {
       font-variation-settings: "wght" 300;
-      text-align: center
+    }
+
+    h1:nth-of-type(4) {
+      font-variation-settings: "wght" 400;
+    }
+
+    h1:nth-of-type(5) {
+      font-variation-settings: "wght" 500;
+    }
+
+    h1:nth-of-type(6) {
+      font-variation-settings: "wght" 600;
+    }
+
+    h1:nth-of-type(7) {
+      font-variation-settings: "wght" 700;
+    }
+
+     h1:nth-of-type(8) {
+      font-variation-settings: "wght" 800;
     }
 
     h2 {
-      font-variation-settings: "wght" 250, 'wdth' 300;
+      font-variation-settings: "wght" 200;
       text-align: center
     }
 
     p {
-      font-variation-settings: "wght" 200, 'wdth' 300;
+      font-variation-settings: "wght" 200;
       margin-bottom: 2em;
     }
 
@@ -41,11 +79,18 @@
     }
 
     strong, a {
-      font-variation-settings: "wght" 300
+      font-variation-settings: "wght" 400
     }
   </style>
 </head>
 <body>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
+  <h1>Lorem ipsum dolor sit amet consectetur</h1>
   <h1>Lorem ipsum dolor sit amet consectetur</h1>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe <strong>voluptate aliquid</strong> quasi doloremque. Iste minus in neque alias inventore?</p>
   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe voluptate aliquid quasi doloremque. Iste minus in neque alias inventore?</p>
