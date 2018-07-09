@@ -1,0 +1,524 @@
+{
+	"id": "940fe18e5885fd2252fa1c92fdbe7a1y",
+	"title": "Cricket Selector",
+	"headerBackground": "./dist/Cricket-header.jpg",
+	"sponsorLink":"",
+	"sponsorImage":"",
+	"backgroundColour": "#028CCF",
+	"formation": "default",
+	"restrictSelections": true,
+	"useParticipantImage": true,
+	"categoriseParticipants": true,
+	"useCustomParticipants": false,
+	"useTeamName": false,
+	"type": "cricket",
+	"numOfParticipants": 11,
+	"embed": false,
+  "successMessage": {
+    "title": "",
+    "text": ""
+  },
+	"sides": [
+		{
+			"name": "",
+			"formation": "default",
+			"participants": [{
+				"listPosition": 0,
+				"id": 19144,
+				"longName": "Ben Stokes",
+				"shortName": "Stokes",
+				"image": "https:\/\/uat.e.365dm.com\/13\/09\/384x384\/Ben-Stokes_3004517.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 19673,
+				"longName": "Chris Tremlett",
+				"shortName": "Tremlett",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/Chris-Tremlett_2974155.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1835,
+				"longName": "Ravi Bopara",
+				"shortName": "Bopara",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/ravi-bopara-england-ashes-profile-essex_2967882.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2113,
+				"longName": "Luke Wright",
+				"shortName": "Wright",
+				"image": "https:\/\/uat.e.365dm.com\/13\/02\/384x384\/LukeyWright_2898105.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2323,
+				"longName": "Jonathan  Trott",
+				"shortName": "Trott",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/jonathan-trott-copy-ashes_2967793.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2526,
+				"longName": "Moeen Ali",
+				"shortName": "Ali",
+				"image": "https:\/\/uat.e.365dm.com\/15\/05\/384x384\/CricketingYorkshire_master.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1855,
+				"longName": "Michael Carberry",
+				"shortName": "Carberry",
+				"image": "https:\/\/uat.e.365dm.com\/\/384x384\/",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 19427,
+				"longName": "Chris Woakes",
+				"shortName": "Woakes",
+				"image": "https:\/\/uat.e.365dm.com\/13\/03\/384x384\/ChrisWoakes_2908460.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 12446,
+				"longName": "Gary Ballance",
+				"shortName": "Ballance",
+				"image": "https:\/\/uat.e.365dm.com\/15\/05\/384x384\/go.sky.com",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1840,
+				"longName": "Ian Bell",
+				"shortName": "Bell",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/ian-bell-copy-ashes_2967775.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2746,
+				"longName": "Jade Dernbach",
+				"shortName": "Dernbach",
+				"image": "https:\/\/uat.e.365dm.com\/13\/08\/384x384\/Jade-Dernbach2_2988987.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1944,
+				"longName": "Eoin Morgan",
+				"shortName": "Morgan",
+				"image": "https:\/\/uat.e.365dm.com\/13\/05\/384x384\/Eoin-Morgan-whites_2943900.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 19101,
+				"longName": "Jos Buttler",
+				"shortName": "Buttler",
+				"image": "https:\/\/uat.e.365dm.com\/15\/05\/384x384\/aj_knockouts_mobi.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Wicketkeeper\/batsman",
+					"filter": ["batsman", "wicketKeeper"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1841,
+				"longName": "James Anderson",
+				"shortName": "Anderson",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/james-anderson-copy-ashes_2967776.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1854,
+				"longName": "Matthew Prior",
+				"shortName": "Prior",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/matt-prior-copy-ashes_2967794.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Wicketkeeper\/batsman",
+					"filter": ["batsman", "wicketKeeper"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1861,
+				"longName": "Stuart Broad",
+				"shortName": "Broad",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/stuart-broad-copy-ashes_2967802.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1833,
+				"longName": "Monty Panesar",
+				"shortName": "Panesar",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/monty-panesar-england-ashes-profile_2967877.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 11551,
+				"longName": "Jonny Bairstow",
+				"shortName": "Bairstow",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/johnny-bairstow-copy_2967788.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Wicketkeeper\/batsman",
+					"filter": ["batsman", "wicketKeeper"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2503,
+				"longName": "James Tredwell",
+				"shortName": "Tredwell",
+				"image": "https:\/\/uat.e.365dm.com\/13\/06\/384x384\/james_2954267.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 19099,
+				"longName": "Joe Root",
+				"shortName": "Root",
+				"image": "https:\/\/uat.e.365dm.com\/15\/08\/384x384\/gxY2pzdjqakwwpONfu0-qVJGFasALlC-.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2237,
+				"longName": "Michael Lumb",
+				"shortName": "Lumb",
+				"image": "https:\/\/uat.e.365dm.com\/13\/02\/384x384\/lumb-michael_2896471.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 23736,
+				"longName": "Ryan Adams",
+				"shortName": "Adams",
+				"image": "https:\/\/uat.e.365dm.com\/17\/06\/384x384\/skysports-keyword1-keyword2-keyword3_3607958.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1859,
+				"longName": "Tim Bresnan",
+				"shortName": "Bresnan",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/tim-bresnan-copy-ashes_2967807.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 1942,
+				"longName": "Boyd Rankin",
+				"shortName": "Rankin",
+				"image": "https:\/\/uat.e.365dm.com\/13\/09\/384x384\/boyd-rankin-cricket-swalec-stadium-cardiff-england-australia-natwest-series-odi_3008809.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 10697,
+				"longName": "Alex Hales",
+				"shortName": "Hales",
+				"image": "https:\/\/uat.e.365dm.com\/10\/06\/384x384\/Alex-Hales-T20_2464388.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2106,
+				"longName": "Alastair Cook",
+				"shortName": "Cook",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/alastair-cook-ashes-profile_2967773.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 10605,
+				"longName": "Chris Jordan",
+				"shortName": "Jordan",
+				"image": "https:\/\/uat.e.365dm.com\/13\/08\/384x384\/chris-jordan_2994019.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "All Rounder",
+					"filter": ["batsman", "allRounder", "wicketKeeper", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 2083,
+				"longName": "Ross Taylor",
+				"shortName": "Taylor",
+				"image": "https:\/\/uat.e.365dm.com\/07\/10\/384x384\/Ross_Taylor_588974.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Batsman",
+					"filter": ["batsman", "allRounder"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 10505,
+				"longName": "Harry Gurney",
+				"shortName": "Gurney",
+				"image": "https:\/\/uat.e.365dm.com\/13\/05\/384x384\/Gurney768_2946467.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 11086,
+				"longName": "Stephen Parry",
+				"shortName": "Parry",
+				"image": "https:\/\/uat.e.365dm.com\/13\/05\/384x384\/145759387_2947216.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}, {
+				"listPosition": 0,
+				"id": 3115,
+				"longName": "Steven Finn",
+				"shortName": "Finn",
+				"image": "https:\/\/uat.e.365dm.com\/13\/07\/384x384\/steven-finn-copy-ashes_2967800.jpg",
+				"team": {
+					"id": 4,
+					"name": "England",
+					"shortName": "England",
+					"image": "https:\/\/img.skysports.com\/cricket\/badges\/192\/4.png"
+				},
+				"position": {
+					"displayName": "Bowler",
+					"filter": ["allRounder", "bowler"]
+				}
+			}]
+		}
+	]
+}
