@@ -1,9 +1,9 @@
 {
 	"id": "940fe18e5885fd2252fa1c92fdbe7a1e",
-	"title": "Ryder Cup 2016 Fourballs",
+	"title": "Day 1 - Fourballs",
 	"headerBackground": "",
 	"sponsorLink":"",
-	"sponsorImage":"",
+	"sponsorImage":"https://cdn-scor-prd-01.azureedge.net/-/media/aam-web/images/logo/asilogo2x.ashx?la=en&hash=1F3782C03317624F2C0217E8692C96B1B39AFA52",
 	"backgroundColour": "#028CCF",
 	"formation": "fourballs-eu-usa",
 	"restrictSelections": true,
