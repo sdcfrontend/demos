@@ -1307,8 +1307,34 @@ for reference see here https://tools.skybet.net/confluence/display/SSDM/Football
 </div>
 <br>
 
-  <script src="./index_files/bundle.js"></script>
+  <script src="index_files/bundle.js"></script>
 
 
+<script>
+  var modal = document.querySelector('[data-role="modal"]');
+  var toggles = document.querySelectorAll('[data-role="modal-toggle"]');
 
+  if (modal) {
+    console.log('modal')
+    modal.setAttribute('fading', '');
+
+    toggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        if (modal.hasAttribute('hidden')) {
+          modal.removeAttribute('hidden');
+          setTimeout(function() {
+            modal.removeAttribute('fading');
+          }, 1);
+          
+        } else {
+          modal.setAttribute('fading', '');
+
+          setTimeout(function() {
+            modal.setAttribute('hidden', '');
+          }, 330);
+        }
+      }, false);
+    });
+  }
+</script>
 </body></html>
