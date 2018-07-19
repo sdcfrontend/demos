@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: #eee;
+      transition: background 0.33s
+    }
+
+    .chart {
+      border: 2px solid hotpink;
+      height: 100px;
+      width: 100px;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    [data-class="box1"] {
+      background: red
+    }
+
+    [data-class="box2"] {
+      background: blue
+    }
+
+    .placeholder:after {
+      content: "M";
+      /*   visibility: hidden; */
+      background: #eee;
+      color: #eee;
+    }
+
+    h1 {
+      outline: 1px solid #ccc;
+      font-sizr: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <select name="" id="">
+    <option value="arsenal">Arsenal</option>
+    <option value="chelsea">Chelsea</option>
+
+  </select>
+  <hr>
+
+  <h1 data-bind='text' data-prop="title">
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+  </h1>
+
+  <div class="box" data-bind='class' data-prop="class"></div>
+
+  <p data-bind="text" data-prop="snippet">
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+    <span class="placeholder"></span>
+  </p>
+
+  <div class="chart" data-bind="function" data-prop="chart-data">
+  </div>
+
+
+
+
+
+
+
+  <script>
+    var data = {
+      arsenal: {
+        url: 'arsenal',
+        title: "Arsenal",
+        class: "box1",
+        snippet: "lorem ipseum blah blah blha",
+        "chart-data": { title: 'arsenal chart' }
+      },
+      chelsea: {
+        url: 'chelsea',
+        title: "Chelsea",
+        class: "box2",
+        snippet: "lorem ipseum blah blah blha",
+        "chart-data": { title: 'chelsea chart' }
+      }
+    }
+
+    var items = document.querySelectorAll('[data-bind]');
+
+    function update(data) {
+
+      items.forEach(function (item) {
+
+        var prop = item.dataset.prop;
+        var bind = item.dataset.bind;
+
+        if (!prop) {
+          return
+        }
+
+        if (bind === 'text') {
+          item.textContent = data[prop]
+        }
+
+        if (bind === 'class') {
+          item.dataset.class = data[prop]
+        }
+
+        if (bind === 'function' && item.update) {
+          item.update(data[prop])
+        }
+
+      })
+
+      location.hash = data.url
+    }
+
+    document.querySelector('select').onchange = function () {
+      update(data[this.value])
+    }
+
+    document.querySelectorAll('.chart').forEach(function (item) {
+      item.update = function (data) {
+        this.textContent = data.title
+      }
+    })
+
+    window.onhashchange = function () {
+      var hash = location.hash.replace(/\#/g, '');
+      update(data[hash])
+    };
+
+    update(data['arsenal'])
+  </script>
+</body>
+
+</html>

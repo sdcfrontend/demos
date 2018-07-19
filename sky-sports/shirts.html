@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 1000vh;
+    }
+
+    .carousel {
+      height: 100vh;
+    }
+
+    .carousel__inner {
+      background: #aaa;
+      height: 100vh;
+      position: relative;
+      overflow: hidden
+    }
+
+    .carousel__slide {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: scale(0.6);
+      opacity: 0;
+      transition: transform 0.5s, opacity 0.5s;
+      display: flex;
+      font-size: 12vw;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel__slide--visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .carousel__nav {
+      display: block;
+      padding: 1em;
+      text-align: center
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="carousel">
+    <a href="#" class="carousel__nav">next</a>
+    <div>
+      <input type="range" step="16" value="1">
+    </div>
+    <div class="carousel__inner">
+      <div class="carousel__slide carousel__slide--visible" data-slide="1">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/3d71058f-e185-4424-a363-c596a1b5b175/USIyWyuP.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="2">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/11658c74-dac6-446b-be0b-781f90db053b/QGvqMTte.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="3">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/fb57e386-236c-4747-b221-61c04a812144/XxysOFAm.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="4">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/b03999c1-d6e4-4921-befe-0cae410df744/GFUeaNIo.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="5">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/11e17fe1-e302-464e-be0e-ff99353a7780/YfXBSCWN.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="6">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/7ec517dd-6c9e-4439-8914-1bbdd1a22904/DjDvHNEf.png"
+          alt="">
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  var slides = document.querySelectorAll('.carousel__slide');
+
+  var current = 0;
+  var prev = slides.length - 1;
+
+  function goto(index, prev) {
+    console.log(index, prev);
+    slides[prev].classList.remove('carousel__slide--visible');
+    slides[index].classList.add('carousel__slide--visible');
+
+  }
+
+  document.querySelector('.carousel__nav').onclick = function (e) {
+
+    e.preventDefault();
+
+    prev = current;
+    current++;
+
+    if (current === slides.length) {
+      current = 0;
+      prev = slides.length - 1
+    }
+
+    goto(current, prev)
+  }
+
+  document.querySelector('input[type="range"]').oninput = function () {
+    var val = (Math.round((6 / 100) * this.value));
+
+    prev = current;
+    current = val;
+
+    if (current === slides.length) {
+      current = 0;
+      prev = slides.length - 1
+    }
+
+    goto(current, prev);
+  }
+
+</script>
+
+
+</html>

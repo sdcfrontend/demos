@@ -49,15 +49,17 @@
 }
 
 .sdc-sf-chart-circle__item {
-  width: 14%;
+  width: 15%;
   min-width: 30px;
   background:#2c70b9;
   position: absolute;
   border-radius: 50%;
-  left: 3%;
+  left: 79%;
   top: 60%;
-  font-size: 1.1em;
-  transition: transform 0.33s 
+  font-size: 1em;
+  transition: transform 0.33s ;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .sdc-sf-chart-circle__item[data-animate]{
@@ -85,22 +87,29 @@
   padding-bottom: 100%;
 }
 
+.sdc-sf-chart-circle__item--small {
+  width: 20%;
+    left: 61%;
+    top: 18%;
+    font-size: 1.1em
+}
+
 .sdc-sf-chart-circle__item--med {
-  width: 23%;
-  background:#263b80;
-  left: 20%;
-  top: 6%;
-  font-size: 1.5em
+  width: 25%;
+  background: #203eb1!important;
+  left: 36%;
+  top: 42%;
+  white-space: nowrap;
+  font-size: 1.2em;
 }
 
 .sdc-sf-chart-circle__item--large {
-  width: 45%;
-  background:#202b5c;
-  top: auto;
-  bottom: 0;
-  left: auto;
-  right: 2%;
-  font-size: 2.5em
+  width: 34%;
+  background: #202b5c;
+  top: 5%;
+  /* bottom: 0; */
+  left: 1%;
+  font-size: 1.6em;
 }
 
 .sdc-site-charts__chart-key-item {

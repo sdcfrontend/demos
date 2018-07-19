@@ -1,0 +1,17 @@
+html {
+  font-size: calc(12px + 1.4vw);
+}
+
+body {
+  font-size: 18px;
+}
+
+.blackjack-sdc-digrev-header {
+  margin-bottom: 0
+}
+
+@media all and (min-width: 928px){
+  html {
+    font-size: 25px;
+  }
+}

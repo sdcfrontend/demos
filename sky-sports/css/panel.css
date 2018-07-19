@@ -1,0 +1,8 @@
+.pl-panel {
+  background: #ccc;
+  padding: calc(1rem * 2) 0;
+}
+
+.pl-panel--no-padding {
+  padding: 0;
+}

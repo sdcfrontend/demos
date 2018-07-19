@@ -1,0 +1,96 @@
+.pl-overlay-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px
+}
+
+.pl-overlay-stats__cell {
+  background: url(http://e0.365dm.com/18/07/16-9/20/skysports-blind-united-man-united_4363903.jpg?20180717114522) 50% 0;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 180%;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.pl-overlay-stats__stat {
+  position: absolute;
+  background: red;
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.pl-overlay-stats__number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  font-size: calc(1rem * 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.pl-overlay-stats__stat,
+.pl-overlay-stats__number {
+  transition: transform 0.66s;
+  will-change: transform;
+  transform: translateY(0);
+  transition-delay: inherit
+}
+
+
+.pl-overlay-stats__digit {
+  color: white;
+  font-weight: 400;
+  display: flex;
+  align-items: baseline
+}
+
+.pl-overlay-stats__digit small {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: normal
+}
+
+.pl-overlay-stats__cell[data-animate-in-view]
+.pl-overlay-stats__stat,
+.pl-overlay-stats__cell[data-animate-in-view]
+.pl-overlay-stats__number {
+  transform: translateY(100%)
+}
+
+.pl-overlay-stats__cell:nth-child(2) {
+  transition-delay: 0.2s
+}
+
+.pl-overlay-stats__cell:nth-child(3) {
+  transition-delay: 0.4s
+}
+
+.pl-overlay-stats__cell:nth-child(4) {
+  transition-delay: 0.6s
+}
+
+.pl-overlay-stats__header {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  font-size: calc(1rem * 1.3);
+  text-transform: uppercase
+}
+
+
+@media all and (max-width: 700px){
+  .pl-overlay-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

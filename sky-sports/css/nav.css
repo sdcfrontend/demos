@@ -1,0 +1,13 @@
+.pl-nav {
+  padding: 1em;
+  background: white;
+  position: sticky;
+  z-index: 5;
+  transform: translateY(-100%);
+  transition: 0.5s transform
+}
+
+.pl-nav[data-open]{
+  top: calc(100vh - 146px);
+  transform: translateY(calc(-100vh + 146px))
+}

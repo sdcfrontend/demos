@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 5000vh;
+      padding: 500px 0
+    }
+
+    .scroll {
+      height: 100vh;
+      width: 100%;
+      background-size: auto 100%;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      outline: 5px solid red;
+    }
+
+    .content {
+      height: 100vh;
+      will-change: transform
+    }
+
+    .content img {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scroll-con">
+    <div class="scroll">
+      <div class="content">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/North_American_Monsoon_20080808_%28wide%29.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  var con = document.querySelector('.scroll-con');
+  var content = document.querySelector('.content');
+  var image = content.querySelector('img');
+
+  function scan() {
+
+    requestAnimationFrame(scan);
+    var width = image.offsetWidth;
+    con.style.cssText = "height:calc(" + width + "px)";
+    var dims = con.getBoundingClientRect();
+    var pos = Math.min(dims.top, 0);
+    pos = Math.max((width - window.innerWidth) * -1, pos);
+    content.style.cssText = "transform: translateX(" + pos + "px)"
+
+
+  }
+
+  scan();
+
+
+</script>
+
+</html>
