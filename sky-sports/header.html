@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 1000vh;
+    }
+
+    .header {
+      height: 100vh;
+      position: relative;
+      background: black;
+      overflow: hidden
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(24px + 10vw);
+      color: white;
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+      will-change: all;
+    }
+
+    .slide h2,
+    .slide img {
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .slide1 {
+      background: #d21123;
+      z-index: 1;
+    }
+
+    .slide2 {
+      background: white;
+      z-index: 2;
+      transition-delay: 1s;
+      color: black
+    }
+
+    .slide3 {
+      background: #8ecdee;
+      z-index: 3;
+      transition-delay: 2s
+    }
+
+    .right {
+      transition-delay: 0s !important;
+      transform: translateX(-50%)
+    }
+
+    .left {
+      transition-delay: 0s !important;
+      transform: translateX(50%);
+    }
+
+    .left h2,
+    .right h2 {
+      opacity: 0
+    }
+
+    .hide {
+      display: none
+    }
+
+    .slide img {
+      position: absolute;
+      width: 33%;
+      max-width: 300px;
+      left: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+      opacity: 0
+    }
+
+    .slide:first-child img {
+      right: 0;
+      left: auto;
+      transform: translate(-50%, -50%)
+    }
+
+    .left img {
+      opacity: 1;
+      transform: translate(5%, -50%)
+    }
+
+    .right img {
+      opacity: 1;
+      transform: translate(-5%, -50%) !important
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="slide slide1">
+      <span>
+        <h2>United</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/296px-Manchester_United_FC_crest.svg.png"
+          alt="">
+      </span>
+    </div>
+    <div class="slide slide2">vs</div>
+    <div class="slide slide3">
+      <span>
+        <h2>City</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/316px-Manchester_City_FC_badge.svg.png"
+          alt="">
+      </span>
+    </div>
+  </div>
+</body>
+
+<script>
+  var slides = document.querySelectorAll('.slide');
+  requestAnimationFrame(function () {
+    slides[0].style.opacity = "1";
+    slides[1].style.opacity = "1";
+    slides[2].style.opacity = "1";
+
+    setTimeout(function () {
+      slides[0].classList.add('right');
+      slides[1].classList.add('hide');
+      slides[2].classList.add('left');
+    }, 3000)
+
+  })
+
+</script>
+
+
+</html>

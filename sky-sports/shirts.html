@@ -43,6 +43,11 @@
       justify-content: center;
     }
 
+    .carousel__slide img {
+      width: 70%;
+      max-width: 300px
+    }
+
     .carousel__slide--visible {
       opacity: 1;
       transform: scale(1);
@@ -50,8 +55,75 @@
 
     .carousel__nav {
       display: block;
-      padding: 1em;
-      text-align: center
+      width: calc(20px + 2vw);
+      height: calc(20px + 2vw);
+      text-align: center;
+      background: white;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(50%, -100%);
+      z-index: 5
+    }
+
+    .carousel__nav--next {
+      left: auto;
+      right: 0;
+      transform: translate(-50%, -100%);
+    }
+
+    .carousel__timeline {
+      background: white;
+      text-align: center;
+      overflow: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      transform: translateY(-100%)
+    }
+
+    .carousel__timeline::-moz-scrollbar {
+      width: 10px;
+      height: 1px;
+    }
+
+    .carousel__timeline::-webkit-scrollbar {
+      width: 10px;
+      height: 1px;
+    }
+
+    .carousel__timeline input {
+      width: 56%;
+    }
+
+    .carousel__years {
+      display: inline-grid;
+      grid-template-columns: repeat(20, 54px);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .carousel__years:before {
+      content: "";
+      height: 100%;
+      width: 54px;
+      position: absolute;
+      background: pink;
+      box-sizing: border-box;
+      bottom: 0;
+      z-index: 1;
+      transition: 0.33s transform;
+      transform: translateX(calc(100% * var(--needle)));
+    }
+
+    .carousel__years .cell {
+      font-weight: bold;
+      z-index: 2;
+      position: relative;
+      border: 1px solid red;
+      color: black;
+      padding: 1em 0;
+      text-decoration: none;
+
     }
   </style>
 
@@ -60,54 +132,169 @@
 
 <body>
   <div class="carousel">
-    <a href="#" class="carousel__nav">next</a>
-    <div>
-      <input type="range" step="16" value="1">
-    </div>
+    <a href="#" class="carousel__nav carousel__nav--prev">prev</a>
+    <a href="#" class="carousel__nav carousel__nav--next">next</a>
+
+
+
+    <!-- <input type="range" value="0" step="11"> -->
+
     <div class="carousel__inner">
       <div class="carousel__slide carousel__slide--visible" data-slide="1">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/3d71058f-e185-4424-a363-c596a1b5b175/USIyWyuP.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/f1ddc840-5399-4c71-9a0d-05af916a30e2/VKvbLjYD.png"
           alt="">
       </div>
       <div class="carousel__slide" data-slide="2">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/11658c74-dac6-446b-be0b-781f90db053b/QGvqMTte.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/fa7ecc55-e52c-462f-bd0c-4f067fe1dcc8/VVfyUSET.png"
           alt="">
       </div>
       <div class="carousel__slide" data-slide="3">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/fb57e386-236c-4747-b221-61c04a812144/XxysOFAm.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/543159c8-ba7e-4c16-ba6f-bd2b369351fb/hwuOEpOY.png"
           alt="">
       </div>
       <div class="carousel__slide" data-slide="4">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/b03999c1-d6e4-4921-befe-0cae410df744/GFUeaNIo.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/4efc6c90-ff57-4d46-a3a5-4998de7115d0/VrOKbnFy.png"
           alt="">
       </div>
       <div class="carousel__slide" data-slide="5">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/11e17fe1-e302-464e-be0e-ff99353a7780/YfXBSCWN.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/b6fc7b3c-6e61-40a2-9f8d-0bf7459fcc71/lxJGqkXj.png"
           alt="">
       </div>
       <div class="carousel__slide" data-slide="6">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/7ec517dd-6c9e-4439-8914-1bbdd1a22904/DjDvHNEf.png"
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/e872b24b-aa65-483a-a83a-7fb2cf43afbb/HMdkIbyo.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="7">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/cee719e5-f052-41a1-81b9-fe7173d70bb9/cMIlrxii.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="8">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/cb87ce99-d49e-4e8c-89d3-738f9cc72734/dPmBdjxo.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="9">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/40032af2-0f99-4815-99da-a853a2ee1466/qWGJFLIe.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="10">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/55e6b490-ec29-48e7-964f-b7a74825f2aa/CFoxuQmp.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="1">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/f1ddc840-5399-4c71-9a0d-05af916a30e2/VKvbLjYD.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="2">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/fa7ecc55-e52c-462f-bd0c-4f067fe1dcc8/VVfyUSET.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="3">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/543159c8-ba7e-4c16-ba6f-bd2b369351fb/hwuOEpOY.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="4">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/4efc6c90-ff57-4d46-a3a5-4998de7115d0/VrOKbnFy.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="5">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/b6fc7b3c-6e61-40a2-9f8d-0bf7459fcc71/lxJGqkXj.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="6">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/e872b24b-aa65-483a-a83a-7fb2cf43afbb/HMdkIbyo.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="7">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/cee719e5-f052-41a1-81b9-fe7173d70bb9/cMIlrxii.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="8">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/cb87ce99-d49e-4e8c-89d3-738f9cc72734/dPmBdjxo.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="9">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/40032af2-0f99-4815-99da-a853a2ee1466/qWGJFLIe.png"
+          alt="">
+      </div>
+      <div class="carousel__slide" data-slide="10">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2018/01/31/55e6b490-ec29-48e7-964f-b7a74825f2aa/CFoxuQmp.png"
           alt="">
       </div>
     </div>
-  </div>
+
+    <div class="carousel__timeline">
+      <div class="carousel__years">
+        <a href="" class="cell">92-93</a>
+        <a href="" class="cell">93-94</a>
+        <a href="" class="cell">94-95</a>
+        <a href="" class="cell">95-96</a>
+        <a href="" class="cell">96-97</a>
+        <a href="" class="cell">97-98</a>
+        <a href="" class="cell">99-00</a>
+        <a href="" class="cell">00-01</a>
+        <a href="" class="cell">01-02</a>
+        <a href="" class="cell">02-03</a>
+        <a href="" class="cell">03-04</a>
+        <a href="" class="cell">04-05</a>
+        <a href="" class="cell">05-06</a>
+        <a href="" class="cell">06-07</a>
+        <a href="" class="cell">08-09</a>
+        <a href="" class="cell">09-10</a>
+        <a href="" class="cell">10-11</a>
+        <a href="" class="cell">12-13</a>
+        <a href="" class="cell">14-15</a>
+        <a href="" class="cell">16-17</a>
+      </div>
+    </div>
 </body>
 
 <script>
 
   var slides = document.querySelectorAll('.carousel__slide');
+  var timeline = document.querySelector('.carousel__timeline');
+  var nav = document.querySelector('.carousel__years');
+  var navitems = document.querySelectorAll('.carousel__years a');
+  var carouselnav = document.querySelectorAll('.carousel__nav');
 
   var current = 0;
   var prev = slides.length - 1;
 
   function goto(index, prev) {
-    console.log(index, prev);
     slides[prev].classList.remove('carousel__slide--visible');
     slides[index].classList.add('carousel__slide--visible');
-
+    timeline.scrollLeft = index * 54 - ((window.innerWidth / 2) - 54 / 2);
+    nav.style.setProperty('--needle', index);
   }
 
-  document.querySelector('.carousel__nav').onclick = function (e) {
+  carouselnav.forEach(function (item) {
+    item.onclick = function (e) {
+      e.preventDefault();
+
+      prev = current;
+
+      if (this.classList.contains('carousel__nav--prev')) {
+        current--
+      }
+
+      else {
+        current++;
+      }
+
+      if (current === slides.length) {
+        current = 0;
+        prev = slides.length - 1
+      }
+
+      if (current === -1) {
+        current = slides.length - 1;
+      }
+
+      goto(current, prev)
+
+    }
+  })
+
+  document.querySelectorAll('.carousel__nav').onclick = function (e) {
 
     e.preventDefault();
 
@@ -122,19 +309,36 @@
     goto(current, prev)
   }
 
-  document.querySelector('input[type="range"]').oninput = function () {
-    var val = (Math.round((6 / 100) * this.value));
+  navitems.forEach(function (item, index) {
+    item.onclick = function (e) {
+      e.preventDefault();
+      prev = current;
+      current = index;
 
-    prev = current;
-    current = val;
+      if (current === slides.length) {
+        current = 0;
+        prev = slides.length - 1
+      }
 
-    if (current === slides.length) {
-      current = 0;
-      prev = slides.length - 1
+      goto(current, prev)
     }
+  })
 
-    goto(current, prev);
-  }
+  // document.querySelector('input[type="range"]').oninput = function () {
+  //   var val = Math.floor(this.value / 10);
+
+  //   console.log(val);
+
+  //   prev = current;
+  //   current = val;
+
+  //   if (current === slides.length) {
+  //     current = 0;
+  //     prev = slides.length - 1
+  //   }
+
+  //   goto(current, prev);
+  // }
 
 </script>
 
