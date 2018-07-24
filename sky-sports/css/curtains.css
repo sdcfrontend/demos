@@ -1,0 +1,147 @@
+.sff-curtain {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  max-height: 100vh;
+  background: rgba(0,0,0,0.2)
+}
+
+.sff-curtain__wing {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  transition: transform 0.7s;
+  will-change: transform;
+  text-align: right
+}
+
+.sff-curtain__wing +
+.sff-curtain__wing {
+  left: auto;
+  right: 0;
+  text-align: left
+}
+
+.sff-curtain[data-animate-in-view]
+.sff-curtain__wing {
+  transform: translateX(-100%)
+}
+
+.sff-curtain[data-animate-in-view]
+.sff-curtain__wing + 
+.sff-curtain__wing {
+  transform: translateX(100%)
+}
+
+.jose-pep
+.sff-curtain__wing {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  overflow: hidden
+}
+
+
+.sff-curtain__wing.sff-city[class] {
+  justify-content: flex-start
+}
+
+.jose-pep__block h3 {
+  font-size: calc(1.6rem + 4vw);
+  color: white;
+  font-family: premierleague;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.jose-pep__block {
+  transform: translate(-64%, 0);
+  top: 18%;
+  position: relative;
+}
+
+.sff-city
+.jose-pep__block {
+  transform: translate(68%, 0);
+  top: 18%
+}
+
+.jose-pep__block h3 small {
+  font-size: 0.5em;
+  display: block
+}
+
+.jose-pep__block p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+  padding-top: 0.5em;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  text-align: left
+}
+
+.sff-city
+.jose-pep__block p {
+  text-align: right
+}
+
+.jose-pep__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  object-fit: contain;
+  transform: translateX(27%);
+  transition: transform 0.8s;
+  will-change: transform;
+}
+
+.jose-pep[data-animate-in-view]
+.jose-pep__image {
+  transform: translateX(-50%);
+}
+
+.jose-pep[data-animate-in-view]
+.sff-city
+.jose-pep__image {
+  transform: translateX(50%);
+}
+
+.sff-city
+.jose-pep__image {
+  right: auto;
+  left: 0;
+  transform: translateX(-17%)
+}
+
+@media all and (max-width: 650px){
+
+  .sff-curtain {
+    min-height: 68vh;
+  }
+  
+  .jose-pep
+  .sff-curtain__wing {
+    align-items: flex-start
+  } 
+
+  .jose-pep__block {
+    transform: translate(-24%, 28%);
+    top: 0
+  }
+  
+  .sff-city
+  .jose-pep__block {
+    transform: translate(24%, 28%);
+    top: 0
+  }
+
+  .jose-pep__image {
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    max-height: 76%
+  }
+}

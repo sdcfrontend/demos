@@ -1,8 +1,12 @@
-.pl-panel {
+.sff-panel {
   background: #ccc;
   padding: calc(1rem * 2) 0;
 }
 
-.pl-panel--no-padding {
+.sff-panel--white {
+  background: white;
+}
+
+.sff-panel--no-padding {
   padding: 0;
 }

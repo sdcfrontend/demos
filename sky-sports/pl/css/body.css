@@ -1,0 +1,8 @@
+.pl-body {
+  display: none;
+  margin-top: -56px;
+}
+
+.pl-body[data-open]{
+  display: block;
+}

@@ -1,0 +1,63 @@
+.sff-text-block {
+  padding: 0.5rem 1vw 0.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.42;
+  position: relative;
+  background: white;
+}
+
+.sff-text-block > p:first-child {
+  font-size: 1.15em
+}
+
+.sff-text-block > *:last-child {
+  margin-bottom: 0
+}
+
+.sff-text-block h3 {
+  font-size: calc(1em + 2vmin);
+  margin-bottom: 0.9em;
+  font-weight: 500;
+  line-height: 1;
+  padding-right: 30px;
+}
+
+.sff-text-block h3 span {
+  display: block;
+  font-size: 0.75em;
+  margin-top: 0.4em;
+  line-height: 1.2
+}
+
+.sff-text-block a {
+  color: #3157a1;
+  text-decoration: underline;
+  font-weight: 600
+}
+
+.sff-text-block a:hover {
+  text-decoration: none;
+}
+
+.sff-text-block p:not(:last-child),
+.sff-text-block ul:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+.sff-text-block li {
+  padding-left: 1.5em;
+  margin-bottom: 0.7em;
+  line-height: 1.25;
+  background: url(../img/icons/bullet.svg) no-repeat;
+  background-size: 10px;
+  background-position: 0.25em 5px;
+  list-style: none
+}
+
+.sff-text-block
+.sff-citation {
+  padding-top: 0.75em;
+  text-align: left;
+  margin-bottom: 0
+}

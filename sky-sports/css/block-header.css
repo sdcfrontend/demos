@@ -1,0 +1,10 @@
+.sff-block-header {
+  font-family: premierleague;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 0.4em 0.75em;
+  border-bottom: 3px solid white;
+  display: inline-block;
+  white-space: nowrap
+}

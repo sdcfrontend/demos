@@ -7,8 +7,7 @@
 
   <script>!function () { function e(e) { for (var n = document.cookie.split(";"), t = -1; ++t < n.length;) { var i = n[t].split("="); if (i[0].match(e)) return decodeURIComponent(i[1]) } return "" } function n(e) { return !!e } function t(e) { return 1 === e.hd } function i(e) { return 1 === e.st } function o(e) { return 2 === e.st } function r(e) { return 3 === e.st } function s(e) { return !(!e || !e.match(/^WIG/)) } function a() { var e = window.SKY_SPORTS.user; return e.isLoggedIn ? e.isSkySports ? 1 : e.isWholesale ? 3 : 4 : 2 } function c(e) { return e.f || "" } function u() { var d = e("interactive"), m = d ? JSON.parse(d) : {}, S = e("skySportsSSO"), w = { isLoggedIn: n(S), getType: a, set: u }; w.isLoggedIn && (w.name = c(m), w.isSkyHD = t(m), w.isSky = i(m), w.isSkySports = o(m), w.isNowTV = r(m), w.isWholesale = s(S)), window.SKY_SPORTS.user = w } window.SKY_SPORTS = window.SKY_SPORTS || {}, u() }(), function () { window.SKY_SPORTS = window.SKY_SPORTS || {}, SKY_SPORTS.getUa = function (e) { function n(n) { return !!e.match(n) && parseFloat(e.match(n)[1].replace("_", ".")) } var t = !1; null !== new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(e) && (t = parseFloat(RegExp.$1)); var i = e.match(/iPad/), o = e.match(/iP/), r = e.match(/android/i), s = e.match(/windows phone/i), a = navigator.platform.match(/mac|win/i), c = { classList: "" }; return s && (c = { mobile: !0, windowsphone: !0, name: "windowsphone", version: n(/os ([0-9]\.[0-9])/i) || n(/windows phone ([0-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), t && (c = { msie: !0, name: "msie", version: t }, c.classList = [c.name, c.name + c.version].join(" ")), (i || o) && (c = { ios: !0, name: i ? "ipad" : "iphone", mobile: !0, version: n(/os ([1-9]\_[0-9])/i) }, c.classList = [c.name, c.name + c.version, c.device, "ios", "ios" + c.version, "mobile"].join(" ")), r && (c = { android: !0, name: "android", mobile: !0, version: n(/android ([1-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), a && (c.desktop = !0, c.classList += " desktop"), c }, SKY_SPORTS.device = SKY_SPORTS.getUa(navigator.userAgent) }(), function () { function e() { for (var t = document.querySelectorAll("img[data-lazy]"), i = -1; ++i < t.length;) { var o = t[i]; n(o) && ("PICTURE" === o.parentNode.nodeName ? o.parentNode.querySelectorAll("source").forEach(function (e) { e.setAttribute("srcset", e.getAttribute("data-srcset")) }) : o.setAttribute("srcset", o.getAttribute("data-srcset")), o.removeAttribute("data-lazy")) } setTimeout(function () { window.requestAnimationFrame(e) }, 250) } function n(e) { var n = e.getBoundingClientRect(); return 0 !== n.width && (!(n.bottom < 0) && !((window.outerHeight || window.innerHeight) - n.top < 50)) } NodeList.prototype.forEach || (NodeList.prototype.forEach = Array.prototype.forEach), "srcset" in new Image && setTimeout(function () { e() }, 500) }(), function () { window.isModernBrowser = !1; var e = ["js", "is-legacy"]; ("visibilityState" in document || window.CSS && window.CSS.supports) && (window.isModernBrowser = !0, e = ["js", "is-modern"]), document.documentElement.className = e.join(" ") }();</script>
   <link rel="stylesheet" href="http://www.skysports.com/css/min/site-main-46a0e1eea146657e591407ed3148a051.css">
-  <link rel="stylesheet" href="css/pl.css">
-  <link rel="stylesheet" href="" data-bind="function" data-prop="css-file">
+  <link rel="stylesheet" href="css/sff.css">
 
 
 </head>
@@ -388,74 +387,251 @@
 
 
   <!-- page content -->
-
-  <div class="pl-header" data-role="pl-header" data-initial>
-    <div class="pl-header__container">
-      <img src="about: blank" alt="" data-bind="function" data-prop="image">
+  <!-- <div class="ssf-panel">
+    <div class="site-wrap site-wrap-padding">
+      CONTENT
     </div>
-    <div class="pl-header__start"></div>
+  </div> -->
+
+
+
+  <div class="sff-header">
+    <div class="sff-header__slide sff-header__slide1 sff-united">
+      <span>
+        <h2>United</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/296px-Manchester_United_FC_crest.svg.png"
+          alt="">
+      </span>
+    </div>
+    <div class="sff-header__slide sff-header__slide2">vs</div>
+    <div class="sff-header__slide sff-header__slide3 sff-city">
+      <span>
+        <h2>City</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/316px-Manchester_City_FC_badge.svg.png"
+          alt="">
+      </span>
+    </div>
   </div>
 
-  <div class="pl-nav" data-role="pl-nav">
-    <a href="#arsenal">ARS</a> |
-    <a href="#chelsea">CHE</a> |
+  <div class="sff-panel sff-panel--white">
+    <div class="site-wrap site-wrap-padding">
+
+      <div class="sff-text-block ">
+
+        <p>
+          <strong>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque</strong>
+          <p>
+            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
+            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
+              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
+              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
+                lectus, posuere bibendum tellus nisi sed nisl.
+                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+
+      </div>
+    </div>
   </div>
 
-  <div class="pl-body" data-role="pl-body">
-    <div class="pl-panel pl-panel--no-padding">
-      <div class="pl-overlay-stats">
-        <div class="pl-overlay-stats__cell" data-trigger data-animate-in-view>
-          <h4 class="pl-overlay-stats__header">Goals</h4>
-          <div class="pl-overlay-stats__number">
-            <span class="pl-overlay-stats__digit">
-              2
-              <small>nd</small>
-            </span>
+
+  <div class="sff-panel sff-panel--no-padding">
+    <div class="sff-curtain jose-pep" data-animate-in-view data-trigger="75">
+      <div class="sff-curtain__wing sff-united">
+
+        <div class="jose-pep__block">
+          <h3>Jose
+            <small>Mourhinho</small>
+          </h3>
+          <p>
+            W8 L5 D2
+          </p>
+
+
+        </div>
+        <img src="assets/jose.png" alt="Jose Mourhinho" class="jose-pep__image">
+
+      </div>
+      <div class="sff-curtain__wing sff-city">
+        <div class="jose-pep__block">
+          <h3>Pep
+            <small>Guardiola</small>
+          </h3>
+          <p>
+            W8 L5 D2
+          </p>
+
+        </div>
+
+        <img src="assets/pep.png" alt="Pep Guardiola" class="jose-pep__image">
+      </div>
+    </div>
+  </div>
+
+  <div class="sff-panel sff-panel--no-padding">
+
+    <div class="carousel sff-united-city">
+      <h2 class="sff-block-header sff-city-united">
+        <span>History of the kit</span>
+      </h2>
+      <a href="#" class="carousel__nav carousel__nav--prev">prev</a>
+      <a href="#" class="carousel__nav carousel__nav--next">next</a>
+
+      <div class="carousel__inner">
+        <div class="carousel__slide carousel__slide--visible" data-slide="1">
+          <div class="carousel__slide-content">
+            <h4>Position: 1st</h4>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--1">
+              <img src="assets/kits/utd/manutd-ak-9293-258x340.png" alt="92/3 Manchester United away kit">
+            </div>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--2">
+              <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="92/3 Manchester United home kit">
+            </div>
+            <h4>Position: 3rd</h4>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--3">
+              <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="92/3 Manchester City home kit">
+            </div>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--4">
+              <img src="assets/kits/city/mancity-ak-9293-258x340.png" alt="92/3 Manchester city away kit">
+            </div>
           </div>
-          <div class="pl-overlay-stats__stat">
+        </div>
+        <div class="carousel__slide" data-slide="2">
+          <div class="carousel__slide-content">
+            <h4>Position: 1st</h4>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--1">
+              <img src="assets/kits/utd/manutd-ak-9394-258x340.png" alt="92/3 Manchester United away kit">
+            </div>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--2">
+              <img src="assets/kits/utd/manutd-hk-9394-258x340.png" alt="92/3 Manchester United home kit">
+            </div>
+            <h4>Position: 3rd</h4>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--3">
+              <img src="assets/kits/city/mancity-hk-9394-258x340.png" alt="92/3 Manchester City home kit">
+            </div>
+            <div class="carousel__slide-content-cell carousel__slide-content-cell--4">
+              <img src="assets/kits/city/mancity-ak-9394-258x340.png" alt="92/3 Manchester city away kit">
+            </div>
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="3">
+          <div class="carousel__slide-content">
 
           </div>
         </div>
-        <div class="pl-overlay-stats__cell" data-trigger data-animate-in-view>
-          <h4 class="pl-overlay-stats__header">Passes</h4>
-          <div class="pl-overlay-stats__number">
-            <span class="pl-overlay-stats__digit">
-              2
-              <small>nd</small>
-            </span>
-          </div>
-          <div class="pl-overlay-stats__stat">
+        <div class="carousel__slide" data-slide="4">
+          <div class="carousel__slide-content">
 
           </div>
         </div>
-        <div class="pl-overlay-stats__cell" data-trigger data-animate-in-view>
-          <h4 class="pl-overlay-stats__header">Posession</h4>
-          <div class="pl-overlay-stats__number">
-            <span class="pl-overlay-stats__digit">
-              1
-              <small>st</small>
-            </span>
-          </div>
-          <div class="pl-overlay-stats__stat">
+        <div class="carousel__slide" data-slide="5">
+          <div class="carousel__slide-content">
 
           </div>
         </div>
-        <div class="pl-overlay-stats__cell" data-trigger data-animate-in-view>
-          <h4 class="pl-overlay-stats__header">Conceded</h4>
-          <div class="pl-overlay-stats__number">
-            <span class="pl-overlay-stats__digit">
-              3
-              <small>rd</small>
-            </span>
+        <div class="carousel__slide" data-slide="6">
+          <div class="carousel__slide-content">
+
           </div>
-          <div class="pl-overlay-stats__stat">
+        </div>
+        <div class="carousel__slide" data-slide="7">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="8">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="9">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="10">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="11">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="12">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="13">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="14">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="15">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="16">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="17">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="18">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="19">
+          <div class="carousel__slide-content">
+
+          </div>
+        </div>
+        <div class="carousel__slide" data-slide="20">
+          <div class="carousel__slide-content">
 
           </div>
         </div>
       </div>
-    </div>
 
+      <div class="carousel__timeline">
+        <div class="carousel__years">
+          <a href="" class="cell carousel__years--on">92-93</a>
+          <a href="" class="cell">93-94</a>
+          <a href="" class="cell">94-95</a>
+          <a href="" class="cell">95-96</a>
+          <a href="" class="cell">96-97</a>
+          <a href="" class="cell">97-98</a>
+          <a href="" class="cell">99-00</a>
+          <a href="" class="cell">00-01</a>
+          <a href="" class="cell">01-02</a>
+          <a href="" class="cell">02-03</a>
+          <a href="" class="cell">03-04</a>
+          <a href="" class="cell">04-05</a>
+          <a href="" class="cell">05-06</a>
+          <a href="" class="cell">06-07</a>
+          <a href="" class="cell">08-09</a>
+          <a href="" class="cell">09-10</a>
+          <a href="" class="cell">10-11</a>
+          <a href="" class="cell">12-13</a>
+          <a href="" class="cell">14-15</a>
+          <a href="" class="cell">16-17</a>
+        </div>
+      </div>
+    </div>
   </div>
+
 
 
   <div class="blackjack-sdc-digrev-footer site-footer" data-component-name="blackjack-sdc-digrev-footer">
@@ -648,7 +824,7 @@
       </ul>
       <p class="site-footer__copyright">
         <a href="http://www.skysports.com" class="svg-logo site-footer__site-logo">
-          <img class="svg-logo__image" alt="Sky Sports" src="/assets/Sky-Sports-Logo.svg" onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo.png'">
+          <img class="svg-logo__image" alt="Sky Sports" src="http://www.skysports.com/assets/Sky-Sports-Logo.svg" onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo.png'">
         </a>
         © 2018 Sky UK
       </p>
@@ -949,12 +1125,13 @@
     </div>
   </div>
 
-  <script src="js/update-page.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/carousel.js"></script>
 
   <script>
     var observer = new IntersectionObserver(scan, {
       rootMargin: '18px',
-      threshold: [0, 0.5, 1]
+      threshold: [0, 0.25, 0.5, 0.75, 1]
     });
 
     document.querySelectorAll('[data-trigger]').forEach(function (block) {
@@ -966,8 +1143,13 @@
 
       entries.forEach(function (item) {
 
+        var ratio = 0.25;
+        if (item.target.hasAttribute('data-trigger')) {
+          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+        }
+
         if (item.isIntersecting) {
-          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio > 0.25) {
+          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
             observer.unobserve(item.target);
             item.target.removeAttribute('data-animate-in-view');
           }
@@ -976,52 +1158,6 @@
 
       })
     }
-
-  </script>
-  <script>
-
-    var pldata = {
-      arsenal: {
-        "url": "arsenal",
-        "css-file": "css/skin/arsenal.css",
-        "image": "http://e0.365dm.com/18/03/16-9/20/skysports-danny-welbeck-arsenal_4248553.jpg?20180316173450"
-      },
-      chelsea: {
-        "url": "chelsea",
-        "css-file": "css/skin/chelsea.css",
-        "image": "http://e2.365dm.com/18/07/16-9/20/skysports-eden-hazard-chelsea_4362151.jpg?20180714192617"
-      }
-    }
-
-
-    document.querySelector('link[data-prop="css-file"]').update = function (file) {
-      console.log(file);
-      this.href = file;
-    }
-
-    document.querySelector('img[data-prop="image"]').update = function (file) {
-
-      var img = this;
-
-      img.style.cssText = 'opacity: 0';
-
-      img.onload = function () {
-        img.style.cssText = 'opacity: 1';
-      }
-
-      setTimeout(function () {
-        img.src = file;
-      }, 350)
-
-    }
-
-    setpagestate();
-
-  </script>
-
-  <script>
-
-
 
   </script>
 

@@ -1,32 +1,94 @@
-.pl-header {
-  height: calc(100vh - 146px);
+.sff-header {
+  height: 100vh;
+  max-height: calc(100vh - 146px);
   position: relative;
-  overflow: hidden;
-  transition: 0.33s background;
-}
-
-.pl-header__container,
-.pl-header__start {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  height: 100%;
-  transition: 0.5s transform, 0.5s background;
-  will-change: transform, background;
   background: black;
+  overflow: hidden;
+  font-family: premierleague
 }
 
-.pl-header[data-open]
-.pl-header__start {
-  transform: translateY(-100%)
-}
-
-.pl-header img {
-  transition: opacity 0.5s;
+.sff-header__slide {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  mix-blend-mode: multiply;
-  filter: brightness(3);
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(24px + 10vw);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s, width 0.5s;
+  will-change: all;
+}
+
+.sff-header__slide h2,
+.sff-header__slide img {
+  transition: opacity 0.5s, transform 0.5s;
+  font-weight: 400
+}
+
+.sff-header__slide1 {
+  z-index: 1;
+}
+
+.sff-header__slide2 {
+  background: white;
+  z-index: 2;
+  transition-delay: 1s;
+  color: black;
+  font-size: 3rem
+}
+
+.sff-header__slide3 {
+  z-index: 3;
+  transition-delay: 2s
+}
+
+.sff-header__right {
+  transition-delay: 0s !important;
+  transform: translateX(0%);
+  width: 50%;
+}
+
+.sff-header__left {
+  transition-delay: 0s !important;
+  transform: translateX(100%);
+  width: 50%;
+}
+
+.sff-header__left h2,
+.sff-header__right h2 {
+  opacity: 0
+}
+
+.sff-header__hide {
+  display: none
+}
+
+.sff-header__slide img {
+  position: absolute;
+  width: 33%;
+  max-width: 300px;
+  left: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  opacity: 0
+}
+
+.sff-header__slide:first-child img {
+  right: 0;
+  left: auto;
+  transform: translate(-50%, -50%)
+}
+
+.sff-header__left img {
+  opacity: 1;
+  transform: translate(5%, -50%)
+}
+
+.sff-header__right img {
+  opacity: 1;
+  transform: translate(-5%, -50%) !important
 }
