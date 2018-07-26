@@ -1,0 +1,144 @@
+.sff-carousel {
+  position: relative;
+  padding-top: calc(1rem * 2);
+  text-align: center
+}
+
+.sff-carousel__scroll {
+  overflow: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+}
+
+.sff-carousel__scroll::-moz-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+.sff-carousel__scroll::-webkit-scrollbar {
+  width: 10px;
+  height: 1px;
+}
+
+.sff-carousel__item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  scroll-snap-align: start;
+  width: 100%;
+  transition: 0.25s transform, 0.25s opacity;
+  opacity: 1
+}
+
+.sff-carousel__item--active {
+  opacity: 1;
+}
+
+.sff-carousel__item-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 1em 0
+}
+
+.sff-carousel__item-cell:nth-child(3) {
+  background: powderblue;
+}
+
+.sff-carousel__image {
+  width: 90%;
+  max-width: 240px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.sff-carousel__image+.sff-carousel__image {
+  display: none;
+}
+
+@media all and (min-width: 540px){
+
+  .sff-carousel__image {
+    width: 52%;
+    transform: translateX(15%) scale(0.9)
+  }
+
+  .sff-carousel__image+.sff-carousel__image {
+    z-index: 3;
+    transform: translateX(-15%);
+    display: block
+  }
+
+}
+
+.sff-carousel__nav {
+  display: grid;
+  grid-template-columns: 2rem auto 2rem;
+  color: white;
+  margin-top: 2rem;
+  padding-bottom: 2rem
+}
+
+.sff-carousel__nav-items {
+  overflow: hidden;
+}
+
+.sff-carousel__nav-rail {
+  display: grid;
+  grid-template-columns: repeat(6, 33.3%);
+  list-style: none;
+  padding: 0;
+  transition: transform 0.25s;
+  transform: translateX(33.333%);
+  height: 100%
+}
+
+.sff-carousel__nav-item {
+  transition: transform 0.25s, opacity 0.25s;
+  transform: scale(0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  opacity: 0.3
+}
+
+.sff-carousel__nav-item--on[class] {
+  transform: scale(1);
+  font-weight: bold;
+  opacity: 1
+}
+
+.sff-carousel__nav-link {
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+  height: 2rem;
+  position: relative;
+}
+
+.sff-carousel__nav-link:first-child {
+  transform: rotate(-180deg)
+}
+
+.sff-carousel__nav-link:after {
+  content: "";
+  width: 40%;
+  height: 40%;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform-origin: center;
+  transform: rotate(45deg) translate(-17%, -56%);
+}
+
+.sff-carousel__nav-link--disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}

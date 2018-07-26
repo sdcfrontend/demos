@@ -10,5 +10,14 @@
   background-image: linear-gradient(to right, #bf101a 0, #d21123 50%, #8ecdee 50%,  #7bb9e6 100%)
 }
 
-.sff-city-united {background-image: linear-gradient(to right, #7bb9e6 0, #8ecdee 50%,#d21123 50%, #bf101a 100%)
+.sff-city-united {
+  background-image: linear-gradient(to right, #7bb9e6 0, #8ecdee 50%,#d21123 50%, #bf101a 100%)
+}
+
+.sff-color-united {
+  color: #bf101a
+}
+
+.sff-color-city {
+  color: #7bb9e6
 }

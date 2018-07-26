@@ -6,6 +6,10 @@
 @import "body.css";
 @import "teams.css";
 @import "curtains.css";
-@import "timeline.css";
+/* @import "timeline.css"; */
 @import "text.css";
 @import "block-header.css";
+@import "split-time.css";
+@import "counter.css";
+@import "gallery.css";
+@import "carousel.css";

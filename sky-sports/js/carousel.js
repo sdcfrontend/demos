@@ -1,81 +1,99 @@
 (function () {
-  var slides = document.querySelectorAll('.carousel__slide');
-  var timeline = document.querySelector('.carousel__timeline');
-  var nav = document.querySelector('.carousel__years');
-  var navitems = document.querySelectorAll('.carousel__years a');
-  var carouselnav = document.querySelectorAll('.carousel__nav');
-
   var current = 0;
-  var prev = slides.length - 1;
+  var root = document.querySelector('.sff-carousel');
+  var items = document.querySelectorAll('.sff-carousel__item');
+  var scroll = document.querySelector('.sff-carousel__scroll');
+  var navwrap = document.querySelector('.sff-carousel__nav-items');
+  var navrail = document.querySelector('.sff-carousel__nav-rail');
+  var navitems = navrail.querySelectorAll('li');
+  var nav = document.querySelectorAll('.sff-carousel__nav-link');
 
-  function goto(index, prev) {
-    slides[prev].classList.remove('carousel__slide--visible');
-    slides[index].classList.add('carousel__slide--visible');
-    navitems.forEach(function (item) {
-      item.classList.remove('carousel__years--on');
-    })
-    navitems[index].classList.add('carousel__years--on');
-    timeline.scrollLeft = index * 54 - ((window.innerWidth / 2) - 54 / 2);
-
-    nav.style.setProperty('--needle', index);
-  }
-
-  carouselnav.forEach(function (item) {
+  nav.forEach(function (item) {
     item.onclick = function (e) {
       e.preventDefault();
 
-      prev = current;
-
-      if (this.classList.contains('carousel__nav--prev')) {
-        current--
+      if (this.dataset.type === 'next') {
+        gotoslide(current + 1);
       }
-
       else {
-        current++;
+        gotoslide(current - 1);
       }
-
-      if (current === slides.length) {
-        current = 0;
-        prev = slides.length - 1
-      }
-
-      if (current === -1) {
-        current = slides.length - 1;
-      }
-
-      goto(current, prev)
-
     }
-  })
+  });
 
-  document.querySelectorAll('.carousel__nav').onclick = function (e) {
-
-    e.preventDefault();
-
-    prev = current;
-    current++;
-
-    if (current === slides.length) {
-      current = 0;
-      prev = slides.length - 1
+  function gotoslide(index) {
+    if (index === current) {
+      return;
     }
 
-    goto(current, prev)
+    scroll.scrollLeft = items[0].offsetWidth * (index)
   }
 
-  navitems.forEach(function (item, index) {
-    item.onclick = function (e) {
-      e.preventDefault();
-      prev = current;
-      current = index;
-
-      if (current === slides.length) {
-        current = 0;
-        prev = slides.length - 1
-      }
-
-      goto(current, prev)
+  function setstate(index) {
+    if (index === current) {
+      return;
     }
+
+    current = index;
+    root.current = current;
+
+    centernav(current);
+    disablenav(current);
+    focusitem(current);
+  }
+
+  function centernav(index) {
+
+    navitems.forEach(function (item) {
+      item.classList.remove('sff-carousel__nav-item--on');
+    });
+
+    navitems[index].classList.add('sff-carousel__nav-item--on');
+
+    var width = navrail.offsetWidth;
+    var wrap = navwrap.offetWidth;
+    var left = ((index - 1) * (100 / 3));
+
+    left = left * -1;
+
+    navrail.style.cssText = "transform: translateX(" + left + "%)";
+
+  }
+
+  function disablenav(index) {
+
+    nav.forEach(function (item) {
+      item.classList.remove('sff-carousel__nav-link--disabled');
+    })
+
+    if (index === 0) {
+      nav[0].classList.add('sff-carousel__nav-link--disabled');
+    }
+
+    if (index === (items.length - 1)) {
+      nav[1].classList.add('sff-carousel__nav-link--disabled');
+    }
+  }
+
+  function focusitem(index) {
+    items.forEach(function (item) {
+      item.classList.remove('sff-carousel__item--active')
+    })
+
+    items[index].classList.add('sff-carousel__item--active');
+  }
+
+  function tick() {
+    var index = Math.round(scroll.scrollLeft / scroll.offsetWidth);
+    setstate(index);
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+
+  window.addEventListener('resize', function () {
+    gotoslide(current);
   })
+
 
 })()

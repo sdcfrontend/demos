@@ -1,6 +1,7 @@
 .carousel {
   position: relative;
   text-align: center;
+  padding-top: calc(1rem * 2);
 }
 
 .carousel__inner {
@@ -15,7 +16,6 @@
 .carousel 
 .sff-block-header {
   z-index: 3;
-  margin: 1.5rem auto;
 }
 
 .carousel__slide {

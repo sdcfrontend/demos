@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 1000vh;
+    }
+
+    .sff-carousel {
+      position: relative;
+      padding-top: calc(1rem * 2);
+      background: powderblue
+    }
+
+    .sff-carousel__scroll {
+      overflow: auto;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      white-space: nowrap;
+    }
+
+    .sff-carousel__scroll::-moz-scrollbar {
+      width: 10px;
+      height: 1px;
+    }
+
+    .sff-carousel__scroll::-webkit-scrollbar {
+      width: 10px;
+      height: 1px;
+    }
+
+    .sff-carousel__item {
+      display: inline-flex;
+      flex-wrap: wrap;
+      scroll-snap-align: start;
+      width: 100vw;
+    }
+
+    .sff-carousel__item-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      padding: 1em
+    }
+
+    .sff-carousel__item-cell:nth-child(3) {
+      background: powderblue;
+    }
+
+    .sff-carousel__image {
+      width: 44%;
+      max-width: 240px;
+      filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.4));
+      position: relative;
+      z-index: 2;
+      transform: translateX(15%) scale(0.9)
+    }
+
+    .sff-carousel__image+.sff-carousel__image {
+      z-index: 3;
+      transform: translateX(-15%)
+    }
+
+    .sff-carousel__nav-link {
+      display: block;
+      height: 40px;
+    }
+
+    .sff-carousel__nav-link--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .sff-carousel__nav {
+      display: grid;
+      grid-template-columns: 40px auto 40px;
+    }
+
+    .sff-carousel__nav-items {
+      overflow: hidden;
+    }
+
+    .sff-carousel__nav-rail {
+      display: grid;
+      grid-template-columns: repeat(6, 33.3%);
+      list-style: none;
+      padding: 0;
+      transition: transform 0.25s;
+      transform: translateX(33.333%);
+      height: 100%
+    }
+
+    .sff-carousel__nav-rail li {
+      transition: transform 0.25s;
+      transform: scale(0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sff-carousel__nav-item--on[class] {
+      transform: scale(1);
+      font-weight: bold;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="console"></div>
+  <div class="sff-carousel">
+    <div class="sff-carousel__switch">
+      switch
+    </div>
+    <div class="sff-carousel__scroll">
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+      <div class="sff-carousel__item">
+
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+        <div class="sff-carousel__item-cell">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+          <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+        </div>
+      </div>
+
+    </div>
+    <div class="sff-carousel__nav">
+      <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link sff-carousel__nav-link--disabled" data-type="previous">Prev</a>
+      <div class="sff-carousel__nav-cell sff-carousel__nav-items">
+        <ul class="sff-carousel__nav-rail">
+          <li class="sff-carousel__nav-item--on">1992/3</li>
+          <li>1993/4</li>
+          <li>1994/5</li>
+          <li>1995/6</li>
+          <li>1997/8</li>
+          <li>1998/9</li>
+        </ul>
+      </div>
+      <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link" data-type="next">Next</a>
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+</script>
+
+
+</html>

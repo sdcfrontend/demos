@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      font-size: calc(12px + 1.4vw);
+    }
+
+    body {
+      font-size: 18px;
+      font-family: sans-serif;
+      min-height: 1000vh;
+      background: #eee;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    .sff-league-pos {
+      background: linear-gradient(to right, #bf101a 0, #d21123 50%, #8ecdee 50%, #7bb9e6 100%);
+      padding: 1rem 0;
+
+    }
+
+    .sff-league-pos__inner {
+      margin: 0 auto;
+      position: relative;
+      overflow: auto;
+      display: block;
+      text-align: center
+    }
+
+    .sff-league-pos__body {
+      padding: 1rem;
+      display: inline-grid;
+      grid-template-rows: 1fr min-content;
+      grid-template-columns: min-content 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sff-league-pos__canvas {
+      position: relative;
+      width: 960px;
+      height: 60vh;
+      grid-column: 2;
+      grid-row: 1;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      overflow: hidden;
+    }
+
+    .sff-league-pos__years {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      grid-column: 1/3;
+      grid-row: 2;
+      padding-top: 1rem;
+      position: relative;
+      z-index: 11
+    }
+
+    .sff-league-pos__pos {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 16px;
+      top: 0;
+      grid-column: 1;
+      padding-right: 1em;
+    }
+
+
+    .sff-league-pos__group {
+      padding: 0;
+      list-style: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      grid-template-columns: repeat(20, 1fr);
+      /* pointer-events: none */
+    }
+
+    .dot {
+      width: 24px;
+      height: 24px;
+      background: powderblue;
+      border: 2px solid white;
+      border-radius: 50%;
+      display: block;
+      z-index: 3;
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.33s;
+      transform: scale(1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d4c92
+    }
+
+    .dot[data-pos="r"] {
+      top: 150% !important
+    }
+
+    .dot:before {
+      content: attr(data-pos);
+      color: inherit;
+      font-size: 14px;
+      font-weight: bold;
+
+      /* width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      position: absolute;
+      border-radius: 50%; */
+    }
+
+    .dot:after {
+      content: attr(data-label);
+      position: absolute;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 3px;
+      bottom: 100%;
+      left: 50%;
+      font-size: 15px;
+      padding: 3px 8px;
+      transform: translate(-50%, -10px);
+      transition: opaciy 0.1s;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    /* .dot:hover {
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+      z-index: 10
+    }
+
+
+    .dot:hover:after {
+      opacity: 1
+    } */
+
+    .dot[data-animate-in-view] {
+      transform: scale(0.5)
+    }
+
+    .sff-league-pos__united .dot[class] {
+      background-color: crimson;
+      border-color: black;
+      color: black
+    }
+
+
+    .line {
+      width: 2px;
+      background: white;
+      height: 2px;
+      position: absolute;
+      z-index: 2;
+      transform-origin: 0 0;
+      margin: 11px 11px;
+      transition: width 0.1s
+    }
+
+    .line--hidden {
+      visibility: hidden;
+    }
+
+    .sff-league-pos__united .line[class] {
+      background: black
+    }
+
+    .sff-league-pos__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      display: grid;
+      grid-template-columns: repeat(26, 1fr);
+      cursor: pointer;
+      z-index: 11;
+      display: none
+    }
+
+    .sff-league-pos__overlay-cell {
+      position: relative
+    }
+
+    .sff-league-pos__overlay-cell:before,
+    .sff-league-pos__overlay-cell:after {
+      position: absolute;
+      left: 100%;
+      padding: 3px 8px;
+      background: rgba(0, 0, 0, 0.72);
+      color: white;
+      font-size: 14px;
+      white-space: nowrap;
+      border-radius: 3px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .sff-league-pos__overlay-cell:before {
+      content: attr(data-united);
+      top: 1%;
+    }
+
+    .sff-league-pos__overlay-cell:after {
+      content: attr(data-city);
+      top: 41%;
+    }
+
+    .sff-league-pos__overlay-cell:hover {
+      background: rgba(255, 255, 255, 0.1)
+    }
+
+    .sff-league-pos__overlay-cell:hover:after,
+    .sff-league-pos__overlay-cell:hover:before {
+      opacity: 1
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <div class="sff-league-pos">
+
+    <div class="sff-league-pos__inner">
+      <div class="sff-league-pos__body">
+        <div class="sff-league-pos__canvas">
+
+          <div class="sff-league-pos__group sff-league-pos__united">
+
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="3"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="3"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="3"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="7"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="4"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="5"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="6"></span>
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="2"></span>
+
+          </div>
+
+          <div class="sff-league-pos__group sff-league-pos__city">
+
+            <span data-trigger data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="9"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="16"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="17"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="18"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="r"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="r"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="r"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="r"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="18"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="r"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="9"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="16"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="8"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="15"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="14"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="9"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="10"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="5"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="3"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="1"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="2"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="4"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="3"></span>
+            <span class="dot" data-label="1st (88pts)" data-pos="1"></span>
+
+          </div>
+
+
+          <div class="sff-league-pos__overlay">
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="2nd" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="2nd" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="3rd" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+            <div class="sff-league-pos__overlay-cell" data-united="1st" data-city="9th"></div>
+          </div>
+
+        </div>
+
+        <div class="sff-league-pos__pos" aria-hidden="true">
+          <span>1</span>
+          <span>5</span>
+          <span>10</span>
+          <span>15</span>
+          <span>20</span>
+        </div>
+
+        <div class="sff-league-pos__years" aria-hidden="true">
+          <span>1992/93</span>
+          <span>1997/98</span>
+          <span>2002/03</span>
+          <span>2007/08</span>
+          <span>2012/13</span>
+          <span>2017/18</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+  var group = document.querySelector('.sff-league-pos__city');
+  var dots = document.querySelectorAll('.dot');
+  var line = document.querySelector('.line');
+
+  function lineDistance(x, y, x0, y0) {
+    return Math.sqrt((x -= x0) * x + (y -= y0) * y);
+  };
+
+  function drawLine(a, b, line) {
+
+    var pointA = {
+      left: a.offsetLeft,
+      top: a.offsetTop
+    };
+
+    var pointB = {
+      left: b.offsetLeft,
+      top: b.offsetTop
+    }
+
+    var pointAcenterX = a.offsetWidth;
+    var pointAcenterY = a.offsetHeight;
+    var pointBcenterX = b.offsetWidth;
+    var pointBcenterY = b.offsetHeight;
+    var angle = Math.atan2(pointB.top - pointA.top, pointB.left - pointA.left) * 180 / Math.PI;
+    var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
+
+    // Set Angle
+    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px';
+
+    if (pointB.left < pointA.left) {
+
+      line.style.top = (pointA.top + pointAcenterY) + 'px';
+      line.style.left = (pointB.left + pointBcenterX) + 'px';
+    }
+
+    else {
+      line.style.top = (pointA.top) + 'px';
+      line.style.left = (pointA.left) + 'px';
+    }
+  }
+
+  document.querySelectorAll('.sff-league-pos__group').forEach(function (item) {
+
+    var dotitems = item.querySelectorAll('.dot');
+
+    dotitems.forEach(function (dotitem, index) {
+
+      setTimeout(function () {
+        this.removeAttribute('data-animate-in-view');
+      }.bind(dotitem), index * 50);
+
+      dotitem.style.cssText = "left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
+
+    })
+
+  })
+
+
+  function renderLines() {
+
+    document.querySelectorAll('.sff-league-pos__group').forEach(function (item) {
+
+      var dotitems = item.querySelectorAll('.dot');
+      var lines = item.querySelectorAll('.line');
+
+      dotitems.forEach(function (dotitem, index) {
+        if (index === dotitems.length - 1) {
+          return;
+        }
+
+        var line = lines[index];
+
+        if (!line) {
+          line = document.createElement('div');
+          line.className = 'line';
+          item.appendChild(line);
+        }
+
+        // if (dotitem.dataset.pos === "r" || parseInt(dotitem.dataset.pos, 10) > 17) {
+        //   line.classList.add('line--hidden');
+        // }
+
+        drawLine(dotitems[index], dotitems[index + 1], line);
+      })
+
+    })
+
+  }
+
+  renderLines();
+
+
+
+
+
+
+</script>
+
+
+</html>
