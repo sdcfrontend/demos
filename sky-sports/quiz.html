@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      min-height: 1000vh;
+    }
+
+    .sff-quiz-fact {
+      background: #eee;
+      text-align: center
+    }
+
+    .sff-quiz-fact__body {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 0
+    }
+
+    .sff-quiz-fact__question {
+      padding-bottom: 0.6rem;
+    }
+
+    .sff-quiz-fact__answer {
+      display: inline-block;
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+      margin: 0 0.25em;
+      text-decoration: none;
+      background: white;
+      color: inherit;
+      transform: background 0.33s
+    }
+
+    .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer {
+      pointer-events: none;
+      background: #aaa;
+      opacity: 0.8
+    }
+
+    .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-correct][class] {
+      background: limegreen;
+    }
+
+    .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-selected]:not([data-correct])[class] {
+      background: crimson
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="sff-quiz-fact" data-id="24|12" id="sff-quiz-1">
+    <div class="site-wrap site-wrap-padding">
+      <div class="sff-quiz-fact__body">
+        <p class="sff-quiz-fact__question">Who scored a hatrick in the 2002 Manchester Derby?</p>
+        <div class="sff-quiz-fact__answers">
+          <a href="#" class="sff-quiz-fact__answer">Cantona</a>
+          <a href="#" class="sff-quiz-fact__answer">Cole</a>
+          <a href="#" class="sff-quiz-fact__answer">Anelka</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  var quizzes = document.querySelectorAll('.sff-quiz-fact');
+
+  quizzes.forEach(function (quiz) {
+
+    var body = quiz.querySelector('.sff-quiz-fact__answers');
+    var answers = quiz.querySelectorAll('.sff-quiz-fact__answer');
+
+    var id = quiz.id;
+    var local = window.localStorage.getItem(id);
+
+    if (local) {
+      local = JSON.parse(local);
+      body.setAttribute('data-answered', true);
+      answers[local.selected].setAttribute('data-selected', true);
+      answers[local.correct].setAttribute('data-correct', true);
+      return;
+    }
+
+    var answer = quiz.getAttribute('data-id').split("|");
+    answer = parseInt(answer[0], 10) / parseInt(answer[1], 10);
+
+    answers.forEach(function (item, index) {
+      item.onclick = function (e) {
+        e.preventDefault();
+        body.setAttribute('data-answered', true);
+        answers[answer].setAttribute('data-correct', true);
+        if (index !== answer) {
+          this.setAttribute('data-selected', true)
+        }
+
+        window.localStorage.setItem(quiz.id, JSON.stringify({ correct: answer, selected: index }))
+
+      }
+    })
+  })
+</script>
+
+
+</html>

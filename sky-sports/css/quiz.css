@@ -1,0 +1,39 @@
+.sff-quiz-fact {
+  background: #eee;
+  text-align: center
+}
+
+.sff-quiz-fact__body {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0
+}
+
+.sff-quiz-fact__question {
+  padding-bottom: 1rem;
+}
+
+.sff-quiz-fact__answer {
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0.5em 1em;
+  margin: 0 0.25em;
+  text-decoration: none;
+  background: white;
+  color: inherit;
+  transform: background 0.33s
+}
+
+.sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer {
+  pointer-events: none;
+  background: #aaa;
+  opacity: 0.8
+}
+
+.sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-correct][class] {
+  background: limegreen;
+}
+
+.sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-selected]:not([data-correct])[class] {
+  background: crimson
+}
