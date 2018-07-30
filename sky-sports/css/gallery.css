@@ -29,7 +29,10 @@
 
 .sff-gallery__slide > p {
   position: relative;
-  z-index: 4
+  z-index: 4;
+  text-align: center;
+  line-height: 1.1;
+  padding: 0 1rem
 }
 
 .sff-gallery__slide--fixed {

@@ -1,0 +1,49 @@
+{
+  "charts": [
+    {
+      "id": 3,
+      "type": "donut",
+      "title": "Nationalities in the NHS",
+      "skin": "nhs",
+      "animated": true,
+      "key": false,
+      "canvasSize": 400,
+      "canvasPadding": 60,
+      "drawing": {
+        "thickness": 0.2
+      },
+      "grid": {
+        "majorLines": false,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "show": true,
+          "label": "",
+          "units": false
+        },
+        "y": {
+          "show": true,
+          "label": "",
+          "units": false
+        }
+      },
+      "points": [
+        {
+          "values": [
+            18348
+          ],
+          "label": "Spending",
+          "subLabel": "18,348"
+        },
+        {
+          "values": [
+            15391
+          ],
+          "label": "Remainder",
+          "subLabel": "5,391"
+        }
+      ]
+    }
+  ]
+}

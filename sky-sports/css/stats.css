@@ -1,0 +1,101 @@
+.sff-stat {
+  text-align: center;
+  padding: 2rem 0
+}
+
+.sff-stat-block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.sff-stat-block h4 {
+  width: 100%;
+  order: 0;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+
+}
+
+.sff-stat-block__cell {
+  width: 50%;
+  order: 1
+}
+
+.sff-stat__bar,
+.sff-stat__dial {
+  width: 100%
+}
+
+.sff-stat__dial {
+  display: inline-block;
+  width: 80%;
+  max-width: 250px;
+  min-width: 130px;
+}
+
+.sff-stat__bar-item {
+  overflow: hidden;
+  height: 1.25rem;
+  position: relative;
+  display: flex;
+  margin-bottom: 1px;
+}
+
+.sff-stat__bar-item-cell {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  display: flex;
+  align-items: center
+}
+
+.sff-stat__bar-item-cell[data-animate-in-view]{
+  width: 1px!important
+}
+
+.sff-stat__bar-item h5:nth-child(1){
+  order: 2;
+  width: 50px;
+  background: white;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+.sff-stat__bar-item-cell:nth-child(2) {
+  flex-direction: row-reverse;
+  order: 1
+} 
+
+.sff-stat__bar-item-cell:nth-child(3) {
+  order: 3
+} 
+
+.sff-stat__bar-item-cell:after {
+  content: attr(data-label);
+  padding: 0 0.5rem;
+  font-size: 16px
+} 
+
+.sff-stat__bar-item-cell:before {
+  content: "";
+  height: 100%;
+  width: inherit;
+  background: powderblue;
+  mix-blend-mode: overlay;
+  display: inline-block;
+  will-change: width;
+  transition: 0.5s width
+}
+
+.sff-stat__bar-item-cell:nth-child(2):before {
+  background: crimson
+}
