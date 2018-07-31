@@ -128,13 +128,13 @@
   } 
 
   .jose-pep__block {
-    transform: translate(-24%, 28%);
+    transform: translate(-24%, 32%);
     top: 0
   }
   
   .sff-city
   .jose-pep__block {
-    transform: translate(24%, 28%);
+    transform: translate(24%, 32%);
     top: 0
   }
 

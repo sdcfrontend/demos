@@ -31,14 +31,15 @@
   position: relative;
   z-index: 4;
   text-align: center;
-  line-height: 1.1;
+  line-height: 0.9;
   padding: 0 1rem;
   filter: drop-shadow(0 0 10px black)
 }
 
 .sff-gallery__slide small {
   font-size: 1rem;
-  display: block
+  display: block;
+  padding-bottom: 0.4em
 }
 
 .sff-gallery__slide--fixed {
