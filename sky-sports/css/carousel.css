@@ -89,7 +89,7 @@
 
 .sff-carousel__nav-rail {
   display: grid;
-  grid-template-columns: repeat(6, 33.3%);
+  grid-template-columns: repeat(27, 33.3%);
   list-style: none;
   padding: 0;
   transition: transform 0.25s;

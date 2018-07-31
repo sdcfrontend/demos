@@ -1119,6 +1119,23 @@
 
 					chartSVG.appendChild(progressTrack);
 
+					if (!chart.drawing.thickness) {
+						chart.drawing.thickness = 0.2;
+					}
+
+					progressTrack.setAttribute('cx', 0);
+					progressTrack.setAttribute('cy', 0);
+					progressTrack.setAttribute('r', 1 - chart.drawing.thickness / 2);
+					if (chart.drawing.trackColour) {
+						progressTrack.setAttribute('stroke-width', chart.drawing.thickness);
+						progressTrack.setAttribute('stroke', chart.drawing.trackColour);
+					}
+					if (chart.drawing.discColour) {
+						progressTrack.setAttribute('fill', chart.drawing.discColour);
+					} else {
+						progressTrack.setAttribute('fill', 'transparent');
+					}
+
 					chart.points.forEach(function (point) {
 						var chartPoint = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
@@ -1682,22 +1699,22 @@
 
 					switch (chart.type) {
 						case "pie":
-							(0, _pieChartsUpdatePieChart2['default'])(rootElement, chart, 1);
+							(0, _pieChartsUpdatePieChart2['default'])(rootElement, chart);
 
 							break;
 
 						case "donut":
-							(0, _pieChartsUpdatePieChart2['default'])(rootElement, chart, 0.2);
+							(0, _pieChartsUpdatePieChart2['default'])(rootElement, chart);
 
 							break;
 
 						case "progress":
-							(0, _progressChartsUpdateProgressChart2['default'])(rootElement, chart, 0.2);
+							(0, _progressChartsUpdateProgressChart2['default'])(rootElement, chart);
 
 							break;
 
 						case "concentric":
-							(0, _pieChartsUpdateConcentricChart2['default'])(rootElement, chart, 1);
+							(0, _pieChartsUpdateConcentricChart2['default'])(rootElement, chart);
 
 							break;
 
@@ -1759,7 +1776,9 @@
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
 
-					chartShell.setAttribute('animated', '');
+					if (chart.animated) {
+						chartContainer.setAttribute('animated', '');
+					}
 
 					if (chart.drawing.thickness) {
 						thickness = chart.drawing.thickness;
@@ -1827,8 +1846,8 @@
 						var startPercent = startPosition + currentTotalValue / chart.totalValue * arcProgress;
 						var midPercent = startPosition + (currentTotalValue + value / 2) / chart.totalValue * arcProgress;
 						var endPercent = startPosition + (currentTotalValue + value) / chart.totalValue * arcProgress;
-						var innerRadius = 1 - chart.thickness - offset;
-						var midRadius = 1 - chart.thickness / 2 - offset + growth * sizeProgress;
+						var innerRadius = 1 - chart.drawing.thickness - offset;
+						var midRadius = 1 - chart.drawing.thickness / 2 - offset + growth * sizeProgress;
 						var outerRadius = 1 - offset + growth * sizeProgress;
 						var segmentSize = value / chart.totalValue * arcProgress;
 
@@ -1850,23 +1869,30 @@
 					}
 
 					var duration = 1000;
+					if (chart.drawing.duration) {
+						duration = chart.drawing.duration;
+					}
 					var reverse = false;
 					var growth = sizing[1] - sizing[0];
 
-					if (growth < 0) {
+					if (growth !== 0) {
 						duration = 333;
-						reverse = true;
-						growth = growth * -1;
-					} else {
-						if (growth > 0) {
-							duration = 333;
+
+						if (growth < 0) {
+							reverse = true;
+
+							if (chart.animated) {
+								growth = growth * -1;
+							} else {
+								growth = 0;
+							}
 						}
 					}
 
 					if (chart.animated) {
 						(0, _toolsEasingAnimateJs2['default'])(duration, drawSegment, reverse);
 					} else {
-						createSegmentPath(1, 1);
+						drawSegment(1);
 					}
 				};
 
@@ -2051,23 +2077,13 @@
 				/***/
 			}),
 /* 27 */
-/***/ (function (module, exports, __webpack_require__) {
+/***/ (function (module, exports) {
 
 				'use strict';
 
 				Object.defineProperty(exports, '__esModule', {
 					value: true
 				});
-
-				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-				var _toolsEasingAnimateJs = __webpack_require__(22);
-
-				var _toolsEasingAnimateJs2 = _interopRequireDefault(_toolsEasingAnimateJs);
-
-				var _createArcValues = __webpack_require__(25);
-
-				var _createArcValues2 = _interopRequireDefault(_createArcValues);
 
 				exports['default'] = function (chart, label, value, arc) {
 
@@ -2171,7 +2187,7 @@
 					"vanilla": ['#113537', '#37505C', '#96616B', '#F76F8E', '#FFEAD0'],
 					"skynews": ['#F1F1F1', '#D7D5D5', '#EF0420', '#D0021B', '#B20318', '#77000e'],
 					"royalwedding": ['#F4F4F4', '#E4E4E4', '#E3C228', '#333333', '#141414'],
-					"nhs": ['red', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
+					"nhs": ['#FEE333', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
 					"generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
 					"line18": ['#B35011', '#C18418', '#E4A71C', '#6842BE', '#303D7E'],
 					"skysports": ['#fff', '#2653BB', '#103A9D', '#072B7B', '#002369'],
@@ -2214,7 +2230,7 @@
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
-				exports['default'] = function (rootElement, chart, thickness) {
+				exports['default'] = function (rootElement, chart) {
 
 					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
 					var chartShell = chartContainer.querySelector('[data-role="chart"]');
@@ -2223,13 +2239,11 @@
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
 
-					if (chart.drawing.thickness) {
-						thickness = chart.drawing.thickness;
+					if (chart.animated) {
+						chartShell.setAttribute('animated', '');
 					}
 
 					chart.totalValue = chart.points[0].values[1];
-
-					chart.thickness = thickness;
 
 					progressTrack.setAttribute('cx', 0);
 					progressTrack.setAttribute('cy', 0);
@@ -2286,7 +2300,9 @@
 					var totalValue = 0;
 					var currentTotalValue = 0;
 
-					chartShell.setAttribute('animated', '');
+					if (chart.animated) {
+						chartContainer.setAttribute('animated', '');
+					}
 
 					chart.thickness = 1 / chart.points.length / 2;
 
@@ -2340,7 +2356,9 @@
 					var highestValue = 0;
 					var currentColourIndex = 0;
 
-					chartShell.setAttribute('animated', '');
+					if (chart.animated) {
+						chartContainer.setAttribute('animated', '');
+					}
 
 					chart.points.forEach(function (point) {
 						if (parseFloat(point.values[0], 10) > highestValue) {
@@ -2470,7 +2488,10 @@
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
 
-					chartShell.setAttribute('animated', '');
+					if (chart.aniamted) {
+						chartContainer.setAttribute('animated', '');
+					}
+
 					if (chart.drawing.filled) {
 						chartShell.setAttribute('filled', '');
 					}

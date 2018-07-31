@@ -47,7 +47,6 @@
     var dotitems = item.querySelectorAll('.dot');
 
     dotitems.forEach(function (dotitem, index) {
-
       dotitem.style.cssText = "left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
 
     })
