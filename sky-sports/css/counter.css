@@ -8,14 +8,14 @@
   line-height: 0.8;
   position: relative;
   overflow: hidden;
-  letter-spacing: 0.1em;
+  letter-spacing: 1px;
 }
 
-.sff-counter__cell > span {
+.sff-counter__cell[data-number] > span {
   visibility: hidden
 }
 
-.sff-counter__cell:after {
+.sff-counter__cell[data-number]:after {
   content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A";
   display: block;
   word-break: break-all;
@@ -71,4 +71,12 @@
 
 .sff-counter__cell[data-number="9"]:after {
   transform: translateY(-90%)
+}
+
+.sff-counter__cell[data-text] > span {
+  letter-spacing: 0
+} 
+
+.sff-counter__cell[data-text="small"] > span {
+  font-size: 0.6em
 }

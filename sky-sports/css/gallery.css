@@ -32,7 +32,13 @@
   z-index: 4;
   text-align: center;
   line-height: 1.1;
-  padding: 0 1rem
+  padding: 0 1rem;
+  filter: drop-shadow(0 0 10px black)
+}
+
+.sff-gallery__slide small {
+  font-size: 1rem;
+  display: block
 }
 
 .sff-gallery__slide--fixed {

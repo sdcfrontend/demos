@@ -900,7 +900,7 @@
 
 				var _createChart2 = _interopRequireDefault(_createChart);
 
-				var _updateChart = __webpack_require__(18);
+				var _updateChart = __webpack_require__(19);
 
 				var _updateChart2 = _interopRequireDefault(_updateChart);
 
@@ -947,27 +947,31 @@
 
 				var _pieChartsCreatePieChart2 = _interopRequireDefault(_pieChartsCreatePieChart);
 
-				var _barChartsCreateBarChart = __webpack_require__(10);
+				var _progressChartsCreateProgressChart = __webpack_require__(10);
+
+				var _progressChartsCreateProgressChart2 = _interopRequireDefault(_progressChartsCreateProgressChart);
+
+				var _barChartsCreateBarChart = __webpack_require__(11);
 
 				var _barChartsCreateBarChart2 = _interopRequireDefault(_barChartsCreateBarChart);
 
-				var _lineChartsCreateLineChart = __webpack_require__(16);
+				var _lineChartsCreateLineChart = __webpack_require__(17);
 
 				var _lineChartsCreateLineChart2 = _interopRequireDefault(_lineChartsCreateLineChart);
 
-				var _scatterChartsCreateScatterChart = __webpack_require__(17);
+				var _scatterChartsCreateScatterChart = __webpack_require__(18);
 
 				var _scatterChartsCreateScatterChart2 = _interopRequireDefault(_scatterChartsCreateScatterChart);
 
-				var _updateChart = __webpack_require__(18);
+				var _updateChart = __webpack_require__(19);
 
 				var _updateChart2 = _interopRequireDefault(_updateChart);
 
-				var _keysCreateKey = __webpack_require__(34);
+				var _keysCreateKey = __webpack_require__(40);
 
 				var _keysCreateKey2 = _interopRequireDefault(_keysCreateKey);
 
-				var _hoverStates = __webpack_require__(36);
+				var _hoverStates = __webpack_require__(42);
 
 				var _hoverStates2 = _interopRequireDefault(_hoverStates);
 
@@ -981,6 +985,11 @@
 
 						case "donut":
 							(0, _pieChartsCreatePieChart2['default'])(rootElement, chart);
+
+							break;
+
+						case "progress":
+							(0, _progressChartsCreateProgressChart2['default'])(rootElement, chart);
 
 							break;
 
@@ -1053,29 +1062,28 @@
 						chartPoint.setAttribute('data-role', 'chart-point');
 
 						chartSVG.appendChild(chartPoint);
-
-						// var chartPoint = `
-						//   <path class="sdc-site-charts__chart-point" data-role="chart-point"/>
-						// `;
-						//
-						// chartSVG.insertAdjacentHTML('beforeend', chartPoint);
 					});
 
 					if (chart.drawing.percentageLabels) {
 						chart.points.forEach(function (point) {
-							var pointLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+							var pointLabelContainer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+							pointLabelContainer.setAttribute('class', 'sdc-site-charts__chart-point-label');
+							pointLabelContainer.setAttribute('data-role', 'chart-point-label');
 
-							pointLabel.setAttribute('class', 'sdc-site-charts__chart-point-label');
-							pointLabel.setAttribute('data-role', 'chart-point-label');
-							pointLabel.setAttribute('text-anchor', 'middle');
+							var pointLabelRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 
-							chartSVG.appendChild(pointLabel);
+							pointLabelRect.setAttribute('class', 'sdc-site-charts__chart-point-label-rect');
+							pointLabelRect.setAttribute('data-role', 'chart-point-label-rect');
 
-							// var pointLabel = `
-							//   <text class="sdc-site-charts__chart-point-label" data-role="chart-point-label" text-anchor="middle"></text>
-							// `;
-							//
-							// chartSVG.insertAdjacentHTML('beforeend', pointLabel);
+							var pointLabelText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+
+							pointLabelText.setAttribute('class', 'sdc-site-charts__chart-point-label-text');
+							pointLabelText.setAttribute('data-role', 'chart-point-label-text');
+							pointLabelText.setAttribute('text-anchor', 'middle');
+
+							pointLabelContainer.appendChild(pointLabelRect);
+							pointLabelContainer.appendChild(pointLabelText);
+							chartSVG.appendChild(pointLabelContainer);
 						});
 					}
 				};
@@ -1085,6 +1093,47 @@
 				/***/
 			}),
 /* 10 */
+/***/ (function (module, exports) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				exports['default'] = function (rootElement, chart) {
+
+					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
+					var chartShell = chartContainer.querySelector('[data-role="chart"]');
+
+					var svg = '<svg data-role="chart-svg" viewbox="-1 -1 2 2"></svg>';
+
+					chartShell.insertAdjacentHTML('beforeend', svg);
+
+					var chartSVG = chartShell.querySelector('[data-role="chart-svg"]');
+
+					var progressTrack = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+
+					progressTrack.setAttribute('class', 'sdc-site-charts__progress-track');
+					progressTrack.setAttribute('data-role', 'progress-track');
+
+					chartSVG.appendChild(progressTrack);
+
+					chart.points.forEach(function (point) {
+						var chartPoint = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+
+						chartPoint.setAttribute('class', 'sdc-site-charts__chart-point');
+						chartPoint.setAttribute('data-role', 'chart-point');
+
+						chartSVG.appendChild(chartPoint);
+					});
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 11 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1095,23 +1144,23 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _axesCreateAxesJs = __webpack_require__(11);
+				var _axesCreateAxesJs = __webpack_require__(12);
 
 				var _axesCreateAxesJs2 = _interopRequireDefault(_axesCreateAxesJs);
 
-				var _axesCreateXAxisLabels = __webpack_require__(12);
+				var _axesCreateXAxisLabels = __webpack_require__(13);
 
 				var _axesCreateXAxisLabels2 = _interopRequireDefault(_axesCreateXAxisLabels);
 
-				var _axesCreateYAxisLabels = __webpack_require__(14);
+				var _axesCreateYAxisLabels = __webpack_require__(15);
 
 				var _axesCreateYAxisLabels2 = _interopRequireDefault(_axesCreateYAxisLabels);
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _axesFindRoundMax = __webpack_require__(16);
 
 				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
 
-				var _axesFindScale = __webpack_require__(13);
+				var _axesFindScale = __webpack_require__(14);
 
 				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
 
@@ -1173,7 +1222,7 @@
 
 				/***/
 			}),
-/* 11 */
+/* 12 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -1223,7 +1272,7 @@
 
 				/***/
 			}),
-/* 12 */
+/* 13 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1234,7 +1283,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _findScale = __webpack_require__(13);
+				var _findScale = __webpack_require__(14);
 
 				var _findScale2 = _interopRequireDefault(_findScale);
 
@@ -1295,7 +1344,7 @@
 
 				/***/
 			}),
-/* 13 */
+/* 14 */
 /***/ (function (module, exports) {
 
 				"use strict";
@@ -1363,7 +1412,7 @@
 
 				/***/
 			}),
-/* 14 */
+/* 15 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1374,7 +1423,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _findScale = __webpack_require__(13);
+				var _findScale = __webpack_require__(14);
 
 				var _findScale2 = _interopRequireDefault(_findScale);
 
@@ -1418,7 +1467,7 @@
 
 				/***/
 			}),
-/* 15 */
+/* 16 */
 /***/ (function (module, exports) {
 
 				"use strict";
@@ -1450,7 +1499,7 @@
 
 				/***/
 			}),
-/* 16 */
+/* 17 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1461,23 +1510,23 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _axesCreateAxesJs = __webpack_require__(11);
+				var _axesCreateAxesJs = __webpack_require__(12);
 
 				var _axesCreateAxesJs2 = _interopRequireDefault(_axesCreateAxesJs);
 
-				var _axesCreateXAxisLabels = __webpack_require__(12);
+				var _axesCreateXAxisLabels = __webpack_require__(13);
 
 				var _axesCreateXAxisLabels2 = _interopRequireDefault(_axesCreateXAxisLabels);
 
-				var _axesCreateYAxisLabels = __webpack_require__(14);
+				var _axesCreateYAxisLabels = __webpack_require__(15);
 
 				var _axesCreateYAxisLabels2 = _interopRequireDefault(_axesCreateYAxisLabels);
 
-				var _axesFindScale = __webpack_require__(13);
+				var _axesFindScale = __webpack_require__(14);
 
 				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _axesFindRoundMax = __webpack_require__(16);
 
 				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
 
@@ -1495,7 +1544,7 @@
 
 					chart.points.forEach(function (point, index) {
 
-						var chartLine = '<g><polyline class="sdc-site-charts__line" data-role="chart-line" fill="none" stroke-width="1"/></g>';
+						var chartLine = '<g><polyline class="sdc-site-charts__line" data-role="chart-point" fill="none" stroke-width="1"/></g>';
 
 						chartSVG.insertAdjacentHTML('beforeend', chartLine);
 
@@ -1525,7 +1574,7 @@
 
 				/***/
 			}),
-/* 17 */
+/* 18 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1536,23 +1585,23 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _axesCreateAxesJs = __webpack_require__(11);
+				var _axesCreateAxesJs = __webpack_require__(12);
 
 				var _axesCreateAxesJs2 = _interopRequireDefault(_axesCreateAxesJs);
 
-				var _axesCreateXAxisLabels = __webpack_require__(12);
+				var _axesCreateXAxisLabels = __webpack_require__(13);
 
 				var _axesCreateXAxisLabels2 = _interopRequireDefault(_axesCreateXAxisLabels);
 
-				var _axesCreateYAxisLabels = __webpack_require__(14);
+				var _axesCreateYAxisLabels = __webpack_require__(15);
 
 				var _axesCreateYAxisLabels2 = _interopRequireDefault(_axesCreateYAxisLabels);
 
-				var _axesFindScale = __webpack_require__(13);
+				var _axesFindScale = __webpack_require__(14);
 
 				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _axesFindRoundMax = __webpack_require__(16);
 
 				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
 
@@ -1594,7 +1643,7 @@
 
 				/***/
 			}),
-/* 18 */
+/* 19 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1605,23 +1654,27 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _pieChartsUpdatePieChart = __webpack_require__(19);
+				var _pieChartsUpdatePieChart = __webpack_require__(20);
 
 				var _pieChartsUpdatePieChart2 = _interopRequireDefault(_pieChartsUpdatePieChart);
 
-				var _pieChartsUpdateConcentricChart = __webpack_require__(28);
+				var _progressChartsUpdateProgressChart = __webpack_require__(31);
+
+				var _progressChartsUpdateProgressChart2 = _interopRequireDefault(_progressChartsUpdateProgressChart);
+
+				var _pieChartsUpdateConcentricChart = __webpack_require__(32);
 
 				var _pieChartsUpdateConcentricChart2 = _interopRequireDefault(_pieChartsUpdateConcentricChart);
 
-				var _barChartsUpdateBarChart = __webpack_require__(29);
+				var _barChartsUpdateBarChart = __webpack_require__(33);
 
 				var _barChartsUpdateBarChart2 = _interopRequireDefault(_barChartsUpdateBarChart);
 
-				var _lineChartsUpdateLineChart = __webpack_require__(32);
+				var _lineChartsUpdateLineChart = __webpack_require__(36);
 
 				var _lineChartsUpdateLineChart2 = _interopRequireDefault(_lineChartsUpdateLineChart);
 
-				var _scatterChartsUpdateScatterChart = __webpack_require__(33);
+				var _scatterChartsUpdateScatterChart = __webpack_require__(39);
 
 				var _scatterChartsUpdateScatterChart2 = _interopRequireDefault(_scatterChartsUpdateScatterChart);
 
@@ -1635,6 +1688,11 @@
 
 						case "donut":
 							(0, _pieChartsUpdatePieChart2['default'])(rootElement, chart, 0.2);
+
+							break;
+
+						case "progress":
+							(0, _progressChartsUpdateProgressChart2['default'])(rootElement, chart, 0.2);
 
 							break;
 
@@ -1669,7 +1727,7 @@
 
 				/***/
 			}),
-/* 19 */
+/* 20 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1680,19 +1738,15 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _setSegmentSize = __webpack_require__(20);
+				var _setSegmentSize = __webpack_require__(21);
 
 				var _setSegmentSize2 = _interopRequireDefault(_setSegmentSize);
 
-				var _setSegmentRotation = __webpack_require__(24);
-
-				var _setSegmentRotation2 = _interopRequireDefault(_setSegmentRotation);
-
-				var _setSegmentColour = __webpack_require__(25);
+				var _setSegmentColour = __webpack_require__(28);
 
 				var _setSegmentColour2 = _interopRequireDefault(_setSegmentColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -1729,7 +1783,7 @@
 
 				/***/
 			}),
-/* 20 */
+/* 21 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1738,15 +1792,29 @@
 					value: true
 				});
 
-				var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
-
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _toolsEasingAnimateJs = __webpack_require__(21);
+				var _toolsEasingAnimateJs = __webpack_require__(22);
 
 				var _toolsEasingAnimateJs2 = _interopRequireDefault(_toolsEasingAnimateJs);
 
-				exports['default'] = function (chart, point, value, offset, sizing, label, index) {
+				var _createArcValues = __webpack_require__(25);
+
+				var _createArcValues2 = _interopRequireDefault(_createArcValues);
+
+				var _createArcPath = __webpack_require__(26);
+
+				var _createArcPath2 = _interopRequireDefault(_createArcPath);
+
+				var _updateSegmentLabel = __webpack_require__(27);
+
+				var _updateSegmentLabel2 = _interopRequireDefault(_updateSegmentLabel);
+
+				exports['default'] = function (chart, point, value, offset, sizing, label, index, startPosition) {
+
+					if (!startPosition) {
+						startPosition = 0;
+					}
 
 					var currentTotalValue = 0;
 
@@ -1754,62 +1822,22 @@
 						currentTotalValue = currentTotalValue + chart.points[i].values[0];
 					}
 
-					function createCoordsFromValue(percent, radius) {
-						var x = Math.cos(2 * Math.PI * percent) * radius;
-						var y = Math.sin(2 * Math.PI * percent) * radius;
-						return [x, y];
-					}
-
 					function createSegmentPath(arcProgress, sizeProgress) {
 
-						var startPercent = currentTotalValue / chart.totalValue;
-						var midPercent = (currentTotalValue + value / 2) / chart.totalValue;
-						var endPercent = (currentTotalValue + value) / chart.totalValue;
+						var startPercent = startPosition + currentTotalValue / chart.totalValue * arcProgress;
+						var midPercent = startPosition + (currentTotalValue + value / 2) / chart.totalValue * arcProgress;
+						var endPercent = startPosition + (currentTotalValue + value) / chart.totalValue * arcProgress;
+						var innerRadius = 1 - chart.thickness - offset;
+						var midRadius = 1 - chart.thickness / 2 - offset + growth * sizeProgress;
+						var outerRadius = 1 - offset + growth * sizeProgress;
+						var segmentSize = value / chart.totalValue * arcProgress;
 
-						var _createCoordsFromValue = createCoordsFromValue(startPercent * arcProgress - 0.25, 1 - offset + growth * sizeProgress);
+						var arcValues = (0, _createArcValues2['default'])(startPercent, midPercent, endPercent, innerRadius, midRadius, outerRadius, segmentSize);
 
-						var _createCoordsFromValue2 = _slicedToArray(_createCoordsFromValue, 2);
-
-						var startX = _createCoordsFromValue2[0];
-						var startY = _createCoordsFromValue2[1];
-
-						var _createCoordsFromValue3 = createCoordsFromValue(endPercent * arcProgress - 0.25, 1 - offset + growth * sizeProgress);
-
-						var _createCoordsFromValue32 = _slicedToArray(_createCoordsFromValue3, 2);
-
-						var endX = _createCoordsFromValue32[0];
-						var endY = _createCoordsFromValue32[1];
-
-						var _createCoordsFromValue4 = createCoordsFromValue(startPercent * arcProgress - 0.25, 1 - chart.thickness - offset);
-
-						var _createCoordsFromValue42 = _slicedToArray(_createCoordsFromValue4, 2);
-
-						var startInnerX = _createCoordsFromValue42[0];
-						var startInnerY = _createCoordsFromValue42[1];
-
-						var _createCoordsFromValue5 = createCoordsFromValue(endPercent * arcProgress - 0.25, 1 - chart.thickness - offset);
-
-						var _createCoordsFromValue52 = _slicedToArray(_createCoordsFromValue5, 2);
-
-						var endInnerX = _createCoordsFromValue52[0];
-						var endInnerY = _createCoordsFromValue52[1];
-
-						var _createCoordsFromValue6 = createCoordsFromValue(midPercent * arcProgress - 0.25, 1 - chart.thickness / 1.5 - offset + growth * sizeProgress);
-
-						var _createCoordsFromValue62 = _slicedToArray(_createCoordsFromValue6, 2);
-
-						var midX = _createCoordsFromValue62[0];
-						var midY = _createCoordsFromValue62[1];
-
-						var largeArcFlag = value / chart.totalValue * arcProgress > .5 ? 1 : 0;
-						var pathData = ['M ' + startX + ' ' + startY, 'A ' + (1 - offset + growth * sizeProgress) + ' ' + (1 - offset + growth * sizeProgress) + ' 0 ' + largeArcFlag + ' 1 ' + endX + ' ' + endY, 'L ' + endInnerX + ' ' + endInnerY, 'A ' + (1 - chart.thickness - offset) + ' ' + (1 - chart.thickness - offset) + ' 0 ' + largeArcFlag + ' 0 ' + startInnerX + ' ' + startInnerY, 'L ' + startX + ' ' + startY].join(' ');
-
-						point.setAttribute('d', pathData);
+						point.setAttribute('d', (0, _createArcPath2['default'])(chart, arcValues));
 
 						if (chart.drawing.percentageLabels) {
-							label.setAttribute('x', midX);
-							label.setAttribute('y', midY);
-							label.innerHTML = Math.round(value / chart.totalValue * 100) + '%';
+							(0, _updateSegmentLabel2['default'])(chart, label, value, arcValues);
 						}
 					}
 
@@ -1835,14 +1863,18 @@
 						}
 					}
 
-					(0, _toolsEasingAnimateJs2['default'])(duration, drawSegment, reverse);
+					if (chart.animated) {
+						(0, _toolsEasingAnimateJs2['default'])(duration, drawSegment, reverse);
+					} else {
+						createSegmentPath(1, 1);
+					}
 				};
 
 				module.exports = exports['default'];
 
 				/***/
 			}),
-/* 21 */
+/* 22 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -1853,11 +1885,11 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _cubicInOutJs = __webpack_require__(22);
+				var _cubicInOutJs = __webpack_require__(23);
 
 				var _cubicInOutJs2 = _interopRequireDefault(_cubicInOutJs);
 
-				var _bounceInOutJs = __webpack_require__(23);
+				var _bounceInOutJs = __webpack_require__(24);
 
 				var _bounceInOutJs2 = _interopRequireDefault(_bounceInOutJs);
 
@@ -1891,7 +1923,7 @@
 
 				/***/
 			}),
-/* 22 */
+/* 23 */
 /***/ (function (module, exports) {
 
 				"use strict";
@@ -1909,7 +1941,7 @@
 
 				/***/
 			}),
-/* 23 */
+/* 24 */
 /***/ (function (module, exports) {
 
 				"use strict";
@@ -1919,31 +1951,15 @@
 				});
 
 				exports["default"] = function (t) {
-					var magnitude = arguments.length <= 1 || arguments[1] === undefined ? 0.65 : arguments[1];
 
-					var p = 1 - magnitude;
-
-					if (t === 0 || t === 1) {
-						return t;
-					}
-
-					var scaledTime = t * 2;
-					var scaledTime1 = scaledTime - 1;
-
-					var s = p / (2 * Math.PI) * Math.asin(1);
-
-					if (scaledTime < 1) {
-						return -0.5 * (Math.pow(2, 10 * scaledTime1) * Math.sin((scaledTime1 - s) * (2 * Math.PI) / p));
-					}
-
-					return Math.pow(2, -10 * scaledTime1) * Math.sin((scaledTime1 - s) * (2 * Math.PI) / p) * 0.5 + 1;
+					return (.04 - .04 / t) * Math.sin(25 * t) + 1;
 				};
 
 				module.exports = exports["default"];
 
 				/***/
 			}),
-/* 24 */
+/* 25 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -1952,24 +1968,130 @@
 					value: true
 				});
 
-				exports['default'] = function (chart, point, currentTotalValue, index) {
+				var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
 
-					if (index > 0) {
-						var prevValue = parseFloat(chart.points[index - 1].values[0]) / chart.totalValue * 100;
-
-						currentTotalValue = currentTotalValue + prevValue;
-
-						point.style.transform = 'rotate(' + currentTotalValue / 100 * 360 + 'deg)';
+				exports['default'] = function (startPercent, midPercent, endPercent, innerRadius, midRadius, outerRadius, segmentSize) {
+					if (startPercent == 0) {
+						console.log('start 0');
+					}
+					function createCoordsFromValue(percent, radius) {
+						var x = Math.cos(2 * Math.PI * percent) * radius;
+						var y = Math.sin(2 * Math.PI * percent) * radius;
+						return [x, y];
 					}
 
-					return currentTotalValue;
+					var arc = {};
+
+					arc.innerRadius = innerRadius;
+					arc.midRadius = midRadius;
+					arc.outerRadius = outerRadius;
+
+					var _createCoordsFromValue = createCoordsFromValue(startPercent - 0.25, arc.outerRadius);
+
+					var _createCoordsFromValue2 = _slicedToArray(_createCoordsFromValue, 2);
+
+					arc.startX = _createCoordsFromValue2[0];
+					arc.startY = _createCoordsFromValue2[1];
+
+					var _createCoordsFromValue3 = createCoordsFromValue(midPercent - 0.25, arc.midRadius);
+
+					var _createCoordsFromValue32 = _slicedToArray(_createCoordsFromValue3, 2);
+
+					arc.midX = _createCoordsFromValue32[0];
+					arc.midY = _createCoordsFromValue32[1];
+
+					var _createCoordsFromValue4 = createCoordsFromValue(endPercent - 0.25, arc.outerRadius);
+
+					var _createCoordsFromValue42 = _slicedToArray(_createCoordsFromValue4, 2);
+
+					arc.endX = _createCoordsFromValue42[0];
+					arc.endY = _createCoordsFromValue42[1];
+
+					var _createCoordsFromValue5 = createCoordsFromValue(startPercent - 0.25, arc.innerRadius);
+
+					var _createCoordsFromValue52 = _slicedToArray(_createCoordsFromValue5, 2);
+
+					arc.startInnerX = _createCoordsFromValue52[0];
+					arc.startInnerY = _createCoordsFromValue52[1];
+
+					var _createCoordsFromValue6 = createCoordsFromValue(endPercent - 0.25, arc.innerRadius);
+
+					var _createCoordsFromValue62 = _slicedToArray(_createCoordsFromValue6, 2);
+
+					arc.endInnerX = _createCoordsFromValue62[0];
+					arc.endInnerY = _createCoordsFromValue62[1];
+
+					arc.largeArcFlag = segmentSize > .5 ? 1 : 0;
+
+					return arc;
 				};
 
 				module.exports = exports['default'];
 
 				/***/
 			}),
-/* 25 */
+/* 26 */
+/***/ (function (module, exports) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				exports['default'] = function (chart, arc) {
+
+					var path = ['M ' + arc.startX + ' ' + arc.startY, 'A ' + arc.outerRadius + ' ' + arc.outerRadius + ' 0 ' + arc.largeArcFlag + ' 1 ' + arc.endX + ' ' + arc.endY, '' + (chart.drawing.roundedTips ? '\n      A ' + (1 - arc.innerRadius) / 2 + ' ' + (1 - arc.innerRadius) / 2 + ' 0 ' + arc.largeArcFlag + ' 1 ' + arc.endInnerX + ' ' + arc.endInnerY + ' \n    ' : '\n      L ' + arc.endInnerX + ' ' + arc.endInnerY + '  \n    '), 'A ' + arc.innerRadius + ' ' + arc.innerRadius + ' 0 ' + arc.largeArcFlag + ' 0 ' + arc.startInnerX + ' ' + arc.startInnerY, '' + (chart.drawing.roundedTips ? '\n      A ' + (1 - arc.innerRadius) / 2 + ' ' + (1 - arc.innerRadius) / 2 + ' 0 ' + arc.largeArcFlag + ' 1 ' + arc.startX + ' ' + arc.startY + ',\n    ' : '\n      L ' + arc.startX + ' ' + arc.startY + '\n    ')].join(' ');
+
+					return path;
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 27 */
+/***/ (function (module, exports, __webpack_require__) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+				var _toolsEasingAnimateJs = __webpack_require__(22);
+
+				var _toolsEasingAnimateJs2 = _interopRequireDefault(_toolsEasingAnimateJs);
+
+				var _createArcValues = __webpack_require__(25);
+
+				var _createArcValues2 = _interopRequireDefault(_createArcValues);
+
+				exports['default'] = function (chart, label, value, arc) {
+
+					var labelRect = label.querySelector('[data-role="chart-point-label-rect"]');
+					var labelText = label.querySelector('[data-role="chart-point-label-text"]');
+
+					labelText.setAttribute('x', arc.midX);
+					labelText.setAttribute('y', arc.midY);
+					labelText.innerHTML = Math.round(value / chart.totalValue * 100) + '%';
+
+					var textLength = labelText.getComputedTextLength();
+					var textHeight = 0.2;
+
+					labelRect.setAttribute('x', arc.midX - textLength * 0.75);
+					labelRect.setAttribute('y', arc.midY - textHeight * 0.75);
+					labelRect.setAttributeNS(null, "width", textLength + 0.1);
+					labelRect.setAttributeNS(null, "height", textHeight);
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 28 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -2001,7 +2123,7 @@
 
 				/***/
 			}),
-/* 26 */
+/* 29 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2012,7 +2134,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skins = __webpack_require__(27);
+				var _skins = __webpack_require__(30);
 
 				var _skins2 = _interopRequireDefault(_skins);
 
@@ -2036,7 +2158,7 @@
 
 				/***/
 			}),
-/* 27 */
+/* 30 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -2049,10 +2171,10 @@
 					"vanilla": ['#113537', '#37505C', '#96616B', '#F76F8E', '#FFEAD0'],
 					"skynews": ['#F1F1F1', '#D7D5D5', '#EF0420', '#D0021B', '#B20318', '#77000e'],
 					"royalwedding": ['#F4F4F4', '#E4E4E4', '#E3C228', '#333333', '#141414'],
-					"nhs": ['crimson', 'powderblue', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE', '#eeff2e'],
+					"nhs": ['red', '#060344', '#062B75', '#063B8C', '#1F68B2', '#297AC8', '#1DAED1', '#4ABAE7', '#B7E7FE'],
 					"generalelection": ['#4884C2', '#C20E1E', '#F4AF3B', '#9D2EBA', '#FBE152'],
 					"line18": ['#B35011', '#C18418', '#E4A71C', '#6842BE', '#303D7E'],
-					"skysports": ['#446CCC', '#2653BB', '#103A9D', '#072B7B', '#002369'],
+					"skysports": ['#fff', '#2653BB', '#103A9D', '#072B7B', '#002369'],
 					"premierleague": ['#353C97', '#222989', '#090E66', '#0F1151', '#020440'],
 					"worldcup": ['#EAEAEA', '#1D9DD9', '#065182', '#A51814', '#1D1D1B']
 
@@ -2061,7 +2183,7 @@
 
 				/***/
 			}),
-/* 28 */
+/* 31 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2072,19 +2194,84 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _setSegmentSize = __webpack_require__(20);
+				var _pieChartsSetSegmentSize = __webpack_require__(21);
+
+				var _pieChartsSetSegmentSize2 = _interopRequireDefault(_pieChartsSetSegmentSize);
+
+				var _pieChartsCreateArcValues = __webpack_require__(25);
+
+				var _pieChartsCreateArcValues2 = _interopRequireDefault(_pieChartsCreateArcValues);
+
+				var _pieChartsCreateArcPath = __webpack_require__(26);
+
+				var _pieChartsCreateArcPath2 = _interopRequireDefault(_pieChartsCreateArcPath);
+
+				var _pieChartsSetSegmentColour = __webpack_require__(28);
+
+				var _pieChartsSetSegmentColour2 = _interopRequireDefault(_pieChartsSetSegmentColour);
+
+				var _skinsLookupChartSkin = __webpack_require__(29);
+
+				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
+
+				exports['default'] = function (rootElement, chart, thickness) {
+
+					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
+					var chartShell = chartContainer.querySelector('[data-role="chart"]');
+					var progressTrack = chartShell.querySelector('[data-role="progress-track"]');
+					var point = chartShell.querySelector('[data-role="chart-point"]');
+					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
+					var currentColourIndex = 0;
+
+					if (chart.drawing.thickness) {
+						thickness = chart.drawing.thickness;
+					}
+
+					chart.totalValue = chart.points[0].values[1];
+
+					chart.thickness = thickness;
+
+					progressTrack.setAttribute('cx', 0);
+					progressTrack.setAttribute('cy', 0);
+					progressTrack.setAttribute('r', 1 - chart.drawing.thickness / 2);
+					if (chart.drawing.trackColour) {
+						progressTrack.setAttribute('stroke-width', chart.drawing.thickness);
+						progressTrack.setAttribute('stroke', chart.drawing.trackColour);
+					}
+					if (chart.drawing.discColour) {
+						progressTrack.setAttribute('fill', chart.drawing.discColour);
+					} else {
+						progressTrack.setAttribute('fill', 'transparent');
+					}
+
+					(0, _pieChartsSetSegmentSize2['default'])(chart, point, chart.points[0].values[0], 0, [1, 1], false, 0, chart.drawing.startPosition);
+					(0, _pieChartsSetSegmentColour2['default'])(point, chart.points[0], skin, 0);
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 32 */
+/***/ (function (module, exports, __webpack_require__) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+				var _setSegmentSize = __webpack_require__(21);
 
 				var _setSegmentSize2 = _interopRequireDefault(_setSegmentSize);
 
-				var _setSegmentRotation = __webpack_require__(24);
-
-				var _setSegmentRotation2 = _interopRequireDefault(_setSegmentRotation);
-
-				var _setSegmentColour = __webpack_require__(25);
+				var _setSegmentColour = __webpack_require__(28);
 
 				var _setSegmentColour2 = _interopRequireDefault(_setSegmentColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2112,7 +2299,7 @@
 					chart.points.forEach(function (point, index) {
 						var offset = index * chart.thickness;
 
-						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], offset, [1, 1], pointLabels[index], 0, index);
+						(0, _setSegmentSize2['default'])(chart, points[index], point.values[0], offset, [1, 1], pointLabels[index], 0);
 						currentColourIndex = (0, _setSegmentColour2['default'])(points[index], point, skin, currentColourIndex);
 					});
 				};
@@ -2121,7 +2308,7 @@
 
 				/***/
 			}),
-/* 29 */
+/* 33 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2132,15 +2319,15 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _setBarSize = __webpack_require__(30);
+				var _setBarSize = __webpack_require__(34);
 
 				var _setBarSize2 = _interopRequireDefault(_setBarSize);
 
-				var _setBarColour = __webpack_require__(31);
+				var _setBarColour = __webpack_require__(35);
 
 				var _setBarColour2 = _interopRequireDefault(_setBarColour);
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2173,7 +2360,7 @@
 
 				/***/
 			}),
-/* 30 */
+/* 34 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2184,7 +2371,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _axesFindRoundMax = __webpack_require__(16);
 
 				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
 
@@ -2216,7 +2403,7 @@
 
 				/***/
 			}),
-/* 31 */
+/* 35 */
 /***/ (function (module, exports) {
 
 				'use strict';
@@ -2251,7 +2438,7 @@
 
 				/***/
 			}),
-/* 32 */
+/* 36 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2262,47 +2449,86 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _plotLine = __webpack_require__(37);
 
-				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
+				var _plotLine2 = _interopRequireDefault(_plotLine);
 
-				var _axesFindScale = __webpack_require__(13);
+				var _colourLine = __webpack_require__(38);
 
-				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
+				var _colourLine2 = _interopRequireDefault(_colourLine);
 
 				exports['default'] = function (rootElement, chart) {
 
 					var chartContainer = rootElement.querySelector('[data-chart-id="' + chart.id + '"]');
 					var chartShell = chartContainer.querySelector('[data-role="chart"]');
-					var chartLines = chartShell.querySelectorAll('[data-role="chart-line"]');
+					var chartPoints = chartShell.querySelectorAll('[data-role="chart-point"]');
 					var chartCircleContainers = chartShell.querySelectorAll('[data-role="chart-circles"]');
 					var skin = (0, _skinsLookupChartSkin2['default'])(chart.skin);
 					var currentColourIndex = 0;
-					var scale = (0, _axesFindScale2['default'])(chart);
 
 					chartShell.setAttribute('animated', '');
 					if (chart.drawing.filled) {
 						chartShell.setAttribute('filled', '');
 					}
 
+					chart.points.forEach(function (point, index) {
+
+						(0, _plotLine2['default'])(chart, chartPoints[index], point, index);
+						currentColourIndex = (0, _colourLine2['default'])(chart, chartPoints[index], point, skin, currentColourIndex);
+					});
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 37 */
+/***/ (function (module, exports, __webpack_require__) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+				var _skinsLookupChartSkin = __webpack_require__(29);
+
+				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
+
+				var _axesFindRoundMax = __webpack_require__(16);
+
+				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
+
+				var _axesFindScale = __webpack_require__(14);
+
+				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
+
+				var _toolsEasingAnimateJs = __webpack_require__(22);
+
+				var _toolsEasingAnimateJs2 = _interopRequireDefault(_toolsEasingAnimateJs);
+
+				exports['default'] = function (chart, chartPoint, point, index) {
+
 					function findValidCoords() {
 
 						var validCoords = [];
 
-						chart.points.forEach(function (point, pointIndex) {
+						chart.points.forEach(function (point, index) {
 							var coordPlaceholder = [];
 
 							validCoords.push(coordPlaceholder);
 
 							point.values.forEach(function (coord, valueIndex) {
 								if (coord[1] !== false) {
-									validCoords[pointIndex].push(valueIndex);
+									validCoords[index].push(valueIndex);
 								} else {
-									validCoords[pointIndex].push(false);
+									validCoords[index].push(false);
 								}
 							});
 						});
@@ -2319,14 +2545,12 @@
 						}
 					}
 
-					function calculateYCoord(value) {
+					function calculateYCoord(value, progress) {
 
-						return chart.canvasPadding + chart.canvasSize * 0.5625 - value / (0, _axesFindRoundMax2['default'])(scale.highestYValue) * (chart.canvasSize * 0.5625);
+						return chart.canvasPadding + chart.canvasSize * 0.5625 - value * progress / (0, _axesFindRoundMax2['default'])(scale.highestYValue) * (chart.canvasSize * 0.5625);
 					}
 
-					var validCoords = findValidCoords();
-
-					chart.points.forEach(function (point, pointIndex) {
+					function plotPoints(point, progress) {
 
 						if (chart.drawing.showCircles) {
 							var chartCircles = chartCircleContainers[index].querySelectorAll('[data-role="chart-circle"]');
@@ -2336,9 +2560,9 @@
 
 						point.values.forEach(function (coord, valueIndex) {
 
-							if (validCoords[pointIndex][valueIndex] !== false) {
+							if (validCoords[index][valueIndex] !== false) {
 								var xCoord = calculateXCoord(coord[0], valueIndex, point.values.length - 1, scale.fixed);
-								var yCoord = calculateYCoord(coord[1]);
+								var yCoord = calculateYCoord(coord[1], progress);
 
 								line += xCoord + ',' + yCoord + ' ';
 
@@ -2351,9 +2575,9 @@
 
 						if (chart.drawing.filled) {
 							point.values.forEach(function (coord, valueIndex) {
-								if (validCoords[pointIndex][valueIndex] !== false) {
+								if (validCoords[index][valueIndex] !== false) {
 									var xCoord = calculateXCoord(coord[0], point.values.length - 1 - valueIndex, point.values.length - 1, scale.fixed);
-									var yCoord = calculateYCoord(0);
+									var yCoord = calculateYCoord(0, progress);
 
 									line += xCoord + ',' + yCoord + ' ';
 
@@ -2365,45 +2589,73 @@
 							});
 						}
 
-						chartLines[pointIndex].setAttribute('points', line);
+						chartPoint.setAttribute('points', line);
 
-						chartLines[pointIndex].setAttribute('stroke-width', chart.drawing.thickness);
+						chartPoint.setAttribute('stroke-width', chart.drawing.thickness);
+					}
 
-						if (point.colourIndex && skin[point.colourIndex] !== undefined) {
-							if (chart.drawing.filled) {
-								chartLines[pointIndex].setAttribute('fill', skin[point.colourIndex]);
-							} else {
-								chartLines[pointIndex].setAttribute('stroke', skin[point.colourIndex]);
-							}
+					var scale = (0, _axesFindScale2['default'])(chart);
+					var validCoords = findValidCoords();
+					var reverse = false;
 
-							currentColourIndex = parseInt(point.colourIndex, 10);
-						} else {
-							if (chart.drawing.filled) {
-								chartLines[pointIndex].setAttribute('fill', skin[currentColourIndex]);
-							} else {
-								chartLines[pointIndex].setAttribute('stroke', skin[currentColourIndex]);
-							}
-						}
+					function drawLine(progress) {
+						plotPoints(point, progress);
+					}
 
-						if (chart.drawing.showCircles) {
-							chartCircles.forEach(function (circle) {
-								circle.setAttribute('fill', skin[currentColourIndex]);
-							});
-						}
-
-						if (currentColourIndex < skin.length - 1) {
-							currentColourIndex++;
-						} else {
-							currentColourIndex = 0;
-						}
-					});
+					(0, _toolsEasingAnimateJs2['default'])(500, drawLine, reverse);
 				};
 
 				module.exports = exports['default'];
 
 				/***/
 			}),
-/* 33 */
+/* 38 */
+/***/ (function (module, exports) {
+
+				'use strict';
+
+				Object.defineProperty(exports, '__esModule', {
+					value: true
+				});
+
+				exports['default'] = function (chart, chartPoint, point, skin, currentColourIndex) {
+
+					if (point.colourIndex && skin[point.colourIndex] !== undefined) {
+						if (chart.drawing.filled) {
+							chartPoint.setAttribute('fill', skin[point.colourIndex]);
+						} else {
+							chartPoint.setAttribute('stroke', skin[point.colourIndex]);
+						}
+
+						currentColourIndex = parseInt(point.colourIndex, 10);
+					} else {
+						if (chart.drawing.filled) {
+							chartPoint.setAttribute('fill', skin[currentColourIndex]);
+						} else {
+							chartPoint.setAttribute('stroke', skin[currentColourIndex]);
+						}
+					}
+
+					if (chart.drawing.showCircles) {
+						chartCircles.forEach(function (circle) {
+							circle.setAttribute('fill', skin[currentColourIndex]);
+						});
+					}
+
+					if (currentColourIndex < skin.length - 1) {
+						currentColourIndex++;
+					} else {
+						currentColourIndex = 0;
+					}
+
+					return currentColourIndex;
+				};
+
+				module.exports = exports['default'];
+
+				/***/
+			}),
+/* 39 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2414,15 +2666,15 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
-				var _axesFindRoundMax = __webpack_require__(15);
+				var _axesFindRoundMax = __webpack_require__(16);
 
 				var _axesFindRoundMax2 = _interopRequireDefault(_axesFindRoundMax);
 
-				var _axesFindScale = __webpack_require__(13);
+				var _axesFindScale = __webpack_require__(14);
 
 				var _axesFindScale2 = _interopRequireDefault(_axesFindScale);
 
@@ -2473,7 +2725,7 @@
 
 				/***/
 			}),
-/* 34 */
+/* 40 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2484,7 +2736,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _colourKeyIndicators = __webpack_require__(35);
+				var _colourKeyIndicators = __webpack_require__(41);
 
 				var _colourKeyIndicators2 = _interopRequireDefault(_colourKeyIndicators);
 
@@ -2511,7 +2763,7 @@
 
 				/***/
 			}),
-/* 35 */
+/* 41 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2522,7 +2774,7 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _skinsLookupChartSkin = __webpack_require__(26);
+				var _skinsLookupChartSkin = __webpack_require__(29);
 
 				var _skinsLookupChartSkin2 = _interopRequireDefault(_skinsLookupChartSkin);
 
@@ -2555,7 +2807,7 @@
 
 				/***/
 			}),
-/* 36 */
+/* 42 */
 /***/ (function (module, exports, __webpack_require__) {
 
 				'use strict';
@@ -2566,9 +2818,13 @@
 
 				function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-				var _pieChartsSetSegmentSize = __webpack_require__(20);
+				var _pieChartsSetSegmentSize = __webpack_require__(21);
 
 				var _pieChartsSetSegmentSize2 = _interopRequireDefault(_pieChartsSetSegmentSize);
+
+				var _lineChartsPlotLine = __webpack_require__(37);
+
+				var _lineChartsPlotLine2 = _interopRequireDefault(_lineChartsPlotLine);
 
 				exports['default'] = function (rootElement, chart) {
 
@@ -2578,18 +2834,97 @@
 					var pointLabels = chartShell.querySelectorAll('[data-role="chart-point-label"]');
 					var keyItems = chartContainer.querySelectorAll('[data-role="key-item"]');
 
+					function adjustChartPoint(point, growth, index, reverse) {
+
+						switch (chart.type) {
+							case "pie":
+								if (reverse) {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1 + growth, 1], pointLabels[index], index);
+								} else {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1, 1 + growth], pointLabels[index], index);
+								}
+								break;
+
+							case "donut":
+								if (reverse) {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1 + growth, 1], pointLabels[index], index);
+								} else {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1, 1 + growth], pointLabels[index], index);
+								}
+								break;
+
+							case "concentric":
+								if (reverse) {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], chart.thickness * index, [1 + growth / 2, 1], pointLabels[index], 0);
+								} else {
+									(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], chart.thickness * index, [1, 1 + growth / 2], pointLabels[index], 0);
+								}
+								break;
+
+							case "barvert":
+								if (reverse) {
+									chartPoints.forEach(function (chartPoint) {
+										chartPoint.classList.remove('sdc-site-charts__chart-point--faded');
+									});
+								} else {
+									chartPoints.forEach(function (chartPoint) {
+										if (chartPoint !== chartPoints[index]) {
+											chartPoint.classList.add('sdc-site-charts__chart-point--faded');
+										}
+									});
+								}
+								break;
+
+							case "barhori":
+								if (reverse) {
+									chartPoints.forEach(function (chartPoint) {
+										chartPoint.classList.remove('sdc-site-charts__chart-point--faded');
+									});
+								} else {
+									chartPoints.forEach(function (chartPoint) {
+										if (chartPoint !== chartPoints[index]) {
+											chartPoint.classList.add('sdc-site-charts__chart-point--faded');
+										}
+									});
+								}
+								break;
+
+							case "line":
+								if (reverse) {
+									chartPoints.forEach(function (chartPoint) {
+										chartPoint.classList.remove('sdc-site-charts__chart-point--faded');
+									});
+								} else {
+									chartPoints.forEach(function (chartPoint) {
+										if (chartPoint !== chartPoints[index]) {
+											chartPoint.classList.add('sdc-site-charts__chart-point--faded');
+										}
+									});
+								}
+								break;
+
+							case "scatter":
+								if (reverse) {
+									chartPoints.forEach(function (chartPoint) {
+										chartPoint.classList.remove('sdc-site-charts__chart-point--faded');
+									});
+								} else {
+									chartPoints.forEach(function (chartPoint) {
+										if (chartPoint !== chartPoints[index]) {
+											chartPoint.classList.add('sdc-site-charts__chart-point--faded');
+										}
+									});
+								}
+								break;
+						}
+					}
+
 					chart.points.forEach(function (point, index) {
 						chartPoints[index].addEventListener('mouseenter', function () {
-							if (chart.type == 'pie' || chart.type == 'donut') {
-								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1, 1.1], pointLabels[index], index);
+							adjustChartPoint(point, 0.1, index, false);
 
-								if (chart.drawing.percentageLabels) {
-									pointLabels[index].setAttribute('highlighted', '');
-								}
-							}
-
-							if (chart.type == 'barvert' || chart.type == 'barhori') {
-								chartPoints[index].classList.add('sdc-site-charts__chart-point--faded');
+							if (chart.drawing.percentageLabels) {
+								pointLabels[index].setAttribute('highlighted', '');
 							}
 
 							keyItems.forEach(function (keyItem) {
@@ -2600,15 +2935,10 @@
 						}, false);
 
 						chartPoints[index].addEventListener('mouseleave', function () {
-							if (chart.type == 'pie' || chart.type == 'donut') {
-								(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], point.values[0], 0, [1.1, 1], pointLabels[index], index);
-								if (chart.drawing.percentageLabels) {
-									pointLabels[index].removeAttribute('highlighted');
-								}
-							}
+							adjustChartPoint(point, 0.1, index, true);
 
-							if (chart.type == 'barvert' || chart.type == 'barhori') {
-								chartPoints[index].classList.remove('sdc-site-charts__chart-point--faded');
+							if (chart.drawing.percentageLabels) {
+								pointLabels[index].removeAttribute('highlighted');
 							}
 
 							keyItems.forEach(function (keyItem) {
@@ -2629,16 +2959,10 @@
 
 							chartPoints.forEach(function (chartPoint) {
 								if (chartPoint !== chartPoints[index]) {
-									if (chart.type == 'pie' || chart.type == 'donut') {
-										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1, 1.1], pointLabels[index], index);
+									adjustChartPoint(chart.points[index], 0.1, index, false);
 
-										if (chart.drawing.percentageLabels) {
-											pointLabels[index].setAttribute('highlighted', '');
-										}
-									}
-
-									if (chart.type == 'barvert' || chart.type == 'barhori') {
-										chartPoints[index].classList.add('sdc-site-charts__chart-point--faded');
+									if (chart.drawing.percentageLabels) {
+										pointLabels[index].setAttribute('highlighted', '');
 									}
 								}
 							});
@@ -2653,16 +2977,10 @@
 
 							chartPoints.forEach(function (chartPoint) {
 								if (chartPoint !== chartPoints[index]) {
-									if (chart.type == 'pie' || chart.type == 'donut') {
-										(0, _pieChartsSetSegmentSize2['default'])(chart, chartPoints[index], chart.points[index].values[0], 0, [1.1, 1], pointLabels[index], index);
+									adjustChartPoint(chart.points[index], 0.1, index, true);
 
-										if (chart.drawing.percentageLabels) {
-											pointLabels[index].removeAttribute('highlighted');
-										}
-									}
-
-									if (chart.type == 'barvert' || chart.type == 'barhori') {
-										chartPoints[index].classList.remove('sdc-site-charts__chart-point--faded');
+									if (chart.drawing.percentageLabels) {
+										pointLabels[index].removeAttribute('highlighted', '');
 									}
 								}
 							});

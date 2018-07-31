@@ -12,8 +12,7 @@
       "canvasPadding": 60,
       "drawing": {
         "thickness": 0.2,
-        "trackColour": "#f26e3a",
-        "discColour": "#bb0f17",
+        "trackColour": "#2b2a6c",
         "roundedTips": true
       },
       "grid": {
@@ -35,8 +34,8 @@
       "points": [
         {
           "values": [
-            140,
-            200
+            60,
+            100
           ],
           "label": "Spending",
           "subLabel": "18,348"

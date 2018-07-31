@@ -13,7 +13,6 @@
       "drawing": {
         "thickness": 0.2,
         "trackColour": "#f26e3a",
-        "discColour": "#bb0f17",
         "roundedTips": true
       },
       "grid": {
@@ -35,8 +34,8 @@
       "points": [
         {
           "values": [
-            140,
-            200
+            89,
+            100
           ],
           "label": "Spending",
           "subLabel": "18,348"

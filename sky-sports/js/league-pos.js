@@ -48,10 +48,6 @@
 
     dotitems.forEach(function (dotitem, index) {
 
-      setTimeout(function () {
-        this.removeAttribute('data-animate-in-view');
-      }.bind(dotitem), index * 50);
-
       dotitem.style.cssText = "left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
 
     })
