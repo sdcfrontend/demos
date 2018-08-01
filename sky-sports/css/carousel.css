@@ -5,11 +5,13 @@
 }
 
 .sff-carousel__scroll {
-  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(27, 100%);
+  /* overflow: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  white-space: nowrap;
+  white-space: nowrap; */
 }
 
 .sff-carousel__scroll::-moz-scrollbar {
@@ -23,16 +25,22 @@
 }
 
 .sff-carousel__item {
+  grid-column: 1;
+  grid-row: 1;
   display: inline-flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
   scroll-snap-align: start;
   width: 100%;
-  transition: 0.25s transform, 0.25s opacity;
-  opacity: 1
+  transition: 0.75s transform, 0.3s opacity;
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: scale(0.8);
 }
 
 .sff-carousel__item--active {
   opacity: 1;
+  transform: scale(1)
 }
 
 .sff-carousel__item-cell {
@@ -41,6 +49,10 @@
   justify-content: center;
   width: 50%;
   padding: 1em 0
+}
+
+.sff-carousel__item-cell:first-child {
+  direction: rtl;
 }
 
 .sff-carousel__item-cell:nth-child(3) {
@@ -56,21 +68,30 @@
   display: block;
 }
 
-.sff-carousel__image+.sff-carousel__image {
+.sff-carousel__image:first-child {
   display: none;
 }
+
 
 @media all and (min-width: 540px){
 
   .sff-carousel__image {
-    width: 52%;
-    transform: translateX(15%) scale(0.9)
+    display: block;
+    width: 50%;
   }
 
-  .sff-carousel__image+.sff-carousel__image {
-    z-index: 3;
-    transform: translateX(-15%);
-    display: block
+  .sff-carousel__image:nth-child(1) {
+    transform: scale(0.9);
+    display: block;
+  }
+
+  .sff-carousel__image:nth-child(2){
+    transform: translateX(-15%)
+  }
+
+  .sff-carousel__item-cell:first-child
+  .sff-carousel__image:nth-child(2) {
+    transform: translateX(15%)
   }
 
 }
@@ -92,14 +113,15 @@
   grid-template-columns: repeat(27, 33.3%);
   list-style: none;
   padding: 0;
-  transition: transform 0.25s;
+  /* transition: transform 0.25s; */
   transform: translateX(33.333%);
-  height: 100%
+  height: 100%;
+  will-change: transform;
 }
 
 .sff-carousel__nav-item {
-  transition: transform 0.25s, opacity 0.25s;
-  transform: scale(0.9);
+  /* transition: transform 0.25s, opacity 0.25s;
+  transform: scale(0.9); */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,0 +1,100 @@
+.sff-h2h__header {
+  display: flex;
+  color: white;
+  align-items: baseline;
+  max-width: 760px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem
+
+}
+
+.sff-h2h__header__cell {
+  flex: 1;
+}
+
+.sff-h2h__header-image {
+  width: 65%;
+  max-width: 150px;
+  min-width: 50px;
+  display: inline-block;
+  position: relative;
+}
+
+.sff-h2h__header-image:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.sff-h2h__header-image > img {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.sff-h2h__header-image--border > img {
+  border: 2px solid white;
+}
+
+.sff-h2h__header__cell p {
+  font-weight: bold
+}
+
+.sff-h2h__header 
+.sff-counter {
+  color: white;
+  font-size: 2rem;
+  font-family: premierleague;
+  margin-top: 1rem;
+}
+
+.sff-h2h__body {
+  display: flex;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sff-h2h__body-cell {
+  flex: 1;
+  text-align: center;
+}
+
+.sff-h2h__result {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: white;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3px 1px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #222;
+  will-change: transform;
+  transition: transform 0.5s;
+  transition-delay: 0.2s;
+  transform: scale(0.99)
+}
+
+.sff-h2h__result[data-animate-in-view] {
+  transform: scale(0.1)
+}
+
+.sff-h2h__result.sff-united,
+.sff-h2h__result.sff-city {
+  color: white 
+}
+
+.sff-h2h__header-caption[class] {
+  font-size: 0.9rem;
+  color: white;
+  margin-top: 0.2rem;
+  font-weight: normal
+}

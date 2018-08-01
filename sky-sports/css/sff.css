@@ -18,3 +18,14 @@
 @import "selector.css";
 @import "selector-local.css";
 @import "stats.css";
+@import "h2h.css";
+
+.place {
+  height: 80vh;
+  background: #666;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem
+}

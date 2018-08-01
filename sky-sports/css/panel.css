@@ -1,6 +1,7 @@
 .sff-panel {
-  background: #ccc;
+  background: #fff;
   padding: calc(1rem * 2) 0;
+  text-align: center
 }
 
 .sff-panel--white {

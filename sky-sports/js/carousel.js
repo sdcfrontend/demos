@@ -13,26 +13,24 @@
       e.preventDefault();
 
       if (this.dataset.type === 'next') {
-        gotoslide(current + 1);
+        current++;
+        gotoslide(current);
       }
       else {
-        gotoslide(current - 1);
+        current--;
+        gotoslide(current);
       }
+
+      setstate(current);
     }
   });
 
   function gotoslide(index) {
-    if (index === current) {
-      return;
-    }
 
     scroll.scrollLeft = items[0].offsetWidth * (index)
   }
 
   function setstate(index) {
-    if (index === current) {
-      return;
-    }
 
     current = index;
     root.current = current;
@@ -83,13 +81,13 @@
     items[index].classList.add('sff-carousel__item--active');
   }
 
-  function tick() {
-    var index = Math.round(scroll.scrollLeft / scroll.offsetWidth);
-    setstate(index);
-    requestAnimationFrame(tick);
-  }
+  // function tick() {
+  //   var index = Math.round(scroll.scrollLeft / scroll.offsetWidth);
+  //   setstate(index);
+  //   requestAnimationFrame(tick);
+  // }
 
-  tick();
+  // tick();
 
   window.addEventListener('resize', function () {
     gotoslide(current);

@@ -5,9 +5,10 @@
   line-height: 1.42;
   position: relative;
   background: white;
+  text-align: left
 }
 
-.sff-text-block > p:first-child {
+.sff-text-block > p:first-child strong {
   font-size: 1.15em
 }
 

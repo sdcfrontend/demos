@@ -43,7 +43,7 @@
 }
 
 
-.sff-curtain__wing.sff-city[class] {
+.sff-curtain__wing.sff-united[class] {
   justify-content: flex-start
 }
 
@@ -56,14 +56,14 @@
 }
 
 .jose-pep__block {
-  transform: translate(-64%, 0);
+  transform: translate(-68%, 0);
   top: 18%;
   position: relative;
 }
 
-.sff-city
+.sff-united
 .jose-pep__block {
-  transform: translate(68%, 0);
+  transform: translate(64%, 0);
   top: 18%
 }
 
@@ -82,7 +82,7 @@
   text-align: left
 }
 
-.sff-city
+.sff-united
 .jose-pep__block p {
   text-align: right
 }
@@ -93,7 +93,7 @@
   bottom: 0;
   height: 90%;
   object-fit: contain;
-  transform: translateX(27%);
+  transform: translateX(32%);
   transition: transform 0.8s;
   will-change: transform;
 }
@@ -104,16 +104,16 @@
 }
 
 .jose-pep[data-animate-in-view]
-.sff-city
+.sff-united
 .jose-pep__image {
   transform: translateX(50%);
 }
 
-.sff-city
+.sff-united
 .jose-pep__image {
   right: auto;
   left: 0;
-  transform: translateX(-17%)
+  transform: translateX(-25%)
 }
 
 @media all and (max-width: 650px){
@@ -132,7 +132,7 @@
     top: 0
   }
   
-  .sff-city
+  .sff-united
   .jose-pep__block {
     transform: translate(24%, 32%);
     top: 0
@@ -149,7 +149,7 @@
     text-align: right
   }
   
-  .sff-city
+  .sff-united
   .jose-pep__block p {
     text-align: left
   }

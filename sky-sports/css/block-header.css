@@ -11,3 +11,16 @@
   margin-bottom: 1.5rem;
   background: none
 }
+
+.sff-block-header--invert[class]{
+  color: inherit;
+  border-color: inherit
+}
+
+.sff-block-header--small {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem
+}
