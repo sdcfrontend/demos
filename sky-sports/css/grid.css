@@ -2,17 +2,51 @@
 .sff-grid {
   display: flex;
   flex-wrap: wrap;
-  column-count: 70
+  column-count: 90
 }
 
 .sff-grid__item {
-  width: calc(100% / 7);
-  background: #eee;
-  outline: 1px solid #999;
+  width: calc(100% / 9);
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.4rem;
+  color: #ccc;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.sff-grid__item--active {
-  background: #999;
+.sff-grid__item:hover {
+  text-decoration: none;
+}
+
+.sff-grid__item > span {
+  border: 2px solid rgba(255,255,255,0);
+  display: block;
+  padding: 0.4em;
+  width: 100%;
+  position: relative;
+  color: #ccc;
+}
+
+.sff-grid__item--active > span {
+  border-color: white;
+  color: white;
+}
+
+.sff-grid__item > span:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%)
 }
 
 .sff-grid__item--active + 
@@ -21,17 +55,25 @@
   order: inherit;
 }
 
-.sff-grid__content {
-  background: #999;
-  width: 100%;
-  height: 200px;
-  display: none
+.sff-grid__item--active > span:after {
+  display: block;
 }
 
-.sff-grid__item:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+.sff-grid__content {
+  width: 100%;
+  display: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+@media all and (max-width: 920px){
+  .sff-grid {
+    column-count: 70
+  }
+
+  .sff-grid__item {
+    width: calc(100% / 7);
+  }
 }
 
 @media all and (max-width: 700px){
@@ -46,10 +88,10 @@
 
 @media all and (max-width: 480px){
   .sff-grid[class] {
-    column-count: 30
+    column-count: 40
   }
   
   .sff-grid__item[class] {
-    width: 33.33%
+    width: 25%
   }
 }

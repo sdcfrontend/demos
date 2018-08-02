@@ -18,7 +18,16 @@
   min-width: 50px;
   display: inline-block;
   position: relative;
+  transition: 0.33s opacity, 0.33s transform;
+  will-change: opacity, transform
 }
+
+
+.sff-h2h__header-image[data-animate-in-view]{
+  opacity: 0;
+  transform: scale(0.9)
+}
+
 
 .sff-h2h__header-image:after {
   content: "";
@@ -87,14 +96,19 @@
   transform: scale(0.1)
 }
 
-.sff-h2h__result.sff-united,
-.sff-h2h__result.sff-city {
-  color: white 
-}
-
 .sff-h2h__header-caption[class] {
   font-size: 0.9rem;
   color: white;
   margin-top: 0.2rem;
   font-weight: normal
+}
+
+.sff-h2h--city .sff-h2h__result {
+  color: white;
+  background: #70ade5;
+}
+
+.sff-h2h--united .sff-h2h__result {
+  color: white;
+  background: #c7030d
 }

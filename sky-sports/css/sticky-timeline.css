@@ -1,0 +1,67 @@
+
+.sff-sticky-timeline {
+  display: flex;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.sff-sticky-timeline__cell {
+  flex: 1;
+  margin: 0 6px;
+}
+
+.sff-sticky-timeline__item {
+  margin-bottom: 1rem;
+  background: white;
+  position: relative;
+  min-height: 6rem;
+}
+
+.sff-sticky-timeline__item h2 {
+  top: 0;
+  margin-bottom: 0.34rem;
+  font-family: premierleague;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1
+}
+
+.sff-sticky-timeline__body {
+  position: sticky;
+  top: 1rem;
+}
+
+.sff-sticky-timeline__item p {
+  line-height: 1.3;
+  font-size: 0.8rem
+}
+
+.sff-sticky-timeline__item-city {
+  text-align: right;
+  padding-right: calc(1rem + 11px);
+}
+
+.sff-sticky-timeline__item:after {
+  content: "";
+  width: 11px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: powderblue;
+  border-radius: 11px
+}
+
+.sff-sticky-timeline__item-utd {
+  text-align: left;
+  padding-left: calc(1rem + 11px);
+}
+
+.sff-sticky-timeline__item-utd:after {
+  left: 0;
+  right: auto;
+  background: crimson
+}
+
+
+

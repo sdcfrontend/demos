@@ -1,17 +1,19 @@
 .sff-city {
-  background-image: linear-gradient(to left, #7bb9e6 0, #8ecdee 100%)
+  background-color: #7bb9e6;
+  /* background-image: linear-gradient(to left, #7bb9e6 0, #8ecdee 100%) */
 }
 
 .sff-united {
-  background-image: linear-gradient(to right, #bf101a 0, #d21123 100%)
+  background-color: #bf101a;
+  /* background-image: linear-gradient(to right, #bf101a 0, #d21123 100%) */
 }
 
 .sff-united-city {
-  background-image: linear-gradient(to right, #bf101a 0, #d21123 50%, #8ecdee 50%,  #7bb9e6 100%)
+  background-image: linear-gradient(to right, #bf101a 0, #bf101a 50%, #7bb9e6 50%,  #7bb9e6 100%)
 }
 
 .sff-city-united {
-  background-image: linear-gradient(to right, #7bb9e6 0, #8ecdee 50%,#d21123 50%, #bf101a 100%)
+  background-image: linear-gradient(to right, #7bb9e6 0, #7bb9e6 50%,#bf101a 50%, #bf101a 100%)
 }
 
 .sff-color-united {

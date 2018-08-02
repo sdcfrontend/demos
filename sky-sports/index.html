@@ -411,11 +411,22 @@
     </div>
   </div>
 
-  <div class="place">
-    VIDEO: Man Utd lifting the title in 92/93
+  <div class="sff-moment">
+    <video data-trigger="50" preload muted playsinline style="background-image:url(assets/videos/rooney-overhead.jpg)">
+      <script>
+        if (window.innerWidth < 600) {
+          document.write('<source src="assets/videos/rooney-overhead-small.mp4" media="(max-width:600px)" type="video/mp4">')
+        }
+        else {
+          document.write('<source src="assets/videos/rooney-overhead.mp4" media="(min-width:601px)" type="video/mp4">')
+        }
+      </script>
+
+
+    </video>
   </div>
 
-  <div class="sff-panel sff-panel--no-padding" league-pos>
+  <div class="sff-panel sff-panel--white sff-panel--no-padding" league-pos>
     <div class="sff-league-pos">
       <h2 class="sff-block-header sff-block-header--invert">
         <span>League Position</span>
@@ -569,7 +580,7 @@
 
       <div class="split-time__head site-wrap site-wrap-padding">
         <h2 class="sff-block-header">
-          <span>Premier League Titles (redo as key moments)</span>
+          <span>Key Moments</span>
         </h2>
 
         <div class="split-time__pl">
@@ -829,7 +840,7 @@
 
         <div class="sff-h2h__header">
           <div class="sff-h2h__header__cell">
-            <div class="sff-h2h__header-image sff-h2h__header-image--border">
+            <div class="sff-h2h__header-image sff-h2h__header-image--border" data-trigger="100" data-animate-in-view>
               <img src="http://e2.365dm.com/18/07/589x442/skysports-riyad-mahrez-manchester-city_4361188.jpg?20180713161831" alt="Manchester City badge">
             </div>
 
@@ -853,7 +864,7 @@
           </div>
 
           <div class="sff-h2h__header__cell">
-            <div class="sff-h2h__header-image sff-h2h__header-image--border">
+            <div class="sff-h2h__header-image sff-h2h__header-image--border" data-trigger="100" data-animate-in-view>
               <img src="http://e1.365dm.com/18/07/589x442/skysports-paul-pogba-manchester-united_4364526.jpg?20180717172038" alt="Manchester United badge">
             </div>
             <div class="">
@@ -1049,7 +1060,7 @@
 
         <div class="sff-h2h__header">
           <div class="sff-h2h__header__cell">
-            <div class="sff-h2h__header-image">
+            <div class="sff-h2h__header-image" data-trigger="100" data-animate-in-view>
               <img src="http://e0.365dm.com/football/badges/192/345.png" alt="Manchester City badge">
             </div>
             <div class="">
@@ -1075,7 +1086,7 @@
           </div>
 
           <div class="sff-h2h__header__cell">
-            <div class="sff-h2h__header-image">
+            <div class="sff-h2h__header-image" data-trigger="100" data-animate-in-view>
               <img src="http://e0.365dm.com/football/badges/192/210.png" alt="Manchester United badge">
             </div>
             <div class="">
@@ -1205,10 +1216,6 @@
     VIDEO: Rooney
   </div>
 
-  <div class="place">
-    MOST USED PLAYERS
-  </div>
-
   <div class="sff-panel sff-panel--white" text5>
     <div class="site-wrap site-wrap-padding">
 
@@ -1225,6 +1232,131 @@
                 <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
 
       </div>
+    </div>
+  </div>
+
+  <div class="sff-panel">
+    <div class="site-wrap site-wrap-padding">
+      <h2 class="sff-block-header">
+        <span>The Players</span>
+      </h2>
+
+
+      <div class="sff-grid">
+
+        <a href="#year92" class="sff-grid__item" id="year92">
+          <span>92/93</span>
+        </a>
+        <div class="sff-grid__content">
+
+
+        </div>
+
+        <a href="#year93" class="sff-grid__item" id="year93">
+          <span>93/94</span>
+        </a>
+        <div class="sff-grid__content">
+
+        </div>
+        <a href="#year94" class="sff-grid__item" id="year94">
+          <span>94/95</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year95" class="sff-grid__item" id="year95">
+          <span>95/96</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year96" class="sff-grid__item" id="year96">
+          <span>96/97</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year97" class="sff-grid__item" id="year97">
+          <span>97/98</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year98" class="sff-grid__item" id="year98">
+          <span>98/99</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year99" class="sff-grid__item" id="year99">
+          <span>99/00</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year00" class="sff-grid__item" id="year00">
+          <span>00/01</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year01" class="sff-grid__item" id="year01">
+          <span>01/02</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year02" class="sff-grid__item" id="year02">
+          <span>02/03</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year03" class="sff-grid__item" id="year03">
+          <span>03/04</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year04" class="sff-grid__item" id="year04">
+          <span>04/05</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year05" class="sff-grid__item" id="year05">
+          <span>05/06</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year06" class="sff-grid__item" id="year06">
+          <span>06/07</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year07" class="sff-grid__item" id="year07">
+          <span>07/08</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year08" class="sff-grid__item" id="year08">
+          <span>08/09</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year09" class="sff-grid__item" id="year09">
+          <span>09/10</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year10" class="sff-grid__item" id="year10">
+          <span>10/11</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year11" class="sff-grid__item" id="year11">
+          <span>11/12</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year12" class="sff-grid__item" id="year12">
+          <span>12/13</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year13" class="sff-grid__item" id="year13">
+          <span>13/14</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year14" class="sff-grid__item" id="year14">
+          <span>14/15</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year15" class="sff-grid__item" id="year15">
+          <span>15/16</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year16" class="sff-grid__item" id="year16">
+          <span>16/17</span>
+        </a>
+        <div class="sff-grid__content"></div>
+        <a href="#year17" class="sff-grid__item" id="year17">
+          <span>17/18</span>
+        </a>
+        <div class="sff-grid__content"></div>
+
+      </div>
+
     </div>
   </div>
 
@@ -1245,9 +1377,12 @@
     </div>
   </div>
 
-  <div class="place">
+
+
+  <!-- <div class="sff-panel">
+
     PLAYER OF THE SEASON PER SEASON
-  </div>
+  </div> -->
 
   <div class="sff-panel sff-panel--white" text6>
     <div class="site-wrap site-wrap-padding">
@@ -1281,556 +1416,777 @@
     </div>
   </div>
 
-  <div class="place">Manager by Season</div>
-
-  <div class="sff-panel sff-panel--white" text7>
+  <div class="sff-panel sff-panel--white">
     <div class="site-wrap site-wrap-padding">
+      <h2 class="sff-block-header sff-block-header--invert">
+        <span>Managers</span>
+      </h2>
 
-      <div class="sff-text-block ">
+      <div class="sff-sticky-timeline">
+        <div class="sff-sticky-timeline__cell">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:11rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Pep Guardiola</h2>
+              <p>2016-Present
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 13.2rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Manuel Pellegrini</h2>
+              <p>2013-16
+                <br>W12 D1 L30
+                <br>2 trophies</p>
+            </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.2rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Brian Kidd</h2>
+              <p>2013
+                <br>W12 D1 L30
+                <br>0 trophies</p>
+            </div>
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 14.2rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Roberto Mancini</h2>
+              <p>2009-2013
+                <br>W12 D1 L30
+                <br>1 trophy</p>
+            </div>
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 9.6rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Mark Hughes</h2>
+              <p>2008-2009
+                <br>W12 D1 L30
+                <br>0 trophies</p>
+            </div>
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Sven-G&ouml;ran Eriksson</h2>
+              <p>2007-2008
+                <br>W12 D1 L30
+                <br>0 trophies</p>
+            </div>
+          </div>
 
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Stuart Pearce</h2>
+              <p>2005-2007
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Kevin Keegan</h2>
+              <p>2001-2005
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Joe Royle</h2>
+              <p>1998-2001
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Frank Clark</h2>
+              <p>1996-1998
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Stuart Pearce</h2>
+              <p>2005-2007
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Phil Neal</h2>
+              <p>1996
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Steve Coppell</h2>
+              <p>1996
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Asa Hartford</h2>
+              <p>1996
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Alan Ball</h2>
+              <p>1995-1996
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Brian Horton</h2>
+              <p>1993-1995
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Tony Book</h2>
+              <p>1993
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
+            <div class="sff-sticky-timeline__body">
+              <h2>Peter Reid</h2>
+              <p>1990-1993
+                <br>W12 D1 L30
+                <br>16 trophies</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sff-sticky-timeline__cell">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11.2rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Jos&eacute; Mourinho</h2>
+              <p>2016-Present
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 10.4rem">
+            <div class="sff-sticky-timeline__body">
+              <h2>Louis van Gaal</h2>
+              <p>2014-2016
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 6.2rem">
+            <div class="sff-sticky-timeline__body ">
+              <h2>Ryan Giggs</h2>
+              <p>2014 (caretaker)
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 7.8rem">
+            <div class="sff-sticky-timeline__body ">
+              <h2>David Moyes</h2>
+              <p>2013
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 72rem">
+            <div class="sff-sticky-timeline__body ">
+              <h2>Alex Ferguson</h2>
+              <p>1986-2013
+                <br>W12 D1 L3
+                <br>3 trophies</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="sff-panel sff-panel--no-padding" kits>
+    <div class="sff-panel sff-panel--white " text7>
+      <div class="site-wrap site-wrap-padding ">
 
-    <div class="sff-carousel sff-city-united">
-      <div class="sff-carousel__inner site-wrap site-wrap-padding">
-        <h2 class="sff-block-header">
-          <span>History of the Kits</span>
-        </h2>
-        <!-- <div class="sff-carousel__switch">
+        <div class="sff-text-block ">
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
+            <p>
+              habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
+              <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
+                non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
+                <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
+                  lectus, posuere bibendum tellus nisi sed nisl.
+                  <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sff-panel sff-panel--no-padding " kits>
+
+      <div class="sff-carousel sff-city-united ">
+        <div class="sff-carousel__inner site-wrap site-wrap-padding ">
+          <h2 class="sff-block-header ">
+            <span>History of the Kits</span>
+          </h2>
+          <!-- <div class="sff-carousel__switch ">
                         switch
                       </div> -->
-        <div class="sff-carousel__scroll">
+          <div class="sff-carousel__scroll ">
 
-          <div class="sff-carousel__item sff-carousel__item--active">
+            <div class="sff-carousel__item sff-carousel__item--active ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9293-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9293-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9293-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9293-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9293-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9293-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9293-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9293-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
 
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9394-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9394-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9394-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9394-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9394-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9394-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9394-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9394-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9495-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9495-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9495-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9495-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9495-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9495-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9495-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9495-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9596-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9596-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9596-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9596-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9596-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9596-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9596-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9596-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9697-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9697-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9697-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9697-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9697-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9697-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9697-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9697-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9798-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9798-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9798-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9798-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9798-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9798-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9798-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9798-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9899-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9899-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9899-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9899-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9899-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9899-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9899-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9899-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-9900-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-9900-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-9900-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-9900-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-9900-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-9900-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9900-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9900-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0001-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0001-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0001-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0001-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0001-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0001-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0001-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0001-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0102-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0102-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0102-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0102-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0102-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0102-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0102-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0102-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0203-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0203-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0203-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0203-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0203-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0203-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0203-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0203-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0304-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0304-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0304-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0304-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0304-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0304-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0304-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0304-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0405-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0405-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0405-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0405-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0405-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0405-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0405-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0405-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0506-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0506-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0506-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0506-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0506-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0506-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0506-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0506-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0607-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0607-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0607-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0607-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0607-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0607-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0607-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0607-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0708-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0708-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0708-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0708-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0708-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0708-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0708-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0708-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0809-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0809-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0809-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0809-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0809-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0809-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0809-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0809-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-0910-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-0910-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-0910-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-0910-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-0910-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-0910-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0910-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0910-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1011-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1011-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1011-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1011-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1011-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1011-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1011-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1011-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1112-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1112-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1112-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1112-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1112-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1112-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1112-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1112-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1213-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1213-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1213-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1213-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1213-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1213-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1213-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1213-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1314-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1314-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1314-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1314-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1314-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1314-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1314-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1314-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1415-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1415-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1415-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1415-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1415-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1415-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1415-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1415-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1516-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1516-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1516-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1516-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1516-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1516-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1516-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1516-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1617-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1617-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1617-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1617-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1617-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1617-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1617-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1617-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <div class="sff-carousel__item">
+            <div class="sff-carousel__item ">
 
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/utd/manutd-ak-1718-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/utd/manutd-hk-1718-258x340.png" alt="" class="sff-carousel__image">
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/utd/manutd-ak-1718-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/utd/manutd-hk-1718-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
+              <div class="sff-carousel__item-cell ">
+                <img src="assets/kits/city/mancity-ak-1718-258x340.png " alt=" " class="sff-carousel__image ">
+                <img src="assets/kits/city/mancity-hk-1718-258x340.png " alt=" " class="sff-carousel__image ">
+              </div>
             </div>
-            <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-1718-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-1718-258x340.png" alt="" class="sff-carousel__image">
-            </div>
-          </div>
-          <!-- <div class="sff-carousel__item">
+            <!-- <div class="sff-carousel__item ">
               
-                          <div class="sff-carousel__item-cell">
-                            <img src="assets/kits/utd/manutd-ak-1819-258x340.png" alt="" class="sff-carousel__image">
-                            <img src="assets/kits/utd/manutd-hk-1819-258x340.png" alt="" class="sff-carousel__image">
+                          <div class="sff-carousel__item-cell ">
+                            <img src="assets/kits/utd/manutd-ak-1819-258x340.png " alt=" " class="sff-carousel__image ">
+                            <img src="assets/kits/utd/manutd-hk-1819-258x340.png " alt=" " class="sff-carousel__image ">
                           </div>
-                          <div class="sff-carousel__item-cell">
-                            <img src="assets/kits/city/mancity-ak-1819-258x340.png" alt="" class="sff-carousel__image">
-                            <img src="assets/kits/city/mancity-hk-1819-258x340.png" alt="" class="sff-carousel__image">
+                          <div class="sff-carousel__item-cell ">
+                            <img src="assets/kits/city/mancity-ak-1819-258x340.png " alt=" " class="sff-carousel__image ">
+                            <img src="assets/kits/city/mancity-hk-1819-258x340.png " alt=" " class="sff-carousel__image ">
                           </div>
                         </div> -->
 
 
 
 
-        </div>
-        <div class="sff-carousel__nav">
-          <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link sff-carousel__nav-link--disabled" data-type="previous" aria-label="previous"></a>
-          <div class="sff-carousel__nav-cell sff-carousel__nav-items">
-            <ul class="sff-carousel__nav-rail">
-              <li class="sff-carousel__nav-item sff-carousel__nav-item--on">1992/3</li>
-              <li class="sff-carousel__nav-item">1993/94</li>
-              <li class="sff-carousel__nav-item">1994/95</li>
-              <li class="sff-carousel__nav-item">1995/96</li>
-              <li class="sff-carousel__nav-item">1996/97</li>
-              <li class="sff-carousel__nav-item">1997/98</li>
-              <li class="sff-carousel__nav-item">1998/99</li>
-              <li class="sff-carousel__nav-item">1999/00</li>
-              <li class="sff-carousel__nav-item">2000/01</li>
-              <li class="sff-carousel__nav-item">2001/02</li>
-              <li class="sff-carousel__nav-item">2002/03</li>
-              <li class="sff-carousel__nav-item">2003/04</li>
-              <li class="sff-carousel__nav-item">2004/05</li>
-              <li class="sff-carousel__nav-item">2005/06</li>
-              <li class="sff-carousel__nav-item">2006/07</li>
-              <li class="sff-carousel__nav-item">2007/08</li>
-              <li class="sff-carousel__nav-item">2008/09</li>
-              <li class="sff-carousel__nav-item">2009/10</li>
-              <li class="sff-carousel__nav-item">2010/11</li>
-              <li class="sff-carousel__nav-item">2011/12</li>
-              <li class="sff-carousel__nav-item">2012/13</li>
-              <li class="sff-carousel__nav-item">2013/14</li>
-              <li class="sff-carousel__nav-item">2014/15</li>
-              <li class="sff-carousel__nav-item">2015/16</li>
-              <li class="sff-carousel__nav-item">2016/17</li>
-              <li class="sff-carousel__nav-item">2017/18</li>
-              <!-- <li class="sff-carousel__nav-item">2018/19</li> -->
-            </ul>
           </div>
-          <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link" data-type="next" aria-label="next"></a>
+          <div class="sff-carousel__nav ">
+            <a href="# " class="sff-carousel__nav-cell sff-carousel__nav-link sff-carousel__nav-link--disabled
+              " data-type="previous " aria-label="previous "></a>
+            <div class="sff-carousel__nav-cell sff-carousel__nav-items ">
+              <ul class="sff-carousel__nav-rail ">
+                <li class="sff-carousel__nav-item sff-carousel__nav-item--on ">1992/3</li>
+                <li class="sff-carousel__nav-item ">1993/94</li>
+                <li class="sff-carousel__nav-item ">1994/95</li>
+                <li class="sff-carousel__nav-item ">1995/96</li>
+                <li class="sff-carousel__nav-item ">1996/97</li>
+                <li class="sff-carousel__nav-item ">1997/98</li>
+                <li class="sff-carousel__nav-item ">1998/99</li>
+                <li class="sff-carousel__nav-item ">1999/00</li>
+                <li class="sff-carousel__nav-item ">2000/01</li>
+                <li class="sff-carousel__nav-item ">2001/02</li>
+                <li class="sff-carousel__nav-item ">2002/03</li>
+                <li class="sff-carousel__nav-item ">2003/04</li>
+                <li class="sff-carousel__nav-item ">2004/05</li>
+                <li class="sff-carousel__nav-item ">2005/06</li>
+                <li class="sff-carousel__nav-item ">2006/07</li>
+                <li class="sff-carousel__nav-item ">2007/08</li>
+                <li class="sff-carousel__nav-item ">2008/09</li>
+                <li class="sff-carousel__nav-item ">2009/10</li>
+                <li class="sff-carousel__nav-item ">2010/11</li>
+                <li class="sff-carousel__nav-item ">2011/12</li>
+                <li class="sff-carousel__nav-item ">2012/13</li>
+                <li class="sff-carousel__nav-item ">2013/14</li>
+                <li class="sff-carousel__nav-item ">2014/15</li>
+                <li class="sff-carousel__nav-item ">2015/16</li>
+                <li class="sff-carousel__nav-item ">2016/17</li>
+                <li class="sff-carousel__nav-item ">2017/18</li>
+                <!-- <li class="sff-carousel__nav-item ">2018/19</li> -->
+              </ul>
+            </div>
+            <a href="# " class="sff-carousel__nav-cell sff-carousel__nav-link " data-type="next " aria-label="next "></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="sff-panel sff-panel--white" text8>
-    <div class="site-wrap site-wrap-padding">
+    <div class="sff-panel sff-panel--white " text8>
+      <div class="site-wrap site-wrap-padding ">
 
-      <div class="sff-text-block ">
+        <div class="sff-text-block ">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
           <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
+            <p>
+              habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
+              <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
+                non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
+                <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
+                  lectus, posuere bibendum tellus nisi sed nisl.
+                  <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
 
-      </div>
-    </div>
-  </div>
-
-  <div class="sff-quiz-fact" data-id="100|10" id="sff-quiz-2" quiz4>
-    <div class="site-wrap site-wrap-padding">
-      <div class="sff-quiz-fact__body">
-        <p class="sff-quiz-fact__question">DERBIES RELATED QUIZ QUESTION</p>
-        <div class="sff-quiz-fact__answers">
-          <a href="#" class="sff-quiz-fact__answer">Cantona</a>
-          <a href="#" class="sff-quiz-fact__answer">Cole</a>
-          <a href="#" class="sff-quiz-fact__answer">Anelka</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="sff-panel sff-city-united">
-    <div class="site-wrap site-wrap-padding">
-      <h2 class="sff-block-header">
-        <span>Premier League H2H</span>
-      </h2>
-
-
-      <div class="sff-h2h__header">
-        <div class="sff-h2h__header__cell">
-          <div class="sff-h2h__header-image">
-            <img src="http://e0.365dm.com/football/badges/192/345.png" alt="Manchester City badge">
-          </div>
-          <div class="">
-            <div class="sff-counter sff-color-city" data-trigger="100" data-animate-in-view>
-
-              <div class="sff-counter__cell" data-number="1">
-                <span>1</span>
-              </div>
-              <div class="sff-counter__cell" data-number="3">
-                <span>3</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sff-h2h__header__cell">
-          <p>Draw</p>
-          <div class="">
-            <div class="sff-counter sff-color-city" data-trigger="100" data-animate-in-view>
-
-              <div class="sff-counter__cell" data-number="8">
-                <span>8</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="sff-h2h__header__cell">
-          <div class="sff-h2h__header-image">
-            <img src="http://e0.365dm.com/football/badges/192/210.png" alt="Manchester United badge">
-          </div>
-          <div class="">
-            <div class="sff-counter sff-color-city" data-trigger="100" data-animate-in-view>
-
-              <div class="sff-counter__cell" data-number="2">
-                <span>2</span>
-              </div>
-              <div class="sff-counter__cell" data-number="1">
-                <span>1</span>
-              </div>
-            </div>
+    <div class="sff-quiz-fact " data-id="100|10 " id="sff-quiz-2 " quiz4>
+      <div class="site-wrap site-wrap-padding ">
+        <div class="sff-quiz-fact__body ">
+          <p class="sff-quiz-fact__question ">DERBIES RELATED QUIZ QUESTION</p>
+          <div class="sff-quiz-fact__answers ">
+            <a href="# " class="sff-quiz-fact__answer ">Cantona</a>
+            <a href="# " class="sff-quiz-fact__answer ">Cole</a>
+            <a href="# " class="sff-quiz-fact__answer ">Anelka</a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="sff-h2h__body">
-        <div class="sff-h2h__body-cell">
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">3-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">4-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">3-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-2</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-6</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-2</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">4-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">0-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-2</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-city">1-2</div>
-        </div>
-        <div class="sff-h2h__body-cell">
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">1-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">1-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">1-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">0-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">1-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">0-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">0-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result">0-0</div>
-        </div>
-        <div class="sff-h2h__body-cell">
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">5-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">1-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">3-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-2</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">3-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-0</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">4-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-3</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">4-2</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">0-1</div>
-          <div data-trigger="100" data-animate-in-view class="sff-h2h__result sff-united">2-3</div>
+    <div class="sff-panel sff-city-united ">
+      <div class="site-wrap site-wrap-padding ">
+        <h2 class="sff-block-header ">
+          <span>Premier League H2H</span>
+        </h2>
 
-        </div>
-      </div>
 
-      <!-- <div class="sff-stat-block sff-stat-block--large">
+        <div class="sff-h2h__header ">
+          <div class="sff-h2h__header__cell ">
+            <div class="sff-h2h__header-image ">
+              <img src="http://e0.365dm.com/football/badges/192/345.png " alt="Manchester City badge ">
+            </div>
+            <div class=" ">
+              <div class="sff-counter sff-color-city " data-trigger="100 " data-animate-in-view>
+
+                <div class="sff-counter__cell " data-number="1 ">
+                  <span>1</span>
+                </div>
+                <div class="sff-counter__cell " data-number="3 ">
+                  <span>3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sff-h2h__header__cell ">
+            <p>Draw</p>
+            <div class=" ">
+              <div class="sff-counter sff-color-city " data-trigger="100 " data-animate-in-view>
+
+                <div class="sff-counter__cell " data-number="8 ">
+                  <span>8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sff-h2h__header__cell ">
+            <div class="sff-h2h__header-image ">
+              <img src="http://e0.365dm.com/football/badges/192/210.png " alt="Manchester United badge ">
+            </div>
+            <div class=" ">
+              <div class="sff-counter sff-color-city " data-trigger="100 " data-animate-in-view>
+
+                <div class="sff-counter__cell " data-number="2 ">
+                  <span>2</span>
+                </div>
+                <div class="sff-counter__cell " data-number="1 ">
+                  <span>1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sff-h2h__body ">
+          <div class="sff-h2h__body-cell sff-h2h--city ">
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">3-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">4-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">3-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-2</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-6</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-2</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">4-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-2</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-2</div>
+          </div>
+          <div class="sff-h2h__body-cell ">
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-0</div>
+          </div>
+          <div class="sff-h2h__body-cell sff-h2h--united ">
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">5-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">1-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">3-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-2</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">3-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-0</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">4-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-3</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">4-2</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">0-1</div>
+            <div data-trigger="100 " data-animate-in-view class="sff-h2h__result ">2-3</div>
+
+          </div>
+        </div>
+
+        <!-- <div class="sff-stat-block sff-stat-block--large ">
 
         <h4>Premier League</h4>
 
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="width: 15%" data-trigger="100" data-animate-in-view>8</h5>
-            <div class="sff-stat__bar-item-cell" style="width: 50%" data-label="13" data-trigger="100" data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell" style="width: 100%" data-label="21" data-trigger="100" data-animate-in-view></div>
+        <div class="sff-stat__bar ">
+          <div class="sff-stat__bar-item ">
+            <h5 style="width: 15% " data-trigger="100 " data-animate-in-view>8</h5>
+            <div class="sff-stat__bar-item-cell " style="width: 50% " data-label="13 " data-trigger="100 " data-animate-in-view></div>
+            <div class="sff-stat__bar-item-cell " style="width: 100% " data-label="21 " data-trigger="100 " data-animate-in-view></div>
 
           </div>
         </div>
 
       </div>
-      <div class="sff-stat-block sff-stat-block--large">
+      <div class="sff-stat-block sff-stat-block--large ">
 
         <h4>FA Cup</h4>
 
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell" style="width: 10%" data-label="1" data-trigger="100" data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell" style="width: 30%" data-label="3" data-trigger="100" data-animate-in-view></div>
+        <div class="sff-stat__bar ">
+          <div class="sff-stat__bar-item ">
+            <h5 style="display: none ">0</h5>
+            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
+            <div class="sff-stat__bar-item-cell " style="width: 30% " data-label="3 " data-trigger="100 " data-animate-in-view></div>
 
           </div>
         </div>
 
       </div>
 
-      <div class="sff-stat-block sff-stat-block--large">
+      <div class="sff-stat-block sff-stat-block--large ">
 
         <h4>League Cup</h4>
 
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell" style="width: 10%" data-label="1" data-trigger="100" data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell" style="width: 20%" data-label="2" data-trigger="100" data-animate-in-view></div>
+        <div class="sff-stat__bar ">
+          <div class="sff-stat__bar-item ">
+            <h5 style="display: none ">0</h5>
+            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
+            <div class="sff-stat__bar-item-cell " style="width: 20% " data-label="2 " data-trigger="100 " data-animate-in-view></div>
 
           </div>
         </div>
@@ -1839,75 +2195,76 @@
 
 
 
-      <div class="sff-stat-block sff-stat-block--large">
+      <div class="sff-stat-block sff-stat-block--large ">
 
         <h4>Charity Shield</h4>
 
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell" style="width: 0%" data-label="0" data-trigger="100" data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell" style="width: 10%" data-label="1" data-trigger="100" data-animate-in-view></div>
+        <div class="sff-stat__bar ">
+          <div class="sff-stat__bar-item ">
+            <h5 style="display: none ">0</h5>
+            <div class="sff-stat__bar-item-cell " style="width: 0% " data-label="0 " data-trigger="100 " data-animate-in-view></div>
+            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
 
           </div>
         </div>
 
       </div> -->
 
+      </div>
     </div>
-  </div>
 
-  <div class="place">
-    VIDEO: CITY LIFTING THE TROPHY
-  </div>
+    <div class="place ">
+      VIDEO: CITY LIFTING THE TROPHY
+    </div>
 
-  <div class="sff-panel sff-panel--white" text9>
-    <div class="site-wrap site-wrap-padding">
+    <div class="sff-panel sff-panel--white " text9>
+      <div class="site-wrap site-wrap-padding ">
 
-      <div class="sff-text-block ">
+        <div class="sff-text-block ">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
           <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
+            <p>
+              habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
+              <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
+                non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
+                <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
+                  lectus, posuere bibendum tellus nisi sed nisl.
+                  <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
 
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="sff-panel sff-panel--no-padding sff-city-united" team-selector>
+    <div class="sff-panel sff-panel--no-padding sff-city-united " team-selector>
 
-    <div class="site-wrap site-wrap-padding">
-      <div class="sff-team-selector">
-        <h2 class="sff-block-header">
-          <span>Team Selector</span>
-        </h2>
-        <div id="interactive-selector-3" class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41"
-          data-url="json/data--utd-city.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url=""
-          data-whatsapp-share-url=""></div>
+      <div class="site-wrap site-wrap-padding ">
+        <div class="sff-team-selector ">
+          <h2 class="sff-block-header ">
+            <span>Team Selector</span>
+          </h2>
+          <div id="interactive-selector-3 " class="sdc-interactive-selector " data-component-name="sdc-interactive-selector
+              " data-token="a9a00d56bb6ad32a8d59cabc2f555d41 " data-url="json/data--utd-city.json " data-post-url=" " data-article-url=" "
+            data-facebook-share-url="
+              " data-twitter-share-url=" " data-whatsapp-share-url=" "></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="place">
-    GET SKY CALL TO ACTION
-  </div>
-
+    <div class="place ">
+      GET SKY CALL TO ACTION
+    </div>
 
 
 
 
-  <!-- <div class="sff-panel sff-panel--no-padding" managers>
 
-    <div class="sff-curtain jose-pep" data-animate-in-view data-trigger="75">
-      <div class="sff-curtain__wing sff-city">
-        <div class="jose-pep__block">
+    <!-- <div class="sff-panel sff-panel--no-padding " managers>
+
+    <div class="sff-curtain jose-pep " data-animate-in-view data-trigger="75 ">
+      <div class="sff-curtain__wing sff-city ">
+        <div class="jose-pep__block ">
           <h3>Pep
             <small>Guardiola</small>
           </h3>
@@ -1917,12 +2274,12 @@
 
         </div>
 
-        <img src="assets/pep.png" alt="Pep Guardiola" class="jose-pep__image">
+        <img src="assets/pep.png " alt="Pep Guardiola " class="jose-pep__image ">
       </div>
 
-      <div class="sff-curtain__wing sff-united">
+      <div class="sff-curtain__wing sff-united ">
 
-        <div class="jose-pep__block">
+        <div class="jose-pep__block ">
           <h3>Jose
             <small>Mourhinho</small>
           </h3>
@@ -1930,7 +2287,7 @@
             W8 L5 D2
           </p>
         </div>
-        <img src="assets/jose.png" alt="Jose Mourhinho" class="jose-pep__image">
+        <img src="assets/jose.png " alt="Jose Mourhinho " class="jose-pep__image ">
 
       </div>
 
@@ -1939,66 +2296,24 @@
 
 
 
-  <div class="sff-panel sff-panel--no-padding" grid>
-    <div class="site-wrap site-wrap-padding">
-      <div class="sff-grid">
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-        <div class="sff-grid__item"></div>
-        <div class="sff-grid__content"></div>
-      </div>
-    </div>
-  </div>
 
 
 
 
 
-  <!-- <div class="sff-panel sff-panel--no-padding" classic-moment-rooney>
-    <div class="sff-gallery">
+    <!-- <div class="sff-panel sff-panel--no-padding " classic-moment-rooney>
+    <div class="sff-gallery ">
 
-      <div class="sff-gallery__slide">
+      <div class="sff-gallery__slide ">
 
         <p>
           <small>Classic moment</small>Rooney <wbr>2011</p>
 
       </div>
 
-      <div class="sff-gallery__slide sff-gallery__slide--fixed">
-        <img src="https://ext.fmkorea.com/files/attach/new/20171115/33854530/45981397/837249493/35577dec6ab1b82cbca5ca5536f1421c.jpg"
-          alt="">
+      <div class="sff-gallery__slide sff-gallery__slide--fixed ">
+        <img src="https://ext.fmkorea.com/files/attach/new/20171115/33854530/45981397/837249493/35577dec6ab1b82cbca5ca5536f1421c.jpg "
+          alt=" ">
 
       </div>
 
@@ -2011,19 +2326,19 @@
 
 
 
-  <!-- <div class="sff-panel sff-panel--no-padding">
-    <div class="sff-gallery">
+    <!-- <div class="sff-panel sff-panel--no-padding ">
+    <div class="sff-gallery ">
 
-      <div class="sff-gallery__slide">
+      <div class="sff-gallery__slide ">
 
         <p>
           <small>Classic moment</small> Aguerro 2012</p>
 
       </div>
 
-      <div class="sff-gallery__slide sff-gallery__slide--fixed">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2016/09/28/c535bc90-78f5-48d5-95b3-14f214de3e60/GettyImages-589081908.jpg"
-          alt="">
+      <div class="sff-gallery__slide sff-gallery__slide--fixed ">
+        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2016/09/28/c535bc90-78f5-48d5-95b3-14f214de3e60/GettyImages-589081908.jpg "
+          alt=" ">
 
       </div>
 
@@ -2033,562 +2348,1272 @@
 
 
 
-  <div class="blackjack-sdc-digrev-footer site-footer" data-component-name="blackjack-sdc-digrev-footer">
-    <div class="site-footer__body">
-      <ul class="site-footer__nav social-nav">
-        <li class="social-nav__item">
-          <a href="https://twitter.com/SkySports" target="_blank" class="social-nav__link ">
-            <span class="social-nav__link-icon social-nav__link--twitter-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
-                <path d="M373.461 78.398c-13.228 5.859-27.444 9.833-42.363 11.612 15.234-9.125 26.916-23.587 32.425-40.803-14.245 8.448-30.029 14.59-46.823 17.893-13.455-14.329-32.631-23.283-53.84-23.283-40.723 0-73.74 33.01-73.74 73.747 0 5.775.651 11.4 1.908 16.802-61.301-3.068-115.639-32.435-152.018-77.051-6.336 10.888-9.983 23.555-9.983 37.079 0 25.583 13.022 48.153 32.812 61.384-12.092-.388-23.459-3.702-33.409-9.235v.938c0 35.731 25.419 65.535 59.154 72.307-6.186 1.687-12.7 2.586-19.428 2.586-4.746 0-9.375-.453-13.876-1.326 9.39 29.297 36.621 50.625 68.896 51.228-25.243 19.783-57.037 31.565-91.593 31.565-5.955 0-11.825-.352-17.593-1.024 32.637 20.926 71.403 33.127 113.053 33.127 135.654 0 209.834-112.375 209.834-209.837 0-3.186-.08-6.372-.22-9.536 14.413-10.4 26.916-23.382 36.804-38.173z"></path>
-              </svg>
-            </span>Twitter</a>
-        </li>
-        <li class="social-nav__item">
-          <a href="https://www.facebook.com/SkySports" target="_blank" class="social-nav__link">
-            <span class="social-nav__link-icon social-nav__link--facebook-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
-                <path d="M283.232 207.471l8.248-64.043h-63.428v-40.888c0-18.549 5.187-31.183 31.758-31.183l33.896-.021v-57.272c-5.846-.784-25.956-2.531-49.408-2.531-48.9 0-82.357 29.861-82.357 84.668v47.227h-55.311v64.043h55.312v164.332h66.113v-164.332h55.177z"></path>
-              </svg>
-            </span>Facebook</a>
-        </li>
-        <li class="social-nav__item">
-          <a href="https://plus.google.com/+SoccerAMOfficial/posts" target="_blank" class="social-nav__link">
-            <span class="social-nav__link-icon social-nav__link--google-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
-                <path d="M126.545 175.636v39.282h64.96c-2.614 16.843-19.632 49.41-64.96 49.41-39.11 0-71.016-32.407-71.016-72.329 0-39.927 31.905-72.326 71.016-72.326 22.253 0 37.146 9.492 45.656 17.674l31.09-29.946c-19.967-18.656-45.817-29.947-76.746-29.947-63.328-.001-114.545 51.217-114.545 114.545 0 63.332 51.217 114.548 114.545 114.548 66.109 0 109.96-46.47 109.96-111.928 0-7.525-.814-13.255-1.806-18.983h-108.154zM339.273 142.908h-32.727v32.728h-32.728v32.73h32.728v32.727h32.727v-32.727h32.727v-32.73h-32.727z"></path>
-              </svg>
-            </span>Google+</a>
-        </li>
-      </ul>
+    <div class="blackjack-sdc-digrev-footer site-footer " data-component-name="blackjack-sdc-digrev-footer ">
+      <div class="site-footer__body ">
+        <ul class="site-footer__nav social-nav ">
+          <li class="social-nav__item ">
+            <a href="https://twitter.com/SkySports " target="_blank " class="social-nav__link ">
+              <span class="social-nav__link-icon social-nav__link--twitter-icon ">
+                <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384 ">
+                  <path d="M373.461 78.398c-13.228 5.859-27.444 9.833-42.363 11.612 15.234-9.125 26.916-23.587 32.425-40.803-14.245
+              8.448-30.029 14.59-46.823 17.893-13.455-14.329-32.631-23.283-53.84-23.283-40.723 0-73.74 33.01-73.74 73.747 0
+              5.775.651 11.4 1.908 16.802-61.301-3.068-115.639-32.435-152.018-77.051-6.336 10.888-9.983 23.555-9.983 37.079
+              0 25.583 13.022 48.153 32.812 61.384-12.092-.388-23.459-3.702-33.409-9.235v.938c0 35.731 25.419 65.535 59.154
+              72.307-6.186 1.687-12.7 2.586-19.428 2.586-4.746 0-9.375-.453-13.876-1.326 9.39 29.297 36.621 50.625 68.896 51.228-25.243
+              19.783-57.037 31.565-91.593 31.565-5.955 0-11.825-.352-17.593-1.024 32.637 20.926 71.403 33.127 113.053 33.127
+              135.654 0 209.834-112.375 209.834-209.837 0-3.186-.08-6.372-.22-9.536 14.413-10.4 26.916-23.382 36.804-38.173z "></path>
+                </svg>
+              </span>Twitter</a>
+          </li>
+          <li class="social-nav__item ">
+            <a href="https://www.facebook.com/SkySports " target="_blank " class="social-nav__link ">
+              <span class="social-nav__link-icon social-nav__link--facebook-icon ">
+                <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384 ">
+                  <path d="M283.232 207.471l8.248-64.043h-63.428v-40.888c0-18.549 5.187-31.183 31.758-31.183l33.896-.021v-57.272c-5.846-.784-25.956-2.531-49.408-2.531-48.9
+              0-82.357 29.861-82.357 84.668v47.227h-55.311v64.043h55.312v164.332h66.113v-164.332h55.177z "></path>
+                </svg>
+              </span>Facebook</a>
+          </li>
+          <li class="social-nav__item ">
+            <a href="https://plus.google.com/+SoccerAMOfficial/posts " target="_blank " class="social-nav__link ">
+              <span class="social-nav__link-icon social-nav__link--google-icon ">
+                <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384 ">
+                  <path d="M126.545 175.636v39.282h64.96c-2.614 16.843-19.632 49.41-64.96 49.41-39.11 0-71.016-32.407-71.016-72.329
+              0-39.927 31.905-72.326 71.016-72.326 22.253 0 37.146 9.492 45.656 17.674l31.09-29.946c-19.967-18.656-45.817-29.947-76.746-29.947-63.328-.001-114.545
+              51.217-114.545 114.545 0 63.332 51.217 114.548 114.545 114.548 66.109 0 109.96-46.47 109.96-111.928 0-7.525-.814-13.255-1.806-18.983h-108.154zM339.273
+              142.908h-32.727v32.728h-32.728v32.73h32.728v32.727h32.727v-32.727h32.727v-32.73h-32.727z "></path>
+                </svg>
+              </span>Google+</a>
+          </li>
+        </ul>
 
-      <!-- LINKS GRID -->
-      <ul class="site-footer__links accordian" data-role="accordian-body">
-        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-0">
-          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Sky Sports</a>
-          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
-            <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
-              <li class="site-footer__item">
-                <a href="/watch/get-sky" class="site-footer__link">Get Sky Sports</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/mobile" class="site-footer__link">Sky Sports Apps</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.sportinglife.com/" class="site-footer__link" target="_blank">Sportinglife.com</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://www.teamtalk.com/" class="site-footer__link" target="_blank">TEAMtalk.com</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.football365.com/" class="site-footer__link" target="_blank">Football365.com</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://www.teamsky.com/" class="site-footer__link" target="_blank">Team Sky</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-1">
-          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Partners</a>
-          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
-            <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
-              <li class="site-footer__item">
-                <a href="https://www.skybet.com/" class="site-footer__link" target="_blank">Sky Bet</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://fantasyfootball.skysports.com/" class="site-footer__link" target="_blank">Fantasy Football</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://super6.skysports.com/" class="site-footer__link" target="_blank">Super 6</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://pubfinder.sky.com/" class="site-footer__link" target="_blank">Sky Sports Pub Finder</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://livingforsport.skysports.com/" class="site-footer__link" target="_blank">Living for Sport</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.planetrugby.com/" class="site-footer__link" target="_blank">Planet Rugby</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.golf365.com/" class="site-footer__link" target="_blank">Golf365</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.planetf1.com/" class="site-footer__link" target="_blank">Planet F1</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.cricket365.com/" class="site-footer__link" target="_blank">Cricket365</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-2">
-          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Sky Sports Channels</a>
-          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
-            <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-main-event" class="site-footer__link">Sky Sports Main Event</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-premier-league" class="site-footer__link">Sky Sports Premier League</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-football" class="site-footer__link">Sky Sports Football</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-cricket" class="site-footer__link">Sky Sports Cricket</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-golf" class="site-footer__link">Sky Sports Golf</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-f1" class="site-footer__link">Sky Sports F1 </a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-action" class="site-footer__link">Sky Sports Action</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-arena" class="site-footer__link">Sky Sports Arena</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-news" class="site-footer__link">Sky Sports News</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="/watch/sky-sports-mix" class="site-footer__link">Sky Sports Mix</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-3">
-          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">More Sky Sites</a>
-          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
-            <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
-              <li class="site-footer__item">
-                <a href="https://www.sky.com/" class="site-footer__link" target="_blank">Sky.com</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://news.sky.com/" class="site-footer__link" target="_blank">Sky News</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://corporate.sky.com/" class="site-footer__link" target="_blank">Sky Corporate</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://business.sky.com/" class="site-footer__link" target="_blank">Sky For Businesses</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://watch.nowtv.com/sports" class="site-footer__link" target="_blank">Now TV</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://communaltv.sky.com/" class="site-footer__link" target="_blank">Sky Communal TV</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://www.skyacademy.com/" class="site-footer__link" target="_blank">Sky Academy</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://corporate.sky.com/bigger-picture" class="site-footer__link" target="_blank">Bigger Picture</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.sky.com/shop/store-locator/" class="site-footer__link" target="_blank">Store Locator</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="http://www.workforsky.com/" class="site-footer__link" target="_blank">Work for Sky</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://www.skymedia.co.uk/?utm_source&#x3D;Sky_Sports&amp;utm_medium&#x3D;Web_page&amp;utm_content&#x3D;Sky_Sports_web_page&amp;utm_campaign&#x3D;Sky_Sports_web_page"
-                  class="site-footer__link" target="_blank">Advertise With Us</a>
-              </li>
-              <li class="site-footer__item">
-                <a href="https://accessories.sky.com/" class="site-footer__link" target="_blank">Sky TV Accessories</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <!-- / LINKS GRID -->
-
-      <ul class="site-footer__nav site-footer__nav--horizontal-nav">
-        <li class="site-footer__item site-footer__item--inline">
-          <a href="https://www.sky.com/help/articles/skycom-terms-and-conditions" class="site-footer__link" target="_blank">Terms &amp; Conditions</a>
-        </li>
-        <li class="site-footer__item site-footer__item--inline">
-          <a href="https://www.sky.com/help/articles/sky-privacy-and-cookies-notice" class="site-footer__link" target="_blank">Privacy &amp; Cookies Notice</a>
-        </li>
-        <li class="site-footer__item site-footer__item--inline">
-          <a href="http://accessibility.sky.com/" class="site-footer__link" target="_blank">Accessibility Information</a>
-        </li>
-        <li class="site-footer__item site-footer__item--inline">
-          <a href="/contact-us" class="site-footer__link" target="_blank">Contact Us</a>
-        </li>
-      </ul>
-      <p class="site-footer__copyright">
-        <a href="http://www.skysports.com" class="svg-logo site-footer__site-logo">
-          <img class="svg-logo__image" alt="Sky Sports" src="http://www.skysports.com/assets/Sky-Sports-Logo.svg" onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo.png'">
-        </a>
-        © 2018 Sky UK
-      </p>
-    </div>
-  </div>
-  <!-- desktop nav -->
-  <div class="site-nav-desktop__wrap" id="no-js-nav" aria-hidden="true">
-    <div class="site-nav-desktop" role="navigation" data-role="main-nav" id="site-nav-desktop-wrap">
-      <div class="site-login site-login--mobile" data-role="site-login">
-        <script type="text/template" class="login-text" data-role="default">
-            <!--default-->
-            <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
-                <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl&#x3D;http%3A%2F%2Fwww.skysports.com" data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
-            </ul>
-        </script>
-        <script type="text/template" class="login-text" data-role="isSkySports">
-            <!-- sky sports user logged in -->
-            <ul class="site-login__links">
-                <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
-                <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
-            </ul>
-        </script>
-        <script type="text/template" class="login-text" data-role="isSky">
-            <!-- sky sports user logged in -->
-            <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo">
-                    <a href="/watch/get-sky" class="site-login__link">Upgrade</a>
+        <!-- LINKS GRID -->
+        <ul class="site-footer__links accordian " data-role="accordian-body ">
+          <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-0 ">
+            <a href="# " class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer ">Sky Sports</a>
+            <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav ">
+              <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content ">
+                <li class="site-footer__item ">
+                  <a href="/watch/get-sky " class="site-footer__link ">Get Sky Sports</a>
                 </li>
-                <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
-                <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
-            </ul>
-        </script>
-        <script type="text/template" class="login-text" data-role="isNowTv">
-            <!-- now tv customer -->
-            <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
-                <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
-                <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
-            </ul>
-        </script>
-        <script type="text/template" class="login-text" data-role="isLoggedIn">
-            <!-- just a sky id login -->
-            <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
-                <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
-                <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
-            </ul>
-        </script>
-        <script type="text/template" class="login-text" data-role="isWholesale">
-            <!-- wholesale customer -->
-            <ul class="site-login__links">
-                <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> </span></li>
-                <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
-            </ul>
-        </script>
+                <li class="site-footer__item ">
+                  <a href="/mobile " class="site-footer__link ">Sky Sports Apps</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.sportinglife.com/ " class="site-footer__link " target="_blank ">Sportinglife.com</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://www.teamtalk.com/ " class="site-footer__link " target="_blank ">TEAMtalk.com</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.football365.com/ " class="site-footer__link " target="_blank ">Football365.com</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://www.teamsky.com/ " class="site-footer__link " target="_blank ">Team Sky</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-1 ">
+            <a href="# " class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer ">Partners</a>
+            <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav ">
+              <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content ">
+                <li class="site-footer__item ">
+                  <a href="https://www.skybet.com/ " class="site-footer__link " target="_blank ">Sky Bet</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://fantasyfootball.skysports.com/ " class="site-footer__link " target="_blank ">Fantasy Football</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://super6.skysports.com/ " class="site-footer__link " target="_blank ">Super 6</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://pubfinder.sky.com/ " class="site-footer__link " target="_blank ">Sky Sports Pub Finder</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://livingforsport.skysports.com/ " class="site-footer__link " target="_blank ">Living for Sport</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.planetrugby.com/ " class="site-footer__link " target="_blank ">Planet Rugby</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.golf365.com/ " class="site-footer__link " target="_blank ">Golf365</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.planetf1.com/ " class="site-footer__link " target="_blank ">Planet F1</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.cricket365.com/ " class="site-footer__link " target="_blank ">Cricket365</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-2 ">
+            <a href="# " class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer ">Sky Sports Channels</a>
+            <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav ">
+              <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content ">
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-main-event " class="site-footer__link ">Sky Sports Main Event</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-premier-league " class="site-footer__link ">Sky Sports Premier League</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-football " class="site-footer__link ">Sky Sports Football</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-cricket " class="site-footer__link ">Sky Sports Cricket</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-golf " class="site-footer__link ">Sky Sports Golf</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-f1 " class="site-footer__link ">Sky Sports F1 </a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-action " class="site-footer__link ">Sky Sports Action</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-arena " class="site-footer__link ">Sky Sports Arena</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-news " class="site-footer__link ">Sky Sports News</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="/watch/sky-sports-mix " class="site-footer__link ">Sky Sports Mix</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-3 ">
+            <a href="# " class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer ">More Sky Sites</a>
+            <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav ">
+              <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content ">
+                <li class="site-footer__item ">
+                  <a href="https://www.sky.com/ " class="site-footer__link " target="_blank ">Sky.com</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://news.sky.com/ " class="site-footer__link " target="_blank ">Sky News</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://corporate.sky.com/ " class="site-footer__link " target="_blank ">Sky Corporate</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://business.sky.com/ " class="site-footer__link " target="_blank ">Sky For Businesses</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://watch.nowtv.com/sports " class="site-footer__link " target="_blank ">Now TV</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://communaltv.sky.com/ " class="site-footer__link " target="_blank ">Sky Communal TV</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://www.skyacademy.com/ " class="site-footer__link " target="_blank ">Sky Academy</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://corporate.sky.com/bigger-picture " class="site-footer__link " target="_blank ">Bigger Picture</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.sky.com/shop/store-locator/ " class="site-footer__link " target="_blank ">Store Locator</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="http://www.workforsky.com/ " class="site-footer__link " target="_blank ">Work for Sky</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://www.skymedia.co.uk/?utm_source&#x3D;Sky_Sports&amp;utm_medium&#x3D;Web_page&amp;utm_content&#x3D;Sky_Sports_web_page&amp;utm_campaign&#x3D;Sky_Sports_web_page "
+                    class="site-footer__link " target="_blank ">Advertise With Us</a>
+                </li>
+                <li class="site-footer__item ">
+                  <a href="https://accessories.sky.com/ " class="site-footer__link " target="_blank ">Sky TV Accessories</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- / LINKS GRID -->
+
+        <ul class="site-footer__nav site-footer__nav--horizontal-nav ">
+          <li class="site-footer__item site-footer__item--inline ">
+            <a href="https://www.sky.com/help/articles/skycom-terms-and-conditions " class="site-footer__link
+              " target="_blank ">Terms &amp; Conditions</a>
+          </li>
+          <li class="site-footer__item site-footer__item--inline ">
+            <a href="https://www.sky.com/help/articles/sky-privacy-and-cookies-notice " class="site-footer__link
+              " target="_blank ">Privacy &amp; Cookies Notice</a>
+          </li>
+          <li class="site-footer__item site-footer__item--inline ">
+            <a href="http://accessibility.sky.com/ " class="site-footer__link " target="_blank ">Accessibility Information</a>
+          </li>
+          <li class="site-footer__item site-footer__item--inline ">
+            <a href="/contact-us " class="site-footer__link " target="_blank ">Contact Us</a>
+          </li>
+        </ul>
+        <p class="site-footer__copyright ">
+          <a href="http://www.skysports.com " class="svg-logo site-footer__site-logo ">
+            <img class="svg-logo__image " alt="Sky Sports " src="http://www.skysports.com/assets/Sky-Sports-Logo.svg
+              " onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo.png' ">
+          </a>
+          © 2018 Sky UK
+        </p>
       </div>
-      <ul class="site-nav-desktop__body">
-        <li class="site-nav-desktop__item">
-          <a href="/" class="site-nav-desktop__item-link">
-            Home</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-sports-more-nav"
-            id="site-nav-desktop-sports-more">Sports
-            <svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true">
-              <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5" />
-            </svg>
-          </a>
-          <div class="site-nav-desktop__menu" aria-labelledby="site-nav-desktop-sports-more" id="site-nav-desktop-sports-more-nav">
-            <div class="site-nav-desktop__menu-body">
-              <ul class="site-nav-desktop__menu-links">
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/football">
-                    Football</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/f1">
-                    F1</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/cricket">
-                    Cricket</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/rugby-union">
-                    Rugby Union</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/rugby-league">
-                    Rugby League</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/golf">
-                    Golf</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/boxing">
-                    Boxing</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/tennis">
-                    Tennis</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/cycling">
-                    Cycling</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/racing">
-                    Racing</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/world-cup">
-                    World Cup</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/darts">
-                    Darts</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/nfl">
-                    NFL</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/motorsport">
-                    Motorsport</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/netball">
-                    Netball</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/gaa">
-                    GAA</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/wwe">
-                    WWE</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/esports">
-                    eSports</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/more-sports">
-                    More Sports</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/whyte-vs-parker">
-                    Whyte vs Parker</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="/live-scores" class="site-nav-desktop__item-link">
-            Score Centre</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="/watch/video" class="site-nav-desktop__item-link">
-            Video</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="/watch" class="site-nav-desktop__item-link">
-            TV</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="https://m.skybet.com/lp/ftp-10-completely-free?sba_promo=FTP10FREE&aff=9749&dcmp=ss_main_nav" class="site-nav-desktop__item-link"
-            target="_blank">
-            Sky Bet</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="/games" class="site-nav-desktop__item-link">
-            Games</a>
-        </li>
-        <li class="site-nav-desktop__item">
-          <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-more-more-nav"
-            id="site-nav-desktop-more-more">More
-            <svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true">
-              <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5" />
-            </svg>
-          </a>
-          <div class="site-nav-desktop__menu site-nav-desktop__menu--right" aria-labelledby="site-nav-desktop-more-more" id="site-nav-desktop-more-more-nav">
-            <div class="site-nav-desktop__menu-body">
-              <ul class="site-nav-desktop__menu-links">
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/transfer-centre">
-                    Transfer Centre</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/watch/sport-on-sky">
-                    Live on Sky</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/watch/get-sky">
-                    Get Sky Sports</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/watch/tv-shows">
-                    TV Shows</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/watch/tv-guide">
-                    TV Guide</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/competitions">
-                    Competitions</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="http://go.sky.com/" target="_blank">
-                    Sky Go</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="http://www.nowtv.com/promo/sky-sports?DCMP=ilc_skysports_moredropdownlink" target="_blank">
-                    Now TV</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://pubfinder.sky.com/" target="_blank">
-                    Pub Finder</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://www.teamsky.com/" target="_blank">
-                    Team Sky</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/watch/tv-shows/sportswomen">
-                    Sportswomen</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/scholarships">
-                    Sports Scholarships</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/clubsincommunities">
-                    Clubs in Communities</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/podcasts">
-                    Podcasts</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/mobile">
-                    Mobile</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://twitter.com/SkySports" target="_blank">
-                    Twitter</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://www.facebook.com/SkySports" target="_blank">
-                    Facebook</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://livingforsport.skysports.com/" target="_blank">
-                    Living for Sport</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="/contact-us">
-                    Contact Us</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/help/articles/skycom-terms-and-conditions" target="_blank">
-                    Terms &amp; Conditions</a>
-                </li>
-                <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/" target="_blank">
-                    Sky.com</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <a href="/watch" class="site-nav-desktop__watch-button no-default-hover no-default-active">
-        <span class="site-nav-desktop__watch-button__label">Watch Sky Sports</span>
-      </a>
     </div>
-  </div>
-
-
-  <div class="sdc-site-cookie-notice sdc-site-cookie-notice--fixed-bottom" data-component-name="sdc-site-cookie-notice" data-cookie-name="sky-cookie-notice">
-    <div class="sdc-site-cookie-notice__wrapper">
-      <div class="sdc-site-cookie-notice__text">We use
-        <a href="http://help.sky.com/security/privacy/privacy-and-cookies-notice" target="_blank">cookies</a> to give you the best experience. If you do nothing we'll assume that it's ok.</div>
-      <button type="button" class="sdc-site-cookie-notice__close">
-        <span class="sdc-site-cookie-notice__close-text">Close</span>
-        <span class="sdc-site-cookie-notice__close-icon">
-          <svg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'>
-            <title>Close</title>
-            <path d='M24.45 22c1.558-1.56 3.13-3.13 4.712-4.713.346-.495.334-.946-.037-1.354-.37-.41-.742-.786-1.113-1.132-.42-.47-.854-.568-1.3-.296-.444.272-.828.618-1.15 1.04l-3.785 3.784-4.713-4.713c-.52-.346-.977-.334-1.373.037-.394.37-.766.743-1.112 1.114-.495.42-.6.853-.315 1.298.284.446.624.83 1.02 1.15L19.068 22l-4.675 4.713c-.372.495-.365.946.018 1.354.385.41.75.786 1.096 1.132.42.47.86.568 1.317.296.458-.272.848-.606 1.17-1.002l3.784-3.822 4.676 4.713c.52.346.977.334 1.373-.037.396-.37.767-.743 1.113-1.114.494-.42.6-.853.315-1.298-.285-.446-.625-.83-1.02-1.15L24.448 22zm10.76 13.434c2.698-2.697 4.423-5.913 5.178-9.65.754-3.735.414-7.365-1.02-10.89-1.436-3.526-3.706-6.365-6.81-8.517C29.453 4.225 26.02 3.105 22.26 3.02c-3.76-.088-7.23.846-10.41 2.8-3.178 1.955-5.584 4.614-7.217 7.98-1.658 3.462-2.214 7.1-1.67 10.91.544 3.81 2.103 7.15 4.676 10.02 2.522 2.77 5.59 4.637 9.202 5.602 3.612.965 7.2.878 10.762-.26 1.434-.445 2.795-1.064 4.082-1.855 1.286-.792 2.46-1.72 3.525-2.783zM10.868 11.127c2.524-2.5 5.53-3.97 9.018-4.416 3.488-.444 6.766.224 9.834 2.005 2.918 1.756 5.04 4.206 6.363 7.348 1.324 3.14 1.59 6.37.798 9.685-.865 3.464-2.696 6.296-5.49 8.498-2.797 2.202-5.982 3.303-9.557 3.303s-6.76-1.102-9.556-3.304c-2.795-2.202-4.626-5.034-5.492-8.498-.643-2.622-.6-5.24.13-7.85.73-2.61 2.047-4.866 3.952-6.77z'
-              fill='#000' fill-rule='evenodd' />
-          </svg>
-        </span>
-      </button>
+    <!-- desktop nav -->
+    <div class="site-nav-desktop__wrap " id="no-js-nav " aria-hidden="true ">
+      <div class="site-nav-desktop " role="navigation " data-role="main-nav " id="site-nav-desktop-wrap ">
+        <div class="site-login site-login--mobile " data-role="site-login ">
+          <script type="text/template " class="login-text " data-role="default ">
+            <!--default-->
+            <ul class="site-login__links ">
+                <li class="site-login__item site-login__item--promo "><a href="/watch/get-sky " class="site-login__link ">Get Sky Sports</a></li>
+                <li class="site-login__item "><a class="site-login__link site-login__link--user callfn " href="https://skyid.sky.com/signin/sports?successUrl&#x3D;http%3A%2F%2Fwww.skysports.com
+              " data-mobile-url="/sso/signin/mobile " data-desktop-url="/sso/signin/desktop " data-lite="true "><span class="site-login__link--user-icon "></span> Log In</a></li>
+            </ul>
+        </script>
+          <script type="text/template " class="login-text " data-role="isSkySports ">
+            <!-- sky sports user logged in -->
+            <ul class="site-login__links ">
+                <li class="site-login__item "><span class="site-login__link site-login__link--user "><span class="site-login__link--user-icon "></span> #{name}</span></li>
+                <li class="site-login__item "><a href="/signout?url=" class=" site-login__link site-login__link--signout ">Log Out</a></li>
+            </ul>
+        </script>
+          <script type="text/template " class="login-text " data-role="isSky ">
+            <!-- sky sports user logged in -->
+            <ul class="site-login__links ">
+                <li class="site-login__item site-login__item--promo ">
+                    <a href="/watch/get-sky " class="site-login__link ">Upgrade</a>
+                </li>
+                <li class="site-login__item "><span class="site-login__link site-login__link--user "><span class="site-login__link--user-icon "></span> #{name}</span></li>
+                <li class="site-login__item "><a href="/signout?url=" class=" site-login__link site-login__link--signout ">Log Out</a></li>
+            </ul>
+        </script>
+          <script type="text/template " class="login-text " data-role="isNowTv ">
+            <!-- now tv customer -->
+            <ul class="site-login__links ">
+                <li class="site-login__item site-login__item--promo "><a href="/watch/get-sky " class="site-login__link ">Get Sky Sports</a></li>
+                <li class="site-login__item "><span class="site-login__link site-login__link--user "><span class="site-login__link--user-icon "></span> #{name}</span></li>
+                <li class="site-login__item "><a href="/signout?url=" class=" site-login__link site-login__link--signout ">Log Out</a></li>
+            </ul>
+        </script>
+          <script type="text/template " class="login-text " data-role="isLoggedIn ">
+            <!-- just a sky id login -->
+            <ul class="site-login__links ">
+                <li class="site-login__item site-login__item--promo "><a href="/watch/get-sky " class="site-login__link ">Get Sky Sports</a></li>
+                <li class="site-login__item "><span class="site-login__link site-login__link--user "><span class="site-login__link--user-icon "></span> #{name}</span></li>
+                <li class="site-login__item "><a href="/signout?url=" class=" site-login__link site-login__link--signout ">Log Out</a></li>
+            </ul>
+        </script>
+          <script type="text/template " class="login-text " data-role="isWholesale ">
+            <!-- wholesale customer -->
+            <ul class="site-login__links ">
+                <li class="site-login__item "><span class="site-login__link site-login__link--user "><span class="site-login__link--user-icon "></span> </span></li>
+                <li class="site-login__item "><a href="/signout?url=" class=" site-login__link site-login__link--signout ">Log Out</a></li>
+            </ul>
+        </script>
+        </div>
+        <ul class="site-nav-desktop__body ">
+          <li class="site-nav-desktop__item ">
+            <a href="/ " class="site-nav-desktop__item-link ">
+              Home</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="#no-js-nav " class="site-nav-desktop__item-link site-nav-desktop__item-link--more
+              " aria-controls="site-nav-desktop-sports-more-nav " id="site-nav-desktop-sports-more ">Sports
+              <svg viewBox="0 0 2048 2048 " class="site-nav-desktop__icon " aria-hidden="true ">
+                <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914
+              977.5 " />
+              </svg>
+            </a>
+            <div class="site-nav-desktop__menu " aria-labelledby="site-nav-desktop-sports-more " id="site-nav-desktop-sports-more-nav ">
+              <div class="site-nav-desktop__menu-body ">
+                <ul class="site-nav-desktop__menu-links ">
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/football ">
+                      Football</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/f1 ">
+                      F1</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/cricket ">
+                      Cricket</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/rugby-union ">
+                      Rugby Union</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/rugby-league ">
+                      Rugby League</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/golf ">
+                      Golf</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/boxing ">
+                      Boxing</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/tennis ">
+                      Tennis</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/cycling ">
+                      Cycling</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/racing ">
+                      Racing</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/world-cup ">
+                      World Cup</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/darts ">
+                      Darts</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/nfl ">
+                      NFL</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/motorsport ">
+                      Motorsport</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/netball ">
+                      Netball</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/gaa ">
+                      GAA</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/wwe ">
+                      WWE</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/esports ">
+                      eSports</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/more-sports ">
+                      More Sports</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/whyte-vs-parker ">
+                      Whyte vs Parker</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="/live-scores " class="site-nav-desktop__item-link ">
+              Score Centre</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="/watch/video " class="site-nav-desktop__item-link ">
+              Video</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="/watch " class="site-nav-desktop__item-link ">
+              TV</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="https://m.skybet.com/lp/ftp-10-completely-free?sba_promo=FTP10FREE&aff=9749&dcmp=ss_main_nav
+              " class="site-nav-desktop__item-link " target="_blank ">
+              Sky Bet</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="/games " class="site-nav-desktop__item-link ">
+              Games</a>
+          </li>
+          <li class="site-nav-desktop__item ">
+            <a href="#no-js-nav " class="site-nav-desktop__item-link site-nav-desktop__item-link--more
+              " aria-controls="site-nav-desktop-more-more-nav " id="site-nav-desktop-more-more ">More
+              <svg viewBox="0 0 2048 2048 " class="site-nav-desktop__icon " aria-hidden="true ">
+                <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914
+              977.5 " />
+              </svg>
+            </a>
+            <div class="site-nav-desktop__menu site-nav-desktop__menu--right " aria-labelledby="site-nav-desktop-more-more
+              " id="site-nav-desktop-more-more-nav ">
+              <div class="site-nav-desktop__menu-body ">
+                <ul class="site-nav-desktop__menu-links ">
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/transfer-centre ">
+                      Transfer Centre</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/watch/sport-on-sky ">
+                      Live on Sky</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/watch/get-sky ">
+                      Get Sky Sports</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/watch/tv-shows ">
+                      TV Shows</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/watch/tv-guide ">
+                      TV Guide</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/competitions ">
+                      Competitions</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="http://go.sky.com/ " target="_blank ">
+                      Sky Go</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="http://www.nowtv.com/promo/sky-sports?DCMP=ilc_skysports_moredropdownlink
+              " target="_blank ">
+                      Now TV</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://pubfinder.sky.com/ " target="_blank ">
+                      Pub Finder</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://www.teamsky.com/ " target="_blank ">
+                      Team Sky</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/watch/tv-shows/sportswomen ">
+                      Sportswomen</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/scholarships ">
+                      Sports Scholarships</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/clubsincommunities ">
+                      Clubs in Communities</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/podcasts ">
+                      Podcasts</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/mobile ">
+                      Mobile</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://twitter.com/SkySports " target="_blank ">
+                      Twitter</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://www.facebook.com/SkySports " target="_blank ">
+                      Facebook</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://livingforsport.skysports.com/ " target="_blank ">
+                      Living for Sport</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="/contact-us ">
+                      Contact Us</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://www.sky.com/help/articles/skycom-terms-and-conditions
+              " target="_blank ">
+                      Terms &amp; Conditions</a>
+                  </li>
+                  <li class="site-nav-desktop__menu-item ">
+                    <a class="site-nav-desktop__menu-link " href="https://www.sky.com/ " target="_blank ">
+                      Sky.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <a href="/watch " class="site-nav-desktop__watch-button no-default-hover no-default-active ">
+          <span class="site-nav-desktop__watch-button__label ">Watch Sky Sports</span>
+        </a>
+      </div>
     </div>
-  </div>
-
-  <script src="js/header.js"></script>
-  <script src="js/carousel.js"></script>
-  <script src="js/league-pos.js"></script>
-  <script src="js/quiz.js"></script>
-  <script src="js/selector.js"></script>
-  <script src="js/charts.js"></script>
-  <script src="js/grid.js"></script>
-
-  <script>
-    window['sdc-interactive-selector'](document.querySelector('.sdc-interactive-selector'));
-
-  </script>
-  <script>
-
-    (function () {
-
-      var charts = document.querySelectorAll('[data-role="charts-container"][data-url]');
-
-      // init charts
-      for (let i = 0; i < charts.length; i++) {
-        window['sdc-site-charts'](charts[i]);
-      }
-
-    })()
 
 
-    var observer = new IntersectionObserver(scan, {
-      rootMargin: '18px',
-      threshold: [0, 0.25, 0.5, 0.75, 1]
-    });
+    <div class="sdc-site-cookie-notice sdc-site-cookie-notice--fixed-bottom " data-component-name="sdc-site-cookie-notice
+              " data-cookie-name="sky-cookie-notice ">
+      <div class="sdc-site-cookie-notice__wrapper ">
+        <div class="sdc-site-cookie-notice__text ">We use
+          <a href="http://help.sky.com/security/privacy/privacy-and-cookies-notice " target="_blank ">cookies</a> to give you the best experience. If you do nothing we'll assume that it's ok.</div>
+        <button type="button " class="sdc-site-cookie-notice__close ">
+          <span class="sdc-site-cookie-notice__close-text ">Close</span>
+          <span class="sdc-site-cookie-notice__close-icon ">
+            <svg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'>
+              <title>Close</title>
+              <path d='M24.45 22c1.558-1.56 3.13-3.13 4.712-4.713.346-.495.334-.946-.037-1.354-.37-.41-.742-.786-1.113-1.132-.42-.47-.854-.568-1.3-.296-.444.272-.828.618-1.15 1.04l-3.785 3.784-4.713-4.713c-.52-.346-.977-.334-1.373.037-.394.37-.766.743-1.112 1.114-.495.42-.6.853-.315 1.298.284.446.624.83 1.02 1.15L19.068 22l-4.675 4.713c-.372.495-.365.946.018 1.354.385.41.75.786 1.096 1.132.42.47.86.568 1.317.296.458-.272.848-.606 1.17-1.002l3.784-3.822 4.676 4.713c.52.346.977.334 1.373-.037.396-.37.767-.743 1.113-1.114.494-.42.6-.853.315-1.298-.285-.446-.625-.83-1.02-1.15L24.448 22zm10.76 13.434c2.698-2.697 4.423-5.913 5.178-9.65.754-3.735.414-7.365-1.02-10.89-1.436-3.526-3.706-6.365-6.81-8.517C29.453 4.225 26.02 3.105 22.26 3.02c-3.76-.088-7.23.846-10.41 2.8-3.178 1.955-5.584 4.614-7.217 7.98-1.658 3.462-2.214 7.1-1.67 10.91.544 3.81 2.103 7.15 4.676 10.02 2.522 2.77 5.59 4.637 9.202 5.602 3.612.965 7.2.878 10.762-.26 1.434-.445 2.795-1.064 4.082-1.855 1.286-.792 2.46-1.72 3.525-2.783zM10.868 11.127c2.524-2.5 5.53-3.97 9.018-4.416 3.488-.444 6.766.224 9.834 2.005 2.918 1.756 5.04 4.206 6.363 7.348 1.324 3.14 1.59 6.37.798 9.685-.865 3.464-2.696 6.296-5.49 8.498-2.797 2.202-5.982 3.303-9.557 3.303s-6.76-1.102-9.556-3.304c-2.795-2.202-4.626-5.034-5.492-8.498-.643-2.622-.6-5.24.13-7.85.73-2.61 2.047-4.866 3.952-6.77z'
+                fill='#000' fill-rule='evenodd' />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
 
-    document.querySelectorAll('[data-trigger]').forEach(function (block) {
-      observer.observe(block);
-    });
+    <script src="js/header.js "></script>
+    <script src="js/carousel.js "></script>
+    <script src="js/league-pos.js "></script>
+    <script src="js/quiz.js "></script>
+    <script src="js/selector.js "></script>
+    <script src="js/charts.js "></script>
+    <script src="js/grid.js "></script>
 
+    <script>
+      window['sdc-interactive-selector'](document.querySelector('.sdc-interactive-selector'));
 
-    function scan(entries, observer) {
+    </script>
+    <script>
 
-      entries.forEach(function (item) {
+      (function () {
+        var template = '<div class="sff-lineups "><h4>Most Appearances</h4><div class="sff-lineups__body "><div class="sff-lineups__body-cell"><h5>City</h5><ul>#{city}</ul></div><div class="sff - lineups__body - cell "><h5>Utd</h5><ul>#{utd}</ul></div></div></div>';
 
-        var ratio = 0.25;
-        if (item.target.hasAttribute('data-trigger')) {
-          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+        function buildlist(array) {
+          array.reverse();
+          var frag = document.createElement('frag');
+          array.forEach(function (item, index) {
+
+            var li = document.createElement('li');
+
+            if (index === 0) {
+              li.className = 'sff-lineups__spot';
+              li.setAttribute('data-label', item[1]);
+              li.innerHTML = "<h6>Top transfer</h6>" + item[0];
+            }
+
+            if (index === 1) {
+              li.className = 'sff-lineups__spot'; li.setAttribute('data-label',
+                item[1]);
+              li.innerHTML = "<h6>Player of the year</h6 > " + item;
+            }
+
+            if (index > 1) {
+              li.innerHTML = unescape(item.Player); li.setAttribute('data-games',
+                item['Games-Started']);
+
+            }
+
+            frag.insertAdjacentElement('afterbegin', li);
+
+          });
+
+          return frag.innerHTML;
+
         }
 
-        if (item.isIntersecting) {
-          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+        document.querySelectorAll('.sff-grid__item').forEach(function
+          (item) {
+          item.addEventListener('click', function (e) {
+            if (item.nextElementSibling.getAttribute('data-init')) { return; } var city = buildlist(data[0][this.id]); var utd = buildlist(data[1][this.id]); item.nextElementSibling.innerHTML
+              = template.replace(/#{city}/, city).replace(/#{utd}/, utd); item.nextElementSibling.setAttribute('data-init',
+                true);
+          });
+        })
 
-            observer.unobserve(item.target);
-            item.target.removeAttribute('data-animate-in-view');
+        var data = [{
+          "year92": [{ "Player": "D. White", "Games-Started": 42 }, {
+            "Player": "T. Coton",
+            "Games-Started": 40
+          }, { "Player": "R. Holden", "Games-Started": 40 }, {
+            "Player": "K. Curle", "Games-Started":
+              39
+          }, { "Player": "N. Quinn", "Games-Started": 39 }, { "Player": "T. Phelan", "Games-Started": 37 }, {
+            "Player":
+              "M. Sheron", "Games-Started": 33
+          }, { "Player": "G. Flitcroft", "Games-Started": 28 }, {
+            "Player": "F. Simpson",
+            "Games-Started": 27
+          }, { "Player": "M. Vonk", "Games-Started": 26 }, {
+            "Player": "S. McMahon", "Games-Started":
+              24
+          }, "Gary Flitcroft", ["David Rocastle", "£2,160,000"]], "year93": [{
+            "Player": "S. McMahon", "Games-Started":
+              35
+          }, { "Player": "M. Vonk", "Games-Started": 34 }, { "Player": "T. Coton", "Games-Started": 31 }, {
+            "Player":
+              "T. Phelan", "Games-Started": 30
+          }, { "Player": "K. Curle", "Games-Started": 29 }, {
+            "Player": "M. Sheron",
+            "Games-Started": 29
+          }, { "Player": "A. Kernaghan", "Games-Started": 23 }, {
+            "Player": "R. Edghill", "Games-Started":
+              22
+          }, { "Player": "D. Rocastle", "Games-Started": 21 }, { "Player": "D. Brightwell", "Games-Started": 19 },
+          { "Player": "G. Flitcroft", "Games-Started": 19 }, "Tony Coton", ["Nicky Summerbee", "£2,030,000"]], "year94":
+            [{ "Player": "N. Summerbee", "Games-Started": 39 }, { "Player": "P. Walsh", "Games-Started": 39 }, {
+              "Player":
+                "G. Flitcroft", "Games-Started": 37
+            }, { "Player": "P. Beagrie", "Games-Started": 33 }, {
+              "Player": "K. Curle",
+              "Games-Started": 31
+            }, { "Player": "I. Brightwell", "Games-Started": 29 }, {
+              "Player": "U. R&ouml;sler", "Games-Started":
+                29
+            }, { "Player": "T. Phelan", "Games-Started": 26 }, { "Player": "N. Quinn", "Games-Started": 24 }, {
+              "Player":
+                "T. Coton", "Games-Started": 22
+            }, { "Player": "M. Vonk", "Games-Started": 19 }, "Uwe Rosler", ["Giorgi Kinkladze",
+              "£3,600,000"]], "year95": [{ "Player": "E. Immel", "Games-Started": 38 }, {
+                "Player": "K. Symons", "Games-Started":
+                  38
+              }, { "Player": "G. Kinkladze", "Games-Started": 37 }, {
+                "Player": "U. R&ouml;sler", "Games-Started": 34
+              }, { "Player": "N. Summerbee", "Games-Started": 33 }, { "Player": "K. Curle", "Games-Started": 32 }, {
+                "Player":
+                  "S. Lomas", "Games-Started": 32
+              }, { "Player": "I. Brightwell", "Games-Started": 26 }, {
+                "Player": "G. Flitcroft",
+                "Games-Started": 25
+              }, { "Player": "N. Quinn", "Games-Started": 24 }, {
+                "Player": "M. Brown", "Games-Started":
+                  16
+              }, "Giorgi Kinkladze", ["Paul Dickov", "£1,350,000"]], "year00": [{
+                "Player": "S. Howey", "Games-Started":
+                  36
+              }, { "Player": "A. Haaland", "Games-Started": 35 }, { "Player": "N. Weaver", "Games-Started": 31 }, {
+                "Player":
+                  "D. Tiatto", "Games-Started": 31
+              }, { "Player": "G. Wiekens", "Games-Started": 29 }, {
+                "Player": "J. Whitley",
+                "Games-Started": 28
+              }, { "Player": "P. Wanchope", "Games-Started": 25 }, {
+                "Player": "R. Dunne", "Games-Started":
+                  24
+              }, { "Player": "S. Goater", "Games-Started": 20 }, { "Player": "S. Prior", "Games-Started": 18 }, {
+                "Player":
+                  "L. Charvet", "Games-Started": 16
+              }, { "Player": "D. Granville", "Games-Started": 16 }, "Danny Tiatto", ["Jon Macken", "£6, 750, 000"]], "year02": [{ "Player": "N.Anelka", "Games - Started": 38 }, { "Player": "M.Foe", "Games - Started": 35 }, { "Player": "S. Distin", "Games-Started": 34 }, { "Player": "N. Jensen", "Games-Started": 32 }, {
+                "Player":
+                  "P. Schmeichel", "Games-Started": 29
+              }, { "Player": "E. Berkovic", "Games-Started": 27 }, {
+                "Player": "Sun Jihai", "Games-Started": 25
+              }, { "Player": "R.Dunne", "Games - Started": 24 }, {
+                "Player": "S.Howey", "Games - Started":
+                  24
+              }, { "Player": "S. Wright-Phillips", "Games-Started": 23 }, {
+                "Player": "K. Horlock", "Games-Started": 22
+              }, "Sylvain Distin", ["Claudio Reyna", "£3,380,000"]], "year03": [{
+                "Player": "S. Distin", "Games-Started":
+                  38
+              }, { "Player": "S. Wright-Phillips", "Games-Started": 32 }, {
+                "Player": "M. Tarnat", "Games-Started": 32
+              }, { "Player": "N. Anelka", "Games-Started": 31 }, { "Player": "Sun Jihai", "Games-Started": 29 }, {
+                "Player":
+                  "R. Dunne", "Games-Started": 28
+              }, { "Player": "J. Barton", "Games-Started": 24 }, {
+                "Player": "R. Fowler",
+                "Games-Started": 23
+              }, { "Player": "P. Bosvelt", "Games-Started": 22 }, {
+                "Player": "S. McManaman", "Games-Started":
+                  20
+              }, { "Player": "T. Sinclair", "Games-Started": 20 }, "Shaun Wright-Phillips", ["Ben Thatcher", "£1,350,000"]],
+          "year04": [{ "Player": "S. Distin", "Games-Started": 38 }, { "Player": "D. James", "Games-Started": 38 }, {
+            "Player": "R. Dunne", "Games-Started": 35
+          }, { "Player": "A. Sibierski", "Games-Started": 34 }, {
+            "Player":
+              "S. Wright-Phillips", "Games-Started": 33
+          }, { "Player": "D. Mills", "Games-Started": 29 }, {
+            "Player": "J.Barton", "Games-Started": 28
+          }, { "Player": "P.Bosvelt", "Games - Started": 28 }, {
+            "Player": "R.Fowler", "Games - Started":
+              28
+          }, { "Player": "S. Jordan", "Games-Started": 19 }, { "Player": "N. Anelka", "Games-Started": 18 }, "Richard  Dunne", ["Georgios Samaras", "£7, 650, 000"]], "year05": [{ "Player": "D.James", "Games - Started": 38 }, {
+            "Player":
+              "D. Vassell", "Games-Started": 36
+          }, { "Player": "J. Barton", "Games-Started": 31 }, {
+            "Player": "S. Distin",
+            "Games-Started": 31
+          }, { "Player": "R. Dunne", "Games-Started": 31 }, {
+            "Player": "T. Sinclair", "Games-Started":
+              29
+          }, { "Player": "K. Musampa", "Games-Started": 24 }, { "Player": "C. Reyna", "Games-Started": 22 }, {
+            "Player":
+              "A. Cole", "Games-Started": 20
+          }, { "Player": "D. Mills", "Games-Started": 18 }, {
+            "Player": "S. Jordan", "Games-Started":
+              18
+          }, { "Player": "B. Thatcher", "Games-Started": 18 }, "Richard Dunne", ["Andreas Isaksson", "£2,700,000"]],
+          "year06": [{ "Player": "R. Dunne", "Games-Started": 38 }, { "Player": "S. Distin", "Games-Started": 37 }, {
+            "Player": "J. Barton", "Games-Started": 33
+          }, { "Player": "M. Richards", "Games-Started": 28 }, {
+            "Player":
+              "D. Vassell", "Games-Started": 28
+          }, { "Player": "N. Weaver", "Games-Started": 25 }, {
+            "Player": "B. Corradi",
+            "Games-Started": 19
+          }, { "Player": "G. Samaras", "Games-Started": 16 }, {
+            "Player": "H. Trabelsi", "Games-Started":
+              16
+          }, { "Player": "N. Onuoha", "Games-Started": 15 }, { "Player": "S. Ireland", "Games-Started": 14 }, {
+            "Player":
+              "T. Sinclair", "Games-Started": 14
+          }, "Richard Dunne", ["Vedran Corluka", "£11,700,000"]], "year07": [{
+            "Player":
+              "R. Dunne", "Games-Started": 36
+          }, { "Player": "V. Corluka", "Games-Started": 34 }, {
+            "Player": "M. Petrov",
+            "Games-Started": 34
+          }, { "Player": "S. Ireland", "Games-Started": 32 }, {
+            "Player": "Elano", "Games-Started":
+              29
+          }, { "Player": "D. Hamann", "Games-Started": 26 }, { "Player": "J. Hart", "Games-Started": 26 }, {
+            "Player":
+              "M. Richards", "Games-Started": 25
+          }, { "Player": "M. Johnson", "Games-Started": 23 }, {
+            "Player": "G. Fernandes",
+            "Games-Started": 21
+          }, { "Player": "J. Garrido", "Games-Started": 21 }, {
+            "Player": "D. Vassell", "Games-Started":
+              21
+          }, "Richard Dunne", ["Robinho", "£38,700,000"]], "year08": [{
+            "Player": "S. Ireland", "Games-Started": 34
+          }, { "Player": "V. Kompany", "Games-Started": 34 }, { "Player": "M. Richards", "Games-Started": 33 }, {
+            "Player":
+              "R. Dunne", "Games-Started": 31
+          }, { "Player": "Robinho", "Games-Started": 30 }, {
+            "Player": "S. Wright-Phillips",
+            "Games-Started": 27
+          }, { "Player": "P. Zabaleta", "Games-Started": 26 }, {
+            "Player": "J. Hart", "Games-Started":
+              23
+          }, { "Player": "Elano", "Games-Started": 21 }, { "Player": "N. Onuoha", "Games-Started": 20 }, {
+            "Player":
+              "W. Bridge", "Games-Started": 16
+          }, { "Player": "N. de Jong", "Games-Started": 16 }, "Stephen Ireland", ["Emmanuel Adebayor", "£26, 100, 000"]], "year09": [{ "Player": "S.Given", "Games - Started": 35 }, {
+            "Player": "G.Barry",
+            "Games-Started": 34
+          }, { "Player": "C. Tevez", "Games-Started": 32 }, {
+            "Player": "K. Tour&eacute;", "Games-Started":
+              31
+          }, { "Player": "N. de Jong", "Games-Started": 30 }, { "Player": "C. Bellamy", "Games-Started": 26 }, {
+            "Player":
+              "E. Adebayor", "Games-Started": 25
+          }, { "Player": "W. Bridge", "Games-Started": 23 }, {
+            "Player": "P. Zabaleta",
+            "Games-Started": 23
+          }, { "Player": "V. Kompany", "Games-Started": 21 }, {
+            "Player": "M. Richards", "Games-Started":
+              19
+          }, { "Player": "S. Wright-Phillips", "Games-Started": 19 }, "Carlos Tevez", ["Edin Dzeko", "£33,300,000"]],
+          "year10": [{ "Player": "J. Hart", "Games-Started": 38 }, { "Player": "V. Kompany", "Games-Started": 37 }, {
+            "Player": "Y. Tour&eacute;", "Games-Started": 35
+          }, { "Player": "G. Barry", "Games-Started": 31 }, {
+            "Player":
+              "N. de Jong", "Games-Started": 30
+          }, { "Player": "D. Silva", "Games-Started": 30 }, {
+            "Player": "C. Tevez",
+            "Games-Started": 30
+          }, { "Player": "J. Milner", "Games-Started": 23 }, {
+            "Player": "K. Tour&eacute;", "Games-Started":
+              21
+          }, { "Player": "P. Zabaleta", "Games-Started": 21 }, { "Player": "A. Kolarov", "Games-Started": 20 }, {
+            "Player": "J. Lescott", "Games-Started": 20
+          }, "Vincent Kompany", ["Sergio Aguero", "£36,000,000"]], "year11":
+            [{ "Player": "J. Hart", "Games-Started": 38 }, { "Player": "D. Silva", "Games-Started": 33 }, {
+              "Player": "S.Ag& uuml; ero", "Games-Started": 31
+            }, { "Player": "G.Barry", "Games - Started": 31 }, {
+              "Player": "V.Kompany",
+              "Games-Started": 31
+            }, { "Player": "Y. Tour&eacute;", "Games-Started": 31 }, {
+              "Player": "J. Lescott", "Games-Started":
+                30
+            }, { "Player": "G. Clichy", "Games-Started": 28 }, { "Player": "S. Nasri", "Games-Started": 26 }, {
+              "Player":
+                "M. Richards", "Games-Started": 23
+            }, { "Player": "P. Zabaleta", "Games-Started": 18 }, "Sergio Aguero", ["Javi Garcia", "£16, 000, 000"]], "year12": [{ "Player": "J.Hart", "Games - Started": 38 }, {
+              "Player": "Y.Tour & eacute; ",
+              "Games-Started": 32
+            }, { "Player": "D. Silva", "Games-Started": 29 }, {
+              "Player": "P. Zabaleta", "Games-Started":
+                29
+            }, { "Player": "C. Tevez", "Games-Started": 28 }, { "Player": "G. Barry", "Games-Started": 27 }, {
+              "Player":
+                "G. Clichy", "Games-Started": 26
+            }, { "Player": "V. Kompany", "Games-Started": 26 }, {
+              "Player": "S. Ag&uuml;ero",
+              "Games-Started": 22
+            }, { "Player": "S. Nasri", "Games-Started": 22 }, {
+              "Player": "M. Nastasic", "Games-Started":
+                21
+            }, "Pablo Zabaleta", ["Fernandinho", "£30,000,000"]], "year13": [{
+              "Player": "Y. Tour&eacute;", "Games-Started":
+                35
+            }, { "Player": "P. Zabaleta", "Games-Started": 34 }, { "Player": "J. Hart", "Games-Started": 31 }, {
+              "Player":
+                "Fernandinho", "Games-Started": 29
+            }, { "Player": "S. Nasri", "Games-Started": 29 }, {
+              "Player": "V. Kompany",
+              "Games-Started": 28
+            }, { "Player": "M. Demichelis", "Games-Started": 27 }, {
+              "Player": "D. Silva", "Games-Started":
+                26
+            }, { "Player": "E. Dzeko", "Games-Started": 23 }, { "Player": "A. Kolarov", "Games-Started": 21 }, {
+              "Player":
+                "Á. Negredo", "Games-Started": 21
+            }, "Yaya Toure", ["Wilfried Bony", "£25,000,000"]], "year14": [{
+              "Player":
+                "J. Hart", "Games-Started": 36
+            }, { "Player": "D. Silva", "Games-Started": 32 }, {
+              "Player": "S. Ag&uuml;ero",
+              "Games-Started": 30
+            }, { "Player": "P. Zabaleta", "Games-Started": 29 }, {
+              "Player": "M. Demichelis", "Games-Started":
+                28
+            }, { "Player": "Y. Tour&eacute;", "Games-Started": 27 }, {
+              "Player": "Fernandinho", "Games-Started": 25
+            }, { "Player": "E. Mangala", "Games-Started": 24 }, { "Player": "G. Clichy", "Games-Started": 23 }, {
+              "Player":
+                "V. Kompany", "Games-Started": 23
+            }, { "Player": "J. Navas", "Games-Started": 23 }, "Sergio Aguero", ["Kevin De Bruyne", "£54, 500, 000"]], "year15": [{ "Player": "J.Hart", "Games - Started": 35 }, {
+              "Player": "Fernandinho",
+              "Games-Started": 31
+            }, { "Player": "N. Otamendi", "Games-Started": 30 }, {
+              "Player": "S. Ag&uuml;ero", "Games-Started":
+                29
+            }, { "Player": "Y. Tour&eacute;", "Games-Started": 28 }, { "Player": "B. Sagna", "Games-Started": 27 },
+            { "Player": "A. Kolarov", "Games-Started": 25 }, { "Player": "J. Navas", "Games-Started": 24 }, {
+              "Player":
+                "E. Mangala", "Games-Started": 23
+            }, { "Player": "R. Sterling", "Games-Started": 23 }, {
+              "Player": "K. De Bruyne",
+              "Games-Started": 22
+            }, { "Player": "D. Silva", "Games-Started": 22 }, "Kevin De Bruyne", ["John Stones", "£50,000,000"]],
+          "year16": [{ "Player": "K. De Bruyne", "Games-Started": 33 }, {
+            "Player": "Fernandinho", "Games-Started": 31
+          }, { "Player": "D. Silva", "Games-Started": 31 }, { "Player": "N. Otamendi", "Games-Started": 29 }, {
+            "Player":
+              "R. Sterling", "Games-Started": 29
+          }, { "Player": "A. Kolarov", "Games-Started": 27 }, {
+            "Player": "S. Ag&uuml;ero",
+            "Games-Started": 25
+          }, { "Player": "G. Clichy", "Games-Started": 24 }, {
+            "Player": "J. Stones", "Games-Started":
+              23
+          }, { "Player": "C. Bravo", "Games-Started": 22 }, { "Player": "Y. Tour&eacute;", "Games-Started": 22 },
+            "David Silva", ["Aymeric Laporte", "£57,000,000"]], "year17": [{
+              "Player": "K. De Bruyne", "Games-Started":
+                36
+            }, { "Player": "Ederson", "Games-Started": 36 }, { "Player": "Fernandinho", "Games-Started": 33 }, {
+              "Player":
+                "N. Otamendi", "Games-Started": 33
+            }, { "Player": "K. Walker", "Games-Started": 32 }, {
+              "Player": "R. Sterling",
+              "Games-Started": 29
+            }, { "Player": "D. Silva", "Games-Started": 28 }, {
+              "Player": "L. San&eacute;", "Games-Started":
+                27
+            }, { "Player": "S. Ag&uuml;ero", "Games-Started": 22 }, { "Player": "F. Delph", "Games-Started": 21 }, {
+              "Player": "G. Jesus", "Games-Started": 19
+            }, "Kevin De Bruyne", ["Riyad Mahrez", "£60,000,000"]], "year96":
+            ["Giorgi Kinkladze", ["Lee Bradbury", "£4,050,000"]], "year97": ["Michael Brown", ["Gareth Taylor", "£495,000"]],
+          "year98": ["Gerard Wiekens", ["Steve Howey", "£4,140,000"]], "year99": ["Shaun Goater", ["Richard Dunne", "£4,050,000"]],
+          "year01": ["Ali Benarbia", ["Nicolas Anelka", "£13,500,000"]]
+        }, {
+          "year92": [{
+            "Player": "S. Bruce", "Games-Started":
+              42
+          }, { "Player": "G. Pallister", "Games-Started": 42 }, { "Player": "P. Schmeichel", "Games-Started": 42 },
+          { "Player": "M. Hughes", "Games-Started": 41 }, { "Player": "P. Ince", "Games-Started": 41 }, {
+            "Player": "B.McClair", "Games-Started": 41
+          }, { "Player": "R.Giggs", "Games - Started": 40 }, {
+            "Player": "D.Irwin", "Games - Started":
+              40
+          }, { "Player": "P. Parker", "Games-Started": 31 }, { "Player": "L. Sharpe", "Games-Started": 27 }, {
+            "Player":
+              "E. Cantona", "Games-Started": 21
+          }, "Paul Ince", ["Eric Cantona", "£1,620,000"]], "year93": [{
+            "Player": "D.Irwin", "Games-Started": 42
+          }, { "Player": "S.Bruce", "Games - Started": 41 }, {
+            "Player": "G.Pallister", "Games - Started":
+              41
+          }, { "Player": "P. Schmeichel", "Games-Started": 40 }, { "Player": "P. Ince", "Games-Started": 39 }, {
+            "Player":
+              "P. Parker", "Games-Started": 39
+          }, { "Player": "M. Hughes", "Games-Started": 36 }, {
+            "Player": "E. Cantona",
+            "Games-Started": 34
+          }, { "Player": "R. Keane", "Games-Started": 34 }, {
+            "Player": "R. Giggs", "Games-Started":
+              32
+          }, { "Player": "A. Kanchelskis", "Games-Started": 28 }, "Eric Cantona", ["Roy Keane", "£7,650,000"]], "year94":
+            [{ "Player": "G. Pallister", "Games-Started": 42 }, { "Player": "D. Irwin", "Games-Started": 40 }, {
+              "Player":
+                "P. Ince", "Games-Started": 36
+            }, { "Player": "S. Bruce", "Games-Started": 35 }, {
+              "Player": "B. McClair",
+              "Games-Started": 35
+            }, { "Player": "M. Hughes", "Games-Started": 33 }, {
+              "Player": "P. Schmeichel", "Games-Started":
+                32
+            }, { "Player": "R. Giggs", "Games-Started": 29 }, { "Player": "L. Sharpe", "Games-Started": 26 }, {
+              "Player":
+                "A. Kanchelskis", "Games-Started": 25
+            }, { "Player": "R. Keane", "Games-Started": 23 }, "Andrei Kanchelskis",
+            ["Andy Cole", "£8,640,000"]], "year95": [{ "Player": "P. Schmeichel", "Games-Started": 36 }, {
+              "Player": "A.Cole", "Games-Started": 32
+            }, { "Player": "N.Butt", "Games - Started": 31 }, {
+              "Player": "D.Irwin", "Games - Started":
+                31
+            }, { "Player": "S. Bruce", "Games-Started": 30 }, { "Player": "E. Cantona", "Games-Started": 30 }, {
+              "Player":
+                "G. Neville", "Games-Started": 30
+            }, { "Player": "R. Giggs", "Games-Started": 30 }, {
+              "Player": "R. Keane",
+              "Games-Started": 29
+            }, { "Player": "D. Beckham", "Games-Started": 26 }, {
+              "Player": "L. Sharpe", "Games-Started":
+                22
+            }, "Eric Cantona", ["Tony Coton", "£518,000"]], "year96": [{
+              "Player": "E. Cantona", "Games-Started": 36
+            }, { "Player": "P. Schmeichel", "Games-Started": 36 }, { "Player": "D. Beckham", "Games-Started": 33 }, {
+              "Player":
+                "G. Neville", "Games-Started": 30
+            }, { "Player": "D. Irwin", "Games-Started": 29 }, {
+              "Player": "D. May", "Games-Started":
+                28
+            }, { "Player": "G. Pallister", "Games-Started": 27 }, { "Player": "R. Johnsen", "Games-Started": 26 }, {
+              "Player": "R. Giggs", "Games-Started": 25
+            }, { "Player": "O. Solskjaer", "Games-Started": 25 }, {
+              "Player":
+                "N. Butt", "Games-Started": 24
+            }, "David Beckham", ["Karel Poborsky", "£3,600,000"]], "year97": [{
+              "Player":
+                "D. Beckham", "Games-Started": 34
+            }, { "Player": "G. Neville", "Games-Started": 34 }, {
+              "Player": "G. Pallister",
+              "Games-Started": 33
+            }, { "Player": "P. Schmeichel", "Games-Started": 32 }, {
+              "Player": "N. Butt", "Games-Started":
+                31
+            }, { "Player": "A. Cole", "Games-Started": 31 }, { "Player": "R. Giggs", "Games-Started": 28 }, {
+              "Player":
+                "P. Scholes", "Games-Started": 28
+            }, { "Player": "T. Sheringham", "Games-Started": 28 }, {
+              "Player": "P. Neville",
+              "Games-Started": 24
+            }, { "Player": "H. Berg", "Games-Started": 23 }, "Ryan Giggs", ["Henning Berg", "£6,750,000"]],
+          "year98": [{ "Player": "G. Neville", "Games-Started": 34 }, {
+            "Player": "P. Schmeichel", "Games-Started": 34
+          }, { "Player": "D. Beckham", "Games-Started": 33 }, { "Player": "R. Keane", "Games-Started": 33 }, {
+            "Player":
+              "D. Yorke", "Games-Started": 32
+          }, { "Player": "J. Stam", "Games-Started": 30 }, {
+            "Player": "A. Cole", "Games-Started":
+              26
+          }, { "Player": "D. Irwin", "Games-Started": 26 }, { "Player": "P. Scholes", "Games-Started": 24 }, {
+            "Player":
+              "N. Butt", "Games-Started": 22
+          }, { "Player": "J. Blomqvist", "Games-Started": 20 }, "Roy Keane", ["Dwight Yorke", "£17, 330, 000"]], "year99": [{ "Player": "J.Stam", "Games - Started": 33 }, {
+            "Player": "D.Beckham",
+            "Games-Started": 30
+          }, { "Player": "R. Giggs", "Games-Started": 30 }, {
+            "Player": "M. Silvestre", "Games-Started":
+              30
+          }, { "Player": "D. Yorke", "Games-Started": 29 }, { "Player": "R. Keane", "Games-Started": 28 }, {
+            "Player":
+              "P. Scholes", "Games-Started": 27
+          }, { "Player": "D. Irwin", "Games-Started": 25 }, {
+            "Player": "P. Neville",
+            "Games-Started": 25
+          }, { "Player": "M. Bosnich", "Games-Started": 23 }, {
+            "Player": "A. Cole", "Games-Started":
+              23
+          }, "Roy Keane", ["Mikael Silvestre", "£5,130,000"]], "year00": [{
+            "Player": "G. Neville", "Games-Started":
+              32
+          }, { "Player": "F. Barthez", "Games-Started": 30 }, { "Player": "D. Beckham", "Games-Started": 29 }, {
+            "Player":
+              "R. Keane", "Games-Started": 28
+          }, { "Player": "P. Scholes", "Games-Started": 28 }, {
+            "Player": "W. Brown",
+            "Games-Started": 25
+          }, { "Player": "M. Silvestre", "Games-Started": 25 }, {
+            "Player": "N. Butt", "Games-Started":
+              24
+          }, { "Player": "R. Giggs", "Games-Started": 24 }, { "Player": "P. Neville", "Games-Started": 24 }, {
+            "Player":
+              "T. Sheringham", "Games-Started": 23
+          }, "Teddy Sheringham", ["Fabien Barthez", "£10,530,000"]], "year01": [{
+            "Player": "F. Barthez", "Games-Started": 32
+          }, { "Player": "G. Neville", "Games-Started": 31 }, {
+            "Player":
+              "M. Silvestre", "Games-Started": 31
+          }, { "Player": "P. Scholes", "Games-Started": 30 }, {
+            "Player": "L. Blanc",
+            "Games-Started": 29
+          }, { "Player": "R. van Nistelrooy", "Games-Started": 29 }, {
+            "Player": "R. Keane", "Games-Started":
+              28
+          }, { "Player": "J. Ver&oacute;n", "Games-Started": 24 }, { "Player": "D. Beckham", "Games-Started": 23 }, "Nistelrooy", ["Juan Sebastian Veron", "£38, 340, 000"]], "year02": [{
+            "Player": "M.Silvestre", "Games - Started":
+              34
+          }, { "Player": "R. van Nistelrooy", "Games-Started": 33 }, { "Player": "R. Giggs", "Games-Started": 32 },
+          { "Player": "P. Scholes", "Games-Started": 31 }, { "Player": "F. Barthez", "Games-Started": 30 }, {
+            "Player":
+              "O. Solskjaer", "Games-Started": 29
+          }, { "Player": "D. Beckham", "Games-Started": 27 }, {
+            "Player": "R. Ferdinand",
+            "Games-Started": 27
+          }, { "Player": "J. O'Shea", "Games-Started": 26 }, {
+            "Player": "W. Brown", "Games-Started":
+              22
+          }, { "Player": "J. Ver&oacute;n", "Games-Started": 21 }, "Ruud van Nistelrooy", ["Rio Ferdinand", "£41,400,000"]],
+          "year03": [{ "Player": "M. Silvestre", "Games-Started": 33 }, {
+            "Player": "T. Howard", "Games-Started": 32
+          }, { "Player": "J. O'Shea", "Games-Started": 32 }, { "Player": "R. van Nistelrooy", "Games-Started": 31 },
+          { "Player": "G. Neville", "Games-Started": 30 }, { "Player": "R. Giggs", "Games-Started": 29 }, {
+            "Player":
+              "P. Neville", "Games-Started": 29
+          }, { "Player": "R. Keane", "Games-Started": 25 }, {
+            "Player": "P. Scholes",
+            "Games-Started": 24
+          }, { "Player": "R. Ferdinand", "Games-Started": 20 }, {
+            "Player": "Q. Fortune", "Games-Started":
+              18
+          }, "Cristiano Ronaldo", ["Cristiano Ronaldo", "£17,100,000"]], "year04": [{
+            "Player": "M. Silvestre", "Games-Started":
+              33
+          }, { "Player": "R. Ferdinand", "Games-Started": 31 }, { "Player": "P. Scholes", "Games-Started": 29 }, {
+            "Player": "R. Keane", "Games-Started": 28
+          }, { "Player": "R. Carroll", "Games-Started": 26 }, {
+            "Player": "R. Giggs", "Games-Started": 26
+          }, { "Player": "G.Heinze", "Games - Started": 26 }, {
+            "Player": "C.Ronaldo", "Games - Started":
+              25
+          }, { "Player": "W. Rooney", "Games-Started": 24 }, { "Player": "G. Neville", "Games-Started": 22 }, {
+            "Player":
+              "A. Smith", "Games-Started": 22
+          }, "Gabriel Heinze", ["Wayne Rooney", "£33,300,000"]], "year05": [{
+            "Player":
+              "E. van der Sar", "Games-Started": 38
+          }, { "Player": "R. Ferdinand", "Games-Started": 37 }, {
+            "Player": "J.O'Shea", "Games-Started": 34
+          }, { "Player": "W. Rooney", "Games-Started": 34 }, {
+            "Player": "M. Silvestre",
+            "Games-Started": 30
+          }, { "Player": "R. van Nistelrooy", "Games-Started": 28 }, {
+            "Player": "C. Ronaldo", "Games-Started":
+              24
+          }, { "Player": "G. Neville", "Games-Started": 24 }, { "Player": "D. Fletcher", "Games-Started": 23 }, {
+            "Player": "Park Ji-Sung", "Games-Started": 23
+          }, { "Player": "R. Giggs", "Games-Started": 22 }, "Wayne Rooney",
+          ["Nemanja Vidic", "£9,450,000"]], "year06": [{ "Player": "R. Ferdinand", "Games-Started": 33 }, {
+            "Player":
+              "W. Rooney", "Games-Started": 33
+          }, { "Player": "E. van der Sar", "Games-Started": 32 }, {
+            "Player": "C. Ronaldo",
+            "Games-Started": 31
+          }, { "Player": "M. Carrick", "Games-Started": 29 }, {
+            "Player": "P. Scholes", "Games-Started":
+              29
+          }, { "Player": "R. Giggs", "Games-Started": 25 }, { "Player": "N. Vidic", "Games-Started": 25 }, {
+            "Player":
+              "G. Neville", "Games-Started": 24
+          }, { "Player": "P. Evra", "Games-Started": 22 }, {
+            "Player": "L. Saha", "Games-Started":
+              18
+          }, "Cristiano Ronaldo", ["Michael Carrick", "£24,480,000"]], "year07": [{
+            "Player": "R. Ferdinand", "Games-Started":
+              35
+          }, { "Player": "W. Brown", "Games-Started": 34 }, { "Player": "P. Evra", "Games-Started": 33 }, {
+            "Player":
+              "N. Vidic", "Games-Started": 32
+          }, { "Player": "C. Ronaldo", "Games-Started": 31 }, {
+            "Player": "C. Tevez",
+            "Games-Started": 31
+          }, { "Player": "E. van der Sar", "Games-Started": 29 }, {
+            "Player": "R. Giggs", "Games-Started":
+              26
+          }, { "Player": "W. Rooney", "Games-Started": 25 }, { "Player": "M. Carrick", "Games-Started": 24 }, {
+            "Player":
+              "P. Scholes", "Games-Started": 22
+          }, "Cristiano Ronaldo", ["Anderson", "£28,350,000"]], "year08": [{
+            "Player":
+              "E. van der Sar", "Games-Started": 33
+          }, { "Player": "N. Vidic", "Games-Started": 33 }, {
+            "Player": "C. Ronaldo",
+            "Games-Started": 31
+          }, { "Player": "D. Berbatov", "Games-Started": 29 }, {
+            "Player": "P. Evra", "Games-Started":
+              28
+          }, { "Player": "D. Fletcher", "Games-Started": 25 }, { "Player": "W. Rooney", "Games-Started": 25 }, {
+            "Player":
+              "M. Carrick", "Games-Started": 24
+          }, { "Player": "R. Ferdinand", "Games-Started": 24 }, {
+            "Player": "Park Ji-Sung",
+            "Games-Started": 21
+          }, { "Player": "J. O'Shea", "Games-Started": 20 }, "Nemanja Vidić", ["Dimitar Berbatov",
+            "£34,200,000"]], "year09": [{ "Player": "P. Evra", "Games-Started": 37 }, {
+              "Player": "W. Rooney", "Games-Started":
+                32
+            }, { "Player": "A. Valencia", "Games-Started": 29 }, { "Player": "D. Fletcher", "Games-Started": 29 }, {
+              "Player": "D. Berbatov", "Games-Started": 24
+            }, { "Player": "P. Scholes", "Games-Started": 24 }, {
+              "Player":
+                "N. Vidic", "Games-Started": 24
+            }, { "Player": "M. Carrick", "Games-Started": 22 }, {
+              "Player": "E. van der Sar", "Games-Started": 21
+            }, { "Player": "R.Giggs", "Games - Started": 20 }, {
+              "Player": "Nani", "Games - Started":
+                19
+            }, "Wayne Rooney", ["Antonio Valencia", "£17,010,000"]], "year10": [{
+              "Player": "N. Vidic", "Games-Started":
+                35
+            }, { "Player": "P. Evra", "Games-Started": 34 }, { "Player": "E. van der Sar", "Games-Started": 33 }, {
+              "Player": "Nani", "Games-Started": 31
+            }, { "Player": "W. Rooney", "Games-Started": 25 }, {
+              "Player": "D. Berbatov",
+              "Games-Started": 24
+            }, { "Player": "D. Fletcher", "Games-Started": 24 }, {
+              "Player": "M. Carrick", "Games-Started":
+                23
+            }, { "Player": "R. Ferdinand", "Games-Started": 19 }, { "Player": "R. Giggs", "Games-Started": 19 }, {
+              "Player":
+                "J. O'Shea", "Games-Started": 18
+            }, "Javier Hernández", ["Bebe", "£7,920,000"]], "year11": [{
+              "Player": "P.Evra", "Games-Started": 37
+            }, { "Player": "W.Rooney", "Games - Started": 32 }, {
+              "Player": "D.De Gea", "Games-Started":
+                29
+            }, { "Player": "R. Ferdinand", "Games-Started": 29 }, { "Player": "J. Evans", "Games-Started": 28 }, {
+              "Player":
+                "M. Carrick", "Games-Started": 27
+            }, { "Player": "P. Jones", "Games-Started": 25 }, {
+              "Player": "Nani", "Games-Started":
+                24
+            }, { "Player": "D. Welbeck", "Games-Started": 23 }, { "Player": "A. Valencia", "Games-Started": 22 }, {
+              "Player": "A. Young", "Games-Started": 19
+            }, "Antonio Valencia", ["David de Gea", "£22,500,000"]], "year12":
+            [{ "Player": "R. van Persie", "Games-Started": 35 }, { "Player": "M. Carrick", "Games-Started": 34 }, {
+              "Player":
+                "P. Evra", "Games-Started": 34
+            }, { "Player": "D. De Gea", "Games-Started": 28 }, {
+              "Player": "Rafael", "Games-Started":
+                27
+            }, { "Player": "R. Ferdinand", "Games-Started": 26 }, { "Player": "A. Valencia", "Games-Started": 24 },
+            { "Player": "W. Rooney", "Games-Started": 22 }, { "Player": "J. Evans", "Games-Started": 21 }, {
+              "Player":
+                "T. Cleverley", "Games-Started": 18
+            }, { "Player": "N. Vidic", "Games-Started": 18 }, "Robin van Persie", ["Robin van Persie", "£24, 000, 000"]], "year13": [{ "Player": "D.De Gea", "Games - Started": 37 }, {
+              "Player": "P.Evra",
+              "Games-Started": 33
+            }, { "Player": "W. Rooney", "Games-Started": 27 }, {
+              "Player": "M. Carrick", "Games-Started":
+                26
+            }, { "Player": "P. Jones", "Games-Started": 26 }, { "Player": "N. Vidic", "Games-Started": 23 }, {
+              "Player":
+                "C. Smalling", "Games-Started": 21
+            }, { "Player": "A. Valencia", "Games-Started": 20 }, {
+              "Player": "T. Cleverley",
+              "Games-Started": 18
+            }, { "Player": "Rafael", "Games-Started": 18 }, {
+              "Player": "R. van Persie", "Games-Started":
+                18
+            }, "David de Gea", ["Juan Mata", "£37,100,000"]], "year14": [{
+              "Player": "D. De Gea", "Games-Started": 37
+            }, { "Player": "W. Rooney", "Games-Started": 33 }, { "Player": "A. Valencia", "Games-Started": 29 }, {
+              "Player":
+                "J. Mata", "Games-Started": 27
+            }, { "Player": "D. Blind", "Games-Started": 25 }, {
+              "Player": "R. van Persie",
+              "Games-Started": 25
+            }, { "Player": "A. Young", "Games-Started": 23 }, {
+              "Player": "P. Jones", "Games-Started":
+                22
+            }, { "Player": "C. Smalling", "Games-Started": 21 }, { "Player": "A. Di María", "Games-Started": 20 }, {
+              "Player": "M. Rojo", "Games-Started": 20
+            }, "David de Gea", ["Angel Di Maria", "£59,700,000"]], "year15": [{
+              "Player": "D. Blind", "Games-Started": 35
+            }, { "Player": "C. Smalling", "Games-Started": 35 }, {
+              "Player":
+                "D. De Gea", "Games-Started": 34
+            }, { "Player": "J. Mata", "Games-Started": 34 }, {
+              "Player": "A. Martial",
+              "Games-Started": 29
+            }, { "Player": "W. Rooney", "Games-Started": 27 }, {
+              "Player": "M. Schneiderlin", "Games-Started":
+                25
+            }, { "Player": "M. Darmian", "Games-Started": 24 }, { "Player": "M. Carrick", "Games-Started": 22 }, {
+              "Player":
+                "J. Lingard", "Games-Started": 19
+            }, { "Player": "A. Herrera", "Games-Started": 17 }, "David de Gea", ["Anthony Martial", "£57, 600, 000"]], "year16": [{ "Player": "D.De Gea", "Games - Started": 35 }, {
+              "Player": "P.Pogba",
+              "Games-Started": 29
+            }, { "Player": "A. Valencia", "Games-Started": 27 }, {
+              "Player": "A. Herrera", "Games-Started":
+                27
+            }, { "Player": "Z. Ibrahimovic", "Games-Started": 27 }, { "Player": "E. Bailly", "Games-Started": 24 },
+            { "Player": "D. Blind", "Games-Started": 20 }, { "Player": "J. Mata", "Games-Started": 19 }, {
+              "Player": "M.Carrick", "Games-Started": 18
+            }, { "Player": "M.Fellaini", "Games - Started": 18 }, {
+              "Player": "P.Jones",
+              "Games-Started": 18
+            }, { "Player": "A. Martial", "Games-Started": 18 }, {
+              "Player": "M. Rojo", "Games-Started":
+                18
+            }, "Ander Herrera", ["Paul Pogba", "£93,250,000"]], "year17": [{
+              "Player": "D. De Gea", "Games-Started":
+                37
+            }, { "Player": "N. Matic", "Games-Started": 35 }, { "Player": "R. Lukaku", "Games-Started": 33 }, {
+              "Player":
+                "A. Valencia", "Games-Started": 31
+            }, { "Player": "C. Smalling", "Games-Started": 28 }, {
+              "Player": "A. Young",
+              "Games-Started": 28
+            }, { "Player": "P. Pogba", "Games-Started": 25 }, {
+              "Player": "P. Jones", "Games-Started":
+                23
+            }, { "Player": "J. Mata", "Games-Started": 23 }, { "Player": "J. Lingard", "Games-Started": 20 }, {
+              "Player":
+                "A. Martial", "Games-Started": 18
+            }, "David de Gea", ["Romelu Lukaku", "£90,000,000"]]
+        }];
+      })();
 
-            // if a chart
-            if (item.target.start && !item.target.init) {
-              item.target.start();
-              item.target.init = true;
-            }
+      (function () {
+        var charts = document.querySelectorAll('[data-role="charts-container"][data-url]');
+        var videos = document.querySelectorAll('video');
+        // init charts 
+        for (let i = 0; i < charts.length; i++) { window['sdc-site-charts'](charts[i]); }
+
+        videos.forEach(function (video) {
+          video.start = function () {
+            this.play()
           }
 
+          video.onclick = function () {
+            this.play()
+          }
+        })
+      })();
 
+      var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] }); document.querySelectorAll(
+        '[data-trigger]').forEach(function (block) { observer.observe(block); }); function scan(entries, observer) {
+          entries.forEach(function (item) {
+            var ratio = 0.25;
+            if (item.target.hasAttribute('data-trigger')) {
+              ratio = parseInt(item.target.getAttribute(
+                'data-trigger'), 10) / 100;
+            }
+
+            if (item.isIntersecting) {
+              if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+                observer.unobserve(item.target); item.target.removeAttribute('data-animate-in-view'); // if a chart
+                if (item.target.start && !item.target.init) { item.target.start(); item.target.init = true; }
+              }
+            }
+          })
         }
 
-      })
-    }
-
-  </script>
+    </script>
 
 </body>
 

@@ -158,7 +158,7 @@
   display: inline-block;
   will-change: width;
   transition: 0.5s width;
-  background: #d3000b
+  background: #c7030d
 }
 
 .sff-stat__bar-item-cell:nth-child(2):before {

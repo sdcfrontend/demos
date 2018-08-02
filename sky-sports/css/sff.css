@@ -19,6 +19,9 @@
 @import "selector-local.css";
 @import "stats.css";
 @import "h2h.css";
+@import "lineups.css";
+@import "moment.css";
+@import "sticky-timeline.css";
 
 .place {
   height: 80vh;

@@ -9,12 +9,17 @@
     item.gridindex = (index + 1) * 10;
     item.style.order = item.gridindex;
 
-    item.onclick = function () {
+    item.onclick = function (e) {
+      e.preventDefault();
       items.forEach(function (currentitem) {
         currentitem.classList.remove('sff-grid__item--active');
       });
 
       this.classList.add('sff-grid__item--active');
+
+      setTimeout(function () {
+        location.hash = item.id;
+      }, 50)
     }
 
   })

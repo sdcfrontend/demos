@@ -1,0 +1,28 @@
+.sff-moment {
+  background: black;
+  max-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.sff-moment:after {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.sff-moment > video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  background-size: cover;
+}
+
+@media all and (max-width: 600px){
+  .sff-moment:after {
+    padding-bottom: 100%;
+  }
+}

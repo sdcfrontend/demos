@@ -1,0 +1,94 @@
+.sff-lineups {
+  color: white;
+  padding: 1rem 0 1.5rem;
+  font-family: premierleague
+}
+
+.sff-lineups h4 {
+  font-weight: 500;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem
+}
+
+.sff-lineups h5 {
+  font-size: 3.3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-bottom: 0.75rem
+}
+
+.sff-lineups__body {
+  display: flex;
+}
+
+.sff-lineups__body-cell:nth-child(1) {
+  flex: 1;
+  margin-right: 3vw;
+  text-align: right
+}
+
+.sff-lineups__body-cell:nth-child(2) {
+  flex: 1;
+  margin-left: 3vw;
+  text-align: left
+}
+
+.sff-lineups ul {
+  padding: 0;
+  list-style: 0;
+  width: 90%;
+  max-width: 240px;
+  min-width: 125px;
+  display: inline-block
+}
+
+.sff-lineups li:not(.sff-lineups__spot) {
+  margin: 2px;
+  background: #7bb9e6;
+  padding: 0.25em 0.8em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  font-size: 0.75rem;
+}
+
+.sff-lineups li:not(.sff-lineups__spot):after {
+  content: attr(data-games);
+  background: white;
+  color: #222;
+  width: 2.4em;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sff-lineups__body-cell:nth-child(2) li:not(.sff-lineups__spot) {
+  background: #bf101a
+}
+
+.sff-lineups__spot {
+  font-size: 0.75rem;
+  text-align: left;
+  margin-top: 1.2rem
+}
+
+.sff-lineups__spot:after {
+  color: #7bb9e6
+}
+
+.sff-lineups__body-cell:nth-child(2)
+.sff-lineups__spot:after {
+  color: #bf101a
+}
+
+.sff-lineups__spot h6 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px
+}
+

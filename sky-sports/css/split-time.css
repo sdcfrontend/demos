@@ -85,11 +85,15 @@
   padding-bottom: 1.25rem;
   overflow: hidden;
   transition: 0.33s opacity, 0.33s transform;
-  will-change: opacity, transform
+  will-change: opacity, transform;
+  background: #7bb9e6;
+  position: sticky;
+  top: 12px
 }
 
 .split-time__block.sff--united {
-  text-align: left
+  text-align: left;
+  background: #bf101a
 }
 
 .split-time__block[data-animate-in-view]{
