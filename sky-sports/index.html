@@ -412,20 +412,23 @@
   </div>
 
   <div class="sff-moment">
-    <div class="sff-moment__slide">
-      <video data-trigger="50" preload muted playsinline style="background-image:url(assets/videos/rooney-overhead.jpg)">
-        <script>
-          if (window.innerWidth < 600) {
-            document.write('<source src="assets/videos/rooney-overhead-small.mp4" media="(max-width:600px)" type="video/mp4">')
-          }
-          else {
-            document.write('<source src="assets/videos/rooney-overhead.mp4" media="(min-width:601px)" type="video/mp4">')
-          }
-        </script>
 
+    <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+      <div class="sff-moment__overlay sff-moment__overlay--utd">
 
-      </video>
+        <div class="site-wrap site-wrap-padding">
+          <h2>
+            "Genius, Pure Genius"
+          </h2>
+          <p>Rooney scores against City, 2011</p>
+        </div>
+
+      </div>
+      <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/united-small.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/united-small.jpg)"></video>
+      <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/united.mp4" preload muted playsinline style="background-image:url(assets/videos/united.jpg)"></video>
     </div>
+    <div class="sff-moment__ghost"></div>
   </div>
 
   <div class="sff-panel sff-panel--white sff-panel--no-padding" league-pos>
@@ -436,7 +439,10 @@
       <div class="sff-league-pos__inner">
         <div class="sff-league-pos__body">
           <div class="sff-league-pos__canvas">
-
+            <span class="sff-league-pos__div"></span>
+            <span class="sff-league-pos__line" style="top: 25%"></span>
+            <span class="sff-league-pos__line" style="top: 50%;"></span>
+            <span class="sff-league-pos__line" style="top: 75%"></span>
             <div class="sff-league-pos__group sff-league-pos__united">
 
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="1"></span>
@@ -572,11 +578,27 @@
     </div>
   </div>
 
-  <div class="place">
-    VIDEO: Roy Keane
+  <div class="sff-moment">
+
+    <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+      <div class="sff-moment__overlay sff-moment__overlay--utd">
+
+        <div class="site-wrap site-wrap-padding">
+          <h2>
+            "Keane quote here"
+          </h2>
+          <p>Roy Keane is sent off, 2011</p>
+        </div>
+
+      </div>
+      <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/keane-small.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/keane-small.jpg)"></video>
+      <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/keane.mp4" preload muted playsinline style="background-image:url(assets/videos/keane.jpg)"></video>
+    </div>
+    <div class="sff-moment__ghost"></div>
   </div>
 
-  <div class="sff-panel sff-city-united" keymoments>
+  <div class="sff-panel" keymoments>
     <h2 class="sff-block-header">
       <span>Key Moments</span>
     </h2>
@@ -586,14 +608,14 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 22.9rem">
           <div class="sff-sticky-timeline__body">
             <h2>1992</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1992" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/" alt="1992" class="sff-sticky-timeline__image">
             <p>City host QPR in first Monday Night Football on Sky Sports.</p>
           </div>
         </div>
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>1996</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/relegated1.jpg" alt="Relegated 1996" class="sff-sticky-timeline__image">
             <p>City relegated on goal difference.</p>
           </div>
 
@@ -601,28 +623,28 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>1998</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1998" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/relegated2.jpg" alt="Relegated 1998" class="sff-sticky-timeline__image">
             <p>City suffer relegation again and drop to Division Two.</p>
           </div>
         </div>
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>1999</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/playoff1999.jpg" alt="Play-off 1999" class="sff-sticky-timeline__image">
             <p>City win dramatic play-off to climb out of Division Two.</p>
           </div>
         </div>
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>2000</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/promotion2000.jpg" alt="Promotion 2000" class="sff-sticky-timeline__image">
             <p>City secure promotion to Premier League for start of 2000/01.</p>
           </div>
         </div>
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>2001</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/" alt="1996" class="sff-sticky-timeline__image">
             <p>City return to Division One after just one season in the top flight.</p>
           </div>
         </div>
@@ -631,7 +653,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
           <div class="sff-sticky-timeline__body">
             <h2>2002</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/" alt="1996" class="sff-sticky-timeline__image">
             <p>City bounce back to Premier League immediately.</p>
           </div>
         </div>
@@ -639,7 +661,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 35rem">
           <div class="sff-sticky-timeline__body">
             <h2>2003</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/stadium.jpg" alt="City move stadium" class="sff-sticky-timeline__image">
             <p>City leave Maine Road and move to City of Manchester stadium.</p>
           </div>
         </div>
@@ -647,7 +669,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2008</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/robinho.jpg" alt="City sign Robinho" class="sff-sticky-timeline__image">
             <p>The Abu Dhabi Group takes control of City, signing Robinho for &pound;32.5m - a British transfer record.</p>
           </div>
         </div>
@@ -655,7 +677,8 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 14rem;">
           <div class="sff-sticky-timeline__body">
             <h2>2009</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/tevez.jpg" alt="City sign Tevez" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/mancini.jpg" alt="Mancini appointed" class="sff-sticky-timeline__image">
             <p>Carlos Tevez leaves United for City under infamous 'Welcome to Manchester' billboard.</p>
             <p>Inter Milan manager Roberto Mancini replaces Mark Hughes.</p>
           </div>
@@ -664,7 +687,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2011</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/balotelli.jpg" alt="Mario Balotelli" class="sff-sticky-timeline__image">
             <p>City thrash United 6-1 at Old Trafford. Mario Balotelli reveals 'Why always me?' vest.</p>
           </div>
         </div>
@@ -672,7 +695,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 21rem">
           <div class="sff-sticky-timeline__body">
             <h2>2012</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/aguero.jpg" alt="Aguero goal" class="sff-sticky-timeline__image">
             <p>Sergio Aguero nets a last-gasp goal to clinch City's first Premier League trophy.</p>
           </div>
         </div>
@@ -680,7 +703,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2014</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/champions2014.jpg" alt="City champions 2014" class="sff-sticky-timeline__image">
             <p>Under Manuel Pellegrini, City secure second Premier League trophy and win League Cup.</p>
           </div>
         </div>
@@ -689,7 +712,8 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 22rem">
           <div class="sff-sticky-timeline__body">
             <h2>2016</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/guardiola.jpg" alt="Guardiola appointed" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/caballero.jpg" alt="City win League Cup" class="sff-sticky-timeline__image">
             <p> Club announces Pep Guardiola will replace Pellegrini.</p>
             <p>Willy Caballero saves three successive shootout penalties to help City claim League Cup.</p>
           </div>
@@ -698,7 +722,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2018</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/title2018.jpg" alt="City win title" class="sff-sticky-timeline__image">
             <p>City smash plethora of league records, win League Cup and claim third Premier League title.</p>
           </div>
         </div>
@@ -711,7 +735,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="margin-top: 2rem; height: 9.9rem">
           <div class="sff-sticky-timeline__body">
             <h2>1993</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/" alt="1996" class="sff-sticky-timeline__image">
             <p>United win their first Premier League title</p>
           </div>
         </div>
@@ -719,7 +743,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 10rem">
           <div class="sff-sticky-timeline__body">
             <h2>1995</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/cantona.jpg" alt="Cantona 1995" class="sff-sticky-timeline__image">
             <p>Eric Cantona receives eight-month ban for attacking fan with kung-fu kick.</p>
           </div>
         </div>
@@ -727,7 +751,8 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 19rem">
           <div class="sff-sticky-timeline__body">
             <h2>1996</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/beckham.jpg" alt="Beckham 1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/keegan.jpg" alt="Keegan 1996" class="sff-sticky-timeline__image">
             <p>David Beckham scores from halfway line.</p>
 
             <p>Kevin Keegan launches verbal tirade at United.</p>
@@ -737,7 +762,8 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 19rem">
           <div class="sff-sticky-timeline__body">
             <h2>1999</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/giggs.jpg" alt="Giggs 1999" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/treble.jpg" alt="United Treble 1999" class="sff-sticky-timeline__image">
             <p>Ryan Giggs bares chest after sending 10-man United into FA Cup final.</p>
             <p>TREBLE SEASON: United beat Bayern Munich 2-1 to win first European Cup in more than 30 years.</p>
           </div>
@@ -746,7 +772,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 19rem">
           <div class="sff-sticky-timeline__body">
             <h2>2001</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/retires.jpg" alt="Ferguson retirement 2001" class="sff-sticky-timeline__image">
             <p>Sir Alex Ferguson announces he will retire at the end of the season...but changes his mind.</p>
           </div>
         </div>
@@ -754,7 +780,8 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 14rem">
           <div class="sff-sticky-timeline__body">
             <h2>2003</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/ronaldo.jpg" alt="Ronaldo 2003" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/beckham-leaves.jpg" alt="Beckham 2003" class="sff-sticky-timeline__image">
             <p>United sign Ronaldo from Sporting Lisbon for &pound;15m.</p>
             <p>David Beckham leaves club after Fergie cuts Becks' eye with a flying boot.</p>
           </div>
@@ -764,7 +791,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd">
           <div class="sff-sticky-timeline__body">
             <h2>2004</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/rooney-signs.jpg" alt="1996" class="sff-sticky-timeline__image">
             <p>United sign Wayne Rooney from Everton for &pound;30m.</p>
           </div>
         </div>
@@ -772,7 +799,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 10rem">
           <div class="sff-sticky-timeline__body">
             <h2>2006</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/glaziers.jpg" alt="Glaziers 2006" class="sff-sticky-timeline__image">
             <p>The Glaziers take over United and increase Old Trafford capacity to a league-topping 76,000.</p>
           </div>
         </div>
@@ -780,7 +807,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2008</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/champions-league.jpg" alt="Champions League 2008" class="sff-sticky-timeline__image">
             <p>United lift Champions League trophy after beating Chelsea 6-5 on penalties.</p>
           </div>
         </div>
@@ -788,7 +815,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 14rem;">
           <div class="sff-sticky-timeline__body">
             <h2>2009</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/vandersar.jpg" alt="Van Der Sar 2009" class="sff-sticky-timeline__image">
             <p>Edwin Van der Sar sets world league clean sheet record by not conceding a goal for 1,311 minutes.</p>
           </div>
         </div>
@@ -797,7 +824,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 16rem">
           <div class="sff-sticky-timeline__body">
             <h2>2011</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/rooney-goal.jpg" alt="Rooney goal" class="sff-sticky-timeline__image">
             <p>Wayne Rooney produces iconic moment with worldy overhead kick against City.</p>
           </div>
         </div>
@@ -806,9 +833,10 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 16rem">
           <div class="sff-sticky-timeline__body">
             <h2>2013</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/ferguson-retires-13.jpg" alt="Ferguson retires 2013" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/moyes.jpg" alt="Moyes appointed" class="sff-sticky-timeline__image">
             <p>Sir Alex Ferguson ends 25-year reign and steps down as manager after winning 13th Premier League trophy.</p>
-            <p>United appoint Everton manager David Moyes as Ferguson’s successor.</p>
+            <p>United appoint Everton manager David Moyes as Ferguson's successor.</p>
           </div>
         </div>
 
@@ -816,7 +844,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2014</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
             <p>United sack Moyes and Ryan Giggs takes over as caretaker manager, before Louis van Gaal takes charge.</p>
           </div>
         </div>
@@ -824,7 +852,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 10rem">
           <div class="sff-sticky-timeline__body">
             <h2>2016</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/mourinho.jpg" alt="Mourinho 2016" class="sff-sticky-timeline__image">
             <p>United sack Van Gaal two days after winning FA Cup, appointing Jose Mourinho six days later.</p>
           </div>
         </div>
@@ -832,7 +860,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2017</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/rooney-leaves.jpg" alt="Rooney Leaves 2017" class="sff-sticky-timeline__image">
             <p>Wayne Rooney leaves club after making 559 appearances and scoring a club record 253 goals.</p>
           </div>
         </div>
@@ -840,7 +868,7 @@
         <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11rem">
           <div class="sff-sticky-timeline__body">
             <h2>2018</h2>
-            <img src="http://via.placeholder.com/180x180" alt="1996" class="sff-sticky-timeline__image">
+            <img src="assets/timeline/united-second.jpg" alt="United finish second" class="sff-sticky-timeline__image">
             <p>United finish second behind title-winning rivals City - their highest league finish since Ferguson left club.</p>
           </div>
         </div>
@@ -849,235 +877,7 @@
 
       </div>
     </div>
-    <!-- <div class="split-time">
 
-
-     <div class="split-time__head site-wrap site-wrap-padding">
-        <h2 class="sff-block-header">
-          <span>Key Moments</span>
-        </h2>
-
-        <div class="split-time__pl">
-          <div class="spit-time__pl-cell spit-time__pl-cell--1">
-            <img src="http://e2.365dm.com/football/badges/192/345.png" alt="Manchester City badge">
-          </div>
-          <div class="spit-time__pl-cell spit-time__pl-cell--2">
-
-            <div class="split-time__pl-ring-count">
-              <div class="sff-counter sff-color-city" data-trigger="100" data-animate-in-view>
-
-                <div class="sff-counter__cell" data-number="3">
-                  <span>3</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="split-time__pl-ring">
-
-            </div>
-
-            <div class="split-time__pl-ring-count">
-
-              <div class="sff-counter sff-color-united" data-trigger="100" data-animate-in-view>
-                <div class="sff-counter__cell" data-number="1">
-                  <span>1</span>
-                </div>
-                <div class="sff-counter__cell" data-number="3">
-                  <span>3</span>
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-          <div class="spit-time__pl-cell spit-time__pl-cell--3">
-            <img src="http://e0.365dm.com/football/badges/192/210.png" alt="Manchester United badge">
-          </div>
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>2017/18</h3>
-            <div class="split-time__media">
-
-              <img src="http://e1.365dm.com/18/07/16-9/20/skysports-oleksandr-zinchenko_4365052.jpg?20180718115554" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>2013/14</h3>
-            <div class="split-time__media">
-
-              <img src="http://e1.365dm.com/18/07/16-9/20/skysports-oleksandr-zinchenko_4365052.jpg?20180718115554" alt="">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>2012/13</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell split-time__item-cell--group">
-
-          <div class="split-time__item">
-            <h3>10/11</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>08/09</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>07/08</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>2011/12</h3>
-            <div class="split-time__media">
-
-              <img src="http://e1.365dm.com/18/07/16-9/20/skysports-oleksandr-zinchenko_4365052.jpg?20180718115554" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>2006/07</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell split-time__item-cell--group">
-
-          <div class="split-time__item">
-            <h3>02/03</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>00/01</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>99/00</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>1998/99</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell split-time__item-cell--group">
-
-          <div class="split-time__item">
-            <h3>96/97</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>95/96</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-          <div class="split-time__item">
-            <h3>93/94</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div data-trigger="50" data-animate-in-view class="split-time__block sff--united">
-        <div class="split-time__item-cell">
-          <div class="split-time__item">
-            <h3>1992/93</h3>
-            <div class="split-time__media">
-
-              <img src="https://s.ndtvimg.com/images/content/2014/aug/806/wayne-rooney-darren-fletcher.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div> -->
   </div>
 
   <div class="sff-panel sff-panel--white" text3>
@@ -1099,8 +899,24 @@
     </div>
   </div>
 
-  <div class="place">
-    VIDEO: Owen last minute goal
+  <div class="sff-moment">
+
+    <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+      <div class="sff-moment__overlay sff-moment__overlay--utd">
+
+        <div class="site-wrap site-wrap-padding">
+          <h2>
+            "Owen quote here"
+          </h2>
+          <p>Owen scores late winner, 2011</p>
+        </div>
+
+      </div>
+      <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/owen-small.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/owen-small.jpg)"></video>
+      <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/owen.mp4" preload muted playsinline style="background-image:url(assets/videos/owen.jpg)"></video>
+    </div>
+    <div class="sff-moment__ghost"></div>
   </div>
 
   <div class="sff-panel sff-panel--no-padding sff-city-united" transfers>
@@ -1146,11 +962,11 @@
                 <div class="sff-counter__cell" data-text>
                   <span>&pound;</span>
                 </div>
-                <div class="sff-counter__cell" data-number="8">
-                  <span>8</span>
-                </div>
                 <div class="sff-counter__cell" data-number="9">
                   <span>9</span>
+                </div>
+                <div class="sff-counter__cell" data-number="3">
+                  <span>3</span>
                 </div>
                 <div class="sff-counter__cell" data-text="small">
                   <span>m</span>
@@ -1486,8 +1302,24 @@
     </div>
   </div>
 
-  <div class="place">
-    VIDEO: Rooney
+  <div class="sff-moment">
+
+    <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+      <div class="sff-moment__overlay sff-moment__overlay--utd">
+
+        <div class="site-wrap site-wrap-padding">
+          <h2>
+            "Genius, Pure Genius"
+          </h2>
+          <p>Rooney scores against City, 2011</p>
+        </div>
+
+      </div>
+      <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/rooney-small.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/rooney-small.jpg)"></video>
+      <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/rooney.mp4" preload muted playsinline style="background-image:url(assets/videos/rooney.jpg)"></video>
+    </div>
+    <div class="sff-moment__ghost"></div>
   </div>
 
   <div class="sff-panel sff-panel--white" text5>
@@ -1634,8 +1466,25 @@
     </div>
   </div>
 
-  <div class="place">
-    VIDEO: Balotelli
+  <div class="sff-moment">
+
+    <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+      <div class="sff-moment__overlay sff-moment__overlay--city">
+
+        <div class="site-wrap site-wrap-padding">
+          <h2>
+            "Balotelli why me"
+          </h2>
+          <p>Balotelli goal celebration, 2011</p>
+        </div>
+
+      </div>
+      <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/balotelli-small.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/balotelli-small.jpg)"></video>
+      <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/balotelli.mp4" preload muted playsinline
+        style="background-image:url(assets/videos/balotelli.jpg)"></video>
+    </div>
+    <div class="sff-moment__ghost"></div>
   </div>
 
   <div class="sff-quiz-fact" data-id="100|10" id="sff-quiz-2" quiz2>
@@ -1892,7 +1741,7 @@
             </div>
           </div>
 
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 144.2rem;">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 143rem;">
             <div class="sff-sticky-timeline__body">
               <h2>Alex Ferguson</h2>
               <p>1986-2013
@@ -2296,7 +2145,7 @@
       </div>
     </div>
 
-    <div class="sff-quiz-fact " data-id="100|10 " id="sff-quiz-2 " quiz4>
+    <div class="sff-quiz-fact" data-id="100|10" id="sff-quiz-2" quiz4>
       <div class="site-wrap site-wrap-padding">
         <div class="sff-quiz-fact__body">
           <p class="sff-quiz-fact__question">DERBIES RELATED QUIZ QUESTION</p>
@@ -2414,72 +2263,27 @@
           </div>
         </div>
 
-        <!-- <div class="sff-stat-block sff-stat-block--large">
-
-        <h4>Premier League</h4>
-
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="width: 15% " data-trigger="100 " data-animate-in-view>8</h5>
-            <div class="sff-stat__bar-item-cell " style="width: 50% " data-label="13 " data-trigger="100 " data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell " style="width: 100% " data-label="21 " data-trigger="100 " data-animate-in-view></div>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="sff-stat-block sff-stat-block--large">
-
-        <h4>FA Cup</h4>
-
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell " style="width: 30% " data-label="3 " data-trigger="100 " data-animate-in-view></div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <div class="sff-stat-block sff-stat-block--large">
-
-        <h4>League Cup</h4>
-
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell " style="width: 20% " data-label="2 " data-trigger="100 " data-animate-in-view></div>
-
-          </div>
-        </div>
-
-      </div>
-
-
-
-      <div class="sff-stat-block sff-stat-block--large">
-
-        <h4>Charity Shield</h4>
-
-        <div class="sff-stat__bar">
-          <div class="sff-stat__bar-item">
-            <h5 style="display: none">0</h5>
-            <div class="sff-stat__bar-item-cell " style="width: 0% " data-label="0 " data-trigger="100 " data-animate-in-view></div>
-            <div class="sff-stat__bar-item-cell " style="width: 10% " data-label="1 " data-trigger="100 " data-animate-in-view></div>
-
-          </div>
-        </div>
-
-      </div> -->
-
       </div>
     </div>
 
-    <div class="place">
-      VIDEO: CITY LIFTING THE TROPHY
+    <div class="sff-moment">
+
+      <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
+        <div class="sff-moment__overlay sff-moment__overlay--city">
+
+          <div class="site-wrap site-wrap-padding">
+            <h2>
+              "City win title quote"
+            </h2>
+            <p>City win title, 2011</p>
+          </div>
+
+        </div>
+        <video data-trigger="50" class="sff-moment__video-small" data-src="assets/videos/city-small.mp4" preload muted playsinline
+          style="background-image:url(assets/videos/city-small.jpg)"></video>
+        <video data-trigger="50" class="sff-moment__video-large" data-src="assets/videos/city.mp4" preload muted playsinline style="background-image:url(assets/videos/city.jpg)"></video>
+      </div>
+      <div class="sff-moment__ghost"></div>
     </div>
 
     <div class="sff-panel sff-panel--white" text9>
@@ -2502,17 +2306,16 @@
     </div>
 
 
-    <div class="sff-panel sff-panel--no-padding sff-city-united " team-selector>
+    <div class="sff-panel sff-panel--no-padding sff-city-united" team-selector>
 
       <div class="site-wrap site-wrap-padding">
         <div class="sff-team-selector">
           <h2 class="sff-block-header">
             <span>Team Selector</span>
           </h2>
-          <div id="interactive-selector-3 " class="sdc-interactive-selector " data-component-name="sdc-interactive-selector
-              " data-token="a9a00d56bb6ad32a8d59cabc2f555d41 " data-url="json/data--utd-city.json " data-post-url=" " data-article-url=" "
-            data-facebook-share-url="
-              " data-twitter-share-url=" " data-whatsapp-share-url=""></div>
+          <div id="interactive-selector-3" class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41"
+            data-url="json/data--utd-city.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url=""
+            data-whatsapp-share-url=""></div>
         </div>
       </div>
     </div>
@@ -2520,98 +2323,6 @@
     <div class="place">
       GET SKY CALL TO ACTION
     </div>
-
-
-
-
-
-    <!-- <div class="sff-panel sff-panel--no-padding" managers>
-
-    <div class="sff-curtain jose-pep " data-animate-in-view data-trigger="75">
-      <div class="sff-curtain__wing sff-city">
-        <div class="jose-pep__block">
-          <h3>Pep
-            <small>Guardiola</small>
-          </h3>
-          <p>
-            W8 L5 D3
-          </p>
-
-        </div>
-
-        <img src="assets/pep.png" alt="Pep Guardiola " class="jose-pep__image">
-      </div>
-
-      <div class="sff-curtain__wing sff-united">
-
-        <div class="jose-pep__block">
-          <h3>Jose
-            <small>Mourhinho</small>
-          </h3>
-          <p>
-            W8 L5 D2
-          </p>
-        </div>
-        <img src="assets/jose.png" alt="Jose Mourhinho " class="jose-pep__image">
-
-      </div>
-
-    </div>
-  </div> -->
-
-
-
-
-
-
-
-
-    <!-- <div class="sff-panel sff-panel--no-padding" classic-moment-rooney>
-    <div class="sff-gallery">
-
-      <div class="sff-gallery__slide">
-
-        <p>
-          <small>Classic moment</small>Rooney <wbr>2011</p>
-
-      </div>
-
-      <div class="sff-gallery__slide sff-gallery__slide--fixed">
-        <img src="https://ext.fmkorea.com/files/attach/new/20171115/33854530/45981397/837249493/35577dec6ab1b82cbca5ca5536f1421c.jpg "
-          alt="">
-
-      </div>
-
-
-
-
-
-    </div>
-  </div> -->
-
-
-
-    <!-- <div class="sff-panel sff-panel--no-padding">
-    <div class="sff-gallery">
-
-      <div class="sff-gallery__slide">
-
-        <p>
-          <small>Classic moment</small> Aguerro 2012</p>
-
-      </div>
-
-      <div class="sff-gallery__slide sff-gallery__slide--fixed">
-        <img src="https://premierleague-static-files.s3.amazonaws.com/premierleague/photo/2016/09/28/c535bc90-78f5-48d5-95b3-14f214de3e60/GettyImages-589081908.jpg "
-          alt="">
-
-      </div>
-
-    </div>
-  </div> -->
-
-
-
 
     <div class="blackjack-sdc-digrev-footer site-footer " data-component-name="blackjack-sdc-digrev-footer">
       <div class="site-footer__body">
@@ -3844,12 +3555,19 @@
       })();
 
       (function () {
-        var charts = document.querySelectorAll('[data-role="charts-container"][data-url]');
+
         var videos = document.querySelectorAll('video');
-        // init charts 
-        for (let i = 0; i < charts.length; i++) { window['sdc-site-charts'](charts[i]); }
+        document.addEventListener("animationstart", function (e) {
+          if (!e.target.src) {
+            e.target.src = e.target.getAttribute('data-src');
+          }
+        });
+
 
         videos.forEach(function (video) {
+
+          video.setAttribute('data-load-video', true);
+
           video.start = function () {
             this.play()
           }
@@ -3860,23 +3578,49 @@
         })
       })();
 
-      var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] }); document.querySelectorAll(
-        '[data-trigger]').forEach(function (block) { observer.observe(block); }); function scan(entries, observer) {
-          entries.forEach(function (item) {
-            var ratio = 0.25;
-            if (item.target.hasAttribute('data-trigger')) {
-              ratio = parseInt(item.target.getAttribute(
-                'data-trigger'), 10) / 100;
-            }
+      var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+      setTimeout(function () {
+        document.querySelectorAll('[data-trigger]').forEach(function (block) {
+          observer.observe(block);
+        });
+      }, 100)
 
-            if (item.isIntersecting) {
-              if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
-                observer.unobserve(item.target); item.target.removeAttribute('data-animate-in-view'); // if a chart
-                if (item.target.start && !item.target.init) { item.target.start(); item.target.init = true; }
+      function scan(entries, observer) {
+        entries.forEach(function (item) {
+          var ratio = 0.25;
+          if (item.target.hasAttribute('data-trigger')) {
+            ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+          }
+
+          if (item.isIntersecting) {
+            if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+              observer.unobserve(item.target);
+              item.target.removeAttribute('data-animate-in-view');
+              // if a chart
+              if (item.target.start && !item.target.init) {
+                item.target.start();
+                item.target.init = true;
               }
             }
-          })
-        }
+          }
+        })
+      }
+
+      function videotick() {
+        document.querySelectorAll('.sff-moment__ghost').forEach(function (item) {
+          var dims = item.getBoundingClientRect();
+          var top = dims.top;
+          top = ((100 / item.offsetHeight) * top) - 50;
+          top = Math.min(top, 0);
+          top = Math.max(top, -100);
+
+          item.parentNode.style.setProperty('--progress', (Math.round(top) * -1) + "%");
+        });
+
+        requestAnimationFrame(videotick)
+      }
+
+      videotick()
 
     </script>
 

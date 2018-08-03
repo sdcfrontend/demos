@@ -1,20 +1,121 @@
+@keyframes start-video-desktop {
+  0% {
+    transform: translateX(0.1%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes start-video-mobile {
+  0% {
+    transform: translateX(0.1%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .sff-moment {
   background: black;
-  height: 200vh;
   position: relative;
 }
 
 .sff-moment__slide {
   height: 100vh;
   position: sticky;
-  top: 0
+  top: 0;
+  overflow: hidden
 }
-/* 
-.sff-moment:after {
+
+.sff-moment__overlay {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  /* background: linear-gradient(0deg,rgba(0,0,01) 0%,transparent 30%); */
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.sff-moment__overlay:after {
   content: "";
-  display: block;
-  padding-bottom: 56.25%;
-} */
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  height: 11px;
+  width: 100%;
+  transform: translateX(var(--progress))
+}
+
+.sff-moment__overlay--utd:after {
+  background: #bf101a;
+}
+
+.sff-moment__overlay--city:after {
+  background: #7bb9e6
+}
+
+.sff-moment__ghost {
+  display: none;
+}
+
+@supports(position: sticky){
+  .sff-moment__ghost {
+    height: 200vh;
+    display: block
+  }
+}
+
+@supports(position: -webkit-sticky){
+  .sff-moment__ghost {
+    height: 200vh;
+    display: block
+  }
+}
+
+.sff-moment__slide
+.site-wrap {
+  padding-bottom: 2rem;
+  width: 100%;
+  will-change: transform;
+  transition: 0.66s transform;
+  transition-delay: 0.33s;
+  transform: translateX(0%);
+  position: relative;
+}
+
+.sff-moment__slide[data-animate-in-view]
+.site-wrap  {
+  transform: translateX(-100%);
+}
+
+.sff-moment__overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 0.9;
+  margin-bottom: 0.4rem;
+  color: white;
+  font-family:premierleague;
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.5))
+}
+
+.sff-moment__slide[data-animate-in-view]
+.sff-moment__overlay p {
+  transform: translateX(-20%);
+}
+
+.sff-moment__overlay p {
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.33s;
+  transition-delay: 0.66s;
+  filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.5))
+}
 
 .sff-moment__slide > video {
   position: absolute;
@@ -26,8 +127,33 @@
   background-size: cover;
 }
 
+.sff-moment__video-small {
+  display: none
+}
+
+.sff-moment__video-large {
+  display: block
+}
+
+video[data-load-video] {
+  animation: 0.01s start-video-desktop
+}
+
 @media all and (max-width: 600px){
+
+  video[data-load-video]  {
+    animation: 0.01s start-video-mobile
+  }
+
   .sff-moment:after {
     padding-bottom: 100%;
+  }
+
+  .sff-moment__video-small {
+    display: block!important
+  }
+
+  .sff-moment__video-large {
+    display: none!important
   }
 }

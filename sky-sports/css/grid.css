@@ -2,7 +2,9 @@
 .sff-grid {
   display: flex;
   flex-wrap: wrap;
-  column-count: 90
+  column-count: 90;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .sff-grid__item {
@@ -15,27 +17,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  position: relative;
+
 }
 
 .sff-grid__item:hover {
   text-decoration: none;
+  background: white;
+  color: #222
 }
 
 .sff-grid__item > span {
-  border: 2px solid rgba(255,255,255,0);
   display: block;
   padding: 0.4em;
   width: 100%;
   position: relative;
-  color: #ccc;
 }
 
-.sff-grid__item--active > span {
-  border-color: white;
-  color: white;
+.sff-grid__item--active {
+  background-color: white;
+  color: #222;
+  pointer-events: none;
 }
 
-.sff-grid__item > span:after {
+.sff-grid__item:after {
   content: "";
   width: 0px;
   height: 0px;
@@ -55,15 +62,17 @@
   order: inherit;
 }
 
-.sff-grid__item--active > span:after {
+.sff-grid__item--active:after {
   display: block;
 }
 
 .sff-grid__content {
   width: 100%;
   display: none;
-  border-top: 1px solid white;
   border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  margin-top: -1px
 }
 
 @media all and (max-width: 920px){
