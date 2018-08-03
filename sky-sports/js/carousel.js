@@ -41,7 +41,6 @@
   }
 
   function centernav(index) {
-
     navitems.forEach(function (item) {
       item.classList.remove('sff-carousel__nav-item--on');
     });

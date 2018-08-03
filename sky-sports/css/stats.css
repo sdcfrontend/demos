@@ -146,7 +146,7 @@
 .sff-stat__bar-item-cell:after {
   content: attr(data-label);
   padding: 0 0.5rem;
-  font-size: 0.7rem
+  font-size: 0.8rem
 } 
 
 .sff-stat__bar-item-cell:before {

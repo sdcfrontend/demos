@@ -1,17 +1,22 @@
 .sff-moment {
   background: black;
-  max-height: 100vh;
+  height: 200vh;
   position: relative;
-  overflow: hidden;
 }
 
+.sff-moment__slide {
+  height: 100vh;
+  position: sticky;
+  top: 0
+}
+/* 
 .sff-moment:after {
   content: "";
   display: block;
   padding-bottom: 56.25%;
-}
+} */
 
-.sff-moment > video {
+.sff-moment__slide > video {
   position: absolute;
   width: 100%;
   height: 100%;
