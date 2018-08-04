@@ -37,6 +37,7 @@
   document.querySelectorAll('.sff-grid__item').forEach(function (item) {
 
     item.addEventListener('click', function (e) {
+
       if (item.nextElementSibling.getAttribute('data-init')) {
         return;
       }

@@ -17,9 +17,11 @@
 
       this.classList.add('sff-grid__item--active');
 
-      setTimeout(function () {
-        location.hash = item.id;
-      }, 50)
+      if (e.clientX) {
+        setTimeout(function () {
+          location.hash = item.id;
+        }, 50)
+      }
     }
 
   })
