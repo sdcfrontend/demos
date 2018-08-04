@@ -79,7 +79,7 @@
         })
       }
 
-      top = ((100 / item.offsetHeight) * top) - 100;
+      top = ((100 / item.offsetHeight) * top) - 80;
       top = Math.min(top, 0);
       top = Math.max(top, -100);
 

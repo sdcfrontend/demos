@@ -28,9 +28,7 @@
     var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
 
     // Set Angle
-    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px; transition-delay:' + (index * 30) + 'ms';
-    line.setAttribute('data-animate-in-view', true);
-    line.setAttribute('data-trigger', 100);
+    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px; transition-delay:' + (index * 20) + 'ms';
 
     if (pointB.left < pointA.left) {
 
@@ -49,14 +47,14 @@
     var dotitems = item.querySelectorAll('.dot');
 
     dotitems.forEach(function (dotitem, index) {
-      dotitem.style.cssText = "transition-delay: " + (index * 30) + "ms; left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
+      dotitem.style.cssText = "transition-delay: " + (index * 20) + "ms; left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
 
     })
 
   })
 
 
-  function renderLines() {
+  function renderLines(refresh) {
 
     document.querySelectorAll('.sff-league-pos__group').forEach(function (item) {
 
@@ -74,11 +72,12 @@
           line = document.createElement('div');
           line.className = 'line';
           item.appendChild(line);
-        }
 
-        // if (dotitem.dataset.pos === "r" || parseInt(dotitem.dataset.pos, 10) > 17) {
-        //   line.classList.add('line--hidden');
-        // }
+          if (refresh) {
+            line.setAttribute('data-animate-in-view', true);
+            line.setAttribute('data-trigger', 100);
+          }
+        }
 
         drawLine(dotitems[index], dotitems[index + 1], line, index);
       })
@@ -90,12 +89,16 @@
   renderLines();
 
   var resizeTimer;
+  var width = window.innerWidth;
 
-  window.onresize = function () {
+  window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-      renderLines();
+      if (window.innerWidth !== width) {
+        renderLines(true);
+        width = window.innerWidth;
+      }
     }, 400);
-  }
+  })
 
 })()

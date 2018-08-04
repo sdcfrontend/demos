@@ -49,10 +49,11 @@
   left: -100%;
   height: 11px;
   width: 100%;
-  transform: translateX(var(--progress))
+  transform: translateX(var(--progress));
+  will-change: transform;
 }
 
-.sff-moment__overlay--utd:after {
+.sff-moment__overlay:after {
   background: #bf101a;
 }
 
@@ -126,6 +127,7 @@
   left: 0;
   object-fit: cover;
   background-size: cover;
+  transform: translate(0)
 }
 
 .sff-moment__video-small {
