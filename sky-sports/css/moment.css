@@ -45,11 +45,11 @@
 .sff-moment__overlay:after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: -100%;
-  height: 11px;
-  width: 100%;
-  transform: translateX(var(--progress));
+  right: 0;
+  top: -100%;
+  width: 12px;
+  height: 100%;
+  transform: translateY(var(--progress));
   will-change: transform;
 }
 
