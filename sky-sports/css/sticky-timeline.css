@@ -74,6 +74,7 @@
   margin-bottom: 0.2rem;
   position: relative;
   left: 3px;
+  border: 2px solid white;
 }
 
 .sff-sticky-timeline__item-utd
