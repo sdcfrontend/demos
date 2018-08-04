@@ -180,6 +180,10 @@
   visibility: hidden;
 }
 
+.line[data-animate-in-view]{
+  width: 1px!important
+}
+
 .sff-league-pos__united .line[class] {
   background: #d3000b
 }

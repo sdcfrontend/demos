@@ -101,7 +101,7 @@
 
 .sff-stat__bar-item {
   overflow: hidden;
-  height: 1.25rem;
+  height: 1.5rem;
   position: relative;
   display: flex;
   margin-bottom: 3px;
@@ -116,7 +116,8 @@
   align-items: center
 }
 
-.sff-stat__bar-item-cell[data-animate-in-view]{
+.sff-stat__bar-item[data-animate-in-view]
+.sff-stat__bar-item-cell {
   width: 1px!important
 }
 

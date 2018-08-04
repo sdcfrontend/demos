@@ -8,7 +8,7 @@
     return Math.sqrt((x -= x0) * x + (y -= y0) * y);
   };
 
-  function drawLine(a, b, line) {
+  function drawLine(a, b, line, index) {
 
     var pointA = {
       left: a.offsetLeft,
@@ -28,7 +28,9 @@
     var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
 
     // Set Angle
-    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px';
+    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px; transition-delay:' + (index * 30) + 'ms';
+    line.setAttribute('data-animate-in-view', true);
+    line.setAttribute('data-trigger', 100);
 
     if (pointB.left < pointA.left) {
 
@@ -47,7 +49,7 @@
     var dotitems = item.querySelectorAll('.dot');
 
     dotitems.forEach(function (dotitem, index) {
-      dotitem.style.cssText = "transition-delay: " + (index * 20) + "ms; left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
+      dotitem.style.cssText = "transition-delay: " + (index * 30) + "ms; left: " + ((index * 36) + 8) + "px; top:" + (((parseInt(dotitem.dataset.pos, 10) - 1) * 5) + 2) + "%;";
 
     })
 
@@ -78,7 +80,7 @@
         //   line.classList.add('line--hidden');
         // }
 
-        drawLine(dotitems[index], dotitems[index + 1], line);
+        drawLine(dotitems[index], dotitems[index + 1], line, index);
       })
 
     })
@@ -86,5 +88,14 @@
   }
 
   renderLines();
+
+  var resizeTimer;
+
+  window.onresize = function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      renderLines();
+    }, 400);
+  }
 
 })()

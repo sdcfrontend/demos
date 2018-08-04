@@ -66,14 +66,14 @@
 
 @supports(position: sticky){
   .sff-moment__ghost {
-    height: 200vh;
+    height: 125vh;
     display: block
   }
 }
 
 @supports(position: -webkit-sticky){
   .sff-moment__ghost {
-    height: 200vh;
+    height: 125vh;
     display: block
   }
 }
@@ -87,6 +87,7 @@
   transition-delay: 0.33s;
   transform: translateX(0%);
   position: relative;
+  text-align: left
 }
 
 .sff-moment__slide[data-animate-in-view]
