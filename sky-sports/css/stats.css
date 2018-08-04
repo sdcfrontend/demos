@@ -116,11 +116,6 @@
   align-items: center
 }
 
-.sff-stat__bar-item[data-animate-in-view]
-.sff-stat__bar-item-cell {
-  width: 1px!important
-}
-
 .sff-stat__bar-item h5:nth-child(1){
   order: 2;
   width: 50px;
@@ -157,11 +152,21 @@
   width: inherit;
   border: 2px solid white;
   display: inline-block;
-  will-change: width;
-  transition: 0.5s width;
-  background: #c7030d
+  will-change: transform;
+  transition: 0.5s transform;
+  background: #c7030d;
 }
 
 .sff-stat__bar-item-cell:nth-child(2):before {
   background: #70ade5
+}
+
+.sff-stat__bar-item[data-animate-in-view]
+.sff-stat__bar-item-cell:before {
+  transform: translateX(-100%)
+}
+
+.sff-stat__bar-item[data-animate-in-view]
+.sff-stat__bar-item-cell:nth-child(2):before {
+  transform: translateX(100%)
 }

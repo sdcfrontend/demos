@@ -7,7 +7,7 @@
 
 .sff-sticky-timeline__cell {
   flex: 1;
-  margin: 0 6px;
+  margin: 0 calc(2px + 0.2vw)
 }
 
 .sff-sticky-timeline__item {
@@ -37,12 +37,12 @@
 }
 
 .sff-sticky-timeline__item p + p {
-  margin-top: 0.9em
+  margin-top: 0.95em
 }
 
 .sff-sticky-timeline__item-city {
   text-align: right;
-  padding-right: calc(1rem + 11px);
+  padding-right: calc(1rem + 9px);
 }
 
 .sff-sticky-timeline__item:after {
@@ -58,7 +58,7 @@
 
 .sff-sticky-timeline__item-utd {
   text-align: left;
-  padding-left: calc(1rem + 11px);
+  padding-left: calc(1rem + 9px);
 }
 
 .sff-sticky-timeline__item-utd:after {
