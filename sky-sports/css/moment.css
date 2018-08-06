@@ -36,10 +36,20 @@
   width: 100%;
   height: 100%;
   z-index: 3;
-  /* background: linear-gradient(0deg,rgba(0,0,01) 0%,transparent 30%); */
   display: flex;
   align-items: flex-end;
   pointer-events: none;
+}
+
+.sff-moment__overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background: linear-gradient(0deg,rgba(0,0,01) 0%,transparent 50%);
+
 }
 
 .sff-moment__overlay:after {

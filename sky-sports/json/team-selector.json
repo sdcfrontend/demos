@@ -3,6 +3,7 @@
   "title": "Best Man City-Man Utd XI",
   "sponsorImage": "",
   "formation": "442",
+  "static": true,
   "restrictSelections": true,
   "useParticipantImage": false,
   "backgroundImage": "#ffffff",

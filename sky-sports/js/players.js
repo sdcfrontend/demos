@@ -1,10 +1,15 @@
 (function () {
+
+  var content = document.querySelector('.sff-slidetabs__body');
+  var rail = document.querySelector('.sff-slidetabs__nav');
+  var nav = document.querySelectorAll('.sff-slidetabs__nav-link');
+
   var template = '<div class="sff-lineups"><h4>Most Appearances</h4><div class="sff-lineups__body"><div class="sff-lineups__body-cell"><h5>City</h5><ul>#{city}</ul></div><div class="sff-lineups__body-cell"><h5>Utd</h5><ul>#{utd}</ul></div></div></div>';
 
-  function buildlist(array) {
-    array.reverse();
+  function buildlist(data) {
+    var array = data.slice();
     var frag = document.createElement('frag');
-    array.forEach(function (item, index) {
+    array.reverse().forEach(function (item, index) {
 
       var li = document.createElement('li');
 
@@ -34,20 +39,39 @@
 
   }
 
-  document.querySelectorAll('.sff-grid__item').forEach(function (item) {
+  function centernav(item) {
+
+    var width = rail.offsetWidth;
+    var itemX = ((item.parentNode.offsetLeft) - (width / 2)) + (item.offsetWidth / 2);
+    rail.scrollLeft = itemX;
+  }
+
+  nav.forEach(function (item) {
 
     item.addEventListener('click', function (e) {
 
-      if (item.nextElementSibling.getAttribute('data-init')) {
+      e.preventDefault();
+      var id = this.href.split('#')[1];
+
+      if (content.getAttribute('data-id') === id) {
         return;
       }
-      var city = buildlist(data[0][this.id]);
-      var utd = buildlist(data[1][this.id]);
 
-      item.nextElementSibling.innerHTML
+      nav.forEach(function (navitem) {
+        navitem.parentNode.classList.remove('sff-slidetabs__nav-item--active')
+      });
+
+      this.parentNode.classList.add('sff-slidetabs__nav-item--active');
+
+      centernav(this);
+
+      var city = buildlist(data[0][id]);
+      var utd = buildlist(data[1][id]);
+
+      content.innerHTML
         = template.replace(/#{city}/, city).replace(/#{utd}/, utd);
 
-      item.nextElementSibling.setAttribute('data-init', true);
+      content.setAttribute('data-id', id);
     });
   })
 
@@ -711,6 +735,6 @@
       }, "David de Gea", ["Romelu Lukaku", "£90,000,000"]]
   }];
 
-  document.getElementById('year92').click();
+  document.querySelector('.sff-slidetabs__nav-link').click();
 
 })();

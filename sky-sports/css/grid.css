@@ -1,3 +1,82 @@
+.sff-slidetabs {
+  color: white;
+}
+
+.sff-slidetabs__nav {
+  overflow: auto;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  
+  overflow: -moz-scrollbars-none;
+}
+
+.sff-slidetabs__nav::-webkit-scrollbar {
+  display: none
+}
+
+.sff-slidetabs__nav::-moz-scrollbar {
+  display: none;
+}
+
+.sff-slidetabs__nav-items {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.sff-slidetabs__nav-item {
+  border: 1px solid white;
+  border-right: 0;
+  position: relative;
+}
+
+.sff-slidetabs__nav-item:last-child {
+  border-right: 1px solid white
+}
+
+.sff-slidetabs__nav-link {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 0.6rem;
+  color: #ccc;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sff-slidetabs__nav-item > a:hover {
+  text-decoration: none;
+}
+
+.sff-slidetabs__nav-item--active > a,
+.sff-slidetabs__nav-item--active > a:active {
+  text-decoration: none;
+  background: white;
+  color: #222;
+  pointer-events: none;
+}
+
+.sff-slidetabs__nav-item--active:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: none;
+  transform: translateX(-50%)
+}
+
+.sff-slidetabs__nav-item--active:after {
+  display: block;
+}
+
 
 .sff-grid {
   display: flex;

@@ -4,10 +4,15 @@
 	"sponsorImage": "",
 	"formation": "442",
 	"restrictSelections": true,
+	"static": true,
 	"useParticipantImage": false,
 	"backgroundImage": "#ffffff",
 	"type": "football",
 	"numOfParticipants": 11,
+	"successMessage": {
+		"title": "Share your team",
+		"text": "Click the link below to copy the share url"
+	},
 	"embed": true,
 	"sides": [
 		{

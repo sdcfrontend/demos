@@ -101,10 +101,10 @@
 
 .sff-stat__bar-item {
   overflow: hidden;
-  height: 1.5rem;
   position: relative;
   display: flex;
   margin-bottom: 3px;
+  font-family: premierleague;
 }
 
 .sff-stat__bar-item-cell {
@@ -118,17 +118,37 @@
 
 .sff-stat__bar-item h5:nth-child(1){
   order: 2;
-  width: 50px;
-  height: 100%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-weight: 500;
   background: white;
   align-items: center;
-  font-size: 16px;
+  font-size: 0.6rem;
+  letter-spacing: 0;
   font-weight: normal;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  z-index: 6
 }
 
+.sff-stat__bar-item h5:nth-child(1):before,
+.sff-stat__bar-item h5:nth-child(1):after {
+  content: "";
+  width: 2px;
+  height: 6px;
+  background: #c7030d;
+  position: absolute;
+  right: -2px;
+}
+
+.sff-stat__bar-item h5:nth-child(1):before {
+  right: auto;
+  left: -2px;
+  background: #7bb9e6;
+}
 
 .sff-stat__bar-item-cell:nth-child(2) {
   flex-direction: row-reverse;
@@ -139,34 +159,58 @@
   order: 3
 } 
 
-.sff-stat__bar-item-cell:after {
-  content: attr(data-label);
-  padding: 0 0.5rem;
-  font-size: 0.8rem
-} 
-
-.sff-stat__bar-item-cell:before {
-  content: "";
-  height: 100%;
-  box-sizing: border-box;
-  width: inherit;
-  border: 2px solid white;
-  display: inline-block;
+.sff-stat__bar-item-cellbar {
+  display: block;
+  justify-content: flex-end;
+  align-items: center;
+  display: flex;
+  flex: 1;
   will-change: transform;
   transition: 0.5s transform;
-  background: #c7030d;
+  font-size: 0.75rem;
 }
 
-.sff-stat__bar-item-cell:nth-child(2):before {
-  background: #70ade5
+.sff-stat__bar-item-cellbar:before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 3px solid white;
+  border-radius: 50%;
+  order: 2;
+  flex: none;
+  margin-left: 0.3rem;
 }
+
+.sff-stat__bar-item-cellbar:after {
+  content: "";
+  height: 4px;
+  width: inherit;
+  background: white;
+  display: block;
+  order: 3;
+}
+
+.sff-stat__bar-item-cellbar[data-utd]{
+  justify-content: flex-start;
+}
+
+.sff-stat__bar-item-cellbar[data-utd]:before {
+  order: 0;
+  margin: 0;
+  margin-right: 0.3rem
+}
+
+.sff-stat__bar-item-cellbar[data-utd]:after {
+  order: -1;
+}
+
 
 .sff-stat__bar-item[data-animate-in-view]
-.sff-stat__bar-item-cell:before {
+.sff-stat__bar-item-cellbar[data-utd] {
   transform: translateX(-100%)
 }
 
 .sff-stat__bar-item[data-animate-in-view]
-.sff-stat__bar-item-cell:nth-child(2):before {
+.sff-stat__bar-item-cellbar {
   transform: translateX(100%)
 }
