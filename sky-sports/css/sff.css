@@ -9,7 +9,7 @@
 /* @import "timeline.css"; */
 @import "text.css";
 @import "block-header.css";
-@import "split-time.css";
+/* @import "split-time.css"; */
 @import "counter.css";
 @import "gallery.css";
 @import "carousel.css";
@@ -22,6 +22,7 @@
 @import "lineups.css";
 @import "moment.css";
 @import "sticky-timeline.css";
+@import "promo.css";
 
 .place {
   height: 80vh;

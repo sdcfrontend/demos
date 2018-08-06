@@ -1,0 +1,63 @@
+.sff-promo {
+  max-height: 100vh;
+  position: relative;
+  color: white;
+  overflow: hidden
+}
+
+.sff-promo:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.sff-promo__image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.sff-promo__body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 2rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.sff-promo__body[class],
+.sff-promo__body[class]:hover {
+  background: linear-gradient(0deg,rgba(0,0,01) 0%,transparent 100%);
+  text-decoration: none
+}
+
+.sff-promo__body[class]:hover
+h2 {
+  text-decoration: underline
+}
+
+.sff-promo__body h2 {
+  font-family: inherit;
+  font-size: 2.4rem;
+  font-weight: normal
+}
+
+.sff-promo__body p {
+  font-size: 0.9rem;
+  margin: 0.2em 0 1em
+}
+
+.sff-promo__body img {
+  width: 7rem
+}
+
+.sff-promo__body .site-wrap {
+  width: 100%;
+}
+

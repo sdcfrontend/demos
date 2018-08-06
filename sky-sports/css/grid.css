@@ -9,7 +9,7 @@
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   -ms-overflow-style: none;  
-  overflow: -moz-scrollbars-none;
+  /* overflow: -moz-scrollbars-none; */
 }
 
 .sff-slidetabs__nav::-webkit-scrollbar {
@@ -17,7 +17,7 @@
 }
 
 .sff-slidetabs__nav::-moz-scrollbar {
-  display: none;
+  width: 10px;
 }
 
 .sff-slidetabs__nav-items {
@@ -49,10 +49,12 @@
 
 .sff-slidetabs__nav-item > a:hover {
   text-decoration: none;
+  color: #888
 }
 
 .sff-slidetabs__nav-item--active > a,
-.sff-slidetabs__nav-item--active > a:active {
+.sff-slidetabs__nav-item--active > a:active,
+.sff-slidetabs__nav-item--active > a:hover {
   text-decoration: none;
   background: white;
   color: #222;

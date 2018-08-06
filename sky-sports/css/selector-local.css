@@ -8,3 +8,6 @@
   background: none!important
 }
 
+.sdc-interactive-selector__title-wrap[class] {
+  padding: 1rem 0
+}

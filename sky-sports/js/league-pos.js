@@ -89,15 +89,13 @@
   renderLines();
 
   var resizeTimer;
-  var width = window.innerWidth;
 
   window.addEventListener('resize', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-      if (window.innerWidth !== width) {
-        renderLines(true);
-        width = window.innerWidth;
-      }
+
+      renderLines(true);
+
     }, 400);
   })
 

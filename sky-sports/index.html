@@ -7,12 +7,14 @@
 
   <script>!function () { function e(e) { for (var n = document.cookie.split(";"), t = -1; ++t < n.length;) { var i = n[t].split("="); if (i[0].match(e)) return decodeURIComponent(i[1]) } return "" } function n(e) { return !!e } function t(e) { return 1 === e.hd } function i(e) { return 1 === e.st } function o(e) { return 2 === e.st } function r(e) { return 3 === e.st } function s(e) { return !(!e || !e.match(/^WIG/)) } function a() { var e = window.SKY_SPORTS.user; return e.isLoggedIn ? e.isSkySports ? 1 : e.isWholesale ? 3 : 4 : 2 } function c(e) { return e.f || "" } function u() { var d = e("interactive"), m = d ? JSON.parse(d) : {}, S = e("skySportsSSO"), w = { isLoggedIn: n(S), getType: a, set: u }; w.isLoggedIn && (w.name = c(m), w.isSkyHD = t(m), w.isSky = i(m), w.isSkySports = o(m), w.isNowTV = r(m), w.isWholesale = s(S)), window.SKY_SPORTS.user = w } window.SKY_SPORTS = window.SKY_SPORTS || {}, u() }(), function () { window.SKY_SPORTS = window.SKY_SPORTS || {}, SKY_SPORTS.getUa = function (e) { function n(n) { return !!e.match(n) && parseFloat(e.match(n)[1].replace("_", ".")) } var t = !1; null !== new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(e) && (t = parseFloat(RegExp.$1)); var i = e.match(/iPad/), o = e.match(/iP/), r = e.match(/android/i), s = e.match(/windows phone/i), a = navigator.platform.match(/mac|win/i), c = { classList: "" }; return s && (c = { mobile: !0, windowsphone: !0, name: "windowsphone", version: n(/os ([0-9]\.[0-9])/i) || n(/windows phone ([0-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), t && (c = { msie: !0, name: "msie", version: t }, c.classList = [c.name, c.name + c.version].join(" ")), (i || o) && (c = { ios: !0, name: i ? "ipad" : "iphone", mobile: !0, version: n(/os ([1-9]\_[0-9])/i) }, c.classList = [c.name, c.name + c.version, c.device, "ios", "ios" + c.version, "mobile"].join(" ")), r && (c = { android: !0, name: "android", mobile: !0, version: n(/android ([1-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), a && (c.desktop = !0, c.classList += " desktop"), c }, SKY_SPORTS.device = SKY_SPORTS.getUa(navigator.userAgent) }(), function () { function e() { for (var t = document.querySelectorAll("img[data-lazy]"), i = -1; ++i < t.length;) { var o = t[i]; n(o) && ("PICTURE" === o.parentNode.nodeName ? o.parentNode.querySelectorAll("source").forEach(function (e) { e.setAttribute("srcset", e.getAttribute("data-srcset")) }) : o.setAttribute("srcset", o.getAttribute("data-srcset")), o.removeAttribute("data-lazy")) } setTimeout(function () { window.requestAnimationFrame(e) }, 250) } function n(e) { var n = e.getBoundingClientRect(); return 0 !== n.width && (!(n.bottom < 0) && !((window.outerHeight || window.innerHeight) - n.top < 50)) } NodeList.prototype.forEach || (NodeList.prototype.forEach = Array.prototype.forEach), "srcset" in new Image && setTimeout(function () { e() }, 500) }(), function () { window.isModernBrowser = !1; var e = ["js", "is-legacy"]; ("visibilityState" in document || window.CSS && window.CSS.supports) && (window.isModernBrowser = !0, e = ["js", "is-modern"]), document.documentElement.className = e.join(" ") }();</script>
   <link rel="stylesheet" href="css/site-main.css">
-  <link rel="stylesheet" href="css/sff.css">
+
 
 
 </head>
 
 <body>
+  <!-- <link rel="stylesheet" href="css/min.css"> -->
+  <link rel="stylesheet" href="css/min.css">
   <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header">
     <div class="site-header">
 
@@ -1610,6 +1612,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 12.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Peter Reid</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1990-1993
                 <br>W59 D31 L46
                 <br>0 trophies</p>
@@ -1618,6 +1621,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
             <div class="sff-sticky-timeline__body">
               <h2>Tony Book</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1993
                 <br>W0 D1 L0
                 <br>0 trophies</p>
@@ -1626,6 +1630,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 10.4rem">
             <div class="sff-sticky-timeline__body">
               <h2>Brian Horton</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1993-1995
                 <br>W29 D33 L34
                 <br>0 trophies</p>
@@ -1634,6 +1639,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.8rem">
             <div class="sff-sticky-timeline__body">
               <h2>Alan Ball</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1995-1996
                 <br>W13 D14 L22
                 <br>0 trophies</p>
@@ -1642,6 +1648,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.4rem">
             <div class="sff-sticky-timeline__body">
               <h2>Asa Hartford</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W3 D0 L5
                 <br>0 trophies</p>
@@ -1650,6 +1657,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Steve Coppell</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W2 D1 L3
                 <br>0 trophies</p>
@@ -1658,6 +1666,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Phil Neal</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W2 D1 L7
                 <br>0 trophies</p>
@@ -1666,6 +1675,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Frank Clark</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1996-1998
                 <br>W20 D17 L22
                 <br>0 trophies</p>
@@ -1674,6 +1684,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 13.8rem">
             <div class="sff-sticky-timeline__body">
               <h2>Joe Royle</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1998-2001
                 <br>W74 D46 L51
                 <br>1 trophy</p>
@@ -1682,6 +1693,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 15.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Kevin Keegan</h2>
+              <img src="assets/timeline/keegan.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2001-2005
                 <br>W77 D39 L60
                 <br>1 trophy</p>
@@ -1690,6 +1702,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:11.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Stuart Pearce</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2005-2007
                 <br>W34 D19 L43
                 <br>0 trophies</p>
@@ -1698,6 +1711,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Sven-G&ouml;ran Eriksson</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2007-2008
                 <br>W19 D11 L15
                 <br>0 trophies</p>
@@ -1706,6 +1720,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 9.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Mark Hughes</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2008-2009
                 <br>W36 D15 L26
                 <br>0 trophies</p>
@@ -1714,6 +1729,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 14.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Roberto Mancini</h2>
+              <img src="assets/timeline/mancini.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2009-2013
                 <br>W113 D38 L40
                 <br>3 trophies</p>
@@ -1722,23 +1738,26 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Brian Kidd</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2013
                 <br>W1 D0 L1
                 <br>0 trophies</p>
             </div>
           </div>
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 13.2rem">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 26rem;">
             <div class="sff-sticky-timeline__body">
               <h2>Manuel Pellegrini</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2013-16
                 <br>W100 D28 L39
                 <br>3 trophies</p>
             </div>
 
           </div>
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:11rem">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 11.2rem;">
             <div class="sff-sticky-timeline__body">
               <h2>Pep Guardiola</h2>
+              <img src="assets/timeline/guardiola.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2016-Present
                 <br>W77 D19 L17
                 <br>3 trophies</p>
@@ -1748,17 +1767,19 @@
         </div>
 
         <div class="sff-sticky-timeline__cell">
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 143rem;">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 163rem;" id="sff-sticky-timeline-fergie">
             <div class="sff-sticky-timeline__body">
               <h2>Alex Ferguson</h2>
+              <img src="assets/timeline/fergie2.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>1986-2013
                 <br>W895 D338 L267
                 <br>38 trophies</p>
             </div>
           </div>
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 7.8rem">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 13.8rem;">
             <div class="sff-sticky-timeline__body">
               <h2>David Moyes</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2013
                 <br>W27 D9 L15
                 <br>0 trophies</p>
@@ -1767,6 +1788,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Ryan Giggs</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2014 (caretaker)
                 <br>W2 D1 L1
                 <br>0 trophies</p>
@@ -1775,14 +1797,16 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 10.4rem">
             <div class="sff-sticky-timeline__body">
               <h2>Louis van Gaal</h2>
+              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2014-2016
                 <br>W54 D25 L24
                 <br>1 trophy</p>
             </div>
           </div>
-          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 11.2rem">
+          <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 12rem">
             <div class="sff-sticky-timeline__body">
               <h2>Jos&eacute; Mourinho</h2>
+              <img src="assets/timeline/mourinho.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
               <p>2016-Present
                 <br>W74 D25 L21
                 <br>3 trophies</p>
@@ -1880,8 +1904,8 @@
               <img src="assets/kits/utd/manutd-hk-9697-258x340.png" alt="" class="sff-carousel__image">
             </div>
             <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9697-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9697-258x340.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
             </div>
           </div>
           <div class="sff-carousel__item">
@@ -1891,8 +1915,9 @@
               <img src="assets/kits/utd/manutd-hk-9798-258x340.png" alt="" class="sff-carousel__image">
             </div>
             <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9798-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9798-258x340.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+
             </div>
           </div>
           <div class="sff-carousel__item">
@@ -1902,8 +1927,8 @@
               <img src="assets/kits/utd/manutd-hk-9899-258x340.png" alt="" class="sff-carousel__image">
             </div>
             <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9899-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9899-258x340.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
             </div>
           </div>
           <div class="sff-carousel__item">
@@ -1913,8 +1938,8 @@
               <img src="assets/kits/utd/manutd-hk-9900-258x340.png" alt="" class="sff-carousel__image">
             </div>
             <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-9900-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-9900-258x340.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
             </div>
           </div>
           <div class="sff-carousel__item">
@@ -1935,8 +1960,8 @@
               <img src="assets/kits/utd/manutd-hk-0102-258x340.png" alt="" class="sff-carousel__image">
             </div>
             <div class="sff-carousel__item-cell">
-              <img src="assets/kits/city/mancity-ak-0102-258x340.png" alt="" class="sff-carousel__image">
-              <img src="assets/kits/city/mancity-hk-0102-258x340.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
+              <img src="assets/kits/missing.png" alt="" class="sff-carousel__image">
             </div>
           </div>
           <div class="sff-carousel__item">
@@ -2363,8 +2388,24 @@
     </div>
   </div>
 
-  <div class="place">
-    GET SKY CALL TO ACTION
+  <div class="sff-promo">
+
+    <a href="/get-sky" class="sff-promo__body">
+      <div class="site-wrap site-wrap-padding">
+        <h2>
+          Feel it all
+        </h2>
+        <p>Take your seat for the football season</p>
+        <img src="assets/Sky-Sports-Logo.svg" alt="Sky Sports">
+      </div>
+    </a>
+
+    <picture>
+      <source srcset="assets/feel-it-large.jpg" media="(min-width: 700px)">
+      <source srcset="assets/feel-it-small.jpg" media="(max-width: 700px)">
+      <img src="assets/feel-it-large.jpg" alt="Feel it large promo image" class="sff-promo__image">
+    </picture>
+
   </div>
 
   <div class="blackjack-sdc-digrev-footer site-footer " data-component-name="blackjack-sdc-digrev-footer">
@@ -2878,18 +2919,18 @@
     </div>
   </div>
 
-  <script src="js/header.js"></script>
+  <!-- <script src="js/header.js"></script>
   <script src="js/carousel.js"></script>
   <script src="js/league-pos.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/selector.js"></script>
-  <!-- <script src="js/grid.js"></script> -->
   <script src="js/players.js"></script>
-  <script src="js/videos.js"></script>
-
+  <script src="js/videos.js"></script> -->
+  <script src="js/min.js"></script>
+  <script src="js/selector.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
   <script>
     window['sdc-interactive-selector'](document.querySelector('.sdc-interactive-selector'));
-
   </script>
   <script>
 
@@ -2921,7 +2962,19 @@
       })
     }
 
+    var fergie = document.querySelector('#sff-sticky-timeline-fergie');
+    function fergietime() {
 
+      var dims = fergie.getBoundingClientRect();
+      var whichfergie = (Math.floor(Math.round((100 / dims.height) * (dims.top + dims.height)) / 33.3));
+      whichfergie = Math.max(0, whichfergie);
+      whichfergie = Math.min(2, whichfergie);
+      fergie.querySelector('.sff-sticky-timeline__image').src = "assets/timeline/ferguson" + whichfergie + ".jpg";
+      fergie.setAttribute('data-which-fergie', whichfergie);
+      requestAnimationFrame(fergietime);
+    }
+
+    fergietime();
 
   </script>
 
