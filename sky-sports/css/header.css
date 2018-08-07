@@ -12,16 +12,16 @@
   display: block;
   padding-bottom: 100%;
 }
-
+/* 
 .sff-header__video {
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
   height: 100%
-}
+} */
 
-.sff-header__video > video {
+.sff-header__image {
   width: 100%;
   top: 0;
   left: 0;
@@ -29,35 +29,121 @@
   object-fit: cover;
   z-index: 2;
   transform: translateZ(0);
-  opacity: 0;
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
-  will-change: transform
+  will-change: transform;
+  position: absolute;
 }
-
+/* 
 .sff-header__wing {
   width: 50%;
   height: 100%;
-  background: #7bb9e6;
+  background: url(assets/tevez-blue.jpg)#7bb9e6;
+  background-size: auto 100%;
   position: absolute;
   left: 0;
+  top: 0;
   z-index: 4;
-  transition: 0.5s transform;
+  transition: 1s transform;
   will-change: transform;
   transform: translateX(-100%);
-  transition-delay: 2s;
-  mix-blend-mode: color;
+  transition-delay: 0.33s;
+  mix-blend-mode: color
 }
  
 .sff-header__wing--united {
   left: auto;
   right: 0;
-  background: #bf101a;
   transform: translateX(100%);
-  mix-blend-mode: multiply;
+  background: url(assets/tevez-red.jpg)#bf101a;
+  mix-blend-mode: darken
+} */
+
+.sff-header__body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  overflow: hidden
 }
 
-.sff-header__video[data-ready]
-.sff-header__wing {
-  transform: none
+.sff-header__split {
+  color: white;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  transform: translateY(50%)
+}
+
+.sff-header__split1,
+.sff-header__split2 {
+  position: absolute;
+  width: 50%;
+  font-size: calc(12vmin + 20px);
+  display: block;
+  text-align: right;
+  left: 0;
+  top: 50%;
+  padding: 0 0.5rem 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-100%)
+}
+
+.sff-header__split2 {
+  text-align: left;
+  left: auto;
+  right: 0;
+  top: 50%;
+  padding: 0 0 0 0.5rem;
+}
+
+.sff-header__split1-chunk {
+  transition: 0.66s transform;
+  will-change: transform;
+  transform: translateX(100%);
+  transition-delay: 0.16s;
+  display: block
+}
+
+.sff-header__split2-chunk {
+  transition: 0.66s transform;
+  will-change: transform;
+  transform: translateX(-100%);
+  transition-delay: 0.16s;
+  display: block;
+}
+
+.sff-header[data-ready]
+.sff-header__split1-chunk,
+.sff-header[data-ready]
+.sff-header__split2-chunk, 
+.sff-header[data-ready]
+.sff-header__split3 {
+  transform: translate(0,0);
+  opacity: 1
+}
+
+.sff-header__split3 {
+  font-family: "Sky Text", sans-serif;
+  font-size: 1.5rem;
+  width: 100%;
+  display: block;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.5s;
+  transition-delay: 0.66s;
+  margin-top: 1em
+}
+
+@media all and (max-width: 920px){
+  .sff-header__split2-chunk[data-short-text]:before {
+    content: attr(data-short-text)
+  }
+  .sff-header__split2-chunk[data-short-text] > span {
+    display: none
+  }
 }

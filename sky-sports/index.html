@@ -390,12 +390,14 @@
 
   <div class="sff-header">
     
-    <div class="sff-header__video">
-      <h1>City v United - Evolution of a rivalry</h1>
-      <div class="sff-header__wing sff-header__wing--city"></div>
-      <div class="sff-header__wing sff-header__wing--united"></div>
-      <video src="assets/city-united-rivalry.mp4" muted playsinline autoplay preload oncanplay="this.style.opacity=1;this.parentNode.setAttribute('data-ready', true)" style="background-image: url(assets/city-united-rivalry.jpg)"></video>
+    <div class="sff-header__body">
+      <h1 class="sff-header__split">
+        <span class="sff-header__split1"><span class="sff-header__split1-chunk">City</span></span>
+        <span class="sff-header__split2">
+          <span class="sff-header__split2-chunk" data-short-text="UTD"><span>UNITED</span></span></span>
+        <span class="sff-header__split3">Evolution of a rivalry</span></h1>
     </div>
+      <img src="assets/tevez-split.png" alt="Carlos Tevez" class="sff-header__image">
   </div>
 
 
@@ -556,12 +558,12 @@
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="16"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="17"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="18"></span>
-              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="D1"></span>
-              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="D1"></span>
-              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="D2"></span>
-              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="D1"></span>
+              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="34"></span>
+              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="42"></span>
+              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="47"></span>
+              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="22"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="18"></span>
-              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="D1"></span>
+              <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="r" data-text="21"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="9"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="16"></span>
               <span data-trigger="100" data-animate-in-view class="dot" data-label="1st (88pts)" data-pos="8"></span>
@@ -3017,7 +3019,12 @@
 
       fergietime();
 
-    })()
+    })();
+
+    (function(){
+      var header = document.querySelector('.sff-header');
+      header.setAttribute('data-ready', true);
+    })();
 
 
   </script>
