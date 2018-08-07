@@ -26,19 +26,19 @@
       this.play()
     }
 
-    video.onclick = function () {
-      var isPlaying = video.currentTime > 0 && !video.paused && !video.ended
-        && video.readyState > 2;
-      if (isPlaying) {
-        video.pause();
-        video.forcepause = true;
-      }
+    // video.onclick = function () {
+    //   var isPlaying = video.currentTime > 0 && !video.paused && !video.ended
+    //     && video.readyState > 2;
+    //   if (isPlaying) {
+    //     video.pause();
+    //     video.forcepause = true;
+    //   }
 
-      else {
-        video.play();
-        video.forcepause = true;
-      }
-    }
+    //   else {
+    //     video.play();
+    //     video.forcepause = true;
+    //   }
+    // }
   })
 
   function isinview(dim) {
