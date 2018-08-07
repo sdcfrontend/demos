@@ -23,6 +23,7 @@
 @import "moment.css";
 @import "sticky-timeline.css";
 @import "promo.css";
+@import "share.css";
 
 .place {
   height: 80vh;

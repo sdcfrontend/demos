@@ -5,7 +5,7 @@
 
 <head>
 
-  <script>!function () { function e(e) { for (var n = document.cookie.split(";"), t = -1; ++t < n.length;) { var i = n[t].split("="); if (i[0].match(e)) return decodeURIComponent(i[1]) } return "" } function n(e) { return !!e } function t(e) { return 1 === e.hd } function i(e) { return 1 === e.st } function o(e) { return 2 === e.st } function r(e) { return 3 === e.st } function s(e) { return !(!e || !e.match(/^WIG/)) } function a() { var e = window.SKY_SPORTS.user; return e.isLoggedIn ? e.isSkySports ? 1 : e.isWholesale ? 3 : 4 : 2 } function c(e) { return e.f || "" } function u() { var d = e("interactive"), m = d ? JSON.parse(d) : {}, S = e("skySportsSSO"), w = { isLoggedIn: n(S), getType: a, set: u }; w.isLoggedIn && (w.name = c(m), w.isSkyHD = t(m), w.isSky = i(m), w.isSkySports = o(m), w.isNowTV = r(m), w.isWholesale = s(S)), window.SKY_SPORTS.user = w } window.SKY_SPORTS = window.SKY_SPORTS || {}, u() }(), function () { window.SKY_SPORTS = window.SKY_SPORTS || {}, SKY_SPORTS.getUa = function (e) { function n(n) { return !!e.match(n) && parseFloat(e.match(n)[1].replace("_", ".")) } var t = !1; null !== new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(e) && (t = parseFloat(RegExp.$1)); var i = e.match(/iPad/), o = e.match(/iP/), r = e.match(/android/i), s = e.match(/windows phone/i), a = navigator.platform.match(/mac|win/i), c = { classList: "" }; return s && (c = { mobile: !0, windowsphone: !0, name: "windowsphone", version: n(/os ([0-9]\.[0-9])/i) || n(/windows phone ([0-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), t && (c = { msie: !0, name: "msie", version: t }, c.classList = [c.name, c.name + c.version].join(" ")), (i || o) && (c = { ios: !0, name: i ? "ipad" : "iphone", mobile: !0, version: n(/os ([1-9]\_[0-9])/i) }, c.classList = [c.name, c.name + c.version, c.device, "ios", "ios" + c.version, "mobile"].join(" ")), r && (c = { android: !0, name: "android", mobile: !0, version: n(/android ([1-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version, "mobile"].join(" ")), a && (c.desktop = !0, c.classList += " desktop"), c }, SKY_SPORTS.device = SKY_SPORTS.getUa(navigator.userAgent) }(), function () { function e() { for (var t = document.querySelectorAll("img[data-lazy]"), i = -1; ++i < t.length;) { var o = t[i]; n(o) && ("PICTURE" === o.parentNode.nodeName ? o.parentNode.querySelectorAll("source").forEach(function (e) { e.setAttribute("srcset", e.getAttribute("data-srcset")) }) : o.setAttribute("srcset", o.getAttribute("data-srcset")), o.removeAttribute("data-lazy")) } setTimeout(function () { window.requestAnimationFrame(e) }, 250) } function n(e) { var n = e.getBoundingClientRect(); return 0 !== n.width && (!(n.bottom < 0) && !((window.outerHeight || window.innerHeight) - n.top < 50)) } NodeList.prototype.forEach || (NodeList.prototype.forEach = Array.prototype.forEach), "srcset" in new Image && setTimeout(function () { e() }, 500) }(), function () { window.isModernBrowser = !1; var e = ["js", "is-legacy"]; ("visibilityState" in document || window.CSS && window.CSS.supports) && (window.isModernBrowser = !0, e = ["js", "is-modern"]), document.documentElement.className = e.join(" ") }();</script>
+  <script>!function () { function e(e) { for (var n = document.cookie.split(";"), t = -1; ++t < n.length;) { var i = n[t].split("="); if (i[0].match(e)) return decodeURIComponent(i[1]) } return"" } function n(e) { return !!e } function t(e) { return 1 === e.hd } function i(e) { return 1 === e.st } function o(e) { return 2 === e.st } function r(e) { return 3 === e.st } function s(e) { return !(!e || !e.match(/^WIG/)) } function a() { var e = window.SKY_SPORTS.user; return e.isLoggedIn ? e.isSkySports ? 1 : e.isWholesale ? 3 : 4 : 2 } function c(e) { return e.f ||"" } function u() { var d = e("interactive"), m = d ? JSON.parse(d) : {}, S = e("skySportsSSO"), w = { isLoggedIn: n(S), getType: a, set: u }; w.isLoggedIn && (w.name = c(m), w.isSkyHD = t(m), w.isSky = i(m), w.isSkySports = o(m), w.isNowTV = r(m), w.isWholesale = s(S)), window.SKY_SPORTS.user = w } window.SKY_SPORTS = window.SKY_SPORTS || {}, u() }(), function () { window.SKY_SPORTS = window.SKY_SPORTS || {}, SKY_SPORTS.getUa = function (e) { function n(n) { return !!e.match(n) && parseFloat(e.match(n)[1].replace("_",".")) } var t = !1; null !== new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(e) && (t = parseFloat(RegExp.$1)); var i = e.match(/iPad/), o = e.match(/iP/), r = e.match(/android/i), s = e.match(/windows phone/i), a = navigator.platform.match(/mac|win/i), c = { classList:"" }; return s && (c = { mobile: !0, windowsphone: !0, name:"windowsphone", version: n(/os ([0-9]\.[0-9])/i) || n(/windows phone ([0-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version,"mobile"].join("")), t && (c = { msie: !0, name:"msie", version: t }, c.classList = [c.name, c.name + c.version].join("")), (i || o) && (c = { ios: !0, name: i ?"ipad" :"iphone", mobile: !0, version: n(/os ([1-9]\_[0-9])/i) }, c.classList = [c.name, c.name + c.version, c.device,"ios","ios" + c.version,"mobile"].join("")), r && (c = { android: !0, name:"android", mobile: !0, version: n(/android ([1-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version,"mobile"].join("")), a && (c.desktop = !0, c.classList +=" desktop"), c }, SKY_SPORTS.device = SKY_SPORTS.getUa(navigator.userAgent) }(), function () { function e() { for (var t = document.querySelectorAll("img[data-lazy]"), i = -1; ++i < t.length;) { var o = t[i]; n(o) && ("PICTURE" === o.parentNode.nodeName ? o.parentNode.querySelectorAll("source").forEach(function (e) { e.setAttribute("srcset", e.getAttribute("data-srcset")) }) : o.setAttribute("srcset", o.getAttribute("data-srcset")), o.removeAttribute("data-lazy")) } setTimeout(function () { window.requestAnimationFrame(e) }, 250) } function n(e) { var n = e.getBoundingClientRect(); return 0 !== n.width && (!(n.bottom < 0) && !((window.outerHeight || window.innerHeight) - n.top < 50)) } NodeList.prototype.forEach || (NodeList.prototype.forEach = Array.prototype.forEach),"srcset" in new Image && setTimeout(function () { e() }, 500) }(), function () { window.isModernBrowser = !1; var e = ["js","is-legacy"]; ("visibilityState" in document || window.CSS && window.CSS.supports) && (window.isModernBrowser = !0, e = ["js","is-modern"]), document.documentElement.className = e.join("") }();</script>
   <link rel="stylesheet" href="css/site-main.css">
 
 
@@ -14,7 +14,7 @@
 
 <body>
   <!-- <link rel="stylesheet" href="css/min.css"> -->
-  <link rel="stylesheet" href="css/min.css">
+  <link rel="stylesheet" href="css/sff.css">
   <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header">
     <div class="site-header">
 
@@ -388,26 +388,79 @@
   </div>
 
 
-  <div class="sff-header place">
-    HEADER
+  <div class="sff-header">
+    <div class="sff-header__slide">City vs United: A Premier League rivalry</div>
+    <!-- <picture>
+      <source srcset="assets/">
+    </picture> -->
   </div>
 
 
   <div class="sff-panel sff-panel--white">
     <div class="site-wrap site-wrap-padding">
+      <div class="sff-share">
 
+
+        <ul class="sdc-site-share__list">
+          <li class="sdc-site-share__item">
+            <a href="https://twitter.com/intent/tweet?text=Manchester%20City%20and%20Manchester%20United%20-%20A%20Premier%20League%20rivalry&amp;url=http%3A%2F%2Fwww.skysports.com%2Fman-city-man-utd-premier-league-rivalry"
+              class="sdc-site-share__link" target="_blank" title="" aria-label="">
+              <div class="sdc-site-share__icon" aria-hidden="">
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <title>Twitter</title>
+                  <path d="M36.863 10.867c.866-.544 1.596-1.206 2.19-1.985.593-.78 1.064-1.64 1.41-2.58-1.608.94-3.352 1.61-5.233 2.005-.742-.792-1.626-1.41-2.653-1.856-1.027-.444-2.134-.667-3.32-.667-2.327.074-4.256.885-5.79 2.43-1.534 1.547-2.326 3.458-2.375 5.734.025.668.11 1.287.26 1.856-3.415-.223-6.57-1.083-9.463-2.58-2.896-1.496-5.382-3.48-7.46-5.955-.347.593-.613 1.243-.798 1.948-.186.705-.278 1.43-.278 2.17.024 1.436.358 2.74 1 3.916.645 1.175 1.51 2.146 2.6 2.913-.67-.025-1.324-.13-1.968-.316-.643-.186-1.237-.44-1.78-.76v.147c.05 2.03.68 3.773 1.892 5.233 1.212 1.46 2.77 2.375 4.675 2.746-.346.074-.705.136-1.076.185-.37.05-.73.075-1.076.075-.543.025-1.075-.012-1.595-.11.57 1.632 1.534 2.968 2.895 4.007 1.36 1.04 2.932 1.608 4.713 1.707-1.41 1.087-2.98 1.935-4.713 2.54-1.732.607-3.538.922-5.418.947-.668.025-1.336-.025-2.004-.148 1.806 1.162 3.773 2.07 5.9 2.726 2.128.656 4.342.996 6.643 1.02 7.547-.296 13.31-2.838 17.294-7.625 3.983-4.786 6-10.025 6.05-15.715V13.8c1.706-1.238 3.08-2.66 4.118-4.27-1.484.644-3.03 1.09-4.64 1.337z"
+                    fill="#000" fill-rule="evenodd"></path>
+                </svg>
+
+              </div>
+            </a>
+          </li>
+          <li class="sdc-site-share__item">
+            <a href="https://www.facebook.com/sharer/sharer.php?t=Manchester%20City%20and%20Manchester%20United%20-%20A%20Premier%20League%20rivalry&amp;u=http%3A%2F%2Fwww.skysports.com%2Fman-city-man-utd-premier-league-rivalry"
+              class="sdc-site-share__link" target="_blank" title="" aria-label="">
+              <div class="sdc-site-share__icon" aria-hidden="">
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <title>Facebook</title>
+                  <path d="M30.87 23.633l.89-6.717h-6.717V12.61c-.05-.964.148-1.75.594-2.355.445-.606 1.348-.91 2.71-.91h3.524V3.26c-.345-.074-.988-.136-1.93-.186C29 3.024 27.914 3 26.677 3c-2.623 0-4.725.767-6.31 2.3-1.582 1.535-2.386 3.76-2.41 6.68v4.936h-5.827v6.717h5.825V41h6.977V23.633h5.937z"
+                    fill="#000" fill-rule="evenodd"></path>
+                </svg>
+
+              </div>
+            </a>
+          </li>
+          <li class="sdc-site-share__item">
+            <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.skysports.com%2Fman-city-man-utd-premier-league-rivalry" class="sdc-site-share__link"
+              target="_blank" title="" aria-label="">
+              <div class="sdc-site-share__icon" aria-hidden="">
+                <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <title>Google+</title>
+                  <path d="M26.268 3h-9.946c-1.336 0-2.758.167-4.267.5-1.51.335-2.97 1.083-4.38 2.246-2.053 2.004-3.08 4.23-3.08 6.68 0 2.028.718 3.797 2.153 5.306 1.385 1.658 3.402 2.5 6.05 2.524.518 0 1.063-.025 1.632-.074l-.334.853c-.124.272-.186.63-.186 1.076 0 .744.155 1.38.464 1.912.31.532.637 1.033.983 1.503-1.162.025-2.622.18-4.378.464-1.758.284-3.44.896-5.048 1.836-1.435.84-2.43 1.83-2.988 2.97-.556 1.137-.835 2.164-.835 3.08 0 1.904.865 3.537 2.597 4.897C6.44 40.233 9.037 40.975 12.5 41c4.156-.074 7.335-1.076 9.537-3.006 2.128-1.855 3.192-3.995 3.192-6.42-.026-1.707-.422-3.08-1.19-4.12-.766-1.038-1.67-1.99-2.708-2.856l-1.707-1.41c-.223-.223-.476-.5-.76-.835-.285-.334-.427-.767-.427-1.3 0-.53.136-.995.408-1.39.272-.397.556-.755.853-1.077.52-.445.995-.885 1.428-1.317.433-.434.835-.91 1.206-1.43.767-1.09 1.163-2.524 1.187-4.305 0-.965-.11-1.818-.332-2.56-.273-.718-.582-1.355-.928-1.912-.347-.556-.71-1.026-1.095-1.41-.383-.383-.736-.66-1.058-.835h3.08L26.267 3zm-5.456 27.2c.817.966 1.225 2.08 1.225 3.34 0 1.56-.606 2.834-1.818 3.823-1.213.99-2.995 1.51-5.345 1.56-2.622-.05-4.676-.632-6.16-1.745-1.583-1.138-2.375-2.586-2.375-4.342 0-.89.167-1.645.5-2.264.335-.618.737-1.132 1.207-1.54.47-.408.928-.71 1.373-.91l1.076-.444c1.09-.322 2.14-.557 3.154-.705 1.064-.1 1.72-.136 1.967-.112.42 0 .792.026 1.113.076 1.856 1.286 3.217 2.375 4.082 3.265zM19.18 15.544c-.1.668-.36 1.31-.78 1.93-.89.89-1.99 1.36-3.302 1.41-1.04 0-1.96-.316-2.765-.946-.804-.63-1.453-1.404-1.948-2.32-1.064-1.954-1.596-3.822-1.596-5.603-.026-1.386.345-2.623 1.112-3.71.89-1.065 2.004-1.622 3.34-1.67 1.015.048 1.91.364 2.69.945.78.58 1.405 1.354 1.875 2.318.99 2.004 1.484 3.984 1.484 5.938 0 .47-.036 1.04-.11 1.707zm22.6 3.006v-.038h-5.233v-5.307h-3.08v5.307h-5.27v3.006h.037v.11h5.233v5.233h3.08v-5.23h5.344v-3.08h-.11z"
+                    fill="#000" fill-rule="evenodd"></path>
+                </svg>
+
+              </div>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
       <div class="sff-text-block">
 
+
         <p>
-          <strong>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque</strong>
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <strong>It was forged in Victorian times and spanned 137 years to present day - but the Manchester rivalry has never been
+            stronger.
+          </strong>
+
+          <p>Sir Alex Ferguson claimed his first top-flight crown during the inaugural Premier League season and proceeded to
+            claim 12 more over his following 21 years at the helm.
+
+            <p>In contrast, neighbours City had a tumultuous period during the early Premier League years, slipping to the third
+              tier and back - only cementing top-flight status in the noughties.
+
+              <p>But how have the teams evolved over the past 26 years, which players and managers have come and gone, which
+                kits have they donned and which moments have been inscribed in club folklore?
 
       </div>
     </div>
@@ -420,9 +473,9 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "Genius, Pure Genius"
+          The start of an era
           </h2>
-          <p>Rooney scores against City, 2011</p>
+          <p>United win their first Premier League title in 1993</p>
         </div>
 
       </div>
@@ -431,6 +484,25 @@
     </div>
     <div class="sff-moment__ghost"></div>
   </div>
+
+  <div class="sff-panel sff-panel--white" text2>
+    <div class="site-wrap site-wrap-padding">
+
+      <div class="sff-text-block">
+
+        <p>
+          United are the most successful club in England during the Premier League era, lifting the trophy in 13 out of 26 seasons.
+
+          <p>But that dominance has been on the wane since Sergio Aguero scored a last-gasp title winner against QPR in 2011, with City claiming three titles to United's one.
+
+            <p>It's now been five years since United last claimed a Premier League crown, the same year Fergie stepped down after 25 years in charge.
+
+              <p>However, under Jose Mourinho, United recorded their highest finish during the post-Ferguson era last term, as runners-up behind City - albeit 19 points adrift.
+
+      </div>
+    </div>
+  </div>
+
 
   <div class="sff-panel sff-panel--white sff-panel--no-padding" league-pos>
     <div class="sff-league-pos">
@@ -560,24 +632,6 @@
     </div>
   </div>
 
-  <div class="sff-panel sff-panel--white" text2>
-    <div class="site-wrap site-wrap-padding">
-
-      <div class="sff-text-block">
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
-
-      </div>
-    </div>
-  </div>
 
   <div class="sff-moment">
 
@@ -586,9 +640,9 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "Keane quote here"
+          Keane sees red
           </h2>
-          <p>Roy Keane is sent off, 2011</p>
+          <p>The derby boils over in 2001</p>
         </div>
 
       </div>
@@ -596,6 +650,23 @@
       <video class="sff-moment__video-large" data-src="assets/videos/keane.mp4" preload muted playsinline style="background-image:url(assets/videos/keane.jpg)"></video>
     </div>
     <div class="sff-moment__ghost"></div>
+  </div>
+
+  <div class="sff-panel sff-panel--white" text3>
+    <div class="site-wrap site-wrap-padding">
+
+      <div class="sff-text-block">
+
+        <p>United have enjoyed a greater share of glory than City since the Premier League launched, but both clubs have endured highs and lows.
+
+          <p>While United's early days are primarily marred by players' ill-discipline, the Abu Dhabi Group takeover of City in 2008 marked a watershed moment in the balance of power.
+
+            <p>Carlos Tevez switched red for blue in 2009 and the disparity between the clubs began to narrow, culminating with City trashing United 6-1 in 2011.
+
+              <p>Two years later, Sergio Aguero netted a last-gasp winner against QPR to steal the title from United and produce one of the greatest moments in sporting history.
+
+      </div>
+    </div>
   </div>
 
   <div class="sff-panel" keymoments>
@@ -880,24 +951,7 @@
 
   </div>
 
-  <div class="sff-panel sff-panel--white" text3>
-    <div class="site-wrap site-wrap-padding">
 
-      <div class="sff-text-block">
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
-
-      </div>
-    </div>
-  </div>
 
   <div class="sff-moment">
 
@@ -906,9 +960,9 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "Owen quote here"
+          Fergie time
           </h2>
-          <p>Owen scores late winner, 2011</p>
+          <p>Owen scores late winner in 2009</p>
         </div>
 
       </div>
@@ -917,6 +971,25 @@
     </div>
     <div class="sff-moment__ghost"></div>
   </div>
+
+  <div class="sff-panel sff-panel--white" text4>
+      <div class="site-wrap site-wrap-padding">
+  
+        <div class="sff-text-block">
+  
+            <p>The world gasped when United splashed &pound;93.25m on Juventus midfielder Paul Pogba - but one year later that world-record fee was more than doubled when Paris Saint-Germain signed Neymar.
+ 
+                <p>Despite City now being synonymous with free-spending, the club have still only hit the &pound;60m threshold with record signing Riyad Mahrez this summer.
+             
+                    <p>However, the Cityzens have actually spent more on transfers than United during the entire Premier League era - despite spending five seasons in England's lower leagues,
+             
+                        <p>City's biggest outlays came during Pep Guardiola's overhaul during his first two seasons in charge, while United splashed the most cash during Louis van Gaal's first term.
+  
+        </div>
+      </div>
+    </div>
+  
+
 
   <div class="sff-panel sff-panel--no-padding sff-city-united" transfers>
     <div class="site-wrap site-wrap-padding">
@@ -1329,25 +1402,7 @@
     </div>
   </div>
 
-  <div class="sff-panel sff-panel--white" text4>
-    <div class="site-wrap site-wrap-padding">
-
-      <div class="sff-text-block">
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
-
-      </div>
-    </div>
-  </div>
-
+ 
   <div class="sff-moment">
 
     <div class="sff-moment__slide" data-trigger="100" data-animate-in-view>
@@ -1355,9 +1410,9 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "Genius, Pure Genius"
+           Rooney's magic moment
           </h2>
-          <p>Rooney scores against City, 2011</p>
+          <p>Spectacular winner sends Old Trafford into raptures in 2011</p>
         </div>
 
       </div>
@@ -1372,15 +1427,13 @@
 
       <div class="sff-text-block">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <p>Few players endure every fixture of a season in the modern game, but, back in the day, it was far more common.
+ 
+              <p>United's formidable defensive shield of Steve Bruce, Gary Pallister and 'keeper Peter Schmeichel all played every game of the 1992/93 season, as did City's David White.
+           
+                  <p>That feat has only been achieved on 14 occasions since, of which 12 endured a less gruelling 38-game season - when the league was reduced from 22 clubs to 20 at the start of 1995/96.
+           
+                      <p>And while David de Gea's plaudits allude to his three successive Player of the Season awards at Old Trafford, City’s Richard Dunne managed four on the trot between 2005 and 2008.
 
       </div>
     </div>
@@ -1543,9 +1596,10 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "Balotelli why me"
+              Derby demolition
+              
           </h2>
-          <p>Balotelli goal celebration, 2011</p>
+          <p>Balotelli celebrates as City thrash United 6-1 in 2011</p>
         </div>
 
       </div>
@@ -1555,18 +1609,6 @@
     <div class="sff-moment__ghost"></div>
   </div>
 
-  <div class="sff-quiz-fact" data-id="100|10" id="sff-quiz-2" quiz2>
-    <div class="site-wrap site-wrap-padding">
-      <div class="sff-quiz-fact__body">
-        <p class="sff-quiz-fact__question">PLAYER OF SEASON RELATED QUIZ QUESTION</p>
-        <div class="sff-quiz-fact__answers">
-          <a href="#" class="sff-quiz-fact__answer">Cantona</a>
-          <a href="#" class="sff-quiz-fact__answer">Cole</a>
-          <a href="#" class="sff-quiz-fact__answer">Anelka</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <div class="sff-panel sff-panel--white" text6>
@@ -1574,15 +1616,10 @@
 
       <div class="sff-text-block">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <p>Fergie's 25 years as manager is trumped only by a few throughout history - but the Red Devils turned over three permanent bosses in as many years after the Scot stepped down.
+ 
+          <p>Including caretaker managers, City have appointed 17 managers during the modern era and have an average term of under two years - with Kevin Keegan, Roberto Mancini and Joe Royle lasting longest.
+           
 
       </div>
     </div>
@@ -1612,7 +1649,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 12.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Peter Reid</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/reid.jpg" alt="Peter Reid" class="sff-sticky-timeline__image">
               <p>1990-1993
                 <br>W59 D31 L46
                 <br>0 trophies</p>
@@ -1621,7 +1658,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city">
             <div class="sff-sticky-timeline__body">
               <h2>Tony Book</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/book.jpg" alt="Tony Book" class="sff-sticky-timeline__image">
               <p>1993
                 <br>W0 D1 L0
                 <br>0 trophies</p>
@@ -1630,7 +1667,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 10.4rem">
             <div class="sff-sticky-timeline__body">
               <h2>Brian Horton</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/horton.jpg" alt="Brian Horton" class="sff-sticky-timeline__image">
               <p>1993-1995
                 <br>W29 D33 L34
                 <br>0 trophies</p>
@@ -1639,7 +1676,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.8rem">
             <div class="sff-sticky-timeline__body">
               <h2>Alan Ball</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/ball.jpg" alt="Alan Ball" class="sff-sticky-timeline__image">
               <p>1995-1996
                 <br>W13 D14 L22
                 <br>0 trophies</p>
@@ -1648,7 +1685,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.4rem">
             <div class="sff-sticky-timeline__body">
               <h2>Asa Hartford</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/hartford.jpg" alt="Asa Hartford" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W3 D0 L5
                 <br>0 trophies</p>
@@ -1657,7 +1694,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Steve Coppell</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/coppell.jpg" alt="Steve Coppell" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W2 D1 L3
                 <br>0 trophies</p>
@@ -1666,7 +1703,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Phil Neal</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/neal.jpg" alt="Phil Neal" class="sff-sticky-timeline__image">
               <p>1996
                 <br>W2 D1 L7
                 <br>0 trophies</p>
@@ -1675,7 +1712,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Frank Clark</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/clark.jpg" alt="Frank Clark" class="sff-sticky-timeline__image">
               <p>1996-1998
                 <br>W20 D17 L22
                 <br>0 trophies</p>
@@ -1684,7 +1721,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 13.8rem">
             <div class="sff-sticky-timeline__body">
               <h2>Joe Royle</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/royle.jpg" alt="Joe Royle" class="sff-sticky-timeline__image">
               <p>1998-2001
                 <br>W74 D46 L51
                 <br>1 trophy</p>
@@ -1693,7 +1730,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 15.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Kevin Keegan</h2>
-              <img src="assets/timeline/keegan.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/keegan.jpg" alt="Kevin Keegan" class="sff-sticky-timeline__image">
               <p>2001-2005
                 <br>W77 D39 L60
                 <br>1 trophy</p>
@@ -1702,7 +1739,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:11.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Stuart Pearce</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/pearce.jpg" alt="Stuart Pearce" class="sff-sticky-timeline__image">
               <p>2005-2007
                 <br>W34 D19 L43
                 <br>0 trophies</p>
@@ -1711,7 +1748,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 8.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Sven-G&ouml;ran Eriksson</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/eriksson.jpg" alt="Eriksson" class="sff-sticky-timeline__image">
               <p>2007-2008
                 <br>W19 D11 L15
                 <br>0 trophies</p>
@@ -1720,7 +1757,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 9.6rem">
             <div class="sff-sticky-timeline__body">
               <h2>Mark Hughes</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/hughes.jpg" alt="Mark Hughes" class="sff-sticky-timeline__image">
               <p>2008-2009
                 <br>W36 D15 L26
                 <br>0 trophies</p>
@@ -1729,7 +1766,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 14.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Roberto Mancini</h2>
-              <img src="assets/timeline/mancini.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/mancini.jpg" alt="Roberto Mancini" class="sff-sticky-timeline__image">
               <p>2009-2013
                 <br>W113 D38 L40
                 <br>3 trophies</p>
@@ -1738,7 +1775,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height:6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Brian Kidd</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/kidd.jpg" alt="Brian Kidd" class="sff-sticky-timeline__image">
               <p>2013
                 <br>W1 D0 L1
                 <br>0 trophies</p>
@@ -1747,7 +1784,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 26rem;">
             <div class="sff-sticky-timeline__body">
               <h2>Manuel Pellegrini</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/pellegrini.jpg" alt="Manuel Pellegrini" class="sff-sticky-timeline__image">
               <p>2013-16
                 <br>W100 D28 L39
                 <br>3 trophies</p>
@@ -1757,7 +1794,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-city" style="height: 11.2rem;">
             <div class="sff-sticky-timeline__body">
               <h2>Pep Guardiola</h2>
-              <img src="assets/timeline/guardiola.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/guardiola.jpg" alt="Pep Guardiola" class="sff-sticky-timeline__image">
               <p>2016-Present
                 <br>W77 D19 L17
                 <br>3 trophies</p>
@@ -1770,7 +1807,12 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 163rem;" id="sff-sticky-timeline-fergie">
             <div class="sff-sticky-timeline__body">
               <h2>Alex Ferguson</h2>
-              <img src="assets/timeline/fergie2.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <div class="sff-sticky-timeline__image">
+                <img src="assets/timeline/ferguson2.jpg" alt="Alex Ferguson" class="sff-sticky-timeline__image-ferguson">
+                <img src="assets/timeline/ferguson1.jpg" alt="Alex Ferguson" class="sff-sticky-timeline__image-ferguson">
+                <img src="assets/timeline/ferguson0.jpg" alt="Alex Ferguson" class="sff-sticky-timeline__image-ferguson">
+              </div>
+
               <p>1986-2013
                 <br>W895 D338 L267
                 <br>38 trophies</p>
@@ -1779,7 +1821,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 13.8rem;">
             <div class="sff-sticky-timeline__body">
               <h2>David Moyes</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/moyes.jpg" alt="David Moyes" class="sff-sticky-timeline__image">
               <p>2013
                 <br>W27 D9 L15
                 <br>0 trophies</p>
@@ -1788,7 +1830,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 6.2rem">
             <div class="sff-sticky-timeline__body">
               <h2>Ryan Giggs</h2>
-              <img src="assets/timeline/vangaal.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/giggs2.jpg" alt="Ryan Giggs" class="sff-sticky-timeline__image">
               <p>2014 (caretaker)
                 <br>W2 D1 L1
                 <br>0 trophies</p>
@@ -1806,7 +1848,7 @@
           <div class="sff-sticky-timeline__item sff-sticky-timeline__item-utd" style="height: 12rem">
             <div class="sff-sticky-timeline__body">
               <h2>Jos&eacute; Mourinho</h2>
-              <img src="assets/timeline/mourinho.jpg" alt="Van Gaal 2014" class="sff-sticky-timeline__image">
+              <img src="assets/timeline/mourinho.jpg" alt="Jose Mourinho" class="sff-sticky-timeline__image">
               <p>2016-Present
                 <br>W74 D25 L21
                 <br>3 trophies</p>
@@ -1826,15 +1868,9 @@
 
       <div class="sff-text-block">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <p>While the teams have consistently donned their home colours of sky blue and red over the past 26 years, both clubs have experimented with away colours.
+ 
+          <p>City have worn purple, red, black, dark blue and maroon, while United have played in blue, black, grey and white - while both clubs have been embellished by five different sponsors.
 
       </div>
     </div>
@@ -1847,9 +1883,7 @@
         <h2 class="sff-block-header">
           <span>History of the Kits</span>
         </h2>
-        <!-- <div class="sff-carousel__switch">
-                        switch
-                      </div> -->
+       
         <div class="sff-carousel__scroll">
 
           <div class="sff-carousel__item sff-carousel__item--active">
@@ -2157,7 +2191,8 @@
 
         </div>
         <div class="sff-carousel__nav">
-          <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link sff-carousel__nav-link--disabled" data-type="previous" aria-label="previous"></a>
+          <a href="#" class="sff-carousel__nav-cell sff-carousel__nav-link sff-carousel__nav-link--disabled
+              " data-type="previous" aria-label="previous"></a>
           <div class="sff-carousel__nav-cell sff-carousel__nav-items">
             <ul class="sff-carousel__nav-rail">
               <li class="sff-carousel__nav-item sff-carousel__nav-item--on">1992/3</li>
@@ -2200,15 +2235,13 @@
 
       <div class="sff-text-block">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <p>In terms of head to heads, United earn bragging rights 21-13 - with eight fixtures ending in stalemate.
+ 
+              <p>But City's 55 goals are just eight shy of United's total, and the Reds have failed to win consecutive derbies since winning four in a row between 2008 and 2010.
+           
+                  <p>More recently, City won four successive derbies under Roberto Mancini and Manuel Pellegrini before a 4-2 defeat in 2015.
+           
+                      <p>The goal fests? United won a 4-3 thriller in 2009, but City exacted revenge two years later with a 6-1 romp at Old Trafford - which remains the greatest winning margin to date.
 
       </div>
     </div>
@@ -2240,9 +2273,9 @@
             <img src="http://e0.365dm.com/football/badges/192/345.png" alt="Manchester City badge">
           </div>
           <div class="">
-            <div class="sff-counter sff-color-city " data-trigger="100" data-animate-in-view>
+            <div class="sff-counter sff-color-city" data-trigger="100" data-animate-in-view>
 
-              <div class="sff-counter__cell " data-number="1">
+              <div class="sff-counter__cell" data-number="1">
                 <span>1</span>
               </div>
               <div class="sff-counter__cell" data-number="3">
@@ -2342,9 +2375,9 @@
 
         <div class="site-wrap site-wrap-padding">
           <h2>
-            "City win title quote"
+              Pep’s Record Breakers
           </h2>
-          <p>City win title, 2011</p>
+          <p>City break multiple records in their 17/18 title winning season</p>
         </div>
 
       </div>
@@ -2359,15 +2392,9 @@
 
       <div class="sff-text-block">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam sem pulvinar ex vulputate consequat. Pellentesque
-          <p>
-            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam dapibus pulvinar ullamcorper.
-            <p>Fusce elit dolor, sodales at finibus eu, blandit at sem. Nam eleifend fringilla justo, in fermentum ex fermentum
-              non. Proin ut lorem id urna porttitor blandit. Aenean sit amet dictum ipsum.
-              <p>Cras feugiat nibh sit amet quam pulvinar maximus. Ut convallis, tortor in rutrum malesuada, ipsum velit blandit
-                lectus, posuere bibendum tellus nisi sed nisl.
-                <p>Cras quam diam, faucibus id semper ut, lacinia sed diam.
+          <p>Armed with 26 years of history, you now have the opportunity to select your ultimate Premier League Manchester combined XI.
+ 
+          <p>Watch United kick off of the Premier League season on home soil against Leicester live on Sky Sports this Friday, before Unai Emery will be inaugurated when his Arsenal side host City live on Super Sunday.
 
       </div>
     </div>
@@ -2381,9 +2408,8 @@
         <h2 class="sff-block-header">
           <span>Team Selector</span>
         </h2>
-        <div id="interactive-selector-3" class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41"
-          data-url="json/data--utd-city.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url=""
-          data-whatsapp-share-url=""></div>
+        <div id="interactive-selector-3" class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41" data-url="json/data--utd-city.json" data-post-url=""
+          data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
       </div>
     </div>
   </div>
@@ -2408,183 +2434,184 @@
 
   </div>
 
-  <div class="blackjack-sdc-digrev-footer site-footer " data-component-name="blackjack-sdc-digrev-footer">
+  <div class="blackjack-sdc-digrev-footer site-footer" data-component-name="blackjack-sdc-digrev-footer">
     <div class="site-footer__body">
       <ul class="site-footer__nav social-nav">
         <li class="social-nav__item">
-          <a href="https://twitter.com/SkySports " target="_blank " class="social-nav__link">
+          <a href="https://twitter.com/SkySports" target="_blank" class="social-nav__link">
             <span class="social-nav__link-icon social-nav__link--twitter-icon">
-              <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384">
+              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
                 <path d="M373.461 78.398c-13.228 5.859-27.444 9.833-42.363 11.612 15.234-9.125 26.916-23.587 32.425-40.803-14.245
-              8.448-30.029 14.59-46.823 17.893-13.455-14.329-32.631-23.283-53.84-23.283-40.723 0-73.74 33.01-73.74 73.747 0
-              5.775.651 11.4 1.908 16.802-61.301-3.068-115.639-32.435-152.018-77.051-6.336 10.888-9.983 23.555-9.983 37.079
-              0 25.583 13.022 48.153 32.812 61.384-12.092-.388-23.459-3.702-33.409-9.235v.938c0 35.731 25.419 65.535 59.154
-              72.307-6.186 1.687-12.7 2.586-19.428 2.586-4.746 0-9.375-.453-13.876-1.326 9.39 29.297 36.621 50.625 68.896 51.228-25.243
-              19.783-57.037 31.565-91.593 31.565-5.955 0-11.825-.352-17.593-1.024 32.637 20.926 71.403 33.127 113.053 33.127
-              135.654 0 209.834-112.375 209.834-209.837 0-3.186-.08-6.372-.22-9.536 14.413-10.4 26.916-23.382 36.804-38.173z"></path>
+                8.448-30.029 14.59-46.823 17.893-13.455-14.329-32.631-23.283-53.84-23.283-40.723 0-73.74 33.01-73.74 73.747
+                0 5.775.651 11.4 1.908 16.802-61.301-3.068-115.639-32.435-152.018-77.051-6.336 10.888-9.983 23.555-9.983 37.079
+                0 25.583 13.022 48.153 32.812 61.384-12.092-.388-23.459-3.702-33.409-9.235v.938c0 35.731 25.419 65.535 59.154
+                72.307-6.186 1.687-12.7 2.586-19.428 2.586-4.746 0-9.375-.453-13.876-1.326 9.39 29.297 36.621 50.625 68.896
+                51.228-25.243 19.783-57.037 31.565-91.593 31.565-5.955 0-11.825-.352-17.593-1.024 32.637 20.926 71.403 33.127
+                113.053 33.127 135.654 0 209.834-112.375 209.834-209.837 0-3.186-.08-6.372-.22-9.536 14.413-10.4 26.916-23.382
+                36.804-38.173z"></path>
               </svg>
             </span>Twitter</a>
         </li>
         <li class="social-nav__item">
-          <a href="https://www.facebook.com/SkySports " target="_blank " class="social-nav__link">
+          <a href="https://www.facebook.com/SkySports" target="_blank" class="social-nav__link">
             <span class="social-nav__link-icon social-nav__link--facebook-icon">
-              <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384">
+              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
                 <path d="M283.232 207.471l8.248-64.043h-63.428v-40.888c0-18.549 5.187-31.183 31.758-31.183l33.896-.021v-57.272c-5.846-.784-25.956-2.531-49.408-2.531-48.9
-              0-82.357 29.861-82.357 84.668v47.227h-55.311v64.043h55.312v164.332h66.113v-164.332h55.177z"></path>
+                0-82.357 29.861-82.357 84.668v47.227h-55.311v64.043h55.312v164.332h66.113v-164.332h55.177z"></path>
               </svg>
             </span>Facebook</a>
         </li>
         <li class="social-nav__item">
-          <a href="https://plus.google.com/+SoccerAMOfficial/posts " target="_blank " class="social-nav__link">
+          <a href="https://plus.google.com/+SoccerAMOfficial/posts" target="_blank" class="social-nav__link">
             <span class="social-nav__link-icon social-nav__link--google-icon">
-              <svg xmlns="http://www.w3.org/2000/svg " width="384 " height="384 " viewBox="0 0 384 384">
+              <svg xmlns="http://www.w3.org/2000/svg" width="384" height="384" viewBox="0 0 384 384">
                 <path d="M126.545 175.636v39.282h64.96c-2.614 16.843-19.632 49.41-64.96 49.41-39.11 0-71.016-32.407-71.016-72.329
-              0-39.927 31.905-72.326 71.016-72.326 22.253 0 37.146 9.492 45.656 17.674l31.09-29.946c-19.967-18.656-45.817-29.947-76.746-29.947-63.328-.001-114.545
-              51.217-114.545 114.545 0 63.332 51.217 114.548 114.545 114.548 66.109 0 109.96-46.47 109.96-111.928 0-7.525-.814-13.255-1.806-18.983h-108.154zM339.273
-              142.908h-32.727v32.728h-32.728v32.73h32.728v32.727h32.727v-32.727h32.727v-32.73h-32.727z"></path>
+                0-39.927 31.905-72.326 71.016-72.326 22.253 0 37.146 9.492 45.656 17.674l31.09-29.946c-19.967-18.656-45.817-29.947-76.746-29.947-63.328-.001-114.545
+                51.217-114.545 114.545 0 63.332 51.217 114.548 114.545 114.548 66.109 0 109.96-46.47 109.96-111.928 0-7.525-.814-13.255-1.806-18.983h-108.154zM339.273
+                142.908h-32.727v32.728h-32.728v32.73h32.728v32.727h32.727v-32.727h32.727v-32.73h-32.727z"></path>
               </svg>
             </span>Google+</a>
         </li>
       </ul>
 
       <!-- LINKS GRID -->
-      <ul class="site-footer__links accordian " data-role="accordian-body">
-        <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-0">
-          <a href="#" class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer">Sky Sports</a>
-          <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav">
+      <ul class="site-footer__links accordian" data-role="accordian-body">
+        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-0">
+          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Sky Sports</a>
+          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
             <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
               <li class="site-footer__item">
-                <a href="/watch/get-sky " class="site-footer__link">Get Sky Sports</a>
+                <a href="/watch/get-sky" class="site-footer__link">Get Sky Sports</a>
               </li>
               <li class="site-footer__item">
-                <a href="/mobile " class="site-footer__link">Sky Sports Apps</a>
+                <a href="/mobile" class="site-footer__link">Sky Sports Apps</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.sportinglife.com/ " class="site-footer__link " target="_blank">Sportinglife.com</a>
+                <a href="http://www.sportinglife.com/" class="site-footer__link" target="_blank">Sportinglife.com</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://www.teamtalk.com/ " class="site-footer__link " target="_blank">TEAMtalk.com</a>
+                <a href="https://www.teamtalk.com/" class="site-footer__link" target="_blank">TEAMtalk.com</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.football365.com/ " class="site-footer__link " target="_blank">Football365.com</a>
+                <a href="http://www.football365.com/" class="site-footer__link" target="_blank">Football365.com</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://www.teamsky.com/ " class="site-footer__link " target="_blank">Team Sky</a>
+                <a href="https://www.teamsky.com/" class="site-footer__link" target="_blank">Team Sky</a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-1">
-          <a href="#" class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer">Partners</a>
-          <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav">
+        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-1">
+          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Partners</a>
+          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
             <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
               <li class="site-footer__item">
-                <a href="https://www.skybet.com/ " class="site-footer__link " target="_blank">Sky Bet</a>
+                <a href="https://www.skybet.com/" class="site-footer__link" target="_blank">Sky Bet</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://fantasyfootball.skysports.com/ " class="site-footer__link " target="_blank">Fantasy Football</a>
+                <a href="https://fantasyfootball.skysports.com/" class="site-footer__link" target="_blank">Fantasy Football</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://super6.skysports.com/ " class="site-footer__link " target="_blank">Super 6</a>
+                <a href="https://super6.skysports.com/" class="site-footer__link" target="_blank">Super 6</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://pubfinder.sky.com/ " class="site-footer__link " target="_blank">Sky Sports Pub Finder</a>
+                <a href="https://pubfinder.sky.com/" class="site-footer__link" target="_blank">Sky Sports Pub Finder</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://livingforsport.skysports.com/ " class="site-footer__link " target="_blank">Living for Sport</a>
+                <a href="https://livingforsport.skysports.com/" class="site-footer__link" target="_blank">Living for Sport</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.planetrugby.com/ " class="site-footer__link " target="_blank">Planet Rugby</a>
+                <a href="http://www.planetrugby.com/" class="site-footer__link" target="_blank">Planet Rugby</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.golf365.com/ " class="site-footer__link " target="_blank">Golf365</a>
+                <a href="http://www.golf365.com/" class="site-footer__link" target="_blank">Golf365</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.planetf1.com/ " class="site-footer__link " target="_blank">Planet F1</a>
+                <a href="http://www.planetf1.com/" class="site-footer__link" target="_blank">Planet F1</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.cricket365.com/ " class="site-footer__link " target="_blank">Cricket365</a>
+                <a href="http://www.cricket365.com/" class="site-footer__link" target="_blank">Cricket365</a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-2">
-          <a href="#" class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer">Sky Sports Channels</a>
-          <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav">
+        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-2">
+          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">Sky Sports Channels</a>
+          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
             <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-main-event " class="site-footer__link">Sky Sports Main Event</a>
+                <a href="/watch/sky-sports-main-event" class="site-footer__link">Sky Sports Main Event</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-premier-league " class="site-footer__link">Sky Sports Premier League</a>
+                <a href="/watch/sky-sports-premier-league" class="site-footer__link">Sky Sports Premier League</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-football " class="site-footer__link">Sky Sports Football</a>
+                <a href="/watch/sky-sports-football" class="site-footer__link">Sky Sports Football</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-cricket " class="site-footer__link">Sky Sports Cricket</a>
+                <a href="/watch/sky-sports-cricket" class="site-footer__link">Sky Sports Cricket</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-golf " class="site-footer__link">Sky Sports Golf</a>
+                <a href="/watch/sky-sports-golf" class="site-footer__link">Sky Sports Golf</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-f1 " class="site-footer__link">Sky Sports F1 </a>
+                <a href="/watch/sky-sports-f1" class="site-footer__link">Sky Sports F1 </a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-action " class="site-footer__link">Sky Sports Action</a>
+                <a href="/watch/sky-sports-action" class="site-footer__link">Sky Sports Action</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-arena " class="site-footer__link">Sky Sports Arena</a>
+                <a href="/watch/sky-sports-arena" class="site-footer__link">Sky Sports Arena</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-news " class="site-footer__link">Sky Sports News</a>
+                <a href="/watch/sky-sports-news" class="site-footer__link">Sky Sports News</a>
               </li>
               <li class="site-footer__item">
-                <a href="/watch/sky-sports-mix " class="site-footer__link">Sky Sports Mix</a>
+                <a href="/watch/sky-sports-mix" class="site-footer__link">Sky Sports Mix</a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="site-footer__col accordian__item " id="site-footer-sky-sports-group-3">
-          <a href="#" class="site-footer__head accordian__item-head " aria-controls="site-footer " id="site-footer">More Sky Sites</a>
-          <div class="accordian__item-content-frame " aria-labelledby="site-footer " id="site-footer-nav">
+        <li class="site-footer__col accordian__item" id="site-footer-sky-sports-group-3">
+          <a href="#" class="site-footer__head accordian__item-head" aria-controls="site-footer" id="site-footer">More Sky Sites</a>
+          <div class="accordian__item-content-frame" aria-labelledby="site-footer" id="site-footer-nav">
             <ul class="site-footer__nav site-footer__nav--vertical accordian__item-content">
               <li class="site-footer__item">
-                <a href="https://www.sky.com/ " class="site-footer__link " target="_blank">Sky.com</a>
+                <a href="https://www.sky.com/" class="site-footer__link" target="_blank">Sky.com</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://news.sky.com/ " class="site-footer__link " target="_blank">Sky News</a>
+                <a href="https://news.sky.com/" class="site-footer__link" target="_blank">Sky News</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://corporate.sky.com/ " class="site-footer__link " target="_blank">Sky Corporate</a>
+                <a href="https://corporate.sky.com/" class="site-footer__link" target="_blank">Sky Corporate</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://business.sky.com/ " class="site-footer__link " target="_blank">Sky For Businesses</a>
+                <a href="https://business.sky.com/" class="site-footer__link" target="_blank">Sky For Businesses</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://watch.nowtv.com/sports " class="site-footer__link " target="_blank">Now TV</a>
+                <a href="http://watch.nowtv.com/sports" class="site-footer__link" target="_blank">Now TV</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://communaltv.sky.com/ " class="site-footer__link " target="_blank">Sky Communal TV</a>
+                <a href="https://communaltv.sky.com/" class="site-footer__link" target="_blank">Sky Communal TV</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://www.skyacademy.com/ " class="site-footer__link " target="_blank">Sky Academy</a>
+                <a href="https://www.skyacademy.com/" class="site-footer__link" target="_blank">Sky Academy</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://corporate.sky.com/bigger-picture " class="site-footer__link " target="_blank">Bigger Picture</a>
+                <a href="https://corporate.sky.com/bigger-picture" class="site-footer__link" target="_blank">Bigger Picture</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.sky.com/shop/store-locator/ " class="site-footer__link " target="_blank">Store Locator</a>
+                <a href="http://www.sky.com/shop/store-locator/" class="site-footer__link" target="_blank">Store Locator</a>
               </li>
               <li class="site-footer__item">
-                <a href="http://www.workforsky.com/ " class="site-footer__link " target="_blank">Work for Sky</a>
+                <a href="http://www.workforsky.com/" class="site-footer__link" target="_blank">Work for Sky</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://www.skymedia.co.uk/?utm_source&#x3D;Sky_Sports&amp;utm_medium&#x3D;Web_page&amp;utm_content&#x3D;Sky_Sports_web_page&amp;utm_campaign&#x3D;Sky_Sports_web_page "
-                  class="site-footer__link " target="_blank">Advertise With Us</a>
+                <a href="https://www.skymedia.co.uk/?utm_source&#x3D;Sky_Sports&amp;utm_medium&#x3D;Web_page&amp;utm_content&#x3D;Sky_Sports_web_page&amp;utm_campaign&#x3D;Sky_Sports_web_page"
+                  class="site-footer__link" target="_blank">Advertise With Us</a>
               </li>
               <li class="site-footer__item">
-                <a href="https://accessories.sky.com/ " class="site-footer__link " target="_blank">Sky TV Accessories</a>
+                <a href="https://accessories.sky.com/" class="site-footer__link" target="_blank">Sky TV Accessories</a>
               </li>
             </ul>
           </div>
@@ -2594,23 +2621,22 @@
 
       <ul class="site-footer__nav site-footer__nav--horizontal-nav">
         <li class="site-footer__item site-footer__item--inline">
-          <a href="https://www.sky.com/help/articles/skycom-terms-and-conditions " class="site-footer__link
-              " target="_blank">Terms &amp; Conditions</a>
+          <a href="https://www.sky.com/help/articles/skycom-terms-and-conditions" class="site-footer__link" target="_blank">Terms &amp; Conditions</a>
         </li>
         <li class="site-footer__item site-footer__item--inline">
-          <a href="https://www.sky.com/help/articles/sky-privacy-and-cookies-notice " class="site-footer__link
+          <a href="https://www.sky.com/help/articles/sky-privacy-and-cookies-notice" class="site-footer__link
               " target="_blank">Privacy &amp; Cookies Notice</a>
         </li>
         <li class="site-footer__item site-footer__item--inline">
-          <a href="http://accessibility.sky.com/ " class="site-footer__link " target="_blank">Accessibility Information</a>
+          <a href="http://accessibility.sky.com/" class="site-footer__link" target="_blank">Accessibility Information</a>
         </li>
         <li class="site-footer__item site-footer__item--inline">
-          <a href="/contact-us " class="site-footer__link " target="_blank">Contact Us</a>
+          <a href="/contact-us" class="site-footer__link" target="_blank">Contact Us</a>
         </li>
       </ul>
       <p class="site-footer__copyright">
-        <a href="http://www.skysports.com " class="svg-logo site-footer__site-logo">
-          <img class="svg-logo__image " alt="Sky Sports " src="http://www.skysports.com/assets/Sky-Sports-Logo.svg
+        <a href="http://www.skysports.com" class="svg-logo site-footer__site-logo">
+          <img class="svg-logo__image" alt="Sky Sports" src="http://www.skysports.com/assets/Sky-Sports-Logo.svg
               " onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo.png'">
         </a>
         © 2018 Sky UK
@@ -2618,51 +2644,51 @@
     </div>
   </div>
   <!-- desktop nav -->
-  <div class="site-nav-desktop__wrap " id="no-js-nav " aria-hidden="true">
-    <div class="site-nav-desktop " role="navigation " data-role="main-nav " id="site-nav-desktop-wrap">
-      <div class="site-login site-login--mobile " data-role="site-login">
-        <script type="text/template " class="login-text " data-role="default">
+  <div class="site-nav-desktop__wrap" id="no-js-nav" aria-hidden="true">
+    <div class="site-nav-desktop" role="navigation" data-role="main-nav" id="site-nav-desktop-wrap">
+      <div class="site-login site-login--mobile" data-role="site-login">
+        <script type="text/template" class="login-text" data-role="default">
             <!--default-->
             <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky " class="site-login__link">Get Sky Sports</a></li>
-                <li class="site-login__item"><a class="site-login__link site-login__link--user callfn " href="https://skyid.sky.com/signin/sports?successUrl&#x3D;http%3A%2F%2Fwww.skysports.com
-              " data-mobile-url="/sso/signin/mobile " data-desktop-url="/sso/signin/desktop " data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
+                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl&#x3D;http%3A%2F%2Fwww.skysports.com
+              " data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
             </ul>
         </script>
-        <script type="text/template " class="login-text " data-role="isSkySports">
+        <script type="text/template" class="login-text" data-role="isSkySports">
             <!-- sky sports user logged in -->
             <ul class="site-login__links">
                 <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
                 <li class="site-login__item"><a href="/signout?url=" class=" site-login__link site-login__link--signout">Log Out</a></li>
             </ul>
         </script>
-        <script type="text/template " class="login-text " data-role="isSky">
+        <script type="text/template" class="login-text" data-role="isSky">
             <!-- sky sports user logged in -->
             <ul class="site-login__links">
                 <li class="site-login__item site-login__item--promo">
-                    <a href="/watch/get-sky " class="site-login__link">Upgrade</a>
+                    <a href="/watch/get-sky" class="site-login__link">Upgrade</a>
                 </li>
                 <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
                 <li class="site-login__item"><a href="/signout?url=" class=" site-login__link site-login__link--signout">Log Out</a></li>
             </ul>
         </script>
-        <script type="text/template " class="login-text " data-role="isNowTv">
+        <script type="text/template" class="login-text" data-role="isNowTv">
             <!-- now tv customer -->
             <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky " class="site-login__link">Get Sky Sports</a></li>
+                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
                 <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
                 <li class="site-login__item"><a href="/signout?url=" class=" site-login__link site-login__link--signout">Log Out</a></li>
             </ul>
         </script>
-        <script type="text/template " class="login-text " data-role="isLoggedIn">
+        <script type="text/template" class="login-text" data-role="isLoggedIn">
             <!-- just a sky id login -->
             <ul class="site-login__links">
-                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky " class="site-login__link">Get Sky Sports</a></li>
+                <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
                 <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
                 <li class="site-login__item"><a href="/signout?url=" class=" site-login__link site-login__link--signout">Log Out</a></li>
             </ul>
         </script>
-        <script type="text/template " class="login-text " data-role="isWholesale">
+        <script type="text/template" class="login-text" data-role="isWholesale">
             <!-- wholesale customer -->
             <ul class="site-login__links">
                 <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> </span></li>
@@ -2672,98 +2698,98 @@
       </div>
       <ul class="site-nav-desktop__body">
         <li class="site-nav-desktop__item">
-          <a href="/ " class="site-nav-desktop__item-link">
+          <a href="/" class="site-nav-desktop__item-link">
             Home</a>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="#no-js-nav " class="site-nav-desktop__item-link site-nav-desktop__item-link--more
-              " aria-controls="site-nav-desktop-sports-more-nav " id="site-nav-desktop-sports-more">Sports
-            <svg viewBox="0 0 2048 2048 " class="site-nav-desktop__icon " aria-hidden="true">
+          <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-sports-more-nav
+              " id="site-nav-desktop-sports-more">Sports
+            <svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true">
               <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914
-              977.5 " />
+                977.5" />
             </svg>
           </a>
-          <div class="site-nav-desktop__menu " aria-labelledby="site-nav-desktop-sports-more " id="site-nav-desktop-sports-more-nav">
+          <div class="site-nav-desktop__menu" aria-labelledby="site-nav-desktop-sports-more" id="site-nav-desktop-sports-more-nav">
             <div class="site-nav-desktop__menu-body">
               <ul class="site-nav-desktop__menu-links">
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/football">
+                  <a class="site-nav-desktop__menu-link" href="/football">
                     Football</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/f1">
+                  <a class="site-nav-desktop__menu-link" href="/f1">
                     F1</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/cricket">
+                  <a class="site-nav-desktop__menu-link" href="/cricket">
                     Cricket</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/rugby-union">
+                  <a class="site-nav-desktop__menu-link" href="/rugby-union">
                     Rugby Union</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/rugby-league">
+                  <a class="site-nav-desktop__menu-link" href="/rugby-league">
                     Rugby League</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/golf">
+                  <a class="site-nav-desktop__menu-link" href="/golf">
                     Golf</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/boxing">
+                  <a class="site-nav-desktop__menu-link" href="/boxing">
                     Boxing</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/tennis">
+                  <a class="site-nav-desktop__menu-link" href="/tennis">
                     Tennis</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/cycling">
+                  <a class="site-nav-desktop__menu-link" href="/cycling">
                     Cycling</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/racing">
+                  <a class="site-nav-desktop__menu-link" href="/racing">
                     Racing</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/world-cup">
+                  <a class="site-nav-desktop__menu-link" href="/world-cup">
                     World Cup</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/darts">
+                  <a class="site-nav-desktop__menu-link" href="/darts">
                     Darts</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/nfl">
+                  <a class="site-nav-desktop__menu-link" href="/nfl">
                     NFL</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/motorsport">
+                  <a class="site-nav-desktop__menu-link" href="/motorsport">
                     Motorsport</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/netball">
+                  <a class="site-nav-desktop__menu-link" href="/netball">
                     Netball</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/gaa">
+                  <a class="site-nav-desktop__menu-link" href="/gaa">
                     GAA</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/wwe">
+                  <a class="site-nav-desktop__menu-link" href="/wwe">
                     WWE</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/esports">
+                  <a class="site-nav-desktop__menu-link" href="/esports">
                     eSports</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/more-sports">
+                  <a class="site-nav-desktop__menu-link" href="/more-sports">
                     More Sports</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/whyte-vs-parker">
+                  <a class="site-nav-desktop__menu-link" href="/whyte-vs-parker">
                     Whyte vs Parker</a>
                 </li>
               </ul>
@@ -2771,122 +2797,122 @@
           </div>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="/live-scores " class="site-nav-desktop__item-link">
+          <a href="/live-scores" class="site-nav-desktop__item-link">
             Score Centre</a>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="/watch/video " class="site-nav-desktop__item-link">
+          <a href="/watch/video" class="site-nav-desktop__item-link">
             Video</a>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="/watch " class="site-nav-desktop__item-link">
+          <a href="/watch" class="site-nav-desktop__item-link">
             TV</a>
         </li>
         <li class="site-nav-desktop__item">
           <a href="https://m.skybet.com/lp/ftp-10-completely-free?sba_promo=FTP10FREE&aff=9749&dcmp=ss_main_nav
-              " class="site-nav-desktop__item-link " target="_blank">
+              " class="site-nav-desktop__item-link" target="_blank">
             Sky Bet</a>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="/games " class="site-nav-desktop__item-link">
+          <a href="/games" class="site-nav-desktop__item-link">
             Games</a>
         </li>
         <li class="site-nav-desktop__item">
-          <a href="#no-js-nav " class="site-nav-desktop__item-link site-nav-desktop__item-link--more
-              " aria-controls="site-nav-desktop-more-more-nav " id="site-nav-desktop-more-more">More
-            <svg viewBox="0 0 2048 2048 " class="site-nav-desktop__icon " aria-hidden="true">
+          <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-more-more-nav
+              " id="site-nav-desktop-more-more">More
+            <svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true">
               <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914
-              977.5 " />
+                977.5" />
             </svg>
           </a>
-          <div class="site-nav-desktop__menu site-nav-desktop__menu--right " aria-labelledby="site-nav-desktop-more-more
+          <div class="site-nav-desktop__menu site-nav-desktop__menu--right" aria-labelledby="site-nav-desktop-more-more
               " id="site-nav-desktop-more-more-nav">
             <div class="site-nav-desktop__menu-body">
               <ul class="site-nav-desktop__menu-links">
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/transfer-centre">
+                  <a class="site-nav-desktop__menu-link" href="/transfer-centre">
                     Transfer Centre</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/watch/sport-on-sky">
+                  <a class="site-nav-desktop__menu-link" href="/watch/sport-on-sky">
                     Live on Sky</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/watch/get-sky">
+                  <a class="site-nav-desktop__menu-link" href="/watch/get-sky">
                     Get Sky Sports</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/watch/tv-shows">
+                  <a class="site-nav-desktop__menu-link" href="/watch/tv-shows">
                     TV Shows</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/watch/tv-guide">
+                  <a class="site-nav-desktop__menu-link" href="/watch/tv-guide">
                     TV Guide</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/competitions">
+                  <a class="site-nav-desktop__menu-link" href="/competitions">
                     Competitions</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="http://go.sky.com/ " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="http://go.sky.com/" target="_blank">
                     Sky Go</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="http://www.nowtv.com/promo/sky-sports?DCMP=ilc_skysports_moredropdownlink
+                  <a class="site-nav-desktop__menu-link" href="http://www.nowtv.com/promo/sky-sports?DCMP=ilc_skysports_moredropdownlink
               " target="_blank">
                     Now TV</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://pubfinder.sky.com/ " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://pubfinder.sky.com/" target="_blank">
                     Pub Finder</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://www.teamsky.com/ " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://www.teamsky.com/" target="_blank">
                     Team Sky</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/watch/tv-shows/sportswomen">
+                  <a class="site-nav-desktop__menu-link" href="/watch/tv-shows/sportswomen">
                     Sportswomen</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/scholarships">
+                  <a class="site-nav-desktop__menu-link" href="/scholarships">
                     Sports Scholarships</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/clubsincommunities">
+                  <a class="site-nav-desktop__menu-link" href="/clubsincommunities">
                     Clubs in Communities</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/podcasts">
+                  <a class="site-nav-desktop__menu-link" href="/podcasts">
                     Podcasts</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/mobile">
+                  <a class="site-nav-desktop__menu-link" href="/mobile">
                     Mobile</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://twitter.com/SkySports " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://twitter.com/SkySports" target="_blank">
                     Twitter</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://www.facebook.com/SkySports " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://www.facebook.com/SkySports" target="_blank">
                     Facebook</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://livingforsport.skysports.com/ " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://livingforsport.skysports.com/" target="_blank">
                     Living for Sport</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="/contact-us">
+                  <a class="site-nav-desktop__menu-link" href="/contact-us">
                     Contact Us</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://www.sky.com/help/articles/skycom-terms-and-conditions
+                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/help/articles/skycom-terms-and-conditions
               " target="_blank">
                     Terms &amp; Conditions</a>
                 </li>
                 <li class="site-nav-desktop__menu-item">
-                  <a class="site-nav-desktop__menu-link " href="https://www.sky.com/ " target="_blank">
+                  <a class="site-nav-desktop__menu-link" href="https://www.sky.com/" target="_blank">
                     Sky.com</a>
                 </li>
               </ul>
@@ -2894,19 +2920,19 @@
           </div>
         </li>
       </ul>
-      <a href="/watch " class="site-nav-desktop__watch-button no-default-hover no-default-active">
+      <a href="/watch" class="site-nav-desktop__watch-button no-default-hover no-default-active">
         <span class="site-nav-desktop__watch-button__label">Watch Sky Sports</span>
       </a>
     </div>
   </div>
 
 
-  <div class="sdc-site-cookie-notice sdc-site-cookie-notice--fixed-bottom " data-component-name="sdc-site-cookie-notice
+  <div class="sdc-site-cookie-notice sdc-site-cookie-notice--fixed-bottom" data-component-name="sdc-site-cookie-notice
               " data-cookie-name="sky-cookie-notice">
     <div class="sdc-site-cookie-notice__wrapper">
       <div class="sdc-site-cookie-notice__text">We use
-        <a href="http://help.sky.com/security/privacy/privacy-and-cookies-notice " target="_blank">cookies</a> to give you the best experience. If you do nothing we'll assume that it's ok.</div>
-      <button type="button " class="sdc-site-cookie-notice__close">
+        <a href="http://help.sky.com/security/privacy/privacy-and-cookies-notice" target="_blank">cookies</a> to give you the best experience. If you do nothing we'll assume that it's ok.</div>
+      <button type="button" class="sdc-site-cookie-notice__close">
         <span class="sdc-site-cookie-notice__close-text">Close</span>
         <span class="sdc-site-cookie-notice__close-icon">
           <svg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'>
@@ -2962,19 +2988,23 @@
       })
     }
 
-    var fergie = document.querySelector('#sff-sticky-timeline-fergie');
-    function fergietime() {
+    (function () {
 
-      var dims = fergie.getBoundingClientRect();
-      var whichfergie = (Math.floor(Math.round((100 / dims.height) * (dims.top + dims.height)) / 33.3));
-      whichfergie = Math.max(0, whichfergie);
-      whichfergie = Math.min(2, whichfergie);
-      fergie.querySelector('.sff-sticky-timeline__image').src = "assets/timeline/ferguson" + whichfergie + ".jpg";
-      fergie.setAttribute('data-which-fergie', whichfergie);
-      requestAnimationFrame(fergietime);
-    }
+      var fergie = document.querySelector('#sff-sticky-timeline-fergie');
+      function fergietime() {
 
-    fergietime();
+        var dims = fergie.getBoundingClientRect();
+        var whichfergie = (Math.floor(Math.round((100 / dims.height) * (dims.top + dims.height)) / 33.3));
+        whichfergie = Math.max(0, whichfergie);
+        whichfergie = Math.min(2, whichfergie);
+        fergie.setAttribute('data-whichfergie', whichfergie);
+        requestAnimationFrame(fergietime);
+      }
+
+      fergietime();
+
+    })()
+
 
   </script>
 
