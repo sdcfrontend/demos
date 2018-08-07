@@ -72,8 +72,7 @@
   display: none;
 }
 
-.sff-carousel__image[src*="missing.png"] {
-  opacity: 0.3;
+.sff-carousel__image[src*="missing"] {
   filter: none;
 }
 

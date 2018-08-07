@@ -21,7 +21,7 @@
   display: inline-block;
   font-size: 0.75rem;
   padding: 0.35em 0.6em;
-  margin: 0 0.25em;
+  margin: 0.25rem;
   text-decoration: none;
   color: inherit;
   border: 2px solid white;
@@ -30,7 +30,7 @@
 }
 
 .sff-quiz-fact__answer:hover {
-  background: #2d2a79;
+  background: rgba(255,255,255,0.1);
   text-decoration: none;
 }
 
