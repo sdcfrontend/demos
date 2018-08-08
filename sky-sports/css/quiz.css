@@ -46,9 +46,15 @@
 }
 
 .sff-quiz-fact__answer[data-correct][class]:before {
-  content: "\2714";
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url(data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNCAzNCIgdmlld0JveD0iMCAwIDM0IDM0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJmaWxsOiB3aGl0ZSI+PHBhdGggZD0ibTYuOTk5IDE4LjQ1NiA1LjY1IDUuNjQ5Yy4xODkuMTg5LjQ0LjI5My43MDcuMjkzcy41MTgtLjEwNC43MDctLjI5M2wxMi4wNy0xMi4wNy4xMjctLjEzYy4xNjEtLjE2My4yMzktLjMzMi4yNDctLjUzLjAwNi0uMTczLS4xNTUtLjQzOC0uNDQyLS43MjUtLjE4Ny0uMTg3LS4zODYtLjM2OC0uNTktLjUzNy0uMDUtLjA0MS0uMDk2LS4wNzgtLjEzOC0uMTExbC0uNDk2LjQ5OC0xMS4xMzIgMTEuMTMxLS4zNTQuMzU0LS4zNTQtLjM1NC00Ljc4NC00Ljc4NC0uNDg0LS40ODRjLS4wNDIuMDMzLS4wODkuMDctLjE0LjExMi0uMjAyLjE2Ny0uNDAxLjM0OC0uNTg5LjUzNi0uMjg3LjI4Ny0uNDQ4LjU1Mi0uNDQyLjcyNi4wMDguMTk1LjA4Ni4zNjMuMjQ2LjUyNnoiLz48cGF0aCBkPSJtMTYuODY2IDMuMDIyYzcuNzIgMCAxNCA2LjI4IDE0IDE0cy02LjI4IDE0LTE0IDE0LTE0LTYuMjgtMTQtMTQgNi4yODEtMTQgMTQtMTRtMC0yYy04LjgzNyAwLTE2IDcuMTYzLTE2IDE2czcuMTYzIDE2IDE2IDE2IDE2LTcuMTYzIDE2LTE2LTcuMTYzLTE2LTE2LTE2eiIvPjwvc3ZnPg==);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 0.4em;
+  vertical-align: text-bottom;
 }
 
 .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-selected]:not([data-correct])[class] {
@@ -57,9 +63,15 @@
 }
 
 .sff-quiz-fact__answer[data-selected]:not([data-correct])[class]:before {
-  content: "\2715";
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url(data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNCAzNCIgdmlld0JveD0iMCAwIDM0IDM0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJmaWxsOiB3aGl0ZSI+PHBhdGggZD0ibTI0Ljg2NiAyMy44MzVjLS4wMDgtLjIwMi0uMDg4LS4zNzItLjI1Mi0uNTM2bC01LjgyNy01LjgyNy0uMzU0LS4zNTQuMzU0LS4zNTQgNi4zMjQtNi4zMjRjLS4wMzMtLjA0Mi0uMDctLjA4OC0uMTEyLS4xMzgtLjE2Ni0uMjAyLS4zNDYtLjQtLjUzNi0uNTkxLS4zODQtLjM4NC0uNjE0LS40NDEtLjcxNi0uNDQxLS4yMTIuMDA4LS4zODMuMDg4LS41NDcuMjUybC01LjgyNyA1LjgyNy0uMzU0LjM1NC0uMzU0LS4zNTQtNi4zMjQtNi4zMjRjLS4wNDIuMDMzLS4wODkuMDctLjE0LjExMi0uMjAyLjE2OS0uNC4zNS0uNTg4LjUzNy0uMjg3LjI4Ny0uNDQ4LjU1Mi0uNDQxLjcyNi4wMDguMjAyLjA4OC4zNzMuMjUyLjUzN2w1LjgyNyA1LjgyNy4zNTQuMzU0LS4zNTQuMzU0LTYuMzI0IDYuMzI0Yy4wMzMuMDQyLjA3LjA4OS4xMTIuMTQuMTY4LjIwMy4zNDguNDAxLjUzNi41ODguMzg0LjM4NS42MTMuNDQyLjcxNi40NDIuMjEyLS4wMDguMzgzLS4wODguNTQ3LS4yNTJsNS44MjgtNS44MjguMzU0LS4zNTQuMzU0LjM1NCA2LjMyNCA2LjMyNGMuMDQyLS4wMzMuMDg4LS4wNy4xMzgtLjExMi4yMDMtLjE2Ni40MDEtLjM0Ni41OS0uNTM2LjI4NS0uMjg3LjQ0Ni0uNTUyLjQ0LS43Mjd6Ii8+PHBhdGggZD0ibTE2Ljg2NCAzLjAyMmM3LjcyIDAgMTQgNi4yOCAxNCAxNHMtNi4yOCAxNC0xNCAxNC0xNC02LjI4LTE0LTE0IDYuMjgtMTQgMTQtMTRtMC0yYy04LjgzNyAwLTE2IDcuMTYzLTE2IDE2czcuMTYzIDE2IDE2IDE2IDE2LTcuMTYzIDE2LTE2LTcuMTY0LTE2LTE2LTE2eiIvPjwvc3ZnPg==);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: inline-block;
-  margin-right: 3px;
+  margin-right: 0.4em;
+  vertical-align: text-bottom;
 }
 
 .sff-quiz-face__desc {
