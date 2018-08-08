@@ -27,7 +27,8 @@
   height: 100vh;
   position: sticky;
   top: 0;
-  overflow: hidden
+  overflow: hidden;
+  z-index: 2
 }
 
 .sff-moment__overlay {
@@ -159,8 +160,23 @@ video[data-load-video] {
     animation: 0.01s start-video-mobile
   }
 
+  .sff-moment {
+    max-height: 100vh;
+    position: relative
+  }
+
   .sff-moment:after {
+    content: "";
+    display: block;
     padding-bottom: 100%;
+  }
+
+  .sff-moment__slide,
+  .sff-moment__ghost {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
   }
 
   .sff-moment__video-small {
