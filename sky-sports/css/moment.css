@@ -25,10 +25,11 @@
 
 .sff-moment__slide {
   height: 100vh;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   overflow: hidden;
-  z-index: 2
+  z-index: 2;
 }
 
 .sff-moment__overlay {
@@ -42,26 +43,28 @@
   pointer-events: none;
 }
 
-.sff-moment__overlay:before {
+.sff-moment__slide:before {
   content: "";
   position: absolute;
   left: 0;
+  height: 100%;
   width: 100%;
-  height: 35%;
   bottom: 0;
-  background: linear-gradient(0deg,rgba(0,0,01) 0%,transparent 50%);
-
+  background: linear-gradient(0deg,rgba(0,0,0, 0.6) 0%,transparent 40%);
+  z-index: 2
 }
 
-.sff-moment__overlay:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -100%;
-  width: 12px;
-  height: 100%;
-  transform: translateY(var(--progress));
-  will-change: transform;
+@supports(--css: variables) {
+  .sff-moment__overlay:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100%;
+    width: 12px;
+    height: 100%;
+    transform: translateY(var(--progress));
+    will-change: transform;
+  }
 }
 
 .sff-moment__overlay:after {
@@ -102,10 +105,18 @@
   text-align: left
 }
 
-.sff-moment__slide[data-animate-in-view]
-.site-wrap  {
-  transform: translateX(-100%);
+@supports(display: grid){
+  .sff-moment__slide[data-animate-in-view]
+  .site-wrap  {
+    transform: translateX(-100%);
+  }
+
+  .sff-moment__slide[data-animate-in-view]
+  .sff-moment__overlay p {
+    transform: translateX(-20%);
+  }
 }
+
 
 .sff-moment__overlay h2 {
   font-size: 2.5rem;
@@ -115,11 +126,6 @@
   color: white;
   font-family:premierleague;
   filter: drop-shadow(1px 1px 6px rgba(0, 0, 0, 0.5))
-}
-
-.sff-moment__slide[data-animate-in-view]
-.sff-moment__overlay p {
-  transform: translateX(-20%);
 }
 
 .sff-moment__overlay p {

@@ -62,3 +62,33 @@
   text-align: left;
   margin-bottom: 0
 }
+
+.sff-credit {
+  font-size: 14px;
+  color: inherit;
+  text-align: center;
+  padding: 0 0 1rem;
+}
+
+.sff-credit--top {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.sff-credit--invert {
+  color: white;
+}
+
+.sff-byline {
+  padding: 0 1vw;
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  color: #555
+}
+
+.sff-byline a {
+  color: #214cb8;
+}

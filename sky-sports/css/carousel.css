@@ -5,8 +5,10 @@
 }
 
 .sff-carousel__scroll {
-  display: grid;
-  grid-template-columns: repeat(27, 100%);
+  position: relative;
+  padding-bottom: 66%;
+  /* display: grid;
+  grid-template-columns: repeat(27, 100%); */
   /* overflow: auto;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
@@ -25,12 +27,13 @@
 }
 
 .sff-carousel__item {
-  grid-column: 1;
-  grid-row: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
   width: 100%;
   transition: 0.75s transform, 0.3s opacity;
   opacity: 0;
@@ -79,6 +82,10 @@
 
 @media all and (min-width: 540px){
 
+  .sff-carousel__scroll {
+    padding-bottom: 37%
+  }
+
   .sff-carousel__image {
     display: block;
     width: 50%;
@@ -101,25 +108,28 @@
 }
 
 .sff-carousel__nav {
-  display: grid;
-  grid-template-columns: 2rem auto 2rem;
+  display: flex;
   color: white;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding-bottom: 2rem
+}
+
+.sff-carousel__nav-cell {
 }
 
 .sff-carousel__nav-items {
   overflow: hidden;
+  flex: 1;
 }
 
 .sff-carousel__nav-rail {
   display: grid;
   grid-template-columns: repeat(27, 33.3%);
+  height: 100%;
   list-style: none;
   padding: 0;
   /* transition: transform 0.25s; */
   transform: translateX(33.333%);
-  height: 100%;
   will-change: transform;
 }
 
@@ -129,8 +139,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
-  opacity: 0.3
+  font-size: 1.1rem;
+  opacity: 0.3;
+  height: 2rem
 }
 
 .sff-carousel__nav-item--on[class] {
@@ -144,7 +155,9 @@
   border-radius: 50%;
   display: block;
   height: 2rem;
+  width: 2rem;
   position: relative;
+  flex: none;
 }
 
 .sff-carousel__nav-link:first-child {

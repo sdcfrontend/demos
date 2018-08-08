@@ -24,6 +24,7 @@
 @import "sticky-timeline.css";
 @import "promo.css";
 @import "share.css";
+@import "app-promo.css";
 
 .place {
   height: 80vh;

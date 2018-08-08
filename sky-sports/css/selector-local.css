@@ -9,5 +9,10 @@
 }
 
 .sdc-interactive-selector__title-wrap[class] {
-  padding: 1rem 0
-}
+  padding: 0 0 1rem
+ }
+
+ .sdc-interactive-selector__title {
+   font-size: 1.4rem
+ }
+

@@ -28,8 +28,14 @@
 }
 
 .sff-sticky-timeline__body {
+  position: -webkit-sticky;
   position: sticky;
   top: 1rem;
+}
+
+.sff-sticky-timeline[data-sticky="false"]
+.sff-sticky-timeline__body {
+  position: relative;
 }
 
 .sff-sticky-timeline__item p {

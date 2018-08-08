@@ -3,6 +3,22 @@
   text-align: center
 }
 
+.sff-league-pos__wrap {
+  position: relative;
+}
+
+.sff-league-pos__wrap:after {
+  content: "";
+  height: 100%;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  pointer-events: none;
+  background-image: linear-gradient(to left, white 0, rgba(255,255,255,0) 100%)
+}
+
 .sff-league-pos__inner {
   margin: 0 auto;
   position: relative;

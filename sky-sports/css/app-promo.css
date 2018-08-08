@@ -1,0 +1,159 @@
+.sff-app-promo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sff-app-promo__cell {
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+} 
+
+.sff-app-promo__cell--1 {
+  background: linear-gradient(to right, #a70f0e 0, #d21123 100%);
+  color: white;
+}
+
+.sff-app-promo__cell--1:after {
+  content: "";
+  display: block;
+  padding-bottom: 75%
+}
+
+.sff-app-promo__cell--1 > img {
+  position: absolute;
+  width: 94%;
+  bottom: 0;
+  left: 3%;
+}
+
+.sff-app-promo__cell--2 {
+  background:linear-gradient(to right, #090f6a 0, #040b51 100%);
+  color: white;
+  font-family: premierleague;
+  padding: 1.9rem;
+}
+
+.sff-app-promo__cell--3 {
+  background: white;
+  flex: 1;
+  color: #222;
+  padding: 1.9rem;
+}
+
+.sff-app-promo__body {
+  max-width: 680px;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.sff-app-promo__body-header {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 1em;
+}
+
+.sff-app-promo__header1 {
+  font-size: 19px;
+  margin-bottom: 0.8rem;
+  font-weight: 400
+}
+
+.sff-app-promo__header2 {
+  font-family: 'Sky Text', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 0.25rem
+}
+
+.sff-app-promo__fixture {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 0.9;
+  margin-bottom: 0.25rem;
+  word-spacing: -0.1em;
+  white-space: nowrap
+}
+
+.sff-app-promo__fixture span {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+.sff-app-promo__details {
+  margin-bottom: 1.8rem;
+  font-size: 16px;
+  font-weight: 500
+}
+
+.sff-app-promo__logo {
+  height: 1.1em;
+  vertical-align: middle;
+  margin: 1px 0px 1px 4px
+}
+
+.sff-app-promo__body {
+  display: flex;
+}
+
+.sff-app-promo__body > figure {
+  width: 180px;
+  margin-left: 1rem
+}
+
+.sff-app-promo__body ul {
+  list-style: none;
+  line-height: 1.2;
+  margin-bottom: 1.5rem
+}
+
+.sff-app-promo__body li {
+  padding: 0.2rem 0 0.2em 1rem;
+  font-size: 16px;
+  position: relative;
+}
+
+.sff-app-promo__body li:before {
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(0.2rem, 100%);
+}
+
+.sff-app-promo__links {
+  text-align: left
+}
+
+.sff-app-promo__links > a {
+  width: 40%;
+  max-width: 150px;
+  display: inline-block;
+  margin-right: 2%
+}
+
+
+@media all and (max-width: 800px){
+  .sff-app-promo__cell--1 {
+    display: none;
+  }
+
+  .sff-app-promo__cell--2 {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 600px){
+  .sff-app-promo__body > figure {
+    display: none;
+  }
+}

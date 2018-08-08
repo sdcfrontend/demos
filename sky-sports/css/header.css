@@ -25,14 +25,19 @@
   width: 100%;
   top: 0;
   left: 0;
-  height: 100%;
-  object-fit: cover;
   z-index: 2;
   transform: translateZ(0);
   background-size: auto 100%;
   background-position: center;
   will-change: transform;
   position: absolute;
+}
+
+@supports(object-fit: cover){
+  .sff-header__image {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 /* 
 .sff-header__wing {
