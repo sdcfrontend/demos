@@ -12,7 +12,7 @@
 }
 
 .sff-quiz-fact__question {
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   line-height: 1.3
 }
 
@@ -45,7 +45,31 @@
   opacity: 1
 }
 
+.sff-quiz-fact__answer[data-correct][class]:before {
+  content: "\2714";
+  display: inline-block;
+  margin-right: 3px;
+}
+
 .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-selected]:not([data-correct])[class] {
   background: #bf101a;
   border-color: #bf101a
+}
+
+.sff-quiz-fact__answer[data-selected]:not([data-correct])[class]:before {
+  content: "\2715";
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.sff-quiz-face__desc {
+  font-size: 0.7rem;
+  color: #ddd;
+  padding-top: 1em;
+  display: none
+}
+
+.sff-quiz-fact__answers[data-answered="true"] + 
+.sff-quiz-face__desc {
+  display: block;
 }
