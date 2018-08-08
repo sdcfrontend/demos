@@ -19,7 +19,8 @@
 .sff-quiz-fact__answer {
   display: inline-block;
   font-size: 0.82rem;
-  padding: 0.35em 0.6em;
+  padding: 0.35em 2em;
+  position: relative;
   margin: 0.25rem;
   text-decoration: none;
   color: inherit;
@@ -55,6 +56,10 @@
   display: inline-block;
   margin-right: 0.4em;
   vertical-align: text-bottom;
+  transform: translate(50%, -50%);
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 .sff-quiz-fact__answers[data-answered] .sff-quiz-fact__answer[data-selected]:not([data-correct])[class] {
@@ -72,6 +77,10 @@
   display: inline-block;
   margin-right: 0.4em;
   vertical-align: text-bottom;
+  transform: translate(50%, -50%);
+  position: absolute;
+  left: 0;
+  top: 50%;
 }
 
 .sff-quiz-face__desc {
