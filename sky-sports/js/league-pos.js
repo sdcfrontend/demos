@@ -1,5 +1,6 @@
 (function () {
 
+  var scroller = document.querySelector('.sff-league-pos__inner');
   var group = document.querySelector('.sff-league-pos__city');
   var dots = document.querySelectorAll('.dot');
   var line = document.querySelector('.line');
@@ -86,7 +87,19 @@
 
   }
 
+  function scrollHelper() {
+    if (scroller.scrollWidth - scroller.offsetWidth > 0) {
+      scroller.parentNode.setAttribute('data-scroll-helper', true);
+    }
+
+    scroller.onscroll = function () {
+      scroller.onscroll = null;
+      scroller.parentNode.removeAttribute('data-scroll-helper')
+    }
+  }
+
   renderLines();
+  scrollHelper();
 
   var resizeTimer;
 
