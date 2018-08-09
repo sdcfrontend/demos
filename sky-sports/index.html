@@ -4,7 +4,6 @@
 
 
 <head>
-
   <script>!function () { function e(e) { for (var n = document.cookie.split(";"), t = -1; ++t < n.length;) { var i = n[t].split("="); if (i[0].match(e)) return decodeURIComponent(i[1]) } return"" } function n(e) { return !!e } function t(e) { return 1 === e.hd } function i(e) { return 1 === e.st } function o(e) { return 2 === e.st } function r(e) { return 3 === e.st } function s(e) { return !(!e || !e.match(/^WIG/)) } function a() { var e = window.SKY_SPORTS.user; return e.isLoggedIn ? e.isSkySports ? 1 : e.isWholesale ? 3 : 4 : 2 } function c(e) { return e.f ||"" } function u() { var d = e("interactive"), m = d ? JSON.parse(d) : {}, S = e("skySportsSSO"), w = { isLoggedIn: n(S), getType: a, set: u }; w.isLoggedIn && (w.name = c(m), w.isSkyHD = t(m), w.isSky = i(m), w.isSkySports = o(m), w.isNowTV = r(m), w.isWholesale = s(S)), window.SKY_SPORTS.user = w } window.SKY_SPORTS = window.SKY_SPORTS || {}, u() }(), function () { window.SKY_SPORTS = window.SKY_SPORTS || {}, SKY_SPORTS.getUa = function (e) { function n(n) { return !!e.match(n) && parseFloat(e.match(n)[1].replace("_",".")) } var t = !1; null !== new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})").exec(e) && (t = parseFloat(RegExp.$1)); var i = e.match(/iPad/), o = e.match(/iP/), r = e.match(/android/i), s = e.match(/windows phone/i), a = navigator.platform.match(/mac|win/i), c = { classList:"" }; return s && (c = { mobile: !0, windowsphone: !0, name:"windowsphone", version: n(/os ([0-9]\.[0-9])/i) || n(/windows phone ([0-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version,"mobile"].join("")), t && (c = { msie: !0, name:"msie", version: t }, c.classList = [c.name, c.name + c.version].join("")), (i || o) && (c = { ios: !0, name: i ?"ipad" :"iphone", mobile: !0, version: n(/os ([1-9]\_[0-9])/i) }, c.classList = [c.name, c.name + c.version, c.device,"ios","ios" + c.version,"mobile"].join("")), r && (c = { android: !0, name:"android", mobile: !0, version: n(/android ([1-9]\.[0-9])/i) }, c.classList = [c.name, c.name + c.version,"mobile"].join("")), a && (c.desktop = !0, c.classList +=" desktop"), c }, SKY_SPORTS.device = SKY_SPORTS.getUa(navigator.userAgent) }(), function () { function e() { for (var t = document.querySelectorAll("img[data-lazy]"), i = -1; ++i < t.length;) { var o = t[i]; n(o) && ("PICTURE" === o.parentNode.nodeName ? o.parentNode.querySelectorAll("source").forEach(function (e) { e.setAttribute("srcset", e.getAttribute("data-srcset")) }) : o.setAttribute("srcset", o.getAttribute("data-srcset")), o.removeAttribute("data-lazy")) } setTimeout(function () { window.requestAnimationFrame(e) }, 250) } function n(e) { var n = e.getBoundingClientRect(); return 0 !== n.width && (!(n.bottom < 0) && !((window.outerHeight || window.innerHeight) - n.top < 50)) } NodeList.prototype.forEach || (NodeList.prototype.forEach = Array.prototype.forEach),"srcset" in new Image && setTimeout(function () { e() }, 500) }(), function () { window.isModernBrowser = !1; var e = ["js","is-legacy"]; ("visibilityState" in document || window.CSS && window.CSS.supports) && (window.isModernBrowser = !0, e = ["js","is-modern"]), document.documentElement.className = e.join("") }();</script>
   <link rel="stylesheet" href="css/site-main.css">
 
@@ -2483,7 +2482,7 @@
 
   <div class="sff-promo">
 
-    <a href="https://www.sky.com/shop/tv/sports/?DCMP=bac-SS.com_NewSkySports_AroundSkySports" class="sff-promo__body">
+    <a href="https://www.sky.com/shop/tv/sports/?DCMP=bac-SS.com_NewSkySports_CityUnited" class="sff-promo__body">
       <div class="site-wrap site-wrap-padding">
         <h2>
           Feel it all
@@ -2505,7 +2504,67 @@
   <a href="#" class="sff-top__link">
    Return to top</a></div>
 
-  </div>
+
+  <script src="js/min.js"></script>
+  <script src="js/selector.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <script>
+    window['sdc-interactive-selector'](document.querySelector('.sdc-interactive-selector'));
+  </script>
+  <script>
+
+    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    setTimeout(function () {
+      document.querySelectorAll('[data-trigger]').forEach(function (block) {
+        observer.observe(block);
+      });
+    }, 100)
+
+    function scan(entries, observer) {
+      entries.forEach(function (item) {
+        var ratio = 0.25;
+        if (item.target.hasAttribute('data-trigger')) {
+          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+        }
+
+        if (item.isIntersecting) {
+          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+            observer.unobserve(item.target);
+            item.target.removeAttribute('data-animate-in-view');
+            // if a chart
+            if (item.target.start && !item.target.init) {
+              item.target.start();
+              item.target.init = true;
+            }
+          }
+        }
+      })
+    }
+
+    (function () {
+
+      var fergie = document.querySelector('#sff-sticky-timeline-fergie');
+      function fergietime() {
+
+        var dims = fergie.getBoundingClientRect();
+        var whichfergie = (Math.floor(Math.round((100 / dims.height) * (dims.top + dims.height)) / 33.3));
+        whichfergie = Math.max(0, whichfergie);
+        whichfergie = Math.min(2, whichfergie);
+        fergie.setAttribute('data-whichfergie', whichfergie);
+        requestAnimationFrame(fergietime);
+      }
+
+      fergietime();
+
+    })();
+
+    (function(){
+      var header = document.querySelector('.sff-header');
+      header.setAttribute('data-ready', true);
+    })();
+
+
+  </script>
 
   <div class="blackjack-sdc-digrev-footer site-footer" data-component-name="blackjack-sdc-digrev-footer">
     <div class="site-footer__body">
@@ -3018,66 +3077,7 @@
     </div>
   </div>
 
-  <script src="js/min.js"></script>
-  <script src="js/selector.js"></script>
-  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
-  <script>
-    window['sdc-interactive-selector'](document.querySelector('.sdc-interactive-selector'));
-  </script>
-  <script>
-
-    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
-    setTimeout(function () {
-      document.querySelectorAll('[data-trigger]').forEach(function (block) {
-        observer.observe(block);
-      });
-    }, 100)
-
-    function scan(entries, observer) {
-      entries.forEach(function (item) {
-        var ratio = 0.25;
-        if (item.target.hasAttribute('data-trigger')) {
-          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
-        }
-
-        if (item.isIntersecting) {
-          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
-            observer.unobserve(item.target);
-            item.target.removeAttribute('data-animate-in-view');
-            // if a chart
-            if (item.target.start && !item.target.init) {
-              item.target.start();
-              item.target.init = true;
-            }
-          }
-        }
-      })
-    }
-
-    (function () {
-
-      var fergie = document.querySelector('#sff-sticky-timeline-fergie');
-      function fergietime() {
-
-        var dims = fergie.getBoundingClientRect();
-        var whichfergie = (Math.floor(Math.round((100 / dims.height) * (dims.top + dims.height)) / 33.3));
-        whichfergie = Math.max(0, whichfergie);
-        whichfergie = Math.min(2, whichfergie);
-        fergie.setAttribute('data-whichfergie', whichfergie);
-        requestAnimationFrame(fergietime);
-      }
-
-      fergietime();
-
-    })();
-
-    (function(){
-      var header = document.querySelector('.sff-header');
-      header.setAttribute('data-ready', true);
-    })();
-
-
-  </script>
+  
 
 </body>
 

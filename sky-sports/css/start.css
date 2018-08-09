@@ -17,6 +17,9 @@ body {
   margin-bottom: 0
 }
 
+.sdc-site-cookie-notice[class]{
+  font-size: 0.875em!important;
+}
 
 @media all and (min-width: 928px){
   html {

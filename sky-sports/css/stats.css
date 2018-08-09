@@ -160,7 +160,6 @@
 } 
 
 .sff-stat__bar-item-cellbar {
-  display: block;
   justify-content: flex-end;
   align-items: center;
   display: flex;
@@ -172,6 +171,8 @@
 
 .sff-stat__bar-item-cellbar:before {
   content: "";
+  display: block;
+  /* outline: 1px solid hotpink; */
   width: 0.6rem;
   height: 0.6rem;
   border: 3px solid white;

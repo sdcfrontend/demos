@@ -86,6 +86,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _createView2 = _interopRequireDefault(_createView);
 
+	var _shortlistJs = __webpack_require__(39);
+
+	var _shortlistJs2 = _interopRequireDefault(_shortlistJs);
+
 	exports['default'] = function (rootElement, options) {
 	  NodeList.prototype.forEach = Array.prototype.forEach;
 
@@ -102,41 +106,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // merge passed options into defaults
 	  (0, _mergeObject2['default'])(defaults, options);
 
-	  // function to request data using fetch api
-	  // ensure this is polyfilled for non supporting browsers
-	  function requestData() {
-	    // update url
+	  // // function to request data using fetch api
+	  // // ensure this is polyfilled for non supporting browsers
+	  // function requestData(){
+	  //   // update url
 
-	    if (rootElement.getAttribute('data-url')) {
-	      defaults.dataUrl = rootElement.getAttribute('data-url');
-	    }
+	  //   if (rootElement.getAttribute('data-url')) {
+	  //     defaults.dataUrl = rootElement.getAttribute('data-url');
+	  //   }
 
-	    if (defaults.dataUrl) {
-	      // request json data using fetch
-	      fetch(defaults.dataUrl, {
-	        credentials: 'include',
-	        headers: new Headers({
-	          'Authorization': rootElement.getAttribute('data-token')
-	        })
-	      }).then(_status2['default']).then(function (response) {
-	        return response.json();
-	      }).then(function (data) {
-	        rootElement.view.data = data;
-	        return rootElement.view;
-	      }).then(_createView2['default'].bind(this, rootElement))['catch'](function (error) {
-	        return console.error(error);
-	      });
-	    }
-	  }
+	  //   if (defaults.dataUrl) {
+	  //     // request json data using fetch
+	  //     fetch(defaults.dataUrl, {
+	  //       credentials: 'include',
+	  //       headers: new Headers({
+	  //          'Authorization': rootElement.getAttribute('data-token')
+	  //     	})
+	  //     })
+	  //     .then(status)
+	  //     .then(response => response.json())
+	  //     .then(function(data){
+	  //       rootElement.view.data = data;
+	  //       return rootElement.view;
+	  //     })
+	  //     .then(createView.bind(this, rootElement))
+	  //     .catch(error => console.error(error));
+	  //   }
 
-	  // make first request...
-	  // (polyfill the fetch api if not available)
-	  // Load promise polyfill for IE
-	  (0, _promisePolyfill2['default'])(window);
+	  // }
 
-	  (0, _polyfill2['default'])('fetch' in window, defaults.polyfillUrl, function () {
-	    requestData();
-	  });
+	  // // make first request...
+	  // // (polyfill the fetch api if not available)
+	  // // Load promise polyfill for IE
+	  // promisePolyfill(window);
+
+	  // polyfill('fetch' in window, defaults.polyfillUrl, () => {
+	  //   requestData();
+	  // });
+
+	  rootElement.view.data = _shortlistJs2['default'];
+	  (0, _createView2['default'])(rootElement);
 	};
 
 	module.exports = exports['default'];
@@ -3509,6 +3518,855 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	module.exports = exports['default'];
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports["default"] = {
+	  "id": "0875b4c7f7fad016d6b2faba22c8b3c1",
+	  "title": "Pick your all-time Premier League Manchester XI",
+	  "sponsorImage": "",
+	  "formation": "442",
+	  "restrictSelections": true,
+	  "static": true,
+	  "useParticipantImage": false,
+	  "backgroundImage": "#ffffff",
+	  "type": "football",
+	  "numOfParticipants": 11,
+	  "successMessage": {
+	    "title": "Share your team",
+	    "text": "Click the link below to copy the share url"
+	  },
+	  "embed": true,
+	  "sides": [{
+	    "name": "",
+	    "formation": "442",
+	    "participants": [{
+	      "listPosition": 0,
+	      "id": 128102,
+	      "longName": "Leroy Sané",
+	      "shortName": "Sané",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_128102.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 110808,
+	      "longName": "Raheem Sterling",
+	      "shortName": "Sterling",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_110808.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Attacking Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 72603,
+	      "longName": "Kevin De Bruyne",
+	      "shortName": "De Bruyne",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_72603.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 9813,
+	      "longName": "Aleksandar Kolarov",
+	      "shortName": "Aleksandar Kolarov",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 5497,
+	      "longName": "Gael Clichy",
+	      "shortName": "Gael Clichy",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 15830,
+	      "longName": "Kyle Walker",
+	      "shortName": "Walker",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_15830.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3778,
+	      "longName": "Micah Richards",
+	      "shortName": "Micah Richards",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3,
+	      "longName": "Joe Hart",
+	      "shortName": "Hart",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_3.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 6325,
+	      "longName": "Shaun Goater",
+	      "shortName": "Shaun Goater",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 572,
+	      "longName": "Mario Balotelli",
+	      "shortName": "Mario Balotelli",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 1742,
+	      "longName": "Richard Dunne",
+	      "shortName": "Richard Dunne",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3796,
+	      "longName": "Georgi Kinkladze",
+	      "shortName": "Georgi Kinkladze",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 114160,
+	      "longName": "Ederson Santana de Moraes",
+	      "shortName": "de Moraes",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_114160.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 4711,
+	      "longName": "Pablo Zabaleta",
+	      "shortName": "Pablo Zabaleta",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2019,
+	      "longName": "Vincent Kompany",
+	      "shortName": "Kompany",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_2019.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 1037,
+	      "longName": "Yaya Toure",
+	      "shortName": "Yaya Toure",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 8030,
+	      "longName": "Shaun Wright-Phillips",
+	      "shortName": "Shaun Wright-Phillips",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 7279,
+	      "longName": "Edin Dzeko",
+	      "shortName": "Edin Dzeko",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 5808,
+	      "longName": "Sergio Agüero",
+	      "shortName": "Agüero",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_5808.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 7464,
+	      "longName": "David Silva",
+	      "shortName": "Silva",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_7464.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 19950,
+	      "longName": "Nicolás Otamendi",
+	      "shortName": "Otamendi",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_19950.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3577,
+	      "longName": "Carlos Tevez",
+	      "shortName": "Carlos Tevez",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 8087,
+	      "longName": "Joleon Lescott",
+	      "shortName": "Joleon Lescott",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 7458,
+	      "longName": "David James",
+	      "shortName": "David James",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/345.png",
+	      "team": {
+	        "id": 345,
+	        "name": "Manchester City",
+	        "shortName": "Man City",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/345.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 1860,
+	      "longName": "Rio Ferdinand",
+	      "shortName": "Rio Ferdinand",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2382,
+	      "longName": "Gary Neville",
+	      "shortName": "Gary Neville",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 6582,
+	      "longName": "Wayne Rooney",
+	      "shortName": "Wayne Rooney",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 4458,
+	      "longName": "Ole Gunnar Solskjaer",
+	      "shortName": "Ole Gunnar Solskjaer",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 6540,
+	      "longName": "Jaap Stam",
+	      "shortName": "Jaap Stam",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3014,
+	      "longName": "Cristiano Ronaldo",
+	      "shortName": "Cristiano Ronaldo",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 8411,
+	      "longName": "Andy Cole",
+	      "shortName": "Andy Cole",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 6632,
+	      "longName": "Bryan Robson",
+	      "shortName": "Bryan Robson",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 102339,
+	      "longName": "Paul Pogba",
+	      "shortName": "Pogba",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_102339.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3541,
+	      "longName": "Gary Pallister",
+	      "shortName": "Gary Pallister",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 6847,
+	      "longName": "Teddy Sheringham",
+	      "shortName": "Teddy Sheringham",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2957,
+	      "longName": "Denis Irwin",
+	      "shortName": "Denis Irwin",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3406,
+	      "longName": "Ruud van Nistelrooy",
+	      "shortName": "Ruud van Nistelrooy",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 7643,
+	      "longName": "Patrice Evra",
+	      "shortName": "Patrice Evra",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 9313,
+	      "longName": "Nemanja Vidic",
+	      "shortName": "Nemanja Vidic",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Defender",
+	        "filter": ["defender"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3975,
+	      "longName": "Peter Schmeichel",
+	      "shortName": "Peter Schmeichel",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 9239,
+	      "longName": "Juan Mata",
+	      "shortName": "Mata",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9239.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Attacking Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 7234,
+	      "longName": "Robin van Persie",
+	      "shortName": "Robin van Persie",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2246,
+	      "longName": "Paul Scholes",
+	      "shortName": "Paul Scholes",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 18677,
+	      "longName": "David De Gea",
+	      "shortName": "De Gea",
+	      "image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_18677.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 1165,
+	      "longName": "Eric Cantona",
+	      "shortName": "Eric Cantona",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2447,
+	      "longName": "David Beckham",
+	      "shortName": "David Beckham",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2202,
+	      "longName": "Michael Carrick",
+	      "shortName": "Michael Carrick",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 9057,
+	      "longName": "Ryan Giggs",
+	      "shortName": "Ryan Giggs",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 2080,
+	      "longName": "Roy Keane",
+	      "shortName": "Roy Keane",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Midfielder",
+	        "filter": ["attackingMidfielder", "midfielder", "striker"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 4836,
+	      "longName": "Edwin van der Sar",
+	      "shortName": "Edwin van der Sar",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Goalkeeper",
+	        "filter": ["goalkeeper"]
+	      }
+	    }, {
+	      "listPosition": 0,
+	      "id": 3762,
+	      "longName": "Dwight Yorke",
+	      "shortName": "Dwight Yorke",
+	      "image": "http:\/\/e1.365dm.com\/football\/badges\/192\/210.png",
+	      "team": {
+	        "id": 210,
+	        "name": "Manchester United",
+	        "shortName": "Man Utd",
+	        "image": "http:\/\/img.skysports.com\/football\/badges\/192\/210.png"
+	      },
+	      "position": {
+	        "displayName": "Striker",
+	        "filter": ["attackingMidfielder", "striker"]
+	      }
+	    }]
+	  }]
+	};
+	module.exports = exports["default"];
 
 /***/ })
 /******/ ])
