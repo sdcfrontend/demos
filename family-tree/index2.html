@@ -22,14 +22,14 @@
       display: flex;
       width: 100%;
       justify-content: center;
-      padding: calc(12px + 1vw) calc(3px + 0.5vw);
+      padding: calc(12px + 2vw) calc(3px + 0.5vw);
       position: relative;
       /* border: 1px solid lime */
     }
 
     .tree-group:not([data-root]):before {
       content: "";
-      height: calc(8px + 1vw);
+      height: calc(8px + 2vw);
       width: 100%;
       border-top: 2px solid #aaa;
       position: absolute;
@@ -54,6 +54,11 @@
       border-left: 2px solid #aaa;
     }
 
+    .tree-group[data-right-long]:before {
+      width: 100%;
+      left: 50%;
+    }
+
     .tree-group[data-left-75]:before {
       width: calc(50% + (30px + 1.5vw));
       left: 0;
@@ -66,6 +71,13 @@
       border-left: 2px solid #aaa;
     }
 
+    .tree-group[data-center-50]:before {
+      width: 50%;
+      right: 0;
+      border-left: 2px solid #aaa;
+      border-top: 0
+    }
+
     .tree-group[data-fill] {
       background: linear-gradient(to left, #aaa 0, #aaa 100%) no-repeat;
       background-clip: border-box;
@@ -75,12 +87,12 @@
     .tree-group:not([data-end]):after {
       content: "";
       width: 2px;
-      height: calc(12px + 1vw);
+      height: calc(12px + 2vw);
       position: absolute;
       left: 50%;
       bottom: 0;
       background: #aaa;
-      transform: translateX(-50%)
+      transform: translateX(-2px)
     }
 
     .tree-group[data-stem-33]:after {
@@ -88,27 +100,15 @@
     }
 
     .tree-person {
-      width: calc(60px + 2vw);
+      width: calc(55px + 2vw);
       margin: 0 calc(3px + 0.5vw);
       z-index: 3;
+      position: relative;
     }
-
-    /* .tree-person[data-stem]:before {
-      content: "";
-      position: absolute;
-      width: 2px;
-      height: calc(12px + 1vw);
-      background: #aaa;
-      transform: translateX(-1px);
-      left: 50%;
-      top: 0;
-      z-index: 2;
-    } */
 
     .tree-person--small {
       transform: scale(0.9);
       transform-origin: top;
-      /* width: calc(26px + 6vmin); */
     }
 
     .tree-person--small .tree-person__image {
@@ -133,17 +133,19 @@
 
     .tree-person__name>strong {
       display: block;
+      margin-bottom: 0.1em
     }
 
     .tree-person__name span {
       display: block;
       font-size: 0.9em;
+      line-height: 1.2
     }
 
     .tree {
       display: grid;
       grid-template-columns: repeat(8, min-content);
-      grid-template-rows: repeat(3, min-content);
+      grid-template-rows: repeat(4, min-content);
       width: 100%;
     }
 
@@ -216,15 +218,64 @@
       grid-row: 3
     }
 
+    .tree-branch[data-branch="14"] {
+      grid-column: 1;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="15"] {
+      grid-column: 2;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="16"] {
+      grid-column: 3;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="17"] {
+      grid-column: 4;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="18"] {
+      grid-column: 5;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="19"] {
+      grid-column: 6;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="20"] {
+      grid-column: 7;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
+    .tree-branch[data-branch="21"] {
+      grid-column: 8;
+      grid-row: 4;
+      /* border: 1px solid red */
+    }
+
     .tree-root {
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
       position: relative;
     }
   </style>
 </head>
 
 <body>
-
+  <h1>Windsor Family Tree</h1>
   <div class="tree-root">
     <div class="tree">
       <div class="tree-branch" data-branch="1" data-row="1">
@@ -255,7 +306,7 @@
               <span>Princess of Wales</span>
             </p>
           </div>
-          <div class="tree-person">
+          <div class="tree-person" data-stem-long>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Charles</strong>
@@ -293,7 +344,7 @@
       <div class="tree-branch" data-branch="4" data-row="2">
         <div class="tree-group" data-right-75 data-fill data-stem-50>
 
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Edward</strong>
@@ -318,7 +369,7 @@
               <span>Captain</span>
             </p>
           </div>
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right data-stem-long>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Anne</strong>
@@ -356,7 +407,7 @@
       <div class="tree-branch" data-branch="7" data-row="3">
         <div class="tree-group" data-left-25 data-end data-stem-50>
 
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Henry</strong>
@@ -388,7 +439,7 @@
       <div class="tree-branch" data-branch="9" data-row="3">
         <div class="tree-group" data-left-50 data-end data-stem-50>
 
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Eugenie</strong>
@@ -414,7 +465,7 @@
       <div class="tree-branch" data-branch="11" data-row="3">
         <div class="tree-group" data-left-50 data-end data-stem-50>
 
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Louise</strong>
@@ -446,7 +497,7 @@
       <div class="tree-branch" data-branch="13" data-row="3">
         <div class="tree-group" data-left-25 data-stem-50>
 
-          <div class="tree-person">
+          <div class="tree-person" data-stem-right>
             <div class="tree-person__image"></div>
             <p class="tree-person__name">
               <strong>Zara</strong>
@@ -463,110 +514,104 @@
         </div>
       </div>
 
+      <div class="tree-branch" data-branch="14" data-row="4">
+        <div class="tree-group" data-right-50 data-right-long data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>George</strong>
+              <span>Prince of Cambridge</span>
+            </p>
+          </div>
+        </div>
+        <div class="tree-group" data-right-50 data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>Charlotte</strong>
+              <span>Princess of Cambridge</span>
+            </p>
+          </div>
+        </div>
+        <div class="tree-group" data-left-50 data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>Louis</strong>
+              <span>Prince of Cambridge</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="tree-branch" data-branch="15" data-row="4">
+
+      </div>
+
+      <div class="tree-branch" data-branch="16" data-row="4">
+
+      </div>
+
+      <div class="tree-branch" data-branch="17" data-row="4">
+
+      </div>
+
+      <div class="tree-branch" data-branch="18" data-row="4">
+
+      </div>
+
+      <div class="tree-branch" data-branch="19" data-row="4">
+
+      </div>
+
+      <div class="tree-branch" data-branch="20" data-row="4">
+        <div class="tree-group" data-right-50 data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>Savanah</strong>
+              <span>-</span>
+            </p>
+          </div>
+        </div>
+        <div class="tree-group" data-left-50 data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>Isla</strong>
+              <span>-</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tree-branch" data-branch="21" data-row="4">
+        <div class="tree-group" data-center-50 data-end>
+
+          <div class="tree-person">
+            <div class="tree-person__image"></div>
+            <p class="tree-person__name">
+              <strong>Mia</strong>
+              <span>-</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 
-  <!-- <div class="tree-group" data-left-50>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Diana</strong>
-        <span>Princess of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Charles</strong>
-        <span>Prince of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Camilla</strong>
-        <span>Duchess of Cornwall</span>
-      </p>
-    </div>
-  </div>
-  <br>
-
-  <div class="tree-group" data-right-50>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Diana</strong>
-        <span>Princess of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Charles</strong>
-        <span>Prince of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Camilla</strong>
-        <span>Duchess of Cornwall</span>
-      </p>
-    </div>
-  </div>
-  <br>
-
-  <div class="tree-group" data-left-75>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Diana</strong>
-        <span>Princess of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Charles</strong>
-        <span>Prince of Wales</span>
-      </p>
-    </div>
-
-  </div>
-
-  <br>
-  <div class="tree-group" data-right-75>
-    <div class="tree-person tree-person--small">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Diana</strong>
-        <span>Princess of Wales</span>
-      </p>
-    </div>
-    <div class="tree-person">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>Charles</strong>
-        <span>Prince of Wales</span>
-      </p>
-    </div>
-
-  </div>
-  <br>
-
-  <div class="tree-group" data-left-50>
-
-    <div class="tree-person">
-      <div class="tree-person__image"></div>
-      <p class="tree-person__name">
-        <strong>George</strong>
-        <span>Prince of Cambridge</span>
-      </p>
-    </div>
-
-  </div> -->
-
-
+  <script>
+    var root = document.querySelector('.tree-root');
+    root.scrollLeft = (root.scrollWidth / 2) - (root.offsetWidth / 2);
+  </script>
 </body>
 
 </html>
