@@ -10,12 +10,13 @@
     * {
       padding: 0;
       margin: 0;
+      scroll-behavior: smooth
     }
 
     body {
       font-family: sans-serif;
       text-align: center;
-      padding: 1em
+
     }
 
     .tree-group {
@@ -104,6 +105,15 @@
       margin: 0 calc(3px + 0.5vw);
       z-index: 3;
       position: relative;
+      cursor: pointer
+    }
+
+    .tree-person:hover .tree-person__image {
+      box-shadow: 0 0 3px 0 #555
+    }
+
+    .tree-person:hover .tree-person__image {
+      background: black
     }
 
     .tree-person--small {
@@ -145,7 +155,7 @@
     .tree {
       display: grid;
       grid-template-columns: repeat(8, min-content);
-      grid-template-rows: repeat(4, min-content);
+      grid-template-rows: repeat(5, min-content);
       width: 100%;
     }
 
@@ -270,6 +280,77 @@
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       position: relative;
+    }
+
+    .tree-profile {
+      grid-column: 1/9;
+      background: #eee;
+      border: 2px solid #aaa;
+      border-left: 0;
+      border-right: 0;
+      height: 50vh;
+      display: none;
+      margin-bottom: -2px;
+      position: relative;
+    }
+
+    .tree-profile-body {
+      height: 100%;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      color: #888;
+      position: sticky;
+      left: 0
+    }
+
+    .tree-branch[data-open][data-row="1"]~.tree-branch[data-row="2"] {
+      grid-row: 3
+    }
+
+    .tree-branch[data-open][data-row="1"]~.tree-branch[data-row="3"] {
+      grid-row: 4
+    }
+
+    .tree-branch[data-open][data-row="1"]~.tree-branch[data-row="4"] {
+      grid-row: 5
+    }
+
+    .tree-branch[data-open][data-row="1"]~.tree-profile {
+      grid-row: 2;
+      display: flex
+    }
+
+
+    .tree-branch[data-open][data-row="2"]~.tree-branch[data-row="3"] {
+      grid-row: 4
+    }
+
+    .tree-branch[data-open][data-row="2"]~.tree-branch[data-row="4"] {
+      grid-row: 5
+    }
+
+    .tree-branch[data-open][data-row="2"]~.tree-profile {
+      grid-row: 3;
+      display: flex
+    }
+
+
+    .tree-branch[data-open][data-row="3"]~.tree-branch[data-row="4"] {
+      grid-row: 5
+    }
+
+    .tree-branch[data-open][data-row="3"]~.tree-profile {
+      grid-row: 4;
+      display: flex;
+    }
+
+
+    .tree-branch[data-open][data-row="4"]~.tree-profile {
+      grid-row: 5;
+      display: flex
     }
   </style>
 </head>
@@ -605,12 +686,57 @@
 
       </div>
 
+      <div class="tree-profile">
+        <div class="tree-profile-body">Chas</div>
+      </div>
+
     </div>
   </div>
 
   <script>
     var root = document.querySelector('.tree-root');
-    root.scrollLeft = (root.scrollWidth / 2) - (root.offsetWidth / 2);
+    var branches = document.querySelectorAll('.tree-branch');
+    var people = root.querySelectorAll('.tree-person');
+    var profile = root.querySelector('.tree-profile');
+    var body = profile.querySelector('.tree-profile-body');
+
+    people.forEach(function (person) {
+      person.onclick = function () {
+
+
+        people.forEach(function (person) {
+          person.removeAttribute('data-open');
+        });
+
+        this.setAttribute('data-person', true);
+
+        branches.forEach(function (branch) {
+          branch.removeAttribute('data-open');
+        });
+
+        var parent = this.parentNode.parentNode;
+
+        parent.insertAdjacentElement('afterend', profile);
+        parent.setAttribute('data-open', true);
+
+        body.textContent = this.textContent;
+
+        var dims = this.getBoundingClientRect();
+        var y = (dims.top + window.pageYOffset) - 12;
+        var x = (dims.left + root.scrollLeft) + (dims.width / 2);
+
+
+        scrollpane(x);
+        window.scrollTo(0, y);
+      }
+    })
+
+    scrollpane(root.scrollWidth / 2);
+
+    function scrollpane(x) {
+      root.scrollLeft = (x - (root.offsetWidth / 2))
+    }
+
   </script>
 </body>
 
