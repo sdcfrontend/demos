@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+  }
+
+  body {
+    background: #eee;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .h2h {
+    padding: 1em;
+    background: white;
+  }
+  
+  .h2h__rail {
+    overflow: auto;
+  }
+
+  .h2h__canvas {
+    background: white;
+    position: relative;
+    position: relative;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr min-content min-content;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .h2h__pos {
+    grid-column: 1;
+    display: flex;
+    position: sticky;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #ccc;
+    background: white;
+    height: calc(100% + 1px);
+    z-index: 4;
+  }
+
+  .h2h__pos > span {
+    text-align: right;
+    padding-right: 1em;
+    font-size: 15px;
+    color: #aaa
+  }
+
+  .h2h__body {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+  }
+
+  .h2h__year {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-between ;
+  }
+
+  .h2h__year > span {
+    padding: 1em 0;
+    font-size: 15px;
+    color: #aaa
+  }
+
+  .h2h__overflow {
+    grid-column: 2;
+    grid-row: 2;
+    height: 1px;
+  }
+
+  .h2h__point {
+    width: 5vw;
+    height: 5vw;
+    min-width: 19px;
+    min-height: 19px;
+    max-width: 28px;
+    max-height: 28px;
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 3;
+    transform: translate(-50%, -50%)
+
+  }
+
+  .h2h__line {
+    width: 2px;
+    height: 2px;
+    background: #ccc;
+    position: absolute;
+    z-index: 2;
+    transform-origin: 0
+  }
+</style>
+<body>
+  <div class="h2h">
+  <div class="h2h__rail">
+    <div class="h2h__canvas">
+    <div class="h2h__pos">
+      <span>1</span>
+      <span>5</span>
+      <span>10</span>
+      <span>15</span>
+      <span>20</span>
+      
+    </div>
+    <div class="h2h__body">
+      
+    </div>
+    <div class="h2h__overflow"></div>
+    <div class="h2h__year">
+      <span>1992/93</span>
+      <span>1997/98</span>
+      <span>2002/03</span>
+      <span>2007/08</span>
+      <span>2012/13</span>
+      <span>2017/18</span>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+<script>
+  var data = {
+    teams: [{
+      years: [
+        {
+          year: "1993",
+          pos: 10
+        },
+        {
+          year: "1994",
+          pos: 5
+        },
+        {
+          year: "1995",
+          pos: 18
+        },
+        {
+          year: "1996",
+          pos: 12
+        },
+        {
+          year: "1997",
+          pos: 2
+        }
+      ]
+    }]
+  };
+
+  var body = document.querySelector('.h2h__body');
+  var points = [];  
+
+  data.teams[0].years.forEach(function(year, index){
+
+    if(!points[index]){
+      var point = document.createElement('div');
+      point.className = 'h2h__point';
+      point.style.cssText = "top:"+topc(year.pos*30)+"px; left:"+((index*40) + 40)+"px";
+      body.appendChild(point);
+      points.push(point);
+    }
+
+    if(points[index-1]){
+      drawline(points[index-1], point);
+    }
+  })
+
+  function drawline(a, b){
+
+    var line = document.createElement('div');
+    line.className = 'h2h__line';
+    body.appendChild(line);
+
+    var pointA = {
+      left: a.offsetLeft,
+      top: a.offsetTop
+    };
+
+    var pointB = {
+      left: b.offsetLeft,
+      top: b.offsetTop
+    }
+
+    var pointAcenterX = a.offsetWidth;
+    var pointAcenterY = a.offsetHeight;
+    var pointBcenterX = b.offsetWidth;
+    var pointBcenterY = b.offsetHeight;
+    var angle = Math.atan2(pointB.top - pointA.top, pointB.left - pointA.left) * 180 / Math.PI;
+    var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
+
+    // Set Angle
+    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px;';
+
+    if (pointB.left < pointA.left) {
+
+      line.style.top = (pointA.top + pointAcenterY) + 'px';
+      line.style.left = (pointB.left + pointBcenterX) + 'px';
+    }
+
+    else {
+      line.style.top = (pointA.top) + 'px';
+      line.style.left = (pointA.left) + 'px';
+    }
+  }
+
+  function lineDistance(x, y, x0, y0) {
+    return Math.sqrt((x -= x0) * x + (y -= y0) * y);
+  };
+
+
+
+</script>
+</body>
+</html>

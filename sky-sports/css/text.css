@@ -17,11 +17,10 @@
 }
 
 .sff-text-block h3 {
-  font-size: calc(1em + 2vmin);
-  margin-bottom: 0.9em;
-  font-weight: 500;
+  font-size: calc(1.2rem);
+  margin-bottom: 1em;
+  font-weight: 400;
   line-height: 1;
-  padding-right: 30px;
 }
 
 .sff-text-block h3 span {

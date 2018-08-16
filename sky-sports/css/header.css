@@ -7,11 +7,6 @@
   background: linear-gradient(to bottom, #3a3a3a 0, #2b2b2b 100%);
 }
 
-.sff-header:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
-}
 /* 
 .sff-header__video {
   position: absolute;
@@ -30,39 +25,22 @@
   background-size: auto 100%;
   background-position: center;
   will-change: transform;
-  position: absolute;
 }
 
 @supports(object-fit: cover){
   .sff-header__image {
     height: 100%;
     object-fit: cover;
+    position: absolute;
+  }
+
+  .sff-header:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
   }
 }
-/* 
-.sff-header__wing {
-  width: 50%;
-  height: 100%;
-  background: url(assets/tevez-blue.jpg)#7bb9e6;
-  background-size: auto 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 4;
-  transition: 1s transform;
-  will-change: transform;
-  transform: translateX(-100%);
-  transition-delay: 0.33s;
-  mix-blend-mode: color
-}
- 
-.sff-header__wing--united {
-  left: auto;
-  right: 0;
-  transform: translateX(100%);
-  background: url(assets/tevez-red.jpg)#bf101a;
-  mix-blend-mode: darken
-} */
+
 
 .sff-header__body {
   height: 100%;

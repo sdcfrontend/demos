@@ -82,6 +82,14 @@
   position: relative;
   left: 3px;
   border: 2px solid white;
+  transition: transform 0.33s, opacity 1s;
+  will-change: transform, opacity;
+}
+
+.sff-sticky-timeline[data-sticky="false"]
+.sff-sticky-timeline__image[data-animate-in-view]{
+  transform: scale(0.9);
+  opacity: 0
 }
 
 .sff-sticky-timeline__image-ferguson {
@@ -91,9 +99,8 @@
   top: 0;
   left: 0;
   border-radius: 50%;
+  opacity: 0;
   transition: opacity 1s;
-  will-change: opacity;
-  opacity: 0
 }
 
 .sff-sticky-timeline__item[data-whichfergie="2"]

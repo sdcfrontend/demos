@@ -86,7 +86,7 @@
   grid-row: 2;
   padding-top: 4rem;
   position: relative;
-  z-index: 11
+  z-index: 11;
 }
 
 .sff-league-pos__pos {
@@ -99,7 +99,6 @@
   grid-column: 1;
   padding-right: 1em;
 }
-
 
 .sff-league-pos__group {
   padding: 0;

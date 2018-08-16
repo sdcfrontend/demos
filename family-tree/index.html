@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      padding: 1em;
+      background: #eee;
+      font-family: sans-serif
+    }
+
+    .tree {
+      /*   background: white; */
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .tree-head {
+      width: 100%;
+      padding: 3vw 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      border: 2px solid #eee;
+      position: relative;
+    }
+
+    .tree-head:after {
+      /* content: ""; */
+      height: 2px;
+      background: #ccc;
+      width: 75%;
+      position: absolute;
+      bottom: -2px;
+      left: 12.5%;
+    }
+
+    .tree-root {
+      /*   flex: 1; */
+      width: 25%;
+      border-bottom: 2px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: calc(12px + 2vw) 0;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tree-root:hover {
+      background: #fff;
+    }
+
+    .tree-person {
+      width: 12vw;
+      min-width: 60px;
+      max-width: 100px;
+      height: 100%;
+      display: block;
+      border-radius: 8px;
+      margin: 0 0.5vw;
+      position: relative;
+      /* overflow: hidden; */
+      border: 2px solid #eee
+    }
+
+    .tree-always[class] {
+      display: inline-block !important
+    }
+
+    .tree-root[data-open] {
+      overflow: visible
+    }
+
+    .tree-root[data-open]:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border: 8px solid #555;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      position: absolute;
+      top: 0;
+      transform: rotate(-45deg)
+    }
+
+    .tree-person img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .tree-person--secondary {
+      background: #ccc;
+      transform: scale(0.8);
+      opacity: 0.9
+    }
+
+    .tree-person--divorced {
+      background: #ddd;
+      border: 3px dashed #ccc;
+    }
+
+    .tree-person:after {
+      content: attr(data-name);
+      position: absolute;
+      left: 0;
+      font-size: calc(12px + 0.1vw);
+      white-space: nowrap;
+      width: 100%;
+      text-align: center;
+      padding-top: 0.5em;
+      color: #555
+    }
+
+    @media all and (max-width: 800px) {
+      .tree-person--secondary,
+      .tree-person--divorced {
+        display: none
+      }
+    }
+
+    /* normal view */
+
+    .tree[data-view] .tree-root[data-row] {
+      display: none
+    }
+
+    .tree[data-view="r0"] .tree-root[data-row="r1"] {
+      display: flex;
+      /* height: 200px */
+    }
+
+    .tree[data-view="r0"] .tree-head {
+      display: flex !important;
+    }
+
+
+    .tree[data-view="r1"] .tree-root[data-row="r2"] {
+      display: flex;
+      /* height: 200px; */
+      width: 50% !important
+    }
+
+
+
+    .tree[data-view="r2"] .tree-root[data-row="r3"] {
+      display: flex;
+      /*   height: calc(100vh - 100px); */
+      width: 33.3% !important
+    }
+
+    .tree-root[data-open] {
+      display: flex !important;
+      width: 100%;
+      transform: scale(0.86)
+    }
+
+    .tree-root[data-open] .tree-person,
+    .tree-head .tree-person {
+      display: inline-block !important
+    }
+
+    .tree[data-view-col="1"]:not([data-view="r0"]) .tree-root:not([data-col="1"]) {
+      display: none
+    }
+
+    .tree[data-view-col="1"]:not([data-view="r0"]) .tree-root[data-col="1"] {
+      width: 100%
+    }
+
+    .tree[data-view-col="2"]:not([data-view="r0"]) .tree-root:not([data-col="2"]) {
+      background: #eee;
+      display: none
+    }
+
+    .tree[data-view-col="2"]:not([data-view="r0"]) .tree-root[data-col="2"] {
+      width: 100%
+    }
+
+    .tree[data-view-col="3"]:not([data-view="r0"]) .tree-root:not([data-col="3"]) {
+      background: #eee;
+      display: none
+    }
+
+    .tree[data-view-col="3"]:not([data-view="r0"]) .tree-root[data-col="3"] {
+      width: 100%
+    }
+
+    .tree[data-view-col="4"]:not([data-view="r0"]) .tree-root:not([data-col="4"]) {
+      background: #eee;
+      display: none
+    }
+
+    [disabled] {
+      pointer-events: none
+    }
+
+    .tree[data-view-col="4"]:not([data-view="r0"]) .tree-root[data-col="4"] {
+      width: 100%
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="tree" data-view="r0">
+    <div class="tree-head">
+
+      <div class="tree-person" data-name="Queen">
+        <img src="https://media.vanityfair.com/photos/59f1f6c625b7a40d71fd15ed/1:1/w_100,c_limit/harvey-weinstein-queen-elizabeth.jpg"
+          alt="">
+      </div>
+      <div class="tree-person tree-person--secondary" data-name="Phillip">
+        <img src="https://celebritiesreport.com/wp-content/uploads/2018/04/943126_1-150x150.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="tree-root" data-row="r1" data-col="1">
+
+      <div class="tree-person tree-person--secondary tree-person--divorced" data-name="Diana">
+        <img src="https://media.apnarm.net.au/media/images/2013/08/18/princess_diana_fct424x320x14_ct100x100.JPG" alt="">
+      </div>
+
+      <div class="tree-person tree--line-up" data-name="Charles">
+        <img src="https://hips.hearstapps.com/ame-prod-redonline-assets.s3.amazonaws.com/main/thumbs/25716/prince_charles.jpg?crop=1xw:0.69921875xh;center,top&resize=100:*"
+          alt="">
+      </div>
+
+      <div class="tree-person tree-person--secondary" data-name="Camilla">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/camilla-parker-bowles-net-worth-prince-charles-1530894779.jpg?crop=0.6667933130699089xw:1xh;center,top&resize=100:*"
+          alt="">
+      </div>
+
+    </div>
+    <div class="tree-root" data-row="r1" data-col="2">
+
+      <div class="tree-person tree-person--secondary tree-person--divorced" data-name="Sarah">
+        <img src="https://yt3.ggpht.com/wTY_PqTyQO8yrpTcN5Tf8iuTh4Jrx1WrIfU5fn2HQ2JUI6rM1BWGYvHj6RLhhB2UP3mcqNyqfeKvSgx-=s100-mo-c-c0xffffffff-rj-k-no"
+          alt="">
+      </div>
+
+      <div class="tree-person tree--line-up" data-name="Andrew">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tc-princeandrew-621890272-1526574939.jpg?crop=0.5xw:1xh;center,top&resize=100:*"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r1" data-col="3">
+      <div class="tree-person tree--line-up" data-name="Edward">
+        <img src="https://media.glassdoor.com/people/sql/36978/university-of-bath-ceo1491911702912.png" alt="">
+      </div>
+      <div class="tree-person tree-person--secondary" data-name="Sophie">
+        <img src="https://photos.geni.com/p13/bf/0d/72/89/5344484330d33b27/qat36quy_t.jpg" alt="">
+      </div>
+
+    </div>
+    <div class="tree-root" data-row="r1" data-col="4">
+      <div class="tree-person tree-person--secondary tree-person--divorced" data-name="Mark">
+        <img src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/14/2016/05/Mark-Phillips-mug-small-100x100.jpg"
+          alt="">
+      </div>
+
+      <div class="tree-person tree--line-up" data-name="Anne">
+        <img src="http://cdn1.theweek.co.uk/sites/theweek/files/styles/1x1_100/public/140404-princess-anne.jpg?itok=8kIiylpq" alt="">
+      </div>
+
+      <div class="tree-person tree-person--secondary" data-name="Peter">
+        <img src="https://www.hellomagazine.com/imagenes//royalty/2014030117242/birthday/0-90-347/tim-4--a.jpg" alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="1">
+      <div class="tree-person" data-name="William">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzHyzZh2NeQ60wJomVjcCDvsmTfx7_VbhVf6ZZ5lBrPWuGFFu-" alt="">
+      </div>
+      <div class="tree-person tree-person--secondary tree-always" data-name="Kate">
+        <img src="https://media.glamour.com/photos/5a16c25d76bf9c18e36a7a95/1:1/w_100,h_100,c_limit/kate-middleton-beauty.jpg" alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="1" disabled>
+      <div class="tree-person" data-name="Harry">
+        <img src="https://hips.hearstapps.com/elleuk.cdnds.net/17/34/980x980/square-1503301695-princeharry-princewilliam.jpg?resize=100:*"
+          alt="">
+      </div>
+
+      <div class="tree-person tree-person--secondary tree-always" data-name="Meghan">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-meghan-markle-949584284-1528739272.jpg?crop=0.5xw:1xh;center,top&resize=100:*"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="2" disabled>
+      <div class="tree-person" data-name="Beatrice">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/12-princess-beatrice-hats-669158140-1516996621.jpg?crop=1xw:0.6666666666666666xh;center,top&resize=*:100"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="2" disabled>
+      <div class="tree-person" data-name="Eugenie">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/princess-eugenie-tiara-1531764091.gif?crop=0.5xw:1xh;center,top&resize=100:*"
+          alt="">
+      </div>
+    </div>
+
+    <div class="tree-root" data-row="r2" data-col="3" disabled>
+      <div class="tree-person" data-name="James">
+        <img src="https://e3.365dm.com/17/09/150x150/e00ee1657966c5e46120acdd7eba09af485f546ced1f3c77e70ca793da0e955d_4091716.jpg?20170904175813"
+          alt="">
+      </div>
+    </div>
+
+    <div class="tree-root" data-row="r2" data-col="3" disabled>
+      <div class="tree-person" data-name="Louise">
+        <img src="https://scontent-sea1-1.cdninstagram.com/vp/8972944951cfbe004f4cbcdceaf9dab1/5BC10D1B/t51.2885-19/s150x150/14359539_298792540501994_7764613822429528064_a.jpg"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="4">
+
+      <div class="tree-person" data-name="Peter">
+        <img src="https://media.news.com.au/multimedia/2018/royalFamilyTree/images/peter.jpg" alt="">
+      </div>
+
+      <div class="tree-person tree-person--secondary tree-always" data-name="Autumn">
+        <img src="http://photos.geni.com/p13/46/9d/1c/b2/5344483d23ad8880/wiw87nuq_medium.jpg" alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r2" data-col="4">
+      <div class="tree-person" data-name="Zara">
+        <img src="https://yt3.ggpht.com/nEoNly3Io1kCEXZQDXOgUhxuQRxBF0b7J8BccsaRQRKHv54y37zfomYK6ccuCG-FqhtVez29N9r6NqoT4hM=s100-mo-c-c0xffffffff-rj-k-no"
+          alt="">
+      </div>
+
+      <div class="tree-person tree-person--secondary tree-always" data-name="Mike">
+        <img src="http://cinemascoops.com/wp-content/uploads/2018/07/20586/mike-tindall-is-loving-life-as-a-family-of-4-after-welcoming-baby-lena-its-been-brilliant-150x150.jpg"
+          alt="">
+      </div>
+    </div>
+
+    <div class="tree-root" data-row="r3" data-col="1" disabled>
+      <div class="tree-person" data-name="George">
+        <img src="https://cdn.inquisitr.com/wp-content/uploads/2017/09/Prince-George-In-Danger-Inside-A-Terrorists-Plot-To-Kidnap-And-Ransom-Will-And-Kates-Oldest-Son-100x100.jpg"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r3" data-col="1" disabled>
+      <div class="tree-person" data-name="Charlotte">
+        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/princess-charlotte-1523213975.jpg?crop=0.5xw:1xh;center,top&resize=100:*"
+          alt="">
+      </div>
+    </div>
+    <div class="tree-root" data-row="r3" data-col="1" disabled>
+      <div class="tree-person" data-name="Louis">
+        <img src="https://www.hellomagazine.com/imagenes/royalty/2018042748188/how-to-pronounce-prince-louis-royal-baby/0-239-277/new-royal-baby-prince-t.jpg"
+          alt="">
+      </div>
+    </div>
+
+    <div class="tree-root" data-row="r3" data-col="4" disabled>
+      <div class="tree-person"></div>
+    </div>
+    <div class="tree-root" data-row="r3" data-col="4">
+      <div class="tree-person"></div>
+    </div>
+  </div>
+  <script>
+
+    var tree = document.querySelector('.tree');
+
+    var roots = document.querySelectorAll('.tree-root');
+
+    roots.forEach(function (item) {
+
+      item.onclick = function () {
+
+        if (this.hasAttribute('data-open')) {
+
+          if (this.getAttribute('data-row') === 'r2') {
+            document.querySelector('.tree-root[data-row="r1"][data-col="' + (this.getAttribute('data-col')) + '"]').setAttribute('data-open', true)
+          }
+
+          this.removeAttribute('data-open');
+          var current = tree.getAttribute('data-view').split('r')[1];
+          tree.setAttribute('data-view', 'r' + (parseInt(current, 10) - 1));
+          // tree.removeAttribute('data-view-col')
+        }
+
+        else {
+          tree.setAttribute('data-view', this.getAttribute('data-row'));
+          tree.setAttribute('data-view-col', this.getAttribute('data-col'));
+          roots.forEach(function (item) {
+            item.removeAttribute('data-open')
+          })
+
+          this.setAttribute('data-open', true);
+        }
+
+
+      }
+
+
+    });
+
+  </script>
+
+</body>
+
+</html>
