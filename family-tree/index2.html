@@ -112,7 +112,7 @@
       box-shadow: 0 0 3px 0 #555
     }
 
-    .tree-person:hover .tree-person__image {
+    .tree-person[data-open] .tree-person__image {
       background: black
     }
 
@@ -751,7 +751,7 @@
           person.removeAttribute('data-open');
         });
 
-        this.setAttribute('data-person', true);
+        this.setAttribute('data-open', true);
 
         branches.forEach(function (branch) {
           branch.removeAttribute('data-open');
