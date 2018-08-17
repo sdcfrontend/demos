@@ -16,7 +16,7 @@
     body {
       font-family: sans-serif;
       text-align: center;
-
+      top: 20px
     }
 
     .tree-group {
@@ -306,6 +306,21 @@
       left: 0
     }
 
+
+    .tree-profile-close {
+      text-decoration: none;
+      font-size: 28px;
+      color: black;
+      display: inline-block;
+      padding: 3px;
+      z-index: 10;
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      left: 0;
+
+    }
+
     .tree-branch[data-open][data-row="1"]~.tree-branch[data-row="2"] {
       grid-row: 3
     }
@@ -352,11 +367,34 @@
       grid-row: 5;
       display: flex
     }
+
+    .minimap {
+      background: white;
+      border: 1px solid black;
+      width: 30px;
+      height: 40px;
+      position: relative;
+      position: sticky;
+      top: 2px;
+      overflow: hidden;
+      z-index: 11;
+    }
+
+    .minimap-view {
+      background: #ccc;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+
+    }
   </style>
 </head>
 
 <body>
   <h1>Windsor Family Tree</h1>
+  <div class="minimap">
+    <div class="minimap-view"></div>
+  </div>
   <div class="tree-root">
     <div class="tree">
       <div class="tree-branch" data-branch="1" data-row="1">
@@ -687,6 +725,7 @@
       </div>
 
       <div class="tree-profile">
+        <a href="#" class="tree-profile-close">&times;</a>
         <div class="tree-profile-body">Chas</div>
       </div>
 
@@ -694,11 +733,15 @@
   </div>
 
   <script>
+    var tree = document.querySelector('.tree');
     var root = document.querySelector('.tree-root');
     var branches = document.querySelectorAll('.tree-branch');
     var people = root.querySelectorAll('.tree-person');
     var profile = root.querySelector('.tree-profile');
     var body = profile.querySelector('.tree-profile-body');
+
+    var minimap = document.querySelector('.minimap');
+    var viewport = document.querySelector('.minimap-view');
 
     people.forEach(function (person) {
       person.onclick = function () {
@@ -736,6 +779,33 @@
     function scrollpane(x) {
       root.scrollLeft = (x - (root.offsetWidth / 2))
     }
+
+    document.querySelector('.tree-profile-close').onclick = function (e) {
+      e.preventDefault();
+      close();
+    }
+
+    function close() {
+      root.insertAdjacentElement('beforeend', profile);
+      people.forEach(function (person) {
+        person.removeAttribute('data-open');
+      });
+    };
+
+    function mini() {
+      var dims = tree.getBoundingClientRect();
+      var h = dims.height / 20;
+      var w = root.scrollWidth / 20;
+      var doch = window.innerHeight / 20;
+      var docw = root.offsetWidth / 20;
+      var l = root.scrollLeft / 20;
+      var t = Math.abs(dims.top / 20);
+      minimap.style.cssText = "height: " + (h) + "px;width:" + (w) + "px;";
+      viewport.style.cssText = "height: " + (doch) + "px;width:" + (docw) + "px;left:" + (l) + "px;top:" + (t) + "px";
+      requestAnimationFrame(mini);
+    }
+
+    mini();
 
   </script>
 </body>
