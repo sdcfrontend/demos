@@ -5,97 +5,287 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-
   <style>
-    @font-face {
-      font-family: 'maz';
-      src: url('DriveVariable.woff2') format('woff2');
-      font-weight: normal;
+    :root {
+      --voffset: 0;
+      --vm: 1vw;
     }
 
-    * {
-      font-weight: normal;
+    @font-face{
+      font-family:Sky Text;
+      src:url(sky-regular.woff) format("woff")
     }
 
     html {
-      font-family: 'maz';
-      font-size: 22px;
+      font-size: calc(15px + calc(var(--vw, '1vw') * 0.6));
+      font-family:Sky Text;
     }
 
-    body {
-      padding: 3vw;
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+    
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    h1 {
-      font-variation-settings: "wght" 100;
-      text-align: center;
-      font-weight: normal;
+    header {
+      background: #ccc;
+      height: calc(18vw);
+      max-height: 120px;
+      min-height: 55px;
+      margin-bottom: calc(12px + calc(var(--vw) * 5))
+    }
+
+    .wrapper {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0 calc(12px + calc(var(--vw) * 2));
+    }
+    
+    .text-wrapper-head {
+      margin-bottom: calc(12px + calc(var(--vw) * 4))
+    }
+
+    .text-wrapper-head > *:not(:last-child) {
+      margin-bottom: calc(12px + calc(var(--vw) * 1.2))
+    }
+
+    .text-wrapper-head h1 {
       line-height: 1.1;
-      margin-bottom: 1em;
-      font-size: 1.5em;
+      font-weight: 400;
+      font-size: calc(16px + calc(var(--vw) * 3.6));
     }
 
-    h1:nth-of-type(2) {
-      font-variation-settings: "wght" 200;
-      
+    .text-wrapper-head h2 {
+      line-height: 1.3;
+      font-weight: 400;
+      font-size: calc(14px + calc(var(--vw) * 1.4));
     }
 
-   h1:nth-of-type(3) {
-      font-variation-settings: "wght" 300;
+    .text-wrapper {
+      max-width: 740px;
+      margin: 0 auto;
+      line-height: 1.45;
+      position: relative;
     }
 
-    h1:nth-of-type(4) {
-      font-variation-settings: "wght" 400;
+    .text-wrapper > *:first-child {
+      margin-top: 0
     }
 
-    h1:nth-of-type(5) {
-      font-variation-settings: "wght" 500;
+    .text-wrapper p,
+    .text-wrapper h3,
+    .text-wrapper h4,
+    .block {
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: calc(16px + calc(var(--vw) * 2));
     }
 
-    h1:nth-of-type(6) {
-      font-variation-settings: "wght" 600;
+    .text-wrapper > p:first-of-type:not(:only-child) {
+      font-weight: 600;
+      font-size: 1.1rem
     }
 
-    h1:nth-of-type(7) {
-      font-variation-settings: "wght" 700;
+    .text-wrapper h3 {
+      font-size: calc(1.2rem + var(--vw));
+      padding-top: calc(var(--vw) * 3);
     }
 
-     h1:nth-of-type(8) {
-      font-variation-settings: "wght" 800;
+    .text-wrapper h4 {
+      font-size: calc(1rem + calc(var(--vw) * 0.7));
+      padding-top: calc(var(--vw) * 3);
+    }
+    
+    .text-wrapper
+    .text-date {
+      font-size: 0.8rem;
+      color: #aaa
+    }
+    
+    .text-wrapper
+    .block {
+      position: relative;
+      margin-bottom: calc(24px + calc(var(--vw) * 2));
+      padding: var(--vw) 0;
+    }
+    
+    .text-wrapper
+    .block--wide {
+      width: 1024px;
+      max-width: calc(100vw - 15px);
+      max-width: var(--maxvw);
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    h2 {
-      font-variation-settings: "wght" 200;
-      text-align: center
+    .text-wrapper
+    .block--flush {
+      width: var(--maxvw);
+      max-width: calc(100vw - 15px);
+      max-width: var(--maxvw);
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    p {
-      font-variation-settings: "wght" 200;
-      margin-bottom: 2em;
+    .text-wrapper-head +
+    .block {
+      padding-top: 0;
     }
 
-    p:first-of-type {
-      font-variation-settings: "wght" 250
+    .text-wrapper a {
+      color: #3157a1;
+      font-weight: 600;
     }
 
-    strong, a {
-      font-variation-settings: "wght" 400
+    .media {
+      position: relative
     }
+
+    .media img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    .media--16-9
+    .media__item {
+      position: relative;
+      padding-bottom: calc(100% / (16 / 9))
+    }
+
+    .media__caption[class] {
+      background: #eee;
+      padding: calc(1em + 0.8vmin) calc(12px + calc(var(--vw) * 3));
+      margin-bottom: 0;
+      line-height: 1.3;
+      font-size: 0.8rem;
+      color: #777;
+      box-sizing: content-box;
+    }
+
+    .media__caption > p {
+      font-size: inherit;
+      margin-bottom: 0;
+      line-height: inherit
+    }
+
+    .text-promo {
+      background: #eee;
+      padding: calc(12px + calc(var(--vw) * 3));
+      line-height: 1.4;
+      font-size: calc(14px + calc(var(--vw) * 0.5));
+      color: #777;
+    }
+    
+    .text-promo > h4 {
+      margin: 0 0 0.4em;
+      padding: 0
+    }
+
+    .text-promo > p {
+      font-size: inherit;
+      margin-bottom: 0
+    }
+
   </style>
+  
+  <script>
+  
+    function setCW(){
+      document.documentElement.style.setProperty('--maxvw', document.documentElement.clientWidth + 'px');
+    }
+
+    window.onresize = function(){
+      setCW();
+    }
+
+    setCW();
+
+    function max(){
+
+      val = "1vw";
+
+      var w = document.documentElement.clientWidth;
+
+      if(w > 1000){
+        val = "10px"
+      }
+
+      document.documentElement.style.setProperty('--vw', val);
+
+    }
+
+    max();
+
+    window.addEventListener('resize', max);
+
+</script>
 </head>
 <body>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <h1>Lorem ipsum dolor sit amet consectetur</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe <strong>voluptate aliquid</strong> quasi doloremque. Iste minus in neque alias inventore?</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe voluptate aliquid quasi doloremque. Iste minus in neque alias inventore?</p>
-  <h2>Lorem ipsum</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe voluptate aliquid quasi doloremque. Iste minus in neque alias inventore?</p>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates expedita adipisci ratione beatae, alias obcaecati tempora soluta, ab optio saepe voluptate aliquid quasi doloremque. Iste minus in neque alias inventore?</p>
+   
+  <header></header>
+  <div class="wrapper">
+    <div class="text-wrapper">
+      <div class="text-wrapper-head">
+        <h1>Wayne Rooney move to DC United to be confirmed on Thursday</h1>
+        <h2>Former England captain en route to Washington, expected to sign a three-and-a-half-year deal at MLS side</h2>
+        <p class="text-date">Last Updated: 28/06/18 10:56am</p>
+      </div>
+
+      <div class="block block--wide">
+          <div class="media media--16-9">
+            <figure class="media__item">
+              <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347558.jpg?bypass-service-worker&20180627221843" alt="">
+            </figure>
+           
+            <div class="media__caption"><p class="text-wrapper"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> </div>
+            
+          </div>
+        </div>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+
+     <h3>A larger sub headline</h3>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+    
+      <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+
+      <h4>A smaller sub headline</h4>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <div class="block">
+          <div class="media media--16-9">
+              <figure class="media__item">
+          <img src="https://e6.365dm.de/18/06/2048x1152/skysport_de-wm-2018-deutschland_4347105.jpg?20180627153327" alt="">
+        </figure>
+        <div class="media__caption"><p class="text-wrapper"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> </div>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <div class="block">
+        <div class="text-promo">
+          <h4>Promo headline</h4>
+          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ut obcaecati dicta iste distinctio quis incidunt illum nulla harum excepturi. Dicta molestias fugiat ut expedita quibusdam quo ducimus dolores vitae?</p></div>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus perferendis harum eaque recusandae, repudiandae voluptate facere totam ullam quisquam sunt esse perspiciatis. Quisquam impedit magnam provident ipsa, nobis earum obcaecati.</p>
+
+    </div>
+
+  </div>
+
+<script>
+  setCW();
+  </script> 
 </body>
+
 </html>
