@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,6 @@
   <title>Document</title>
 </head>
 <style>
-
   * {
     padding: 0;
     margin: 0;
@@ -24,7 +24,7 @@
     padding: 1em;
     background: white;
   }
-  
+
   .h2h__rail {
     overflow: auto;
   }
@@ -37,7 +37,6 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr min-content min-content;
-    width: 1000px;
     margin: 0 auto;
   }
 
@@ -47,18 +46,22 @@
     position: sticky;
     left: 0;
     flex-direction: column;
-    justify-content: space-between;
     border-right: 1px solid #ccc;
     background: white;
-    height: calc(100% + 1px);
+    align-items: flex-end;
+    height: calc(100%);
     z-index: 4;
   }
 
-  .h2h__pos > span {
-    text-align: right;
-    padding-right: 1em;
+  .h2h__pos>span {
+    padding-right: 0.75em;
+    flex: 1;
+    width: 100%;
     font-size: 15px;
-    color: #aaa
+    color: #aaa;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end
   }
 
   .h2h__body {
@@ -68,14 +71,45 @@
     position: relative;
   }
 
+  .h2h__body-div {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+  }
+
+  .h2h__body-div[data-pos="1"] {
+    top: 5%;
+  }
+
+  .h2h__body-div[data-pos="5"] {
+    top: 25%;
+  }
+
+  .h2h__body-div[data-pos="10"] {
+    top: 50%;
+  }
+
+  .h2h__body-div[data-pos="15"] {
+    top: 75%;
+  }
+
+  .h2h__body-div--relegation {
+    height: calc(10%);
+    background: #eee;
+    bottom: 0;
+    border-top: 1px solid #ddd
+  }
+
   .h2h__year {
     grid-column: 2;
     grid-row: 3;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
   }
 
-  .h2h__year > span {
+  .h2h__year>span {
     padding: 1em 0;
     font-size: 15px;
     color: #aaa
@@ -85,22 +119,33 @@
     grid-column: 2;
     grid-row: 2;
     height: 1px;
+    /* background: #eee; */
   }
 
   .h2h__point {
-    width: 5vw;
-    height: 5vw;
-    min-width: 19px;
-    min-height: 19px;
-    max-width: 28px;
-    max-height: 28px;
-    background: white;
-    border: 2px solid #ccc;
+    width: 4vw;
+    height: 4vw;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 24px;
+    max-height: 24px;
+    background: #ccc;
     border-radius: 50%;
     position: absolute;
     z-index: 3;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    color: #222;
+    font-size: 12px;
+    display: flex;
+    line-height: 0;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.33s;
+    transform-origin: center
+  }
 
+  .h2h__point.animate-in-view {
+    transform: scale(0)
   }
 
   .h2h__line {
@@ -109,129 +154,397 @@
     background: #ccc;
     position: absolute;
     z-index: 2;
-    transform-origin: 0
+    transform-origin: 0;
+    transition: width 0.33s
+  }
+
+  .h2h__line.animate-in-view {
+    width: 2px !important;
+  }
+
+  .h2h__line:not([style]) {
+    display: none;
+  }
+
+  [data-label="home"] {
+    background: black;
+    color: white;
   }
 </style>
+
 <body>
   <div class="h2h">
-  <div class="h2h__rail">
-    <div class="h2h__canvas">
-    <div class="h2h__pos">
-      <span>1</span>
-      <span>5</span>
-      <span>10</span>
-      <span>15</span>
-      <span>20</span>
-      
-    </div>
-    <div class="h2h__body">
-      
-    </div>
-    <div class="h2h__overflow"></div>
-    <div class="h2h__year">
-      <span>1992/93</span>
-      <span>1997/98</span>
-      <span>2002/03</span>
-      <span>2007/08</span>
-      <span>2012/13</span>
-      <span>2017/18</span>
+    <div class="h2h__rail">
+      <div class="h2h__canvas">
+        <div class="h2h__pos">
+          <span>1</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>5</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>10</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>15</span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span>20</span>
+
+        </div>
+        <div class="h2h__body">
+
+          <div class="h2h__body-div" data-pos="1"></div>
+          <div class="h2h__body-div" data-pos="5"></div>
+          <div class="h2h__body-div" data-pos="10"></div>
+          <div class="h2h__body-div" data-pos="15"></div>
+          <div class="h2h__body-div h2h__body-div--relegation"></div>
+        </div>
+        <div class="h2h__overflow"></div>
+        <div class="h2h__year">
+          <span>1992/93</span>
+          <span>1997/98</span>
+          <span>2002/03</span>
+          <span>2007/08</span>
+          <span>2012/13</span>
+          <span>2017/18</span>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</div>
 
 
 
-<script>
-  var data = {
-    teams: [{
-      years: [
+  <script>
+    var data = {
+      teams: [
         {
-          year: "1993",
-          pos: 10
+          positions: 20,
+          max: 50,
+          years: [
+            {
+              year: "1993",
+              pos: 2
+            },
+            {
+              year: "1994",
+              pos: 6
+            },
+            {
+              year: "1995",
+              pos: 4
+            },
+            {
+              year: "1996",
+              pos: 7
+            },
+            {
+              year: "1997",
+              pos: 11
+            },
+            {
+              year: "1998",
+              pos: 2
+            },
+            {
+              year: "1999",
+              pos: 16
+            },
+            {
+              year: "2000",
+              pos: 14
+            },
+            {
+              year: "2001",
+              pos: 12
+            },
+            {
+              year: "2002",
+              pos: 18
+            },
+            {
+              year: "2002",
+              pos: 39
+            },
+            {
+              year: "2003",
+              pos: 50
+            },
+            {
+              year: "2004",
+              pos: 41
+            },
+            {
+              year: "2005",
+              pos: 21
+            }
+          ]
         },
         {
-          year: "1994",
-          pos: 5
-        },
-        {
-          year: "1995",
-          pos: 18
-        },
-        {
-          year: "1996",
-          pos: 12
-        },
-        {
-          year: "1997",
-          pos: 2
-        }
-      ]
-    }]
-  };
+          positions: 20,
+          max: 25,
+          years: [
+            {
+              year: "1993",
+              pos: 1
+            },
+            {
+              year: "1994",
+              pos: 1
+            },
+            {
+              year: "1995",
+              pos: 3
+            },
+            {
+              year: "1996",
+              pos: 4
+            },
+            {
+              year: "1997",
+              pos: 5
+            },
 
-  var body = document.querySelector('.h2h__body');
-  var points = [];  
+            {
+              year: "1998",
+              pos: 6
+            },
+            {
+              year: "1999",
+              pos: 7
+            },
+            {
+              year: "2000",
+              pos: 8
+            },
+            {
+              year: "2001",
+              pos: 9
+            },
+            {
+              year: "2002",
+              pos: 10
+            },
+            {
+              year: "2003",
+              pos: 15
+            },
+            {
+              year: "2004",
+              pos: 18
+            },
+            {
+              year: "2005",
+              pos: 20
+            },
+            {
+              year: "2006",
+              pos: 25
+            },
+            {
+              year: "2007",
+              pos: 8
+            },
+            {
+              year: "2008",
+              pos: 12
+            },
+            {
+              year: "2009",
+              pos: 3
+            },
+            {
+              year: "2010",
+              pos: 17
+            },
+            {
+              year: "2011",
+              pos: 6
+            },
+            {
+              year: "2012",
+              pos: 9
+            },
+            {
+              year: "2013",
+              pos: 2
+            },
 
-  data.teams[0].years.forEach(function(year, index){
+            {
+              year: "2014",
+              pos: 1
+            },
+            {
+              year: "2015",
+              pos: 3
+            },
+            {
+              year: "2016",
+              pos: 1
+            },
+            {
+              year: "2017",
+              pos: 1
+            }
 
-    if(!points[index]){
-      var point = document.createElement('div');
-      point.className = 'h2h__point';
-      point.style.cssText = "top:"+topc(year.pos*30)+"px; left:"+((index*40) + 40)+"px";
-      body.appendChild(point);
-      points.push(point);
-    }
-
-    if(points[index-1]){
-      drawline(points[index-1], point);
-    }
-  })
-
-  function drawline(a, b){
-
-    var line = document.createElement('div');
-    line.className = 'h2h__line';
-    body.appendChild(line);
-
-    var pointA = {
-      left: a.offsetLeft,
-      top: a.offsetTop
+          ]
+        }]
     };
 
-    var pointB = {
-      left: b.offsetLeft,
-      top: b.offsetTop
+    var body = document.querySelector('.h2h__body');
+    var overflow = document.querySelector('.h2h__overflow');
+    var canvas = document.querySelector('.h2h__canvas');
+    var points = {};
+    var lines = {};
+
+    var showoverflow = 0;
+    var years = 0;
+
+    data.teams.forEach(function (team) {
+      if (team.max > team.positions) {
+        var max = (team.max - team.positions);
+        if (max > showoverflow) {
+          showoverflow = max
+        }
+
+      }
+
+      if (team.years.length > years) {
+        years = team.years.length
+      }
+
+    });
+
+    if (showoverflow) {
+      overflow.style.height = (showoverflow * 2) + 24 + "px";
     }
 
-    var pointAcenterX = a.offsetWidth;
-    var pointAcenterY = a.offsetHeight;
-    var pointBcenterX = b.offsetWidth;
-    var pointBcenterY = b.offsetHeight;
-    var angle = Math.atan2(pointB.top - pointA.top, pointB.left - pointA.left) * 180 / Math.PI;
-    var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
+    canvas.style.width = ((years + 2) * 30) + "px";
 
-    // Set Angle
-    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px;';
+    function drawpoints(team, label) {
 
-    if (pointB.left < pointA.left) {
+      points[label] = [];
+      lines[label] = [];
 
-      line.style.top = (pointA.top + pointAcenterY) + 'px';
-      line.style.left = (pointB.left + pointBcenterX) + 'px';
+      team.forEach(function (year, index) {
+
+        if (!points[index]) {
+          var point = document.createElement('div');
+          point.className = 'h2h__point animate-in-view';
+          point.setAttribute('data-label', label);
+          point.innerText = year.pos;
+          body.appendChild(point);
+
+          points[label].push(point);
+
+          var top;
+          if (year.pos > 20) {
+            top = "100% + " + ((year.pos - 20) * 2) + "px";
+          }
+
+          else {
+            top = topc(year.pos, 20) + "%";
+          }
+
+          point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px";
+        }
+
+        var line = document.createElement('div');
+        line.className = 'h2h__line animate-in-view';
+        line.setAttribute('data-label', label);
+        body.appendChild(line);
+        lines[label].push(line);
+
+        if (points[label][index - 1]) {
+          drawline(points[label][index - 1], point, line);
+        }
+      });
     }
 
-    else {
-      line.style.top = (pointA.top) + 'px';
-      line.style.left = (pointA.left) + 'px';
+    function topc(val, max) {
+      return (100 / max) * val
     }
-  }
 
-  function lineDistance(x, y, x0, y0) {
-    return Math.sqrt((x -= x0) * x + (y -= y0) * y);
-  };
+    function drawline(a, b, line) {
+      var pointA = {
+        left: a.offsetLeft,
+        top: a.offsetTop
+      };
+
+      var pointB = {
+        left: b.offsetLeft,
+        top: b.offsetTop
+      }
+
+      var pointAcenterX = a.offsetWidth / 2;
+      var pointAcenterY = a.offsetHeight / 2;
+      var pointBcenterX = b.offsetWidth / 2;
+      var pointBcenterY = b.offsetHeight / 2;
+      var angle = Math.atan2(pointB.top - pointA.top, pointB.left - pointA.left) * 180 / Math.PI;
+      var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
+
+      // Set Angle
+      line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px;';
+
+      if (pointB.left < pointA.left) {
+
+        line.style.top = (pointA.top) + 'px';
+        line.style.left = (pointB.left) + 'px';
+      }
+
+      else {
+        line.style.top = (pointA.top) + 'px';
+        line.style.left = (pointA.left) + 'px';
+      }
+    }
+
+    function lineDistance(x, y, x0, y0) {
+      return Math.sqrt((x -= x0) * x + (y -= y0) * y);
+    };
+
+    function redraw() {
+
+      function refresh(label) {
+        lines[label].forEach(function (line, index) {
+          if (points[label][index - 1]) {
+            drawline(points[label][index - 1], points[label][index], line);
+          }
+
+        })
+      };
+
+      Object.keys(lines).forEach(function (line) {
+        refresh(line);
+      })
+
+    }
+
+    drawpoints(data.teams[0].years, 'home');
+    drawpoints(data.teams[1].years, 'away');
 
 
+    var resize;
+    window.addEventListener('resize', function () {
+      clearTimeout(resize);
+      resize = setTimeout(function () {
+        redraw();
+      }, 1000 / 3)
+    })
 
-</script>
+    setTimeout(function () {
+      document.querySelectorAll('.animate-in-view').forEach(function (item) {
+        item.classList.remove('animate-in-view');
+      })
+    }, 1000)
+
+  </script>
 </body>
+
 </html>
