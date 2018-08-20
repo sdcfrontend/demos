@@ -124,12 +124,8 @@
   }
 
   .h2h__point {
-    width: 4vw;
-    height: 4vw;
-    min-width: 20px;
-    min-height: 20px;
-    max-width: 24px;
-    max-height: 24px;
+    width: 24px;
+    height: 24px;
     background: #ccc;
     border-radius: 50%;
     position: absolute;
@@ -142,7 +138,8 @@
     justify-content: center;
     align-items: center;
     transition: transform 0.33s;
-    transform-origin: center
+    transform-origin: center;
+    cursor: pointer;
   }
 
   .h2h__point.animate-in-view {
@@ -171,9 +168,64 @@
     background: black;
     color: white;
   }
+
+  [data-label="away"] {
+    background: #ccc;
+    color: #222;
+  }
+
+  .h2h__tooltip {
+    pointer-events: none;
+    background: black;
+    color: white;
+    padding: 0.75em;
+    position: absolute;
+    z-index: 11;
+    transform: translate(-50%, calc(-100% - 10px));
+    transition: opacity 0.166s;
+    white-space: pre-line;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.2;
+    left: -10000px
+  }
+
+  .h2h__tooltip:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-45deg);
+    left: calc(50% - 4px);
+    top: calc(100% - 4px);
+    position: absolute;
+    background: inherit;
+  }
 </style>
 
 <body>
+  <div>
+    <span data-label="home">team 1</span>
+    <select name="" id="home">
+      <option value="0">Everton</option>
+      <option value="1">Liverpool</option>
+      <option value="2">Arsenal</option>
+      <option value="3">Tottenham</option>
+      <option value="4">Chelsea</option>
+      <option value="5">Man Utd</option>
+      <option value="6">Man City</option>
+    </select>
+    <span data-label="away">team 2</span>
+    <select name="" id="away">
+      <option value="0">Everton</option>
+      <option value="1" selected>Liverpool</option>
+      <option value="2">Arsenal</option>
+      <option value="3">Tottenham</option>
+      <option value="4">Chelsea</option>
+      <option value="5">Man Utd</option>
+      <option value="6">Man City</option>
+    </select>
+  </div>
   <div class="h2h">
     <div class="h2h__rail">
       <div class="h2h__canvas">
@@ -201,7 +253,6 @@
 
         </div>
         <div class="h2h__body">
-
           <div class="h2h__body-div" data-pos="1"></div>
           <div class="h2h__body-div" data-pos="5"></div>
           <div class="h2h__body-div" data-pos="10"></div>
@@ -221,247 +272,102 @@
     </div>
   </div>
 
+  <div class="h2h__tooltip"></div>
+
 
 
   <script>
     var data = {
-      teams: [
-        {
-          positions: 20,
-          max: 50,
-          years: [
-            {
-              year: "1993",
-              pos: 2
-            },
-            {
-              year: "1994",
-              pos: 6
-            },
-            {
-              year: "1995",
-              pos: 4
-            },
-            {
-              year: "1996",
-              pos: 7
-            },
-            {
-              year: "1997",
-              pos: 11
-            },
-            {
-              year: "1998",
-              pos: 2
-            },
-            {
-              year: "1999",
-              pos: 16
-            },
-            {
-              year: "2000",
-              pos: 14
-            },
-            {
-              year: "2001",
-              pos: 12
-            },
-            {
-              year: "2002",
-              pos: 18
-            },
-            {
-              year: "2002",
-              pos: 39
-            },
-            {
-              year: "2003",
-              pos: 50
-            },
-            {
-              year: "2004",
-              pos: 41
-            },
-            {
-              year: "2005",
-              pos: 21
-            }
-          ]
-        },
-        {
-          positions: 20,
-          max: 25,
-          years: [
-            {
-              year: "1993",
-              pos: 1
-            },
-            {
-              year: "1994",
-              pos: 1
-            },
-            {
-              year: "1995",
-              pos: 3
-            },
-            {
-              year: "1996",
-              pos: 4
-            },
-            {
-              year: "1997",
-              pos: 5
-            },
-
-            {
-              year: "1998",
-              pos: 6
-            },
-            {
-              year: "1999",
-              pos: 7
-            },
-            {
-              year: "2000",
-              pos: 8
-            },
-            {
-              year: "2001",
-              pos: 9
-            },
-            {
-              year: "2002",
-              pos: 10
-            },
-            {
-              year: "2003",
-              pos: 15
-            },
-            {
-              year: "2004",
-              pos: 18
-            },
-            {
-              year: "2005",
-              pos: 20
-            },
-            {
-              year: "2006",
-              pos: 25
-            },
-            {
-              year: "2007",
-              pos: 8
-            },
-            {
-              year: "2008",
-              pos: 12
-            },
-            {
-              year: "2009",
-              pos: 3
-            },
-            {
-              year: "2010",
-              pos: 17
-            },
-            {
-              year: "2011",
-              pos: 6
-            },
-            {
-              year: "2012",
-              pos: 9
-            },
-            {
-              year: "2013",
-              pos: 2
-            },
-
-            {
-              year: "2014",
-              pos: 1
-            },
-            {
-              year: "2015",
-              pos: 3
-            },
-            {
-              year: "2016",
-              pos: 1
-            },
-            {
-              year: "2017",
-              pos: 1
-            }
-
-          ]
-        }]
+      teams: [{ "positions": 20, "max": 20, "years": [{ "pos": "13", "points": "53" }, { "pos": "17", "points": "44" }, { "pos": "15", "points": "50" }, { "pos": "6", "points": "61" }, { "pos": "15", "points": "42" }, { "pos": "17", "points": "40" }, { "pos": "14", "points": "43" }, { "pos": "13", "points": "50" }, { "pos": "16", "points": "42" }, { "pos": "15", "points": "43" }, { "pos": "7", "points": "59" }, { "pos": "17", "points": "39" }, { "pos": "4", "points": "61" }, { "pos": "11", "points": "50" }, { "pos": "6", "points": "58" }, { "pos": "5", "points": "65" }, { "pos": "5", "points": "63" }, { "pos": "8", "points": "61" }, { "pos": "7", "points": "54" }, { "pos": "7", "points": "56" }, { "pos": "6", "points": "63" }, { "pos": "5", "points": "72" }, { "pos": "11", "points": "47" }, { "pos": "11", "points": "47" }, { "pos": "7", "points": "61" }, { "pos": "8", "points": "49" }] }, { "positions": 20, "max": 20, "years": [{ "pos": 6, "points": "59" }, { "pos": 8, "points": "60" }, { "pos": 4, "points": "74" }, { "pos": 3, "points": "71" }, { "pos": 4, "points": "68" }, { "pos": 3, "points": "65" }, { "pos": 7, "points": "54" }, { "pos": 4, "points": "67" }, { "pos": 3, "points": "69" }, { "pos": 2, "points": "80" }, { "pos": 5, "points": "64" }, { "pos": 4, "points": "60" }, { "pos": 5, "points": "58" }, { "pos": 3, "points": "82" }, { "pos": 3, "points": "68" }, { "pos": 4, "points": "76" }, { "pos": 2, "points": "86" }, { "pos": 7, "points": "63" }, { "pos": 6, "points": "58" }, { "pos": 8, "points": "52" }, { "pos": 7, "points": "61" }, { "pos": 2, "points": "84" }, { "pos": 6, "points": "62" }, { "pos": 8, "points": "60" }, { "pos": 4, "points": "76" }, { "pos": 4, "points": "75" }] }, { "positions": 20, "max": 20, "years": [{ "pos": 10, "points": "56" }, { "pos": 4, "points": "71" }, { "pos": 12, "points": "51" }, { "pos": 5, "points": "63" }, { "pos": 3, "points": "68" }, { "pos": 1, "points": "78" }, { "pos": 2, "points": "78" }, { "pos": 2, "points": "73" }, { "pos": 2, "points": "70" }, { "pos": 1, "points": "87" }, { "pos": 2, "points": "78" }, { "pos": 1, "points": "90" }, { "pos": 2, "points": "83" }, { "pos": 4, "points": "67" }, { "pos": 4, "points": "68" }, { "pos": 3, "points": "83" }, { "pos": 4, "points": "72" }, { "pos": 3, "points": "75" }, { "pos": 4, "points": "68" }, { "pos": 3, "points": "70" }, { "pos": 4, "points": "73" }, { "pos": 4, "points": "79" }, { "pos": 3, "points": "75" }, { "pos": 2, "points": "71" }, { "pos": 5, "points": "75" }, { "pos": 6, "points": "63" }] }, { "positions": 20, "max": 20, "years": [{ "pos": 16, "points": "66" }, { "pos": 15, "points": "45" }, { "pos": 7, "points": "62" }, { "pos": 8, "points": "61" }, { "pos": 10, "points": "46" }, { "pos": 14, "points": "44" }, { "pos": 11, "points": "47" }, { "pos": 10, "points": "53" }, { "pos": 12, "points": "49" }, { "pos": 9, "points": "50" }, { "pos": 10, "points": "50" }, { "pos": 14, "points": "45" }, { "pos": 9, "points": "52" }, { "pos": 5, "points": "65" }, { "pos": 5, "points": "60" }, { "pos": 11, "points": "46" }, { "pos": 8, "points": "51" }, { "pos": 4, "points": "70" }, { "pos": 5, "points": "62" }, { "pos": 4, "points": "69" }, { "pos": 5, "points": "72" }, { "pos": 6, "points": "69" }, { "pos": 5, "points": "64" }, { "pos": 3, "points": "70" }, { "pos": 2, "points": "86" }, { "pos": 3, "points": "77" }] }, { "positions": 20, "max": 20, "years": [{ "pos": 11, "points": "56" }, { "pos": 14, "points": "51" }, { "pos": 11, "points": "54" }, { "pos": 11, "points": "50" }, { "pos": 6, "points": "59" }, { "pos": 4, "points": "63" }, { "pos": 3, "points": "75" }, { "pos": 5, "points": "65" }, { "pos": 6, "points": "61" }, { "pos": 6, "points": "64" }, { "pos": 4, "points": "67" }, { "pos": 2, "points": "79" }, { "pos": 1, "points": "95" }, { "pos": 1, "points": "91" }, { "pos": 2, "points": "83" }, { "pos": 2, "points": "85" }, { "pos": 3, "points": "83" }, { "pos": 1, "points": "86" }, { "pos": 2, "points": "71" }, { "pos": 6, "points": "64" }, { "pos": 3, "points": "75" }, { "pos": 3, "points": "82" }, { "pos": 1, "points": "87" }, { "pos": 10, "points": "50" }, { "pos": 1, "points": "93" }, { "pos": 5, "points": "70" }] }, { "positions": 20, "max": 20, "years": [{ "pos": 1, "points": "84" }, { "pos": 1, "points": "92" }, { "pos": 2, "points": "88" }, { "pos": 1, "points": "82" }, { "pos": 1, "points": "75" }, { "pos": 2, "points": "77" }, { "pos": 1, "points": "79" }, { "pos": 1, "points": "91" }, { "pos": 1, "points": "80" }, { "pos": 3, "points": "77" }, { "pos": 1, "points": "83" }, { "pos": 3, "points": "75" }, { "pos": 3, "points": "77" }, { "pos": 2, "points": "83" }, { "pos": 1, "points": "89" }, { "pos": 1, "points": "87" }, { "pos": 1, "points": "90" }, { "pos": 2, "points": "85" }, { "pos": 1, "points": "80" }, { "pos": 2, "points": "89" }, { "pos": 1, "points": "89" }, { "pos": 7, "points": "64" }, { "pos": 4, "points": "70" }, { "pos": 5, "points": "66" }, { "pos": 6, "points": "69" }, { "pos": 2, "points": "81" }] }, { "positions": 20, "max": 47, "years": [{ "pos": 9, "points": "57" }, { "pos": 16, "points": "45" }, { "pos": 17, "points": "49" }, { "pos": 18, "points": "38" }, { "pos": 34, "points": "61" }, { "pos": 42, "points": "48" }, { "pos": 47, "points": "82" }, { "pos": 22, "points": "89" }, { "pos": 18, "points": "34" }, { "pos": 21, "points": "99" }, { "pos": 9, "points": "51" }, { "pos": 16, "points": "41" }, { "pos": 8, "points": "52" }, { "pos": 15, "points": "43" }, { "pos": 14, "points": "42" }, { "pos": 9, "points": "55" }, { "pos": 10, "points": "50" }, { "pos": 5, "points": "67" }, { "pos": 3, "points": "71" }, { "pos": 1, "points": "89" }, { "pos": 2, "points": "78" }, { "pos": 1, "points": "86" }, { "pos": 2, "points": "79" }, { "pos": 4, "points": "66" }, { "pos": 3, "points": "78" }, { "pos": 1, "points": "100" }] }]
     };
 
     var body = document.querySelector('.h2h__body');
     var overflow = document.querySelector('.h2h__overflow');
     var canvas = document.querySelector('.h2h__canvas');
+    var tooltip = document.querySelector('.h2h__tooltip');
     var points = {};
     var lines = {};
 
-    var showoverflow = 0;
-    var years = 0;
+    function setup(teams) {
 
-    data.teams.forEach(function (team) {
-      if (team.max > team.positions) {
-        var max = (team.max - team.positions);
-        if (max > showoverflow) {
-          showoverflow = max
+      var showoverflow = 0;
+      var years = 0;
+
+      teams.forEach(function (team) {
+
+        if (team.max > team.positions) {
+          var max = (team.max - team.positions);
+          if (max > showoverflow) {
+            showoverflow = max
+          }
+
         }
 
+        if (team.years.length > years) {
+          years = team.years.length
+        }
+
+      });
+
+      if (showoverflow) {
+        overflow.style.height = (showoverflow * 2) + 24 + "px";
       }
 
-      if (team.years.length > years) {
-        years = team.years.length
+      else {
+        overflow.style.height = "0";
       }
 
-    });
-
-    if (showoverflow) {
-      overflow.style.height = (showoverflow * 2) + 24 + "px";
+      canvas.style.width = ((years + 2) * 30) + "px";
     }
 
-    canvas.style.width = ((years + 2) * 30) + "px";
+    setup([data.teams[0], data.teams[1]]);
 
-    function drawpoints(team, label) {
 
-      points[label] = [];
-      lines[label] = [];
+    function drawpoints(data, label, modifier) {
 
-      team.forEach(function (year, index) {
+      console.log(label);
 
-        if (!points[index]) {
-          var point = document.createElement('div');
-          point.className = 'h2h__point animate-in-view';
-          point.setAttribute('data-label', label);
-          point.innerText = year.pos;
+      modifier = modifier || '';
+
+      points[label] = points[label] || [];
+      lines[label] = lines[label] || [];
+
+      data.years.forEach(function (year, index) {
+
+        var point = points[label][index];
+        var top;
+
+        if (!point) {
+          point = document.createElement('div');
+          point.className = 'h2h__point ' + modifier;
+          point.onmouseenter = showtooltip;
+          point.onmouseleave = hidetooltip;
           body.appendChild(point);
-
           points[label].push(point);
-
-          var top;
-          if (year.pos > 20) {
-            top = "100% + " + ((year.pos - 20) * 2) + "px";
-          }
-
-          else {
-            top = topc(year.pos, 20) + "%";
-          }
-
-          point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px";
         }
 
-        var line = document.createElement('div');
-        line.className = 'h2h__line animate-in-view';
-        line.setAttribute('data-label', label);
-        body.appendChild(line);
-        lines[label].push(line);
+        point.setAttribute('data-label', label);
+        point.setAttribute('data-tooltip', 'Position: ' + year.pos + '|Points: ' + year.points);
+        point.innerText = year.pos;
+
+        if (year.pos > 20) {
+          top = "100% + " + ((year.pos - 20) * 2) + "px";
+        }
+
+        else {
+          top = topc(year.pos, 20) + "%";
+        }
+
+        point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px";
+
+        var line = lines[label][index];
+        if (!line) {
+          line = document.createElement('div');
+          line.className = 'h2h__line ' + modifier;
+          line.setAttribute('data-label', label);
+          body.appendChild(line);
+          lines[label].push(line);
+        }
 
         if (points[label][index - 1]) {
           drawline(points[label][index - 1], point, line);
@@ -510,25 +416,28 @@
       return Math.sqrt((x -= x0) * x + (y -= y0) * y);
     };
 
-    function redraw() {
+    function redraw(data, label) {
 
-      function refresh(label) {
-        lines[label].forEach(function (line, index) {
-          if (points[label][index - 1]) {
-            drawline(points[label][index - 1], points[label][index], line);
-          }
-
-        })
-      };
-
-      Object.keys(lines).forEach(function (line) {
-        refresh(line);
-      })
+      // drawpoints(data, label)
 
     }
 
-    drawpoints(data.teams[0].years, 'home');
-    drawpoints(data.teams[1].years, 'away');
+    function showtooltip(event) {
+      clearTimeout(tooltip.timeout);
+      var dims = event.target.getBoundingClientRect();
+      tooltip.textContent = event.target.getAttribute('data-tooltip').replace(/\|/g, '\n');
+      tooltip.style.cssText = "opacity:1;visibility:visible;left:" + (dims.left + (dims.width / 2)) + "px;top: " + dims.top + "px";
+    }
+
+    function hidetooltip(event) {
+      tooltip.timeout = setTimeout(function () {
+        tooltip.style.opacity = "0";
+      }, 333);
+    }
+
+
+    drawpoints(data.teams[0], 'home', 'animate-in-view');
+    drawpoints(data.teams[1], 'away', 'animate-in-view');
 
 
     var resize;
@@ -545,6 +454,23 @@
       })
     }, 1000)
 
+
+    document.querySelectorAll('select').forEach(function (item) {
+      item.onchange = function () {
+
+        var s1 = document.querySelectorAll('select')[0];
+        var s2 = document.querySelectorAll('select')[1];
+
+        var data1 = data.teams[parseInt(s1.value, 10)];
+        var data2 = data.teams[parseInt(s2.value, 10)];
+
+        setup([data1, data2]);
+
+        drawpoints(data1, s1.id);
+        drawpoints(data2, s2.id);
+
+      }
+    })
   </script>
 </body>
 
