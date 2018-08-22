@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+    body {
+      padding: 12px;
+      font-family: sans-serif;
+      background: #ccc;
+      font-size: 16px;
+    }
+
+    .split-bar {
+      display: flex;
+      margin: 2px 0;
+      width: 100%;
+    }
+
+    .split-bar__cell {
+      display: flex;
+      width: 100%;
+      flex: 1;
+      order: 3;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .split-bar__header {
+      order: 2;
+      width: 1.8rem;
+      height: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: white;
+      border-radius: 50%;
+      margin: 0 3px;
+      font-size: 0.6rem
+    }
+
+    .split-bar__item {
+      height: 100%;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      transition: transform 0.33s;
+    }
+
+    .split-bar__item-line {
+      height: 3px;
+      overflow: hidden;
+      background: white;
+      position: relative;
+      order: 2;
+      width: inherit
+    }
+
+    .split-bar__item:before {
+      content: "";
+      flex: none;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      border: 3px solid white;
+      order: 2;
+      display: block;
+    }
+
+    .split-bar__item-text {
+      padding: 0 4px 0 0;
+      font-size: 0.7rem;
+    }
+
+    .split-bar__cell+.split-bar__cell .split-bar__item-line {
+      order: 1
+    }
+
+    .split-bar__cell+.split-bar__cell .split-bar__item-text {
+      order: 3;
+      padding: 0 0 0 4px
+    }
+
+    .split-bar__item.animate-in-view {
+      transform: translateX(100%)
+    }
+
+    .split-bar__cell+.split-bar__cell .split-bar__item.animate-in-view {
+      transform: translateX(-100%)
+    }
+
+    .split-bar__cell--1 {
+      order: 1
+    }
+
+    .split-bar__cell--1 .split-bar__item {
+      justify-content: flex-end
+    }
+  </style>
+</head>
+
+<body>
+  <div class="split-bar">
+    <div class="split-bar__header">16/17</div>
+    <div class="split-bar__cell split-bar__cell--1">
+      <div class="split-bar__item animate-in-view" style="width: 25%">
+        <span class="split-bar__item-text">£285m</span>
+        <span class="split-bar__item-line"></span>
+      </div>
+    </div>
+    <div class="split-bar__cell split-bar__cell--2">
+      <div class="split-bar__item animate-in-view" style="width: 50%">
+        <span class="split-bar__item-text">£285m</span>
+        <span class="split-bar__item-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="split-bar">
+    <div class="split-bar__header">16/17</div>
+    <div class="split-bar__cell split-bar__cell--1">
+      <div class="split-bar__item animate-in-view" style="width: 75%">
+        <span class="split-bar__item-text">£285m</span>
+        <span class="split-bar__item-line"></span>
+      </div>
+    </div>
+    <div class="split-bar__cell split-bar__cell--2">
+      <div class="split-bar__item animate-in-view" style="width: 100%">
+        <span class="split-bar__item-text">£285m</span>
+        <span class="split-bar__item-line"></span>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+  NodeList.prototype.forEach = Array.prototype.forEach;
+  setTimeout(function () {
+    document.querySelectorAll('.animate-in-view').forEach(function (item) {
+      item.classList.remove('animate-in-view')
+    }
+    )
+  }
+
+    , 1000);
+</script>
+
+</html>

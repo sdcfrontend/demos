@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+    body {
+      font-family: sans-serif
+    }
+
+    .timeline {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .timeline__body {
+      display: flex;
+    }
+
+    .timeline__col {
+      flex: 1;
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: repeat(18, 1fr);
+      grid-template-rows: repeat(18, 1fr)
+    }
+
+    .timeline__col1 {
+      text-align: right;
+      padding-right: calc(2px + .2vw)
+    }
+
+    .timeline__col2 {
+      text-align: left;
+      padding-left: calc(2px + .2vw)
+    }
+
+    .timeline__col1 .timeline__block {
+      padding-right: calc(1rem + 1vw);
+
+    }
+
+    .timeline__col2 .timeline__block {
+      padding-left: calc(1rem + 1vw);
+    }
+
+    .timeline__col2 .timeline__block:after {
+      left: 0;
+      right: auto;
+      background: #aaa
+    }
+
+    .timeline__block {
+      background: white;
+      padding: 0 0 1.25rem 0;
+      min-height: 310px;
+      position: relative;
+      margin: 2px 0;
+    }
+
+    .timeline__block:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 0.5rem;
+      border-radius: 8px;
+      background: black;
+      top: 0;
+      right: 0
+    }
+
+    .timeline__block-body {
+      position: sticky;
+      top: 12px;
+    }
+
+    .timeline__block-image {
+      width: 3rem;
+      height: 3rem;
+      border: 2px solid white;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .timeline__block-image>img {
+      width: 100%;
+    }
+
+    .timeline__block h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5em;
+    }
+
+    .timeline__block p {
+      font-size: 0.75rem;
+      line-height: 1.25;
+      margin-bottom: 1em;
+    }
+
+    .timeline__block p:last-child {
+      margin-bottom: 0
+    }
+
+    [data-spread="1"] {
+      grid-row: span 1
+    }
+
+    [data-spread="2"] {
+      grid-row: span 2
+    }
+
+    [data-spread="3"] {
+      grid-row: span 3
+    }
+
+    [data-spread="4"] {
+      grid-row: span 4
+    }
+
+    [data-spread="5"] {
+      grid-row: span 5
+    }
+
+    [data-spread="15"] {
+      grid-row: span 15
+    }
+  </style>
+</head>
+
+<body>
+  <div class="timeline">
+
+    <div class="timeline__body">
+      <div class="timeline__col timeline__col1">
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <div class="timeline__block-image">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/timeline/retires.jpg" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum.
+              <p>
+                quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Manager</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Brian Kidd</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="3">
+          <div class="timeline__block-body">
+            <h2>Pelligrini</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Pep Guardiola</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a. Modi corporis possimus natus animi laborum.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="timeline__col timeline__col2">
+        <div class="timeline__block" data-spread="15">
+          <div class="timeline__block-body">
+            <h2>Alex Ferguson</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>David Moyes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Brian Kidd</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Van Gaal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a.</p>
+          </div>
+        </div>
+
+        <div class="timeline__block" data-spread="1">
+          <div class="timeline__block-body">
+            <h2>Mourhino</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore fugit omnis delectus laborum. Facilis dolorum
+              quis voluptates officiis neque hic, repellendus nostrum numquam a.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
