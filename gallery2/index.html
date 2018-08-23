@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+      font-family: sans-serif
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+
+    .site-width {
+      max-width: 1024px;
+      width: 100%;
+      padding: 0 5vw;
+      margin: 0 auto;
+    }
+
+    .gallery {
+      background: #aaa;
+      position: relative;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
+    .gallery:after {
+      content: "";
+      width: 1px;
+      visibility: hidden;
+      display: block;
+      padding-bottom: 56.25%;
+    }
+
+    .gallery__inner {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      display: flex;
+      flex-direction: column
+    }
+
+    .gallery__body {
+      flex: 1;
+    }
+
+    .gallery__rail {
+      height: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .gallery__slide {
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+      position: absolute;
+      left: 0;
+      top: 0;
+      will-change: all;
+      transform: scale(0.8);
+      visibility: hidden;
+      opacity: 0;
+      transition: transform 0.75s, opacity 0.3s
+    }
+
+    .gallery__slide[data-current] {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    .gallery__slide-cell {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .gallery__slide-cell>img {
+      height: auto;
+      max-width: 98%;
+      width: 58%;
+      transform: translateX(20%) scale(0.9)
+    }
+
+    .gallery__slide-cell>img+img {
+      transform: translateX(-20%)
+    }
+
+    .gallery__slide-cell2 {
+      flex-direction: row-reverse
+    }
+
+    .gallery__slide-cell2>img {
+      transform: translateX(-20%) scale(0.9);
+    }
+
+    .gallery__slide-cell2>img+img {
+      transform: translateX(20%);
+    }
+
+    @media all and (max-aspect-ratio: 1/1) {
+      .gallery:after {
+        padding-bottom: 100%;
+      }
+
+      .gallery__slide-cell[class]>img {
+        will-change: transform, opacity;
+        transform: scale(1, 1);
+        transition: 0.33s opacity;
+        width: 100%;
+        max-width: 95%;
+        position: absolute;
+      }
+
+      .gallery__slide-cell[class]>img:first-child {
+        /* transform: scale(1, 1) */
+      }
+
+      .gallery__slide-cell--away[class]>img {
+        /* transform: scale(0, 1); */
+        opacity: 0;
+      }
+
+      .gallery__slide-cell--away[class]>img:first-child {
+        /* transform: scale(1, 1); */
+        opacity: 1;
+      }
+    }
+
+    .gallery__nav {
+      height: 3rem;
+      background: #ccc
+    }
+
+    .gallery__nav-body {
+      display: flex;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .gallery__nav-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+    }
+
+    .gallery__nav-caption {
+      flex: 1;
+      width: auto
+    }
+
+    .gallery__nav-item {
+      color: white;
+      will-change: opacity;
+      transition: opacity 0.166s
+    }
+
+    .gallery__nav-item[disabled] {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .gallery__nav-icon {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+      border: 3px solid white;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .gallery__nav-item[data-direction="prev"] .gallery__nav-icon {
+      transform: rotate(180deg)
+    }
+
+    .gallery__nav-icon:after {
+      content: "";
+      width: 40%;
+      height: 40%;
+      border-top: 3px solid #fff;
+      border-right: 3px solid #fff;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      -webkit-transform-origin: center;
+      transform-origin: center;
+      -webkit-transform: rotate(45deg) translate(-17%, -56%);
+      transform: rotate(45deg) translate(-17%, -56%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gallery site-width">
+
+    <div class="gallery__inner">
+      <div class="gallery__body">
+        <div class="gallery__rail">
+          <div class="gallery__slide" data-current data-caption="1992/93">
+            <div class="gallery__slide-cell gallery__slide-cell1">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-hk-1819-258x340.png"
+                alt="">
+            </div>
+            <div class="gallery__slide-cell gallery__slide-cell2">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-hk-1819-258x340.png"
+                alt="">
+            </div>
+          </div>
+          <div class="gallery__slide" data-caption="1993/94">
+            <div class="gallery__slide-cell gallery__slide-cell1">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-hk-1819-258x340.png"
+                alt="">
+            </div>
+            <div class="gallery__slide-cell gallery__slide-cell2">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-hk-1819-258x340.png"
+                alt="">
+            </div>
+          </div>
+          <div class="gallery__slide" data-caption="1994/95">
+            <div class="gallery__slide-cell gallery__slide-cell1">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-hk-1819-258x340.png"
+                alt="">
+            </div>
+            <div class="gallery__slide-cell gallery__slide-cell2">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-hk-1819-258x340.png"
+                alt="">
+            </div>
+          </div>
+          <div class="gallery__slide" data-caption="1995/96">
+            <div class="gallery__slide-cell gallery__slide-cell1">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-hk-1819-258x340.png"
+                alt="">
+            </div>
+            <div class="gallery__slide-cell gallery__slide-cell2">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-hk-1819-258x340.png"
+                alt="">
+            </div>
+          </div>
+          <div class="gallery__slide" data-caption="1996/97">
+            <div class="gallery__slide-cell gallery__slide-cell1">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/utd/manutd-hk-1819-258x340.png"
+                alt="">
+            </div>
+            <div class="gallery__slide-cell gallery__slide-cell2">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-ak-1819-258x340.png"
+                alt="">
+              <img src="https://components.news.sky.com/storytelling/latest/skysports-city-vs-united/sdc/assets/kits/city/mancity-hk-1819-258x340.png"
+                alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__nav">
+        <div class="gallery__nav-body">
+          <a href="#" class="gallery__nav-cell gallery__nav-item" data-direction="prev" disabled>
+            <span class="gallery__nav-icon"></span>
+          </a>
+          <p class="gallery__nav-cell gallery__nav-caption">
+            1992/93
+          </p>
+          <a href="#" class="gallery__nav-cell gallery__nav-item" data-direction="next">
+            <span class="gallery__nav-icon"></span>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  NodeList.prototype.forEach = Array.prototype.forEach;
+  var index = 0;
+  var slides = document.querySelectorAll('.gallery__slide');
+  var navs = document.querySelectorAll('.gallery__nav-item');
+  var caption = document.querySelector('.gallery__nav-caption');
+  var cells = document.querySelectorAll('.gallery__slide-cell');
+
+
+  function setslide(index) {
+
+    slides.forEach(function (slide) {
+      slide.removeAttribute('data-current');
+    })
+
+    if (slides[index]) {
+      slides[index].setAttribute('data-current', true);
+      caption.textContent = slides[index].getAttribute('data-caption');
+
+    }
+  }
+
+  function navstate(index) {
+    navs.forEach(function (nav) {
+      nav.removeAttribute('disabled');
+    });
+
+    if (index === 0) {
+      navs[0].setAttribute('disabled', true)
+    }
+
+    if (index === (slides.length - 1)) {
+      navs[1].setAttribute('disabled', true)
+    }
+  }
+
+  navs.forEach(function (nav) {
+    nav.onclick = function (e) {
+      e.preventDefault();
+      if (this.getAttribute('disabled')) {
+        return;
+      }
+      console.log(this.getAttribute('data-direction'));
+      if (this.getAttribute('data-direction') === 'prev') {
+        index--;
+        if (index < 0) {
+          index = (slides.length - 1)
+        }
+      }
+
+      else {
+        index++;
+        if (index > slides.length - 1) {
+          index = 0;
+        }
+      }
+
+      setslide(index);
+      navstate(index);
+    }
+
+  });
+
+  cells.forEach(function (cell) {
+    cell.onclick = function () {
+      this.classList.toggle('gallery__slide-cell--away')
+    }
+  })
+</script>
+
+</html>
