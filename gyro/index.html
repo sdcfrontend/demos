@@ -19,7 +19,7 @@
     .log {
       width: 30px;
       height: 30px;
-      background: hotpink;
+      background: limegreen;
       border-radius: 50%;
       transition: transform 0.33s
     }
@@ -34,12 +34,10 @@
 
 <script>
 
-  function trace(m) {
-    document.querySelector('.log').textContent = m;
-  }
+
 
   window.addEventListener('deviceorientation', function (event) {
-    trace.style.cssText = "transform: translate(" + (event.gamma * 100) + "%," + (event.beta * 100) + "%)"
+    document.querySelelctor('.log').style.cssText = "transform: translate(" + (event.gamma * 100) + "%," + (event.beta * 100) + "%)"
   }
 
 </script>
