@@ -24,7 +24,7 @@
   }
 
   window.addEventListener('deviceorientation', function (event) {
-    trace('alpha:' + Math.floor(event.alpha) + ', beta:' + Math.floor(event.beta) + ', gamma:' + Math.floor(event.gamma));
+    trace('abs:' + event.absolute + ', alpha:' + Math.floor(event.alpha) + ', beta:' + Math.floor(event.beta) + ', gamma:' + Math.floor(event.gamma));
   }, true);
 
 </script>
