@@ -39,7 +39,7 @@
   }
 
   window.addEventListener('deviceorientation', function (event) {
-    trace.style.cssText = "transform: translate(" + (gamma * 100) + "%," + (beta * 100) + "%)"
+    trace.style.cssText = "transform: translate(" + (event.gamma * 100) + "%," + (event.beta * 100) + "%)"
   }
 
 </script>
