@@ -25,7 +25,7 @@
     }
 
     .slab {
-      background: lightseagreen;
+      background: orchid;
       width: 50%;
       height: 50%;
     }
@@ -43,7 +43,7 @@
 
   window.addEventListener('deviceorientation', function (event) {
     console.log(event);
-    document.querySelector('.slab').style.cssText = "transform: rotateY(" + event.gamma + "deg) rotateX(" + (event.beta * -1) + "deg)";
+    document.querySelector('.slab').style.cssText = "transform: rotateY(" + (event.gamma * -1) + "deg) rotateX(" + (event.beta) + "deg)";
   })
 
   // window.addEventListener('deviceorientation', function (event) {
