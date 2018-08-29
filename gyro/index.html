@@ -13,7 +13,8 @@
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center
+      justify-content: center;
+      perspective: 1000px;
     }
 
     .log {
@@ -22,23 +23,33 @@
       background: orchid;
       border-radius: 50%;
     }
+
+    .slab {
+      background: orchid;
+      width: 50%;
+      height: 50%;
+    }
   </style>
 </head>
 
 <body>
   <div class="con">
-    <div class="log"></div>
+    <!-- <div class="log"></div> -->
+    <div class="slab"></div>
   </div>
 </body>
 
 <script>
 
-
-
   window.addEventListener('deviceorientation', function (event) {
     console.log(event);
-    document.querySelector('.log').style.cssText = "transform: translate(" + (event.gamma * 10) + "%," + (event.beta * 10) + "%)"
+    document.querySelector('.slab').style.cssText = "transform: rotateY(" + event.beta + "deg) rotateX(" + event.gamma + "deg)";
   })
+
+  // window.addEventListener('deviceorientation', function (event) {
+  //   console.log(event);
+  //   document.querySelector('.log').style.cssText = "transform: translate(" + (event.gamma * 10) + "%," + (event.beta * 10) + "%)"
+  // })
 
 </script>
 
