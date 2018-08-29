@@ -37,7 +37,8 @@
 
 
   window.addEventListener('deviceorientation', function (event) {
-    document.querySelelctor('.log').style.cssText = "transform: translate(" + (event.gamma * 100) + "%," + (event.beta * 100) + "%)"
+    console.log(event);
+    document.querySelector('.log').style.cssText = "transform: translate(" + (event.gamma * 10) + "%," + (event.beta * 10) + "%)"
   })
 
 </script>
