@@ -6,281 +6,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style>
-    :root {
-      --cols: 1
-    }
-
-    @media all and (min-width: 600px) {
-      :root {
-        --cols: 2
-      }
-    }
-
-    @media all and (min-width: 760px) {
-      :root {
-        --cols: 3
-      }
-    }
-
-    @media all and (min-width: 900px) {
-      :root {
-        --cols: 4
-      }
-    }
-
-    body {
-      padding-bottom: 1000px;
-      font-family: sans-serif;
-    }
-
-    .blocks {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 20px
-    }
-
-    .block {
-      background: hotpink;
-      height: 300px;
-      position: relative;
-      transition: transform 0.33s, background 0.33s;
-      display: flex;
-      overflow: hidden;
-      align-items: center;
-      justify-content: center;
-      height: 100vh
-    }
-
-    .block h2 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: calc(20px + 2vw);
-      color: white;
-      z-index: 4;
-      transform: translate(-50%, -50%);
-      margin: 0;
-    }
-
-    /* .block:nth-child(10){
-  grid-column: 1;
-  grid-column: span var(--cols);
-  grid-row: 3;
-  height: 100vh;
-} */
-
-    .block img {
-      height: 120%;
-      object-fit: cover;
-      width: 100%;
-      position: relative;
-      top: 0;
-      will-change: transform;
-      z-index: 3
-    }
-
-    .block[data-animate-in-view] {
-      transform: scale(0.9);
-      background: yellowgreen;
-    }
-
-    .block-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-gap: 2em;
-    }
-
-    .block-item {
-      background: orange;
-      transition: transform 0.33s;
-      height: 200px;
-    }
-
-    .block-item[data-animate-in-view] {
-      transform: scale(0.5);
-    }
-  </style>
-
-  <script src="https://rawgit.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
 </head>
 
+<style>
+  .block {
+    width: 10vw;
+    height: 20vw;
+    background: hotpink;
+    display: inline-block;
+    margin: 1vw;
+  }
+
+  .animate--zip {
+    transition: transform 0.166s;
+    will-change: transform;
+    transform: scale(0.9999)
+  }
+
+  .animate--zip[data-animate-in-view] {
+    transform: scale(0.1)
+  }
+
+  .animate--fade {
+    transition: opacity 0.333s;
+    will-change: opacity;
+    opacity: 1
+  }
+
+  .animate--fade[data-animate-in-view] {
+    opacity: 0
+  }
+
+  .animate--bw {
+    transition: filter 0.333s;
+    will-change: filter;
+    filter: grayscale(0)
+  }
+
+  .animate--bw[data-animate-in-view] {
+    filter: grayscale(1)
+  }
+</style>
+
 <body>
-  <div class="blocks">
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--zip" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--fade" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+  <div class="block animate--bw" data-trigger="100" data-animate-in-view></div>
+</body>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+<script>
 
+  NodeList.prototype.forEach = Array.prototype.forEach;
 
+  (function () {
 
-    <div class="block" data-track data-parallax>
+    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
 
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block block-grid">
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-      <div class="block-item" data-animate-in-view data-trigger></div>
-
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-    <div class="block" data-track data-parallax>
-      <img src="https://e3.365dm.com/18/06/2048x1152/skynews-angela-merkel-eu-summit_4348647.jpg?bypass-service-worker&20180629090735"
-        alt="">
-      <h2>A headline goes here</h2>
-    </div>
-
-
-  </div>
-
-  <script>
-
-    var observer = new IntersectionObserver(scan, {
-      rootMargin: '18px',
-      threshold: [0, 0.5, 1]
-    });
-
-    observer.POLL_INTERVAL = 33;
+    setTimeout(function () {
+      document.querySelectorAll('[data-trigger]').forEach(function (block) {
+        observer.observe(block);
+      });
+    }, 100)
 
     function scan(entries, observer) {
 
       entries.forEach(function (item) {
 
+        var ratio = 0.25;
+        if (item.target.getAttribute('data-trigger').length) {
+          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+        }
 
-        if (item.isIntersecting) {
-          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio > 0.25) {
+        if (item.isIntersecting || item.intersectionRatio > 0) {
 
-            observer.unobserve(item.target);
+          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+            // observer.unobserve(item.target);
             item.target.removeAttribute('data-animate-in-view');
-            if (!item.target.enterViewCalled && item.target.enterView) {
-              item.target.enterView(true);
-            }
-          }
-
-          if (item.target.hasAttribute('data-track') && item.intersectionRatio > 0) {
-            item.target.removeAttribute('data-animate-in-view');
-            if (!item.target.enterViewCalled && item.target.enterView) {
-              console.log('enter');
-              item.target.enterView(true)
+            // if we want to trigger a function
+            if (item.target.start && !item.target.init) {
+              item.target.start();
+              item.target.init = true;
             }
           }
         }
-
-        else {
-          item.target.enterView && item.target.enterView(false);
-        }
-
       })
     }
 
 
-    function parallax(entering) {
+  })();
 
-      var el = this;
-      if (entering) {
-        this.enterViewCalled = true;
-        this.interval =
-          setInterval(function () {
-            requestAnimationFrame(function () {
-              var dims = el.getBoundingClientRect();
-              var h = window.innerHeight / dims.height;
-              var top = (dims.top / -5) / h;
-              el.firstElementChild.style.transform = 'translateY(' + (top) + 'px)';
-            });
 
-          }, 20);
-
-      }
-
-      else {
-        this.enterViewCalled = false;
-        window.clearInterval(this.interval);
-      }
-
-    }
-
-    document.querySelectorAll('[data-track], [data-trigger]').forEach(function (block) {
-      observer.observe(block);
-    });
-
-    document.querySelectorAll('[data-parallax]').forEach(function (block) {
-      block.enterView = parallax;
-    })
-
-  </script>
-</body>
+</script>
 
 </html>

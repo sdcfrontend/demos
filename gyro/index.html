@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .log {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="log"></div>
+</body>
+
+<script>
+
+  function trace(m) {
+    document.querySelector('.log').textContent = m;
+  }
+
+  window.addEventListener('deviceorientation', function (event) {
+    trace('alpha:' + Math.floor(event.alpha) + ', beta:' + Math.floor(event.beta) + ', gamma:' + Math.floor(event.gamma));
+  }, true);
+
+</script>
+
+</html>

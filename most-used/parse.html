@@ -1,0 +1,37 @@
+<script>
+
+
+  function parse(ob) {
+    var data = {};
+    Object.keys(ob).forEach(function (key) {
+      var oldkey = key;
+      var key = key.replace(/year/, '');
+      key = parseInt(key);
+      key = key < 90 ? (key + 2000) : (key + 1900);
+      key = [(key).toString().substring(2), (key + 1).toString().substring(2)].join('/');
+      data[key] = { players: [] };
+      ob[oldkey].forEach(function (item, index) {
+        if (index < 11) {
+          data[key].players.push({ name: item['Player'], apps: item['Games-Started'] })
+        }
+      })
+    })
+
+    return JSON.stringify(data)
+  }
+
+  function parsepoy(ob, data) {
+    Object.keys(ob).forEach(function (key) {
+      var oldkey = key;
+      var key = key.replace(/year/, '');
+      key = parseInt(key);
+      key = key < 90 ? (key + 2000) : (key + 1900);
+      key = [(key).toString().substring(2), (key + 1).toString().substring(2)].join('/');
+
+      data[key].transfer = ob[oldkey][ob[oldkey].length - 1];
+      data[key].poy = ob[oldkey][ob[oldkey].length - 2]
+    })
+
+    return JSON.stringify(data)
+  }
+</script>
