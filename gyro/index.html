@@ -43,7 +43,7 @@
 
   window.addEventListener('deviceorientation', function (event) {
     console.log(event);
-    document.querySelector('.slab').style.cssText = "transform: rotateY(" + event.gamma + "deg) rotateX(" + event.beta + "deg)";
+    document.querySelector('.slab').style.cssText = "transform: rotateY(" + event.gamma + "deg) rotateX(" + (event.beta * -1) + "deg)";
   })
 
   // window.addEventListener('deviceorientation', function (event) {
