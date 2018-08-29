@@ -7,14 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    .con {
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
     .log {
-      font-size: 30px;
+      width: 30px;
+      height: 30px;
+      background: hotpink;
+      border-radius: 50%;
+      transition: transform 0.33s
     }
   </style>
 </head>
 
 <body>
-  <div class="log"></div>
+  <div class="con">
+    <div class="log"></div>
+  </div>
 </body>
 
 <script>
@@ -24,8 +39,8 @@
   }
 
   window.addEventListener('deviceorientation', function (event) {
-    trace('abs:' + event.absolute + ', alpha:' + Math.floor(event.alpha) + ', beta:' + Math.floor(event.beta) + ', gamma:' + Math.floor(event.gamma));
-  }, true);
+    trace.style.cssText = "transform: translate(" + (gamma * 100) + "%," + (beta * 100) + "%)"
+  }
 
 </script>
 
