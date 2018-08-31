@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" data-animate-in-view data-trigger="100" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .pic {
+    margin-top: 1000px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(https://e3.365dm.com/18/08/2048x1152/skynews-cliff-richard-album_4404245.jpg?bypass-service-worker&20180829025736);
+    background-size: cover;
+    /* perspective: 1000px; */
+  }
+
+  .tile {
+    width: 10%;
+    height: 10%;
+    background: hotpink;
+  }
+
+  .animate--tile .tile {
+    transition: transform 0.633s;
+    will-change: transform;
+    transform: scale(0);
+  }
+
+  .animate--tile[data-animate-in-view] .tile {
+    transform: scale(1.25)
+  }
+</style>
+
+<body>
+  <div class="pic animate--tile" data-animate-in-view data-trigger="100">
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+    <div class="tile"></div>
+  </div>
+
+</body>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+<script>
+
+  NodeList.prototype.forEach = Array.prototype.forEach;
+
+  (function () {
+
+    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+    setTimeout(function () {
+      document.querySelectorAll('[data-trigger]').forEach(function (block) {
+        observer.observe(block);
+      });
+    }, 100)
+
+    function scan(entries, observer) {
+
+      entries.forEach(function (item) {
+
+        var ratio = 0.25;
+        if (item.target.getAttribute('data-trigger').length) {
+          ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+        }
+
+        if (item.isIntersecting || item.intersectionRatio > 0) {
+
+          if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+            // observer.unobserve(item.target);
+            item.target.removeAttribute('data-animate-in-view');
+            // if we want to trigger a function
+            if (item.target.start && !item.target.init) {
+              item.target.start();
+              item.target.init = true;
+            }
+          }
+        }
+      })
+    }
+
+
+  })();
+
+
+</script>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      font-family: sans-serif;
+      font-size: calc(14px + 1.4vw);
+
+    }
+
+    @keyframes video-listener {
+      0 {
+        outline: 1px solid transparent
+      }
+      100% {
+        outline: 0 solid transparent
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .video {
+      position: relative;
+      max-height: 100vh;
+      animation: video-listener 1ms
+    }
+
+    .video:after {
+      content: "";
+      display: block;
+      padding-bottom: 56.25%;
+    }
+
+    .video__item {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: black;
+      overflow: hidden
+    }
+
+    .video__item img[data-playing="true"] {
+      visibility: hidden;
+      opacity: 0
+    }
+
+    .video__item img,
+    .video__item video {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      left: 50%;
+      z-index: 1;
+      height: 100%;
+    }
+
+    .video__item img {
+      z-index: 2
+    }
+
+    .video__body {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      background: linear-gradient(to top, black 0, rgba(0, 0, 0, 0) 50%);
+      will-change: all;
+      transform: translateZ(0)
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1
+    }
+
+    .video__body-text {
+      transition: 0.33s transform;
+      will-change: transform;
+      padding: 0 0 2rem;
+    }
+
+    .video__body[data-animate-in-view] .video__body-text {
+      transform: translateX(-100%)
+    }
+
+    @supports (object-fit: cover) {
+      .video__item img,
+      .video__item video {
+        width: 100%;
+      }
+
+      .video:after {
+        padding-bottom: 100%;
+      }
+
+      .video__item img,
+      .video__item video {
+        height: 100%;
+        object-fit: cover
+      }
+    }
+
+    @media all and (min-aspect-ratio: 1/1) {
+
+      @supports (position: sticky) or (position: -webkit-sticky) {
+        .sticky-block {
+          height: 200vh;
+          position: relative;
+        }
+
+        .sticky-block:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 20px;
+          background: hotpink;
+          height: 100vh;
+        }
+
+        .sticky-block__target {
+          position: sticky;
+          top: 0;
+        }
+      }
+    }
+
+    @media all and (min-width: 928px) {
+      html {
+        font-size: 25px;
+      }
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <script>
+    ['animationstart', 'MSAnimationStart'].forEach(function (evname) {
+      document.addEventListener(evname, function (e) {
+        if (e.animationName === 'video-listener') {
+          videoplay(e.target);
+        }
+      })
+    })
+
+    function videoplay(con) {
+
+      function canplay() {
+        image.setAttribute('data-playing', true);
+      }
+
+      var video = con.querySelector('video');
+      var image = con.querySelector('img');
+
+      video.oncanplay = canplay;
+
+      if (window.matchMedia("(min-width: " + (video.dataset.threshold) + ")").matches) {
+        video.src = video.dataset.largeSrc;
+      }
+
+      else {
+        video.src = video.dataset.smallSrc;
+      }
+
+    }
+
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="sticky-block">
+    <div class="video sticky-block__target">
+      <div class="video__item">
+        <picture>
+          <source srcset="city-small.jpg" media="(max-width: 600px)">
+          <source srcset="city.jpg" media="(min-width: 600px)">
+          <img src="city.jpg" alt="">
+        </picture>
+        <video playsinline muted preload loop data-small-src="city-small.mp4" data-large-src="city.mp4" data-threshold="600px"></video>
+      </div>
+      <div class="video__body" data-animate-in-view data-trigger="100">
+        <div class="video__body-text">
+          <h2>A headline for this content</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+  <script>
+
+    NodeList.prototype.forEach = Array.prototype.forEach;
+
+    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+    observer.observe(document.querySelector('.video'));
+    document.querySelectorAll('[data-trigger]').forEach(function (item) {
+      observer.observe(item);
+    });
+
+    function scan(entries, observer) {
+
+      entries.forEach(function (item) {
+
+        var ratio = 0.25;
+        var trigger = item.target.getAttribute('data-trigger');
+
+        if (item.target.classList.contains('video')) {
+          if (item.intersectionRatio > 0.1) {
+            playpause(item.target.querySelector('video'), true)
+          }
+
+          else {
+            playpause(item.target.querySelector('video'), false)
+          }
+        }
+
+        if (trigger) {
+          ratio = parseInt(trigger, 10) / 100;
+
+          if (item.isIntersecting || item.intersectionRatio > 0) {
+            console.log(item.intersectionRatio, ratio)
+            if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
+              observer.unobserve(item.target);
+              item.target.removeAttribute('data-animate-in-view');
+            }
+          }
+        }
+
+      })
+    }
+
+    function playpause(video, play) {
+
+      var isplaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+      var playpromise;
+      var promisesupported = ('Promise' in window);
+
+      if (play) {
+
+        if (!promisesupported) {
+          video.play()
+        }
+
+        else {
+
+          playpromise = video.play();
+
+          if (playpromise !== undefined) {
+            playpromise.then(function () {
+              video.play();
+            })
+              .catch(function () {
+                video.play();
+              });
+          }
+        }
+
+      }
+
+      else {
+        if (isplaying) {
+          video.pause();
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>

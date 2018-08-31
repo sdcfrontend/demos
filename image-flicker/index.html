@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-size: 18px;
+      font-family: sans-serif;
+      line-height: 1.4;
+    }
+
+    .block {
+      position: relative;
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 760px;
+      margin: 0 auto 0;
+      padding: 1em;
+    }
+
+    .img-flicker {
+      width: 40%;
+      min-width: 200px;
+      margin-left: 2vw;
+      top: 0;
+      margin-bottom: 1.5em;
+      position: relative;
+      z-index: 2
+    }
+
+    .img-flicker-list {
+      position: sticky;
+      top: 0;
+    }
+
+
+    .img-flicker-list>img {
+      width: 100%;
+      display: block;
+      display: none;
+      object-fit: cover
+    }
+
+    .img-flicker-list>img:first-child {
+      display: block
+    }
+
+    .text {
+      flex: 1;
+      position: relative;
+      z-index: 3
+    }
+
+    .text p {
+      margin-bottom: 1.5em;
+      position: relative;
+      z-index: 4
+    }
+
+    @media all and (max-width: 600px) {
+      .block {
+        display: block;
+        padding: 0;
+      }
+
+      .block .text {
+        padding: 1em;
+
+      }
+
+      .block[data-role="image-flicker"] {
+        color: #eee;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8)
+      }
+
+      .img-flicker {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        margin: 0;
+      }
+
+      .block[data-role="image-flicker"] .text:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.5)
+      }
+
+      .img-flicker-list {
+        position: relative;
+      }
+
+      .img-flicker img {
+        height: 100vh
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+        neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+        perspiciatis?
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+          neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+          perspiciatis?
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+            Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+            molestiae corporis perspiciatis?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+              Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+              molestiae corporis perspiciatis?
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                molestiae corporis perspiciatis?
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                  Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                  molestiae corporis perspiciatis?
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                    Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum
+                    tempora molestiae corporis perspiciatis?
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                      corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                      voluptatum tempora molestiae corporis perspiciatis?
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                        corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                        voluptatum tempora molestiae corporis perspiciatis?
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                          corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                          voluptatum tempora molestiae corporis perspiciatis?
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla
+                            ipsum corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id
+                            architecto voluptatum tempora molestiae corporis perspiciatis?
+    </div>
+
+  </div>
+  <div class="block" data-role="image-flicker">
+    <div class="img-flicker" data-role="flicker-images">
+      <div class="img-flicker-list">
+        <img src="https://www.reddbarna.no/historier/vinter/assets/TDjnXxAoEz/360-nepal-gutt_lkr1108-1791x2560.jpeg" alt="">
+        <img src="https://www.reddbarna.no/historier/vinter/assets/7kKEq7Bnce/360-nepal-gutt_lkr1109-1703x2560.jpeg" alt="">
+        <img src="https://www.reddbarna.no/historier/vinter/assets/Fsk7IAa1n5/360-nepal-gutt_lkr1110-1703x2560.jpeg" alt="">
+        <img src="https://www.reddbarna.no/historier/vinter/assets/EB8yfchjTu/360-nepal-gutt_lkr1111-1703x2560.jpeg" alt="">
+      </div>
+    </div>
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+        neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+        perspiciatis?
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+          neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+          perspiciatis?
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+            Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+            molestiae corporis perspiciatis?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+              Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+              molestiae corporis perspiciatis?
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                molestiae corporis perspiciatis?
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                  Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                  molestiae corporis perspiciatis?
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                    Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum
+                    tempora molestiae corporis perspiciatis?
+    </div>
+
+  </div>
+  <div class="block">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+        neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+        perspiciatis?
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis! Sapiente
+          neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora molestiae corporis
+          perspiciatis?
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+            Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+            molestiae corporis perspiciatis?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+              Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+              molestiae corporis perspiciatis?
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                molestiae corporis perspiciatis?
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                  Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum tempora
+                  molestiae corporis perspiciatis?
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum corporis!
+                    Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto voluptatum
+                    tempora molestiae corporis perspiciatis?
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                      corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                      voluptatum tempora molestiae corporis perspiciatis?
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                        corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                        voluptatum tempora molestiae corporis perspiciatis?
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla ipsum
+                          corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id architecto
+                          voluptatum tempora molestiae corporis perspiciatis?
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus perspiciatis dolorum nulla
+                            ipsum corporis! Sapiente neque necessitatibus cum. Eveniet, modi fugiat expedita laboriosam id
+                            architecto voluptatum tempora molestiae corporis perspiciatis?
+    </div>
+
+  </div>
+</body>
+
+<script>
+
+  var flickers = document.querySelectorAll('[data-role="image-flicker"]');
+
+  function tick(block, images) {
+
+    flickers.forEach(function (item) {
+      var images = item.querySelectorAll('.img-flicker img');
+      var dims = item.getBoundingClientRect();
+
+      var pc = ((100 / (dims.height - images[0].parentNode.offsetHeight)) * (dims.top) * -1);
+      pc = Math.max(pc, 0);
+      pc = Math.min(pc, 100);
+      pc = Math.floor(pc * images.length);
+      pc = Math.floor(pc / 100);
+      pc = Math.min(pc, images.length - 1);
+      console.log(pc);
+      show(images, pc);
+
+    });
+
+    setTimeout(function () {
+      requestAnimationFrame(tick);
+    }, 50);
+  }
+
+  tick();
+
+  function show(images, index) {
+    images.forEach(function (img) {
+      img.style.display = "none";
+    });
+
+    images[index].style.display = "block";
+  }
+
+</script>
+
+</html>
