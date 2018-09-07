@@ -1,0 +1,98 @@
+.sf-split-bar-list {
+  margin-bottom: 1.5rem;
+  font-family: premierleague
+}
+
+.sf-split-bar {
+  display: flex;
+  margin: 0.2rem 0;
+  width: 100%;
+}
+
+.sf-split-bar__cell {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  order: 3;
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-split-bar__header {
+  order: 2;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  margin: 0 3px;
+  font-size: 0.6rem;
+  color: #333;
+}
+
+.sf-split-bar__item {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  transition: transform 0.33s;
+  transform: translateX(0);
+}
+
+.sf-split-bar[data-animate-in-view]
+.sf-split-bar__cell--1
+.sf-split-bar__item {
+  transform: translateX(100%);
+}
+
+.sf-split-bar[data-animate-in-view]
+.sf-split-bar__cell--2
+.sf-split-bar__item {
+  transform: translateX(-100%);
+}
+
+.sf-split-bar__item-line {
+  height: 3px;
+  overflow: hidden;
+  background: white;
+  position: relative;
+  order: 2;
+  width: inherit
+}
+
+.sf-split-bar__item:before {
+  content: "";
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  order: 2;
+  display: block;
+}
+
+.sf-split-bar__item-text {
+  padding: 0 4px 0 0;
+  font-size: 0.7rem;
+}
+
+.sf-split-bar__cell+.sf-split-bar__cell .sf-split-bar__item-line {
+  order: 1
+}
+
+.sf-split-bar__cell+.sf-split-bar__cell .sf-split-bar__item-text {
+  order: 3;
+  padding: 0 0 0 4px
+}
+
+.sf-split-bar__cell--1 {
+  order: 1
+}
+
+.sf-split-bar__cell--1 
+.sf-split-bar__item {
+  justify-content: flex-end
+}

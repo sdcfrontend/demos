@@ -45,7 +45,126 @@
   <!--[if gte IE 9]><!-->
   <link rel="stylesheet" href="https://news.sky.com/styles/bundle-df5b25be13652bc31dce22e95ccc4bc2.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .sf-linebox {
+      position: relative;
+    }
 
+    .sf-linebox__line {
+      height: 400px;
+      position: relative;
+    }
+
+    .sf-linebox__line:after {
+      content: "";
+      width: 1px;
+      border-left: 2px solid black;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      max-height: 100%;
+      height: calc(100% - (var(--vptop) * 1.5%));
+    }
+
+    .sf-linebox__box {
+      height: 300px;
+      transition: border 0.33s;
+      position: relative;
+      background: #ffcc00;
+      transition: background 0.33s;
+      transition-delay: 0.666s;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sf-linebox__box--s2 {
+      background: olivedrab
+    }
+
+    .sf-linebox__box:before,
+    .sf-linebox__box:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      top: 0;
+      position: absolute;
+      left: 0;
+      transition: width 0.5s;
+      transition-delay: 0.2s;
+      background: black;
+    }
+
+    .sf-linebox__box:after {
+      top: auto;
+      bottom: 0;
+      right: 0;
+      left: auto;
+    }
+
+
+    .sf-linebox__box>span {
+      position: absolute;
+      bottom: 0;
+      border: 2px solid black;
+      height: 100%;
+      width: 100%;
+      border-top: 0;
+      border-bottom: 0;
+      transition: height 0.5s;
+      transition-delay: 0.1s
+    }
+
+    .sf-linebox__box[data-animate-in-view] {
+      background: white;
+    }
+
+    .sf-linebox__box[data-animate-in-view]>span {
+      height: 1px;
+    }
+
+    .sf-linebox__box[data-animate-in-view]:before,
+    .sf-linebox__box[data-animate-in-view]:after {
+      width: 1px;
+    }
+
+    .sf-linebox__box[data-animate-in-view] .sf-text-sfx {
+      opacity: 0;
+    }
+
+    .sf-text-sfx {
+      font-size: 4.2rem;
+      text-align: center;
+      color: white;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-color: black;
+      -webkit-text-stroke-width: 2px;
+      text-shadow: 3px 0 0px white, -3px 0 0px rgba(0, 0, 0, 0.3);
+      -webkit-background-clip: text;
+      transition: opacity 0.66s;
+      transition-delay: 0.33s
+    }
+
+    .sf-hr-line {
+      height: 0.25rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .sf-hr-line:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: calc(90% - ((var(--vptop) * 1%)));
+      max-width: 90%;
+      transform: translateX(-50%);
+      top: 100%;
+      left: 50%;
+      background: red;
+      border: 1px solid red;
+      pointer-events: none;
+    }
+  </style>
   <!--<![endif]-->
 
 
@@ -195,7 +314,9 @@
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <div class="sf-media"></div>
+          <div class="sf-media">
+            <iframe src="https://news.sky.com/iframe/widget/video/4408245" frameborder="0" scrolling="no"></iframe>
+          </div>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
@@ -209,11 +330,29 @@
       </div>
     </div>
 
+    <div class="sf-hr-line" data-track></div>
+
     <div class="sf-section-header" data-track>
       <div class="sf-section-header__body">
         <h2>Section header</h2>
       </div>
     </div>
+
+    <div class="sf-linebox site-wrap site-wrap-padding" data-track>
+      <div class="sf-linebox__line"></div>
+      <div class="sf-linebox__box" data-trigger="100" data-animate-in-view>
+        <span></span>
+        <h2 class="sf-text-sfx">TRUMP</h2>
+      </div>
+    </div>
+    <div class="sf-linebox site-wrap site-wrap-padding" data-track>
+      <div class="sf-linebox__line"></div>
+      <div class="sf-linebox__box sf-linebox__box--s2" data-trigger="100" data-animate-in-view>
+        <span></span>
+        <h2 class="sf-text-sfx">TRUMP</h2>
+      </div>
+    </div>
+
 
     <div class="sf-panel">
       <div class="site-wrap site-wrap-padding">
