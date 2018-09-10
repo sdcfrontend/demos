@@ -12,7 +12,12 @@
 }
 
 .sf-infostat__cell > *:not(:last-child) {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.sf-infostat__cell > h5 {
+  font-size: 0.7rem;
+  font-weight: 500
 }
 
 .sf-infostat__icon {

@@ -1,0 +1,57 @@
+.sf-h2h-scores {
+  color: white;
+}
+
+.sf-h2h-scores__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sf-h2h-scores__cell {
+  flex: 1;
+  padding: 0 0.1rem;
+  text-align: center
+}
+
+.sf-h2h-scores__match {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: rgba(0, 0, 0, 0.041);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.15rem;
+  font-size: 0.7rem;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+.sf-h2h-scores__match--draw {
+  background: white;
+  color: #222;
+}
+
+.sf-h2h-scores__match:hover {
+  text-decoration: none;
+}
+
+.sf-h2h-scores__badge {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+  background: #666;
+  position: relative;
+}
+
+.sf-h2h-scores__badge>img {
+  border-radius: 50%;
+}
+
+.sf-h2h-scores__number[class] {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+}

@@ -36,6 +36,7 @@
             else {
               item.target.playpause(item.target.querySelector('video'), false)
             }
+
           }
 
           else {

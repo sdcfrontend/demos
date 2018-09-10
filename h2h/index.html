@@ -30,41 +30,21 @@
       padding: 2vw;
     }
 
-    .h2h-scores {
+    .sf-h2h-scores {
       color: white;
     }
 
-    .h2h-scores__body {
+    .sf-h2h-scores__body {
       display: flex;
       flex-wrap: wrap;
     }
 
-    .h2h-scores__cell {
-      width: calc(100% / 3);
-      order: 2
+    .sf-h2h-scores__cell {
+      flex: 1;
+      padding: 0 0.1rem
     }
 
-    .h2h-scores__cell-head {
-      width: calc(100% / 3);
-      order: 1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 0 0 1rem;
-      flex-direction: column
-    }
-
-    .h2h-scores__cell-head>h5 {
-      font-size: 0.8rem;
-      font-weight: 500;
-      margin-bottom: 1rem;
-    }
-
-    .h2h-scores__cell:nth-child(4) {
-      padding: 0 0.2rem
-    }
-
-    .h2-scores__match {
+    .sf-h2h-scores__match {
       position: relative;
       width: 1.5rem;
       height: 1.5rem;
@@ -80,12 +60,12 @@
       border: 2px solid white;
     }
 
-    .h2-scores__match--draw {
+    .sf-h2h-scores__match--draw {
       background: white;
       color: #222;
     }
 
-    .h2h-scores__badge {
+    .sf-h2h-scores__badge {
       width: 4rem;
       height: 4rem;
       margin-bottom: 1rem;
@@ -93,164 +73,37 @@
       position: relative;
     }
 
-    .h2h-scores__badge>img {
+    .sf-h2h-scores__badge>img {
       border-radius: 50%;
     }
 
-    .h2h-scores__number[class] {
+    .sf-h2h-scores__number[class] {
       font-size: 2.5rem;
       color: white;
       text-align: center;
-    }
-
-    .sff-counter {
-      display: inline-flex;
-      font-size: 1em;
-    }
-
-    .sff-counter__cell {
-      font-size: 1em;
-      line-height: 0.8;
-      position: relative;
-      overflow: hidden;
-      letter-spacing: 1px;
-    }
-
-    .sff-counter__cell[data-number]>span {
-      visibility: hidden
-    }
-
-    .sff-counter__cell[data-number]:after {
-      content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A";
-      display: block;
-      word-break: break-all;
-      text-align: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: transform 1s ease-in-out;
-      transition-delay: 0.25s;
-      will-change: transform;
-    }
-
-    .sff-counter[data-animate-in-view] .sff-counter__cell:after {
-      transform: translateY(10%)
-    }
-
-    .sff-counter__cell[data-number="0"]:after {
-      transform: translateY(0%)
-    }
-
-    .sff-counter__cell[data-number="1"]:after {
-      transform: translateY(-10%)
-    }
-
-    .sff-counter__cell[data-number="2"]:after {
-      transform: translateY(-20%)
-    }
-
-    .sff-counter__cell[data-number="3"]:after {
-      transform: translateY(-30%)
-    }
-
-    .sff-counter__cell[data-number="4"]:after {
-      transform: translateY(-40%)
-    }
-
-    .sff-counter__cell[data-number="5"]:after {
-      transform: translateY(-50%)
-    }
-
-    .sff-counter__cell[data-number="6"]:after {
-      transform: translateY(-60%)
-    }
-
-    .sff-counter__cell[data-number="7"]:after {
-      transform: translateY(-70%)
-    }
-
-    .sff-counter__cell[data-number="8"]:after {
-      transform: translateY(-80%)
-    }
-
-    .sff-counter__cell[data-number="9"]:after {
-      transform: translateY(-90%)
-    }
-
-    .sff-counter__cell[data-text]>span {
-      letter-spacing: 0
-    }
-
-    .sff-counter__cell[data-text="small"]>span {
-      font-size: 0.6em
-    }
-
-    .animate--zip {
-      transition: transform 0.166s;
-      will-change: transform;
-      transform: scale(0.9999)
-    }
-
-    .animate--zip[data-animate-in-view] {
-      transform: scale(0.1)
     }
   </style>
 </head>
 
 <body>
 
-  <div class="h2h-scores">
-    <div class="h2h-scores__inner">
-      <div class="h2h-scores__body">
+  <div class="sf-h2h-scores">
+    <div class="sf-h2h-scores__inner">
+      <div class="sf-h2h-scores__body">
 
-
-        <div class="h2h-scores__cell-head">
-          <div class="h2h-scores__badge animate--zip" data-animate-in-view></div>
-          <div class="sff-counter h2h-scores__number" data-trigger="100" data-animate-in-view>
-            <div class="sff-counter__cell" data-number="1">
-              <span>1</span>
-            </div>
-            <div class="sff-counter__cell" data-number="1">
-              <span>1</span>
-            </div>
-
-          </div>
+        <div class="sf-h2h-scores__cell">
         </div>
-        <div class="h2h-scores__cell">
-        </div>
-        <div class="h2h-scores__cell-head">
-          <h5>draw</h5>
-          <div class="sff-counter h2h-scores__number" data-trigger="100" data-animate-in-view>
-            <div class="sff-counter__cell" data-number="2">
-              <span>2</span>
-            </div>
-            <div class="sff-counter__cell" data-number="1">
-              <span>1</span>
-            </div>
 
-          </div>
-        </div>
-        <div class="h2h-scores__cell"></div>
-        <div class="h2h-scores__cell-head">
-          <div class="h2h-scores__badge animate--zip" data-animate-in-view></div>
-          <div class="sff-counter h2h-scores__number" data-trigger="100" data-animate-in-view>
-            <div class="sff-counter__cell" data-number="1">
-              <span>1</span>
-            </div>
-            <div class="sff-counter__cell" data-number="8">
-              <span>8</span>
-            </div>
+        <div class="sf-h2h-scores__cell"></div>
 
-          </div>
-        </div>
-        <div class="h2h-scores__cell"></div>
+        <div class="sf-h2h-scores__cell"></div>
       </div>
     </div>
   </div>
   <script>
     var data = { "Tottenham": [{ "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 3 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 0 }], "Arsenal": [{ "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 0, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 5, "awayscore": 2 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 5, "awayscore": 2 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 3, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 3 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 3, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 4, "awayscore": 5 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 3, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 2, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 3 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 3, "awayscore": 1 }], "draw": [{ "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 2 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 3, "awayscore": 3 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 0, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 4, "awayscore": 4 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 2 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 2, "awayscore": 2 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 1 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 0, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 1, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 0, "awayscore": 0 }, { "home": "Tottenham", "away": "Arsenal", "homescore": 0, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 0, "awayscore": 0 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }, { "home": "Arsenal", "away": "Tottenham", "homescore": 1, "awayscore": 1 }] }
 
-    var cells = document.querySelectorAll('.h2h-scores__cell');
+    var cells = document.querySelectorAll('.sf-h2h-scores__cell');
 
     function create(data, el, classname) {
 
@@ -261,7 +114,7 @@
         item.href = "#";
         item.dataset.animateInView = "";
         item.dataset.trigger = "100";
-        item.className = 'h2-scores__match animate--zip' + (classname ? ' h2-scores__match--' + classname : '');
+        item.className = 'sf-h2h-scores__match sf-animate-zoom' + (classname ? ' sf-h2h-scores__match--' + classname : '');
         item.textContent = [match.homescore, match.awayscore].join('-');
 
         frag.appendChild(item);
@@ -272,16 +125,16 @@
 
     }
 
-    create(data.Tottenham, cells[0]);
+    create(data.Arsenal, cells[0]);
     create(data.draw, cells[1], 'draw');
-    create(data.Arsenal, cells[2]);
+    create(data.Tottenham, cells[2]);
 
 
-    document.querySelectorAll('[data-animate-in-view]').forEach(function (counter) {
-      setInterval(function () {
-        counter.removeAttribute('data-animate-in-view');
-      }, 100);
-    })
+    // document.querySelectorAll('[data-animate-in-view]').forEach(function (counter) {
+    //   setInterval(function () {
+    //     counter.removeAttribute('data-animate-in-view');
+    //   }, 100);
+    // })
   </script>
 </body>
 
