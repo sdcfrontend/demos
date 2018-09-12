@@ -1,0 +1,128 @@
+.sf-timelist {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: inherit;
+}
+
+.sf-timelist__header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  background: #393939;
+}
+
+.sf-timelist__header-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.sf-timelist__header-list-item {
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: 400
+}
+
+.sf-timelist__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-timelist__block {
+  position: relative;
+  padding: 1em;
+  width: calc(50% - 10px);
+  will-change: transform;
+  transition: transform 0.33s, opacity 0.166s;
+  transform: translateX(0);
+  opacity: 1
+}
+
+.sf-timelist__block[data-animate-in-view]{
+  opacity: 0;
+  transform: translateX(-25%)
+}
+
+.sf-timelist__block-s2[data-animate-in-view] {
+  transform: translateX(25%)
+}
+
+
+.sf-timelist__block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  line-height: 1;
+}
+
+.sf-timelist__block p {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2
+}
+
+.sf-timelist__icon {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #fff;
+  display: inline-block;
+  margin-bottom: .1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-timelist__icon > img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.sf-timelist__block-s1 {
+  text-align: right;
+  align-self: flex-start;
+}
+
+.sf-timelist__block-s1:after {
+  content: "";
+  grid-column:2;
+  position: absolute;
+  background: red;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+
+.sf-timelist__block-s2:after {
+  content: "";
+  grid-column:2;
+  position: absolute;
+  background: blue;
+  right: 100%;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+
+.sf-timelist__block-s2 {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.sf-timelist__block-change {
+  margin-bottom: 8px
+}
+
+.sf-timelist__block-change:after {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sf-timelist__block-change + 
+.sf-timelist__block:after {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}

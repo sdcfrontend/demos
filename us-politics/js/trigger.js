@@ -22,13 +22,15 @@
 
           // if we want to trigger a function
           if (item.target.start && !item.target.init) {
-            observer.unobserve(item.target);
+            // observer.unobserve(item.target);
             item.target.start();
-            item.target.init = true;
+
+            // do this in the attached function
+            // item.target.init = true;
           }
 
           //if we want to play/pause a video
-          else if (item.target.playpause) {
+          if (item.target.playpause) {
             if (item.intersectionRatio > 0.1) {
               item.target.playpause(item.target.querySelector('video'), true)
             }
@@ -38,10 +40,9 @@
             }
           }
 
-          else {
+          if (item.target.hasAttribute('data-animate-in-view')) {
             observer.unobserve(item.target);
             item.target.removeAttribute('data-animate-in-view');
-
           }
         }
       }

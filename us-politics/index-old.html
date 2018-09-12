@@ -45,7 +45,126 @@
   <!--[if gte IE 9]><!-->
   <link rel="stylesheet" href="https://news.sky.com/styles/bundle-df5b25be13652bc31dce22e95ccc4bc2.css">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .sf-linebox {
+      position: relative;
+    }
 
+    .sf-linebox__line {
+      height: 400px;
+      position: relative;
+    }
+
+    .sf-linebox__line:after {
+      content: "";
+      width: 1px;
+      border-left: 2px solid black;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      max-height: 100%;
+      height: calc(100% - (var(--vptop) * 1.5%));
+    }
+
+    .sf-linebox__box {
+      height: 300px;
+      transition: border 0.33s;
+      position: relative;
+      background: #ffcc00;
+      transition: background 0.33s;
+      transition-delay: 0.666s;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sf-linebox__box--s2 {
+      background: olivedrab
+    }
+
+    .sf-linebox__box:before,
+    .sf-linebox__box:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      top: 0;
+      position: absolute;
+      left: 0;
+      transition: width 0.5s;
+      transition-delay: 0.2s;
+      background: black;
+    }
+
+    .sf-linebox__box:after {
+      top: auto;
+      bottom: 0;
+      right: 0;
+      left: auto;
+    }
+
+
+    .sf-linebox__box>span {
+      position: absolute;
+      bottom: 0;
+      border: 2px solid black;
+      height: 100%;
+      width: 100%;
+      border-top: 0;
+      border-bottom: 0;
+      transition: height 0.5s;
+      transition-delay: 0.1s
+    }
+
+    .sf-linebox__box[data-animate-in-view] {
+      background: white;
+    }
+
+    .sf-linebox__box[data-animate-in-view]>span {
+      height: 1px;
+    }
+
+    .sf-linebox__box[data-animate-in-view]:before,
+    .sf-linebox__box[data-animate-in-view]:after {
+      width: 1px;
+    }
+
+    .sf-linebox__box[data-animate-in-view] .sf-text-sfx {
+      opacity: 0;
+    }
+
+    .sf-text-sfx {
+      font-size: 4.2rem;
+      text-align: center;
+      color: white;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-color: black;
+      -webkit-text-stroke-width: 2px;
+      text-shadow: 3px 0 0px white, -3px 0 0px rgba(0, 0, 0, 0.3);
+      -webkit-background-clip: text;
+      transition: opacity 0.66s;
+      transition-delay: 0.33s
+    }
+
+    .sf-hr-line {
+      height: 0.25rem;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .sf-hr-line:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: calc(90% - ((var(--vptop) * 1%)));
+      max-width: 90%;
+      transform: translateX(-50%);
+      top: 100%;
+      left: 50%;
+      background: red;
+      border: 1px solid red;
+      pointer-events: none;
+    }
+  </style>
   <!--<![endif]-->
 
 
@@ -174,24 +293,7 @@
   <div class="sf-feature-wrap">
 
 
-    <div class="sf-hero" data-animate-in-view data-trigger="25">
-      <div class="sf-hero__wings">
-        <div class="sf-hero__wing sf-hero__wing--1"></div>
-        <div class="sf-hero__wing sf-hero__wing--2"></div>
-      </div>
-
-      <div class="sf-hero__body">
-        <h1 class="sf-hero__headline">
-          <span class="sf-hero__headline-cell sf-hero__headline-cell--1">
-            <span class="sf-hero__headline-cell-text">Divided</span>
-          </span>
-          <span class="sf-hero__headline-cell sf-hero__headline-cell--2">
-            <span class="sf-hero__headline-cell-text">States</span>
-          </span>
-        </h1>
-      </div>
-
-    </div>
+    <div class="sf-hero">Divided States</div>
 
     <div class="sf-panel">
       <div class="site-wrap site-wrap-padding">
@@ -206,9 +308,9 @@
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <!-- <div class="sf-media">
+          <div class="sf-media">
             <iframe src="https://news.sky.com/iframe/widget/video/4408245" frameborder="0" scrolling="no"></iframe>
-          </div> -->
+          </div>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
@@ -221,23 +323,6 @@
         </div>
       </div>
     </div>
-
-    <div class="sf-sticky-block">
-
-      <div class="sf-fact-fx sf-sticky-block__target" data-track>
-        <div class="sf-fact-fx__slides">
-
-          <div class="sf-fact-fx__body">
-            <p class="sf-fact-fx__text site-wrap site-wrap-padding">Trump's Presidency more polarising than any since Richard Nixon</p>
-          </div>
-          <img class="sf-fact-fx__image sf-fact-fx__image--2" src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg">
-          <img class="sf-fact-fx__image sf-fact-fx__image--1" src="https://mediadc.brightspotcdn.com/dims4/default/bf14702/2147483647/strip/true/crop/2290x1322+0+0/resize/2290x1322!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F91%2F63%2F88ccc6947fea7682c3e4ffd8c9c9%2Ff75e33f9c58f2ed19615c33724860877.jpg">
-        </div>
-      </div>
-
-    </div>
-
-
 
     <div class="sf-panel sf-panel--invert">
       <div class="site-wrap site-wrap-padding">
@@ -261,7 +346,7 @@
 
           </div>
           <div class="sf-timelist__body">
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="1">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="1">
               <h3>Abraham Lincoln</h3>
               <p>March 4, 1861 – April 15, 1865</p>
 
@@ -269,7 +354,7 @@
                 <img src="assets/images/presidents/abraham-lincoln.jpg" alt="Abraham Lincoln">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="1">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="1">
               <h3>Andrew Johnson</h3>
               <p>April 15, 1865 – March 4, 1869</p>
 
@@ -277,7 +362,7 @@
                 <img src="assets/images/presidents/andrew-johnson.jpg" alt="Andrew Johnson">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="2">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="2">
               <h3>Ulysses S. Grant</h3>
               <p>March 4, 1869 – March 4, 1877</p>
 
@@ -285,7 +370,7 @@
                 <img src="assets/images/presidents/ulysses-s-grant.jpg" alt="Ulysses S. Grant">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="3">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="3">
               <h3>Rutherford B. Hayes</h3>
               <p>March 4, 1877 – March 4, 1881</p>
 
@@ -293,7 +378,7 @@
                 <img src="assets/images/presidents/rutherford-b-hayes.jpg" alt="Rutherford B. Hayes">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="4">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="4">
               <h3>James A. Garfield</h3>
               <p>March 4, 1881 – September 19, 1881</p>
 
@@ -301,7 +386,7 @@
                 <img src="assets/images/presidents/james-a-garfield.jpg" alt="James A. Garfield">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="5">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="5">
               <h3>Chester A. Arthur</h3>
               <p>September 19, 1881[p] – March 4, 1885</p>
 
@@ -309,7 +394,7 @@
                 <img src="assets/images/presidents/chester-a-arthur.jpg" alt="Chester A. Arthur">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="2">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="2">
               <h3>Grover Cleveland</h3>
               <p>March 4, 1885 – March 4, 1889</p>
 
@@ -317,7 +402,7 @@
                 <img src="assets/images/presidents/grover-cleveland.jpg" alt="Grover Cleveland">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="6">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="6">
               <h3>Benjamin Harrison</h3>
               <p>March 4, 1889 – March 4, 1893</p>
 
@@ -325,7 +410,7 @@
                 <img src="assets/images/presidents/benjamin-harrison.jpg" alt="Benjamin Harrison">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="3">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="3">
               <h3>Grover Cleveland</h3>
               <p>March 4, 1893 – March 4, 1897</p>
 
@@ -333,7 +418,7 @@
                 <img src="assets/images/presidents/grover-cleveland.jpg" alt="Grover Cleveland">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="7">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="7">
               <h3>William McKinley</h3>
               <p>March 4, 1897 – September 14, 1901</p>
 
@@ -341,7 +426,7 @@
                 <img src="assets/images/presidents/william-mckinley.jpg" alt="William McKinley">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="8">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="8">
               <h3>Theodore Roosevelt</h3>
               <p>September 14, 1901 – March 4, 1909</p>
 
@@ -349,7 +434,7 @@
                 <img src="assets/images/presidents/theodore-roosevelt.jpg" alt="Theodore Roosevelt">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="9">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="9">
               <h3>William Howard Taft</h3>
               <p>March 4, 1909 – March 4, 1913</p>
 
@@ -357,7 +442,7 @@
                 <img src="assets/images/presidents/william-howard-taft.jpg" alt="William Howard Taft">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="4">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="4">
               <h3>Woodrow Wilson</h3>
               <p>March 4, 1913 – March 4, 1921</p>
 
@@ -365,7 +450,7 @@
                 <img src="assets/images/presidents/woodrow-wilson.jpg" alt="Woodrow Wilson">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="10">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="10">
               <h3>Warren G. Harding</h3>
               <p>March 4, 1921 – August 2, 1923</p>
 
@@ -373,7 +458,7 @@
                 <img src="assets/images/presidents/warren-g-harding.jpg" alt="Warren G. Harding">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="11">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="11">
               <h3>Calvin Coolidge</h3>
               <p>August 2, 1923[q] – March 4, 1929</p>
 
@@ -381,7 +466,7 @@
                 <img src="assets/images/presidents/calvin-coolidge.jpg" alt="Calvin Coolidge">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="12">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="12">
               <h3>Herbert Hoover</h3>
               <p>March 4, 1929 – March 4, 1933</p>
 
@@ -389,7 +474,7 @@
                 <img src="assets/images/presidents/herbert-hoover.jpg" alt="Herbert Hoover">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="5">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="5">
               <h3>Franklin D. Roosevelt</h3>
               <p>March 4, 1933 – April 12, 1945</p>
 
@@ -397,7 +482,7 @@
                 <img src="assets/images/presidents/franklin-d-roosevelt.jpg" alt="Franklin D. Roosevelt">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="6">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="6">
               <h3>Harry S. Truman</h3>
               <p>April 12, 1945 – January 20, 1953</p>
 
@@ -405,7 +490,7 @@
                 <img src="assets/images/presidents/harry-s-truman.jpg" alt="Harry S. Truman">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="13">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="13">
               <h3>Dwight D. Eisenhower</h3>
               <p>January 20, 1953 – January 20, 1961</p>
 
@@ -413,7 +498,7 @@
                 <img src="assets/images/presidents/dwight-d-eisenhower.jpg" alt="Dwight D. Eisenhower">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="7">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="7">
               <h3>John F. Kennedy</h3>
               <p>January 20, 1961 – November 22, 1963</p>
 
@@ -421,7 +506,7 @@
                 <img src="assets/images/presidents/john-f-kennedy.jpg" alt="John F. Kennedy">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="8">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="8">
               <h3>Lyndon B. Johnson</h3>
               <p>November 22, 1963 – January 20, 1969</p>
 
@@ -429,7 +514,7 @@
                 <img src="assets/images/presidents/lyndon-b-johnson.jpg" alt="Lyndon B. Johnson">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="14">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="14">
               <h3>Richard Nixon</h3>
               <p>January 20, 1969 – August 9, 1974)</p>
 
@@ -437,7 +522,7 @@
                 <img src="assets/images/presidents/richard-nixon.jpg" alt="Richard Nixon">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="15">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="15">
               <h3>Gerald Ford</h3>
               <p>August 9, 1974 – January 20, 1977</p>
 
@@ -445,7 +530,7 @@
                 <img src="assets/images/presidents/gerald-ford.jpg" alt="Gerald Ford">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="9">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="9">
               <h3>Jimmy Carter</h3>
               <p>January 20, 1977 – January 20, 1981</p>
 
@@ -453,7 +538,7 @@
                 <img src="assets/images/presidents/jimmy-carter.jpg" alt="Jimmy Carter">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="16">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="16">
               <h3>Ronald Reagan</h3>
               <p>January 20, 1981 – January 20, 1989</p>
 
@@ -461,7 +546,7 @@
                 <img src="assets/images/presidents/ronald-reagan.jpg" alt="Ronald Reagan">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="17">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="17">
               <h3>George H. W. Bush</h3>
               <p>January 20, 1989 – January 20, 1993</p>
 
@@ -469,7 +554,7 @@
                 <img src="assets/images/presidents/george-h-w-bush.jpg" alt="George H. W. Bush">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="10">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="10">
               <h3>Bill Clinton</h3>
               <p>January 20, 1993 – January 20, 2001</p>
 
@@ -477,7 +562,7 @@
                 <img src="assets/images/presidents/bill-clinton.jpg" alt="Bill Clinton">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="18">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="18">
               <h3>George W. Bush</h3>
               <p>January 20, 2001 – January 20, 2009</p>
 
@@ -485,7 +570,7 @@
                 <img src="assets/images/presidents/george-w-bush.jpg" alt="George W. Bush">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s2" data-number-dem="11">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s2" data-number-dem="11">
               <h3>Barack Obama</h3>
               <p>January 20, 2009 – January 20, 2017</p>
 
@@ -493,7 +578,7 @@
                 <img src="assets/images/presidents/barack-obama.jpg" alt="Barack Obama">
               </div>
             </div>
-            <div data-trigger="75" data-animate-in-view class="sf-timelist__block sf-timelist__block-s1" data-number-rep="19">
+            <div data-animate-in-view data-trigger="75" class="sf-timelist__block sf-timelist__block-s1" data-number-rep="19">
               <h3>Donald Trump</h3>
               <p>January 20, 2017 – Incumbent</p>
 
@@ -508,19 +593,6 @@
     </div>
 
 
-
-    <div class="sf-mini-quiz" data-id="330|33">
-      <div class="sf-mini-quiz__inner site-wrap site-wrap-padding">
-        <p class="sf-mini-quiz__question">Hillary Clinton received more votes than Donald Trump in the 2016 presidential election</p>
-        <div class="sf-mini-quiz__answers">
-          <a href="#" class="sf-mini-quiz__answer">True</a>
-          <a href="#" class="sf-mini-quiz__answer">False</a>
-        </div>
-        <p class="sf-mini-quiz__desc" data-text="Th∑∂∞⅔√w∑¿∂w∞√∂∞⅔√w∑¿∂†h¿∑∑!"></p>
-      </div>
-    </div>
-
-
     <div class="sf-section-header" data-track>
       <div class="sf-section-header__body">
         <h2>Trump - Divider in Chief</h2>
@@ -530,131 +602,88 @@
         alt="" class="sf-section-header__image">
     </div>
 
+
+    <div class="sf-hr-line" data-track></div>
+
+    <div class="sf-section-header" data-track>
+      <div class="sf-section-header__body">
+        <h2>Section header</h2>
+      </div>
+    </div>
+
+    <div class="sf-linebox site-wrap site-wrap-padding" data-track>
+      <div class="sf-linebox__line"></div>
+      <div class="sf-linebox__box" data-trigger="100" data-animate-in-view>
+        <span></span>
+        <h2 class="sf-text-sfx">TRUMP</h2>
+      </div>
+    </div>
+    <div class="sf-linebox site-wrap site-wrap-padding" data-track>
+      <div class="sf-linebox__line"></div>
+      <div class="sf-linebox__box sf-linebox__box--s2" data-trigger="100" data-animate-in-view>
+        <span></span>
+        <h2 class="sf-text-sfx">TRUMP</h2>
+      </div>
+    </div>
+
+
     <div class="sf-panel">
       <div class="site-wrap site-wrap-padding">
-        <div class="sf-text">
-          <h3>Header</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet
-            <a href="">consectetur adipisicing</a> elit. Minima molestiae ea impedit quo provident voluptas aliquam, non adipisci a!
-            Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+        <div class="test sf-animate-zoom" data-trigger="100" data-animate-in-view></div>
+      </div>
+    </div>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
+
+    <div class="sf-sticky-block">
+      <div class="sf-sticky-video sf-sticky-block__target" data-trigger="0" data-sticky-video>
+        <div class="sf-sticky-video__item">
+          <picture>
+            <source srcset="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" media="(max-width:
+                  600px)">
+            <source srcset="https://e3.365dm.com/18/08/1600x1200/skynews-donald-trump-white-house_4403478.jpg" media="(min-width:
+                  600px)">
+            <img src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" alt="">
+          </picture>
+          <video playsinline muted preload loop data-small-src="assets/video/balotelli.mp4" data-large-src="assets/video/balotelli.mp4"
+            data-threshold="600px"></video>
+          <div class="sf-loader" data-loader></div>
+        </div>
+        <div class="sf-sticky-video__body" data-animate-in-view data-trigger="100">
+          <div class="sf-sticky-video__body-text site-wrap site-wrap-padding">
+            <h2>A headline for this content</h2>
+          </div>
         </div>
       </div>
     </div>
 
-
-
-    <div class="sf-section-header" data-track>
-      <div class="sf-section-header__body">
-        <h2>Gun Control</h2>
-      </div>
-      <img src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" srcset="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg
-      800w, https://e3.365dm.com/18/08/1600x1200/skynews-donald-trump-white-house_4403478.jpg 1200w, https://e3.365dm.com/18/08/2048x1536/skynews-donald-trump-white-house_4403478.jpg"
-        alt="" class="sf-section-header__image">
-    </div>
-
-
     <div class="sf-panel">
       <div class="site-wrap site-wrap-padding">
         <div class="sf-text">
-          <h3>Header</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet
             <a href="">consectetur adipisicing</a> elit. Minima molestiae ea impedit quo provident voluptas aliquam, non adipisci a!
             Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="sf-section-header" data-track>
-      <div class="sf-section-header__body">
-        <h2>Immigration</h2>
-      </div>
-      <img src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" srcset="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg
-      800w, https://e3.365dm.com/18/08/1600x1200/skynews-donald-trump-white-house_4403478.jpg 1200w, https://e3.365dm.com/18/08/2048x1536/skynews-donald-trump-white-house_4403478.jpg"
-        alt="" class="sf-section-header__image">
-    </div>
-
-
-    <div class="sf-panel">
-      <div class="site-wrap site-wrap-padding">
-        <div class="sf-text">
           <h3>Header</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet
-            <a href="">consectetur adipisicing</a> elit. Minima molestiae ea impedit quo provident voluptas aliquam, non adipisci a!
-            Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
+            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
+          <div class="sf-media"></div>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="sf-section-header" data-track>
-      <div class="sf-section-header__body">
-        <h2>Abortion</h2>
-      </div>
-      <img src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" srcset="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg
-      800w, https://e3.365dm.com/18/08/1600x1200/skynews-donald-trump-white-house_4403478.jpg 1200w, https://e3.365dm.com/18/08/2048x1536/skynews-donald-trump-white-house_4403478.jpg"
-        alt="" class="sf-section-header__image">
-    </div>
-
-
-    <div class="sf-panel">
-      <div class="site-wrap site-wrap-padding">
-        <div class="sf-text">
-          <h3>Header</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet
-            <a href="">consectetur adipisicing</a> elit. Minima molestiae ea impedit quo provident voluptas aliquam, non adipisci a!
-            Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="sf-section-header" data-track>
-      <div class="sf-section-header__body">
-        <h2>Healthcare</h2>
-      </div>
-      <img src="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg" srcset="https://e3.365dm.com/18/08/750x563/skynews-donald-trump-white-house_4403478.jpg
-      800w, https://e3.365dm.com/18/08/1600x1200/skynews-donald-trump-white-house_4403478.jpg 1200w, https://e3.365dm.com/18/08/2048x1536/skynews-donald-trump-white-house_4403478.jpg"
-        alt="" class="sf-section-header__image">
-    </div>
-
-
-    <div class="sf-panel">
-      <div class="site-wrap site-wrap-padding">
-        <div class="sf-text">
-          <h3>Header</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
-            non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-          <p>Lorem ipsum, dolor sit amet
-            <a href="">consectetur adipisicing</a> elit. Minima molestiae ea impedit quo provident voluptas aliquam, non adipisci a!
-            Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-
+          <h4>Header</h4>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
             non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas aliquam,
@@ -667,22 +696,11 @@
 
   <!-- END -->
   <script>
-
-    var repcount = document.querySelector('[data-role="number-count-rep"]');
-    var demcount = document.querySelector('[data-role="number-count-dem"]')
     document.querySelectorAll('.sf-timelist__block').forEach(function (item) {
 
       item.start = function () {
         var rep = this.getAttribute('data-number-rep');
         var dem = this.getAttribute('data-number-dem');
-
-        if (rep) {
-          repcount.textContent = rep;
-        }
-
-        if (dem) {
-          demcount.textContent = dem;
-        }
       }
     })
 
@@ -690,7 +708,6 @@
   <script src="js/sticky-video.js"></script>
   <script src="js/track.js"></script>
   <script src="js/trigger.js"></script>
-  <script src="js/mini-quiz.js"></script>
 
   <div class="sdc-news-footer" data-component-name="sdc-news-footer">
     <div class="sdc-news-footer__wrapper">

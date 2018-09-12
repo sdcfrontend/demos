@@ -1,0 +1,115 @@
+.sf-hero {
+  background: linear-gradient(to right, crimson 0%, crimson 50%, midnightblue 50%, midnightblue 100%);
+  color: white;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-height: calc(100vh - 139px);
+  position: relative;
+}
+
+.sf-hero:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(../assets/images/trump.png) no-repeat;
+  background-position: 50% top;
+  background-size: auto 200%;
+  z-index: 1;
+  mix-blend-mode: soft-light;
+  filter: contrast(2) brightness(2) grayscale(1);
+
+}
+
+.sf-hero:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.sf-hero__wings,
+.sf-hero__body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center
+}
+
+.sf-hero__body {
+  z-index: 2;
+}
+
+.sf-hero__wings {
+  z-index: 3
+}
+
+.sf-hero__wing {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag-map_of_the_United_States.svg) #333;
+  background-size: 200% 100%;
+  flex: 1;
+  transition: transform 0.66s;
+  will-change: transform;
+  transition-delay: 0.5s;
+  transform: translateX(-100%);
+  height: 100%;
+  width: 50%;
+}
+
+.sf-hero__wing--2 {
+  transform: translateX(100%)
+}
+
+.sf-hero[data-animate-in-view]
+.sf-hero__wing {
+  transform: translateX(0%)
+}
+
+.sf-hero__wing--2 {
+  background-position: right 0;
+}
+
+.sf-hero__headline {
+  font-size: calc(2.3rem + 1.6vmin);
+  font-weight: 500;
+  display: flex;
+  width: 100%;
+}
+
+.sf-hero__headline-cell {
+  flex: 1;
+  padding: 0 0.15rem;
+  text-align: right;
+  overflow: hidden;
+  position: relative
+}
+
+.sf-hero__headline-cell--2 {
+  text-align: left;
+}
+
+.sf-hero__headline-cell-text {
+  transition: transform 0.66s;
+  will-change: transform;
+  transition-delay: 0.45s;
+  display: block;
+  transform: translateX(0);
+}
+
+.sf-hero[data-animate-in-view]
+.sf-hero__headline-cell-text {
+  transform: translateX(100%)
+}
+.sf-hero[data-animate-in-view]
+.sf-hero__headline-cell--2
+.sf-hero__headline-cell-text {
+  transform: translateX(-100%)
+}

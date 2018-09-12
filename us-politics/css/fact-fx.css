@@ -1,0 +1,49 @@
+.sf-fact-fx {
+  position: relative;
+  top: 0;
+  height: 200vh;
+  background: black;
+}
+
+.sf-fact-fx__slides {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.sf-fact-fx__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: rgba(0,0,0,0.1);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 3
+}
+
+.sf-fact-fx__image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sf-fact-fx__image--1 {
+  opacity: calc(1 + (var(--vptop) / 100));
+}
+
+.sf-fact-fx__text[class] {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  max-width: 680px;
+  text-shadow: 1px 1px 1px black
+}

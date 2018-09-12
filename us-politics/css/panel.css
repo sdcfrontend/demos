@@ -5,3 +5,12 @@
 .sf-panel--no-padding {
   padding: 0
 }
+
+.sf-panel--invert {
+  background: linear-gradient(180deg,#3a3a3a 0,#2b2b2b);
+  color: white
+}
+
+.sf-panel--split-dr {
+  
+}

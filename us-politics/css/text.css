@@ -14,16 +14,19 @@
 
 .sf-text h3 {
   font-size: 1.5rem;
-  font-weight: 500;
-  padding-top: 0.5em;
+  font-weight: 400;
   line-height: 1
 }
 
 .sf-text h4 {
   font-size: 1.2rem;
-  font-weight: 500;
-  padding-top: 0.5em;
+  font-weight: 400;
   line-height: 1
+}
+
+.sf-text p + h4,
+.sf-text p + h3 {
+  padding-top: 0.5em;
 }
 
 .sf-text a {
@@ -48,4 +51,10 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.sf-text-credit {
+  font-size: 14px;
+  color: inherit;
+  text-align: center
 }

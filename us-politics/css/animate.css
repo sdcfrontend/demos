@@ -2,7 +2,6 @@
   transition: transform 0.33s;
   will-change: transform;
   transform: scale(0.999);
-  transition-delay: 0.333s
 }
 
 .sf-animate-zoom[data-animate-in-view] {
