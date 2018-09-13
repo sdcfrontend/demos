@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    body {
+      background: #eee;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px;
+    }
+
+    .slides-wrap {
+      position: relative;
+
+      height: 100vh;
+
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      position: sticky;
+      top: 0;
+      background: white;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      mix-blend-mode: darken
+    }
+
+    .slide:after {
+      content: "";
+      padding-bottom: 85%;
+      display: block
+    }
+
+    .slide svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .links {
+      text-align: center;
+      font-size: 20px;
+      font-family: sans-serif
+    }
+
+    .links a {
+      text-decoration: none;
+      color: black
+    }
+
+    .links a[aria-current] {
+      font-weight: bold;
+    }
+
+    .slides__line {
+      position: absolute;
+      width: 3px;
+      background: #b1b1b1;
+      height: 100%;
+      left: 50%;
+      z-index: 5;
+      transition: left 0.33s
+    }
+
+    .slides__line--2 {
+      left: 60%
+    }
+
+    [data-year="1"] .slides__line--1 {
+      left: 40%
+    }
+
+    [data-year="1"] .slides__line--2 {
+      left: 47%
+    }
+
+    [data-year="2"] .slides__line--1 {
+      left: 20%
+    }
+
+    [data-year="2"] .slides__line--2 {
+      left: 64%
+    }
+  </style>
+</head>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="links">
+    <a href="#" data-step="0" aria-current>1994</a> |
+    <a href="#" data-step="1">2004</a> |
+    <a href="#" data-step="2">2017</a>
+  </div>
+  <div class="slides-wrap" data-trigger>
+    <div class="slides">
+
+      <div class="slide slide--1">
+        <div class="slides__line slides__line--1"></div>
+        <div class="slides__line slides__line--2"></div>
+        <svg viewBox="0 0 210 180">
+          <polygon style='fill:#436685' points="0,180 4,167 14,152 24,147 34,120 44,113 54,72 65,60 76,36 97,24 115,29 130,58 137,68 147,102 158,108 169,148 179,150 189,166 209,179 0,180"
+            data-side="1">
+
+          </polygon>
+        </svg>
+      </div>
+
+      <div class="slide slide--2">
+        <svg viewBox="0 0 210 180">
+          <polygon style='fill:crimson' points="5,180 12,174 23,173 34,153 44,151 54,132 64,125 75,96 85,90 96,59 120,41 126,34 147,37 158,48 167,77 178,83 198,109 210,153 210,180 5,180"
+            data-side="2">
+
+          </polygon>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <script>
+
+    var steps = {
+      0: ["0,180 4,167 14,152 24,147 34,120 44,113 54,72 65,60 76,36 97,24 115,29 130,58 137,68 147,102 158,108 169,148 179,150 189,166 209,179 0,180", "0,180 2,147 12,119 22,109 33,66 41,49 55,40 66,38 74,30 86,31 96,40 114,40 125,83 146,147 157,148 164,160 178,170 190,175 206,179 0,180", "0,180 0,40 23,20 33,4 43,1 65,42 74,73 84,73 94,94 115,105 128,142 136,146 142,157 147,165 158,167 168,173 178,173 192,178 206,179 0,180"],
+      1: ["5,180 12,174 23,173 34,153 44,151 54,132 64,125 75,96 85,90 96,59 120,41 126,34 147,37 158,48 167,77 178,83 198,109 210,153 210,180 5,180", "0,180 22,163 33,144 43,145 65,95 73,61 88,35 94,19 105,22 115,23 126,50 136,52 148,70 158,82 167,108 177,122 187,145 210,165 210,179 0,180", "5,180 22,172 32,145 45,140 53,143 64,135 75,104 86,100 95,70 116,56 126,58 136,53 146,55 158,47 168,36 179,55 197,91 210,137 210,180 5,180"]
+    }
+
+
+
+    var links = document.querySelectorAll('a[data-step]');
+    var slides = document.querySelector('.slides-wrap');
+    var polygons = document.querySelectorAll('polygon[data-side]');
+    var currentstep = 0;
+
+
+    links.forEach(function (item) {
+
+
+
+      item.onclick = function (e) {
+        slides.setAttribute('data-year', this.dataset.step);
+
+        links.forEach(function (link) {
+          link.removeAttribute('aria-current');
+        })
+
+        item.setAttribute('aria-current', true);
+
+        e.preventDefault();
+        setstep(currentstep, this.dataset.step);
+        currentstep = this.dataset.step;
+      }
+    })
+
+    function setstep(step1, step2) {
+      console.log(step1, step2);
+      polygons.forEach(function (item, index) {
+
+        var coords = steps[index];
+
+        item.innerHTML = '<animate attributeName="points" begin="click" dur="0.33s" repeatCount="1" fill="freeze"/>';
+
+        var anim = item.querySelector('animate');
+        anim.setAttribute('from', coords[step1]);
+        anim.setAttribute('to', coords[step2]);
+        anim.beginElement();
+        setTimeout(function () {
+          item.setAttribute('points', coords[step2]);
+        }, 340)
+
+      })
+    }
+
+    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+    setTimeout(function () {
+      document.querySelectorAll('[data-trigger]').forEach(function (item) {
+        observer.observe(item);
+      });
+    }, 100);
+
+    function scan(entries, observer) {
+
+      entries.forEach(function (item) {
+        console.log('top' + item.boundingClientRect.top);
+        if (item.boundingClientRect.top > 0) {
+          return;
+        }
+
+        var rat = item.intersectionRatio;
+        var num = 0;
+
+        if (rat < 1) {
+          num = 0;
+        }
+
+        if (rat < 0.75) {
+          num = 1
+        }
+
+        if (rat < 0.5) {
+          num = 2
+        }
+        console.log(num, rat);
+        links[num].click();
+      })
+    }
+
+
+  </script>
+
+</body>
+
+</html>

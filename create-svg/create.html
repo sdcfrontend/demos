@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .canvas {
+      border: 1px solid red;
+      width: 210px;
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="canvas">
+    <img src="3.png" alt="">
+  </div>
+
+  <script>
+
+    var canvas = document.querySelector('.canvas');
+    var coords = [];
+
+    canvas.onclick = function (e) {
+      coords.push([e.layerX, e.layerY]);
+      console.log(coords);
+    }
+
+  </script>
+</body>
+
+</html>
