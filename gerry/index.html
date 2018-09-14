@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+    body {
+      background: #eee;
+      padding: 50vh 0
+    }
+
+    .sf-gerry__wrap {
+      height: 300vh;
+    }
+
+    .sf-gerry {
+      background: white;
+      height: 100vh;
+      position: sticky;
+      top: 0
+    }
+
+    .sf-gerry__inner {
+      max-width: 980px;
+      padding: 0 1em;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    .sf-gerry__body {
+      display: flex;
+      height: 100%
+    }
+
+    .sf-gerry__col {
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sf-gerry__col--1 {
+      flex: 1
+    }
+
+    .sf-gerry__col--2 {
+      width: 30%;
+      min-width: 150px;
+    }
+
+    .sf-gerry__district {
+      width: 90%;
+      max-width: 400px;
+      min-width: 130px;
+      position: relative;
+    }
+
+    .sf-gerry__district:after {
+      content: "";
+      display: block;
+      padding-bottom: 150%
+    }
+
+    .sf-gerry__precints {
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .sf-gerry__precint {
+      width: calc(20%);
+      background: #436685;
+      position: relative;
+      outline: 1px solid rgba(255, 255, 255, 0.25)
+    }
+
+    .sf-gerry__precint--s2 {
+      background: crimson
+    }
+
+    .sf-gerry__div {
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background: white;
+      z-index: 2;
+      transition: all 0.33s;
+      transform: translateY(-50%);
+      opacity: 0
+    }
+
+    .sf-gerry__div[data-lines="1"]:nth-child(1) {
+      top: 20%
+    }
+
+    .sf-gerry__div[data-lines="1"]:nth-child(2) {
+      top: 40%
+    }
+
+    .sf-gerry__div[data-lines="1"]:nth-child(3) {
+      top: 60%
+    }
+
+    .sf-gerry__div[data-lines="1"]:nth-child(4) {
+      top: 80%
+    }
+
+    .sf-gerry__precints[data-state="0"] .sf-gerry__precint {
+      outline: 1px solid white;
+    }
+
+    .sf-gerry__precints[data-state="1"] .sf-gerry__div[data-lines="1"] {
+      opacity: 1
+    }
+
+    .sf-gerry__precints[data-state="2"] .sf-gerry__div[data-lines="2"] {
+      opacity: 1
+    }
+
+    .sf-gerry__div[data-lines="2"] {
+      width: 6px;
+      height: 100%;
+      transform: translateX(-50%)
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(5),
+    .sf-gerry__div[data-lines="2"]:nth-child(9) {
+      height: 10%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(6),
+    .sf-gerry__div[data-lines="2"]:nth-child(8),
+    .sf-gerry__div[data-lines="2"]:nth-child(10),
+    .sf-gerry__div[data-lines="2"]:nth-child(16),
+    .sf-gerry__div[data-lines="2"]:nth-child(17),
+    .sf-gerry__div[data-lines="2"]:nth-child(18),
+    .sf-gerry__div[data-lines="2"]:nth-child(19),
+    .sf-gerry__div[data-lines="2"]:nth-child(20),
+    .sf-gerry__div[data-lines="2"]:nth-child(21) {
+      width: calc(60% + 3px);
+      left: calc(20% - 3px);
+      height: 6px;
+      top: 10%;
+      transform: translateY(-50%)
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(7) {
+      left: 80%;
+      height: calc(30% + 6px);
+      top: calc(10% - 3px);
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(8) {
+      top: 30%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(9) {
+      top: 30%;
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(10) {
+      top: 40%;
+      left: 0;
+      width: calc(20% + 3px)
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(11) {
+      top: 40%;
+      height: 20%;
+      left: 40%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(12) {
+      top: 60%;
+      height: 30%;
+      left: 80%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(13) {
+      top: 60%;
+      height: 10%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(14) {
+      top: 90%;
+      height: 10%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(15) {
+      top: 90%;
+      height: 6px;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(16) {
+      top: 40%;
+      width: 40%;
+      left: 40%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(17) {
+      top: 50%;
+      width: 60%;
+      left: 40%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(18) {
+      top: 60%;
+      width: 40%;
+      left: 40%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(19) {
+      top: 90%;
+      width: 60%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(19) {
+      top: 70%;
+      width: 60%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(20) {
+      top: 90%;
+      width: 60%;
+      left: 20%
+    }
+
+    .sf-gerry__div[data-lines="2"]:nth-child(21) {
+      top: 60%;
+      left: 0;
+      width: calc(20% + 3px)
+    }
+
+
+    @media all and (max-aspect-ratio: 1/1) {
+      .sf-gerry__body {
+        flex-direction: column
+      }
+
+      .sf-gerry__col--2 {
+        width: 100%;
+        height: 30%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sf-gerry__wrap">
+    <div class="sf-gerry">
+      <div class="sf-gerry__inner">
+        <div class="sf-gerry__body">
+          <div class="sf-gerry__col sf-gerry__col--1">
+
+            <div class="sf-gerry__district">
+              <div class="sf-gerry__precints" data-state="2">
+
+                <div class="sf-gerry__div" data-lines="1"></div>
+                <div class="sf-gerry__div" data-lines="1"></div>
+                <div class="sf-gerry__div" data-lines="1"></div>
+                <div class="sf-gerry__div" data-lines="1"></div>
+
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+                <div class="sf-gerry__div" data-lines="2"></div>
+
+                <div class="sf-gerry__precint" s1g1 s2g1 data-index="1"></div>
+                <div class="sf-gerry__precint" s1g1 s2g2 data-index="2"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g2 data-index="3"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g2 data-index="4"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g2 data-index="5"></div>
+                <div class="sf-gerry__precint" s1g1 s2g1 data-index="6"></div>
+                <div class="sf-gerry__precint" s1g1 s2g1 data-index="7"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g1 data-index="8"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g1 data-index="9"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s1g1 s2g2 data-index="10"></div>
+                <div class="sf-gerry__precint" s2g1 data-index="11"></div>
+                <div class="sf-gerry__precint" s2g1 data-index="12"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g1 data-index="13"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g1 data-index="14"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g2 data-index="15"></div>
+                <div class="sf-gerry__precint" s2g1 data-index="16"></div>
+                <div class="sf-gerry__precint" data-index="17"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="18"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="19"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g2 data-index="20"></div>
+                <div class="sf-gerry__precint" data-index="21"></div>
+                <div class="sf-gerry__precint" data-index="22"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g2 data-index="23"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g2 data-index="24"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" s2g2 data-index="25"></div>
+                <div class="sf-gerry__precint" data-index="26"></div>
+                <div class="sf-gerry__precint" data-index="27"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="28"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="29"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="30"></div>
+                <div class="sf-gerry__precint" data-index="31"></div>
+                <div class="sf-gerry__precint" data-index="32"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="33"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="34"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="35"></div>
+                <div class="sf-gerry__precint" data-index="36"></div>
+                <div class="sf-gerry__precint" data-index="37"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="38"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="39"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="40"></div>
+                <div class="sf-gerry__precint" data-index="41"></div>
+                <div class="sf-gerry__precint" data-index="42"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="43"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="44"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="45"></div>
+                <div class="sf-gerry__precint" data-index="46"></div>
+                <div class="sf-gerry__precint" data-index="47"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="48"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="49"></div>
+                <div class="sf-gerry__precint sf-gerry__precint--s2" data-index="50"></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="sf-gerry__col sf-gerry__col--2">
+            <h4>50 districts</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  var con = document.querySelector('.sf-gerry__wrap');
+  var prec = document.querySelector('.sf-gerry__precints');
+  function tick() {
+
+    var dims = con.getBoundingClientRect();
+    var t = (100 / dims.height) * dims.top;
+    var t = ((Math.round(t / 33)) * -1);
+    t = Math.max(t, 0);
+    t = Math.min(2, t);
+    prec.setAttribute('data-state', t);
+    requestAnimationFrame(tick);
+  }
+
+  tick();
+</script>
+
+</html>
