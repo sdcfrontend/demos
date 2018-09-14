@@ -10,7 +10,7 @@
     .canvas {
       border: 1px solid red;
       width: 210px;
-      height: 180px;
+      height: 150px;
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -33,13 +33,14 @@
   </div>
 
   <script>
-
+    var count = 0;
     var canvas = document.querySelector('.canvas');
     var coords = [];
 
     canvas.onclick = function (e) {
+      count++;
       coords.push([e.layerX, e.layerY]);
-      console.log(coords);
+      console.log(count);
     }
 
   </script>

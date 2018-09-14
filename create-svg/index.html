@@ -8,234 +8,245 @@
   <title>Document</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
     body {
       background: #eee;
+      font-family: sans-serif;
     }
 
-    a {
-      display: inline-block;
-      padding: 12px;
-    }
-
-    .slides-wrap {
-      position: relative;
-
-      height: 100vh;
+    .sf-morph-chart {
+      background: white;
 
     }
 
-    .slides {
-      display: flex;
-      width: 100%;
-      max-width: 800px;
+    .sf-morph-chart__wrap {
+      max-width: 660px;
       margin: 0 auto;
-      position: sticky;
+    }
+
+    .sf-morph-chart__slides {
+      display: flex;
+      position: relative;
+      height: 100%;
       top: 0;
       background: white;
+      overflow: hidden;
     }
 
-    .slide {
+    .sf-morph-chart__slides:after {
+      content: "";
+      display: block;
+      padding-bottom: 95%
+    }
+
+
+    .sf-morph-chart__slide {
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       width: 100%;
-      background: white;
+      height: 90%;
       mix-blend-mode: darken
     }
 
-    .slide:after {
-      content: "";
-      padding-bottom: 85%;
-      display: block
-    }
-
-    .slide svg {
+    .sf-morph-chart__slide>svg {
       position: absolute;
       width: 100%;
       height: 100%;
     }
 
-    .links {
+    .sf-morph-chart__links {
       text-align: center;
-      font-size: 20px;
-      font-family: sans-serif
+      font-family: sans-serif;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1
     }
 
-    .links a {
+    .sf-morph-chart__link {
       text-decoration: none;
-      color: black
+      color: black;
+      display: block;
+      font-size: 1rem;
+      padding: 0.4rem 0.6rem
     }
 
-    .links a[aria-current] {
+    .sf-morph-chart__links a[aria-current] {
       font-weight: bold;
     }
 
-    .slides__line {
+    .sf-morph-chart__line {
       position: absolute;
       width: 3px;
-      background: #b1b1b1;
       height: 100%;
       left: 50%;
       z-index: 5;
-      transition: left 0.33s
+      transition: left 0.33s;
+      mix-blend-mode: luminosity;
+      text-align: left;
+      line-height: 1.1
     }
 
-    .slides__line--2 {
-      left: 60%
+    .sf-morph-chart__line:after {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: 3px;
+      height: 100%;
+      background: #ccc;
+      mix-blend-mode: difference
     }
 
-    [data-year="1"] .slides__line--1 {
+    .sf-morph-chart__line span {
+      transform: translateX(calc(-100% + 0.5rem));
+      display: block;
+      width: 100vw;
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .sf-morph-chart__line--2 span {
+      transform: translateX(-0.5rem);
+      text-align: left;
+    }
+
+    .sf-morph-chart__line--2 {
+      left: 60%;
+      text-align: right;
+    }
+
+    .sf-morph-chart__line strong {
+      display: block;
+    }
+
+    .sf-morph-chart__slides[data-year="1"] .sf-morph-chart__line--1 {
       left: 40%
     }
 
-    [data-year="1"] .slides__line--2 {
+    .sf-morph-chart__slides[data-year="1"] .sf-morph-chart__line--2 {
       left: 47%
     }
 
-    [data-year="2"] .slides__line--1 {
+    .sf-morph-chart__slides[data-year="2"] .sf-morph-chart__line--1 {
       left: 20%
     }
 
-    [data-year="2"] .slides__line--2 {
+    .sf-morph-chart__slides[data-year="2"] .sf-morph-chart__line--2 {
       left: 64%
+    }
+
+    .sf-morph-chart__labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #aaa;
+      padding-top: 0.5rem;
+      text-align: left;
+    }
+
+    .sf-morph-chart__labels>p {
+      max-width: 100px;
+      line-height: 1.2
+    }
+
+    .sf-morph-chart__labels>p+p {
+      text-align: right;
     }
   </style>
 </head>
 
 <body>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="links">
-    <a href="#" data-step="0" aria-current>1994</a> |
-    <a href="#" data-step="1">2004</a> |
-    <a href="#" data-step="2">2017</a>
-  </div>
-  <div class="slides-wrap" data-trigger>
-    <div class="slides">
+  <div class="sf-morph-chart">
+    <div class="sf-morph-chart__wrap">
+      <ul class="sf-morph-chart__links" data-role="links">
+        <li class="sf-morph-chart__link-item">
+          <a href="#" class="sf-morph-chart__link" data-step="0" aria-current>1994</a>
+        </li>
+        <li class="sf-morph-chart__link-item">
+          <a href="#" class="sf-morph-chart__link" data-step="1">2004</a>
+        </li>
+        <li class="sf-morph-chart__link-item">
+          <a href="#" class="sf-morph-chart__link" data-step="2">2017</a>
+        </li>
+      </ul>
 
-      <div class="slide slide--1">
-        <div class="slides__line slides__line--1"></div>
-        <div class="slides__line slides__line--2"></div>
-        <svg viewBox="0 0 210 180">
-          <polygon style='fill:#436685' points="0,180 4,167 14,152 24,147 34,120 44,113 54,72 65,60 76,36 97,24 115,29 130,58 137,68 147,102 158,108 169,148 179,150 189,166 209,179 0,180"
-            data-side="1">
+      <div class="sf-morph-chart__slides" data-role="slides">
+        <div class="sf-morph-chart__line sf-morph-chart__line--1">
+          <span>
+            <strong>Median</strong> Democrat</span>
+        </div>
+        <div class="sf-morph-chart__line sf-morph-chart__line--2">
+          <span>
+            <strong>Median</strong> Republican</span>
+        </div>
+        <div class="sf-morph-chart__slide sf-morph-chart__slide--1">
+          <svg viewBox="0 0 210 180">
+            <polygon style='fill:#436685' points="0,180 4,167 14,152 24,147 34,120 44,113 54,72 65,60 76,36 97,24 115,29 130,58 137,68 147,102 158,108 169,148 179,150 189,166 209,179 0,180"
+              data-side="1">
 
-          </polygon>
-        </svg>
+            </polygon>
+          </svg>
+        </div>
+
+        <div class="sf-morph-chart__slide sf-morph-chart__slide--2">
+          <svg viewBox="0 0 210 180">
+            <polygon style='fill:crimson' points="5,180 12,174 23,173 34,153 44,151 54,132 64,125 75,96 85,90 96,59 120,41 126,34 147,37 158,48 167,77 178,83 198,109 210,153 210,180 5,180"
+              data-side="2">
+            </polygon>
+          </svg>
+        </div>
       </div>
-
-      <div class="slide slide--2">
-        <svg viewBox="0 0 210 180">
-          <polygon style='fill:crimson' points="5,180 12,174 23,173 34,153 44,151 54,132 64,125 75,96 85,90 96,59 120,41 126,34 147,37 158,48 167,77 178,83 198,109 210,153 210,180 5,180"
-            data-side="2">
-
-          </polygon>
-        </svg>
+      <div class="sf-morph-chart__labels">
+        <p>Consistently liberal</p>
+        <p>Consistently conservative</p>
       </div>
     </div>
   </div>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+
 
   <script>
 
     var steps = {
-      0: ["0,180 4,167 14,152 24,147 34,120 44,113 54,72 65,60 76,36 97,24 115,29 130,58 137,68 147,102 158,108 169,148 179,150 189,166 209,179 0,180", "0,180 2,147 12,119 22,109 33,66 41,49 55,40 66,38 74,30 86,31 96,40 114,40 125,83 146,147 157,148 164,160 178,170 190,175 206,179 0,180", "0,180 0,40 23,20 33,4 43,1 65,42 74,73 84,73 94,94 115,105 128,142 136,146 142,157 147,165 158,167 168,173 178,173 192,178 206,179 0,180"],
-      1: ["5,180 12,174 23,173 34,153 44,151 54,132 64,125 75,96 85,90 96,59 120,41 126,34 147,37 158,48 167,77 178,83 198,109 210,153 210,180 5,180", "0,180 22,163 33,144 43,145 65,95 73,61 88,35 94,19 105,22 115,23 126,50 136,52 148,70 158,82 167,108 177,122 187,145 210,165 210,179 0,180", "5,180 22,172 32,145 45,140 53,143 64,135 75,104 86,100 95,70 116,56 126,58 136,53 146,55 158,47 168,36 179,55 197,91 210,137 210,180 5,180"]
+      0: [
+        "0,150 1,141 12,126 23,122 33,101 43,95 54,57 65,49 75,32 96,19 116,24 125,41 136,55 147,84 157,91 168,119 177,124 189,138 210,150 0,150",
+        "0,150 0,120 12,100 22,92 32,56 43,41 55,33 64,32 74,24 85,27 94,34 115,34 125,76 146,120 157,124 166,136 187,147 199,147 210,150 0,150",
+        "0,150 1,33 13,21 23,14 33,3 44,1 66,35 75,63 86,63 96,81 116,86 126,117 136,121 146,137 157,139 168,144 176,143 191,146 210,148 0,150"
+      ],
+      1: [
+        "0,150 23,144 34,128 44,126 55,111 65,105 74,82 85,76 96,49 116,38 128,27 147,30 158,39 167,63 179,69 187,82 199,92 209,129 210,150 0,150",
+        "1,148 13,140 23,136 34,120 44,122 55,96 65,82 74,51 85,38 95,18 116,20 127,42 135,43 157,68 167,91 178,102 188,122 209,137 209,150 0,150",
+        "0,150 23,143 33,120 43,116 54,122 64,114 74,85 86,82 95,58 116,46 128,48 136,44 147,47 158,38 168,29 180,45 188,66 200,80 210,150 0,150"
+      ]
     }
 
 
-
-    var links = document.querySelectorAll('a[data-step]');
-    var slides = document.querySelector('.slides-wrap');
-    var polygons = document.querySelectorAll('polygon[data-side]');
+    var chart = document.querySelector('.sf-morph-chart');
+    var links = chart.querySelectorAll('[data-role="links"] a');
+    var slides = chart.querySelector('[data-role="slides"]');
+    var polygons = chart.querySelectorAll('polygon[data-side]');
     var currentstep = 0;
 
 
     links.forEach(function (item) {
-
-
 
       item.onclick = function (e) {
         slides.setAttribute('data-year', this.dataset.step);
@@ -268,41 +279,6 @@
           item.setAttribute('points', coords[step2]);
         }, 340)
 
-      })
-    }
-
-    var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
-
-    setTimeout(function () {
-      document.querySelectorAll('[data-trigger]').forEach(function (item) {
-        observer.observe(item);
-      });
-    }, 100);
-
-    function scan(entries, observer) {
-
-      entries.forEach(function (item) {
-        console.log('top' + item.boundingClientRect.top);
-        if (item.boundingClientRect.top > 0) {
-          return;
-        }
-
-        var rat = item.intersectionRatio;
-        var num = 0;
-
-        if (rat < 1) {
-          num = 0;
-        }
-
-        if (rat < 0.75) {
-          num = 1
-        }
-
-        if (rat < 0.5) {
-          num = 2
-        }
-        console.log(num, rat);
-        links[num].click();
       })
     }
 

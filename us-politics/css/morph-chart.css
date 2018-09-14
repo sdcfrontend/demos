@@ -1,0 +1,147 @@
+.sf-morph-chart {
+  background: white;
+  margin-bottom: 1rem;
+
+}
+
+.sf-morph-chart__wrap {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sf-morph-chart__slides {
+  display: flex;
+  position: relative;
+  height: 100%;
+  top: 0;
+  background: white;
+  overflow: hidden;
+}
+
+.sf-morph-chart__slides:after {
+  content: "";
+  display: block;
+  padding-bottom: 80%
+}
+
+
+.sf-morph-chart__slide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  mix-blend-mode: darken
+}
+
+.sf-morph-chart__slide>svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sf-morph-chart__links {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem
+}
+
+.sf-morph-chart__link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 1rem;
+  padding: 0.1rem 0.6rem
+}
+
+.sf-morph-chart__links a[aria-current] {
+  font-weight: bold;
+}
+
+.sf-morph-chart__line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  left: 50%;
+  z-index: 5;
+  transition: left 0.33s;
+  mix-blend-mode: luminosity;
+  text-align: left;
+  line-height: 1.1
+}
+
+.sf-morph-chart__line:after {
+  position: absolute;
+  left: 0;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #ccc;
+  mix-blend-mode: difference;
+  transform: translateY(3px)
+}
+
+.sf-morph-chart__line span {
+  transform: translate(calc(-100% + 0.5rem));
+  display: block;
+  width: 100vw;
+  text-align: right;
+  font-size: 0.85rem;
+  line-height: 1.1
+
+}
+
+.sf-morph-chart__line--2 span {
+  transform: translateX(-0.5rem);
+  text-align: left;
+}
+
+.sf-morph-chart__line--2 {
+  left: 60%;
+  text-align: right;
+}
+
+.sf-morph-chart__line strong {
+  display: block;
+}
+
+.sf-morph-chart__slides[data-year="1"] .sf-morph-chart__line--1 {
+  left: 40%
+}
+
+.sf-morph-chart__slides[data-year="1"] .sf-morph-chart__line--2 {
+  left: 47%
+}
+
+.sf-morph-chart__slides[data-year="2"] .sf-morph-chart__line--1 {
+  left: 20%
+}
+
+.sf-morph-chart__slides[data-year="2"] .sf-morph-chart__line--2 {
+  left: 64%
+}
+
+.sf-morph-chart__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #888;
+  padding-top: 0.5rem;
+  text-align: left;
+}
+
+.sf-morph-chart__labels[class]>p {
+  max-width: 100px;
+  line-height: 1.1;
+  padding: 0;
+  margin: 0;
+}
+
+.sf-morph-chart__labels[class]>p+p {
+  text-align: right;
+}
