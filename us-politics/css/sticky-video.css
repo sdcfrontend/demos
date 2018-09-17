@@ -101,31 +101,6 @@
   }
 }
 
-@media all and (min-aspect-ratio: 1/1) {
-
-  @supports (position: sticky) or (position: -webkit-sticky) {
-    .sf-sticky-block {
-      height: 200vh;
-      position: relative;
-    }
-
-    .sf-sticky-block:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 20px;
-      background: hotpink;
-      height: 100vh;
-    }
-
-    .sf-sticky-block__target {
-      position: sticky;
-      top: 0;
-    }
-  }
-}
-
 
 .sf-loader {
   display: inline-block;

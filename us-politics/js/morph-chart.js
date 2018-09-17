@@ -13,7 +13,7 @@
     ]
   }
 
-
+  var con = document.querySelector('.sf-morph-chart-stick-track');
   var chart = document.querySelector('.sf-morph-chart');
   var links = chart.querySelectorAll('[data-role="links"] a');
   var slides = chart.querySelector('[data-role="slides"]');
@@ -56,5 +56,25 @@
 
     })
   }
+
+  var current = 0;
+
+  function tick() {
+
+    var dims = con.getBoundingClientRect();
+    var t = (100 / dims.height) * dims.top;
+    var t = ((Math.round(t / 33)) * -1);
+    t = Math.max(t, 0);
+    t = Math.min(2, t);
+    if (t !== current) {
+      links[t].click();
+    }
+    current = t;
+
+
+    requestAnimationFrame(tick);
+  }
+
+  tick();
 
 })()
