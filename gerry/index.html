@@ -55,7 +55,7 @@
     .sf-gerry__col {
       display: flex;
       align-items: center;
-      justify-content: center
+      justify-content: center;
     }
 
     .sf-gerry__col--1 {
@@ -261,15 +261,95 @@
       width: calc(20% + 3px)
     }
 
+    .sf-gerry__details {
+      text-align: center;
+    }
+
+    .sf-gerry__details-head {
+      margin-bottom: 1rem;
+    }
+
+    .sf-gerry__details-head>*,
+    .sf-gerry__details-breakdown>* {
+      margin-bottom: 0.25rem
+    }
+
+    .sf-gerry__details-head h4 {
+      font-size: 1rem;
+      font-weight: 600
+    }
+
+    .sf-gerry__details-head p {
+      font-size: 0.8rem;
+    }
+
+    .sf-gerry__details-breakdown h5 {
+      font-size: 0.9rem;
+      font-weight: 600
+    }
+
+    .sf-gerry__details-breakdown ul {
+      list-style: none;
+      padding: 0;
+      display: inline-flex;
+    }
+
+    .sf-gerry__key {
+      flex: 1;
+      position: relative;
+      text-align: left;
+      white-space: nowrap;
+      font-size: 0.9rem;
+      padding: 0 0.4rem;
+
+    }
+
+    .sf-gerry__key:before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.2rem;
+      background: orange;
+      position: relative;
+      top: -1px;
+    }
+
+    .sf-gerry__key--blue:before {
+      background: #436685
+    }
+
+    .sf-gerry__key--red:before {
+      background: crimson
+    }
+
+    .sf-gerry__result {
+      font-size: 0.8rem;
+
+    }
+
+
 
     @media all and (max-aspect-ratio: 1/1) {
+      .sf-gerry__district {
+        width: 85%;
+        height: 100%
+      }
+
+      .sf-gerry__district:after {
+        content: none
+      }
+
       .sf-gerry__body {
+        display: flex;
         flex-direction: column
       }
 
       .sf-gerry__col--2 {
         width: 100%;
-        height: 30%
+        height: 30%;
+        padding: 1rem 0;
       }
     }
   </style>
@@ -283,7 +363,7 @@
           <div class="sf-gerry__col sf-gerry__col--1">
 
             <div class="sf-gerry__district">
-              <div class="sf-gerry__precints" data-state="2">
+              <div class="sf-gerry__precints" data-state="0">
 
                 <div class="sf-gerry__div" data-lines="1"></div>
                 <div class="sf-gerry__div" data-lines="1"></div>
@@ -363,8 +443,28 @@
             </div>
           </div>
           <div class="sf-gerry__col sf-gerry__col--2">
-            <h4>50 districts</h4>
-            <p>5 precints</p>
+
+            <div class="sf-gerry__details">
+
+              <div class="sf-gerry__details-head">
+                <h4>50 districts</h4>
+                <p>60% Red, 40% Blue</p>
+              </div>
+
+              <div class="sf-gerry__details-breakdown">
+                <h5>5 Precints</h5>
+                <ul>
+                  <li class="sf-gerry__key sf-gerry__key--blue" data-role="precints-won-blue">
+                    3
+                  </li>
+                  <li class="sf-gerry__key sf-gerry__key--red" data-role="precints-won-red">2</li>
+                </ul>
+                <p class="sf-gerry__result" data-role="precints-won-result">
+                  Blue wins
+                </p>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -375,7 +475,11 @@
 <script>
 
   var con = document.querySelector('.sf-gerry__wrap');
-  var prec = document.querySelector('.sf-gerry__precints');
+  var prec = con.querySelector('.sf-gerry__precints');
+  var result = con.querySelector('[data-role="precints-won-result"]');
+  var red = con.querySelector('[data-role="precints-won-red"]');
+  var blue = con.querySelector('[data-role="precints-won-blue"]');
+
   function tick() {
 
     var dims = con.getBoundingClientRect();
@@ -384,6 +488,31 @@
     t = Math.max(t, 0);
     t = Math.min(2, t);
     prec.setAttribute('data-state', t);
+
+    if (t === 0) {
+      [result, red, blue].forEach(function (item) {
+        item.textContent = " ";
+        item.style.visibility = "hidden"
+      })
+    }
+    if (t === 1) {
+      result.textContent = "Red wins";
+      blue.textContent = "0";
+      red.textContent = "5";
+
+      [result, red, blue].forEach(function (item) {
+        item.style.visibility = "visible"
+      })
+    }
+
+    if (t === 2) {
+      result.textContent = 'Blue wins';
+      blue.textContent = "3";
+      red.textContent = "2";
+      [result, red, blue].forEach(function (item) {
+        item.style.visibility = "visible"
+      })
+    }
     requestAnimationFrame(tick);
   }
 
