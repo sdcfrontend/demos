@@ -62,13 +62,13 @@
 
 .sf-gerry__precint {
   width: calc(20%);
-  background: #436685;
+  background: #00476c;
   position: relative;
-  outline: 1px solid rgba(255, 255, 255, 0.25)
+  outline: 1px solid rgba(255, 255, 255, 0.4)
 }
 
 .sf-gerry__precint--s2 {
-  background: crimson
+  background: #b90303
 }
 
 .sf-gerry__div {
@@ -286,11 +286,11 @@
 }
 
 .sf-gerry__key--blue:before {
-  background: #436685
+  background: #00476c
 }
 
 .sf-gerry__key--red:before {
-  background: crimson
+  background: #b90303
 }
 
 .sf-gerry__result {

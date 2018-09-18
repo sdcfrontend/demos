@@ -89,7 +89,7 @@
   content: "";
   grid-column:2;
   position: absolute;
-  background: red;
+  background: #b90303;
   left: 100%;
   top: 0;
   height: 100%;
@@ -100,7 +100,7 @@
   content: "";
   grid-column:2;
   position: absolute;
-  background: blue;
+  background: #00476c;
   right: 100%;
   top: 0;
   height: 100%;

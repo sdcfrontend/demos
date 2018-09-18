@@ -272,7 +272,7 @@
                 </div>
                 <div class="sf-morph-chart__slide sf-morph-chart__slide--1">
                   <svg viewBox="0 0 210 150" preserveAspectRatio="none">
-                    <polygon style='fill:#436685' points="0,150 1,141 12,126 23,122 33,101 43,95 54,57 65,49 75,32 96,19 116,24 125,41 136,55 147,84 157,91 168,119 177,124 189,138 210,150 0,150"
+                    <polygon style='fill:#00476c' points="0,150 1,141 12,126 23,122 33,101 43,95 54,57 65,49 75,32 96,19 116,24 125,41 136,55 147,84 157,91 168,119 177,124 189,138 210,150 0,150"
                       data-side="1">
 
                     </polygon>
@@ -281,7 +281,7 @@
 
                 <div class="sf-morph-chart__slide sf-morph-chart__slide--2">
                   <svg viewBox="0 0 210 150" preserveAspectRatio="none">
-                    <polygon style='fill:crimson' points="0,150 23,144 34,128 44,126 55,111 65,105 74,82 85,76 96,49 116,38 128,27 147,30 158,39 167,63 179,69 187,82 199,92 209,129 210,150 0,150"
+                    <polygon style='fill:#b90303' points="0,150 23,144 34,128 44,126 55,111 65,105 74,82 85,76 96,49 116,38 128,27 147,30 158,39 167,63 179,69 187,82 199,92 209,129 210,150 0,150"
                       data-side="2">
                     </polygon>
                   </svg>
@@ -311,6 +311,50 @@
 
         <div class="sf-us-map" data-animate-in-view data-trigger="25">
           <div class="sf-us-map__inner">
+            <div class="sf-us-map__results">
+              <div class="sf-us-map__results-item sf-us-map__results-item--dem">
+                <img class="sf-us-map__results-image" src="https://election.news.sky.com/img/hillary-clinton@2x.png" alt="">
+
+                <div class="sf-us-map__result-number">
+                  <div class="sf-counter" data-trigger="100" data-animate-in-view="">
+
+                    <div class="sf-counter__cell" data-number="2">
+                      <span>2</span>
+                    </div>
+                    <div class="sf-counter__cell" data-number="3">
+                      <span>3</span>
+                    </div>
+                    <div class="sf-counter__cell" data-number="2">
+                      <span>2</span>
+                    </div>
+
+
+                  </div>
+                  <strong>Democrat</strong>
+                </div>
+              </div>
+              <div class="sf-us-map__results-item sf-us-map__results-item--rep">
+                <img class="sf-us-map__results-image" src="https://election.news.sky.com/img/donald-trump@2x.png" alt="">
+                <div class="sf-us-map__result-number">
+                  <div class="sf-counter" data-trigger="100" data-animate-in-view="">
+
+                    <div class="sf-counter__cell" data-number="3">
+                      <span>3</span>
+                    </div>
+                    <div class="sf-counter__cell" data-number="0">
+                      <span>0</span>
+                    </div>
+                    <div class="sf-counter__cell" data-number="6">
+                      <span>6</span>
+                    </div>
+
+
+                  </div>
+                  <strong>Republican</strong>
+                </div>
+              </div>
+
+            </div>
             <div class="sf-us-map__wrap">
               <svg class="sf-us-map__svg" viewBox="3 0 366 285" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs></defs>
@@ -1410,7 +1454,7 @@
       });
 
       document.querySelectorAll('.sf-us-map .rep, .sf-us-map .dem, .sf-us-map .split').forEach(function (item, index) {
-        item.style.transitionDelay = Math.floor((Math.random()) * 550) + "ms"
+        item.style.transitionDelay = 100 + Math.floor((Math.random()) * 550) + "ms"
       })
 
     })();

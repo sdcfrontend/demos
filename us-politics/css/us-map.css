@@ -46,3 +46,58 @@
 .area-map__area-label-text[class] {
   fill: white;
 }
+
+.sf-us-map__results {
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.sf-us-map__results-item {
+  flex: 1;
+  padding: 0.25rem 0.5rem 0.5rem
+}
+
+.sf-us-map__results-item--dem {
+  background: #00476c
+}
+
+.sf-us-map__results-item--rep[class] {
+  background: #b90303;
+  justify-content: flex-start
+}
+
+.sf-us-map__results-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+
+.sf-us-map__results-image {
+  height: 120%;
+  position: absolute;
+  bottom: 0;
+  left: 0.2rem;
+}
+
+.sf-us-map__results-item--rep
+.sf-us-map__results-image {
+  right: 0.2rem;
+  left: auto
+}
+
+.sf-us-map__result-number {
+  font-size: 1.8rem;
+  color: white;
+  line-height: 1;
+  position: relative;
+  z-index: 2
+}
+
+.sf-us-map__result-number strong {
+  font-size: 0.7rem;
+  display: block;
+  font-weight: 200
+}
