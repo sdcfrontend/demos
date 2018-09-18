@@ -1,0 +1,48 @@
+.sf-us-map {}
+
+.sf-us-map__inner {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto
+}
+
+.sf-us-map__wrap {
+  position: relative;
+  padding-bottom: 77%;
+}
+
+.sf-us-map__svg {
+  position: absolute;
+  width:
+}
+
+.sf-us-map polygon {
+  transition: fill 0.33s;
+}
+
+.sf-us-map[data-animate-in-view] .dem,
+.sf-us-map[data-animate-in-view] .rep,
+.sf-us-map[data-animate-in-view] .split {
+  fill: rgba(255,255,255,0);
+}
+
+.sf-us-map .rep {
+  fill: #ba0303;
+}
+
+.sf-us-map .dem {
+  fill: #00476c;
+}
+
+.sf-us-map .split {
+  fill: #313131
+}
+
+.area-map__area-shapes {
+  stroke: white;
+  stroke-width: 0.5
+}
+
+.area-map__area-label-text[class] {
+  fill: white;
+}

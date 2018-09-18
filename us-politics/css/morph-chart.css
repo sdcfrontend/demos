@@ -35,7 +35,13 @@
 .sf-morph-chart__slides:after {
   content: "";
   display: block;
-  padding-bottom: 80%
+  padding-bottom: 68%
+}
+
+@media all and (max-width: 700px){
+  .sf-morph-chart__slides:after {
+    padding-bottom: 90%
+  }
 }
 
 
@@ -44,7 +50,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 86%;
   mix-blend-mode: darken
 }
 
@@ -66,14 +72,16 @@
 
 .sf-morph-chart__link {
   text-decoration: none;
-  color: black;
+  color: #ccc;
   display: block;
-  font-size: 1rem;
-  padding: 0.1rem 0.6rem
+  font-size: 1.5rem;
+  padding: 0.1rem 0.6rem;
+  display: none
 }
 
 .sf-morph-chart__links a[aria-current] {
   font-weight: bold;
+  display: block
 }
 
 .sf-morph-chart__line {
