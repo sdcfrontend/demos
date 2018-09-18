@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eee;
+    }
+
+    .sf-line-graph {
+      background: white;
+      position: relative;
+      max-width: 680px;
+    }
+
+    .sf-line-graph__svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      outline: 1px solid red
+    }
+
+
+    .sf-line-graph__svg-line {
+      stroke: crimson;
+      stroke-width: 4;
+      fill: none;
+    }
+
+    .sf-line-graph__svg-line--1 {
+      stroke: midnightblue
+    }
+
+    .sf-line-graph__svg-line--2 {
+      stroke: #999
+    }
+
+    .sf-line-graph__body {
+      position: relative;
+      padding-bottom: 50%;
+      background: url(http://i64.tinypic.com/2h7mq0h.png);
+      background-size: 100%;
+      background-size: 109% 100%;
+      background-position: 42% 0;
+    }
+
+    .sf-line-graph__x {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .sf-line-graph__x-tick {
+      padding: 1rem 0 0;
+      position: relative;
+      flex: 1;
+      text-align: center;
+    }
+
+    .sf-line-graph__x-tick:last-child:before {
+      right: calc(50% - 1px);
+      left: auto;
+      border-right-width: 1px;
+      border-left-width: 0
+    }
+
+    .sf-line-graph__x-tick:before {
+      content: "";
+      width: 100%;
+      height: 0.6rem;
+      border: 1px solid black;
+      border-bottom-width: 0;
+      border-right-width: 0;
+      top: 0;
+      left: 50%;
+      position: absolute;
+    }
+
+    .sf-line-graph__caption {
+      text-align: center;
+      font-weight: 600;
+      padding-bottom: 1rem;
+    }
+
+    .sf-line-graph__number {
+      font-size: 1rem;
+      color: crimson;
+      font-weight: 500;
+      position: absolute
+    }
+
+    .sf-line-graph__number--1 {
+      color: midnightblue
+    }
+
+    .sf-line-graph__number--2 {
+      color: #888
+    }
+
+    svg {
+      pointer-events: none
+    }
+
+    .sf-line-graph__body {
+      cursor: pointer
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sf-line-graph">
+    <div class="sf-line-graph__body">
+      <svg class="sf-line-graph__svg" viewBox="0 0 680 340">
+
+        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--2" stroke="black" points="">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="" from=""></animate>
+        </polyline>
+
+        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--2" stroke="black" points="48,192 84,193 104,193 123,204 140,203 154,210 180,194 200,206 208,212 230,217 249,215 264,208 286,210 311,213 328,200 358,200 386,175 415,188 438,173 458,182 470,177 487,167 503,175 517,182 530,173 553,172 566,170 589,157 610,177 620,181 632,160">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="48,192 84,193 104,193 123,204 140,203 154,210 180,194 200,206 208,212 230,217 249,215 264,208 286,210 311,213 328,200 358,200 386,175 415,188 438,173 458,182 470,177 487,167 503,175 517,182 530,173 553,172 566,170 589,157 610,177 620,181 632,160"
+            from="48,275 84,275 104,275 123,275 140,275 154,275 180,275 200,275 208,275 230,275 249,275 264,275 286,275 311,275 328,275 358,275 386,275 415,275 438,275 458,275 470,275 487,275 503,275 517,275 530,275 553,275 566,275 589,275 610,275 620,275 632,275"></animate>
+        </polyline>
+
+        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--1" stroke="black" points="49,216 82,219 106,220 125,202 143,207 162,208 178,201 205,213 225,207 234,207 253,212 285,210 300,206 323,201 343,202 362,206 384,216 397,204 408,194 429,196 442,196 463,194 477,201 487,200 503,193 510,186 523,194 535,196 560,197 578,202 589,202 601,192 611,185 631,180">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="49,216 82,219 106,220 125,202 143,207 162,208 178,201 205,213 225,207 234,207 253,212 285,210 300,206 323,201 343,202 362,206 384,216 397,204 408,194 429,196 442,196 463,194 477,201 487,200 503,193 510,186 523,194 535,196 560,197 578,202 589,202 601,192 611,185 631,180"
+            from="49,275 82,275 106,275 125,275 143,275 162,275 178,275 205,275 225,275 234,275 253,275 285,275 300,275 323,275 343,275 362,275 384,275 397,275 408,275 429,275 442,275 463,275 477,275 487,275 503,275 510,275 523,275 535,275 560,275 578,275 589,275 601,275 611,275 631,275"></animate>
+        </polyline>
+
+        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--0" stroke="black" points="50,161 77,155 93,160 107,160 123,169 135,168 155,158 178,179 208,166 232,157 262,158 276,162 288,161 303,164 329,174 356,173 377,185 394,186 411,186 437,206 459,189 486,208 511,198 534,209 557,209 580,218 594,217 618,207 636,228">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="50,161 77,155 93,160 107,160 123,169 135,168 155,158 178,179 208,166 232,157 262,158 276,162 288,161 303,164 329,174 356,173 377,185 394,186 411,186 437,206 459,189 486,208 511,198 534,209 557,209 580,218 594,217 618,207 636,228"
+            from="50,275 77,275 93,275 107,275 123,275 135,275 155,275 178,275 208,275 232,275 262,275 276,275 288,275 303,275 329,275 356,275 377,275 394,275 411,275 437,275 459,275 486,275 511,275 534,275 557,275 580,275 594,275 618,275 636,275"></animate>
+        </polyline>
+
+
+
+
+
+      </svg>
+    </div>
+    <div class="sf-line-graph__x">
+      <span class="sf-line-graph__x-tick">10</span>
+      <span class="sf-line-graph__x-tick">20</span>
+      <span class="sf-line-graph__x-tick">30</span>
+      <span class="sf-line-graph__x-tick">40</span>
+      <span class="sf-line-graph__x-tick">50</span>
+      <span class="sf-line-graph__x-tick">60</span>
+      <span class="sf-line-graph__x-tick">70</span>
+    </div>
+    <p class="sf-line-graph__caption">College graduates</p>
+  </div>
+
+  <button>show</button>
+
+</body>
+
+<script>
+  var coords = [];
+  var body = document.querySelector('.sf-line-graph__body');
+
+
+  // body.onclick = function (e) {
+  //   var num = prompt('Add number');
+  //   var index = prompt('index');
+  //   body.insertAdjacentHTML('beforeend', '<span class="sf-line-graph__number sf-line-graph__number--' + (index) + '" style="top:' + parseInt((100 / body.offsetHeight) * e.layerY) + '%;left:' + parseInt((100 / body.offsetWidth) * e.layerX) + '%">' + num + '</span>')
+  // }
+
+  body.onclick = function (e) {
+    var x = e.layerX;
+    var y = e.layerY;
+    console.log(x);
+    coords.push([x, y]);
+    var anim = coords.map(function (a) { return [a[0], 275] });
+
+    var p = body.querySelector('polyline');
+    p.setAttribute('points', coords.join(" "));
+    body.querySelector('animate').setAttribute('to', coords.join(" "));
+    body.querySelector('animate').setAttribute('from', anim.join(" "));
+  }
+
+
+</script>
+
+</html>

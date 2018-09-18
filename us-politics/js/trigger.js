@@ -25,7 +25,7 @@
             // observer.unobserve(item.target);
             item.target.start();
 
-            // do this in the attached function
+            // do the line below in the attached function (stops repeated invocations)
             // item.target.init = true;
           }
 

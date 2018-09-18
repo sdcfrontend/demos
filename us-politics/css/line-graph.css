@@ -1,0 +1,134 @@
+.sf-line-graph {
+  background: white;
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto 1rem;
+}
+
+.sf-line-graph__svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.sf-line-graph__svg-line {
+  stroke: crimson;
+  stroke-width: 4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sf-line-graph__svg-line--1 {
+  stroke: midnightblue
+}
+
+.sf-line-graph__svg-line--2 {
+  stroke: #aaa
+}
+
+.sf-line-graph__body {
+  position: relative;
+  padding-bottom: 50%;
+  /* background: url(http://i64.tinypic.com/2h7mq0h.png); */
+  background-size: 100%;
+  transition: opacity 0.166s;
+  will-change: opacity;
+  opacity: 0;
+}
+
+.sf-line-graph__key {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+}
+
+.sf-line-graph__key > span {
+  font-size: 0.7rem;
+  padding-right: 0.5rem
+}
+
+.sf-line-graph__key--dem:before,
+.sf-line-graph__key--rep:before,
+.sf-line-graph__key--ind:before {
+  background: inherit;
+  display: inline-block;
+  content: "";
+  height: 4px;
+  border-radius: 2px;
+  width: 0.7rem;
+  vertical-align: middle;
+  margin-right: 0.2rem
+}
+
+.sf-line-graph__key--dem:before {
+  background: midnightblue
+}
+
+.sf-line-graph__key--rep:before {
+  background: crimson
+}
+
+.sf-line-graph__key--ind:before {
+  background: #aaa
+}
+
+.sf-line-graph__x {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.sf-line-graph__x-tick {
+  padding: 0.6rem 0 0;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-size: 0.7rem
+}
+
+.sf-line-graph__x-tick:last-child:before {
+  right: calc(50% - 1px);
+  left: auto;
+  border-right-width: 1px;
+  border-left-width: 0
+}
+
+.sf-line-graph__x-tick:before {
+  content: "";
+  width: 100%;
+  height: 0.6rem;
+  border: 1px solid black;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  top: 0;
+  left: 50%;
+  position: absolute;
+}
+
+.sf-line-graph__caption {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.8rem 0 1rem
+}
+
+.sf-line-graph__number {
+  font-size: 0.8rem;
+  color: crimson;
+  font-weight: 600;
+  position: absolute;
+  transform: translate(0, -50%);
+  background: white;
+  line-height: 1
+}
+
+.sf-line-graph__number--1 {
+  color: midnightblue
+}
+
+.sf-line-graph__number--2 {
+  color: #888
+}
