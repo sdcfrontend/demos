@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #fff;
+      font-size: 18px;
+    }
+
+    .jud {
+      background: powderblue;
+    }
+
+    .leg {
+      background: lightgoldenrodyellow
+    }
+
+    .exec {
+      background: #b9df8d
+    }
+
+    .sf-checks {
+      display: flex;
+      margin: 10px auto;
+      max-width: 680px;
+      min-height: 60vh;
+      flex-direction: column
+    }
+
+    .sf-checks__cell {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2rem
+    }
+
+    .sf-checks__item {
+      padding: 1rem 0.5rem;
+      width: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      border: 2px solid white;
+      text-align: center;
+      font-size: 1rem;
+      position: relative;
+    }
+
+
+    .sf-checks__item:first-child {
+      width: 100%;
+      font-size: 1.25rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .sf-checks__item:first-child:after {
+      content: "⬇";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      line-height: 1
+    }
+
+    .sf-checks__item p {
+      font-size: 0.8em;
+      margin-top: 0.5em
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      margin-top: 0.5rem
+    }
+
+    @media all and (max-width: 700px) {
+      .sf-checks {
+        flex-direction: column
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sf-checks">
+
+
+    <div class="sf-checks__cell">
+
+
+      <div class="sf-checks__item leg">
+        <h2>Legislative</h2>
+        <p><em>Makes the laws</em></p>
+        <ul>
+          <li>Congress</li>
+          <li>House &amp; Senate</li>
+        </ul>
+      </div>
+
+      <div class="sf-checks__item exec">
+        <h5>Executive</h5>
+        <p>Can override Presidential veto
+          <p>
+            <p>Can refuse Presidential appointments
+              <p>
+                <p>Can impeach the President
+                  <p>
+      </div>
+
+      <div class="sf-checks__item jud">
+        <h5>Judicial</h5>
+        <p>Can refuse judicial appointments
+          <p>
+            <p>Can impeach judges
+              <p>
+                <p>Can overrule supreme court judgments
+                  <p>
+      </div>
+
+
+    </div>
+    <div class="sf-checks__cell">
+      <div class="sf-checks__item exec">
+        <h2>Executive</h2>
+        <p><em>Enforces the laws</em></p>
+        <ul>
+          <li>President</li>
+          <li>Cabinet</li>
+        </ul>
+      </div>
+
+      <div class="sf-checks__item leg">
+        <h5>Legislative</h5>
+        <p>President can veto bills
+          <p>
+            <p>Can propose legislation
+              <p>
+                <p>Can call special sessions of Congress</p>
+      </div>
+
+      <div class="sf-checks__item jud">
+        <h5>Judicial</h5>
+        <p>President can appoint judges
+          <p>
+            <p>President can grant pardons and reprieves
+              <p>
+      </div>
+
+
+    </div>
+    <div class="sf-checks__cell">
+      <div class="sf-checks__item  jud">
+        <h2>Judicial</h2>
+        <p>Evaluates the laws</p>
+        <ul>
+          <li>Supreme Court</li>
+          <li>Lower Courts</li>
+        </ul>
+      </div>
+
+      <div class="sf-checks__item leg">
+        <h5>Legislative</h5>
+        <p>President can appoint judges
+          <p>
+            <p>President can grant pardons and reprieves
+              <p>
+      </div>
+
+      <div class="sf-checks__item exec">
+        <h5>Executive</h5>
+        <p>Judges serve for life
+          <p>
+            <p>Can rule Presidents actions are unconstitutional.
+              <p>
+                <p>&nbsp;
+                  <p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
