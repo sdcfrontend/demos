@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      text-align: center;
+      background: #eee
+    }
+
+
+    .sf-house-makeup {
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 1rem;
+    }
+
+    .sf-house-makeup__item {
+      height: 100vh;
+      position: relative;
+    }
+
+    .sf-house-makeup__items {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      flex: 1;
+    }
+
+    .sf-house-makeup__mask {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      clip: rect(auto, auto, auto, auto);
+      /* overflow-y: scroll; */
+    }
+
+    .sf-house-makeup__bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border-bottom: 0;
+      background-size: auto 100%;
+      z-index: 0;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .sf-house-makeup__card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      width: 100%;
+    }
+
+    .sf-house-makeup__cell {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      margin-bottom: 1rem;
+    }
+
+    .sf-house-makeup__image {
+      width: 95%;
+      max-width: 500px;
+    }
+
+    .sf-house-makeup__cell>h5 {
+      font-size: 0.9rem;
+      padding-top: 0.5rem
+    }
+
+    .sf-house-makeup__cell>p {
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sf-house-makeup">
+
+    <div class="sf-house-makeup__items">
+
+      <div class="sf-house-makeup__item">
+        <div class="sf-house-makeup__mask">
+          <div class="sf-house-makeup__bg"></div>
+          <div class="sf-house-makeup__card">
+            <h2>The Republicans advance</h2>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/senate-2009.png" alt="">
+              <h5>Senate 2009-11</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/house-2009.png" alt="">
+              <h5>House 2009-11</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-house-makeup__item">
+        <div class="sf-house-makeup__mask">
+          <div class="sf-house-makeup__bg"></div>
+          <div class="sf-house-makeup__card">
+            <h2>The Republicans advance</h2>
+
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/senate-2011.png" alt="">
+              <h5>Senate 2011-13</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/house-2011.png" alt="">
+              <h5>House 2011-13</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-house-makeup__item">
+        <div class="sf-house-makeup__mask">
+          <div class="sf-house-makeup__bg"></div>
+          <div class="sf-house-makeup__card">
+            <h2>The Republicans advance</h2>
+
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/senate-2013.png" alt="">
+              <h5>Senate 2013-15</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/house-2013.png" alt="">
+              <h5>House 2013-15</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-house-makeup__item">
+        <div class="sf-house-makeup__mask">
+          <div class="sf-house-makeup__bg"></div>
+          <div class="sf-house-makeup__card">
+            <h2>The Republicans advance</h2>
+
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/senate-2015.png" alt="">
+              <h5>Senate 2015-17</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/house-2015.png" alt="">
+              <h5>House 2015-17</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-house-makeup__item">
+        <div class="sf-house-makeup__mask">
+          <div class="sf-house-makeup__bg"></div>
+          <div class="sf-house-makeup__card">
+            <h2>The Republicans advance</h2>
+
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/senate-2017.png" alt="">
+              <h5>Senate 2017-19</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+            <div class="sf-house-makeup__cell">
+              <img class="sf-house-makeup__image" src="assets/images/house/house-2017.png" alt="">
+              <h5>House 2017-19</h5>
+              <p>Dems: 56 Reps: 42 Ind: 2</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div style="height: 500px; background: pink">
+    <br>some text<br> some text<br> some text<br> some text<br>
+  </div>
+
+</body>
+
+</html>
