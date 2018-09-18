@@ -14,6 +14,15 @@
   border-bottom: 3px solid currentColor
 }
 
+.sf-header--main > em {
+  font-size: 0.9rem;
+  display: block;
+  font-style: normal;
+  color: #999;
+  text-transform: none;
+  padding-top: 1rem
+}
+
 .sf-header--sub {
   font-size: 0.8rem;
   font-weight: 400;

@@ -1,8 +1,8 @@
 .sf-morph-chart-stick {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  position: sticky;
+  /* height: 100vh;
+  position: sticky; */
   top: 0
 }
 
@@ -74,14 +74,15 @@
   text-decoration: none;
   color: #ccc;
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 0.1rem 0.6rem;
-  display: none
+  /* display: none */
 }
 
 .sf-morph-chart__links a[aria-current] {
   font-weight: bold;
-  display: block
+  display: block;
+  color: black
 }
 
 .sf-morph-chart__line {
