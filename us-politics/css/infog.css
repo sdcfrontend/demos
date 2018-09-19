@@ -34,7 +34,7 @@
 }
 
 .sf-infog__stat-icon {
-  width: 3rem;
+  width: calc(2rem + 3vmin);
   min-width: 44px;
 }
 
@@ -76,7 +76,7 @@
 }
 
 .sf-infog__header {
-  font-size: 0.65rem;
+  font-size: 0.72rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   line-height: 1
