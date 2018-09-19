@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      background: #eee;
+      font-family: sans-serif
+    }
+
+    .sf-midterms__inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .sf-midterms__scroll {
+      position: relative;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sf-midterms__body {
+      width: 910px;
+      height: 40vh;
+      min-height: 300px;
+      position: relative;
+      display: flex;
+      flex-direction: column
+    }
+
+    .sf-midterms__canvas {
+      width: 100%;
+      display: flex;
+      flex: 1;
+    }
+
+    .sf-midterms__years {
+      display: flex;
+      font-size: 0.75rem
+    }
+
+    .sf-midterms__year {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem 0
+    }
+
+    .sf-midterms__tick {
+      margin: 1px;
+      flex: 1;
+      position: relative;
+      height: 50%;
+      overflow: hidden;
+    }
+
+    .sf-midterms__tick--loss {
+      bottom: auto;
+      top: 50%;
+      align-items: flex-end
+    }
+
+    .sf-midterms__tick>span {
+      position: absolute;
+      background: green;
+      height: 100%;
+      width: 100%;
+      top: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      transition: transform 0.33s;
+      will-change: transform
+    }
+
+    .sf-midterms__tick>span:after {
+      content: attr(data-stat);
+      color: white;
+      display: inline-block;
+      padding: 0.25rem 0;
+      font-size: 0.8rem
+    }
+
+    .sf-midterms__tick--loss>span {
+      top: -100%;
+      background: #666;
+      align-items: flex-end;
+    }
+
+    .sf-midterms__scroll[data-animate-in-view] .sf-midterms__tick--loss>span {
+      transform: translateY(0)
+    }
+
+    /* .sf-midterms__body:after {
+      content: "";
+      display: block;
+      padding-bottom: 75%;
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="sf-midterms">
+    <div class="sf-midterms__inner">
+      <div class="sf-midterms__scroll" data-animate-in-view data-trigger="75">
+        <div class="sf-midterms__body">
+          <div class="sf-midterms__canvas">
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-60" style="transform: translateY(60.4%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-56" style="transform: translateY(57.04%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-27" style="transform: translateY(32.68%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-84" style="transform: translateY(80.56%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-16" style="transform: translateY(23.44%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-60" style="transform: translateY(60.4%);"></span>
+            </div>
+            <div class="sf-midterms__tick">
+              <span data-stat="18" style="transform: translateY(-25.12%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-79" style="transform: translateY(76.36%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-53" style="transform: translateY(54.52%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-65" style="transform: translateY(64.6%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-33" style="transform: translateY(37.72%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-20" style="transform: translateY(26.8%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-61" style="transform: translateY(61.24%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-2" style="transform: translateY(11.68%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-50" style="transform: translateY(52%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-11" style="transform: translateY(19.24%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-52" style="transform: translateY(53.68%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-18" style="transform: translateY(25.12%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-26" style="transform: translateY(31.84%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-13" style="transform: translateY(20.92%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-9" style="transform: translateY(17.56%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-62" style="transform: translateY(62.08%);"></span>
+            </div>
+            <div class="sf-midterms__tick">
+              <span data-stat="5" style="transform: translateY(-14.2%);"></span>
+            </div>
+            <div class="sf-midterms__tick">
+              <span data-stat="10" style="transform: translateY(-18.4%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-36" style="transform: translateY(40.24%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-69" style="transform: translateY(67.96%);"></span>
+            </div>
+            <div class="sf-midterms__tick sf-midterms__tick--loss">
+              <span data-stat="-22" style="transform: translateY(28.48%);"></span>
+            </div>
+          </div>
+          <div class="sf-midterms__years">
+            <div class="sf-midterms__year">1910</div>
+            <div class="sf-midterms__year">1914</div>
+            <div class="sf-midterms__year">1918</div>
+            <div class="sf-midterms__year">1922</div>
+            <div class="sf-midterms__year">1926</div>
+            <div class="sf-midterms__year">1930</div>
+            <div class="sf-midterms__year">1934</div>
+            <div class="sf-midterms__year">1938</div>
+            <div class="sf-midterms__year">1942</div>
+            <div class="sf-midterms__year">1946</div>
+            <div class="sf-midterms__year">1950</div>
+            <div class="sf-midterms__year">1954</div>
+            <div class="sf-midterms__year">1958</div>
+            <div class="sf-midterms__year">1962</div>
+            <div class="sf-midterms__year">1966</div>
+            <div class="sf-midterms__year">1970</div>
+            <div class="sf-midterms__year">1974</div>
+            <div class="sf-midterms__year">1978</div>
+            <div class="sf-midterms__year">1982</div>
+            <div class="sf-midterms__year">1986</div>
+            <div class="sf-midterms__year">1990</div>
+            <div class="sf-midterms__year">1994</div>
+            <div class="sf-midterms__year">1998</div>
+            <div class="sf-midterms__year">2002</div>
+            <div class="sf-midterms__year">2006</div>
+            <div class="sf-midterms__year">2010</div>
+            <div class="sf-midterms__year">2014</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var data = { "years": [{ "year": "1910", "party": "Rep", "result": -60 }, { "year": "1914", "party": "Dem", "result": -56 }, { "year": "1918", "party": "Dem", "result": -27 }, { "year": "1922", "party": "Rep", "result": -84 }, { "year": "1926", "party": "Rep", "result": -16 }, { "year": "1930", "party": "Rep", "result": -60 }, { "year": "1934", "party": "Dem", "result": 18 }, { "year": "1938", "party": "Dem", "result": -79 }, { "year": "1942", "party": "Dem", "result": -53 }, { "year": "1946", "party": "Dem", "result": -65 }, { "year": "1950", "party": "Dem", "result": -33 }, { "year": "1954", "party": "Rep", "result": -20 }, { "year": "1958", "party": "Rep", "result": -61 }, { "year": "1962", "party": "Dem", "result": -2 }, { "year": "1966", "party": "Dem", "result": -50 }, { "year": "1970", "party": "Rep", "result": -11 }, { "year": "1974", "party": "Rep", "result": -52 }, { "year": "1978", "party": "Dem", "result": -18 }, { "year": "1982", "party": "Rep", "result": -26 }, { "year": "1986", "party": "Rep", "result": -13 }, { "year": "1990", "party": "Rep", "result": -9 }, { "year": "1994", "party": "Dem", "result": -62 }, { "year": "1998", "party": "Dem", "result": 5 }, { "year": "2002", "party": "Rep", "result": 10 }, { "year": "2006", "party": "Rep", "result": -36 }, { "year": "2010", "party": "Dem", "result": -69 }, { "year": "2014", "party": "Dem", "result": -22 }] };
+
+  var ticks = document.querySelectorAll('.sf-midterms__tick');
+  var ceil = 84;
+  data.years.forEach(function (item, index) {
+    var d = item;
+    var swing = ((ceil / 100) * Math.abs(d.result)) + 14;
+    swing = swing * -1;
+    if (d.result < 0) {
+      ticks[index].classList.add('sf-midterms__tick--loss');
+      swing = swing * -1;
+    }
+
+    ticks[index].querySelector('span').style.transform = "translateY(" + swing + "%)";
+    ticks[index].querySelector('span').style.transitionDelay = Math.floor(Math.random() * 75) + "ms";
+    ticks[index].querySelector('span').setAttribute('data-stat', d.result)
+
+  })
+</script>
+
+</html>
