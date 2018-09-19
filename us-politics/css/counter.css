@@ -10,6 +10,10 @@
   letter-spacing: 1px;
 }
 
+.sf-counter__cell[data-number="1"]{
+  letter-spacing: 0.1em
+}
+
 .sf-counter__cell[data-number]>span {
   visibility: hidden
 }
