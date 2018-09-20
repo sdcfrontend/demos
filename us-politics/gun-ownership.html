@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #eee;
+    }
+
+    .sf-barinfo {
+      text-align: center;
+    }
+
+    .sf-barinfo__inner {
+      max-width: 680px;
+      margin: 0 auto;
+      background: white;
+      padding: 1rem;
+    }
+
+    .sf-barinfo__key {
+      margin: .2rem 0 1.2rem;
+      font-size: 0.8rem;
+      display: inline-flex;
+    }
+
+    .sf-barinfo__bars {
+      display: flex;
+      flex-direction: column
+    }
+
+    .sf-barinfo__bar {
+      display: flex;
+      font-size: 0.9rem;
+      height: 2rem;
+      margin-bottom: 0.5rem
+    }
+
+    .sf-barinfo__label {
+      width: 3rem;
+      text-align: left;
+      display: flex;
+      align-items: center
+    }
+
+    .sf-barinfo__barbody {
+      flex: 1;
+      display: flex;
+    }
+
+    .sf-barinfo__barbody-seg {
+      transition: width 0.33s;
+      will-change: width;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden
+    }
+
+    .sf-barinfo__bar[data-animate-in-view] .sf-barinfo__barbody-seg {
+      width: 1px !important
+    }
+
+    .sf-barinfo__barbody-seg+.sf-barinfo__barbody-seg {
+      opacity: 0.7
+    }
+
+    .sf-barinfo__result {
+      width: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sf-barinfo--rep {
+      background: #b90303;
+      color: white;
+    }
+
+    .sf-barinfo--dem {
+      background: #00476c;
+      color: white;
+    }
+
+    .sf-barinfo--ind {
+      background: #313131;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sf-barinfo">
+    <div class="sf-barinfo__inner">
+      <div class="sf-barinfo__body">
+        <div class="sf-barinfo__key">
+          <span>% Owns gun / gun in household</span>
+        </div>
+        <div class="sf-barinfo__bars">
+
+          <div class="sf-barinfo__bar" data-animate-in-view data-trigger="100">
+            <h5 class="sf-barinfo__label">Rep</h5>
+            <div class="sf-barinfo__barbody">
+              <div class="sf-barinfo__barbody-seg sf-barinfo--rep" style="width: 73%">41</div>
+              <div class="sf-barinfo__barbody-seg sf-barinfo--rep" style="width: 27%">15</div>
+            </div>
+            <div class="sf-barinfo__result sf-barinfo-center">56</div>
+          </div>
+
+          <div class="sf-barinfo__bar" data-animate-in-view data-trigger="100">
+            <h5 class="sf-barinfo__label">Dem</h5>
+            <div class="sf-barinfo__barbody">
+              <div class="sf-barinfo__barbody-seg sf-barinfo--dem" style="width: 28%">16</div>
+              <div class="sf-barinfo__barbody-seg sf-barinfo--dem" style="width: 15%">9</div>
+            </div>
+            <div class="sf-barinfo__result">25</div>
+          </div>
+
+          <div class="sf-barinfo__bar" data-animate-in-view data-trigger="100">
+            <h5 class="sf-barinfo__label">Ind</h5>
+            <div class="sf-barinfo__barbody">
+              <div class="sf-barinfo__barbody-seg sf-barinfo--ind" style="width: 63%">36</div>
+              <div class="sf-barinfo__barbody-seg sf-barinfo--ind" style="width: 21%">12</div>
+            </div>
+            <div class="sf-barinfo__result">48</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
