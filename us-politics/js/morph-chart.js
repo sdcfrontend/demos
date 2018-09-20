@@ -75,6 +75,6 @@
     requestAnimationFrame(tick);
   }
 
-  tick();
+  // tick();
 
 })()

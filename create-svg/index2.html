@@ -8,10 +8,23 @@
   <title>Document</title>
   <style>
     * {
+      padding: 0;
+      margin: 0;
       box-sizing: border-box;
     }
 
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
     body {
+      font-family: sans-serif;
       background: #eee;
     }
 
@@ -19,6 +32,8 @@
       background: white;
       position: relative;
       max-width: 680px;
+      margin: 0 auto 1rem;
+      padding-bottom: 1rem
     }
 
     .sf-line-graph__svg {
@@ -27,44 +42,76 @@
       height: 100%;
       top: 0;
       left: 0;
-      outline: 1px solid red
     }
-
 
     .sf-line-graph__svg-line {
-      stroke: crimson;
+      stroke: currentColor;
       stroke-width: 4;
       fill: none;
-    }
-
-    .sf-line-graph__svg-line--1 {
-      stroke: midnightblue
-    }
-
-    .sf-line-graph__svg-line--2 {
-      stroke: #999
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .sf-line-graph__body {
       position: relative;
-      padding-bottom: 50%;
-      background: url(http://i64.tinypic.com/2h7mq0h.png);
-      background-size: 100%;
-      background-size: 109% 100%;
-      background-position: 42% 0;
+      padding-bottom: 60%;
+      background-size: 93% 105%;
+      background-position: 0 100%;
+      transition: opacity 0.166s;
+      will-change: opacity;
+      opacity: 0;
+    }
+
+    .sf-line-graph__key {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+    }
+
+    .sf-line-graph__key>span {
+      font-size: 0.7rem;
+      padding-right: 0.5rem
+    }
+
+    .sf-line-graph__key--dem:before,
+    .sf-line-graph__key--rep:before,
+    .sf-line-graph__key--ind:before {
+      background: inherit;
+      display: inline-block;
+      content: "";
+      height: 4px;
+      border-radius: 2px;
+      width: 0.7rem;
+      vertical-align: middle;
+      margin-right: 0.2rem
+    }
+
+    .sf-line-graph__key--dem:before {
+      background: midnightblue
+    }
+
+    .sf-line-graph__key--rep:before {
+      background: crimson
+    }
+
+    .sf-line-graph__key--ind:before {
+      background: #aaa
     }
 
     .sf-line-graph__x {
       display: flex;
-      justify-content: space-between;
+      transform: translateX(calc(-100% / 36));
+      width: 90%;
     }
 
 
     .sf-line-graph__x-tick {
-      padding: 1rem 0 0;
+      padding: 0.6rem 0 0;
       position: relative;
       flex: 1;
       text-align: center;
+      font-size: 0.7rem
     }
 
     .sf-line-graph__x-tick:last-child:before {
@@ -89,14 +136,18 @@
     .sf-line-graph__caption {
       text-align: center;
       font-weight: 600;
-      padding-bottom: 1rem;
+      padding: 0.8rem 0 0;
+      margin: 0
     }
 
     .sf-line-graph__number {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: crimson;
-      font-weight: 500;
-      position: absolute
+      font-weight: 600;
+      position: absolute;
+      transform: translate(0, -50%);
+      background: white;
+      line-height: 1
     }
 
     .sf-line-graph__number--1 {
@@ -107,12 +158,36 @@
       color: #888
     }
 
-    svg {
-      pointer-events: none
+    .sf-line-graph__svg-line--1 {
+      stroke: midnightblue
     }
 
-    .sf-line-graph__body {
-      cursor: pointer
+    .sf-line-graph__svg-line--2 {
+      stroke: #aaa
+    }
+
+    .sf-line-graph--religion {
+      color: cornflowerblue
+    }
+
+    .sf-line-graph--age {
+      color: chocolate
+    }
+
+    .sf-line-graph--race {
+      color: darkcyan
+    }
+
+    .sf-line-graph--education {
+      color: darkslateblue
+    }
+
+    .sf-line-graph--gender {
+      color: goldenrod
+    }
+
+    .sf-line-graph--party {
+      color: lightslategrey
     }
   </style>
 </head>
@@ -121,43 +196,61 @@
 
   <div class="sf-line-graph">
     <div class="sf-line-graph__body">
-      <svg class="sf-line-graph__svg" viewBox="0 0 680 340">
+      <svg class="sf-line-graph__svg" viewBox="0 0 680 408">
 
-        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--2" stroke="black" points="">
+        <!-- <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--2" stroke="black" points="">
           <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="" from=""></animate>
+        </polyline> -->
+
+        <polyline class="sf-line-graph__svg-line sf-line-graph--religion" stroke="black" points="38,370 137,379 237,372 339,355 442,329 492,309 538,306">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="38,370 137,379 237,372 339,355 442,329 492,309 538,306"
+            from="38,408 137,408 237,408 339,408 442,408 492,408 538,408"></animate>
         </polyline>
 
-        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--2" stroke="black" points="48,192 84,193 104,193 123,204 140,203 154,210 180,194 200,206 208,212 230,217 249,215 264,208 286,210 311,213 328,200 358,200 386,175 415,188 438,173 458,182 470,177 487,167 503,175 517,182 530,173 553,172 566,170 589,157 610,177 620,181 632,160">
-          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="48,192 84,193 104,193 123,204 140,203 154,210 180,194 200,206 208,212 230,217 249,215 264,208 286,210 311,213 328,200 358,200 386,175 415,188 438,173 458,182 470,177 487,167 503,175 517,182 530,173 553,172 566,170 589,157 610,177 620,181 632,160"
-            from="48,275 84,275 104,275 123,275 140,275 154,275 180,275 200,275 208,275 230,275 249,275 264,275 286,275 311,275 328,275 358,275 386,275 415,275 438,275 458,275 470,275 487,275 503,275 517,275 530,275 553,275 566,275 589,275 610,275 620,275 632,275"></animate>
+        <polyline class="sf-line-graph__svg-line sf-line-graph--party" stroke="black" points="38,267 135,270 237,243 339,150 440,85 490,73 537,38">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="38,267 135,270 237,243 339,150 440,85 490,73 537,38"
+            from="38,408 135,408 237,408 339,408 440,408 490,408 537,408"></animate>
         </polyline>
 
-        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--1" stroke="black" points="49,216 82,219 106,220 125,202 143,207 162,208 178,201 205,213 225,207 234,207 253,212 285,210 300,206 323,201 343,202 362,206 384,216 397,204 408,194 429,196 442,196 463,194 477,201 487,200 503,193 510,186 523,194 535,196 560,197 578,202 589,202 601,192 611,185 631,180">
-          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="49,216 82,219 106,220 125,202 143,207 162,208 178,201 205,213 225,207 234,207 253,212 285,210 300,206 323,201 343,202 362,206 384,216 397,204 408,194 429,196 442,196 463,194 477,201 487,200 503,193 510,186 523,194 535,196 560,197 578,202 589,202 601,192 611,185 631,180"
-            from="49,275 82,275 106,275 125,275 143,275 162,275 178,275 205,275 225,275 234,275 253,275 285,275 300,275 323,275 343,275 362,275 384,275 397,275 408,275 429,275 442,275 463,275 477,275 487,275 503,275 510,275 523,275 535,275 560,275 578,275 589,275 601,275 611,275 631,275"></animate>
+        <polyline class="sf-line-graph__svg-line sf-line-graph--race" stroke="black" points="36,274 136,300 238,306 340,297 443,274 491,272 538,280">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="36,274 136,300 238,306 340,297 443,274 491,272 538,280"
+            from="36,408 136,408 238,408 340,408 443,408 491,408 538,408"></animate>
         </polyline>
 
-        <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--0" stroke="black" points="50,161 77,155 93,160 107,160 123,169 135,168 155,158 178,179 208,166 232,157 262,158 276,162 288,161 303,164 329,174 356,173 377,185 394,186 411,186 437,206 459,189 486,208 511,198 534,209 557,209 580,218 594,217 618,207 636,228">
-          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="50,161 77,155 93,160 107,160 123,169 135,168 155,158 178,179 208,166 232,157 262,158 276,162 288,161 303,164 329,174 356,173 377,185 394,186 411,186 437,206 459,189 486,208 511,198 534,209 557,209 580,218 594,217 618,207 636,228"
-            from="50,275 77,275 93,275 107,275 123,275 135,275 155,275 178,275 208,275 232,275 262,275 276,275 288,275 303,275 329,275 356,275 377,275 394,275 411,275 437,275 459,275 486,275 511,275 534,275 557,275 580,275 594,275 618,275 636,275"></animate>
+        <polyline class="sf-line-graph__svg-line sf-line-graph--age" stroke="black" points="36,362 136,384 238,381 340,373 442,356 491,330 536,324">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="36,362 136,384 238,381 340,373 442,356 491,330 536,324"
+            from="36,408 136,408 238,408 340,408 442,408 491,408 536,408"></animate>
         </polyline>
 
+        <polyline class="sf-line-graph__svg-line sf-line-graph--gender" stroke="black" points="35,332 135,335 236,334 341,356 441,352 490,374 536,352">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="35,332 135,335 236,334 341,356 441,352 490,374 536,352"
+            from="35,408 135,408 236,408 341,408 441,408 490,408 536,408"></animate>
+        </polyline>
 
-
+        <polyline class="sf-line-graph__svg-line sf-line-graph--education" stroke="black" points="37,344 135,342 237,316 341,321 442,322 492,336 535,314">
+          <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="37,344 135,342 237,316 341,321 442,322 492,336 535,314"
+            from="37,408 135,408 237,408 341,408 442,408 492,408 535,408"></animate>
+        </polyline>
 
 
       </svg>
+      <span class="sf-line-graph__number sf-line-graph--party" style="top:8%;left:80%">Party</span>
+      <span class="sf-line-graph__number sf-line-graph--race" style="top: 57.5%;left:80%;">Race</span>
+      <span class="sf-line-graph__number sf-line-graph--age" style="top:80%;left:80%">Age</span>
+      <span class="sf-line-graph__number sf-line-graph--gender" style="top:88%;left:80%">Gender</span>
+      <span class="sf-line-graph__number sf-line-graph--education" style="top: 73%;left:80%;">Education</span>
+      <span class="sf-line-graph__number sf-line-graph--religion" style="top: 65.5%;left:80%;">Religion</span>
+
     </div>
     <div class="sf-line-graph__x">
-      <span class="sf-line-graph__x-tick">10</span>
-      <span class="sf-line-graph__x-tick">20</span>
-      <span class="sf-line-graph__x-tick">30</span>
-      <span class="sf-line-graph__x-tick">40</span>
-      <span class="sf-line-graph__x-tick">50</span>
-      <span class="sf-line-graph__x-tick">60</span>
-      <span class="sf-line-graph__x-tick">70</span>
+      <span class="sf-line-graph__x-tick">1994</span>
+      <span class="sf-line-graph__x-tick">1999</span>
+      <span class="sf-line-graph__x-tick">2004</span>
+      <span class="sf-line-graph__x-tick">2011</span>
+      <span class="sf-line-graph__x-tick">2014</span>
+      <span class="sf-line-graph__x-tick">2017</span>
     </div>
-    <p class="sf-line-graph__caption">College graduates</p>
+    <!-- <p class="sf-line-graph__caption">College graduates</p> -->
   </div>
 
   <button>show</button>
@@ -169,24 +262,24 @@
   var body = document.querySelector('.sf-line-graph__body');
 
 
-  // body.onclick = function (e) {
-  //   var num = prompt('Add number');
-  //   var index = prompt('index');
-  //   body.insertAdjacentHTML('beforeend', '<span class="sf-line-graph__number sf-line-graph__number--' + (index) + '" style="top:' + parseInt((100 / body.offsetHeight) * e.layerY) + '%;left:' + parseInt((100 / body.offsetWidth) * e.layerX) + '%">' + num + '</span>')
-  // }
-
   body.onclick = function (e) {
-    var x = e.layerX;
-    var y = e.layerY;
-    console.log(x);
-    coords.push([x, y]);
-    var anim = coords.map(function (a) { return [a[0], 275] });
-
-    var p = body.querySelector('polyline');
-    p.setAttribute('points', coords.join(" "));
-    body.querySelector('animate').setAttribute('to', coords.join(" "));
-    body.querySelector('animate').setAttribute('from', anim.join(" "));
+    var num = prompt('Add number');
+    var index = prompt('index');
+    body.insertAdjacentHTML('beforeend', '<span class="sf-line-graph__number sf-line-graph--' + (index) + '" style="top:' + parseInt((100 / body.offsetHeight) * e.layerY) + '%;left:' + parseInt((100 / body.offsetWidth) * e.layerX) + '%">' + num + '</span>')
   }
+
+  // body.onclick = function (e) {
+  //   var x = e.layerX;
+  //   var y = e.layerY;
+  //   console.log(x);
+  //   coords.push([x, y]);
+  //   var anim = coords.map(function (a) { return [a[0], 408] });
+
+  //   var p = body.querySelector('polyline');
+  //   p.setAttribute('points', coords.join(" "));
+  //   body.querySelector('animate').setAttribute('to', coords.join(" "));
+  //   body.querySelector('animate').setAttribute('from', anim.join(" "));
+  // }
 
 
 </script>
