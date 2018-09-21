@@ -11,7 +11,8 @@
 }
 
 .sf-counter__cell[data-number="1"]{
-  letter-spacing: 0.1em
+  letter-spacing: 0.1em;
+  text-align: left;
 }
 
 .sf-counter__cell[data-number]>span {
@@ -80,4 +81,29 @@
 
 .sf-counter__cell[data-text="small"]>span {
   font-size: 0.6em
+}
+
+.sf-counter__arrow {
+  display: inline-block;
+  width: 0.5em;
+  transform: rotate(45deg);
+  border: 2px solid #e91415;
+  border-top: 0;
+  border-left: 0;
+  transform-origin: 100% 50%;
+  margin: 0 4px;
+  position: relative;
+ 
+}
+
+.sf-counter__arrow:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%
+}
+
+.sf-counter__arrow--up {
+  border-color: #00b800;
+  transform: rotate(-135deg);
+  transform-origin: 50% 50%;
 }
