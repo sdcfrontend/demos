@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: calc(14px + 1.4vw);
+  }
+
+  @media (min-width:928px) {
+    html {
+      font-size: 25px
+    }
+  }
+
+  .sf-court {
+    font-family: sans-serif;
+    padding: 3vw
+  }
+
+  .sf-court__inner {
+    max-width: 680px
+  }
+
+  .sf-court__body {
+    background: #ccc;
+    display: flex;
+    font-size: 0.75rem;
+    text-align: center
+  }
+
+  .sf-court__cell {
+    padding: 0.8rem;
+    margin: 1px
+  }
+</style>
+
+<body>
+
+  <div class="sf-court">
+    <div class="sf-court__inner">
+      <div class="sf-court__body">
+        <div class="sf-court__cell">Appointed by Democrat president</div>
+        <div class="sf-court__cell"></div>
+        <div class="sf-court__cell">Brett Kavanaugh</div>
+        <div class="sf-court__cell">Appointed by Republican president</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

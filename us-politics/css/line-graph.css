@@ -8,6 +8,24 @@
       padding-bottom: 1rem
     }
 
+    .sf-line-graph__wipe {
+      background: white;
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      transform: translateX(100%);
+      transition: transform 1.5s;
+      will-change: transform;
+    }
+
+    .sf-line-graph__body[data-role="sf-line-graph"]
+    .sf-line-graph__wipe {
+      transform: translateX(0)
+    }
+
     .sf-line-graph__svg {
       position: absolute;
       width: 100%;
@@ -16,6 +34,7 @@
       left: 0;
     }
 
+    
     .sf-line-graph__svg-line {
       stroke: currentColor;
       stroke-width: 4;
@@ -27,10 +46,7 @@
     .sf-line-graph__body {
       position: relative;
       padding-bottom: 60%;
-      background-size: 93% 105%;
-      background-position: 0 100%;
-      transition: opacity 0.1s;
-      will-change: opacity;
+      overflow: hidden
       
     }
 
@@ -123,16 +139,7 @@
       transition: opacity 0.33s ;
       opacity: 1;
     }
-
-    .sf-line-graph__body[data-role="sf-line-graph"] {
-      opacity: 0;
-    }
-
-    .sf-line-graph__body[data-role="sf-line-graph"]
-    .sf-line-graph__number {
-      opacity: 0;
-    }
-
+   
     .sf-line-graph__number--1 {
       color: midnightblue
     }
