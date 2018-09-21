@@ -29,9 +29,9 @@
       padding-bottom: 60%;
       background-size: 93% 105%;
       background-position: 0 100%;
-      transition: opacity 0.333s;
+      transition: opacity 0.1s;
       will-change: opacity;
-      opacity: 0;
+      
     }
 
     .sf-line-graph__key {
@@ -119,7 +119,18 @@
       position: absolute;
       transform: translate(0, -50%);
       background: white;
-      line-height: 1
+      line-height: 1;
+      transition: opacity 0.33s ;
+      opacity: 1;
+    }
+
+    .sf-line-graph__body[data-role="sf-line-graph"] {
+      opacity: 0;
+    }
+
+    .sf-line-graph__body[data-role="sf-line-graph"]
+    .sf-line-graph__number {
+      opacity: 0;
     }
 
     .sf-line-graph__number--1 {

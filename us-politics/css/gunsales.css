@@ -1,0 +1,102 @@
+.sf-gunsales__inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.sf-gunsales__body {
+  background: white;
+}
+
+.sf-gunsales__title {
+  font-size: 0.8rem;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 1rem
+}
+
+.sf-gunsales__canvas {
+  position: relative;
+  padding-bottom: 75%;
+  /* background: url(http://i67.tinypic.com/24uxlea.png); */
+  background-size: 100% 100%;
+  opacity: 1;
+  will-change: opacity;
+}
+
+.sf-gunsales__svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3
+}
+
+.sf-gunsales__svg-line {
+  stroke: #de6969;
+  stroke-width: 1;
+  fill: none
+}
+
+.sf-gunsales__hotspot {
+  width: 1rem;
+  height: 1rem;
+  background: rgba(255, 0, 0, 0.39);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.25s, opacity 0.2s;
+  will-change: transform;
+  opacity: 1
+}
+
+.sf-gunsales__canvas[data-role="gunsales-gfx"] {
+  opacity: 0;
+}
+
+.sf-gunsales__canvas[data-role="gunsales-gfx"] .sf-gunsales__hotspot {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0
+}
+
+.sf-gunsales__hotspot-label {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1;
+  font-style: normal;
+  background: white
+}
+
+.sf-gunsales__hotspot-label[data-align*="right"] {
+  left: auto;
+  right: 100%;
+  transform: translate(-5px, -50%)
+}
+
+.sf-gunsales__hotspot-label[data-align*="top"] {
+  left: auto;
+  right: 50%;
+  bottom: 100%;
+  top: auto;
+  transform: translate(50%, -50%)
+}
+
+.sf-gunsales__div {
+  height: 2px;
+  background: #eee;
+  position: absolute;
+  width: 90%;
+  top: 79%;
+  left: 5%;
+}
+
+.sf-gunsales__scale {
+  font-size: 0.6rem;
+  color: #ccc;
+  background: white;
+  position: absolute;
+  left: 0;
+  transform: translateX(0.5rem);
+}

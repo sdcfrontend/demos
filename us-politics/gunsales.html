@@ -42,7 +42,9 @@
       position: relative;
       padding-bottom: 75%;
       /* background: url(http://i67.tinypic.com/24uxlea.png); */
-      background-size: 100% 100%
+      background-size: 100% 100%;
+      opacity: 1;
+      will-change: opacity;
     }
 
     .sf-gunsales__svg {
@@ -65,7 +67,19 @@
       border-radius: 50%;
       position: absolute;
       z-index: 2;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.25s, opacity 0.2s;
+      will-change: transform;
+      opacity: 1
+    }
+
+    .sf-gunsales__canvas[data-role="gunsales-gfx"] {
+      opacity: 0;
+    }
+
+    .sf-gunsales__canvas[data-role="gunsales-gfx"] .sf-gunsales__hotspot {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0
     }
 
     .sf-gunsales__hotspot-label {
@@ -117,7 +131,7 @@
   <div class="sf-gunsales">
     <div class="sf-gunsales__inner">
       <div class="sf-gunsales__body">
-        <div class="sf-gunsales__canvas">
+        <div class="sf-gunsales__canvas" data-role="gunsales-gfx">
           <svg class="sf-gunsales__svg" viewBox="0 0 680 510">
 
             <polyline class="sf-gunsales__svg-line" stroke="black" points="23,428 30,402 39,396 44,408 50,378 57,343 57,406 61,401 69,406 72,400 77,403 81,394 83,406 87,399 91,420 92,405 95,409 99,404 100,409 107,400 109,404 112,397 118,345 124,400 127,394 131,407 137,393 141,407 145,397 149,409 154,400 157,426 161,403 162,400 168,402 171,393 175,404 181,402 183,408 187,399 192,416 195,392 201,404 204,398 207,410 212,400 216,412 220,404 223,405 226,396 229,404 232,400 235,403 239,401 241,410 246,406 249,412 253,403 254,412 262,374 264,401 268,403 271,414 279,417 282,399 287,388 289,407 294,377 298,396 301,405 303,395 307,403 309,391 313,391 315,405 317,400 321,414 325,418 327,412 329,415 333,397 339,476 343,383 347,398 349,375 351,383 359,378 360,318 362,383 367,357 369,403 372,403 375,369 380,390 384,397 388,388 393,400 394,445 398,458 402,396 403,416 406,433 407,453 408,409 409,374 412,398 418,374 421,396 423,379 427,373 430,437 434,429 434,382 438,401 442,449 442,396 446,380 452,402 456,380 459,400 460,435 465,409 467,372 469,414 469,427 472,371 475,409 476,428 478,433 480,416 484,413 486,419 489,370 496,408 497,306 500,225 500,159 504,101 506,215 511,332 519,421 522,426 524,407 527,416 529,387 532,395 536,386 539,406 548,420 553,445 556,442 558,416 560,444 565,472 568,451 567,387 569,360 574,405 575,437 578,423 580,428 583,419 586,427 595,379 599,384 603,347 601,288 602,209 603,88 606,180 608,276 611,321 611,379 618,443 619,359 624,334 626,368 626,403 628,443 627,468 632,415 633,382 635,361 638,361 641,391 644,395 647,367 649,405 653,388 657,391 656,449 663,398 667,438 670,377">
@@ -125,27 +139,28 @@
                 to="23,428 30,402 39,396 44,408 50,378 57,343 57,406 61,401 69,406 72,400 77,403 81,394 83,406 87,399 91,420 92,405 95,409 99,404 100,409 107,400 109,404 112,397 118,345 124,400 127,394 131,407 137,393 141,407 145,397 149,409 154,400 157,426 161,403 162,400 168,402 171,393 175,404 181,402 183,408 187,399 192,416 195,392 201,404 204,398 207,410 212,400 216,412 220,404 223,405 226,396 229,404 232,400 235,403 239,401 241,410 246,406 249,412 253,403 254,412 262,374 264,401 268,403 271,414 279,417 282,399 287,388 289,407 294,377 298,396 301,405 303,395 307,403 309,391 313,391 315,405 317,400 321,414 325,418 327,412 329,415 333,397 339,476 343,383 347,398 349,375 351,383 359,378 360,318 362,383 367,357 369,403 372,403 375,369 380,390 384,397 388,388 393,400 394,445 398,458 402,396 403,416 406,433 407,453 408,409 409,374 412,398 418,374 421,396 423,379 427,373 430,437 434,429 434,382 438,401 442,449 442,396 446,380 452,402 456,380 459,400 460,435 465,409 467,372 469,414 469,427 472,371 475,409 476,428 478,433 480,416 484,413 486,419 489,370 496,408 497,306 500,225 500,159 504,101 506,215 511,332 519,421 522,426 524,407 527,416 529,387 532,395 536,386 539,406 548,420 553,445 556,442 558,416 560,444 565,472 568,451 567,387 569,360 574,405 575,437 578,423 580,428 583,419 586,427 595,379 599,384 603,347 601,288 602,209 603,88 606,180 608,276 611,321 611,379 618,443 619,359 624,334 626,368 626,403 628,443 627,468 632,415 633,382 635,361 638,361 641,391 644,395 647,367 649,405 653,388 657,391 656,449 663,398 667,438 670,377"></animate>
             </polyline>
           </svg>
-          <div class="sf-gunsales__hotspot" style="top: 20%;left: 74%;">
-            <em class="sf-gunsales__hotspot-label" data-align="right">Sandy Hook</em>
-          </div>
 
-          <div class="sf-gunsales__hotspot" style="top: 17.5%;left: 88.5%;">
-            <em class="sf-gunsales__hotspot-label" data-align="top">San Bernardino</em>
-          </div>
 
-          <div class="sf-gunsales__hotspot" style="left: 53%;top: 63%;">
-            <em class="sf-gunsales__hotspot-label" data-align="top">Obama elected</em>
-          </div>
-
-          <div class="sf-gunsales__hotspot" style="left: 17.5%;top: 67.5%;">
+          <div class="sf-gunsales__hotspot" style="left: 17.5%;top: 67.5%;transition-delay: 0.3s">
             <em class="sf-gunsales__hotspot-label" data-align="top">9/11</em>
           </div>
 
-          <div class="sf-gunsales__hotspot" style="left: 8.5%;top: 67.5%;">
+          <div class="sf-gunsales__hotspot" style="left: 8.5%;top: 67.5%;transition-delay: 0.4s">
             <em class="sf-gunsales__hotspot-label" data-align="top">Y2K</em>
           </div>
 
-          <div class="sf-gunsales__hotspot" style="left: 94.5%;top: 71.5%;">
+          <div class="sf-gunsales__hotspot" style="left: 53%;top: 63%;transition-delay: 0.5s">
+            <em class="sf-gunsales__hotspot-label" data-align="top">Obama elected</em>
+          </div>
+          <div class="sf-gunsales__hotspot" style="top: 20%;left: 74%;transition-delay: 0.6s">
+            <em class="sf-gunsales__hotspot-label" data-align="right">Sandy Hook</em>
+          </div>
+
+          <div class="sf-gunsales__hotspot" style="top: 17.5%;left: 88.5%;transition-delay: 0.7s">
+            <em class="sf-gunsales__hotspot-label" data-align="top">San Bernardino</em>
+          </div>
+
+          <div class="sf-gunsales__hotspot" style="left: 94.5%;top: 71.5%;transition-delay: 0.8s">
             <em class="sf-gunsales__hotspot-label" data-align="right">Trump elected</em>
           </div>
 
@@ -181,6 +196,15 @@
       animate.setAttribute('to', coords.join(" "));
       animate.setAttribute('from', coords.map(function (item) { return [item[0], 510] }));
     }
+
+    document.querySelectorAll('[data-role="gunsales-gfx"]').forEach(function (item) {
+      item.start = function () {
+        this.removeAttribute('data-role');
+        this.querySelectorAll('animate').forEach(function (animate) {
+          animate.beginElement();
+        })
+      }
+    })
 
   </script>
 </body>
