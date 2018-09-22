@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+
+    body {
+      background: #eee;
+      font-family: sans-serif
+    }
+
+    .sf-areasfx__inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .sf-areasfx__body {
+      background: white;
+      padding: 1rem;
+      position: relative;
+      /* background: url(https://i.imgur.com/HV6zvRj.png); */
+      background-size: 100% 100%;
+    }
+
+    .sf-areasfx__canvas {
+      position: relative;
+      padding-bottom: 50%;
+      /*   opacity: 0.2 */
+      /*   display: none */
+
+    }
+
+    .sf-areasfx__bars {
+      display: flex;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      align-items: flex-end;
+      overflow: hidden;
+      mix-blend-mode: darken;
+      /* mix-blend-mode: hard-light */
+    }
+
+    .sf-areasfx__bar {
+      flex: 1;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      top: 100%;
+      transition: transform 0.33s;
+      will-change: transform
+    }
+
+    .sf-areasfx__bars--dem .sf-areasfx__bar {
+      background: #00476c;
+      /* opacity: 0 */
+    }
+
+    .sf-areasfx__bars--rep .sf-areasfx__bar {
+      background: #b90304;
+      /* opacity: 0 */
+    }
+
+    .sf-areasfx__canvas[data-animate-in-view] .sf-areasfx__bar {
+      transform: translateY(0) !important
+    }
+
+    .sf-areasfx__line {
+      position: absolute;
+      width: 2px;
+      background: #888;
+      height: 100%;
+      left: calc(50% - 1px);
+      z-index: 2
+    }
+
+    .sf-areasfx__key {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #666;
+      padding: 0.5rem 0 0
+    }
+
+    .sf-areasfx__divided {
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .sf-areasfx__label {
+      flex: 1
+    }
+
+    .sf-areasfx__label:last-child {
+      text-align: right
+    }
+
+    .sf-areasfx__divided-cell {
+      padding-bottom: 0.5rem
+    }
+
+    .sf-areasfx__divided-arrows {
+      height: 3px;
+      width: 2rem;
+      margin: 0.4rem auto;
+      display: block;
+      background: linear-gradient(to right, #00476c 0%, #00476c 50%, #b90304 50%, #b90304 100%);
+      position: relative;
+    }
+
+    .sf-areasfx__divided-arrows:before,
+    .sf-areasfx__divided-arrows:after {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      left: 0;
+      display: block;
+      border: 3px solid #00476c;
+      border-bottom: 0;
+      border-left: 0;
+      position: absolute;
+      top: calc((-0.5rem / 2) - 0px);
+      transform: rotate(225deg)
+    }
+
+    .sf-areasfx__divided-arrows:after {
+      left: auto;
+      right: 0;
+      transform: rotate(45deg);
+      border-color: #b90304
+    }
+
+    .sf-areasfx__divided-arrows--out {
+      background: linear-gradient(to right, transparent 20%, #060913 20%, #060913 80%, transparent 80%);
+    }
+
+    .sf-areasfx__divided-arrows--out:before {
+      transform: rotate(45deg);
+      left: -0.25rem
+    }
+
+    .sf-areasfx__divided-arrows--out:after {
+      transform: rotate(225deg);
+      right: -0.25rem
+    }
+
+    .sf-areasfx__nav {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      margin-bottom: 1rem;
+      justify-content: center
+    }
+
+    .sf-areasfx__nav a {
+      display: inline-block;
+      padding: 0.2em 0.4em;
+      font-size: 1.2rem;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .sf-areasfx__nav a[aria-current] {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" onclick="render(data[0])">1</a>
+  <a href="#" onclick="render(data[1])">2</a>
+  <a href="#" onclick="render(data[2])">3</a>
+  <div class="sf-areasfx">
+    <div class="sf-areasfx__inner">
+      <div class="sf-areasfx__body">
+        <ul class="sf-areasfx__nav">
+          <li><a href="#" aria-current>1994</a></li>
+          <li><a href="#">2004</a></li>
+          <li><a href="#">2017</a></li>
+        </ul>
+        <div class="sf-areasfx__canvas" data-anmate-in-view data-trigger="100">
+          <div class="sf-areasfx__line"></div>
+          <div class="sf-areasfx__bars sf-areasfx__bars--dem">
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+          </div>
+          <div class="sf-areasfx__bars sf-areasfx__bars--rep">
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+            <div class="sf-areasfx__bar"></div>
+          </div>
+        </div>
+        <div class="sf-areasfx__key">
+          <div class="sf-areasfx__label">Liberal</div>
+          <div class="sf-areasfx__divided">
+            <div class="sf-areasfx__divided-cell">
+              <span class="sf-areasfx__divided-arrows"></span>
+              Divided</div>
+            <div class="sf-areasfx__divided-cell">
+              <span class="sf-areasfx__divided-arrows sf-areasfx__divided-arrows--out"></span>United</div>
+          </div>
+          <div class="sf-areasfx__label">Conservative</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var data = [
+    {
+      "dem": [9, 22, 28, 48, 59, 100, 113, 129, 138, 145, 142, 129, 109, 96, 72, 48, 26, 12, 8, 2],
+      "rep": [0, 6, 12, 24, 32, 45, 60, 75, 91, 112, 123, 130, 137, 134, 127, 106, 95, 80, 60, 30]
+    },
+    {
+      "dem": [27, 49, 66, 100, 120, 130, 140, 141, 136, 131, 131, 109, 69, 52, 32, 23, 14, 9, 5, 2],
+      "rep": [2, 9, 18, 34, 35, 57, 77, 112, 131, 149, 147, 140, 124, 111, 100, 81, 62, 44, 30, 18]
+    },
+    {
+      "dem": [120, 128, 135, 147, 142, 130, 110, 87, 80, 72, 67, 49, 34, 22, 13, 9, 8, 6, 2, 0],
+      "rep": [2, 4, 15, 28, 32, 30, 47, 65, 80, 92, 100, 103, 105, 103, 108, 120, 114, 97, 72, 38]
+    }
+  ]
+
+  var dems = document.querySelectorAll('.sf-areasfx__bars--dem .sf-areasfx__bar');
+  var reps = document.querySelectorAll('.sf-areasfx__bars--rep .sf-areasfx__bar');
+  var links = document.querySelectorAll('.sf-areasfx__nav a');
+
+  function render(da) {
+    da.dem.forEach(function (item, index) {
+      var y = (100 / 150) * item;
+
+      dems[index].style.cssText = "transition-delay:" + (Math.floor(Math.random() * 55)) + "ms; transform: translateY(-" + y + "%)"
+    });
+
+    da.rep.forEach(function (item, index) {
+      var y = (100 / 150) * item;
+      reps[index].style.cssText = "transition-delay:" + (Math.floor(Math.random() * 55)) + "ms;transform: translateY(-" + y + "%)"
+    })
+  }
+
+  links.forEach(function (link, index) {
+    link.onclick = function (e) {
+      links.forEach(function (item) {
+        item.removeAttribute('aria-current');
+      })
+      link.setAttribute('aria-current', true);
+      e.preventDefault();
+      render(data[index]);
+    }
+  });
+
+  render(data[0]);
+
+
+
+</script>
+
+</html>
