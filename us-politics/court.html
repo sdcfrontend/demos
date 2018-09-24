@@ -24,25 +24,126 @@
     }
   }
 
+  body {
+    background: #eee
+  }
+
   .sf-court {
     font-family: sans-serif;
     padding: 3vw
   }
 
   .sf-court__inner {
-    max-width: 680px
+    max-width: 680px;
+    margin: 0 auto;
   }
 
   .sf-court__body {
-    background: #ccc;
-    display: flex;
+    background: #fff;
     font-size: 0.75rem;
-    text-align: center
+    text-align: center;
+  }
+
+  .sf-court__body-cells {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc
+  }
+
+  .sf-court__subheader {
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .sf-court__cell {
+    width: calc(50% - 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0.5rem
+  }
+
+  .sf-court__cell--1 {
+    margin-right: 1rem;
+  }
+
+  .sf-court__cell--2 {
+    margin-left: 1rem;
+  }
+
+
+  .sf-court__label,
+  .sf-court__subheader {
+    width: 100%;
+    padding: 0.5rem 0;
+    line-height: 1.2;
+    font-size: 0.8rem;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+
+  .sf-court__cell h5 {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+
+  .sf-court__judge {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: 0.2rem;
+    position: relative;
+    transition: transform 0.25s, opacity 0.25s;
+    transform: scale(1);
+    opacity: 1;
+    will-change: all;
+  }
+
+  .sf-court__body-cells[data-animate-in-view] .sf-court__judge {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+
+  .sf-court__judge--nom {
+    opacity: 0.3
+  }
+
+  .sf-court__judge>svg,
+  .sf-court__judge>svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .sf-party-split-header {
+    background: url(assets/images/star.png) no-repeat 50% 50%, linear-gradient(to right, #00476c 0, #00476c 50%, #b90303 50%, #b90303 100%);
+    background-size: auto 60%, 100% 100%;
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    position: relative;
+    overflow: hidden
+  }
+
+  .sf-party-split-header>span:first-child {
+    box-shadow: 6px 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .sf-party-split-header>span {
     padding: 0.8rem;
-    margin: 1px
+    flex: 1
   }
 </style>
 
@@ -51,17 +152,131 @@
   <div class="sf-court">
     <div class="sf-court__inner">
       <div class="sf-court__body">
-        <h4 class="sf-court__subheader">1972</h4>
-        <div class="sf-court__cell sf-court__cell--1">7</div>
-        <div class="sf-court__cell sf-court__cell--2">2</div>
-        <h4 class="sf-court__subheader">1992</h4>
-        <div class="sf-court__cell sf-court__cell--1">5</div>
-        <div class="sf-court__cell sf-court__cell--2">4</div>
-        <h4 class="sf-court__subheader">2018</h4>
-        <div class="sf-court__cell sf-court__cell--1">4</div>
-        <div class="sf-court__cell sf-court__cell--2">4 (1)</div>
+        <div class="sf-court__header sf-party-split-header" aria-hidden="true">
+          <span>Pro-choice</span>
+          <span>Pro-life</span>
+        </div>
+        <div class="sf-court__body-cells" data-animate-in-view data-trigger="50">
+          <h4 class="sf-court__subheader sf-court__subheader--1">1973</h4>
+          <div class="sf-court__cell sf-court__cell--1">
+            <h5>Pro choice</h5>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 0ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 25ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 50ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 75ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 100ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 125ms;">
+              <img src="assets/images/male-judge--dem.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 150ms;">
+              <img src="assets/images/male-judge--dem.svg" alt="">
+            </div>
+          </div>
+          <div class="sf-court__cell sf-court__cell--2">
+            <h5>Pro life</h5>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 175ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 200ms;">
+              <img src="assets/images/male-judge--dem.svg" alt="">
+            </div>
+          </div>
+          <p class="sf-court__label">Roe v Wade 7-2 decision deems abortion a fundamental right under the US constitution.</p>
+
+        </div>
+
+        <div class="sf-court__body-cells" data-animate-in-view data-trigger="50">
+          <h4 class="sf-court__subheader sf-court__subheader--2">1992</h4>
+          <div class="sf-court__cell sf-court__cell--1">
+            <h5>Pro choice</h5>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 225ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 250ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 275ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 300ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 325ms;">
+              <img src="assets/images/female-judge--rep.svg" alt="">
+            </div>
+
+          </div>
+          <div class="sf-court__cell sf-court__cell--2">
+            <h5>Pro life</h5>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 350ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 375ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 400ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 425ms;">
+              <img src="assets/images/male-judge--dem.svg" alt="">
+            </div>
+
+          </div>
+          <p class="sf-court__label">Planned Parenthood v Casey 5-4 decision upholds Roe v Wade</p>
+
+        </div>
+
+        <div class="sf-court__body-cells" data-animate-in-view data-trigger="50">
+          <h4 class="sf-court__subheader sf-court__subheader--3">2018</h4>
+          <div class="sf-court__cell sf-court__cell--1">
+            <h5>Pro choice</h5>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 450ms;">
+              <img src="assets/images/male-judge--dem.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 475ms;">
+              <img src="assets/images/female-judge--dem.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 500ms;">
+              <img src="assets/images/female-judge--dem.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--dem" style="transition-delay: 525ms;">
+              <img src="assets/images/female-judge--dem.svg" alt="">
+            </div>
+          </div>
+          <div class="sf-court__cell sf-court__cell--2">
+            <h5>Pro life</h5>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 550ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 575ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 600ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--rep" style="transition-delay: 625ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+            <div class="sf-court__judge sf-court__judge--nom" style="transition-delay: 650ms;">
+              <img src="assets/images/male-judge--rep.svg" alt="">
+            </div>
+          </div>
+          <p class="sf-court__label">Court has swung to the right which could overturn Roe v Wade.
+          </p>
+        </div>
       </div>
     </div>
+
   </div>
 </body>
 
