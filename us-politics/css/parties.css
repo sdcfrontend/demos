@@ -1,12 +1,12 @@
 .sf-party-dr {
-  background: linear-gradient(to right, #aaa 0,#aaa 50%,#ccc 50%, #ccc 100%);
+  background: linear-gradient(to right, #00476c 0,#00476c 50%,#b90303 50%, #b90303 100%);
   color: white;
 }
 
 .sf-party-d {
-  background: #aaa
+  background: #00476c
 }
 
 .sf-party-r {
-  background: #ccc
+  background: #b90303
 }
