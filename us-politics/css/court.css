@@ -27,10 +27,10 @@
 
 .sf-court__cell {
   width: calc(50% - 1rem);
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   padding-bottom: 0.5rem
 }
 
@@ -65,10 +65,11 @@
 .sf-court__judge {
   width: calc(1.6rem + 1vmin);
   height: calc(1.6rem + 1vmin);
+  display: inline-block;
   margin: 0.2rem;
   position: relative;
   transition: transform 0.33s, opacity 0.33s;
-  transform: scale(1);
+  transform: scale(0.999);
   opacity: 1;
   will-change: all;
 }
