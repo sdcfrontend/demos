@@ -4,6 +4,12 @@
   margin: 0 auto;
 }
 
+.sf-court__header[class] {
+  position: sticky;
+  top: -1px;
+  z-index: 3
+}
+
 .sf-court__body {
   background: #fff;
   font-size: 0.75rem;
@@ -27,10 +33,6 @@
 
 .sf-court__cell {
   width: calc(50% - 1rem);
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
   padding-bottom: 0.5rem
 }
 
