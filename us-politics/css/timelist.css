@@ -43,7 +43,7 @@
 .sf-timelist__block[data-animate-in-view]
 .sf-timelist__icon {
   opacity: 0;
-  transform: scale(1.15)
+  transform: scale(0.7)
 }
 
 .sf-timelist__block-s2[data-animate-in-view]
