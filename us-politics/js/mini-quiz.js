@@ -2,8 +2,8 @@
   var quizzes = document.querySelectorAll('.sf-mini-quiz');
 
   function scramble(text, dir) {
-    var a = ['e', 'a', 'r', 'i', 'o', 't', 'n', 's', 'l', ' '];
-    var b = ['∑', '∞', '¿', '∃', '¢', '†', '⅔', '√', '≠', '∂'];
+    var a = ['e', 'a', 'r', 'i', 'o', 't', 'n', 's', 'l', ' ', '3', '1'];
+    var b = ['∑', '∞', '¿', '∃', '¢', '†', '⅔', '√', '≠', '∂', '=', '@'];
 
     var code1 = a;
     var code2 = b;

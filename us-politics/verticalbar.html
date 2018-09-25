@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: calc(14px + 1.4vw);
+    }
+
+    @media (min-width:928px) {
+      html {
+        font-size: 25px
+      }
+    }
+
+    body {
+      font-family: sans-serif;
+      background: #eee;
+    }
+
+    .sf-verticalbar__inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .sf-verticalbar__body {
+      background: white;
+      padding: 1.5rem 1rem;
+    }
+
+    .sf-verticalbar__bars {
+      display: flex;
+    }
+
+    .sf-verticalbar__item {
+      flex: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0 0.25rem;
+      align-items: center;
+    }
+
+    .sf-verticalbar__bar {
+      flex: 1;
+      width: 100%;
+      height: 8rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sf-verticalbar__barbody {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      height: calc(100% - 1.3rem);
+      text-align: center;
+      font-size: 0.9rem;
+      transition: transform 0.33s;
+      will-change: transform;
+    }
+
+    .sf-verticalbar__body[data-animate-in-view] .sf-verticalbar__barbody {
+      transform: translateY(0) !important;
+    }
+
+    .sf-verticalbar__barbody span {
+      display: inline-block;
+      transform: translateY(-100%);
+      padding-bottom: 0.3rem
+    }
+
+    .sf-verticalbar__barbody--dem {
+      background: #00476c;
+      transition-delay: 0.2s
+    }
+
+    .sf-verticalbar__barbody--rep {
+      background: #b90303;
+      transition-delay: 0.1s
+    }
+
+    .sf-verticalbar__title {
+      font-weight: 200;
+      font-size: 0.8rem;
+      padding-bottom: 1.2rem;
+      text-align: center;
+    }
+
+    .sf-verticalbar__bar-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sf-verticalbar">
+    <div class="sf-verticalbar__inner">
+      <div class="sf-verticalbar__body" data-animate-in-view data-trigger="100">
+        <h5 class="sf-verticalbar__title">Owns a gun or gun in household</h5>
+        <div class="sf-verticalbar__bars">
+          <div class="sf-verticalbar__item">
+            <div class="sf-verticalbar__bar">
+              <div class="sf-verticalbar__barbody sf-verticalbar__barbody--dem" style="transform: translateY(-40%)">
+                <span>25%</span>
+              </div>
+
+            </div>
+            <p class="sf-verticalbar__bar-label">Democrat</p>
+          </div>
+          <div class="sf-verticalbar__item">
+            <div class="sf-verticalbar__bar">
+              <div class="sf-verticalbar__barbody sf-verticalbar__barbody--rep" style="transform: translateY(-90%)">
+                <span>56%</span>
+              </div>
+
+            </div>
+            <p class="sf-verticalbar__bar-label">Republican</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -3,12 +3,28 @@
   color: white;
 }
 
+.sf-party-dr--down {
+  background: linear-gradient(to bottom, #00476c 0,#00476c 50%,#710000 50%, #b90303 58%)
+}
+
 .sf-party-d {
   background: #00476c
 }
 
 .sf-party-r {
   background: #b90303
+}
+
+.sf-party-shade1 {
+  background: #e8e8e8;
+}
+
+.sf-party-shade2 {
+  background: linear-gradient(to right, #babcbe 0, #e8e8e8 50%, #babcbe 100%)
+}
+
+.sf-party-header-grad {
+  background: linear-gradient(to right, #242021 0%, #343434 50%, #242021 100%)
 }
 
 .sf-party-split-header {
