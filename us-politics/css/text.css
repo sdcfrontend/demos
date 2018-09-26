@@ -1,12 +1,13 @@
 .sf-text {
   max-width: 680px;
+  font-size: 0.85rem;
   margin: 0 auto;
-  line-height: 1.42;
+  line-height: 1.5;
   padding: 0 1vw;
 }
 
 .sf-text > * {
-  margin-bottom: 1.25rem
+  margin-bottom: 1.35rem
 }
 .sf-text > *:last-child {
   margin-bottom: 0;

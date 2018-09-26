@@ -15,13 +15,13 @@
 }
 
 .sf-header--main > em {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: block;
   font-style: normal;
   color: #999;
   text-transform: none;
   padding-top: 1rem;
-  line-height: 1.2;
+  line-height: 1.45;
   max-width: 680px;
   margin: 0 auto;
 }
