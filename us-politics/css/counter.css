@@ -15,6 +15,11 @@
   text-align: left;
 }
 
+.sf-counter__cell[data-number="1"]:first-child {
+  letter-spacing: 0.1em;
+  text-align: center
+}
+
 .sf-counter__cell[data-number]>span {
   visibility: hidden
 }
@@ -81,6 +86,14 @@
 
 .sf-counter__cell[data-text="small"]>span {
   font-size: 0.6em
+}
+
+.sf-counter__cell[data-align="center"] {
+  text-align: center
+}
+
+.sf-counter__cell[data-text="small"]:last-child {
+  padding-left: 0.07em
 }
 
 .sf-counter__arrow {

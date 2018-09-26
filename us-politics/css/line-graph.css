@@ -5,7 +5,7 @@
       max-width: 680px;
       width: 100%;
       margin: 0 auto 1rem;
-      padding-bottom: 1rem
+      padding-bottom: 1.25rem
     }
 
     .sf-line-graph__wipe {
@@ -47,19 +47,22 @@
       position: relative;
       padding-bottom: 60%;
       overflow: hidden
-      
     }
 
     .sf-line-graph__key {
-      position: absolute;
+      /* position: absolute;
       top: 1rem;
       left: 1rem;
-      display: flex;
+      display: flex; */
+      font-size: 0.8rem;
+      padding: 0;
+      display: inline-flex;
     }
 
-    .sf-line-graph__key>span {
-      font-size: 0.7rem;
-      padding-right: 0.5rem
+    .sf-line-graph__key-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 0.5rem
     }
 
     .sf-line-graph__key--dem:before,
@@ -92,7 +95,6 @@
       transform: translateX(calc(-100% / 36));
       width: 90%;
     }
-
 
     .sf-line-graph__x-tick {
       padding: 0.6rem 0 0;
@@ -128,6 +130,13 @@
       margin: 0
     }
 
+    .sf-line-graph__title {
+      font-weight: 200;
+      font-size: 0.8rem;
+      padding-top: 1.25rem;
+      text-align: center;
+    }
+
     .sf-line-graph__number {
       font-size: 0.8rem;
       color: crimson;
@@ -139,21 +148,13 @@
       transition: opacity 0.33s ;
       opacity: 1;
     }
-   
-    .sf-line-graph__number--1 {
-      color: midnightblue
+    
+    .sf-line-graph--dem {
+      color: #00476c
     }
 
-    .sf-line-graph__number--2 {
-      color: #888
-    }
-
-    .sf-line-graph__svg-line--1 {
-      stroke: midnightblue
-    }
-
-    .sf-line-graph__svg-line--2 {
-      stroke: #aaa
+    .sf-line-graph--rep {
+      color: #b90303
     }
 
     .sf-line-graph--religion {
@@ -178,4 +179,12 @@
 
     .sf-line-graph--party {
       color: lightslategrey
+    }
+
+    .sf-line-graph--immigration
+    .sf-line-graph__x {
+      display: flex;
+      width: 95%;
+      margin: 0 auto;
+      transform: none
     }
