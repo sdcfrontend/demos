@@ -3,15 +3,15 @@
 }
 
 .sf-areasfx__inner {
-  max-width: 680px;
   margin: 0 auto;
 }
 
 .sf-areasfx__body {
+  max-width: 680px;
   background: white;
+  margin: 0 auto;
   padding: 1rem;
   position: relative;
-  /* background: url(https://i.imgur.com/HV6zvRj.png); */
   background-size: 100% 100%;
 }
 

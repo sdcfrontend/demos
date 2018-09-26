@@ -1,0 +1,31 @@
+.sf-tile {
+  position: relative;
+  max-width: 880px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
+}
+
+.sf-tile > div {
+  max-width: 680px;
+  margin: 0 auto;
+  background: none;
+}
+
+.sf-tile:after {
+  content: "";
+  display:block;
+  position: absolute;
+  z-index: 1;
+  width: 120%;
+  transform: translate(-50%, 50%);
+  height: 1.8rem;
+  background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0) 50%), radial-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0) 50%);
+  background-size: 100% 100%, 30% 78%;
+  background-position: 0 -10%, 50% 0;
+  background-repeat: no-repeat;
+  bottom: 0;
+  pointer-events: none;
+  left: 50%;
+  overflow: hidden;
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)
+}
