@@ -16,7 +16,9 @@
       item.init = true;
       this.removeAttribute('data-role');
       this.querySelectorAll('animate').forEach(function (animate) {
-        animate.beginElement();
+        if (animate.beginElement) {
+          animate.beginElement();
+        }
       })
     }
   })

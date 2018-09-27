@@ -18,8 +18,9 @@ fs.readFile('css/styles.css', (err, css) => {
 var code = {};
 var jsfiles = fs.readdirSync('js');
 
-jsfiles.forEach(function (file) {
+['foreach.js', 'track.js', 'trigger.js', 'graphs.js', 'areasfx.js', 'mini-quiz.js'].forEach(function (file) {
   code[file] = fs.readFileSync('js/' + file).toString('utf8');
+
 });
 
 var result = UglifyJS.minify(code, {});

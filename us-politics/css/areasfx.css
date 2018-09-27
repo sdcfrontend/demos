@@ -30,8 +30,15 @@
   width: 100%;
   align-items: flex-end;
   overflow: hidden;
-  mix-blend-mode: darken;
+  opacity: 0.9
   /* mix-blend-mode: hard-light */
+}
+
+@supports (mix-blend-mode: darken) {
+  .sf-areasfx__bars {
+    mix-blend-mode: darken;
+    opacity: 1
+  }
 }
 
 .sf-areasfx__bar {

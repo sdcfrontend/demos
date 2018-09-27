@@ -22,7 +22,7 @@
  .sf-section-header__body {
   position: absolute;
   width: 100%;
-  height: 20%;
+  height: 30%;
   left: 0;
   bottom: 0;
   display: flex;
@@ -37,9 +37,10 @@
   font-size: calc(1.8rem + 2.5vmin);
   line-height: 1;
   font-weight: 200;
-  padding-bottom: 0.7em;
+  padding-bottom: 0.6em;
   width: 100%;
   text-align: center;
+  text-shadow: 2px 2px black
 } 
 
 .sf-section-header__image {
@@ -51,7 +52,7 @@
 }
 
 .sf-section-header__image1 {
-  transform: scale(calc(1.1 - (var(--vptop) / 750)));
+  transform: scale(calc(1.1 - (var(--vptop) / 900)));
 }
 
 .sf-section-header__image2 {

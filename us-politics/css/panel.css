@@ -13,6 +13,11 @@
   color: white
 }
 
+.sf-panel--invert 
+.sf-text-credit a {
+  color: #aaa
+}
+
 .sf-panel--shade {
   background: #eee;
   /* background: linear-gradient(to right, #babcbe 0, #e8e8e8 50%, #babcbe 100%) */

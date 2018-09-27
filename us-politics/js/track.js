@@ -9,6 +9,7 @@
     var pc = (100 / window.innerHeight) * (this.offsetTop - window.pageYOffset);
     pc = pc.toFixed(2);
     if (pc > -110 && pc < 110 && pc !== this.style.getPropertyValue('--vptop')) {
+      console.log('set');
       this.style.setProperty('--vptop', pc);
     }
   }
@@ -22,7 +23,15 @@
 
   }
 
-  tick();
+  // tick();
 
+  window.addEventListener('scroll', function () {
+
+    requestAnimationFrame(function () {
+      trackme.forEach(function (item) {
+        item.track();
+      })
+    })
+  }, { passive: true })
 
 })()

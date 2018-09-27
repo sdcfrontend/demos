@@ -54,10 +54,11 @@
 }
 
 .sf-barinfo__label {
-  width: 3.2rem;
+  width: 3.5rem;
   text-align: left;
   display: flex;
-  align-items: center
+  align-items: center;
+  font-weight: 200
 }
 
 .sf-barinfo__barbody {
