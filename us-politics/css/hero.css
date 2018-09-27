@@ -97,7 +97,7 @@
 
 .sf-hero__title > span {
   display: inline-block;
-  transition: transform 0.66s;
+  transition: transform 0.5s;
   will-change: transform;
   transform: translateX(0);
   transition-delay: 0.3s

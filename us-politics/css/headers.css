@@ -5,13 +5,13 @@
   font-weight: 400;
   padding-bottom: .2em;
   line-height: 1;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
 }
 
 .sf-header--main > span {
   display: inline-block;
-  border-bottom: 3px solid currentColor;
+  /* border-bottom: 3px solid currentColor; */
 }
 
 .sf-header--main > em {
@@ -20,7 +20,7 @@
   font-style: normal;
   color: #666;
   text-transform: none;
-  padding-top: 0.9rem;
+  padding-top: 0.7rem;
   line-height: 1.4;
   max-width: 680px;
   margin: 0 auto;

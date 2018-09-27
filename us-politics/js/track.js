@@ -1,18 +1,28 @@
 (function () {
+
   var trackme = document.querySelectorAll('[data-track]');
   trackme.forEach(function (item) {
-    track(item);
+    item.track = track;
   });
 
-  function track(el) {
-    function tick() {
-      var dims = el.getBoundingClientRect();
-      var pc = (100 / window.innerHeight) * dims.top;
-      pc = pc.toFixed(2);
-      el.style.setProperty('--vptop', pc);
-      requestAnimationFrame(tick)
+  function track() {
+    var pc = (100 / window.innerHeight) * (this.offsetTop - window.pageYOffset);
+    pc = pc.toFixed(2);
+    if (pc > -110 && pc < 110 && pc !== this.style.getPropertyValue('--vptop')) {
+      this.style.setProperty('--vptop', pc);
     }
-    tick();
   }
+
+  function tick() {
+    trackme.forEach(function (item) {
+      item.track();
+    })
+
+    requestAnimationFrame(tick)
+
+  }
+
+  tick();
+
 
 })()
