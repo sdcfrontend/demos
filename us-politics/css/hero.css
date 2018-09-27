@@ -19,25 +19,33 @@
   position: absolute;
   left: 0;
   top: 0;
-  font-size: calc(1.8rem + 2.5vmin);
+  font-size: calc(1.7rem + 2.6vmin);
   font-weight: 200;
   overflow: hidden
 }
 
+.sf-hero__wings:after {
+  content: "";
+  width: 100px;
+  height: 150%;
+  top: -25%;
+  position: absolute;
+  left: calc(50% - 100px);
+  z-index: 3;
+  box-shadow: 6px 0 10px rgba(0,0,0,0.4)
+}
+
 .sf-hero__wing {
   width: 50%;
-  transition: transform 0.5s;
-  will-change: transform;
-  transform: translateX(0);
   transition-delay: 0.66s;
   flex: 1;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
 }
 
 .sf-hero__wing--1 {
   background-color: #00476c;
-  box-shadow: 6px 0 10px rgba(0,0,0,0.4);
   z-index: 2
 }
 
@@ -45,21 +53,11 @@
   background-color: #bb1818;
 }
 
-.sf-hero[data-animate-in-view]
-.sf-hero__wing--1 {
-  transform: translateX(-100%)
-}
-
-.sf-hero[data-animate-in-view]
-.sf-hero__wing--2 {
-  transform: translateX(100%)
-}
-
 .sf-hero__wing--1
 .sf-hero__image {
   background:url(../assets/images/hero1.png) no-repeat;
   background-size: auto 100%;
-  background-position: right bottom
+  background-position: right bottom;
 }
 
 .sf-hero__wing--2
@@ -71,37 +69,49 @@
 
 .sf-hero__image {
   flex: 1;
+  transition: transform 0.66s;
+  will-change: transform;
+  transform: translateX(0);
+}
+
+.sf-hero[data-animate-in-view]
+[data-side1] {
+  transform: translateX(120%)
+}
+
+.sf-hero[data-animate-in-view]
+[data-side2] {
+  transform: translateX(-120%)
 }
 
 .sf-hero__title {
-  padding: 0.2rem 0 0.2rem 1.7rem;
+  padding: 0.2rem 0 0.2rem calc(1rem + 2vmin);
   box-shadow: 0 -6px 10px rgba(0,0,0,0.4);
   z-index: 2;
   position: relative;
   overflow: hidden;
+  background:url(../assets/images/star.png) no-repeat 50% 50%;
+  background-size: 2.6rem 2.6rem;
+  background-position: right -1.3rem top 50%
 }
+
+.sf-hero__title > span {
+  display: inline-block;
+  transition: transform 0.66s;
+  will-change: transform;
+  transform: translateX(0);
+  transition-delay: 0.3s
+} 
 
 .sf-hero__wing--1 
 .sf-hero__title {
   text-align: right;
-  padding: 0.2rem 1.7rem 0.2rem 0;
+  padding: 0.2rem calc(1rem + 2vmin) 0.2rem 0;
 }
-
-.sf-hero__title:after {
-  content: "";
-  width: 3rem;
-  height: 66%;
-  top: 17%;
-  position: absolute;
-  background:url(../assets/images/star.png) no-repeat 50% 50%;
-  background-size: auto 100%;
-  right: 0;
-  transform: translateX(50%)
-}
-
 
 .sf-hero__wing--2
-.sf-hero__title:after {
-  right: 100%;
+.sf-hero__title {
+  /* right: 100%; */
+  background-position: left -1.3rem top 50%
 }
 

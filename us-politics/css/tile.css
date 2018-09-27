@@ -2,7 +2,7 @@
   position: relative;
   max-width: 880px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
+  background: linear-gradient(to right, transparent 0%, white 30%, white 70%, transparent 100%);
 }
 
 .sf-tile > div {
@@ -17,6 +17,7 @@
   position: absolute;
   z-index: 1;
   width: 120%;
+  max-width: 99vw;
   transform: translate(-50%, 50%);
   height: 1.8rem;
   background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0) 50%), radial-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0) 50%);
@@ -26,6 +27,5 @@
   bottom: 0;
   pointer-events: none;
   left: 50%;
-  overflow: hidden;
-  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%)
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
 }

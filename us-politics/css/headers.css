@@ -15,15 +15,20 @@
 }
 
 .sf-header--main > em {
-  font-size: 0.85rem;
+  font-size: 18px;
   display: block;
   font-style: normal;
-  color: #999;
+  color: #666;
   text-transform: none;
-  padding-top: 1rem;
-  line-height: 1.45;
+  padding-top: 0.9rem;
+  line-height: 1.4;
   max-width: 680px;
   margin: 0 auto;
+}
+
+.sf-panel--invert
+.sf-header--main > em {
+  color: #aaa
 }
 
 .sf-header--sub {
@@ -32,4 +37,6 @@
   margin-bottom: 1rem;
   text-align: center;
 }
+
+
 

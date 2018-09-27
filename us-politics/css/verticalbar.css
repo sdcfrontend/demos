@@ -9,7 +9,6 @@
 }
 
 .sf-verticalbar__body {
-  background: white;
   padding: 1.5rem 1rem;
 }
 
@@ -67,7 +66,7 @@
 
 .sf-verticalbar__title {
   font-weight: 200;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding-bottom: 1.2rem;
   text-align: center;
 }

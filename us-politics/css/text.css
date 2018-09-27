@@ -1,6 +1,5 @@
 .sf-text {
   max-width: 680px;
-  font-size: 0.85rem;
   margin: 0 auto;
   line-height: 1.5;
   padding: 0 1vw;
@@ -62,4 +61,13 @@
   text-align: center;
   margin-bottom: 0;
   line-height: 1.2
+}
+
+.sf-byline {
+  font-size: 16px;
+  margin-bottom: 0.6rem
+}
+
+.sf-share {
+  margin-bottom: 1.5rem;
 }

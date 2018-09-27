@@ -8,11 +8,10 @@
 }
 
 .sf-gunsales__body {
-  background: white;
 }
 
 .sf-gunsales__title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 200;
   text-align: center;
   padding-top: 1rem
@@ -84,7 +83,7 @@
   right: 50%;
   bottom: 100%;
   top: auto;
-  transform: translate(50%, -50%)
+  transform: translate(50%, -60%)
 }
 
 .sf-gunsales__div {
@@ -98,8 +97,7 @@
 
 .sf-gunsales__scale {
   font-size: 0.6rem;
-  color: #ccc;
-  background: white;
+  color: #777;
   position: absolute;
   left: 0;
   transform: translateX(0.5rem);
