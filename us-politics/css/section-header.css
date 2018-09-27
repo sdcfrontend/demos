@@ -52,7 +52,7 @@
 }
 
 .sf-section-header__image1 {
-  transform: scale(calc(1.1 - (var(--vptop) / 1000)));
+  transform: scale(calc(1.1 - (var(--vptop) / 900)));
 }
 
 .sf-section-header__image2 {
