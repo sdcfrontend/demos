@@ -48,11 +48,11 @@
   display: block;
   will-change: transform, opacity;
   transform: translateZ(0);
-  transition: transform 0.1s
+  /* transition: transform 0.1s */
 }
 
 .sf-section-header__image1 {
-  transform: scale(calc(1.1 - (var(--vptop) / 900)));
+  transform: scale(calc(1.1 - (var(--vptop) / 1000)));
 }
 
 .sf-section-header__image2 {

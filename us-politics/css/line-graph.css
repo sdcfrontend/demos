@@ -112,7 +112,7 @@
 
     .sf-line-graph__caption {
       text-align: center;
-      font-weight: 600;
+      font-weight: 200;
       padding: 0.8rem 0 0;
       margin: 0
     }
@@ -185,6 +185,25 @@
     .sf-line-graph__body[data-animate-in-view]
     .sf-line-graph__clip {
       x: -680
+    }
+
+    .sf-line-graph__divided {
+      position: absolute;
+      transform: rotate(-90deg);
+      top: 10%;
+      left: 0;
+      font-size: 0.6rem;
+    }
+    .sf-line-graph__divided
+    .sf-areasfx__divided-arrows {
+      filter: grayscale(1);
+      transform: scale(0.9);
+      opacity: 0.5
+    }
+
+    .sf-line-graph__divided
+    .sf-areasfx__divided-arrows:before {
+      content: none
     }
 
    
