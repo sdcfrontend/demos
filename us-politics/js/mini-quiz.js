@@ -25,7 +25,7 @@
 
     var buttons = quiz.querySelectorAll('.sf-mini-quiz__answer');
     var desc = quiz.querySelector('.sf-mini-quiz__desc');
-    var correct = ['Correct', 'Wrong'];
+    var correct = ['Correct!', 'Wrong!'];
 
     var answer = quiz.getAttribute('data-id').split("|");
     answer = parseInt(answer[0], 10) / parseInt(answer[1], 10);
