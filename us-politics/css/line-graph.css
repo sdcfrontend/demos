@@ -166,7 +166,8 @@
       position: absolute;
       transform: translate(0, -50%);
       line-height: 1;
-      transition: opacity 0.33s ;
+      transition: opacity 0.33s, transform 0.33s;
+      will-change: opacity, transform;
       opacity: 1;
       font-weight: 400;
       font-size: 0.7rem;
@@ -192,6 +193,12 @@
     .sf-line-graph__body[data-animate-in-view]
     .sf-line-graph__clip {
       x: -680
+    }
+
+    .sf-line-graph__body[data-animate-in-view]
+    .sf-line-graph__number {
+      transform: scale(0.5);
+      opacity: 0;
     }
 
     .sf-line-graph__divided {
