@@ -63,16 +63,17 @@
 }
 
 .sf-gunsales__hotspot-label {
-  font-size: 0.7rem;
   white-space: nowrap;
   position: absolute;
   top: 50%;
   left: 50%;
   line-height: 1;
   font-style: normal;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #eee;
   background: black;
-  color: white;
-  padding: 0.25em 0.25em 0.2em;
+  padding: 0.15em 0.2em
 }
 
 .sf-gunsales__hotspot-label[data-align*="right"] {

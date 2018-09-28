@@ -123,18 +123,6 @@
       padding-top: 1.25rem;
       text-align: center;
     }
-
-    .sf-line-graph__number {
-      font-size: 0.75rem;
-      color: crimson;
-      font-weight: 600;
-      position: absolute;
-      transform: translate(0, -50%);
-      background: white;
-      line-height: 1;
-      transition: opacity 0.33s ;
-      opacity: 1;
-    }
     
     .sf-line-graph--dem {
       color: #00476c
@@ -146,32 +134,45 @@
 
     .sf-line-graph--religion {
       color: cornflowerblue;
-      /* color: #666; */
+      color: #666;
     }
 
     .sf-line-graph--age {
       color: chocolate;
-      /* color: #aaa; */
+      color: #aaa;
     }
 
     .sf-line-graph--race {
       color: darkcyan;
-      /* color: #333; */
+      color: #333;
     }
 
     .sf-line-graph--education {
       color: darkslateblue;
-      /* color: #888; */
+      color: #888;
     }
 
     .sf-line-graph--gender {
       color: goldenrod;
-      /* color: #ccc; */
+      color: #ccc;
     }
 
     .sf-line-graph--party {
       color: lightslategrey;
-      /* color: #000; */
+      color: #000;
+    }
+
+    .sf-line-graph__number[class] {
+      position: absolute;
+      transform: translate(0, -50%);
+      line-height: 1;
+      transition: opacity 0.33s ;
+      opacity: 1;
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: #eee;
+      background: black;
+      padding: 0.1em 0.2em
     }
 
     .sf-line-graph--immigration
