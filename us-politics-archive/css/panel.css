@@ -1,0 +1,32 @@
+.sf-panel {
+  padding: 2rem 0;
+  margin-bottom: 1px;
+}
+
+.sf-panel--no-padding {
+  padding: 0
+}
+
+.sf-panel--invert {
+  background: linear-gradient(180deg,#3a3a3a 0,#2b2b2b);
+  background: linear-gradient(to right, #242021 0%, #343434 50%, #242021 100%);
+  color: white
+}
+
+.sf-panel--invert 
+.sf-text-credit a {
+  color: #aaa
+}
+
+.sf-panel--shade {
+  background: #eee;
+  /* background: linear-gradient(to right, #babcbe 0, #e8e8e8 50%, #babcbe 100%) */
+
+}
+
+.sf-panel--divider {
+  height: 1px;
+  background: rgba(0,0,0,0.2);
+  margin: 2rem auto;
+  max-width: 680px
+}

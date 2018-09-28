@@ -1,0 +1,128 @@
+
+.sf-court__inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.sf-court__header[class] {
+  position: sticky;
+  top: -1px;
+  z-index: 3
+}
+
+.sf-court__body {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.sf-court__body-cells {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc
+}
+
+.sf-court__subheader {
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sf-court__cell {
+  width: calc(50% - 0.5rem);
+  padding-bottom: 0.5rem
+}
+
+.sf-court__cell--1 {
+  margin-right: 0.5rem;
+}
+
+.sf-court__cell--2 {
+  margin-left: 0.5rem;
+}
+
+
+.sf-court__label,
+.sf-court__subheader {
+  width: 100%;
+  padding: 0.5rem 0;
+  line-height: 1.2;
+  font-size: 0.75rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+.sf-court__cell h5 {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.sf-court__judge {
+  width: calc(1.6rem + 1vmin);
+  height: calc(1.6rem + 1vmin);
+  display: inline-block;
+  margin: 0.2rem;
+  position: relative;
+  transition: transform 0.33s, opacity 0.33s;
+  transform: scale(0.999);
+  opacity: 1;
+  will-change: all;
+}
+
+.sf-court__body-cells[data-animate-in-view] .sf-court__judge {
+  transform: scale(0.7);
+  opacity: 0;
+}
+
+.sf-court__judge--nom img {
+  opacity: 0.3
+}
+
+.sf-court__judge--nom:after {
+  content: "?";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500
+}
+
+.sf-court__judge>svg,
+.sf-court__judge>svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.sf-party-split-header {
+  background: url(assets/images/star.png) no-repeat 50% 50%, linear-gradient(to right, #00476c 0, #00476c 50%, #b90303 50%, #b90303 100%);
+  background-size: auto 60%, 100% 100%;
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  position: relative;
+  overflow: hidden
+}
+
+.sf-party-split-header>span:first-child {
+  box-shadow: 6px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sf-party-split-header>span {
+  padding: 0.8rem;
+  flex: 1
+}

@@ -145,27 +145,33 @@
     }
 
     .sf-line-graph--religion {
-      color: cornflowerblue
+      color: cornflowerblue;
+      /* color: #666; */
     }
 
     .sf-line-graph--age {
-      color: chocolate
+      color: chocolate;
+      /* color: #aaa; */
     }
 
     .sf-line-graph--race {
-      color: darkcyan
+      color: darkcyan;
+      /* color: #333; */
     }
 
     .sf-line-graph--education {
-      color: darkslateblue
+      color: darkslateblue;
+      /* color: #888; */
     }
 
     .sf-line-graph--gender {
-      color: goldenrod
+      color: goldenrod;
+      /* color: #ccc; */
     }
 
     .sf-line-graph--party {
-      color: lightslategrey
+      color: lightslategrey;
+      /* color: #000; */
     }
 
     .sf-line-graph--immigration

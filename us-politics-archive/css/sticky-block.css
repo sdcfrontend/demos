@@ -1,0 +1,45 @@
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+  .sf-sticky-block {
+    height: 200vh;
+    position: relative;
+  }
+
+  .sf-sticky-block--3 {
+    height: 300vh
+  }
+
+  .sf-sticky-block--3[class]:after {
+    height: 200vh;
+  }
+
+  .sf-sticky-block--4 {
+    height: 400vh
+  }
+
+  .sf-sticky-block:after {
+    content: "";
+    transform-origin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3vw;
+    max-width: 20px;
+    background: #ccc;
+   
+    background-size: 100% 100vh;
+    height: 100vh;
+  }
+
+  .sf-sticky-block__target {
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media all and (max-aspect-ratio: 1/1) {
+  .sf-sticky-block--desktop-only
+  .sf-sticky-block:after {
+    content: none;
+  }
+}

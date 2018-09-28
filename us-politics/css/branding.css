@@ -24,7 +24,7 @@
 }
 
 .sf-party-header-grad {
-  background: linear-gradient(to right, #242021 0%, #343434 50%, #242021 100%)
+  background-image: linear-gradient(to right, #242021 0%, #343434 50%, #242021 100%)
 }
 
 .sf-party-split-header {

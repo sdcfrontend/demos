@@ -1,0 +1,21 @@
+html {
+  font-size: calc(15px + 1.4vw);
+}
+
+@media (min-width:928px) {
+  html {
+    font-size: 25px
+  }
+}
+
+body {
+  font-size: 16px;
+}
+
+.sf-feature-wrap {
+  font-size: 18px;
+}
+
+.sdc-news-header__nav-action-icon-label {
+  font-size: 16px
+}

@@ -1,0 +1,50 @@
+.sf-party-dr {
+  background: linear-gradient(to right, #00476c 0,#00476c 50%,#b90303 50%, #b90303 100%);
+  color: white;
+}
+
+.sf-party-dr--down {
+  background: linear-gradient(to bottom, #00476c 0,#00476c 50%,#710000 50%, #b90303 58%)
+}
+
+.sf-party-d {
+  background: #00476c
+}
+
+.sf-party-r {
+  background: #b90303
+}
+
+.sf-party-shade1 {
+  background: #e8e8e8;
+}
+
+.sf-party-shade2 {
+  background: linear-gradient(to right, #babcbe 0, #e8e8e8 50%, #babcbe 100%)
+}
+
+.sf-party-header-grad {
+  background: linear-gradient(to right, #242021 0%, #343434 50%, #242021 100%)
+}
+
+.sf-party-split-header {
+  background: url(../assets/images/star.png) no-repeat 50% 50%, linear-gradient(to right, #00476c 0, #00476c 50%, #b90303 50%, #b90303 100%);
+  background-size: auto 60%, 100% 100%;
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  position: relative;
+  overflow: hidden
+}
+
+.sf-party-split-header>span:first-child {
+  box-shadow: 6px 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.sf-party-split-header>span {
+  padding: 0.8rem;
+  flex: 1
+}

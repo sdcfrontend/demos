@@ -20,7 +20,6 @@
 .sf-gunsales__canvas {
   position: relative;
   padding-bottom: 75%;
-  /* background: url(http://i67.tinypic.com/24uxlea.png); */
   background-size: 100% 100%;
   opacity: 1;
   will-change: opacity;
@@ -34,7 +33,7 @@
 }
 
 .sf-gunsales__svg-line {
-  stroke: #de6969;
+  stroke: #555;
   stroke-width: 1;
   fill: none
 }
@@ -42,14 +41,16 @@
 .sf-gunsales__hotspot {
   width: 1rem;
   height: 1rem;
-  background: rgba(255, 0, 0, 0.39);
+  background: #ccac58;
+  border: 1px solid black;
   border-radius: 50%;
   position: absolute;
   z-index: 2;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.25s, opacity 0.2s;
   will-change: transform;
-  opacity: 1
+  opacity: 1;
+  z-index: 3
 }
 
 .sf-gunsales__canvas[data-role="gunsales-gfx"] {
@@ -57,7 +58,7 @@
 }
 
 .sf-gunsales__canvas[data-role="gunsales-gfx"] .sf-gunsales__hotspot {
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(0.7);
   opacity: 0
 }
 
@@ -69,7 +70,9 @@
   left: 50%;
   line-height: 1;
   font-style: normal;
-  background: white
+  background: black;
+  color: white;
+  padding: 0.25em 0.25em 0.2em;
 }
 
 .sf-gunsales__hotspot-label[data-align*="right"] {
@@ -101,4 +104,9 @@
   position: absolute;
   left: 0;
   transform: translateX(0.5rem);
+}
+
+.sf-gunsales__body[data-animate-in-view]
+.sf-line-graph__clip {
+  x: -680
 }

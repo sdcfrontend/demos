@@ -1,0 +1,94 @@
+.sf-midterms__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  background: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.sf-midterms__scroll {
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sf-midterms__body {
+  width: 50rem;
+  height: 40vh;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column
+}
+
+.sf-midterms__canvas {
+  width: 100%;
+  display: flex;
+  flex: 1;
+}
+
+.sf-midterms__years {
+  display: flex;
+}
+
+.sf-midterms__year{
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 0.65rem
+}
+
+.sf-midterms__tick {
+  margin: 1px;
+  flex: 1;
+  position: relative;
+  height: 50%;
+  overflow: hidden;
+}
+
+.sf-midterms__tick--loss {
+  bottom: auto;
+  top: 50%;
+  align-items: flex-end
+}
+
+.sf-midterms__tick>span {
+  position: absolute;
+  background: green;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 0.33s;
+  will-change: transform
+}
+
+.sf-midterms__tick>span:after {
+  content: attr(data-stat);
+  color: white;
+  display: inline-block;
+  padding: 0.2rem 0;
+  font-size: 0.7rem
+}
+
+.sf-midterms__tick--loss>span {
+  top: -100%;
+  background: #666;
+  align-items: flex-end;
+}
+
+.sf-midterms__scroll[data-animate-in-view] .sf-midterms__tick>span {
+  transform: translateY(0)!important
+}
+
+.sf-midterms__header {
+  font-size: 0.85rem;
+  font-weight: 500;
+  position: absolute;
+  width: 100%;
+  top: 1.5em;
+  left: 0;
+  text-align: center
+}
