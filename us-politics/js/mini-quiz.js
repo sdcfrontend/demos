@@ -1,6 +1,8 @@
 (function () {
+
   var quizzes = document.querySelectorAll('.sf-mini-quiz');
 
+  // use this to decode/encode the answers
   function scramble(text, dir) {
     var a = ['e', 'a', 'r', 'i', 'o', 't', 'n', 's', 'l', ' ', '3', '1'];
     var b = ['∑', '∞', '¿', '∃', '¢', '†', '⅔', '√', '≠', '∂', '=', '@'];

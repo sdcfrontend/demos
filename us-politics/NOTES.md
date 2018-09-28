@@ -1,3 +1,5 @@
 - Article links - make more explicit its a link
 - Gun deaths - Latest available annual data
 - Tags on gun sales
+- Add related stories
+- might need to change kavanaugh
