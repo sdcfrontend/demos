@@ -18,7 +18,7 @@ fs.readFile('css/styles.css', (err, css) => {
 var code = {};
 var jsfiles = fs.readdirSync('js');
 
-['foreach.js', 'track.js', 'trigger.js', 'graphs.js', 'areasfx.js', 'mini-quiz.js'].forEach(function (file) {
+['foreach.js', 'track.js', 'trigger.js', 'graphs.js', 'venn.js', 'mini-quiz.js'].forEach(function (file) {
   code[file] = fs.readFileSync('js/' + file).toString('utf8');
 
 });
