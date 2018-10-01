@@ -47,9 +47,9 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   will-change: transform;
 }
 
-@supports (mix-blend-mode: darken) {
+@supports (mix-blend-mode: multiply) {
   .sf-venn__circle {
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
     opacity: 1
   }
 }
