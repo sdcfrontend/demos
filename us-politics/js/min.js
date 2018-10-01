@@ -57,16 +57,16 @@ NodeList.prototype.forEach = Array.prototype.forEach,
     })
     var data = [
       {
-        "dem": -15,
-        "rep": 20
+        "dem": -35,
+        "rep": 10
       },
       {
-        "dem": -8,
-        "rep": 8
+        "dem": -22,
+        "rep": 3
       },
       {
         "dem": -60,
-        "rep": 25
+        "rep": 32
       }
     ]
   

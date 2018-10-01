@@ -19,7 +19,7 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
 
 .sf-venn__canvas {
   position: relative;
-  padding-bottom: 80%;
+  padding-bottom: 60%;
   margin-bottom: 2em;
   /*   opacity: 0.2 */
   /*   display: none */
@@ -30,9 +30,9 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   position: absolute;
   top: 10%;
   bottom: 10%;
-  left: 18%;
-  width: 64%;
-  padding-bottom: 30%;
+  left: 25%;
+  width: 50%;
+  padding-bottom: 50%;
 }
 
 .sf-venn__circle {
