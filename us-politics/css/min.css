@@ -44,6 +44,7 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   left: 0;
   transition: transform 0.66s;
   opacity: 0.8;
+  will-change: transform;
 }
 
 @supports (mix-blend-mode: darken) {
