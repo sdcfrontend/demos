@@ -70,13 +70,18 @@ NodeList.prototype.forEach = Array.prototype.forEach,
       }
     ]
   
-    var dem = document.querySelector('.sf-venn__circle--dem');
-    var rep = document.querySelector('.sf-venn__circle--rep');
+    var dems = document.querySelectorAll('.sf-venn__circle--dem');
+    var reps = document.querySelectorAll('.sf-venn__circle--rep');
     var links = document.querySelectorAll('.sf-venn__nav a');
   
     function render(da) {
-      dem.style.cssText = "transform: translateX(" + da.dem + "%);"
-      rep.style.cssText = "transform: translateX(" + da.rep + "%)"
+      dems.forEach(function (dem) {
+        dem.style.cssText = "transform: translateX(" + da.dem + "%);";
+      });
+
+      reps.forEach(function (rep) {
+        rep.style.cssText = "transform: translateX(" + da.rep + "%)"
+      });
     }
   
     links.forEach(function (link, index) {
