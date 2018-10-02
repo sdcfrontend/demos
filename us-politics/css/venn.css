@@ -10,69 +10,113 @@
   max-width: 680px;
   background: white;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem ;
   position: relative;
   background-size: 100% 100%;
 }
 
 .sf-venn__canvas {
   position: relative;
-  padding-bottom: 50%;
+  padding-bottom: 60%;
+  margin-bottom: 2em;
   /*   opacity: 0.2 */
   /*   display: none */
 
 }
 
-.sf-venn__bars {
-  display: flex;
-  height: 100%;
+.sf-venn__circles {
   position: absolute;
-  width: 100%;
-  align-items: flex-end;
-  overflow: hidden;
-  opacity: 0.9
-  /* mix-blend-mode: hard-light */
+  top: 10%;
+  bottom: 10%;
+  left: 25%;
+  width: 50%;
+  padding-bottom: 50%;
 }
 
-@supports (mix-blend-mode: darken) {
-  .sf-venn__bars {
-    mix-blend-mode: darken;
-    opacity: 1
+.sf-venn__circle {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.66s;
+  opacity: 0.8;
+  will-change: transform;
+}
+
+.sf-venn__circle--dem {
+  background: #00476c;
+}
+
+.sf-venn__circle--rep {
+  background: #b90304;
+}
+
+.sf-venn__circle--blend {
+  display: none;
+}
+
+@supports (mix-blend-mode: lighten) {
+  .sf-venn__circle {
+    opacity: 1;
+  }
+
+  .sf-venn__circle--blend {
+    mix-blend-mode: lighten;
+    display: block;
   }
 }
 
-.sf-venn__bar {
-  flex: 1;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  top: 100%;
-  transition: transform 0.33s;
-  will-change: transform
-}
-
-.sf-venn__bars--dem .sf-venn__bar {
-  background: #00476c;
-  /* opacity: 0 */
-}
-
-.sf-venn__bars--rep .sf-venn__bar {
-  background: #b90304;
-  /* opacity: 0 */
-}
-
-.sf-venn__canvas[data-animate-in-view] .sf-venn__bar {
+.sf-venn__canvas[data-animate-in-view] .sf-venn__circle {
   transform: translateY(0) !important
+}
+
+.sf-venn__horizontal-line,
+.sf-venn__vertical-line {
+  background: #000;
+}
+
+.sf-venn__vertical-line {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: calc(50% - 1px);
+  z-index: 2;
 }
 
 .sf-venn__horizontal-line {
   position: absolute;
-  width: 2px;
-  background: #888;
-  height: 100%;
-  left: calc(50% - 1px);
-  z-index: 2
+  width: 100%;
+  height: 4px;
+  top: calc(50% - 2px);
+  z-index: 2;
+}
+
+.sf-venn__ruler {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  top: calc(50% + 2px);
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+  z-index: 2;
+}
+
+.sf-venn__ruler-increment {
+  display: inline-block;
+  vertical-align: top;
+  width: 5%;
+  height: 6px;
+  border-left: 2px solid #000;
+}
+
+.sf-venn__ruler-increment:first-child {
+  border-color: transparent;
+}
+
+.sf-venn__ruler-increment:nth-child(11n) {
+  border-color: transparent;
 }
 
 .sf-venn__key {
@@ -90,11 +134,8 @@
 }
 
 .sf-venn__label {
-  flex: 1
-}
-
-.sf-venn__label:last-child {
-  text-align: right
+  flex: 1;
+  text-align: center;
 }
 
 .sf-venn__divided-cell:first-of-type {
@@ -133,7 +174,7 @@
 }
 
 .sf-venn__divided-arrows--out {
-  background: linear-gradient(to right, transparent 20%, #060913 20%, #060913 80%, transparent 80%);
+  background: linear-gradient(to right, transparent 20%, #c82868 20%, #c82868 80%, transparent 80%);
 }
 
 .sf-venn__divided-arrows--out:before {

@@ -210,3 +210,47 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   font-weight: bold;
   color: inherit
 }
+
+.sf-tile:before,
+.sf-tile:after {
+  content: "";
+  display:block;
+  position: absolute;
+  z-index: 1;
+  width: 120%;
+  max-width: 99vw;
+  transform: translate(-50%, 50%);
+  height: 1.8rem;
+  bottom: 0;
+  pointer-events: none;
+  left: 50%;
+}
+
+.sf-tile:before {
+  bottom: 100%;
+  opacity: 0.5;
+}
+
+.sf-tile:after {
+  bottom: 0;
+}
+
+@supports (clip-path: polygon(0% 50%)){
+  .sf-tile:before,
+  .sf-tile:after {
+    background: radial-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0) 50%), radial-gradient(rgba(0, 0, 0, 0.3), rgba(0,0,0,0) 50%);
+    background-repeat: no-repeat;
+  }
+
+  .sf-tile:before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+    background-size: 100% 100%, 38% 122%;
+    background-position: 0 -10%, 50% -4%;
+  }
+
+  .sf-tile:after {
+    clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+    background-size: 100% 100%, 38% 78%;
+    background-position: 0 -10%, 50% -4%;
+  }
+}
