@@ -47,27 +47,27 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   will-change: transform;
 }
 
-@supports (mix-blend-mode: lighten) {
-  .sf-venn__circle {
-    mix-blend-mode: lighten;
-    opacity: 1
-  }
-}
-
 .sf-venn__circle--dem {
   background: #00476c;
-  transform: translateX(0);
-  /* opacity: 0 */
 }
 
 .sf-venn__circle--rep {
   background: #b90304;
-  transform: translateX(0);
-  /* opacity: 0 */
 }
 
-.sf-venn__circle--norm {
-  mix-blend-mode: normal;
+.sf-venn__circle--blend {
+  display: none;
+}
+
+@supports (mix-blend-mode: lighten) {
+  .sf-venn__circle {
+    opacity: 1;
+  }
+
+  .sf-venn__circle--blend {
+    mix-blend-mode: lighten;
+    display: block;
+  }
 }
 
 .sf-venn__canvas[data-animate-in-view] .sf-venn__circle {
