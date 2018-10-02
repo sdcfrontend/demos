@@ -229,6 +229,7 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
 .sf-tile:before {
   bottom: 100%;
   opacity: 0.5;
+  height: 1.4rem;
 }
 
 .sf-tile:after {

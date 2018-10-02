@@ -29,6 +29,7 @@
 .sf-tile:before {
   bottom: 100%;
   opacity: 0.5;
+  height: 1.2rem;
 }
 
 .sf-tile:after {
