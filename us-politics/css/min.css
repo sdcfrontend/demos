@@ -77,7 +77,6 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
 .sf-venn__horizontal-line,
 .sf-venn__vertical-line {
   background: #000;
-  mix-blend-mode: color;
 }
 
 .sf-venn__vertical-line {
@@ -112,32 +111,6 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   width: 5%;
   height: 6px;
   border-left: 2px solid #000;
-}
-
-@supports (mix-blend-mode: difference) {
-  .sf-venn__horizontal-line--blend,
-  .sf-venn__vertical-line--blend {
-    mix-blend-mode: difference;
-    opacity: 1;
-    background: #fff;
-  }
-
-  .sf-venn__horizontal-line--blend:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: 4px;
-    background: #fff;
-    top: calc(50% - 2px);
-    left: calc(50% - 1px);
-    mix-blend-mode: inherit;
-  }
-
-  .sf-venn__horizontal-line--blend .sf-venn__ruler,
-  .sf-venn__horizontal-line--blend .sf-venn__ruler-increment {
-    border-color: #fff;
-  }
 }
 
 .sf-venn__ruler-increment:first-child {
