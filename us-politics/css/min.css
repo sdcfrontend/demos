@@ -266,3 +266,13 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
     background-position: 0 -10%, 50% -4%;
   }
 }
+
+.sf-text-credit em {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.sf-text-credit--large {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}

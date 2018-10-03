@@ -63,6 +63,16 @@
   line-height: 1.2
 }
 
+.sf-text-credit--large {
+  font-size: 16px;
+  margin-bottom: 0.5em;
+}
+
+.sf-text-credit em {
+  font-weight: 600;
+  font-style: normal;
+}
+
 .sf-text__lead {
   font-size: 1.1em;
   font-weight: 600
