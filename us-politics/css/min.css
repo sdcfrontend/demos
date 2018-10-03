@@ -140,6 +140,10 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   text-align: center;
 }
 
+.sf-venn__divided-cell {
+  text-align: center;
+}
+
 .sf-venn__divided-cell:first-of-type {
   padding-bottom: 0.5rem
 }
@@ -187,6 +191,13 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
 .sf-venn__divided-arrows--out:after {
   transform: rotate(225deg);
   right: -0.25rem
+}
+
+.sf-venn__centre-ground {
+  display: inline-block;
+  width: 2em;
+  height: 0.75em;
+  background-color: #c82868;
 }
 
 .sf-venn__nav {

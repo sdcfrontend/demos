@@ -83,6 +83,23 @@ NodeList.prototype.forEach = Array.prototype.forEach,
         rep.style.cssText = "transform: translateX(" + da.rep + "%)"
       });
     }
+
+    function setRenderTimeout(i) {
+      setTimeout(function(){
+          console.log(i)
+          render(data[i]);
+          links.forEach(function (item) {
+            item.removeAttribute('aria-current');
+          })
+          links[i].setAttribute('aria-current', true)
+      },(i+1)*666);
+    }
+
+    function cycleCharts() {
+      for (var i = 0; i < data.length; i++) {
+        setRenderTimeout(i);
+      }
+    }
   
     links.forEach(function (link, index) {
       link.onclick = function (e) {
@@ -94,6 +111,12 @@ NodeList.prototype.forEach = Array.prototype.forEach,
         render(data[index]);
       }
     });
-  
-    render(data[0]);
+
+    var venn = document.querySelector('[data-role="sf-venn"]');
+    
+
+    venn.start = function () {
+      venn.init = true;
+      cycleCharts();
+    }
     ;
