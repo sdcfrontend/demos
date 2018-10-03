@@ -86,13 +86,12 @@ NodeList.prototype.forEach = Array.prototype.forEach,
 
     function setRenderTimeout(i) {
       setTimeout(function(){
-          console.log(i)
           render(data[i]);
           links.forEach(function (item) {
             item.removeAttribute('aria-current');
           })
           links[i].setAttribute('aria-current', true)
-      },(i+1)*666);
+      },i*666);
     }
 
     function cycleCharts() {
