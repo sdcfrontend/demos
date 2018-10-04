@@ -276,3 +276,18 @@ html{font-size:calc(15px + 1.4vw)}@media (min-width:928px){html{font-size:25px}}
   font-size: 16px;
   margin-bottom: 0.5em;
 }
+
+.sf-mini-quiz__question
+.sf-mini-quiz__inner:before,
+.sf-mini-quiz__question
+.sf-mini-quiz__inner:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1rem);
+  width: 1rem;
+  height: 2rem;
+  right: 100%;
+  z-index: 1;
+  background: url(../assets/images/star.png);
+  background-size: auto 100%;
+}

@@ -49,6 +49,7 @@
 .sf-mini-quiz__inner:after {
   content: "";
   position: absolute;
+  top: calc(50% - 1rem);
   width: 1rem;
   height: 2rem;
   right: 100%;
