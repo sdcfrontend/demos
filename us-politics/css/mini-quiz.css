@@ -54,7 +54,7 @@
   height: 2rem;
   right: 100%;
   z-index: 1;
-  background: url(../assets/images/star.png);
+  background: url(/sdc/assets/images/star.png);
   background-size: auto 100%;
 }
 

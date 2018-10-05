@@ -50,7 +50,7 @@ h4:after {
   height: 2.4rem;
   right: 100%;
   top: 100%;
-  background: url(../assets/images/star.png) no-repeat;
+  background: url(/sdc/assets/images/star.png) no-repeat;
   background-size: 100%;
   transform: translate(-25%, -50%)
 }

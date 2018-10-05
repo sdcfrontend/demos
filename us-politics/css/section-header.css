@@ -14,7 +14,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
-  background: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0,0,0,0.5) 50%, transparent 65%), url(../assets/images/star.png) no-repeat;
+  background: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0,0,0,0.5) 50%, transparent 65%), url(/sdc/assets/images/star.png) no-repeat;
   background-size: 100% auto;
   background-position: 50% 2rem;
 }
