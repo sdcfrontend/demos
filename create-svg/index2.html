@@ -46,7 +46,7 @@
 
     .sf-line-graph__svg-line {
       stroke: currentColor;
-      stroke-width: 4;
+      stroke-width: 1;
       fill: none;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -54,10 +54,10 @@
 
     .sf-line-graph__body {
       position: relative;
-      padding-bottom: 60%;
-      background: url(imm.jpg);
-      background-size: 93% 100%;
-      background-position: 18px 100%;
+      padding-bottom: 75%;
+      background: url(http://i67.tinypic.com/2eey4v6.png);
+      background-size: 100% 100%;
+      background-position: 0px 100%;
       transition: opacity 0.166s;
       will-change: opacity;
       /* opacity: 0; */
@@ -197,27 +197,16 @@
 
   <div class="sf-line-graph">
     <div class="sf-line-graph__body">
-      <svg class="sf-line-graph__svg" viewBox="0 0 680 408">
+      <svg class="sf-line-graph__svg" viewBox="0 0 680 510">
 
         <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--dem" stroke="black" points="">
           <animate attributeName="points" begin="0s" dur="0.3s" repeatCount="1" fill="freezer" to="" from=""></animate>
         </polyline>
 
-        <svg class="sf-line-graph__svg" viewBox="0 0 680 408">
+      </svg>
 
-          <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--dem" stroke="black" points="65,275 106,241 128,242 166,208 206,170 270,216 306,203 328,202 338,229 350,201 437,209 441,181 451,175 475,149 502,155 516,142 523,114 551,125 562,108 570,69 590,50 606,41">
-          </polyline>
 
-          <polyline class="sf-line-graph__svg-line sf-line-graph__svg-line--dem" stroke="black" points="63,288 106,271 125,269 165,218 208,209 270,222 307,228 329,240 336,253 349,269 435,295 443,283 450,276 474,258 503,269 515,275 526,221 553,283 563,261 573,268 589,246 602,235">
 
-          </polyline>
-
-        </svg>
-
-        <span class="sf-line-graph__number sf-line-graph--dem" style="top:67%;left:5%">32</span>
-        <span class="sf-line-graph__number sf-line-graph--rep" style="top:75%;left:5%">30</span>
-        <span class="sf-line-graph__number sf-line-graph--dem" style="top:8%;left:92%">84</span>
-        <span class="sf-line-graph__number sf-line-graph--rep" style="top:56%;left:92%">42</span>
 
 
     </div>
@@ -241,24 +230,24 @@
   var body = document.querySelector('.sf-line-graph__body');
 
 
-  body.onclick = function (e) {
-    var num = prompt('Add number');
-    var index = prompt('index');
-    body.insertAdjacentHTML('beforeend', '<span class="sf-line-graph__number sf-line-graph--' + (index) + '" style="top:' + parseInt((100 / body.offsetHeight) * e.layerY) + '%;left:' + parseInt((100 / body.offsetWidth) * e.layerX) + '%">' + num + '</span>')
-  }
-
   // body.onclick = function (e) {
-  //   var x = e.layerX;
-  //   var y = e.layerY;
-  //   console.log(x);
-  //   coords.push([x, y]);
-  //   var anim = coords.map(function (a) { return [a[0], 408] });
-
-  //   var p = body.querySelector('polyline');
-  //   p.setAttribute('points', coords.join(" "));
-  //   body.querySelector('animate').setAttribute('to', coords.join(" "));
-  //   body.querySelector('animate').setAttribute('from', anim.join(" "));
+  //   var num = prompt('Add number');
+  //   var index = prompt('index');
+  //   body.insertAdjacentHTML('beforeend', '<span class="sf-line-graph__number sf-line-graph--' + (index) + '" style="top:' + parseInt((100 / body.offsetHeight) * e.layerY) + '%;left:' + parseInt((100 / body.offsetWidth) * e.layerX) + '%">' + num + '</span>')
   // }
+
+  body.onclick = function (e) {
+    var x = e.layerX;
+    var y = e.layerY;
+    console.log(x);
+    coords.push([x, y]);
+    var anim = coords.map(function (a) { return [a[0], 408] });
+
+    var p = body.querySelector('polyline');
+    p.setAttribute('points', coords.join(" "));
+    body.querySelector('animate').setAttribute('to', coords.join(" "));
+    body.querySelector('animate').setAttribute('from', anim.join(" "));
+  }
 
 
 </script>
