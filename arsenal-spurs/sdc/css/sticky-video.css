@@ -137,6 +137,7 @@
 
     .sf-sticky-block__target {
       position: sticky;
+      position: -webkit-sticky;
       top: 0;
     }
   }

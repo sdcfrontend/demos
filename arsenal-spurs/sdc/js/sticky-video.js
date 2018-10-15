@@ -38,7 +38,7 @@
   }
 
   function playpause(video, play) {
-
+    console.log(play);
     var isplaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
     var playpromise;
     var promisesupported = ('Promise' in window);

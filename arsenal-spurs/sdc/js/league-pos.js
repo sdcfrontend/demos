@@ -94,7 +94,7 @@
         top = topc(year.pos, 20) + "%";
       }
 
-      point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px;transition-delay:" + (index * 25) + "ms";
+      point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px;transition-delay:" + (index * 35) + "ms";
 
       var line = lines[label][index];
       if (!line) {
@@ -106,7 +106,7 @@
       }
 
       if (points[label][index - 1]) {
-        drawline(points[label][index - 1], point, line);
+        drawline(points[label][index - 1], point, line, index);
       }
     });
   }
@@ -115,7 +115,7 @@
     return (100 / max) * val
   }
 
-  function drawline(a, b, line) {
+  function drawline(a, b, line, index) {
     var pointA = {
       left: a.offsetLeft,
       top: a.offsetTop
@@ -134,7 +134,7 @@
     var distance = lineDistance(pointA.left, pointA.top, pointB.left, pointB.top);
 
     // Set Angle
-    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px;';
+    line.style.cssText = 'transform: rotate(' + angle + 'deg); width:' + distance + 'px;transition-delay:' + (index * 35) + 'ms;';
 
     if (pointB.left < pointA.left) {
 

@@ -9,7 +9,7 @@
 
 .sf-h2h-scores__cell {
   flex: 1;
-  padding: 0 0.1rem;
+  padding: 0 0.3rem;
   text-align: center
 }
 
@@ -22,7 +22,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0.15rem;
+  margin: 0 0.15rem 0.3rem 0;
   font-size: 0.7rem;
   color: white;
   text-decoration: none;
@@ -54,4 +54,37 @@
   font-size: 2.5rem;
   color: white;
   text-align: center;
+}
+
+.sf-h2h-scores__tooltip {
+  pointer-events: none;
+  background: black;
+  color: white;
+  padding: 0.75em;
+  position: absolute;
+  z-index: 11;
+  transform: translate(-50%, -100%);
+  margin-top: -10px;
+  transition: opacity 0.166s;
+  white-space: pre-line;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.2;
+  left: -10000px;
+}
+
+.sf-h2h-scores__tooltip:first-line {
+  font-weight: 500
+}
+
+.sf-h2h-scores__tooltip:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+  left: calc(50% - 4px);
+  top: calc(100% - 4px);
+  position: absolute;
+  background: inherit;
 }
