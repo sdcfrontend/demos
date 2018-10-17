@@ -1,7 +1,7 @@
 .sf-panel {
   padding: 2.2rem 0;
   background: white;
-  contain: layout;
+  contain: content;
 }
 
 .sf-panel--no-padding {

@@ -132,7 +132,7 @@
 }
 
 .sf-most-used__team-header {
-  font-size: 2rem;
+  font-size: calc(1.5rem + 1vmin);
   font-weight: 400;
   font-family: premierleague;
   text-transform: uppercase;
