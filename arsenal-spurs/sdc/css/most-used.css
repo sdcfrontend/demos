@@ -132,11 +132,11 @@
 }
 
 .sf-most-used__team-header {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   font-family: premierleague;
   text-transform: uppercase;
-  margin-bottom: 0.5rem
+  margin-bottom: 0.65rem
 }
 
 .sf-most-used__players {
