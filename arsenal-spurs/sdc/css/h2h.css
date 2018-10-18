@@ -27,9 +27,6 @@
   visibility: hidden;
 }
 
-.sf-h2h__rail[data-swipable]:before {
-  visibility: visible
-}
 
 .sf-h2h__canvas {
   position: relative;
@@ -137,8 +134,8 @@
 }
 
 .sf-h2h__point {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   background: #ccc;
   border-radius: 50%;
   position: absolute;
@@ -223,4 +220,10 @@
   top: calc(100% - 4px);
   position: absolute;
   background: inherit;
+}
+
+@media all and (max-width: 900px){
+  .sf-h2h__rail[data-swipable]:before {
+    visibility: visible
+  }
 }

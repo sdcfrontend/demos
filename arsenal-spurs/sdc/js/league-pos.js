@@ -94,7 +94,7 @@
         top = topc(year.pos, 20) + "%";
       }
 
-      point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 30) + "px;transition-delay:" + (index * 35) + "ms";
+      point.style.cssText = "top:calc(" + top + "); left:" + ((index * 30) + 20) + "px;transition-delay:" + (index * 35) + "ms";
 
       var line = lines[label][index];
       if (!line) {

@@ -28,11 +28,7 @@
     video.oncanplay = canplay;
 
     if (window.matchMedia("(min-width: " + (video.dataset.threshold) + ")").matches) {
-      video.src = video.dataset.largeSrc;
-    }
-
-    else {
-      video.src = video.dataset.smallSrc;
+      video.src = video.querySelector('source + source').src;
     }
 
   }

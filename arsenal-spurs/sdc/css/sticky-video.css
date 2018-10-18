@@ -79,7 +79,7 @@
 .sf-sticky-video__body-text {
   transition: 0.66s transform;
   will-change: transform;
-  padding-bottom: 7%;
+  padding-bottom: 6.5%;
   width: 100%;
 }
 

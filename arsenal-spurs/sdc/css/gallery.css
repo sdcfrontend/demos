@@ -25,6 +25,7 @@
 .sf-gallery__body {
   flex: 1;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
   -webkit-scroll-snap-type: mandatory;
   -webkit-scroll-snap-points-x: repeat(100%);
