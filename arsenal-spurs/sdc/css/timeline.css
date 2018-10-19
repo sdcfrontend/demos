@@ -29,6 +29,11 @@
   grid-template-rows: repeat(26, 1fr)
 }
 
+.sf-timeline--t2 .sf-timeline__col {
+  -ms-grid-rows: repeat(19, 1fr);
+  grid-template-rows: repeat(19, 1fr)
+}
+
 .sf-timeline__col1 {
   text-align: right;
   padding-right: calc(2px + .2vw)

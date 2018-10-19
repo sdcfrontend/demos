@@ -109,6 +109,11 @@
   text-decoration: none
 }
 
+.sf-most-used__nav-link:hover {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .sf-most-used__body {
   position: relative;
   z-index: 2
