@@ -1,12 +1,12 @@
 /* Change these for custom team colors */
 .sf-timeline__col--h
 .sf-timeline__block:after  {
-  background: #7bb9e6
+  background: #DB0007
 }
 
 .sf-timeline__col--a
 .sf-timeline__block:after  {
-  background: #bf101a
+  background: #132257
 }
 
 

@@ -1,13 +1,13 @@
 .sf-teams-ha {
-  background: linear-gradient(to right, #aaa 0,#aaa 50%,#ccc 50%, #ccc 100%);
+  background: linear-gradient(to right, #DB0007 0,#DB0007 50%,#132257 50%, #132257 100%);
   color: white;
 }
 
 .sf-teams-h {
-  background: #aaa
+  background: #DB0007
 }
 
 .sf-teams-a {
-  background: #ccc
+  background: #132257
 }
 

@@ -180,13 +180,13 @@
 }
 
 [data-label="home"] {
-  background: black;
+  background: #DB0007;
   color: white;
 }
 
 [data-label="away"] {
-  background: #ccc;
-  color: #222;
+  background: #132257;
+  color: white
 }
 
 .sf-h2h__tooltip {
