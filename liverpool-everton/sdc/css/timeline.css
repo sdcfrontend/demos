@@ -1,0 +1,158 @@
+/* Change these for custom team colors */
+.sf-timeline__col--h
+.sf-timeline__block:after  {
+  background: #DB0007
+}
+
+.sf-timeline__col--a
+.sf-timeline__block:after  {
+  background: #132257
+}
+
+
+.sf-timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: inherit;
+}
+
+.sf-timeline__body {
+  display: flex;
+}
+
+.sf-timeline__col {
+  flex: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: repeat(26, 1fr);
+  grid-template-rows: repeat(26, 1fr)
+}
+
+.sf-timeline--t2 .sf-timeline__col {
+  -ms-grid-rows: repeat(19, 1fr);
+  grid-template-rows: repeat(19, 1fr)
+}
+
+.sf-timeline__col1 {
+  text-align: right;
+  padding-right: calc(2px + .2vw)
+}
+
+.sf-timeline__col2 {
+  text-align: left;
+  padding-left: calc(2px + .2vw)
+}
+
+.sf-timeline__col1 .sf-timeline__block {
+  padding-right: calc(1rem + 1vw);
+
+}
+
+.sf-timeline__col2 .sf-timeline__block {
+  padding-left: calc(1rem + 1vw);
+}
+
+.sf-timeline__col2 .sf-timeline__block:after {
+  left: 0;
+  right: auto;
+}
+
+.sf-timeline__block {
+  padding: 0 0 1.25rem 0;
+  /* min-height: 310px; */
+  position: relative;
+  margin: 2px 0;
+}
+
+.sf-timeline__block:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0.5rem;
+  border-radius: 8px;
+  background: black;
+  top: 0;
+  right: 0
+}
+
+.sf-timeline--sticky
+.sf-timeline__block-body {
+  position: sticky;
+  top: 12px;
+}
+
+.sf-timeline__block-image {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid white;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sf-timeline__block-image>img {
+  width: 100%;
+}
+
+.sf-timeline__block h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4em;
+  font-weight: 400;
+  font-family: premierleague
+}
+
+.sf-timeline__block p {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  margin-bottom: 1em;
+}
+
+.sf-timeline__block p:last-child {
+  margin-bottom: 0
+}
+
+[data-spread="1"] {
+  grid-row: span 1
+}
+
+[data-spread="2"] {
+  grid-row: span 2
+}
+
+[data-spread="3"] {
+  grid-row: span 3
+}
+
+[data-spread="4"] {
+  grid-row: span 4
+}
+
+[data-spread="5"] {
+  grid-row: span 5
+}
+
+[data-spread="6"] {
+  grid-row: span 6
+}
+
+[data-spread="7"] {
+  grid-row: span 7
+}
+
+[data-spread="8"] {
+  grid-row: span 8
+}
+
+[data-spread="12"] {
+  grid-row: span 12
+}
+
+[data-spread="15"] {
+  grid-row: span 15
+}
+
+[data-spread="17"] {
+  grid-row: span 17
+}

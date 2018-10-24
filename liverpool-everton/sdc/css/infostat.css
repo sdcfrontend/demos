@@ -1,0 +1,57 @@
+.sf-infostat {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.sf-infostat__cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end
+}
+
+.sf-infostat__cell > *:not(:last-child) {
+  margin-bottom: 0.7rem;
+}
+
+.sf-infostat__cell > h5 {
+  font-size: 0.7rem;
+  font-weight: 500
+}
+
+.sf-infostat__icon {
+  overflow: hidden;
+  position: relative;
+  width: 62%;
+  min-width: 50px;
+  max-width: 165px;
+}
+
+.sf-infostat__icon:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.sf-infostat__icon > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sf-infostat__icon--circle {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.sf-infostat__number[class] {
+  font-size: 2rem;
+  font-family: premierleague;
+  margin-bottom: 0.25rem
+}
+
+.sf-infostat__label {
+  font-size: 0.9rem;
+}

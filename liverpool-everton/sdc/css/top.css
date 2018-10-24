@@ -1,0 +1,22 @@
+.sf-top {
+  padding: 1rem 0;
+  text-align: center; 
+}
+
+.sf-top__link {
+  background-color: #0072c9;
+  color: white;
+  font-family: premierleague;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0.45em 0.7em;
+  vertical-align: middle;
+  border-radius: 0.25em;
+}
+
+.sf-top__link:hover {
+  color: #fff!important;
+  background-color:#0072c9;
+  text-decoration: none
+}

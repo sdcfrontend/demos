@@ -1,0 +1,187 @@
+/* Change these to the custom team colors */
+.sf-most-used__players--h 
+.sf-most-used__player {
+  background: #DB0007
+}
+
+.sf-most-used__players--a 
+.sf-most-used__player {
+  background: #132257
+}
+
+
+.sf-most-used {
+  margin: 0 auto
+}
+
+.sf-most-used__nav-wrap {
+  position: relative;
+  position: sticky;
+  position: -webkit-sticky;
+  top: -1px;
+  z-index: 3;
+  margin-bottom: 0.8rem;
+  background: #383838
+}
+
+.sf-most-used__nav-wrap:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  width: 20px;
+  background: linear-gradient(to left, #383838 0, rgba(0, 0, 0, 0) 100%);
+}
+
+.sf-most-used__nav {
+  overflow: auto;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  padding-right: 20px;
+}
+
+.sf-most-used__nav::-webkit-scrollbar {
+  display: none
+}
+
+.sf-most-used__nav::-moz-scrollbar {
+  width: 10px;
+}
+
+.sf-most-used__nav-items {
+  padding-right: 21px;
+  list-style: none;
+  background: inherit;
+  display: flex;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.sf-most-used__nav-item {
+  border: 1px solid #fff;
+  border-right: 0;
+  position: relative;
+  color: white;
+}
+
+.sf-most-used__nav-item:last-child {
+  border-right: 1px solid #fff;
+}
+
+.sf-most-used__nav-item[aria-current] {
+  background: white;
+  color: black;
+}
+
+.sf-most-used__nav-item[aria-current]:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+}
+
+.sf-most-used__nav-link {
+  text-align: center;
+  font-size: .8rem;
+  padding: .6rem;
+  color: inherit;
+  white-space: nowrap;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none
+}
+
+.sf-most-used__nav-link:hover {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sf-most-used__body {
+  position: relative;
+  z-index: 2
+}
+
+.sf-most-used__cols {
+  display: flex;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.sf-most-used__col:first-child {
+  text-align: right;
+  width: 50%;
+  padding-right: calc(0.2rem + 1vw);
+}
+
+.sf-most-used__col:last-child {
+  width: 50%;
+  padding-left: calc(0.2rem + 1vw);
+}
+
+.sf-most-used__team-header {
+  font-size: calc(1.5rem + 1vmin);
+  font-weight: 400;
+  font-family: premierleague;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem
+}
+
+.sf-most-used__players {
+  list-style: none;
+  padding: 0;
+}
+
+.sf-most-used__player {
+  margin-bottom: 2px;
+  font-size: 0.78rem;
+  padding: 0.25em 0.7em;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.sf-most-used__special {
+  font-size: 0.78rem;
+  padding: 0.25em 0.7em;
+  text-align: left
+}
+
+.sf-most-used__special h6 {
+  font-size: .68rem;
+  font-weight: 500;
+  margin: 0.6rem 0 .15rem;
+  color: #ccc;
+}
+
+.sf-most-used__player[data-apps]:after {
+  content: attr(data-apps);
+  background: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1.9em;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
