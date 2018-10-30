@@ -32,15 +32,15 @@
     padding: 2vw;
   }
 
-  .h2h {
+  .sf-h2h {
     background: white;
   }
 
-  .h2h__rail {
+  .sf-h2h__rail {
     overflow: auto;
   }
 
-  .h2h__rail:before {
+  .sf-h2h__rail:before {
     content: "Swipe ↔";
     font-weight: 500;
     color: white;
@@ -60,11 +60,11 @@
     visibility: hidden;
   }
 
-  .h2h__rail[data-swipable]:before {
+  .sf-h2h__rail[data-swipable]:before {
     visibility: visible
   }
 
-  .h2h__canvas {
+  .sf-h2h__canvas {
     position: relative;
     position: relative;
     height: 80vh;
@@ -77,7 +77,7 @@
     margin: 0 auto;
   }
 
-  .h2h__pos {
+  .sf-h2h__pos {
     -ms-grid-column: 1;
     grid-column: 1;
     display: flex;
@@ -93,7 +93,7 @@
     box-shadow: 3px 0 rgba(0, 0, 0, 0.04)
   }
 
-  .h2h__pos>span {
+  .sf-h2h__pos>span {
     padding-right: 0.75em;
     flex: 1;
     width: 100%;
@@ -104,7 +104,7 @@
     justify-content: flex-end
   }
 
-  .h2h__body {
+  .sf-h2h__body {
     -ms-grid-column: 2;
     grid-column: 2;
     border-top: 0;
@@ -114,7 +114,7 @@
     background: white;
   }
 
-  .h2h__body-div {
+  .sf-h2h__body-div {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -122,30 +122,30 @@
     background: #eee;
   }
 
-  .h2h__body-div[data-pos="1"] {
+  .sf-h2h__body-div[data-pos="1"] {
     top: 5%;
   }
 
-  .h2h__body-div[data-pos="5"] {
+  .sf-h2h__body-div[data-pos="5"] {
     top: 25%;
   }
 
-  .h2h__body-div[data-pos="10"] {
+  .sf-h2h__body-div[data-pos="10"] {
     top: 50%;
   }
 
-  .h2h__body-div[data-pos="15"] {
+  .sf-h2h__body-div[data-pos="15"] {
     top: 75%;
   }
 
-  .h2h__body-div--relegation {
+  .sf-h2h__body-div--relegation {
     height: calc(10%);
     background: #eee;
     bottom: 0;
     border-top: 1px solid #ddd
   }
 
-  .h2h__year {
+  .sf-h2h__year {
     -ms-grid-column: 2;
     -ms-grid-row: 3;
     grid-column: 2;
@@ -154,13 +154,13 @@
     justify-content: space-between;
   }
 
-  .h2h__year>span {
+  .sf-h2h__year>span {
     padding: 1em 0;
     font-size: 0.65rem;
     color: #aaa
   }
 
-  .h2h__overflow {
+  .sf-h2h__overflow {
     -ms-grid-column: 2;
     -ms-grid-row: 2;
     grid-column: 2;
@@ -169,7 +169,7 @@
     /* background: #eee; */
   }
 
-  .h2h__point {
+  .sf-h2h__point {
     width: 24px;
     height: 24px;
     background: #ccc;
@@ -188,11 +188,11 @@
     cursor: pointer;
   }
 
-  .h2h__point.animate-in-view {
+  .sf-h2h__point.animate-in-view {
     transform: scale(0)
   }
 
-  .h2h__line {
+  .sf-h2h__line {
     width: 2px;
     height: 2px;
     background: #ccc;
@@ -202,11 +202,11 @@
     transition: width 0.33s
   }
 
-  .h2h__line.animate-in-view {
+  .sf-h2h__line.animate-in-view {
     width: 2px !important;
   }
 
-  .h2h__line:not([style]) {
+  .sf-h2h__line:not([style]) {
     display: none;
   }
 
@@ -220,7 +220,7 @@
     color: #222;
   }
 
-  .h2h__tooltip {
+  .sf-h2h__tooltip {
     pointer-events: none;
     background: black;
     color: white;
@@ -237,7 +237,7 @@
     left: -10000px
   }
 
-  .h2h__tooltip:after {
+  .sf-h2h__tooltip:after {
     content: "";
     display: block;
     width: 8px;
@@ -270,9 +270,9 @@
     </select>
   </div>
   <div class="h2h">
-    <div class="h2h__rail">
-      <div class="h2h__canvas">
-        <div class="h2h__pos">
+    <div class="sf-h2h__rail">
+      <div class="sf-h2h__canvas">
+        <div class="sf-h2h__pos">
           <span>1</span>
           <span></span>
           <span></span>
@@ -295,119 +295,119 @@
           <span>20</span>
 
         </div>
-        <div class="h2h__body">
-          <div class="h2h__body-div" data-pos="1"></div>
-          <div class="h2h__body-div" data-pos="5"></div>
-          <div class="h2h__body-div" data-pos="10"></div>
-          <div class="h2h__body-div" data-pos="15"></div>
-          <div class="h2h__body-div h2h__body-div--relegation"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 8|Points: 59" style="top: calc(40%); left: 30px;">8</div>
-          <div class="h2h__line" data-label="home"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 15|Points: 45" style="top: calc(75%); left: 60px;">15</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(81.7142deg); width: 208.173px; top: 235px; left: 30px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 7|Points: 62" style="top: calc(35%); left: 90px;">7</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-82.725deg); width: 236.907px; top: 441px; left: 60px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 8|Points: 61" style="top: calc(40%); left: 120px;">8</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 206px; left: 90px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 10|Points: 46" style="top: calc(50%); left: 150px;">10</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(63.0478deg); width: 66.1891px; top: 235px; left: 120px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 14|Points: 44" style="top: calc(70%); left: 180px;">14</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(75.6186deg); width: 120.785px; top: 294px; left: 150px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 11|Points: 47" style="top: calc(55%); left: 210px;">11</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-71.1753deg); width: 92.9731px; top: 411px; left: 180px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 10|Points: 53" style="top: calc(50%); left: 240px;">10</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 323px; left: 210px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 12|Points: 49" style="top: calc(60%); left: 270px;">12</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(63.0478deg); width: 66.1891px; top: 294px; left: 240px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 9|Points: 50" style="top: calc(45%); left: 300px;">9</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-71.3721deg); width: 93.9202px; top: 353px; left: 270px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 10|Points: 50" style="top: calc(50%); left: 330px;">10</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(45deg); width: 42.4264px; top: 264px; left: 300px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 14|Points: 45" style="top: calc(70%); left: 360px;">14</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(75.6186deg); width: 120.785px; top: 294px; left: 330px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 9|Points: 52" style="top: calc(45%); left: 390px;">9</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-78.4654deg); width: 150.03px; top: 411px; left: 360px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 5|Points: 65" style="top: calc(25%); left: 420px;">5</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-75.6186deg); width: 120.785px; top: 264px; left: 390px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 5|Points: 60" style="top: calc(25%); left: 450px;">5</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(0deg); width: 30px; top: 147px; left: 420px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 11|Points: 46" style="top: calc(55%); left: 480px;">11</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(80.3266deg); width: 178.539px; top: 147px; left: 450px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 8|Points: 51" style="top: calc(40%); left: 510px;">8</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-71.1753deg); width: 92.9731px; top: 323px; left: 480px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 4|Points: 70" style="top: calc(20%); left: 540px;">4</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-75.6186deg); width: 120.785px; top: 235px; left: 510px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 5|Points: 62" style="top: calc(25%); left: 570px;">5</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 118px; left: 540px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 4|Points: 69" style="top: calc(20%); left: 600px;">4</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 147px; left: 570px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 5|Points: 72" style="top: calc(25%); left: 630px;">5</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 118px; left: 600px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 6|Points: 69" style="top: calc(30%); left: 660px;">6</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 147px; left: 630px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 5|Points: 64" style="top: calc(25%); left: 690px;">5</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 176px; left: 660px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 3|Points: 70" style="top: calc(15%); left: 720px;">3</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 147px; left: 690px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 2|Points: 86" style="top: calc(10%); left: 750px;">2</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 88px; left: 720px;"></div>
-          <div class="h2h__point" data-label="home" data-tooltip="Position: 3|Points: 77" style="top: calc(15%); left: 780px;">3</div>
-          <div class="h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 59px; left: 750px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 10|Points: 56" style="top: calc(50%); left: 30px;">10</div>
-          <div class="h2h__line" data-label="away"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 71" style="top: calc(20%); left: 60px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-80.3266deg); width: 178.539px; top: 294px; left: 30px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 12|Points: 51" style="top: calc(60%); left: 90px;">12</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(82.725deg); width: 236.907px; top: 118px; left: 60px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 5|Points: 63" style="top: calc(25%); left: 120px;">5</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-81.7142deg); width: 208.173px; top: 353px; left: 90px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 3|Points: 68" style="top: calc(15%); left: 150px;">3</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 147px; left: 120px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 1|Points: 78" style="top: calc(5%); left: 180px;">1</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 88px; left: 150px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 78" style="top: calc(10%); left: 210px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 180px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 73" style="top: calc(10%); left: 240px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 59px; left: 210px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 70" style="top: calc(10%); left: 270px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 59px; left: 240px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 1|Points: 87" style="top: calc(5%); left: 300px;">1</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 59px; left: 270px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 78" style="top: calc(10%); left: 330px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 300px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 1|Points: 90" style="top: calc(5%); left: 360px;">1</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 59px; left: 330px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 83" style="top: calc(10%); left: 390px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 360px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 67" style="top: calc(20%); left: 420px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(63.0478deg); width: 66.1891px; top: 59px; left: 390px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 68" style="top: calc(20%); left: 450px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 118px; left: 420px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 3|Points: 83" style="top: calc(15%); left: 480px;">3</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 450px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 72" style="top: calc(20%); left: 510px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 480px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 3|Points: 75" style="top: calc(15%); left: 540px;">3</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 510px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 68" style="top: calc(20%); left: 570px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 540px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 3|Points: 70" style="top: calc(15%); left: 600px;">3</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 570px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 73" style="top: calc(20%); left: 630px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 600px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 4|Points: 79" style="top: calc(20%); left: 660px;">4</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 118px; left: 630px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 3|Points: 75" style="top: calc(15%); left: 690px;">3</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 660px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 2|Points: 71" style="top: calc(10%); left: 720px;">2</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(-44.029deg); width: 41.7253px; top: 88px; left: 690px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 5|Points: 75" style="top: calc(25%); left: 750px;">5</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(71.1753deg); width: 92.9731px; top: 59px; left: 720px;"></div>
-          <div class="h2h__point" data-label="away" data-tooltip="Position: 6|Points: 63" style="top: calc(30%); left: 780px;">6</div>
-          <div class="h2h__line" data-label="away" style="transform: rotate(44.029deg); width: 41.7253px; top: 147px; left: 750px;"></div>
+        <div class="sf-h2h__body">
+          <div class="sf-h2h__body-div" data-pos="1"></div>
+          <div class="sf-h2h__body-div" data-pos="5"></div>
+          <div class="sf-h2h__body-div" data-pos="10"></div>
+          <div class="sf-h2h__body-div" data-pos="15"></div>
+          <div class="sf-h2h__body-div h2h__body-div--relegation"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 8|Points: 59" style="top: calc(40%); left: 30px;">8</div>
+          <div class="sf-h2h__line" data-label="home"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 15|Points: 45" style="top: calc(75%); left: 60px;">15</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(81.7142deg); width: 208.173px; top: 235px; left: 30px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 7|Points: 62" style="top: calc(35%); left: 90px;">7</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-82.725deg); width: 236.907px; top: 441px; left: 60px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 8|Points: 61" style="top: calc(40%); left: 120px;">8</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 206px; left: 90px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 10|Points: 46" style="top: calc(50%); left: 150px;">10</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(63.0478deg); width: 66.1891px; top: 235px; left: 120px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 14|Points: 44" style="top: calc(70%); left: 180px;">14</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(75.6186deg); width: 120.785px; top: 294px; left: 150px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 11|Points: 47" style="top: calc(55%); left: 210px;">11</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-71.1753deg); width: 92.9731px; top: 411px; left: 180px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 10|Points: 53" style="top: calc(50%); left: 240px;">10</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 323px; left: 210px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 12|Points: 49" style="top: calc(60%); left: 270px;">12</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(63.0478deg); width: 66.1891px; top: 294px; left: 240px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 9|Points: 50" style="top: calc(45%); left: 300px;">9</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-71.3721deg); width: 93.9202px; top: 353px; left: 270px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 10|Points: 50" style="top: calc(50%); left: 330px;">10</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(45deg); width: 42.4264px; top: 264px; left: 300px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 14|Points: 45" style="top: calc(70%); left: 360px;">14</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(75.6186deg); width: 120.785px; top: 294px; left: 330px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 9|Points: 52" style="top: calc(45%); left: 390px;">9</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-78.4654deg); width: 150.03px; top: 411px; left: 360px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 5|Points: 65" style="top: calc(25%); left: 420px;">5</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-75.6186deg); width: 120.785px; top: 264px; left: 390px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 5|Points: 60" style="top: calc(25%); left: 450px;">5</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(0deg); width: 30px; top: 147px; left: 420px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 11|Points: 46" style="top: calc(55%); left: 480px;">11</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(80.3266deg); width: 178.539px; top: 147px; left: 450px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 8|Points: 51" style="top: calc(40%); left: 510px;">8</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-71.1753deg); width: 92.9731px; top: 323px; left: 480px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 4|Points: 70" style="top: calc(20%); left: 540px;">4</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-75.6186deg); width: 120.785px; top: 235px; left: 510px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 5|Points: 62" style="top: calc(25%); left: 570px;">5</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 118px; left: 540px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 4|Points: 69" style="top: calc(20%); left: 600px;">4</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 147px; left: 570px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 5|Points: 72" style="top: calc(25%); left: 630px;">5</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 118px; left: 600px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 6|Points: 69" style="top: calc(30%); left: 660px;">6</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 147px; left: 630px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 5|Points: 64" style="top: calc(25%); left: 690px;">5</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 176px; left: 660px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 3|Points: 70" style="top: calc(15%); left: 720px;">3</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 147px; left: 690px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 2|Points: 86" style="top: calc(10%); left: 750px;">2</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(-44.029deg); width: 41.7253px; top: 88px; left: 720px;"></div>
+          <div class="sf-h2h__point" data-label="home" data-tooltip="Position: 3|Points: 77" style="top: calc(15%); left: 780px;">3</div>
+          <div class="sf-h2h__line" data-label="home" style="transform: rotate(44.029deg); width: 41.7253px; top: 59px; left: 750px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 10|Points: 56" style="top: calc(50%); left: 30px;">10</div>
+          <div class="sf-h2h__line" data-label="away"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 71" style="top: calc(20%); left: 60px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-80.3266deg); width: 178.539px; top: 294px; left: 30px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 12|Points: 51" style="top: calc(60%); left: 90px;">12</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(82.725deg); width: 236.907px; top: 118px; left: 60px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 5|Points: 63" style="top: calc(25%); left: 120px;">5</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-81.7142deg); width: 208.173px; top: 353px; left: 90px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 3|Points: 68" style="top: calc(15%); left: 150px;">3</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 147px; left: 120px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 1|Points: 78" style="top: calc(5%); left: 180px;">1</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-63.0478deg); width: 66.1891px; top: 88px; left: 150px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 78" style="top: calc(10%); left: 210px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 180px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 73" style="top: calc(10%); left: 240px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 59px; left: 210px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 70" style="top: calc(10%); left: 270px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 59px; left: 240px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 1|Points: 87" style="top: calc(5%); left: 300px;">1</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 59px; left: 270px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 78" style="top: calc(10%); left: 330px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 300px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 1|Points: 90" style="top: calc(5%); left: 360px;">1</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 59px; left: 330px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 83" style="top: calc(10%); left: 390px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 29px; left: 360px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 67" style="top: calc(20%); left: 420px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(63.0478deg); width: 66.1891px; top: 59px; left: 390px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 68" style="top: calc(20%); left: 450px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 118px; left: 420px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 3|Points: 83" style="top: calc(15%); left: 480px;">3</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 450px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 72" style="top: calc(20%); left: 510px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 480px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 3|Points: 75" style="top: calc(15%); left: 540px;">3</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 510px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 68" style="top: calc(20%); left: 570px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 540px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 3|Points: 70" style="top: calc(15%); left: 600px;">3</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 570px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 73" style="top: calc(20%); left: 630px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(45deg); width: 42.4264px; top: 88px; left: 600px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 4|Points: 79" style="top: calc(20%); left: 660px;">4</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(0deg); width: 30px; top: 118px; left: 630px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 3|Points: 75" style="top: calc(15%); left: 690px;">3</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-45deg); width: 42.4264px; top: 118px; left: 660px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 2|Points: 71" style="top: calc(10%); left: 720px;">2</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(-44.029deg); width: 41.7253px; top: 88px; left: 690px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 5|Points: 75" style="top: calc(25%); left: 750px;">5</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(71.1753deg); width: 92.9731px; top: 59px; left: 720px;"></div>
+          <div class="sf-h2h__point" data-label="away" data-tooltip="Position: 6|Points: 63" style="top: calc(30%); left: 780px;">6</div>
+          <div class="sf-h2h__line" data-label="away" style="transform: rotate(44.029deg); width: 41.7253px; top: 147px; left: 750px;"></div>
         </div>
-        <div class="h2h__overflow"></div>
-        <div class="h2h__year">
+        <div class="sf-h2h__overflow"></div>
+        <div class="sf-h2h__year">
           <span>1992/93</span>
           <span>1997/98</span>
           <span>2002/03</span>
@@ -419,7 +419,7 @@
     </div>
   </div>
 
-  <div class="h2h__tooltip"></div>
+  <div class="sf-h2h__tooltip"></div>
 
 
 
@@ -430,11 +430,11 @@
       teams: [{ "name": "Tottenham Hotspur", "positions": 20, "max": 20, "years": [{ "pts": 59, "pos": 8 }, { "pts": 45, "pos": 15 }, { "pts": 62, "pos": 7 }, { "pts": 61, "pos": 8 }, { "pts": 46, "pos": 10 }, { "pts": 44, "pos": 14 }, { "pts": 47, "pos": 11 }, { "pts": 53, "pos": 10 }, { "pts": 49, "pos": 12 }, { "pts": 50, "pos": 9 }, { "pts": 50, "pos": 10 }, { "pts": 45, "pos": 14 }, { "pts": 52, "pos": 9 }, { "pts": 65, "pos": 5 }, { "pts": 60, "pos": 5 }, { "pts": 46, "pos": 11 }, { "pts": 51, "pos": 8 }, { "pts": 70, "pos": 4 }, { "pts": 62, "pos": 5 }, { "pts": 69, "pos": 4 }, { "pts": 72, "pos": 5 }, { "pts": 69, "pos": 6 }, { "pts": 64, "pos": 5 }, { "pts": 70, "pos": 3 }, { "pts": 86, "pos": 2 }, { "pts": 77, "pos": 3 }] }, { "name": "Arsenal", "positions": 20, "max": 20, "years": [{ "pts": 56, "pos": 10 }, { "pts": 71, "pos": 4 }, { "pts": 51, "pos": 12 }, { "pts": 63, "pos": 5 }, { "pts": 68, "pos": 3 }, { "pts": 78, "pos": 1 }, { "pts": 78, "pos": 2 }, { "pts": 73, "pos": 2 }, { "pts": 70, "pos": 2 }, { "pts": 87, "pos": 1 }, { "pts": 78, "pos": 2 }, { "pts": 90, "pos": 1 }, { "pts": 83, "pos": 2 }, { "pts": 67, "pos": 4 }, { "pts": 68, "pos": 4 }, { "pts": 83, "pos": 3 }, { "pts": 72, "pos": 4 }, { "pts": 75, "pos": 3 }, { "pts": 68, "pos": 4 }, { "pts": 70, "pos": 3 }, { "pts": 73, "pos": 4 }, { "pts": 79, "pos": 4 }, { "pts": 75, "pos": 3 }, { "pts": 71, "pos": 2 }, { "pts": 75, "pos": 5 }, { "pts": 63, "pos": 6 }] }, { "name": "Liverpool", "positions": 20, "max": 20, "years": [{ "pts": 59, "pos": 6 }, { "pts": 60, "pos": 8 }, { "pts": 74, "pos": 4 }, { "pts": 71, "pos": 3 }, { "pts": 68, "pos": 4 }, { "pts": 65, "pos": 3 }, { "pts": 54, "pos": 7 }, { "pts": 67, "pos": 4 }, { "pts": 69, "pos": 3 }, { "pts": 80, "pos": 2 }, { "pts": 64, "pos": 5 }, { "pts": 60, "pos": 4 }, { "pts": 58, "pos": 5 }, { "pts": 82, "pos": 3 }, { "pts": 68, "pos": 3 }, { "pts": 76, "pos": 4 }, { "pts": 86, "pos": 2 }, { "pts": 63, "pos": 7 }, { "pts": 58, "pos": 6 }, { "pts": 52, "pos": 8 }, { "pts": 61, "pos": 7 }, { "pts": 84, "pos": 2 }, { "pts": 62, "pos": 6 }, { "pts": 60, "pos": 8 }, { "pts": 76, "pos": 4 }, { "pts": 75, "pos": 4 }] }, { "name": "Everton", "positions": 20, "max": 20, "years": [{ "pts": 53, "pos": 13 }, { "pts": 44, "pos": 17 }, { "pts": 50, "pos": 15 }, { "pts": 61, "pos": 6 }, { "pts": 42, "pos": 15 }, { "pts": 40, "pos": 17 }, { "pts": 43, "pos": 14 }, { "pts": 50, "pos": 13 }, { "pts": 42, "pos": 16 }, { "pts": 43, "pos": 15 }, { "pts": 59, "pos": 7 }, { "pts": 39, "pos": 17 }, { "pts": 61, "pos": 4 }, { "pts": 50, "pos": 11 }, { "pts": 58, "pos": 6 }, { "pts": 65, "pos": 5 }, { "pts": 63, "pos": 5 }, { "pts": 61, "pos": 8 }, { "pts": 54, "pos": 7 }, { "pts": 56, "pos": 7 }, { "pts": 63, "pos": 6 }, { "pts": 72, "pos": 5 }, { "pts": 47, "pos": 11 }, { "pts": 47, "pos": 11 }, { "pts": 61, "pos": 7 }, { "pts": 49, "pos": 8 }] }]
     };
 
-    var rail = document.querySelector('.h2h__rail');
-    var body = document.querySelector('.h2h__body');
-    var overflow = document.querySelector('.h2h__overflow');
-    var canvas = document.querySelector('.h2h__canvas');
-    var tooltip = document.querySelector('.h2h__tooltip');
+    var rail = document.querySelector('.sf-h2h__rail');
+    var body = document.querySelector('.sf-h2h__body');
+    var overflow = document.querySelector('.sf-h2h__overflow');
+    var canvas = document.querySelector('.sf-h2h__canvas');
+    var tooltip = document.querySelector('.sf-h2h__tooltip');
     var currentdata = {};
     var points = {
       home: [],
@@ -450,13 +450,13 @@
       var showoverflow = 0;
       var years = 0;
 
-      body.querySelectorAll('.h2h__point').forEach(function (item) {
+      body.querySelectorAll('.sf-h2h__point').forEach(function (item) {
         points[item.dataset.label].push(item);
         item.onmouseenter = showtooltip;
         item.onmouseleave = hidetooltip;
       });
 
-      body.querySelectorAll('.h2h__line').forEach(function (item) {
+      body.querySelectorAll('.sf-h2h__line').forEach(function (item) {
         lines[item.dataset.label].push(item);
       });
 
@@ -503,7 +503,7 @@
 
         if (!point) {
           point = document.createElement('div');
-          point.className = 'h2h__point ' + modifier;
+          point.className = 'sf-h2h__point ' + modifier;
           point.onmouseenter = showtooltip;
           point.onmouseleave = hidetooltip;
           body.appendChild(point);
@@ -527,7 +527,7 @@
         var line = lines[label][index];
         if (!line) {
           line = document.createElement('div');
-          line.className = 'h2h__line ' + modifier;
+          line.className = 'sf-h2h__line ' + modifier;
           line.setAttribute('data-label', label);
           body.appendChild(line);
           lines[label].push(line);

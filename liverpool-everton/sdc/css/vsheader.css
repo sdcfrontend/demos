@@ -1,5 +1,5 @@
 .sf-vsheader {
-  background:linear-gradient(to bottom, #030382 0%, #00022d 100%);
+  background: #010064;
   text-align: center;
   position: relative;
   max-height: calc(100vh - 146px);
@@ -37,8 +37,9 @@
 .sf-vsheader__title-split {
   display: flex;
   width: 100%;
-  font-size: calc(12px + 11vmin);
+  font-size: calc(1rem + 5vw);
   font-family: premierleague;
+  line-height: 1
 }
 
 .sf-vsheader__title-split-cell {
@@ -84,7 +85,7 @@
   opacity: 0
 }
 
-@media all and (max-width: 880px){
+@media all and (max-width: 680px){
   .sf-vsheader__title-split-chunk[data-short-name] {
     font-size: 0;
     visibility: hidden;  
@@ -93,8 +94,14 @@
 
   .sf-vsheader__title-split-chunk[data-short-name]:after {
     content: attr(data-short-name);
-    font-size: calc(12px + 11vmin);
+    font-size: calc(2.5rem + 3vmin);
     visibility: visible
+  }
+}
+
+@media all and (min-width: 1168px){
+  .sf-vsheader__title-split {
+    font-size: 83px
   }
 }
 

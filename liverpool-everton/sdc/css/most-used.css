@@ -1,12 +1,12 @@
 /* Change these to the custom team colors */
 .sf-most-used__players--h 
 .sf-most-used__player {
-  background: #DB0007
+  background: #C8102E
 }
 
 .sf-most-used__players--a 
 .sf-most-used__player {
-  background: #132257
+  background: #003399
 }
 
 
@@ -137,7 +137,7 @@
 }
 
 .sf-most-used__team-header {
-  font-size: calc(1.5rem + 1vmin);
+  font-size: calc(1rem + 2vmin);
   font-weight: 400;
   font-family: premierleague;
   text-transform: uppercase;

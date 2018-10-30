@@ -1,12 +1,12 @@
 /* Change these for custom team colors */
 .sf-timeline__col--h
 .sf-timeline__block:after  {
-  background: #DB0007
+  background: #C8102E
 }
 
 .sf-timeline__col--a
 .sf-timeline__block:after  {
-  background: #132257
+  background: #003399
 }
 
 
@@ -26,12 +26,12 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: repeat(26, 1fr);
-  grid-template-rows: repeat(26, 1fr)
+  grid-template-rows: repeat(20, 1fr)
 }
 
 .sf-timeline--t2 .sf-timeline__col {
-  -ms-grid-rows: repeat(19, 1fr);
-  grid-template-rows: repeat(19, 1fr)
+  -ms-grid-rows: repeat(25, 1fr);
+  grid-template-rows: repeat(25, 1fr)
 }
 
 .sf-timeline__col1 {
@@ -59,10 +59,13 @@
 }
 
 .sf-timeline__block {
-  padding: 0 0 1.25rem 0;
+  padding: 0 0 1rem 0;
   /* min-height: 310px; */
   position: relative;
   margin: 2px 0;
+}
+
+.sf-timeline__spacer {
 }
 
 .sf-timeline__block:after {

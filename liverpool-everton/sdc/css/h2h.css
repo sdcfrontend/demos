@@ -180,12 +180,12 @@
 }
 
 [data-label="home"] {
-  background: #DB0007;
+  background: #C8102E;
   color: white;
 }
 
 [data-label="away"] {
-  background: #132257;
+  background: #003399;
   color: white
 }
 
