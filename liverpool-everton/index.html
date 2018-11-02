@@ -39,7 +39,13 @@
   </div>
 
   <div class="sf-ads sf-ads--leaderboard">
-    <div class="sf-ads--leaderboard__body">banner</div>
+    <!-- <div class="sf-ads--leaderboard__body">banner</div> -->
+    <div class="sdc-site-au sf-ads--leaderboard__body" data-ad-format="leaderboard" data-type="" aria-hidden="true">
+      <div class="sdc-site-au__leaderboard" data-role="ad-container" data-config="{&quot;id&quot;:&quot;leaderboard&quot;,&quot;ad-type&quot;:&quot;leaderboard&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[320,50],[300,50]],&quot;tablet&quot;:[[728,90]],&quot;desktop&quot;:[[728,90],[970,250]]},&quot;partial-class&quot;:&quot;sdc-site-au--full-bleed&quot;}"
+        data-targeting="{&quot;platform&quot;:&quot;live&quot;}" data-targeting-strnativekey="" data-targeting-platform=""
+        data-tag="20346936/skynews/uk-homepage" data-component-name="sdc-site-mpu" aria-label="Advertisement" id="leaderboard"
+        data-tolerance="2"></div>
+    </div>
   </div>
 
   <div class="sf-panel">
@@ -111,9 +117,14 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas
           aliquam,
           non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
-        <div class="sf-ads sf-ads--mpu">
-          mpu
+
+        <div class="sdc-site-au sf-ads sf-ads--mpu" data-ad-format="mpu-1" data-type="" aria-hidden="true">
+          <div class="sdc-site-au__mpu-1" data-role="ad-container" data-config="{&quot;id&quot;:&quot;mpu-1&quot;,&quot;ad-type&quot;:&quot;mpu-1&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[300,250]],&quot;tablet&quot;:[[300,250]],&quot;desktop&quot;:[[300,250],[300,600]]}}"
+            data-targeting="{&quot;platform&quot;:&quot;live&quot;}" data-targeting-strnativekey=""
+            data-targeting-platform="" data-tag="20346936/skynews/uk-homepage" data-component-name="sdc-site-mpu"
+            aria-label="Advertisement" id="mpu-1" data-tolerance="2"></div>
         </div>
+
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima molestiae ea impedit quo provident voluptas
           aliquam,
           non adipisci a! Odio illo laboriosam velit facilis unde! Eos voluptas temporibus cupiditate incidunt.</p>
@@ -1510,8 +1521,20 @@
                   <img src="sdc/assets/managers/1/roy-evans.jpg" alt="" aria-hidden="true">
                 </div>
                 <p>1994-98
-                  <br>W124 D62 L58
+                  <br>W116 D57 L53
                   <br>1 trophy
+              </div>
+            </div>
+
+            <div class="sf-timeline__block" data-spread="1">
+              <div class="sf-timeline__block-body">
+                <h3>Roy Evans/Gerard Houllier</h3>
+                <div class="sf-timeline__block-image">
+                  <img src="sdc/assets/managers/1/roy-evans.jpg" alt="" aria-hidden="true">
+                </div>
+                <p>1998
+                  <br>W7 D6 L5
+                  <br>0 trophies
               </div>
             </div>
 
@@ -1522,7 +1545,7 @@
                   <img src="sdc/assets/managers/1/gerard-houllier.jpg" alt="" aria-hidden="true">
                 </div>
                 <p>1998-2004
-                  <br>W160 D73 L74
+                  <br>W158 D75 L74
                   <br>6 trophies
               </div>
             </div>
@@ -1662,7 +1685,7 @@
               </div>
             </div>
 
-            <div class="sf-timeline__block" data-spread="1">
+            <div class="sf-timeline__block" data-spread="2">
               <div class="sf-timeline__block-body">
                 <h3>Walter Smith</h3>
                 <div class="sf-timeline__block-image">
@@ -1699,7 +1722,7 @@
 
             <div class="sf-timeline__block" data-spread="1">
               <div class="sf-timeline__block-body">
-                <h3>David Unsworth</h3>
+                <h3>Joe Royle/David Unsworth</h3>
                 <div class="sf-timeline__block-image">
                   <img src="sdc/assets/managers/2/david-unsworth.jpg" alt="" aria-hidden="true">
                 </div>
@@ -2314,6 +2337,11 @@
   <script src="sdc/js/mini-quiz.js"></script>
   <script src="sdc/js/most-used.js"></script>
   <script src="sdc/js/gallery.js"></script>
+  <script src="sdc/js/sdc_site_mpu.js"></script>
+  <script>
+    window['sdc_site_mpu'](document.querySelector('#leaderboard'));
+    window['sdc_site_mpu'](document.querySelector('#mpu-1'));
+  </script>
 
   <!-- 
     CONTENT
