@@ -24,6 +24,24 @@
     var video = con.querySelector('video');
     var image = con.querySelector('img');
     var loader = con.querySelector('[data-loader]');
+    var volume = con.querySelector('[data-volume]');
+
+    if (volume) {
+      volume.onclick = function (e) {
+        e.preventDefault();
+        var muted = this.getAttribute('data-muted');
+
+        if (video.muted) {
+          this.removeAttribute('data-muted');
+          video.muted = false;
+        }
+
+        else {
+          this.setAttribute('data-muted', true);
+          video.muted = true;
+        }
+      }
+    }
 
     video.oncanplay = canplay;
 
