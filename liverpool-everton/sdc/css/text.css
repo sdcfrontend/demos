@@ -38,6 +38,11 @@
   text-decoration: underline
 }
 
+.sf-text__lead {
+  font-size: 1.1em;
+  font-weight: 500
+}
+
 .sf-media[class] {
   position: relative;
   padding-bottom: calc((9 / 16) * 100%);
