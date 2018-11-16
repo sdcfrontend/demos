@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Sky Text', sans-serif;
+  max-width: 976px;
+  margin: 20px auto;
+  background: #eee; 
+}
+
+strong, h4 {
+  font-weight: 500
+}
+
+.sdc-racecard {
+  font-size: 16px;
+  background: white;
+  padding: calc(12px + 3vmin);
+}
+
+.sdc-racecard__head {
+  padding-bottom: calc(12px + 2vmin);
+  border-bottom: 1px solid #ccc;
+}
+
+.sdc-racecard__race-course {
+  font-size: calc(2em + 1vmin);
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3em
+}
+
+.sdc-racecard__race-time {
+  font-size: 0.76em
+}
+
+.sdc-racecard__race-name {
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: calc(12px + 2vmin);
+}
+
+.sdc-racecard__race-details {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__race-details-item {
+  padding: 0.1em 0.75em 0.2em 0; 
+}
+
+.sdc-racecard__item {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: calc(12px + 2vmin) 0
+}
+
+.sdc-racecard__item:last-child {
+  border: 0
+}
+
+.sdc-racecard__item-col {
+}
+
+.sdc-racecard__item-col--2 {
+  flex: 1;
+  padding: 0 1em 0 calc(12px + 1vmin)
+}
+
+.sdc-racecard__item-col--3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sdc-racecard__horse {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__horse-name {
+  font-size: 1.25em;
+  line-height: 1.2
+}
+
+.sdc-racecard__horse > *:not(:last-child){
+  margin-right: 0.5em;
+}
+
+.sdc-racecard__horse-details {
+  list-style: none;
+  margin-bottom: 0.5em;
+  display: flex;
+}
+
+.sdc-racecard__horse-details-item {
+  margin-right: 0.75em;
+  white-space: nowrap
+}
+
+.sdc-racecard__people {
+  list-style: none;
+  padding: 0
+}
+
+.sdc-racecard__people__item {
+  display: inline-block;
+  padding: 0.12em 0
+}
+
+.sdc-racecard__number {
+  display: inline-flex;
+  margin-bottom: 0.75em;
+  line-height: 1;
+  align-items: center
+}
+
+.sdc-racecard__number-horse {
+  font-size: 1.25em;
+  margin-right: 0.2em
+}
+
+.sdc-racecard__silk {
+  width: calc(24px + 4vw);
+  max-width: 58px;
+}
+
+.sdc-racecard__betting {
+  color: crimson;
+  font-size: 1.25em;
+  text-decoration: none
+}
+
+.sdc-racecard__people {
+  line-height: 1.2
+}
+
+.sdc-racecard__item-info {
+  background: hotpink;
+  height: 200px;
+  display: none;
+}
+
+@media all and (max-width: 480px){
+  .sdc-racecard {
+    font-size: 14px;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+        <div class="sdc-racecard">
+  
+            <div class="sdc-racecard__head">
+              <h2 class="sdc-racecard__race-course">Carlisle <span class="sdc-racecard__race-time">2:20</span></h2>
+              <h3 class="sdc-racecard__race-name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
+                </h3>
+                <ul class="sdc-racecard__race-details">
+                  <li class="sdc-racecard__race-details-item"><strong>Winner:</strong> £3,234 
+                  <li class="sdc-racecard__race-details-item"><strong>2nd:</strong> £962 
+                  <li class="sdc-racecard__race-details-item"><strong>3rd:</strong> £481 
+                  <li class="sdc-racecard__race-details-item"><strong>4th:</strong> £240
+                  <li class="sdc-racecard__race-details-item">£5,000 added 
+                  <li class="sdc-racecard__race-details-item"><strong>Distance:</strong> 5f 213y 
+                  <li class="sdc-racecard__race-details-item"><strong>Going:</strong> Good to Soft (Good in places) 
+                  <li class="sdc-racecard__race-details-item"><strong>Surface:</strong> Turf
+                </ul>
+            </div>
+
+            <div class="sdc-racecard__body">
+              <div class="sdc-racecard__item">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  
+                  <div class="sdc-racecard__number">
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">1</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(2)</span>
+                  </div>
+                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                  <div class="sdc-racecard__horse">
+                    <h4 class="sdc-racecard__horse-name">This is 18 letters (IRE)</h4>
+                    <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                  </div>
+                  <ul class="sdc-racecard__horse-details">
+                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                  </ul>
+                  <p class="sdc-racecard__people">
+                    AFP Jockeyman / Mrs RFU Trainerman
+                  </p>
+                </div>
+                <div class="sdc-racecard__item-col">
+                  <a href="" class="sdc-racecard__betting">100/1</a>
+                </div>
+                
+              </div>
+              <div class="sdc-racecard__item-info"></div>
+              <div class="sdc-racecard__item">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  
+                  <div class="sdc-racecard__number">
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                  </div>
+                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                  <div class="sdc-racecard__horse">
+                    <h4 class="sdc-racecard__horse-name">This is 18 letters (IRE)</h4>
+                    <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                  </div>
+                  <ul class="sdc-racecard__horse-details">
+                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                  </ul>
+                  <p class="sdc-racecard__people">
+                    AFP Jockeyman / Mrs RFU Trainerman
+                  </p>
+                </div>
+                <div class="sdc-racecard__item-col">
+                  <a href="" class="sdc-racecard__betting">100/1</a>
+                </div>
+                
+              </div>
+            </div>
+                
+        </div>
+    
+</body>
+</html>
