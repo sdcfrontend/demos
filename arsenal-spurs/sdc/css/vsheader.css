@@ -85,6 +85,12 @@
   opacity: 0
 }
 
+.sf-vsheader .sf-ads--sponsor {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 @media all and (max-width: 680px){
   .sf-vsheader__title-split-chunk[data-short-name] {
     font-size: 0;

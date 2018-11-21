@@ -28,6 +28,20 @@ strong, h4 {
   font-size: 16px;
   background: white;
   padding: calc(12px + 3vmin);
+  position: relative;
+}
+
+.sdc-racecard abbr {
+  text-decoration: none;
+}
+
+a {
+  color: #0a1388;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
 }
 
 .sdc-racecard__head {
@@ -147,7 +161,7 @@ strong, h4 {
   max-width: 58px;
 }
 
-.sdc-racecard__betting {
+.sdc-racecard__betting[href] {
   color: crimson;
   font-size: 1.25em;
   text-decoration: none
@@ -168,6 +182,70 @@ strong, h4 {
     font-size: 14px;
   }
 
+}
+
+.sdc-racecard-overlay {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  padding: calc(12px + 3vmin);
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  transform: translate(-50%,-50%);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s
+}
+
+.sdc-racecard-overlay[aria-hidden] {
+  visibility: hidden;
+  opacity: 0
+}
+
+.sdc-racecard-overlay__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 24px;
+}
+
+.table-head {
+  font-size: 1.25em;
+  margin-bottom: 0.2em;
+  font-weight: 500
+}
+
+.table-subhead {
+  font-weight: 400;
+  margin-bottom: 0.2em;
+  font-size:1.06em
+}
+
+.table-desc {
+  margin-bottom: 2em;
+}
+
+.table-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  line-height: 1;
+  font-size: 16px;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee
+}
+
+.table-list-item {
+  padding: 0.1em 0.8em 0.1em 0
+}
+
+.table-link {
+  color: #0a1388
 }
 
 </style>
@@ -204,7 +282,7 @@ strong, h4 {
                 </div>
                 <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
                   <div class="sdc-racecard__horse">
-                    <h4 class="sdc-racecard__horse-name">This is 18 letters (IRE)</h4>
+                    <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
                     <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
                   </div>
                   <ul class="sdc-racecard__horse-details">
@@ -213,7 +291,7 @@ strong, h4 {
                     <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
                   </ul>
                   <p class="sdc-racecard__people">
-                    AFP Jockeyman / Mrs RFU Trainerman
+                    <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
                   </p>
                 </div>
                 <div class="sdc-racecard__item-col">
@@ -221,7 +299,6 @@ strong, h4 {
                 </div>
                 
               </div>
-              <div class="sdc-racecard__item-info"></div>
               <div class="sdc-racecard__item">
                 <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
                   
@@ -233,16 +310,16 @@ strong, h4 {
                 </div>
                 <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
                   <div class="sdc-racecard__horse">
-                    <h4 class="sdc-racecard__horse-name">This is 18 letters (IRE)</h4>
+                    <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
                     <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
                   </div>
                   <ul class="sdc-racecard__horse-details">
-                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
                     <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
                     <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
                   </ul>
                   <p class="sdc-racecard__people">
-                    AFP Jockeyman / Mrs RFU Trainerman
+                      <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
                   </p>
                 </div>
                 <div class="sdc-racecard__item-col">
@@ -250,9 +327,93 @@ strong, h4 {
                 </div>
                 
               </div>
+              <div class="sdc-racecard__item">
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                    
+                    <div class="sdc-racecard__number">
+                      <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
+                      <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                    </div>
+                    <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                  </div>
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                    <div class="sdc-racecard__horse">
+                      <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+                      <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                    </div>
+                    <ul class="sdc-racecard__horse-details">
+                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                    </ul>
+                    <p class="sdc-racecard__people">
+                        <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
+                    </p>
+                  </div>
+                  <div class="sdc-racecard__item-col">
+                    <a href="" class="sdc-racecard__betting">100/1</a>
+                  </div>
+                  
+              </div>
             </div>
-                
+
+              <div class="sdc-racecard-overlay" aria-hidden>
+                  <a href="#" class="sdc-racecard-overlay__close">×</a>
+                  <div class="table">
+                      <h3 class="table-head">AFP Jockeyman</h3>
+                      <p class="table-desc">Chestnut Mare by Medaaly out of Singing Winds (IRE). Owned by Dave Bamlet Racing.
+
+                        </p>
+                      <h4 class="table-subhead">Last 14 days</h4>
+                      <ul class="table-list">
+                        <li class="table-list-item"><strong>Runs:</strong> 2</li>
+                        <li class="table-list-item"><strong>1st:</strong> 1</li>
+                        <li class="table-list-item"><strong>2nd:</strong> 0</li>
+                        <li class="table-list-item"><strong>3rd:</strong> 0</li>
+                        <li class="table-list-item"><strong>Win%:</strong> 50%</li>
+                        <li class="table-list-item"><strong>To £1 stake:</strong> £79.00</li>
+                      </ul>
+                      <h4 class="table-subhead">Last 7 days</h4>
+                      <ul class="table-list">
+                        <li class="table-list-item"><strong>Runs:</strong> 2</li>
+                        <li class="table-list-item"><strong>1st:</strong> 1</li>
+                        <li class="table-list-item"><strong>2nd:</strong> 0</li>
+                        <li class="table-list-item"><strong>3rd:</strong> 0</li>
+                        <li class="table-list-item"><strong>Win%:</strong> 50%</li>
+                        <li class="table-list-item"><strong>To £1 stake:</strong> £79.00</li>
+                      </ul>
+                      <h4 class="table-subhead">Season</h4>
+                      <ul class="table-list">
+                        <li class="table-list-item"><strong>Runs:</strong> 2</li>
+                        <li class="table-list-item"><strong>1st:</strong> 1</li>
+                        <li class="table-list-item"><strong>2nd:</strong> 0</li>
+                        <li class="table-list-item"><strong>3rd:</strong> 0</li>
+                        <li class="table-list-item"><strong>Win%:</strong> 50%</li>
+                        <li class="table-list-item"><strong>To £1 stake:</strong> £79.00</li>
+                      </ul>
+                      <div>
+                      <a href="#" class="table-link">Full stats</a>
+                    </div>
+                  </div>
+              </div>
         </div>
+
+       <script>
+         var overlay = document.querySelector('.sdc-racecard-overlay');
+         var close = document.querySelector('.sdc-racecard-overlay__close');
+         document.querySelectorAll('[data-role="overlay-link"]').forEach(function(item){
+           item.onclick = function(e){
+             e.preventDefault();
+             overlay.removeAttribute('aria-hidden')
+           }
+         });
+
+         close.onclick = function(e){
+           e.preventDefault();
+           this.focus();
+           overlay.setAttribute('aria-hidden', true);
+         }
+       </script>
     
 </body>
 </html>
