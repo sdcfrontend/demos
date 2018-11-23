@@ -1,0 +1,18 @@
+.sff-team-selector {
+  text-align: center;
+  padding: 2rem 0
+}
+
+.sff-team-selector
+.sdc-interactive-selector[class] {
+  background: none!important
+}
+
+.sdc-interactive-selector__title-wrap[class] {
+  padding: 0 0 1rem
+ }
+
+ .sdc-interactive-selector__title {
+   font-size: 1.4rem
+ }
+

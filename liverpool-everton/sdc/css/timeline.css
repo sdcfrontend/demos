@@ -30,8 +30,8 @@
 }
 
 .sf-timeline--t2 .sf-timeline__col {
-  -ms-grid-rows: repeat(25, 1fr);
-  grid-template-rows: repeat(25, 1fr)
+  -ms-grid-rows: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr)
 }
 
 .sf-timeline__col1 {

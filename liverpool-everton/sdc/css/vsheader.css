@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: flex-end;
   color: white;
-  padding-bottom: 2rem
+  padding-bottom: 3rem
 }
 
 .sf-vsheader__title-split {
@@ -64,10 +64,18 @@
 
 .sf-vsheader__sub-title {
   font-size: 1.2rem;
+  font-weight: 200;
   transition: opacity 0.66s;
   will-change: opacity;
   transition-delay: 0.3s;
-  opacity: 1
+  opacity: 1;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left: 50%;
+  width: 100%;
+  bottom: 0;
+  transform: translate(-50%, -1.7rem);
 }
 
 .sf-vsheader[data-animate-in-view]
@@ -85,6 +93,13 @@
   opacity: 0
 }
 
+.sf-vsheader .sf-ads--sponsor {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2
+}
+
 @media all and (max-width: 680px){
   .sf-vsheader__title-split-chunk[data-short-name] {
     font-size: 0;
@@ -94,7 +109,7 @@
 
   .sf-vsheader__title-split-chunk[data-short-name]:after {
     content: attr(data-short-name);
-    font-size: calc(2.5rem + 3vmin);
+    font-size: calc(2.1rem + 3vmin);
     visibility: visible
   }
 }
