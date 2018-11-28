@@ -61,12 +61,10 @@
 
 
       if (this.getAttribute('data-direction') === 'prev') {
-        console.log((w) * (index - 1));
         rail.scrollLeft = w * (index - 1);
       }
 
       else {
-        console.log(w * (index + 1));
         rail.scrollLeft = w * (index + 1);
       }
 
