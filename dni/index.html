@@ -300,7 +300,7 @@
       display: none;
     }
 
-    .group--hidden > *:not(.group-toggle):not(h3) {
+    .group--hidden > *:not(.group-toggle):not(h3):not(small) {
       display: none;
     }
 
@@ -308,6 +308,14 @@
       position: sticky;
       top: 0;
       z-index: 2
+    }
+
+        .group-toggle-label {
+        font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin: -0.6rem 0 1rem;
     }
 
     .prototype-links {
@@ -403,6 +411,7 @@
 
       <div class="group">
       <h3>Brexit can be stopped</h3>
+      <small class="group-toggle-label">Contains background info</small>
       <a href="#" class="group-toggle"><span>Hide</span></a>
 
       <p>“Brexit can be stopped,” the shadow Brexit secretary said. “But the real question is, what are the decisions we’re going to face over the next few weeks and months?
@@ -425,6 +434,7 @@
 
     <div class="group">
         <h3>Brexit demands</h3>
+        <small class="group-toggle-label">Contains analysis</small>
         <a href="#" class="group-toggle"><span>Hide</span></a>
   
           <p>Labour have stated they will vote against a Brexit deal in the House of Commons if it does not meet their six tests for an agreement.
@@ -436,6 +446,7 @@
 
       <div class="group">
           <h3>No-deal Brexit deadline</h3>
+          <small class="group-toggle-label">Contains video &amp; analysis</small>
           <a href="#" class="group-toggle"><span>Hide</span></a>
     
             <p>It has been reported, if no agreement with the EU is reached this week, the UK will meet the deadline at which plans for a “no-deal” Brexit have to be acted upon.
@@ -463,6 +474,7 @@
 
         <div class="group">
             <h3>Analysis: Where is Brexit?</h3>
+            <small class="group-toggle-label">Contains video</small>
             <a href="#" class="group-toggle"><span>Hide</span></a>
       
             <div class="block">
@@ -477,6 +489,7 @@
 
           <div class="group">
               <h3>“Checks” on Brexit.</h3>
+              <small class="group-toggle-label">Contains analysis</small>
               <a href="#" class="group-toggle"><span>Hide</span></a>
         
                 <p>
@@ -492,6 +505,7 @@
 
             <div class="group group--hidden">
                 <h3>More on Brexit</h3>
+                <small class="group-toggle-label">Contains links</small>
                 <a href="#" class="group-toggle group-toggle--hidden"><span>Hide</span></a>
           <ul>
                 <li><a href="#">‘Progress’ in Brexit talks but still no deal as ‘outstanding issues’ remain</a>
@@ -505,6 +519,7 @@
 
               <div class="group group--hidden">
                   <h3>Update on negotiations</h3>
+                  <small class="group-toggle-label">Contains supporting info</small>
                   <a href="#" class="group-toggle group-toggle--hidden"><span>Hide</span></a>
                   <p>The EU’s chief Brexit negotiator Michel Barnier updated the bloc’s foreign ministers on the state of negotiations on Monday, where he repeated an agreement has not yet been reached.
                       <p>The European Commission official highlighted how the Irish border issue remains a key stumbling block. Downing Street played down a report that Mr Barnier told them the “main elements” of a deal are ready to present to a cabinet meeting on Tuesday.
