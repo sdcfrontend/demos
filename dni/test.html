@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+          --vw: 1vw
+        }
+
+        @media all and (min-width: 1000px){
+          :root {
+            --vw: 10px
+          }
+        }
+
+        html {
+          font-size: 18px;
+        }
+
+        body {
+          font-family: "Sky Text", sans-serif;
+        }
+
+        .wrapper {
+          max-width: 1000px;
+          padding: 0 calc(16px + var(--vw) * 2);
+          margin: 0 auto;
+        }
+
+        h1 {
+          font-size: calc(18px + 2vmin);
+          font-size: calc(18px + calc(var(--vw) * 3.2));
+          font-weight: 200;
+          margin: 0 auto 1.5em;
+          max-width: 800px;
+        }
+
+        p {
+          font-size: 1rem;
+          font-size: calc(15px + var(--vw) * 0.7);
+          margin: 0 auto 1.75em;
+          line-height: 1.4;
+          max-width: 800px;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <h1>Here is an article headline of a certain length</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit harum, maxime officia eum saepe pariatur dolores nesciunt. Eius saepe, rem aut repudiandae, amet, maiores consectetur earum quisquam aspernatur ea dolor?</p>
+
+  </div>
+    
+</body>
+</html>
