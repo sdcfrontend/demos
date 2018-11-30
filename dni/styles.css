@@ -343,7 +343,7 @@
       margin-left: auto;
       margin-right: auto;
       position: relative;
-      margin-top: 4rem;
+      margin-top: 4.2rem;
   }
 
   .mpu:before {
@@ -353,5 +353,6 @@
       padding: 1rem 0 0.8rem;
       width: 100%;
       text-align: center;
-      font-size: 16px;
+      font-size: 15px;
+      color: #777
   }
