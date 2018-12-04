@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+body {
+  text-align: center;
+  padding: 2em 3vw;
+  font-family: sans-serif;
+}
+
+.poll-item {
+width: 100%;
+  max-width: 500px;
+  position: relative;
+  margin-bottom: 2em;
+  display: inline-block
+}
+
+.poll-question {
+  font-size: 20px;
+  margin: 0 auto 1em;
+}
+
+.poll-options {
+  border-radius: 18px;
+  background: linear-gradient(to right, red 0%, blue 50%, lime 100%);
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  background: white;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  border: 3px solid white;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.33s;
+    cursor: pointer
+
+}
+
+input:hover {
+  background: #eee;
+}
+
+input:checked {
+  background: red
+}
+
+input:nth-child(2):checked {
+  background: purple
+}
+
+input:nth-child(3):checked {
+  background: blue
+}
+
+input:nth-child(4):checked {
+  background: #008d9a
+}
+
+input:nth-child(5):checked {
+  background: lime
+}
+
+.poll-scale {
+  padding: 0.7em 1em 0;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between 
+}
+
+
+.poll-options[data-choice] input {
+  opacity: 0;
+  pointer-events: none
+}
+
+
+.poll-slide {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  border-right: 3px solid white;
+  margin-left: -1.5px;
+  opacity: 0;
+  pointer-events: none
+}
+
+.poll-slide:before {
+  content: attr(data-role);
+  font-size: 11px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-45%, -2px)
+}
+
+.poll-slide:after {
+  width: 19px;
+  height: 19px;
+  content: "";
+  background: inherit;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  left: 1.5px;
+  top: 50%;
+}
+
+.poll-slide[data-role="public"] {
+  left: -30px;
+  transition: left 0.5s;
+}
+
+.poll-slide[data-role="public"]:after {
+  background: #00a088
+}
+
+.poll-options[data-choice]
+.poll-slide[data-role="public"] {
+  left: 75%;
+  opacity: 1
+}
+
+.poll-options[data-choice='1']
+.poll-slide[data-role="you"] {
+  left: 15.5%;
+  background: red;
+  opacity: 1
+  
+}
+
+.poll-options[data-choice='2']
+.poll-slide[data-role="you"] {
+  left: 32.5%;
+  background: purple;
+  opacity: 1 
+}
+
+.poll-options[data-choice='3']
+.poll-slide[data-role="you"] {
+  left: 50%;
+  background: blue;
+  opacity: 1
+}
+
+.poll-options[data-choice='4']
+.poll-slide[data-role="you"] {
+  left: 67.4%;
+  background: #008d9a;
+  opacity: 1
+}
+
+.poll-options[data-choice='5']
+.poll-slide[data-role="you"] {
+  left: 84.8%;
+  background: lime;
+  opacity: 1
+}
+
+</style>
+</head>
+<body>
+<div class="poll-item">
+  <h3 class="poll-question">How do you feel about something?</h3>
+  <form class="poll-options">
+    <input type="radio" name="1" value="1">
+    <input type="radio" name="1" value="2">
+    <input type="radio" name="1" value="3">
+    <input type="radio" name="1" value="4">
+    <input type="radio" name="1" value="5">
+      <div class="poll-slide" data-role="you"></div>
+    <div class="poll-slide" data-role="public"></div>
+  </form>
+  <div class="poll-scale">
+    <span>Negative</span>
+    <span>Neutral</span>
+    <span>Positive</span> 
+  </div>
+</div>
+</body>
+
+<script>
+var form = document.querySelector('form');
+
+
+form.onchange = function(e){
+  var val = form.querySelector("input:checked").value;
+  form.setAttribute('data-choice', val);
+}
+</script>
+</html>
