@@ -22,8 +22,8 @@ body {
 width: 100%;
   max-width: 500px;
   position: relative;
-  margin-bottom: 2em;
-  display: inline-block
+  margin: 0 auto calc(3vw + 1em);
+  display: block
 }
 
 .poll-question {
@@ -199,15 +199,54 @@ input:nth-child(5):checked {
     <span>Positive</span> 
   </div>
 </div>
+
+<div class="poll-item">
+    <h3 class="poll-question">How do you feel about something?</h3>
+    <form class="poll-options">
+      <input type="radio" name="1" value="1">
+      <input type="radio" name="1" value="2">
+      <input type="radio" name="1" value="3">
+      <input type="radio" name="1" value="4">
+      <input type="radio" name="1" value="5">
+        <div class="poll-slide" data-role="you"></div>
+      <div class="poll-slide" data-role="public"></div>
+    </form>
+    <div class="poll-scale">
+      <span>Negative</span>
+      <span>Neutral</span>
+      <span>Positive</span> 
+    </div>
+  </div>
+
+  <div class="poll-item">
+      <h3 class="poll-question">How do you feel about something?</h3>
+      <form class="poll-options">
+        <input type="radio" name="1" value="1">
+        <input type="radio" name="1" value="2">
+        <input type="radio" name="1" value="3">
+        <input type="radio" name="1" value="4">
+        <input type="radio" name="1" value="5">
+          <div class="poll-slide" data-role="you"></div>
+        <div class="poll-slide" data-role="public"></div>
+      </form>
+      <div class="poll-scale">
+        <span>Negative</span>
+        <span>Neutral</span>
+        <span>Positive</span> 
+      </div>
+    </div>
 </body>
 
 <script>
-var form = document.querySelector('form');
+var form = document.querySelectorAll('form');
+
+form.forEach(function(item){
+  item.onchange = function(e){
+    var val = item.querySelector("input:checked").value;
+    item.setAttribute('data-choice', val);
+  }
+});
 
 
-form.onchange = function(e){
-  var val = form.querySelector("input:checked").value;
-  form.setAttribute('data-choice', val);
-}
 </script>
 </html>

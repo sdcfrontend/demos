@@ -100,10 +100,14 @@ input:nth-child(5):checked {
 }
 
 .poll-scale {
-  padding: 0.7em 1em 0;
+  padding: 0.7em 0 0;
   font-size: 14px;
   display: flex;
-  justify-content: space-between 
+  justify-content: space-around 
+}
+
+.poll-scale span {
+    width: 20%
 }
 
 .poll-slide {
@@ -157,7 +161,7 @@ input:nth-child(5):checked {
     height: 50px;
 }
 .poll-results span {
-    width: 10%;
+    width: 15%;
     height: 4px;
     background: red;
     display: block;
@@ -212,7 +216,9 @@ input:nth-child(5):checked {
   </form>
   <div class="poll-scale">
     <span>Negative</span>
+    <span>Neg/Neu</span>
     <span>Neutral</span>
+    <span>Neu/Pos</span>
     <span>Positive</span> 
   </div>
 </div>
