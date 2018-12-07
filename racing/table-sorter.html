@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+  padding: 0;
+  margin: 0
+}
+body {
+  font-family: sans-serif;
+  padding: 1em
+}
+table {
+  border-collapse: collapse
+}
+td, th {
+  padding: 1em;
+  border: 1px solid #ccc;
+  text-align: center
+}
+
+th {
+  cursor: pointer
+}
+
+th.on {
+  background: red;
+}
+</style>
+</head>
+<body>
+        <table>
+                <thead>
+                  <tr>
+                    <th>Number</th>
+                    <th>Word</th>
+                    <th>Date</th>
+                    <th>Odds</th>
+                    <th>Price</th>
+                    <th>%</th>
+                  </tr>
+                  </thead>
+                <tr>
+                  <td>3</td>
+                  <td>orange</td>
+                  <td>1/6/2018</td>
+                  <td>4/6</td>
+                  <td>£100</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>apple apple</td>
+                  <td>12/6/2018</td>
+                  <td>12/1</td>
+                  <td>£54</td>
+                  <td>25.11%</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>apple banana</td>
+                  <td>14/8/2018</td>
+                  <td>100/1</td>
+                  <td>£12</td>
+                  <td>25.99%</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>zebra</td>
+                  <td>19/9/2018</td>
+                  <td>6/4</td>
+                  <td>£101</td>
+                  <td>11.38%</td>
+                </tr>
+                <tr>
+                  <td>111</td>
+                  <td>pear</td>
+                  <td>12/12/2018</td>
+                  <td>3/1</td>
+                  <td>£1.50</td>
+                  <td>25.0%</td>
+                </tr>
+              </table>
+</body>
+<script>
+
+var trs = Array.prototype.slice.call(document.querySelectorAll("table tbody tr"));
+var ths = Array.prototype.slice.call(document.querySelectorAll('th'));
+
+ths.forEach(function(th){
+  th.onclick = function(){
+    var index = ths.indexOf(this);
+    this.classList.toggle('on');
+    sort(index, this.classList.contains('on'));
+  }
+})
+
+function parseDataType(string){
+  
+  // currency
+  if(string.match(/^£|\$|€/)){
+    return parseFloat(string.substring(1));
+  }
+  
+  // is date 
+  if(string.search(/\//g) > -1 && string.match(/\//g).length > 1){
+    var s = string.split('/');
+    return new Date([s[1], s[0], s[2]].join('/')).valueOf();;
+  }
+  
+  // is odds
+  if(string.search(/\//g) > -1 && string.match(/\//g).length === 1){
+    var s = string.split('/');
+    return parseInt(s[0]) / parseInt(s[1]); 
+   }
+  
+  // is a number
+  if(!isNaN(parseInt(string))){
+    if(string.match(/\./)){
+      return parseFloat(string);
+    }
+    
+    return parseInt(string, 10);
+  }
+  
+  return string;
+ 
+}
+
+function sort(index, direction){
+ 
+  trs.sort(function(a, b){
+    
+    a = parseDataType(a.querySelectorAll('td')[index].textContent.trim());
+    b = parseDataType(b.querySelectorAll('td')[index].textContent.trim());
+    
+    return direction ? a > b ? 1 : -1 : a > b ? -1 : 1;
+    
+  });
+
+  trs.forEach(function(row){
+    document.querySelector('tbody').appendChild(row)
+  });
+  
+}
+</script>
+</html>

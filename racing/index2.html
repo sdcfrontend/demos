@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Sky Text', sans-serif;
+  max-width: 976px;
+  margin: 20px auto;
+  background: #eee; 
+}
+
+strong, h4 {
+  font-weight: 500
+}
+
+.sdc-racecard {
+  font-size: 16px;
+  background: white;
+  padding: calc(12px + 3vmin);
+  position: relative;
+}
+
+.sdc-racecard abbr {
+  text-decoration: none;
+}
+
+a {
+  color: #0a1388;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+.sdc-racecard__head {
+  padding-bottom: calc(12px + 2vmin);
+  border-bottom: 1px solid #ccc;
+}
+
+.sdc-racecard__race-course {
+  font-size: calc(2em + 1vmin);
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3em
+}
+
+.sdc-racecard__race-time {
+  font-size: 0.76em
+}
+
+.sdc-racecard__race-name {
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: calc(12px + 2vmin);
+}
+
+.sdc-racecard__race-details {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__race-details-item {
+  padding: 0.1em 0.75em 0.2em 0; 
+}
+
+.sdc-racecard__item {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: calc(12px + 2vmin) 0
+}
+
+.sdc-racecard__item:last-child {
+  border: 0
+}
+
+.sdc-racecard__item-col {
+}
+
+.sdc-racecard__item-col--2 {
+  flex: 1;
+  padding: 0 1em 0 calc(12px + 1vmin)
+}
+
+.sdc-racecard__item-col--3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sdc-racecard__horse {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__horse-name {
+  font-size: 1.25em;
+  line-height: 1.2
+}
+
+.sdc-racecard__horse > *:not(:last-child){
+  margin-right: 0.5em;
+}
+
+.sdc-racecard__horse-details {
+  list-style: none;
+  margin-bottom: 0.5em;
+  display: flex;
+}
+
+.sdc-racecard__horse-details-item {
+  margin-right: 0.75em;
+  white-space: nowrap
+}
+
+.sdc-racecard__people {
+  list-style: none;
+  padding: 0
+}
+
+.sdc-racecard__people__item {
+  display: inline-block;
+  padding: 0.12em 0
+}
+
+.sdc-racecard__number {
+  display: inline-flex;
+  margin-bottom: 0.75em;
+  line-height: 1;
+  align-items: center
+}
+
+.sdc-racecard__number-horse {
+  font-size: 1.25em;
+  margin-right: 0.2em
+}
+
+.sdc-racecard__silk {
+  width: calc(24px + 4vw);
+  max-width: 58px;
+}
+
+.sdc-racecard__betting[href] {
+  color: crimson;
+  font-size: 1.25em;
+  text-decoration: none
+}
+
+.sdc-racecard__people {
+  line-height: 1.2
+}
+
+.sdc-racecard__item-info {
+  background: hotpink;
+  height: 200px;
+  display: none;
+}
+
+@media all and (max-width: 480px){
+  .sdc-racecard {
+    font-size: 14px;
+  }
+
+}
+
+.sdc-racecard-overlay {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90%;
+  padding: calc(12px + 3vmin);
+  top: 50%;
+  left: 50%;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  transform: translate(-50%,-50%);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s
+}
+
+.sdc-racecard-overlay[aria-hidden] {
+  visibility: hidden;
+  opacity: 0
+}
+
+.sdc-racecard-overlay__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 24px;
+}
+
+.table-head {
+  font-size: 1.25em;
+  margin-bottom: 0.2em;
+  font-weight: 500
+}
+
+.table-subhead {
+  font-weight: 400;
+  margin-bottom: 0.2em;
+  font-size:1.06em
+}
+
+.table-desc {
+  margin-bottom: 2em;
+}
+
+.table-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  line-height: 1;
+  font-size: 16px;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #eee
+}
+
+.table-list-item {
+  padding: 0.1em 0.8em 0.1em 0
+}
+
+.table-link {
+  color: #0a1388
+}
+
+.table-container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch
+}
+
+.table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table td,
+.table th {
+  padding: 0.7em;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.table td:first-child,
+.table th:first-child {
+  padding-left: 0
+}
+
+.table th {
+  border-width: 2px;
+  font-weight: 500
+}
+
+.table a {
+  text-decoration: none;
+}
+
+col[data-push] {
+  width: 33%
+}
+
+td[data-name],
+th[data-name] {
+  text-align: left
+}
+
+</style>
+</head>
+<body>
+
+        <div class="sdc-racecard">
+  
+            <div class="sdc-racecard__head">
+              <h2 class="sdc-racecard__race-course">Carlisle <span class="sdc-racecard__race-time">2:20</span></h2>
+              <h3 class="sdc-racecard__race-name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
+                </h3>
+                <ul class="sdc-racecard__race-details">
+                  <li class="sdc-racecard__race-details-item"><strong>Winner:</strong> £3,234 
+                  <li class="sdc-racecard__race-details-item"><strong>2nd:</strong> £962 
+                  <li class="sdc-racecard__race-details-item"><strong>3rd:</strong> £481 
+                  <li class="sdc-racecard__race-details-item"><strong>4th:</strong> £240
+                  <li class="sdc-racecard__race-details-item">£5,000 added 
+                  <li class="sdc-racecard__race-details-item"><strong>Distance:</strong> 5f 213y 
+                  <li class="sdc-racecard__race-details-item"><strong>Going:</strong> Good to Soft (Good in places) 
+                  <li class="sdc-racecard__race-details-item"><strong>Surface:</strong> Turf
+                </ul>
+            </div>
+
+            <div class="sdc-racecard__body">
+              <div class="sdc-racecard__item">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  
+                  <div class="sdc-racecard__number">
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">1</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(2)</span>
+                  </div>
+                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                  <div class="sdc-racecard__horse">
+                    <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+                    <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                  </div>
+                  <ul class="sdc-racecard__horse-details">
+                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                  </ul>
+                  <p class="sdc-racecard__people">
+                    <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
+                  </p>
+                </div>
+                <div class="sdc-racecard__item-col">
+                  <a href="" class="sdc-racecard__betting">100/1</a>
+                </div>
+                
+              </div>
+              <div class="sdc-racecard__item">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  
+                  <div class="sdc-racecard__number">
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                  </div>
+                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                  <div class="sdc-racecard__horse">
+                    <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+                    <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                  </div>
+                  <ul class="sdc-racecard__horse-details">
+                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                  </ul>
+                  <p class="sdc-racecard__people">
+                      <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
+                  </p>
+                </div>
+                <div class="sdc-racecard__item-col">
+                  <a href="" class="sdc-racecard__betting">100/1</a>
+                </div>
+                
+              </div>
+              <div class="sdc-racecard__item">
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                    
+                    <div class="sdc-racecard__number">
+                      <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
+                      <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                    </div>
+                    <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                  </div>
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                    <div class="sdc-racecard__horse">
+                      <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+                      <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                    </div>
+                    <ul class="sdc-racecard__horse-details">
+                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
+                    </ul>
+                    <p class="sdc-racecard__people">
+                        <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
+                    </p>
+                  </div>
+                  <div class="sdc-racecard__item-col">
+                    <a href="" class="sdc-racecard__betting">100/1</a>
+                  </div>
+                  
+              </div>
+            </div>
+
+              <div class="sdc-racecard-overlay" aria-hidden>
+                  <a href="#" class="sdc-racecard-overlay__close">×</a>
+                  <h3 class="table-head">AFP Jockeyman</h3>
+                      <p class="table-desc">Chestnut Mare by Medaaly out of Singing Winds (IRE). Owned by Dave Bamlet Racing.
+
+                        </p>
+                  <div class="table-container">
+                      
+                      <table class="table">
+                            <colgroup>
+                             <col>
+                             <col>
+                             <col>
+                             <col>
+                             <col>
+                             <col>
+                             <col>
+                             <col>
+                             <col data-push="3">
+                             <col data-push="3">
+                             <col data-push="3">
+                             <col>
+                             <col>
+                             <col>
+                            </colgroup><thead>
+                                <tr class="" options="child=th">
+                                    <th data-name class="{sorter: 'shortDate'} enable-tooltip header" title="Sort by Date">Date</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Finishing Position">Pos</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Weight">Wt</th>
+                                    <th class="{sorter: false} enable-tooltip" title="BHA">BHA</th>
+                                    <th title="Sort by Course" class="enable-tooltip header">Co</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Distance (in furlongs)">Dist</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Going">Going</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Class">Cl</th>
+                                    <th data-name class="{sorter: 'sorttxt'} enable-tooltip header" title="Sort by Jockey" data-name>Jockey</th>
+                                    <th data-name class="{sorter: 'sorttxt'} enable-tooltip header" title="Sort by Trainer" data-name>Trainer</th>
+                                    <th data-name class="{sorter: false} enable-tooltip" title="Race Winner" data-name>Winner</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Distance Beaten By">DB</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Opening Price">Op</th>
+                                    <th class="{sorter: false} enable-tooltip" title="Starting Price">SP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                        <tr class="place">
+                                    <td data-name><a href="/racing/results/full-result/865938/haydock-park/05-12-2018/watch-racing-uk-in-hd-conditional-jockeys-handicap-hurdle">5/12/2018</a></td>
+                                    <td>2/9</td>
+                                    <td class="nowrap">12-7 h</td>
+                                    <td>110</td>
+                                    <td>Hayd</td>
+                                    <td>22f</td>
+                                    <td><span title="Soft">Sft</span></td>
+                                    <td>4</td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/148371/stan-sheppard">Stan <span class="sorttxt">Sheppard</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/129512/tom-lacey">Tom <span class="sorttxt">Lacey</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/985980/ballymagroarty-boy">Ballymagroarty Boy (IRE)</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>10/11</td>
+                                </tr>
+                                            <tr class="win">
+                                    <td data-name><a href="/racing/results/full-result/864320/uttoxeter/25-11-2018/purple-sprout-mares-handicap-hurdle">25/11/2018</a></td>
+                                    <td>1/9</td>
+                                    <td class="nowrap">11-7 h</td>
+                                    <td>111</td>
+                                    <td>Utto</td>
+                                    <td>23f</td>
+                                    <td><span title="Good to Soft">Gd/Sft</span></td>
+                                    <td>4</td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/97160/alan-johns">Alan <span class="sorttxt">Johns</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/129512/tom-lacey">Tom <span class="sorttxt">Lacey</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/980367/quri">Quri (IRE)</a></td>
+                                    <td></td>
+                                    <td>7/2</td>
+                                    <td>15/2</td>
+                                </tr>
+                                            <tr class="place ransixty">
+                                    <td data-name><a href="/racing/results/full-result/860083/ayr/29-10-2018/western-house-mares-maiden-hurdle">29/10/2018</a></td>
+                                    <td>2/8</td>
+                                    <td class="nowrap">10-12</td>
+                                    <td></td>
+                                    <td>Ayr</td>
+                                    <td>20f</td>
+                                    <td><span title="Good">Gd</span></td>
+                                    <td>5</td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/238/r-johnson">R <span class="sorttxt">Johnson</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/129512/tom-lacey">Tom <span class="sorttxt">Lacey</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/1010430/keep-the-river">Keep The River</a></td>
+                                    <td>2.50</td>
+                                    <td>8/11</td>
+                                    <td>4/9</td>
+                                </tr>
+                                            <tr class="place ransixty">
+                                    <td data-name><a href="/racing/results/full-result/835594/tramore/01-06-2018/david-flynn-ltd-mares-maiden-hurdle">1/6/2018</a></td>
+                                    <td>2/15</td>
+                                    <td class="nowrap">10-13 h</td>
+                                    <td></td>
+                                    <td>Tram</td>
+                                    <td>21f</td>
+                                    <td><span title="Good">Gd</span></td>
+                                    <td></td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/142185/d-j-mcinerney">D J <span class="sorttxt">McInerney</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/43801/t-obrien">T <span class="sorttxt">O'Brien</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/992240/kilbarry-angel">Kilbarry Angel (IRE)</a></td>
+                                    <td>3.25</td>
+                                    <td>16/1</td>
+                                    <td>20/1</td>
+                                </tr>
+                                            <tr class="noplace ransixty">
+                                    <td data-name><a href="/racing/results/full-result/820761/gowran-park/17-02-2018/irish-stallion-farms-ebf-ronan-lawlor-memorial-mares-flat-race">17/2/2018</a></td>
+                                    <td>8/16</td>
+                                    <td class="nowrap">11-8</td>
+                                    <td></td>
+                                    <td>Gowr</td>
+                                    <td>17f</td>
+                                    <td><span title="Heavy">Hvy</span></td>
+                                    <td></td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/133509/mr-r-w-barron">Mr R W <span class="sorttxt">Barron</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/43801/t-obrien">T <span class="sorttxt">O'Brien</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/997382/mary-b">Mary B (IRE)</a></td>
+                                    <td>55.25</td>
+                                    <td>12/1</td>
+                                    <td>12/1</td>
+                                </tr>
+                                            <tr class="noplace ransixty">
+                                    <td data-name><a href="/racing/results/full-result/810172/navan/26-11-2017/coolmore-n-h-sires-irish-ebf-mares-flat-race">26/11/2017</a></td>
+                                    <td>9/13</td>
+                                    <td class="nowrap">10-13</td>
+                                    <td></td>
+                                    <td>Nava</td>
+                                    <td>16f</td>
+                                    <td><span title="Soft to Heavy">Sft/Hvy</span></td>
+                                    <td>1</td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/126281/mr-d-g-lavery">Mr D G <span class="sorttxt">Lavery</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/43801/t-obrien">T <span class="sorttxt">O'Brien</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/855009/crackerdancer">Crackerdancer (IRE)</a></td>
+                                    <td>46.75</td>
+                                    <td>12/1</td>
+                                    <td>14/1</td>
+                                </tr>
+                                            <tr class="place">
+                                    <td data-name><a href="/racing/results/full-result/798017/listowel/15-09-2017/listowel-printing-works-irish-ebf-mares-flat-race">15/9/2017</a></td>
+                                    <td>2/7</td>
+                                    <td class="nowrap">11-5</td>
+                                    <td></td>
+                                    <td>List</td>
+                                    <td>16f</td>
+                                    <td><span title="Heavy">Hvy</span></td>
+                                    <td></td>
+                                    <td data-name><a href="/racing/form-profiles/jockey/142185/d-j-mcinerney">D J <span class="sorttxt">McInerney</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/trainer/43801/t-obrien">T <span class="sorttxt">O'Brien</span></a></td>
+                                    <td data-name><a href="/racing/form-profiles/horse/961276/masons-daughter">Masons Daughter (IRE)</a></td>
+                                    <td>2.00</td>
+                                    <td>10/1</td>
+                                    <td>8/1</td>
+                                </tr>
+                                        </tbody>
+                        </table>
+                    </div>
+              </div>
+        </div>
+
+       <script>
+         var overlay = document.querySelector('.sdc-racecard-overlay');
+         var close = document.querySelector('.sdc-racecard-overlay__close');
+         document.querySelectorAll('[data-role="overlay-link"]').forEach(function(item){
+           item.onclick = function(e){
+             e.preventDefault();
+             overlay.removeAttribute('aria-hidden')
+           }
+         });
+
+         close.onclick = function(e){
+           e.preventDefault();
+           this.focus();
+           overlay.setAttribute('aria-hidden', true);
+         }
+       </script>
+    
+</body>
+</html>
