@@ -21,9 +21,6 @@
           transform: scale(0)
         }
 
-        75% {
-          transform: scale(1.25)
-        }
 
         100% {
           transform: scale(0.999)
@@ -48,41 +45,42 @@
       padding: 1rem calc(1rem + 2vw)
     }
     
-    .color-1 {
+    .color-1[data-color] {
       color: #ffa200
     }
 
-    .color-2 {
+    .color-2[data-color] {
       color: #ffdb00
     }
 
-    .color-3 {
+    .color-3[data-color] {
       color: #e6e6e6
     }
 
-    .color-4 {
+    .color-4[data-color] {
       color: #7dd3fb
     }
-    .color-5 {
+
+    .color-5[data-color] {
       color: #3285fc
     }
 
-    .bg-1 {
+    .color-1[data-bg] {
       background: #ffa200
     }
 
-    .bg-2 {
+    .color-2[data-bg] {
       background: #ffdb00
     }
 
-    .bg-3 {
+    .color-3[data-bg] {
       background: #e6e6e6
     }
 
-    .bg-4 {
+    .color-4[data-bg] {
       background: #7dd3fb
     }
-    .bg-5 {
+    .color-5[data-bg] {
       background: #3285fc
     }
 
@@ -108,15 +106,15 @@
       margin: 0 .45rem
     }
 
-    .waffle-chart {
+    .waffle__chart {
       width: 14rem;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(10, 1fr);
-      grid-gap: 0.6rem
+      grid-gap: 0.6rem;
     }
 
-    .waffle-seg {
+    .waffle__chart-seg {
       background: #ffa200;
       padding-bottom: 100%;
       border-radius: 50%;
@@ -124,57 +122,79 @@
       /* will-change: transform; */
       /* transform: scale(0.999); */
       cursor: pointer;
+      position: relative;
     }
 
-    .waffle-seg:nth-last-child(n+26){
+    /* .waffle__chart-seg:nth-last-child(n+26){
       background:#3285fc
     }
 
-    .waffle-seg:nth-child(n+27){
+    .waffle__chart-seg:nth-child(n+27){
       background:#7dd3fb
     }
 
-    .waffle-seg:nth-child(n+36){
+    .waffle__chart-seg:nth-child(n+36){
       background:#e6e6e6
     }
 
-    .waffle-seg:nth-child(n+42){
+    .waffle__chart-seg:nth-child(n+42){
       background:#ffdb00;
     }
 
-    .waffle-seg:nth-child(n+52){
+    .waffle__chart-seg:nth-child(n+52){
       background:#ffa200;
-    }
+    } */
     
-    .waffle-seg[data-animate-in-view]{
+    .waffle__chart-seg[data-animate-in-view]{
       transform: scale(0)
     }
 
-    .waffle-seg:not([data-animate-in-view]) {
-      animation: pulse 0.8s ease-out;
+    .waffle__chart-seg:not([data-animate-in-view]) {
+      animation: pulse 0.6s ease-out;
       animation-fill-mode: both
     }
     
-    .waffle-seg:after {
-      transition: opacity 0.2s;
-      opacity: 0;
-    }
 
-    .waffle-seg:hover:after {
-      content: "5% Intolerant";
+    .waffle__chart-tool {
+      content: attr(data-tooltip);
       background: white;
       border-radius: 12px;
       max-width: 150px;
-      padding: 0.5rem;
+      padding: 0.75rem;
       position: absolute;
-      color: black;
-      bottom: 100%;
-      left: 50%;
-      transform: translate(-50%, 0);
       font-size: 14px;
       line-height: 1.2;
       text-align: center;
       opacity: 1;
+      white-space: pre;
+      transform: translate(-50%, calc(-100% - 12px));
+      opacity: 0;
+      transition: opacity 0.25s;
+      pointer-events: none;
+    }
+
+    .waffle__chart-tool:after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: inherit;
+      bottom: -5px;
+      left: calc(50% - 5px);
+      transform: rotate(-45deg);
+
+    }
+
+    .waffle__chart-tool strong {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 0.1em;
+      display: block;
+      color: inherit
+    }
+
+    .waffle__chart-tool span {
+      color: black
     }
 
     </style>
@@ -185,120 +205,156 @@
    
 
     <div class="result-key">
-        <div class="result-key-item bg-1"></div>
-        <div class="result-key-item bg-2"></div>
-        <div class="result-key-item bg-3"></div>
-        <div class="result-key-item bg-4"></div>
-        <div class="result-key-item bg-5"></div>
+        <div class="result-key-item color-1" data-bg></div>
+        <div class="result-key-item color-2" data-bg></div>
+        <div class="result-key-item color-3" data-bg></div>
+        <div class="result-key-item color-4" data-bg></div>
+        <div class="result-key-item color-5" data-bg></div>
     </div>
     <div class="waffle">
-        <div class="waffle-chart">
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 0ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 5ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 10ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 15ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 20ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 25ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 30ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 35ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 40ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 45ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 50ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 55ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 60ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 65ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 70ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 75ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 80ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 85ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 90ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 95ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 100ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 105ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 110ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 115ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 120ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 125ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 130ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 135ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 140ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 145ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 150ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 155ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 160ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 165ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 170ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 175ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 180ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 185ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 190ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 195ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 200ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 205ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 210ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 215ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 220ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 225ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 230ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 235ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 240ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 245ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 250ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 255ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 260ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 265ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 270ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 275ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 280ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 285ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 290ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 295ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 300ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 305ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 310ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 315ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 320ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 325ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 330ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 335ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 340ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 345ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 350ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 355ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 360ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 365ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 370ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 375ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 380ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 385ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 390ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 395ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 400ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 405ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 410ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 415ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 420ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 425ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 430ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 435ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 440ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 445ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 450ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 455ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 460ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 465ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 470ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 475ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 480ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 485ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 490ms;"></div>
-            <div class="waffle-seg" data-animate-in-view data-trigger="100" style="animation-delay: 495ms;"></div>
+        <div class="waffle__chart">
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 0ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 5ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 10ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 15ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 20ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 25ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 30ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 35ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 40ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 45ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 50ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 55ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 60ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 65ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 70ms;"></div>
+            <div class="waffle__chart-seg color-1" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 75ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 80ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 85ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 90ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 95ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 100ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 105ms;"></div>
+            <div class="waffle__chart-seg color-2" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 110ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 115ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 120ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 125ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 130ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 135ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 140ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 145ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 150ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 155ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 160ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 165ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 170ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 175ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 180ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 185ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 190ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 195ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 200ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 205ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 210ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 215ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 220ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 225ms;"></div>
+            <div class="waffle__chart-seg color-3" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 230ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 235ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 240ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 245ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 250ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 255ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 260ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 265ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 270ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 275ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 280ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 285ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 290ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 295ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 300ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 305ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 310ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 315ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 320ms;"></div>
+            <div class="waffle__chart-seg color-4" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 325ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 330ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 335ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 340ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 345ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 350ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 355ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 360ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 365ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 370ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 375ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 380ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 385ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 390ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 395ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 400ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 405ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 410ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 415ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 420ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 425ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 430ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 435ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 440ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 445ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 450ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 455ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 460ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 465ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 470ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 475ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 480ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 485ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 490ms;"></div>
+            <div class="waffle__chart-seg color-5" data-bg data-animate-in-view data-trigger="100" style="animation-delay: 495ms;"></div>
+
+            <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line">57% majority</strong><span data-role="tooltip-first-line">Tolerant</span></div>
+            
           </div>
          
     </div>
 
   </div>
   <script src="js/trigger.js"></script>
-  <script></script>
+  <script>
+    var waffle = document.querySelectorAll('.waffle__chart-seg');
+    waffle.forEach(function(item){
+
+      var tooltip = item.parentNode.querySelector('.waffle__chart-tool');
+      var x;
+      var y;
+      var offset;
+
+      if(!tooltip){
+        return;
+      }
+
+      item.onmouseenter = function(e){
+        var dims = e.target.getBoundingClientRect();
+        x = dims.left;
+        y = dims.y + window.pageYOffset;
+        offset = dims.width/2;
+        window.waffletooltimeout = setTimeout(function(){
+          tooltip.style.cssText = "top:" +y+ "px;left:" +(x + offset)+ "px;opacity: 1";
+          tooltip.classList.add(e.target.className.match(/color-./)[0])
+        }, 100);
+      }
+
+      item.onmouseleave = function(e){
+        clearTimeout(window.waffletooltimeout);
+        tooltip.style.cssText = "top:" +y+ "px;left:" +(x + offset)+ "px;opacity: 0";
+        var clss = e.target.className.match(/color-./)[0];
+        if(clss){
+          tooltip.classList.remove(clss);
+        }
+      }
+    })
+  </script>
 </body>
 </html>
