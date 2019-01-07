@@ -1,0 +1,163 @@
+.waffle__chart {
+  max-width: 12rem;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(10, 1fr); */
+  contain: style;
+  transform: rotate(-90deg);
+}
+
+.waffle__chart[data-current-color="color-1"]
+.waffle__chart-seg:not(.color-1) {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-2"]
+.waffle__chart-seg:not(.color-2) {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-2"]
+.waffle__chart-seg.color-1 {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-3"]
+.waffle__chart-seg:not(.color-3) {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-3"]
+.waffle__chart-seg.color-1,
+.waffle__chart[data-current-color="color-3"]
+.waffle__chart-seg.color-2 {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-4"]
+.waffle__chart-seg:not(.color-4) {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-4"]
+.waffle__chart-seg.color-5 {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart[data-current-color="color-5"]
+.waffle__chart-seg:not(.color-5) {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+.waffle__chart-seg {
+  background: #ffa200;
+  border: 0.15rem solid #0e224b;
+  border-radius: 50%;
+  transition: transform 0.33s;
+  will-change: transform; 
+  transform: scale(0.999);
+  cursor: pointer;
+  position: relative;
+  width: 10%;
+}
+
+.waffle__chart-seg:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.waffle__chart-seg[data-animate-in-view]{
+  transform: scale(0)
+}
+
+.waffle__chart-tool {
+  content: attr(data-tooltip);
+  background: #0e224b;
+  border-radius: 12px;
+  min-width: 100px;
+  max-width: 60%;
+  padding: 0.5rem 0.75rem 0.7rem 0.5rem;
+  position: absolute;
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  opacity: 1;
+  white-space: pre;
+  transform: translate(-50%, calc(-100% - 12px));
+  opacity: 0;
+  transition: opacity 0.25s, top 0.25s, left 0.25s;
+  pointer-events: none;
+  border: 1px solid white;
+  filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.35));
+  z-index: 99
+}
+
+.waffle__chart-tool:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  bottom: -6px;
+  left: calc(50% - 5px);
+  transform: rotate(-45deg);
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  box-sizing: border-box
+
+}
+
+.waffle__chart-tool strong {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.1em;
+  display: block;
+  color: inherit
+}
+
+.waffle__chart-tool span {
+  color: white
+}
+
+.waffle__chart-label {
+  font-size: 1rem;
+  padding-top: 1em;
+}
+
+.waffle__chart-row {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap
+}
+
+.waffle__chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media all and (max-width: 1010px){
+  .waffle__chart-row--col4 .waffle__chart-col {
+    width: 50%;
+    flex: auto;
+    margin-bottom: 2rem
+  }
+}
+
+@media all and (max-width: 360px){
+
+  .waffle__chart {
+    max-width: 14rem;
+  }
+
+  .waffle__chart-row--col2 .waffle__chart-col,
+  .waffle__chart-row--col4 .waffle__chart-col {
+    width: 100%;
+    flex: auto;
+    margin-bottom: 2rem;
+  }
+}

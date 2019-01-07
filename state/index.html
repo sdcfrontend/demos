@@ -6,326 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/static.css">
-    <style>
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-      @font-face{font-family:Sky Text;src:url(assets/fonts/sky-regular.woff) format("woff")}
-      @font-face{font-family:Sky Text;src:url(assets/fonts/sky-medium.woff) format("woff");font-weight:700}
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box
-      }
-
-      @keyframes pulse {
-        0% {
-          transform: scale(0)
-        }
-
-
-        100% {
-          transform: scale(0.999)
-        }
-      }
-    html {
-      font-size: calc(12px + 1vw);
-      line-height: 1.3
-    }
-
-    @media all and (min-width: 1000px){
-      html {
-        font-size: 22px;
-      }
-    }
-
-    body {
-      font-family: "Sky Text", sans-serif;
-      font-size: 1rem;
-      background: #0e224b;
-      color: white;
-      padding: 1em 0
-    }
-    
-    .color-1[data-color] {
-      color: #ffa200
-    }
-
-    .color-2[data-color] {
-      color: #ffdb00
-    }
-
-    .color-3[data-color] {
-      color: #e6e6e6
-    }
-
-    .color-4[data-color] {
-      color: #7dd3fb
-    }
-
-    .color-5[data-color] {
-      color: #3285fc
-    }
-
-    .color-1[data-bg] {
-      background-color: #ffa200
-    }
-
-    .color-2[data-bg] {
-      background-color: #ffdb00
-    }
-
-    .color-3[data-bg] {
-      background-color: #e6e6e6
-    }
-
-    .color-4[data-bg] {
-      background-color: #7dd3fb
-    }
-    .color-5[data-bg] {
-      background-color: #3285fc
-    }
-
-    .sf-body-wrap {
-      max-width: 500px;
-      margin: 0 auto
-    }
-    
-    .result {
-    }
-
-    .result__question {
-      margin-bottom: 2rem;
-    }
-
-    .result__key {
-      display: flex;
-      margin-bottom: 3.5rem;
-      justify-content: center;
-    }
-
-    .result__key-item {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 50%;
-      margin: 0 .45rem;
-      transition: transform 0.33s;
-      will-change: transform; 
-      transform: scale(0.999);
-      background-size: 67.5%;
-      background-position: center;
-      background-repeat: no-repeat
-    }
-
-    .result__key-item.color-1 {
-      background-image: url(assets/img/mega-happy.svg);
-    }
-
-    .result__key-item.color-2 {
-      background-image: url(assets/img/happy.svg);
-    }
-
-    .result__key-item.color-3 {
-      background-image: url(assets/img/neutral.svg);
-    }
-
-    .result__key-item.color-4 {
-      background-image: url(assets/img/sad.svg);
-    }
-
-    .result__key-item.color-5 {
-      background-image: url(assets/img/mega-sad.svg);
-    }
-
-    .result__key-item[data-animate-in-view] {
-      transform: scale(0)
-    }
-
-    .waffle__chart {
-      max-width: 12rem;
-      width: 85%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(10, 1fr);
-      contain: style
-    }
-
-    .waffle__chart[data-current-color="color-1"]
-    .waffle__chart-seg:not(.color-1),
-    .waffle__chart[data-current-color="color-2"]
-    .waffle__chart-seg:not(.color-2),
-    .waffle__chart[data-current-color="color-3"]
-    .waffle__chart-seg:not(.color-3),
-    .waffle__chart[data-current-color="color-4"]
-    .waffle__chart-seg:not(.color-4),
-    .waffle__chart[data-current-color="color-5"]
-    .waffle__chart-seg:not(.color-5){
-      /* background-color: #aaa; */
-      /* opacity: 0.5; */
-      transform: scale(0.5);
-    }
-
-    .waffle__chart-seg {
-      background: #ffa200;
-      border: 0.15rem solid #0e224b;
-      border-radius: 50%;
-      transition: all 0.33s;
-      will-change: all; 
-      transform: scale(0.999);
-      cursor: pointer;
-      position: relative;
-    }
-
-    .waffle__chart-seg:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
-    
-    .waffle__chart-seg[data-animate-in-view]{
-      transform: scale(0)
-    }
-
-    .waffle__chart-tool {
-      content: attr(data-tooltip);
-      background: #0e224b;
-      border-radius: 12px;
-      min-width: 100px;
-      max-width: 60%;
-      padding: 0.5rem 0.75rem 0.7rem 0.5rem;
-      position: absolute;
-      font-size: 14px;
-      line-height: 1;
-      text-align: center;
-      opacity: 1;
-      white-space: pre;
-      transform: translate(-50%, calc(-100% - 12px));
-      opacity: 0;
-      transition: opacity 0.25s, top 0.25s, left 0.25s;
-      pointer-events: none;
-      border: 1px solid white;
-      filter: drop-shadow(3px 3px 4px rgba(0,0,0,0.35));
-      z-index: 99
-    }
-
-    .waffle__chart-tool:after {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: inherit;
-      bottom: -6px;
-      left: calc(50% - 5px);
-      transform: rotate(-45deg);
-      border-bottom: 1px solid white;
-      border-left: 1px solid white;
-      box-sizing: border-box
-
-    }
-
-    .waffle__chart-tool strong {
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 0.1em;
-      display: block;
-      color: inherit
-    }
-
-    .waffle__chart-tool span {
-      color: white
-    }
-
-    .result__tabs {
-      list-style: none;
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 2rem;
-    }
-
-    .result__tabs-link {
-      font-size: 1.25rem;
-      color: white;
-      text-decoration: none;
-      display: inline-block;
-      padding: 0.1em 1px;
-      position: relative;
-    }
-
-    .waffle__chart-label {
-      font-size: 1rem;
-      padding-top: 1em;
-    }
-
-    .result__tabs-link:hover {
-      text-decoration: none!important
-    }
-
-    .result__tabs-link:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 2px;
-      background: currentColor;
-      width: 0;
-      transition: width 0.33s cubic-bezier(.75,-0.5,0,1.75);
-    }
-
-    .result__tabs-link[aria-selected]:after{
-      width: 100%;
-    }
-
-    .results__tab-box {
-      margin-bottom: 4rem;
-      contain: style
-    }
-
-    .results__tab-box[aria-hidden]{
-      display: none;
-    }
-
-     .waffle__chart-row {
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap
-    }
-
-    .waffle__chart-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media all and (max-width: 1010px){
-      .waffle__chart-row--col4 .waffle__chart-col {
-        width: 50%;
-        flex: auto;
-        margin-bottom: 2rem
-      }
-    }
-
-    @media all and (max-width: 360px){
-
-      .waffle__chart {
-        max-width: 14rem;
-      }
-
-      .waffle__chart-row--col2 .waffle__chart-col,
-      .waffle__chart-row--col4 .waffle__chart-col {
-        width: 100%;
-        flex: auto;
-        margin-bottom: 2rem;
-      }
-    }
-
-
-
-    </style>
 </head>
 <body>
     <div class="result site-wrap site-wrap-padding" id="q1">
-       
+
+        <div class="waffle__chart-tool color-1" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
+
         <p class="result__question sf-body-wrap"><strong>1.</strong> In general, would you be more likely to describe the British public as <strong class="color-1" data-color>united</strong> or <strong class="color-5" data-color>divided</strong>?</p>
    
 
@@ -353,7 +41,7 @@
       </div>
 
     <div class="results__tab-box" aria-labelledby="q1-a1" id="q1-a1">
-    
+      
       <div class="waffle__chart-row">
         <div class="waffle__chart-col">
         <div class="waffle__chart">
@@ -458,8 +146,6 @@
             <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
             <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
 
-            <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
-            
           </div>
           <p class="waffle__chart-label">All</p>
           </div>
@@ -472,220 +158,18 @@
 
         <div class="waffle__chart-row waffle__chart-row--col2">
           <div class="waffle__chart-col">
-              <div class="waffle__chart">
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 495ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 490ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 485ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 480ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 475ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 470ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 465ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 460ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 455ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 450ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 445ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 440ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 435ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 430ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 425ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 420ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 415ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 410ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 405ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 400ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 395ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 390ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 385ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 380ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 375ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 370ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 365ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 360ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 355ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 350ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 345ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 340ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 335ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 330ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 325ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 320ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 315ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 310ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 305ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 300ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 295ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 290ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 285ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 280ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 275ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 270ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 265ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 260ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 255ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 250ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 245ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 240ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 235ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 230ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 225ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 220ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 215ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 210ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 205ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 200ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 195ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 190ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 185ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 180ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 175ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 170ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 165ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 160ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 155ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 150ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 145ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 140ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 135ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 130ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 125ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 120ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 115ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 110ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 105ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 100ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 95ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 90ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 85ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 80ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 75ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 70ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 65ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 60ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 55ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 50ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 45ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 40ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 35ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 30ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 25ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 20ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 15ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 10ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
-      
-                  <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
-                  
-                </div>
+            <div class="waffle__chart" data-json="{&quot;1&quot;:{&quot;label&quot;:&quot;Tolerant&quot;,&quot;value&quot;:&quot;26&quot;},&quot;2&quot;:{&quot;label&quot;:&quot;Fairly tolerant&quot;,&quot;value&quot;:&quot;28&quot;},&quot;3&quot;:{&quot;label&quot;:&quot;Neither&quot;,&quot;value&quot;:&quot;22&quot;},&quot;4&quot;:{&quot;label&quot;:&quot;Fairly intolerant&quot;,&quot;value&quot;:&quot;15&quot;},&quot;5&quot;:{&quot;label&quot;:&quot;Intolerant&quot;,&quot;value&quot;:&quot;9&quot;}}">
+                
+
+            </div>
+             
               <p class="waffle__chart-label">Male</p>
            </div>
 
            <div class="waffle__chart-col">
-              <div class="waffle__chart">
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 495ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 490ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 485ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 480ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 475ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 470ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 465ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 460ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 455ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 450ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 445ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 440ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 435ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 430ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 425ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-1" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 420ms;" data-tooltip="16%|tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 415ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 410ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 405ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 400ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 395ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 390ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-2" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 385ms;" data-tooltip="7%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 380ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 375ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 370ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 365ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 360ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 355ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 350ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 345ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 340ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 335ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 330ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 325ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 320ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 315ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 310ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 305ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 300ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 295ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 290ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 285ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 280ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 275ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 270ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-3" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 265ms;" data-tooltip="24%|fairly tolerant"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 260ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 255ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 250ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 245ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 240ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 235ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 230ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 225ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 220ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 215ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 210ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 205ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 200ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 195ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 190ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 185ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 180ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 175ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-4" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 170ms;" data-tooltip="19%|neither"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 165ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 160ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 155ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 150ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 145ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 140ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 135ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 130ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 125ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 120ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 115ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 110ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 105ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 100ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 95ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 90ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 85ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 80ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 75ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 70ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 65ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 60ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 55ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 50ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 45ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 40ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 35ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 30ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 25ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 20ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 15ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 10ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
-                  <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
-      
-                  <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
-                  
-                </div>
+              <div class="waffle__chart" data-json="{&quot;1&quot;:{&quot;label&quot;:&quot;Tolerant&quot;,&quot;value&quot;:&quot;16&quot;},&quot;2&quot;:{&quot;label&quot;:&quot;Fairly tolerant&quot;,&quot;value&quot;:&quot;38&quot;},&quot;3&quot;:{&quot;label&quot;:&quot;Neither&quot;,&quot;value&quot;:&quot;22&quot;},&quot;4&quot;:{&quot;label&quot;:&quot;Fairly intolerant&quot;,&quot;value&quot;:&quot;15&quot;},&quot;5&quot;:{&quot;label&quot;:&quot;Intolerant&quot;,&quot;value&quot;:&quot;9&quot;}}">
+                 
+              </div>
                 <p class="waffle__chart-label">Female</p>
              </div>
         </div>
@@ -799,7 +283,7 @@
                   <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
                   <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
       
-                  <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
+                  <div class="waffle__chart-tool color-1" data-color="" style="opacity: 0; visibility: hidden;"><strong data-role="tooltip-first-line">16%</strong><span data-role="tooltip-second-line">Tolerant</span></div>
                   
                 </div>
               <p class="waffle__chart-label">England</p>
@@ -908,7 +392,7 @@
                   <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
                   <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
       
-                  <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
+                  <div class="waffle__chart-tool color-1" data-color="" style="opacity: 0; visibility: hidden;"><strong data-role="tooltip-first-line">16%</strong><span data-role="tooltip-second-line">Tolerant</span></div>
                   
                 </div>
                 <p class="waffle__chart-label">Scotland</p>
@@ -1016,7 +500,7 @@
                     <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
                     <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
         
-                    <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
+                    <div class="waffle__chart-tool color-1" data-color="" style="opacity: 0; visibility: hidden;"><strong data-role="tooltip-first-line">16%</strong><span data-role="tooltip-second-line">Tolerant</span></div>
                     
                   </div>
                   <p class="waffle__chart-label">Wales</p>
@@ -1125,7 +609,7 @@
                       <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 5ms;" data-tooltip="34%|intolerant"></div>
                       <div class="waffle__chart-seg color-5" data-bg data-trigger="100" data-animate-in-view style="transition-delay: 0ms;" data-tooltip="34%|intolerant"></div>
           
-                      <div class="waffle__chart-tool" data-color><strong data-role="tooltip-first-line"></strong><span data-role="tooltip-second-line"></span></div>
+                      <div class="waffle__chart-tool color-1" data-color="" style="opacity: 0; visibility: hidden;"><strong data-role="tooltip-first-line">16%</strong><span data-role="tooltip-second-line">Tolerant</span></div>
                       
                     </div>
                     <p class="waffle__chart-label">N. Ireland</p>
@@ -1140,11 +624,13 @@
 
   </div>
   <script src="assets/js/trigger.js"></script>
+  <script src="assets/js/create-chart.js"></script>
   <script>
     var waffle = document.querySelectorAll('.waffle__chart');
+    var tooltip = document.querySelector('.waffle__chart-tool');
+
     waffle.forEach(function(item){
 
-      var tooltip = item.querySelector('.waffle__chart-tool');
       var x;
       var y;
       var offset;
@@ -1213,11 +699,23 @@
             tab.setAttribute('aria-hidden', true);
           });
 
-          document.querySelector('[id="'+(tabid)+'"]').removeAttribute('aria-hidden')
+          document.querySelector('[id="'+(tabid)+'"]').removeAttribute('aria-hidden');
+          checkCharts();
+
 
         })
       })
-    })
+    });
+
+    function checkCharts(){
+      waffle.forEach(function(item){
+        var json = item.getAttribute('data-json');
+        if(json && item.offsetWidth){
+          item.insertAdjacentHTML('afterbegin', createChart(JSON.parse(json)));
+          item.removeAttribute('data-json');
+        }
+      })
+    }
   </script>
 </body>
 </html>

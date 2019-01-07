@@ -1,0 +1,39 @@
+.color-1[data-color] {
+  color: #ffa200
+}
+
+.color-2[data-color] {
+  color: #ffdb00
+}
+
+.color-3[data-color] {
+  color: #e6e6e6
+}
+
+.color-4[data-color] {
+  color: #7dd3fb
+}
+
+.color-5[data-color] {
+  color: #3285fc
+}
+
+.color-1[data-bg] {
+  background-color: #ffa200
+}
+
+.color-2[data-bg] {
+  background-color: #ffdb00
+}
+
+.color-3[data-bg] {
+  background-color: #e6e6e6
+}
+
+.color-4[data-bg] {
+  background-color: #7dd3fb
+}
+
+.color-5[data-bg] {
+  background-color: #3285fc
+}

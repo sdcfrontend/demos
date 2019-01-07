@@ -1,0 +1,32 @@
+@font-face{font-family:Sky Text;src:url(assets/fonts/sky-regular.woff) format("woff")}
+@font-face{font-family:Sky Text;src:url(assets/fonts/sky-medium.woff) format("woff");font-weight:700}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html {
+  font-size: calc(12px + 1vw);
+  line-height: 1.3
+}
+
+@media all and (min-width: 1000px){
+  html {
+    font-size: 22px;
+  }
+}
+
+body {
+  font-family: "Sky Text", sans-serif;
+  font-size: 1rem;
+  background: #0e224b;
+  color: white;
+  padding: 1em 0
+}
+
+.sf-body-wrap {
+  max-width: 500px;
+  margin: 0 auto
+}
