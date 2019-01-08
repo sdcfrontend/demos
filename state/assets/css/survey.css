@@ -1,17 +1,18 @@
-.result {
+.survey {
+  margin-bottom: 4rem;
 }
 
-.result__question {
-  margin-bottom: 2rem;
+.survey__question {
+  margin-bottom: 1.5rem;
 }
 
-.result__key {
+.survey__key {
   display: flex;
   margin-bottom: 3.5rem;
   justify-content: center;
 }
 
-.result__key-item {
+.survey__key-item {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -24,40 +25,42 @@
   background-repeat: no-repeat
 }
 
-.result__key-item.color-1 {
+.survey__key-item[data-selected]{
+  outline: 3px solid red;
+}
+
+.survey__key-item.color-1 {
   background-image: url(../img/mega-happy.svg);
 }
 
-.result__key-item.color-2 {
+.survey__key-item.color-2 {
   background-image: url(../img/happy.svg);
 }
 
-.result__key-item.color-3 {
+.survey__key-item.color-3 {
   background-image: url(../img/neutral.svg);
 }
 
-.result__key-item.color-4 {
+.survey__key-item.color-4 {
   background-image: url(../img/sad.svg);
 }
 
-.result__key-item.color-5 {
+.survey__key-item.color-5 {
   background-image: url(../img/mega-sad.svg);
 }
 
-.result__key-item[data-animate-in-view] {
+.survey__key-item[data-animate-in-view] {
   transform: scale(0)
 }
 
-
-
-.result__tabs {
+.survey__tabs {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 2rem;
 }
 
-.result__tabs-link {
+.survey__tabs-link {
   font-size: 1.25rem;
   color: white;
   text-decoration: none;
@@ -66,11 +69,11 @@
   position: relative;
 }
 
-.result__tabs-link:hover {
+.survey__tabs-link:hover {
   text-decoration: none!important
 }
 
-.result__tabs-link:after {
+.survey__tabs-link:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -82,15 +85,24 @@
   transition: width 0.33s cubic-bezier(.75,-0.5,0,1.75);
 }
 
-.result__tabs-link[aria-selected]:after{
+.survey__tabs-link[aria-selected]:after{
   width: 100%;
 }
 
-.results__tab-box {
+.survey__tab-box {
   margin-bottom: 4rem;
   contain: style
 }
 
-.results__tab-box[aria-hidden]{
+.survey__tab-box[aria-hidden]{
   display: none;
+}
+
+.survey[data-state="unanswered"]{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.survey[data-state="answered"]{
+  pointer-events: none;
 }
