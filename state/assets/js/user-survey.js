@@ -49,19 +49,21 @@ function userSurvey(){
         };
   
         var id = question.id;
-  
-        question.querySelectorAll('a[data-role="survey-answer"]').forEach(function(item){
+        
+        var answers = question.querySelectorAll('a[data-role="survey-answer"]');
+
+        answers.forEach(function(item){
   
           item.addEventListener('click', function(event){
-  
-            if(data[id] && data[id].answered){
-              return;
-            }
   
             event.preventDefault();
             answer.value = item.id;
             answer.answered = true;
             data[id] = answer;
+
+            answers.forEach(function(item){
+              item.removeAttribute('data-selected');
+            });
             item.setAttribute('data-selected', true);
             question.setAttribute('data-state', 'answered');
   
@@ -77,7 +79,7 @@ function userSurvey(){
 
   function nextQuestion(){
 
-    var candidate = document.querySelector('[data-state="answered"] ~ [data-state="unanswered"]');
+    var candidate = document.querySelector('[data-state="answered"] + [data-state="unanswered"]');
     if(candidate){
       // move to next question
       setTimeout(function(){

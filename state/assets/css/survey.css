@@ -104,5 +104,5 @@
 }
 
 .survey[data-state="answered"]{
-  pointer-events: none;
+  /* pointer-events: none; */
 }
