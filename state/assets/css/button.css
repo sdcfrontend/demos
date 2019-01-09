@@ -1,0 +1,22 @@
+.son-button {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.5em 1em;
+  background: #1b6add;
+  color: white;
+}
+
+.son-button:hover {
+  text-decoration: none;
+  background:#2371e6
+}
+
+.son-button[disabled]{
+  pointer-events: none;
+  opacity: 0.5
+}
+
+.son-button__wrap {
+  text-align: center;
+}

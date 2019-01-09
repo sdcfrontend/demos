@@ -3,6 +3,7 @@ function userSurvey(){
   var surveykey = 'sn-state-of-nation-user';
   var data = window.localStorage.getItem(surveykey);
   var questions = document.querySelectorAll('[data-role="survey"]');
+  var resultbutton = document.querySelector('[data-role="survey-results"]');
 
   if(!data){
     data = '{}';
@@ -28,7 +29,11 @@ function userSurvey(){
           selected = el.querySelector('#' + row.value);
           if(selected){
             selected.setAttribute('data-selected', true);
-          } 
+          }
+
+          el.querySelectorAll('button').forEach(function(item){
+            item.removeAttribute('disabled');
+          })
         }
       }
 
@@ -41,7 +46,6 @@ function userSurvey(){
   
     questions.forEach(function(question){
   
-      if(question.getAttribute('data-state') !== 'answered'){
   
         var answer = {
           answered: false,
@@ -50,12 +54,11 @@ function userSurvey(){
   
         var id = question.id;
         
-        var answers = question.querySelectorAll('a[data-role="survey-answer"]');
+        var answers = question.querySelectorAll('button[data-role="survey-answer"]');
 
         answers.forEach(function(item){
   
           item.addEventListener('click', function(event){
-  
             event.preventDefault();
             answer.value = item.id;
             answer.answered = true;
@@ -73,8 +76,22 @@ function userSurvey(){
   
           })
         })
+      
+    });
+  }
+
+  function checkAnswers(){
+    var answered = true;
+    questions.forEach(function(item){
+      if(item.getAttribute('data-state')!=='answered'){
+        answered = false;
       }
     });
+
+    if(answered){
+      resultbutton.href = resultbutton.getAttribute('data-href');
+      resultbutton.removeAttribute('disabled');
+    }
   }
 
   function nextQuestion(){
@@ -85,9 +102,16 @@ function userSurvey(){
       setTimeout(function(){
         window.scrollTo(0, (candidate.getBoundingClientRect().top + window.pageYOffset));
         candidate.removeAttribute('data-state');
+        candidate.querySelectorAll('button').forEach(function(item){
+          item.removeAttribute('disabled');
+        })
       }, 500)
     }
+
+    checkAnswers();
+
   }
+
  
   
 }
