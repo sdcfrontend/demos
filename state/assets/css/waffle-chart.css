@@ -125,6 +125,7 @@
 .waffle__chart-label {
   font-size: 1rem;
   padding-top: 1em;
+  font-weight: 200
 }
 
 .waffle__chart-row {
@@ -136,8 +137,15 @@
 .waffle__chart-col {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
+}
+
+.waffle__chart-summary {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 @media all and (max-width: 1010px){
