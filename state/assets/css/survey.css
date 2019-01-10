@@ -19,13 +19,31 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  margin: 0 .45rem;
+  margin: 0 .55rem;
   transition: transform 0.33s, opacity 0.33s;
   will-change: transform, opacity; 
   transform: scale(0.999);
   background-size: 67.5%;
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: inherit
+}
+
+.survey__key-item-label {
+  position: absolute;
+  color: white;
+  font-size: calc(0.6rem + 1px);
+  top: 100%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.3em;
+  transform: translate(-50%, 6px);
+  width: 130%;
+  text-align: center;
+  line-height: 1.1;
 }
 
 .survey__key-item.color-1 {
