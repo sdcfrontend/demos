@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  max-width: 996px;
+  padding: 0 3vw;
+  margin: 0 auto;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Sky Text', sans-serif;
+  background: #eee; 
+}   
+        
+strong, h4 {
+  font-weight: 500
+}
+
+.sdc-racecard {
+  font-size: 16px;
+  background: white;
+  position: relative;
+  padding: 0 calc(12px + 1vmin)
+}
+
+.sdc-racecard abbr {
+  text-decoration: none;
+}
+
+a {
+  color: #0a1388;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+.sdc-racecard__head {
+  padding-bottom: calc(12px + 2vmin);
+  border-bottom: 1px solid #ccc;
+}
+
+.sdc-racecard__race-course {
+  font-size: calc(2em + 1vmin);
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3em
+}
+
+.sdc-racecard__race-time {
+  font-size: 0.76em
+}
+
+.sdc-racecard__race-name {
+  font-weight: 400;
+  font-size: 1.4em;
+  line-height: 1.2;
+  margin-bottom: calc(12px + 2vmin);
+}
+
+.sdc-racecard__race-details {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__race-details-item {
+  padding: 0.1em 0.75em 0.2em 0; 
+}
+
+.sdc-racecard__item {
+  line-height: 1.2;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: calc(12px + 2vmin) 0
+}
+
+.sdc-racecard__item:last-child {
+  border: 0
+}
+
+.sdc-racecard__item-col {
+  bordeR: 1px solid red
+}
+
+.sdc-racecard__item-col--3 {
+  flex: 1;
+  padding: 0 1em 0 calc(12px + 1vmin)
+}
+
+.sdc-racecard__horse {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75em;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.sdc-racecard__horse-name {
+  font-size: 1.25em;
+  line-height: 1.2
+}
+
+.sdc-racecard__horse > *:not(:last-child){
+  margin-right: 0.5em;
+}
+
+.sdc-racecard__horse-details {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+}
+
+.sdc-racecard__horse-details-item {
+  margin-right: 0.75em;
+  margin-bottom: 0.5em;
+  white-space: nowrap
+}
+
+.sdc-racecard__people {
+  list-style: none;
+  padding: 0
+}
+
+.sdc-racecard__people__item {
+  display: inline-block;
+  padding: 0.12em 0
+}
+
+.sdc-racecard__number {
+  display: flex;
+  margin-bottom: 0.75em;
+  line-height: 1;
+  align-items: center;
+  justify-content: center
+}
+
+.sdc-racecard__number-horse {
+  font-size: 1.25em;
+  margin-right: 0.2em;
+  font-weight: bold;
+}
+
+.sdc-racecard__silk {
+  width: calc(24px + 4vw);
+  max-width: 58px;
+}
+
+.sdc-racecard__betting[href] {
+  color: crimson;
+  font-size: 1.25em;
+  text-decoration: none
+}
+
+.sdc-racecard__people {
+  line-height: 1.2
+}
+
+.sdc-racecard__item-info {
+  background: hotpink;
+  height: 200px;
+  display: none;
+}
+
+.sdc-racecard__finish {
+  display: flex;
+  flex-direction: column
+}
+
+@media all and (max-width: 480px){
+  .sdc-racecard {
+    font-size: 14px;
+  }
+
+}
+
+        </style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <div class="sdc-racecard">
+      <div class="sdc-racecard__items">
+        <div class="sdc-racecard__item">
+          <div class="sdc-racecard__item-col sdc-racecard__item-col--1">
+            <div class="sdc-racecard__finish">
+            <span class="sdc-racecard__item-pos" aria-label="Finishing position">1st</span>
+            <span class="sdc-racecard__item-distance" aria-label="Distance">1l</span>
+          </div>
+          </div>
+          <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+              <div class="sdc-racecard__number">
+                <span aria-label="Horse number" class="sdc-racecard__number-horse">1</span>
+                  <span aria-label="Stall number" class="sdc-racecard__number-stall">(2)</span>
+                </div>
+                <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+          </div>
+          <div class="sdc-racecard__item-col sdc-racecard__item-col--3">
+            <div class="sdc-racecard__horse">
+              <h4 class="sdc-racecard__horse-name">Asking for Answers (IRE)</h4>
+            </div>
+            <ul class="sdc-racecard__horse-details">
+                <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                <li class="sdc-racecard__horse-details-item"><strong><abbr title="Weight">W</abbr>:</strong> 10-3</li>
+                <li class="sdc-racecard__horse-details-item"><strong><abbr title="Age">A</abbr>:</strong> 4</li>
+                <li class="sdc-racecard__horse-details-item"><strong><abbr title="Original rating">OR</abbr>:</strong> 55</li>
+                <li class="sdc-racecard__horse-details-item"><strong><abbr title="Trainer">Trainer</abbr>:</strong> Grace Harris</li>
+                <li class="sdc-racecard__horse-details-item"><strong><abbr title="Jockey">Jockey</abbr>:</strong> Oisin Murphy</li>
+              </ul>
+
+          </div>
+          <div class="sdc-racecard__item-col sdc-racecard__item-col--4">
+              <a href="" class="sdc-racecard__betting">100/1</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

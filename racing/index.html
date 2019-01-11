@@ -27,7 +27,7 @@ strong, h4 {
 .sdc-racecard {
   font-size: 16px;
   background: white;
-  padding: calc(12px + 3vmin);
+  padding: calc(11px + 2.5vmin);
   position: relative;
 }
 
@@ -37,6 +37,7 @@ strong, h4 {
 
 a {
   color: #0a1388;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -82,7 +83,6 @@ a:hover {
 .sdc-racecard__item {
   line-height: 1;
   display: flex;
-  align-items: center;
   border-bottom: 1px solid #ccc;
   padding: calc(12px + 2vmin) 0
 }
@@ -91,31 +91,33 @@ a:hover {
   border: 0
 }
 
-.sdc-racecard__item-col {
+.sdc-racecard__item-col--1 {
+  padding-right: calc(12px + 1vmin);
+
 }
 
 .sdc-racecard__item-col--2 {
-  flex: 1;
-  padding: 0 1em 0 calc(12px + 1vmin)
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 
 .sdc-racecard__item-col--3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1;
+  padding: 0 1em 0 calc(12px + 1vmin)
 }
 
 .sdc-racecard__horse {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
   overflow: hidden;
   white-space: nowrap;
   flex-wrap: wrap;
 }
 
 .sdc-racecard__horse-name {
-  font-size: 1.25em;
+  font-size: 1.35em;
   line-height: 1.2
 }
 
@@ -125,13 +127,20 @@ a:hover {
 
 .sdc-racecard__horse-details {
   list-style: none;
-  margin-bottom: 0.5em;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
 }
 
 .sdc-racecard__horse-details-item {
   margin-right: 0.75em;
-  white-space: nowrap
+  white-space: nowrap;
+  margin-bottom: 0.5em;
+  font-weight: 500;
+}
+
+.sdc-racecard__horse-details-item strong {
+  font-weight: 200;
 }
 
 .sdc-racecard__people {
@@ -145,30 +154,46 @@ a:hover {
 }
 
 .sdc-racecard__number {
-  display: inline-flex;
+  display: flex;
   margin-bottom: 0.75em;
   line-height: 1;
-  align-items: center
+  align-items: center;
+  justify-content: center;
 }
 
 .sdc-racecard__number-horse {
-  font-size: 1.25em;
-  margin-right: 0.2em
+  font-size: 1.35em;
+  margin-right: 0.2em;
+  font-weight: 500;
 }
 
 .sdc-racecard__silk {
   width: calc(24px + 4vw);
-  max-width: 58px;
+  max-width: 50px;
 }
 
 .sdc-racecard__betting[href] {
-  color: crimson;
+  color: #707070;
   font-size: 1.25em;
+  line-height: 1.25em;
   text-decoration: none
 }
 
-.sdc-racecard__people {
-  line-height: 1.2
+.sdc-racecard__finish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.sdc-racecard__item-pos {
+  font-size: 1.35em;
+  margin-bottom: 0.25em;
+}
+
+.sdc-racecard__item-pos sup {
+  font-size: 0.7em;
+  vertical-align: top;
 }
 
 .sdc-racecard__item-info {
@@ -245,7 +270,8 @@ a:hover {
 }
 
 .table-link {
-  color: #0a1388
+  color: #0a1388;
+  color: inherit;
 }
 
 </style>
@@ -254,7 +280,7 @@ a:hover {
 
         <div class="sdc-racecard">
   
-            <div class="sdc-racecard__head">
+            <!-- <div class="sdc-racecard__head">
               <h2 class="sdc-racecard__race-course">Carlisle <span class="sdc-racecard__race-time">2:20</span></h2>
               <h3 class="sdc-racecard__race-name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
                 </h3>
@@ -268,31 +294,38 @@ a:hover {
                   <li class="sdc-racecard__race-details-item"><strong>Going:</strong> Good to Soft (Good in places) 
                   <li class="sdc-racecard__race-details-item"><strong>Surface:</strong> Turf
                 </ul>
-            </div>
+            </div> -->
 
             <div class="sdc-racecard__body">
               <div class="sdc-racecard__item">
-                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--1">
+                      <div class="sdc-racecard__finish">
+                      <span class="sdc-racecard__item-pos" aria-label="Finishing position">1<sup>st</sup></span>
+                      <span class="sdc-racecard__item-distance" aria-label="Distance">1l</span>
+                    </div>
+                    </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2" aria-hidden="true">
                   
                   <div class="sdc-racecard__number">
                     <span aria-label="horse number" class="sdc-racecard__number-horse">1</span>
                     <span aria-label="stall number" class="sdc-racecard__number-stall">(2)</span>
                   </div>
-                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                  <img src="https://www.attheraces.com/images/silks/20190111/20190111hun130006.png" alt="" class="sdc-racecard__silk">
                 </div>
-                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3">
                   <div class="sdc-racecard__horse">
                     <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
                     <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
                   </div>
                   <ul class="sdc-racecard__horse-details">
-                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
-                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
-                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
-                  </ul>
-                  <p class="sdc-racecard__people">
-                    <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
-                  </p>
+                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Weight">W</abbr>:</strong> 10-3</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Age">A</abbr>:</strong> 4</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Original rating">OR</abbr>:</strong> 55</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Trainer">Trainer</abbr>:</strong> Grace Harris</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Jockey">Jockey</abbr>:</strong> Oisin Murphy</li>
+                    </ul>
+                  
                 </div>
                 <div class="sdc-racecard__item-col">
                   <a href="" class="sdc-racecard__betting">100/1</a>
@@ -300,27 +333,35 @@ a:hover {
                 
               </div>
               <div class="sdc-racecard__item">
-                <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--1">
+                      <div class="sdc-racecard__finish">
+                          <span class="sdc-racecard__item-pos" aria-label="Finishing position">2<sup>nd</sup></span>
+
+                      <span class="sdc-racecard__item-distance" aria-label="Distance">1l</span>
+                    </div>
+                    </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2" aria-hidden="true">
                   
                   <div class="sdc-racecard__number">
-                    <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
-                    <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">1</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(2)</span>
                   </div>
-                  <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
+                  <img src="https://www.attheraces.com/images/silks/20190111/20190111hun130006.png" alt="" class="sdc-racecard__silk">
                 </div>
-                <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3">
                   <div class="sdc-racecard__horse">
                     <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
                     <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
                   </div>
                   <ul class="sdc-racecard__horse-details">
-                    <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
-                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
-                    <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
-                  </ul>
-                  <p class="sdc-racecard__people">
-                      <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
-                  </p>
+                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Weight">W</abbr>:</strong> 10-3</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Age">A</abbr>:</strong> 4</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Original rating">OR</abbr>:</strong> 55</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Trainer">Trainer</abbr>:</strong> Grace Harris</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Jockey">Jockey</abbr>:</strong> Oisin Murphy</li>
+                    </ul>
+                  
                 </div>
                 <div class="sdc-racecard__item-col">
                   <a href="" class="sdc-racecard__betting">100/1</a>
@@ -328,32 +369,39 @@ a:hover {
                 
               </div>
               <div class="sdc-racecard__item">
-                  <div class="sdc-racecard__item-col sdc-racecard__item-col--3" aria-hidden="true">
-                    
-                    <div class="sdc-racecard__number">
-                      <span aria-label="horse number" class="sdc-racecard__number-horse">2</span>
-                      <span aria-label="stall number" class="sdc-racecard__number-stall">(3)</span>
+                  <div class="sdc-racecard__item-col sdc-racecard__item-col--1">
+                      <div class="sdc-racecard__finish">
+                          <span class="sdc-racecard__item-pos" aria-label="Finishing position">3<sup>rd</sup></span>
+                          <span class="sdc-racecard__item-distance" aria-label="Distance">1l</span>
                     </div>
-                    <img src="https://e1.365dm.com/racing/tsilks/1054.png" alt="" class="sdc-racecard__silk">
-                  </div>
-                  <div class="sdc-racecard__item-col sdc-racecard__item-col--2">
-                    <div class="sdc-racecard__horse">
-                      <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
-                      <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
                     </div>
-                    <ul class="sdc-racecard__horse-details">
-                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 6-25908</li>
-                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="weight">W</abbr>:</strong> 10-3</li>
-                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="age">A</abbr>:</strong> 4</li>
-                    </ul>
-                    <p class="sdc-racecard__people">
-                        <a href="#" data-role="overlay-link">AFP Jockeyman</a> / <a href="#" data-role="overlay-link">Mrs RFU Trainerman</a>
-                    </p>
-                  </div>
-                  <div class="sdc-racecard__item-col">
-                    <a href="" class="sdc-racecard__betting">100/1</a>
-                  </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--2" aria-hidden="true">
                   
+                  <div class="sdc-racecard__number">
+                    <span aria-label="horse number" class="sdc-racecard__number-horse">1</span>
+                    <span aria-label="stall number" class="sdc-racecard__number-stall">(2)</span>
+                  </div>
+                  <img src="https://www.attheraces.com/images/silks/20190111/20190111hun130006.png" alt="" class="sdc-racecard__silk">
+                </div>
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--3">
+                  <div class="sdc-racecard__horse">
+                    <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+                    <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail" aria-label="course and distance form">CCDBF</span>
+                  </div>
+                  <ul class="sdc-racecard__horse-details">
+                      <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Weight">W</abbr>:</strong> 10-3</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Age">A</abbr>:</strong> 4</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Original rating">OR</abbr>:</strong> 55</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Trainer">Trainer</abbr>:</strong> Grace Harris</li>
+                      <li class="sdc-racecard__horse-details-item"><strong><abbr title="Jockey">Jockey</abbr>:</strong> Oisin Murphy</li>
+                    </ul>
+                  
+                </div>
+                <div class="sdc-racecard__item-col">
+                  <a href="" class="sdc-racecard__betting">100/1</a>
+                </div>
+                
               </div>
             </div>
 
