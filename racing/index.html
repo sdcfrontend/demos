@@ -63,12 +63,11 @@
       text-decoration: underline
     }
 
-    .sdc-racecard__head {
-      padding-bottom: calc(12px + 2vmin);
-      border-bottom: 1px solid #ccc;
+    .sdc-racecard-header {
+      border: 1px solid red;
     }
 
-    .sdc-racecard__race-course {
+    .sdc-racecard-header__course {
       font-size: calc(2em + 1vmin);
       font-weight: 400;
       display: flex;
@@ -77,24 +76,24 @@
       margin-bottom: 0.3em
     }
 
-    .sdc-racecard__race-time {
+    .sdc-racecard-header__time {
       font-size: 0.76em
     }
 
-    .sdc-racecard__race-name {
+    .sdc-racecard-header__name {
       font-weight: 400;
       font-size: 1.4em;
       line-height: 1.2;
       margin-bottom: calc(12px + 2vmin);
     }
 
-    .sdc-racecard__race-details {
+    .sdc-racecard-header__details {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
     }
 
-    .sdc-racecard__race-details-item {
+    .sdc-racecard-header__details-item {
       padding: 0.1em 0.75em 0.2em 0;
     }
 
@@ -316,24 +315,24 @@
 </head>
 
 <body>
-
+    <div class="sdc-racecard-header">
+        <h2 class="sdc-racecard-header__course">14:20 Carlisle</h2>
+        <h3 class="sdc-racecard-header__name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
+          </h3>
+          <ul class="sdc-racecard-header__details">
+            <li class="sdc-racecard-header__details-item"><strong>Winner:</strong> £3,234 
+            <li class="sdc-racecard-header__details-item"><strong>2nd:</strong> £962 
+            <li class="sdc-racecard-header__details-item"><strong>3rd:</strong> £481 
+            <li class="sdc-racecard-header__details-item"><strong>4th:</strong> £240
+            <li class="sdc-racecard-header__details-item">£5,000 added 
+            <li class="sdc-racecard-header__details-item"><strong>Distance:</strong> 5f 213y 
+            <li class="sdc-racecard-header__details-item"><strong>Going:</strong> Good to Soft (Good in places) 
+            <li class="sdc-racecard-header__details-item"><strong>Surface:</strong> Turf
+          </ul>
+      </div>
   <div class="sdc-racecard">
 
-    <!-- <div class="sdc-racecard__head">
-              <h2 class="sdc-racecard__race-course">Carlisle <span class="sdc-racecard__race-time">2:20</span></h2>
-              <h3 class="sdc-racecard__race-name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
-                </h3>
-                <ul class="sdc-racecard__race-details">
-                  <li class="sdc-racecard__race-details-item"><strong>Winner:</strong> £3,234 
-                  <li class="sdc-racecard__race-details-item"><strong>2nd:</strong> £962 
-                  <li class="sdc-racecard__race-details-item"><strong>3rd:</strong> £481 
-                  <li class="sdc-racecard__race-details-item"><strong>4th:</strong> £240
-                  <li class="sdc-racecard__race-details-item">£5,000 added 
-                  <li class="sdc-racecard__race-details-item"><strong>Distance:</strong> 5f 213y 
-                  <li class="sdc-racecard__race-details-item"><strong>Going:</strong> Good to Soft (Good in places) 
-                  <li class="sdc-racecard__race-details-item"><strong>Surface:</strong> Turf
-                </ul>
-            </div> -->
+  
 
     <div class="sdc-racecard__body">
       <div class="sdc-racecard__item">
@@ -356,10 +355,9 @@
             <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
             <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail"
               aria-label="course and distance form">
-              <span class="sdc-racecard__horse-history">C</span>
-              <span class="sdc-racecard__horse-history">CD</span>
-              <span class="sdc-racecard__horse-history">B</span>
-              <span class="sdc-racecard__horse-history">F</span>
+              <span class="sdc-racecard__horse-history" title="Course winner">C</span>
+              <span class="sdc-racecard__horse-history" title="Course distance winner">CD</span>
+              <span class="sdc-racecard__horse-history" title="Beaten favourite">BF</span>
             </span>
           </div>
           <ul class="sdc-racecard__horse-details">
