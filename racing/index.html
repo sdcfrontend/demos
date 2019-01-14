@@ -134,11 +134,11 @@
       overflow: hidden;
       white-space: nowrap;
       flex-wrap: wrap;
-      margin-bottom: 0.6em;
+      margin-bottom: 0.65em;
     }
 
     .sdc-racecard__horse>* {
-      margin-bottom: 0.15em;
+      margin-bottom: 0.1em;
     }
 
     .sdc-racecard__horse-name {
@@ -166,6 +166,18 @@
 
     .sdc-racecard__horse-details-item strong {
       font-weight: 200;
+    }
+
+    .sdc-racecard__horse-history {
+      display: inline-block;
+      background: #006270;
+      color: white;
+      padding: 2px 3px;
+      line-height: 0.9;
+      border-radius: 2px;
+      font-size: 12px;
+      position: relative;
+      top: -1px
     }
 
     .sdc-racecard__people {
@@ -343,7 +355,12 @@
           <div class="sdc-racecard__horse">
             <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
             <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail"
-              aria-label="course and distance form">CCDBF</span>
+              aria-label="course and distance form">
+              <span class="sdc-racecard__horse-history">C</span>
+              <span class="sdc-racecard__horse-history">CD</span>
+              <span class="sdc-racecard__horse-history">B</span>
+              <span class="sdc-racecard__horse-history">F</span>
+            </span>
           </div>
           <ul class="sdc-racecard__horse-details">
             <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
