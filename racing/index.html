@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://news.sky.com/css/min/site-index-pages-0b6ea546629f0c115753e911223cb329.css">
   <style>
     * {
       padding: 0;
@@ -36,7 +37,6 @@
 
     body {
 
-      max-width: 976px;
       margin: 20px auto;
       background: #eee;
     }
@@ -68,17 +68,19 @@
     }
 
     .sdc-racecard-header {
-      background: green;
+      background-image: linear-gradient(to bottom, #005763, #014a57);
       color: white
     }
 
-    .sdc-racecard-header__body {
-      padding: calc(6px + 1vmin)
+
+    .sdc-racecard-header__body[class] {
+      padding: calc(16px + 3vmin);
+      background: rgba(255,255,255,0.05)
     }
 
     .sdc-racecard-header__course {
       font-size: calc(1.5em + 1vmin);
-      font-weight: 400;
+      font-weight: 500;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -117,28 +119,6 @@
       display: flex;
       border-bottom: 1px solid #ccc;
       padding: calc(12px + 2vmin) 0
-    }
-
-    .sdc-racecard-header,
-    .sdc-racecard {
-      padding: 1.8em
-    }
-
-    @media all and (max-width: 600px) {
-
-      .sdc-racecard-header,
-      .sdc-racecard {
-        padding: 1.8em
-      }
-    }
-
-    @media all and (max-width: 480px) {
-
-      .sdc-racecard-header,
-      .sdc-racecard {
-        padding: 1em 16px
-      }
-
     }
 
     .sdc-racecard__item:last-child {
@@ -357,7 +337,8 @@
 
 <body>
   <div class="sdc-racecard-header">
-    <div class="sdc-racecard-header__body">
+    <div class="sdc-racecard-header__inner site-wrap site-wrap-padding site-wrap--mobile-edge">
+    <div class="sdc-racecard-header__body glints-box">
       <h2 class="sdc-racecard-header__course">14:20 Carlisle</h2>
       <h3 class="sdc-racecard-header__name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
       </h3>
@@ -373,13 +354,13 @@
       </ul>
     </div>
   </div>
+  </div>
 
   <br>
   <div class="sdc-racecard">
 
-
-
-    <div class="sdc-racecard__body">
+<div class="sdc-racecard__inner site-wrap site-wrap-padding site-wrap--mobile-edge">
+    <div class="sdc-racecard__body glints-box glints-box-padding">
       <div class="sdc-racecard__item">
         <div class="sdc-racecard__item-col sdc-racecard__item-col--1">
           <div class="sdc-racecard__finish">
@@ -506,6 +487,8 @@
 
       </div>
     </div>
+  </div>
+
 
     <div class="sdc-racecard-overlay" aria-hidden>
       <a href="#" class="sdc-racecard-overlay__close">×</a>
