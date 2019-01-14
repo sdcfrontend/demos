@@ -12,9 +12,25 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: skytext;
+  src: url(sky-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: skytext;
+  src: url(sky-medium.woff) format("woff");
+  font-weight: 500
+}
+
+@font-face {
+  font-family: display;
+  src: url(skysports-display-medium.woff) format("woff");
+}
+
 body {
   font-size: 18px;
-  font-family: 'Sky Text', sans-serif;
+  font-family: 'skytext', sans-serif;
   max-width: 976px;
   margin: 20px auto;
   background: #eee; 
@@ -27,7 +43,7 @@ strong, h4 {
 .sdc-racecard {
   font-size: 16px;
   background: white;
-  padding: calc(11px + 2.5vmin);
+  padding: calc(10px + 2.2vmin);
   position: relative;
 }
 
@@ -91,20 +107,23 @@ a:hover {
   border: 0
 }
 
-.sdc-racecard__item-col--1 {
-  padding-right: calc(12px + 1vmin);
-
+.sdc-racecard__item-col {
+  padding-right: 1em;
 }
 
 .sdc-racecard__item-col--2 {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  min-width: 14%
 }
 
 .sdc-racecard__item-col--3 {
   flex: 1;
-  padding: 0 1em 0 calc(12px + 1vmin)
+}
+
+.sdc-racecard__item-col--4 {
+  padding: 0
 }
 
 .sdc-racecard__horse {
@@ -117,7 +136,7 @@ a:hover {
 }
 
 .sdc-racecard__horse-name {
-  font-size: 1.35em;
+  font-size: 1.25em;
   line-height: 1.2
 }
 
@@ -162,7 +181,7 @@ a:hover {
 }
 
 .sdc-racecard__number-horse {
-  font-size: 1.35em;
+  font-size: 1.25em;
   margin-right: 0.2em;
   font-weight: 500;
 }
@@ -183,11 +202,12 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  width: 1.3em
 }
 
 .sdc-racecard__item-pos {
-  font-size: 1.35em;
+  font-size: 1.25em;
   margin-bottom: 0.25em;
 }
 
@@ -327,7 +347,7 @@ a:hover {
                     </ul>
                   
                 </div>
-                <div class="sdc-racecard__item-col">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--4">
                   <a href="" class="sdc-racecard__betting">100/1</a>
                 </div>
                 
@@ -363,7 +383,7 @@ a:hover {
                     </ul>
                   
                 </div>
-                <div class="sdc-racecard__item-col">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--4">
                   <a href="" class="sdc-racecard__betting">100/1</a>
                 </div>
                 
@@ -398,7 +418,7 @@ a:hover {
                     </ul>
                   
                 </div>
-                <div class="sdc-racecard__item-col">
+                <div class="sdc-racecard__item-col sdc-racecard__item-col--4">
                   <a href="" class="sdc-racecard__betting">100/1</a>
                 </div>
                 
