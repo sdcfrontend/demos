@@ -64,11 +64,12 @@
     }
 
     .sdc-racecard-header {
-      border: 1px solid red;
+      background: green;
+      color: white
     }
 
     .sdc-racecard-header__course {
-      font-size: calc(2em + 1vmin);
+      font-size: calc(1.5em + 1vmin);
       font-weight: 400;
       display: flex;
       justify-content: space-between;
@@ -82,7 +83,7 @@
 
     .sdc-racecard-header__name {
       font-weight: 400;
-      font-size: 1.4em;
+      font-size: 1.3em;
       line-height: 1.2;
       margin-bottom: calc(12px + 2vmin);
     }
@@ -102,6 +103,28 @@
       display: flex;
       border-bottom: 1px solid #ccc;
       padding: calc(12px + 2vmin) 0
+    }
+
+    .sdc-racecard__header-body,
+    .sdc-racecard {
+      padding: 1.8em
+    }
+
+    @media all and (max-width: 600px) {
+
+      .sdc-racecard__header-body,
+      .sdc-racecard {
+        padding: 1.8em
+      }
+    }
+
+    @media all and (max-width: 480px) {
+
+      .sdc-racecard__header-body,
+      .sdc-racecard {
+        padding: 1em 16px
+      }
+
     }
 
     .sdc-racecard__item:last-child {
@@ -315,24 +338,26 @@
 </head>
 
 <body>
-    <div class="sdc-racecard-header">
-        <h2 class="sdc-racecard-header__course">14:20 Carlisle</h2>
-        <h3 class="sdc-racecard-header__name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
-          </h3>
-          <ul class="sdc-racecard-header__details">
-            <li class="sdc-racecard-header__details-item"><strong>Winner:</strong> £3,234 
-            <li class="sdc-racecard-header__details-item"><strong>2nd:</strong> £962 
-            <li class="sdc-racecard-header__details-item"><strong>3rd:</strong> £481 
-            <li class="sdc-racecard-header__details-item"><strong>4th:</strong> £240
-            <li class="sdc-racecard-header__details-item">£5,000 added 
-            <li class="sdc-racecard-header__details-item"><strong>Distance:</strong> 5f 213y 
-            <li class="sdc-racecard-header__details-item"><strong>Going:</strong> Good to Soft (Good in places) 
-            <li class="sdc-racecard-header__details-item"><strong>Surface:</strong> Turf
-          </ul>
-      </div>
+  <div class="sdc-racecard-header">
+    <div class="sdc-racecard__header-body">
+      <h2 class="sdc-racecard-header__course">14:20 Carlisle</h2>
+      <h3 class="sdc-racecard-header__name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
+      </h3>
+      <ul class="sdc-racecard-header__details">
+        <li class="sdc-racecard-header__details-item"><strong>Winner:</strong> £3,234
+        <li class="sdc-racecard-header__details-item"><strong>2nd:</strong> £962
+        <li class="sdc-racecard-header__details-item"><strong>3rd:</strong> £481
+        <li class="sdc-racecard-header__details-item"><strong>4th:</strong> £240
+        <li class="sdc-racecard-header__details-item">£5,000 added
+        <li class="sdc-racecard-header__details-item"><strong>Distance:</strong> 5f 213y
+        <li class="sdc-racecard-header__details-item"><strong>Going:</strong> Good to Soft (Good in places)
+        <li class="sdc-racecard-header__details-item"><strong>Surface:</strong> Turf
+      </ul>
+    </div>
+  </div>
   <div class="sdc-racecard">
 
-  
+
 
     <div class="sdc-racecard__body">
       <div class="sdc-racecard__item">
