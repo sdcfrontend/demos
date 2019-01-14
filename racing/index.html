@@ -13,6 +13,11 @@
       box-sizing: border-box;
     }
 
+    html {
+      font-size: 18px;
+      font-family: 'skytext', sans-serif;
+    }
+
     @font-face {
       font-family: skytext;
       src: url(sky-regular.woff) format("woff");
@@ -30,8 +35,7 @@
     }
 
     body {
-      font-size: 18px;
-      font-family: 'skytext', sans-serif;
+
       max-width: 976px;
       margin: 20px auto;
       background: #eee;
@@ -45,7 +49,6 @@
     .sdc-racecard {
       font-size: 16px;
       background: white;
-      padding: calc(10px + 2.2vmin);
       position: relative;
       overflow: hidden;
     }
@@ -67,6 +70,10 @@
     .sdc-racecard-header {
       background: green;
       color: white
+    }
+
+    .sdc-racecard-header__body {
+      padding: calc(6px + 1vmin)
     }
 
     .sdc-racecard-header__course {
@@ -93,10 +100,16 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
+      font-size: calc(14px + 0.5vmin)
     }
 
     .sdc-racecard-header__details-item {
       padding: 0.1em 0.75em 0.2em 0;
+      font-weight: 500
+    }
+
+    .sdc-racecard-header__details-item strong {
+      font-weight: 200;
     }
 
     .sdc-racecard__item {
@@ -106,14 +119,14 @@
       padding: calc(12px + 2vmin) 0
     }
 
-    .sdc-racecard__header-body,
+    .sdc-racecard-header,
     .sdc-racecard {
       padding: 1.8em
     }
 
     @media all and (max-width: 600px) {
 
-      .sdc-racecard__header-body,
+      .sdc-racecard-header,
       .sdc-racecard {
         padding: 1.8em
       }
@@ -121,7 +134,7 @@
 
     @media all and (max-width: 480px) {
 
-      .sdc-racecard__header-body,
+      .sdc-racecard-header,
       .sdc-racecard {
         padding: 1em 16px
       }
@@ -134,6 +147,10 @@
 
     .sdc-racecard__item-col {
       padding-right: 1em;
+    }
+
+    .sdc-racecard__item-col--1 {
+      text-align: center
     }
 
     .sdc-racecard__item-col--2 {
@@ -234,8 +251,8 @@
 
     .sdc-racecard__betting[href] {
       color: #707070;
-      font-size: 1.29em;
-      line-height: 1.2;
+      font-size: 1.2em;
+      line-height: 1.3;
       text-decoration: none
     }
 
@@ -340,7 +357,7 @@
 
 <body>
   <div class="sdc-racecard-header">
-    <div class="sdc-racecard__header-body">
+    <div class="sdc-racecard-header__body">
       <h2 class="sdc-racecard-header__course">14:20 Carlisle</h2>
       <h3 class="sdc-racecard-header__name">NGK Spark Plugs EBF Stallions Maiden Stakes (Class 6)
       </h3>
@@ -356,6 +373,8 @@
       </ul>
     </div>
   </div>
+
+  <br>
   <div class="sdc-racecard">
 
 
@@ -378,7 +397,7 @@
         </div>
         <div class="sdc-racecard__item-col sdc-racecard__item-col--3">
           <div class="sdc-racecard__horse">
-            <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
+            <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">Numbersixvalverde (IRE)</a></h4>
             <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail"
               aria-label="course and distance form">
               <span class="sdc-racecard__horse-history" title="Course winner">C</span>
@@ -423,7 +442,10 @@
           <div class="sdc-racecard__horse">
             <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
             <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail"
-              aria-label="course and distance form">CCDBF</span>
+              aria-label="course and distance form">
+              <span class="sdc-racecard__horse-history" title="Course winner">C</span>
+              <span class="sdc-racecard__horse-history" title="Course distance winner">CD</span>
+              <span class="sdc-racecard__horse-history" title="Beaten favourite">BF</span></span>
           </div>
           <ul class="sdc-racecard__horse-details">
             <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
@@ -461,7 +483,10 @@
           <div class="sdc-racecard__horse">
             <h4 class="sdc-racecard__horse-name"><a href="#" data-role="overlay-link">This is 18 letters (IRE)</a></h4>
             <span class="sdc-racecard__horse-name-detail" aria-label="days since last race">5</span> <span class="sdc-racecard__horse-name-detail"
-              aria-label="course and distance form">CCDBF</span>
+              aria-label="course and distance form">
+              <span class="sdc-racecard__horse-history" title="Course winner">C</span>
+              <span class="sdc-racecard__horse-history" title="Course distance winner">CD</span>
+              <span class="sdc-racecard__horse-history" title="Beaten favourite">BF</span></span>
           </div>
           <ul class="sdc-racecard__horse-details">
             <li class="sdc-racecard__horse-details-item"><strong>Form:</strong> 12345</li>
