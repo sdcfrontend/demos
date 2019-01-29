@@ -1,5 +1,5 @@
 .survey {
-  margin-bottom: 4rem;
+  padding: 2rem 0
 }
 
 .survey__question {
@@ -10,10 +10,10 @@
 
 .survey__question-summary {
   background: white;
-  padding: 1.5rem 0 2rem;
-  margin-bottom: 1.5rem;
+  padding: 2rem 0;
   color: #222;
-  text-align: center;
+  text-align: left;
+  line-height: 1.45;
   box-shadow: inset 0 3px 5px rgba(0,0,0,0.2)
 }
 
@@ -21,6 +21,15 @@
   font-size: 1.6rem;
   font-weight: 200;
   margin-bottom: 0.4em;
+  text-transform: uppercase
+}
+
+.survey__question-summary h4:not(:first-child) {
+  padding-top: 1em;
+}
+
+.survey__question-summary p:not(:last-child) {
+  margin-bottom: 1.6em
 }
 
 .survey__key {

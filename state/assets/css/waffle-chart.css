@@ -51,6 +51,83 @@
   transform: translateY(-99.9%) scale(0.999)
 }
 
+@supports (display: grid){
+
+  .waffle__chart--row[class] {
+    max-width: 100%;
+    width: 100%;
+    transform: none;
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .waffle__chart--row[class] 
+  .waffle__chart-seg {
+    width: auto;
+    border-width: 0.2vw;
+    grid-row: 1;
+  }
+
+  .waffle__chart--row[class] 
+  .waffle__chart-seg:nth-child(4n+2){
+    grid-row: 2;
+  }
+
+  .waffle__chart--row[class] 
+  .waffle__chart-seg:nth-child(4n+3){
+    grid-row: 3;
+  }
+
+  .waffle__chart--row[class] 
+  .waffle__chart-seg:nth-child(4n+4){
+    grid-row: 4;
+  }
+
+  .waffle__chart--row[data-current-color="color-1"]
+  .waffle__chart-seg:not(.color-1) {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-2"]
+  .waffle__chart-seg:not(.color-2) {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-2"]
+  .waffle__chart-seg.color-1 {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-3"]
+  .waffle__chart-seg:not(.color-3) {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-3"]
+  .waffle__chart-seg.color-1,
+  .waffle__chart--row[data-current-color="color-3"]
+  .waffle__chart-seg.color-2 {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-4"]
+  .waffle__chart-seg:not(.color-4) {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-4"]
+  .waffle__chart-seg.color-5 {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row[data-current-color="color-5"]
+  .waffle__chart-seg:not(.color-5) {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+}
+
 .waffle__chart-seg {
   background: #ffa200;
   border: 0.15rem solid #0e224b;
@@ -133,6 +210,15 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.waffle__chart-row:last-child {
+  margin-bottom: 0
+}
+
+.waffle__chart-row--cols {
+  flex-direction: column
 }
 
 .waffle__chart-col {
@@ -147,6 +233,18 @@
   height: 1px; width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.waffle__chart-sub-header {
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.waffle__chart-source {
+  font-size: 0.75rem;
+  color: inherit;
+  max-width: 550px;
+  padding-top: 1em
 }
 
 @media all and (max-width: 1010px){

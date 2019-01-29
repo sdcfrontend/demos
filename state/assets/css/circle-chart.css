@@ -1,0 +1,65 @@
+.sf-sons-circle-chart {
+  text-align: center;
+  padding: 1em 0;
+  margin-bottom: 1.4em
+}
+
+.sf-sons-circle-chart__body {
+  display: flex;
+  width: 100%;
+}
+
+.sf-sons-circle-chart__cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-sons-circle-chart__cell-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sf-sons-circle-chart__stat {
+  background: blue;
+  position: relative;
+  border-radius: 50%;
+  will-change: transform;
+  transition: transform 0.33s;
+  transform: scale(0.99)
+}
+
+.sf-sons-circle-chart__stat[data-animate-in-view] {
+  transform: scale(0.1)
+}
+
+.sf-sons-circle-chart__stat:after {
+  content: "";
+  displaY: block;
+  padding-bottom: 100%;
+}
+
+.sf-sons-circle-chart__header {
+  margin-bottom: 0.75em;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.1
+}
+
+.sf-sons-circle-chart__stat-label {
+  position: absolute;
+  color: black;
+  font-size: 2.4rem;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  transform: translate(-50%,-50%)
+}
+
+.sf-sons-circle-chart__stat-footer {
+  font-weight: 500;
+  padding-top: 0.4em;
+}

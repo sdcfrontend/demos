@@ -23,10 +23,16 @@ body {
   font-size: 1rem;
   background: #0e224b;
   color: white;
-  padding: 1em 0
 }
 
-.sf-body-wrap {
+.sf-body-wrap[class] {
   max-width: 660px;
-  margin: 0 auto
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sf-body-wrap--narrow[class] {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
 }

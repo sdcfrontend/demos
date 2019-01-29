@@ -1,0 +1,29 @@
+.sf-sons-header {
+  max-height: 100vh;
+  background: #112656;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.sf-sons-header h1 {
+  display: none;
+}
+
+.sf-sons-header__body {
+  width: 100%;
+  max-width: 880px;
+  position: relative;
+}
+
+.sf-sons-header__body:after {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%
+}
+
+.sf-sons-header__media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
