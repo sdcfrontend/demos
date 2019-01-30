@@ -1,0 +1,30 @@
+.sf-sons-big-number {
+  padding: 1em 0;
+  margin-bottom: 1.4em
+}
+
+.sf-sons-big-number__body {
+  display:flex;
+  align-items: center;
+}
+
+.sf-sons-big-number__body > div:first-child {
+  flex: 1;
+  padding-right: 5%;
+}
+
+.sf-sons-big-number h5 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 0.2em
+}
+
+.sf-sons-big-number p {
+  font-size: 0.9rem;
+}
+
+.sf-sons-big-number
+.sf-sons-circle-chart__stat {
+  width: 8rem;
+  max-width: 31vw;
+}

@@ -65,7 +65,6 @@
   .waffle__chart--row[class] 
   .waffle__chart-seg {
     width: auto;
-    border-width: 0.2vw;
     grid-row: 1;
   }
 
@@ -130,7 +129,7 @@
 
 .waffle__chart-seg {
   background: #ffa200;
-  border: 0.15rem solid #0e224b;
+  border: 0.4vw solid #0e224b;
   border-radius: 50%;
   transition: transform 0.33s;
   will-change: transform; 
@@ -138,6 +137,12 @@
   cursor: pointer;
   position: relative;
   width: 10%;
+}
+
+@media all and (min-width: 900px){
+  .waffle__chart-seg {
+    border-width: 2px
+  }
 }
 
 .waffle__chart-seg:after {
@@ -266,5 +271,73 @@
     width: 100%;
     flex: auto;
     margin-bottom: 2rem;
+  }
+}
+
+
+.waffle__chart-bar-layout1 {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 5%;
+  flex-wrap: wrap;
+}
+
+.waffle__chart-bar-layout1 > div {
+  margin-bottom: 2rem;
+}
+
+.waffle__chart-bar-label {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+}
+
+.waffle__chart-bar-label strong {
+  font-weight: 500;
+  line-height: 1
+}
+
+.waffle__chart-bar {
+  transform: none;
+  max-width: 100%;
+  width: 100%;
+}
+
+@supports (display: grid){
+  .waffle__chart-bar {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+  }
+
+  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+1) {
+    width: auto;
+    grid-row: 1
+  }
+
+  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+2) {
+    width: auto;
+    grid-row: 2
+  }
+
+  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+3) {
+    width: auto;
+    grid-row: 3
+  }
+}
+
+.waffle__chart-bar > .waffle__chart-seg {
+  border-width: 0.2vw;
+}
+
+@supports not (display: grid){
+  .waffle__chart-bar > .waffle__chart-seg {
+    width: calc(100% / 16);
+  }
+
+  .waffle__chart-bar-layout1 > div {
+    width: 50%;
+    padding-right: 1rem;
   }
 }
