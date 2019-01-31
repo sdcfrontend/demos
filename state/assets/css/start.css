@@ -36,3 +36,18 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+.sky-news-header {
+  height: 151px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+}
+
+@media all and (max-width: 580px){
+  .sky-news-header {
+    height: 56px;
+  }
+}
