@@ -1,7 +1,12 @@
 .sf-sons-circle-chart {
   text-align: center;
-  padding: 1em 0;
-  margin-bottom: 1.4em
+  padding: 2em 0;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg,#fff 0,#ccc 10%,#ccc 90%,#fff),linear-gradient(90deg,#fff 0,#ccc 10%,#ccc 90%,#fff);
+  background-size: 100% 1px,100% 1px;
+  background-position: 50% 0,50% 100%;
+  background-repeat: no-repeat;
+  contain: content;
 }
 
 .sf-sons-circle-chart__body {
