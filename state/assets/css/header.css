@@ -1,9 +1,17 @@
 .sf-sons-header {
-  max-height: 100vh;
+  max-height: calc(100vh - 151px);
   background: #112656;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sf-sons-header:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 
 .sf-sons-header h1 {
@@ -12,8 +20,10 @@
 
 .sf-sons-header__body {
   width: 100%;
-  max-width: 880px;
-  position: relative;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 .sf-sons-header__body:after {
@@ -26,4 +36,5 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  object-fit: cover;
 }
