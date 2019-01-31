@@ -274,7 +274,6 @@
   }
 }
 
-
 .waffle__chart-bar-layout1 {
   display: flex;
   display: grid;
@@ -283,7 +282,8 @@
   flex-wrap: wrap;
 }
 
-.waffle__chart-bar-layout1 > div {
+.waffle__chart-bar-layout1 > div,
+.waffle__chart-bar-layout2 > div {
   margin-bottom: 2rem;
 }
 
@@ -291,17 +291,32 @@
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
+  line-height: 1
 }
 
 .waffle__chart-bar-label strong {
   font-weight: 500;
-  line-height: 1
 }
 
 .waffle__chart-bar {
   transform: none;
   max-width: 100%;
   width: 100%;
+}
+
+.waffle__chart-bg-bar {
+  background: url(../img/dot-bg-5.png);
+  background-size: 15px auto;
+  height: 30px;
+  transition: width 0.33s
+}
+
+.waffle__chart-bg-bar[data-animate-in-view] {
+  width: 1px!important;
+}
+
+.waffle__chart[aria-hidden="true"] {
+  pointer-events: none;
 }
 
 @supports (display: grid){
@@ -324,6 +339,11 @@
   .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+3) {
     width: auto;
     grid-row: 3
+  }
+
+  .waffle__chart-bar--2-rows {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(50, 1fr);
   }
 }
 
