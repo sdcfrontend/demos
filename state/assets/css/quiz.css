@@ -55,6 +55,7 @@
 .sf-sons-quiz
 .sf-sons-big-number[class] {
   margin-bottom: 0;
+  text-align: left
 }
 
 .sf-sons-quiz__result {
