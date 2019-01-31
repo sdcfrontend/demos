@@ -21,16 +21,24 @@
 .survey__question-summary h4 {
   font-size: 1.6rem;
   font-weight: 200;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.75em;
   text-transform: uppercase
 }
 
-.survey__question-summary h4:not(:first-child) {
+.survey__question-summary h4:not(:first-of-type) {
   padding-top: 1em;
+}
+
+.survey__question-summary a {
+  color: #3157a1
 }
 
 .survey__question-summary p:not(:last-child) {
   margin-bottom: 1.6em
+}
+
+.survey__question-summary-byline {
+  font-size: 0.9em;
 }
 
 .survey__key {

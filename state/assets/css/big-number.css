@@ -8,9 +8,20 @@
   align-items: center;
 }
 
+.sf-sons-big-number--swap
+.sf-sons-big-number__body {
+  flex-direction: row-reverse
+}
+
 .sf-sons-big-number__body > div:first-child {
   flex: 1;
   padding-right: 5%;
+}
+
+.sf-sons-big-number--swap
+.sf-sons-big-number__body > div:first-child {
+  padding-left: 5%;
+  padding-right: 0;
 }
 
 .sf-sons-big-number h5 {
@@ -27,4 +38,5 @@
 .sf-sons-circle-chart__stat {
   width: 8rem;
   max-width: 31vw;
+  font-weight: bold;
 }

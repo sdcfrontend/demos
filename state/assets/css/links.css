@@ -1,0 +1,29 @@
+.sf-sons-big-link {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.sf-sons-big-link__item {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.3rem;
+  flex-direction: column;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase
+}
+
+.sf-sons-big-link__item span {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  text-transform: none;
+  padding-top: 0.2em;
+}

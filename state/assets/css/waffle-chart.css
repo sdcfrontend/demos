@@ -306,7 +306,7 @@
 
 .waffle__chart-bg-bar {
   background: url(../img/dot-bg-5.png);
-  background-size: 15px auto;
+  background-size: auto 50%;
   height: 30px;
   transition: width 0.33s
 }
