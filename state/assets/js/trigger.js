@@ -8,17 +8,17 @@
   }, 100);
 
   // also check for items added after page load
-  var deferredobserver = new MutationObserver(function(list){
-    for(var mutation of list) {
-      if(mutation.target.className.match(/waffle__chart/)){
-        mutation.target.querySelectorAll('.waffle__chart-seg').forEach(function(item){
+  var deferredobserver = new MutationObserver(function (list) {
+    for (var mutation of list) {
+      if (mutation.target.className.match(/waffle__chart/)) {
+        mutation.target.querySelectorAll('.waffle__chart-seg').forEach(function (item) {
           observer.observe(item);
         });
       }
     }
   });
 
-  deferredobserver.observe(document.body, {childList:true, subtree:true})
+  deferredobserver.observe(document.body, { childList: true, subtree: true })
 
 
   function scan(entries, observer) {

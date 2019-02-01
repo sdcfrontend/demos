@@ -206,7 +206,7 @@
 
 .waffle__chart-label {
   font-size: 1.2rem;
-  padding-top: 1em;
+  padding-top: 0.9em;
   font-weight: 500
 }
 
@@ -252,12 +252,18 @@
   padding-top: 1em
 }
 
-@media all and (max-width: 1010px){
-  .waffle__chart-row--col4 .waffle__chart-col {
+@media all and (min-width: 361px) and (max-width: 1010px){
+  .waffle__chart-row--col4 .waffle__chart-col,
+  .waffle__chart-row--col3 .waffle__chart-col {
     width: 50%;
     flex: auto;
     margin-bottom: 2rem
   }
+
+  .waffle__chart-row--col4 .waffle__chart-col:nth-last-child(-n+2) {
+    margin-bottom: 0
+  }
+  
 }
 
 @media all and (max-width: 360px){
@@ -267,10 +273,17 @@
   }
 
   .waffle__chart-row--col2 .waffle__chart-col,
+  .waffle__chart-row--col3 .waffle__chart-col,
   .waffle__chart-row--col4 .waffle__chart-col {
     width: 100%;
     flex: auto;
     margin-bottom: 2rem;
+  }
+
+  .waffle__chart-row--col2 .waffle__chart-col:last-child,
+  .waffle__chart-row--col3 .waffle__chart-col:last-child,
+  .waffle__chart-row--col4 .waffle__chart-col {
+    margin-bottom: 0
   }
 }
 

@@ -25,8 +25,7 @@ function checkWaffleCharts(waffles) {
   waffles.forEach(function (item) {
     var json = item.getAttribute('data-json');
     if (json && item.offsetWidth) {
-      item.insertAdjacentHTML('afterbegin', createWaffleChart(JSON.parse(json)));
-      item.removeAttribute('data-json');
+      item.innerHTML = createWaffleChart(JSON.parse(json));
     }
   })
 }
