@@ -3,7 +3,8 @@
   text-align: center;
   color: white;
   padding: 2rem;
-  margin-bottom: 2.5rem
+  margin-bottom: 2.5rem;
+  contain: style;
 }
 
 .sf-sons-quiz__header[class] {
@@ -60,16 +61,24 @@
 }
 
 .sf-sons-quiz__result {
+  transition: filter 0.5s, opacity 0.5s;
+  transition-delay: 0.4s;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-  transition-delay: 0.4s
+  pointer-events: none;
+  will-change: all;
+}
+
+@supports (filter: blur(10px)){
+  .sf-sons-quiz__result {
+    filter: blur(10px) saturate(0);
+    opacity: 0.5;
+  }
 }
 
 .sf-sons-quiz[data-answered]
 .sf-sons-quiz__result {
   opacity: 1;
-  visibility: visible
+  filter: none;
 }
 
 .sf-sons-quiz[data-answered]{
