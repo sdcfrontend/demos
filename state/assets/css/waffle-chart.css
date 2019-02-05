@@ -255,7 +255,8 @@
   padding-bottom: 100%;
 }
 
-.waffle__chart-seg[data-animate-in-view]{
+.waffle__chart[data-animate-in-view]
+.waffle__chart-seg {
   transform: scale(0)
 }
 
@@ -438,6 +439,7 @@
   transform: none;
   max-width: 100%;
   width: 100%;
+  contain: style;
 }
 
 .waffle__chart[aria-hidden="true"] {

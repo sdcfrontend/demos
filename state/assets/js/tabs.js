@@ -17,14 +17,18 @@
 
         var tabid = this.getAttribute('aria-controls');
         var tabidroot = tabid.split('-')[0];
-        document.querySelectorAll('[id^="' + (tabidroot) + '"]').forEach(function (tab) {
-          tab.setAttribute('aria-hidden', true);
-          tab.querySelectorAll('.waffle__chart').forEach(function (item) {
-            item.innerHTML = "";
+
+        var nonmatchingtabs = document.querySelectorAll('[id^="' + (tabidroot) + '"]');
+        nonmatchingtabs.forEach(function (item) {
+          item.setAttribute('aria-hidden', true);
+          item.querySelectorAll('.waffle__chart').forEach(function (waffle) {
+            waffle.innerHTML = "";
           })
         });
 
-        document.querySelector('[id="' + (tabid) + '"]').removeAttribute('aria-hidden');
+        var matchingtab = document.querySelector('[id="' + (tabid) + '"]');
+        matchingtab.removeAttribute('aria-hidden');
+        checkWaffleCharts(matchingtab.querySelectorAll('[data-role="waffle-chart"]'));
 
       })
     })

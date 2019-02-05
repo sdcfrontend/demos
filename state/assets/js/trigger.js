@@ -24,9 +24,9 @@
 
     entries.forEach(function (item) {
       var ratio = 0.25;
-
-      if (item.target.getAttribute('data-trigger').length) {
-        ratio = parseInt(item.target.getAttribute('data-trigger'), 10) / 100;
+      var trigger = item.target.getAttribute('data-trigger');
+      if (trigger && trigger.length) {
+        ratio = parseInt(trigger, 10) / 100;
       }
 
       if (item.isIntersecting || item.intersectionRatio > 0) {

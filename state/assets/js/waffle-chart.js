@@ -1,6 +1,6 @@
-function createWaffleChart(data, reverse) {
+function createWaffleChart(data) {
 
-  var template = '<div class="waffle__chart-seg color-#{color}" data-bg data-trigger="100" style="transition-delay: #{delay}ms;" data-tooltip="#{value}%|#{label}" data-animate-in-view aria-hidden data-waffle-seg="#{seg}"></div>';
+  var template = '<div class="waffle__chart-seg color-#{color}" data-bg style="transition-delay: #{delay}ms;" data-tooltip="#{value}%|#{label}" aria-hidden></div>';
   var html = '';
   var index = 0;
   var summary = [];

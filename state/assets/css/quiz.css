@@ -35,6 +35,10 @@
   transform: scale(0.999)
 }
 
+.sf-sons-quiz__option[data-animate-in-view] {
+  transform: scale(0)
+}
+
 .sf-sons-quiz[data-answered]
 .sf-sons-quiz__option {
   transform: scale(0.8);
