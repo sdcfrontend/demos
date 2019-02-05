@@ -9,11 +9,27 @@
   transform: rotate(-90deg);
 }
 
+
+.waffle--invert {
+  transform: rotate(90deg)
+}
+
+.waffle--reverse {
+  direction: rtl;
+}
+
+/* 1/5 */
 .waffle__chart[data-current-color="color-1"]
 .waffle__chart-seg:not(.color-1) {
   transform: translateY(99.9%) scale(0.999)
 }
 
+.waffle__chart.waffle--reverse[data-current-color="color-5"]
+.waffle__chart-seg:not(.color-5) {
+  transform: translateY(99.9%) scale(0.999)!important
+}
+
+/* 2/4 */
 .waffle__chart[data-current-color="color-2"]
 .waffle__chart-seg:not(.color-2) {
   transform: translateY(99.9%) scale(0.999)
@@ -24,6 +40,17 @@
   transform: translateY(-99.9%) scale(0.999)
 }
 
+.waffle__chart.waffle--reverse[data-current-color="color-4"]
+.waffle__chart-seg:not(.color-4) {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart.waffle--reverse[data-current-color="color-4"]
+.waffle__chart-seg.color-5 {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+/* 3/3 */
 .waffle__chart[data-current-color="color-3"]
 .waffle__chart-seg:not(.color-3) {
   transform: translateY(99.9%) scale(0.999)
@@ -36,6 +63,19 @@
   transform: translateY(-99.9%) scale(0.999)
 }
 
+.waffle__chart.waffle--reverse[data-current-color="color-3"]
+.waffle__chart-seg:not(.color-3) {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+.waffle__chart.waffle--reverse[data-current-color="color-3"]
+.waffle__chart-seg.color-4,
+.waffle__chart.waffle--reverse[data-current-color="color-3"]
+.waffle__chart-seg.color-5 {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+/* 4/2 */
 .waffle__chart[data-current-color="color-4"]
 .waffle__chart-seg:not(.color-4) {
   transform: translateY(-99.9%) scale(0.999)
@@ -46,10 +86,27 @@
   transform: translateY(99.9%) scale(0.999)
 }
 
+.waffle__chart.waffle--reverse[data-current-color="color-2"]
+.waffle__chart-seg:not(.color-2) {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
+.waffle__chart.waffle--reverse[data-current-color="color-2"]
+.waffle__chart-seg.color-1 {
+  transform: translateY(99.9%) scale(0.999)
+}
+
+/* 5/1 */
 .waffle__chart[data-current-color="color-5"]
 .waffle__chart-seg:not(.color-5) {
   transform: translateY(-99.9%) scale(0.999)
 }
+
+.waffle__chart.waffle--reverse[data-current-color="color-1"]
+.waffle__chart-seg:not(.color-1) {
+  transform: translateY(-99.9%) scale(0.999)
+}
+
 
 @supports (display: grid){
 
@@ -83,11 +140,18 @@
     grid-row: 4;
   }
 
+  /* 1/5 */
   .waffle__chart--row[data-current-color="color-1"]
   .waffle__chart-seg:not(.color-1) {
     transform: translateX(99.9%) scale(0.999)
   }
 
+  .waffle__chart--row.waffle--reverse[data-current-color="color-5"]
+  .waffle__chart-seg:not(.color-5) {
+    transform: translateX(99.9%) scale(0.999)!important
+  }
+
+  /* 2/4 */
   .waffle__chart--row[data-current-color="color-2"]
   .waffle__chart-seg:not(.color-2) {
     transform: translateX(99.9%) scale(0.999)
@@ -98,6 +162,17 @@
     transform: translateX(-99.9%) scale(0.999)
   }
 
+  .waffle__chart--row.waffle--reverse[data-current-color="color-4"]
+  .waffle__chart-seg:not(.color-4) {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row.waffle--reverse[data-current-color="color-4"]
+  .waffle__chart-seg.color-5 {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  /* 3/3 */
   .waffle__chart--row[data-current-color="color-3"]
   .waffle__chart-seg:not(.color-3) {
     transform: translateX(99.9%) scale(0.999)
@@ -110,6 +185,19 @@
     transform: translateX(-99.9%) scale(0.999)
   }
 
+  .waffle__chart--row.waffle--reverse[data-current-color="color-3"]
+  .waffle__chart-seg:not(.color-3) {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row.waffle--reverse[data-current-color="color-3"]
+  .waffle__chart-seg.color-4,
+  .waffle__chart--row.waffle--reverse[data-current-color="color-3"]
+  .waffle__chart-seg.color-5 {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  /* 4/2 */
   .waffle__chart--row[data-current-color="color-4"]
   .waffle__chart-seg:not(.color-4) {
     transform: translateX(-99.9%) scale(0.999)
@@ -120,8 +208,24 @@
     transform: translateX(99.9%) scale(0.999)
   }
 
+  .waffle__chart--row.waffle--reverse[data-current-color="color-2"]
+  .waffle__chart-seg:not(.color-2) {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row.waffle--reverse[data-current-color="color-2"]
+  .waffle__chart-seg.color-1 {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
+  /* 5/1 */
   .waffle__chart--row[data-current-color="color-5"]
   .waffle__chart-seg:not(.color-5) {
+    transform: translateX(-99.9%) scale(0.999)
+  }
+
+  .waffle__chart--row.waffle--reverse[data-current-color="color-1"]
+  .waffle__chart-seg:not(.color-1) {
     transform: translateX(-99.9%) scale(0.999)
   }
 
@@ -206,7 +310,7 @@
 
 .waffle__chart-label {
   font-size: 1.2rem;
-  padding-top: 0.9em;
+  padding-top: 0.75em;
   font-weight: 500
 }
 
@@ -215,7 +319,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 800px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .waffle__chart-row:last-child {
@@ -231,6 +335,7 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  margin-bottom: 1.6rem;
 }
 
 .waffle__chart-summary {
@@ -246,27 +351,36 @@
 }
 
 .waffle__chart-source {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: inherit;
   max-width: 550px;
-  padding-top: 1em
+  padding-top: 1em;
+  text-align: left;
+  opacity: 0.9
 }
 
-@media all and (min-width: 361px) and (max-width: 1010px){
+
+
+@media all and (min-width: 1001px){
+  .waffle__chart-row--col3
+  .waffle__chart-col {
+    width: 33.3%;
+    flex: auto;
+  }
+
+}
+
+@media all and (min-width: 400px) and (max-width: 1000px){
   .waffle__chart-row--col4 .waffle__chart-col,
   .waffle__chart-row--col3 .waffle__chart-col {
     width: 50%;
     flex: auto;
-    margin-bottom: 2rem
   }
 
-  .waffle__chart-row--col4 .waffle__chart-col:nth-last-child(-n+2) {
-    margin-bottom: 0
-  }
-  
+
 }
 
-@media all and (max-width: 360px){
+@media all and (max-width: 399px){
 
   .waffle__chart {
     max-width: 14rem;
@@ -277,7 +391,6 @@
   .waffle__chart-row--col4 .waffle__chart-col {
     width: 100%;
     flex: auto;
-    margin-bottom: 2rem;
   }
 
   .waffle__chart-row--col2 .waffle__chart-col:last-child,
@@ -295,6 +408,14 @@
   flex-wrap: wrap;
 }
 
+.waffle__chart-bar-layout1 > h4 {
+  width: 100%;
+  grid-column: 1/3;
+  text-align: left;
+  padding-bottom: 0.5em;;
+  font-weight: 400;
+}
+
 .waffle__chart-bar-layout1 > div,
 .waffle__chart-bar-layout2 > div {
   margin-bottom: 2rem;
@@ -304,28 +425,19 @@
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
-  line-height: 1
+  line-height: 1;
+  font-size: calc(9px + 0.4rem)
 }
 
 .waffle__chart-bar-label strong {
   font-weight: 500;
 }
 
-.waffle__chart-bar {
+.waffle__chart-bar,
+.waffle__chart-bar--3row {
   transform: none;
   max-width: 100%;
   width: 100%;
-}
-
-.waffle__chart-bg-bar {
-  background: url(../img/dot-bg-5.png);
-  background-size: auto 50%;
-  height: 30px;
-  transition: width 0.33s
-}
-
-.waffle__chart-bg-bar[data-animate-in-view] {
-  width: 1px!important;
 }
 
 .waffle__chart[aria-hidden="true"] {
@@ -335,29 +447,41 @@
 @supports (display: grid){
   .waffle__chart-bar {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(30, 1fr);
   }
 
-  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+1) {
+  .waffle__chart-bar--3row {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+  }
+
+  .waffle__chart-bar > .waffle__chart-seg:nth-child(2n+1) {
     width: auto;
     grid-row: 1
   }
 
-  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+2) {
+  .waffle__chart-bar > .waffle__chart-seg:nth-child(2n+2) {
     width: auto;
     grid-row: 2
   }
 
-  .waffle__chart-bar > .waffle__chart-seg:nth-child(3n+3) {
+  .waffle__chart-bar--3row > .waffle__chart-seg:nth-child(3n+1) {
+    width: auto;
+    grid-row: 1
+  }
+
+  .waffle__chart-bar--3row > .waffle__chart-seg:nth-child(3n+2) {
+    width: auto;
+    grid-row: 2
+  }
+
+  .waffle__chart-bar--3row > .waffle__chart-seg:nth-child(3n+3) {
     width: auto;
     grid-row: 3
   }
 
-  .waffle__chart-bar--2-rows {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(50, 1fr);
-  }
 }
 
 .waffle__chart-bar > .waffle__chart-seg {
@@ -366,7 +490,11 @@
 
 @supports not (display: grid){
   .waffle__chart-bar > .waffle__chart-seg {
-    width: calc(100% / 16);
+    width: calc(100% / 30);
+  }
+
+  .waffle__chart-bar--3row > .waffle__chart-seg {
+    width: calc(100% / 21);
   }
 
   .waffle__chart-bar-layout1 > div {

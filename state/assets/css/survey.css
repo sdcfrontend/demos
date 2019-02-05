@@ -105,6 +105,11 @@
   transform: scale(0)
 }
 
+.survey__key--no-icons[class]
+.survey__key-item[class] {
+  background-image: none
+}
+
 .survey__tabs {
   list-style: none;
   display: flex;
@@ -142,7 +147,6 @@
 }
 
 .survey__tab-box {
-  margin-bottom: 2rem;
   contain: style
 }
 

@@ -2,8 +2,6 @@
   background: #0e224b;
   text-align: center;
   color: white;
-  padding: 2rem;
-  margin-bottom: 2.5rem;
   contain: style;
 }
 
@@ -14,7 +12,7 @@
 .sf-sons-quiz__options {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem
+  padding-bottom: 0.5rem
 }
 
 .sf-sons-quiz__options > li {
@@ -25,7 +23,7 @@
   color: black;
   text-decoration: none;
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   width: 3rem;
   height: 3rem;
@@ -33,13 +31,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s, background 0.5s;
   transform: scale(0.999)
 }
 
 .sf-sons-quiz[data-answered]
 .sf-sons-quiz__option {
   transform: scale(0.8);
+  pointer-events: none;
 }
 
 .sf-sons-quiz[data-answered]
@@ -61,26 +60,24 @@
 }
 
 .sf-sons-quiz__result {
-  transition: filter 0.5s, opacity 0.5s;
-  transition-delay: 0.4s;
-  opacity: 0;
-  pointer-events: none;
-  will-change: all;
-}
-
-@supports (filter: blur(10px)){
-  .sf-sons-quiz__result {
-    filter: blur(10px) saturate(0);
-    opacity: 0.5;
-  }
+  display: none
 }
 
 .sf-sons-quiz[data-answered]
 .sf-sons-quiz__result {
-  opacity: 1;
-  filter: none;
+  display: block
 }
 
-.sf-sons-quiz[data-answered]{
-  pointer-events: none;
+.sf-sons-quiz__result-text {
+  margin: 2rem 0 2rem;
+  background: white;
+  color: black;
+}
+
+.sf-sons-quiz__result-text .sf-sons-big-number[class] {
+  padding: 1.5rem 0
+}
+
+.sf-sons-quiz__result-text .sf-sons-circle-chart__stat {
+  width: 6rem;
 }

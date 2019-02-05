@@ -15,7 +15,6 @@
 
         this.setAttribute('aria-selected', true);
 
-
         var tabid = this.getAttribute('aria-controls');
         var tabidroot = tabid.split('-')[0];
         document.querySelectorAll('[id^="' + (tabidroot) + '"]').forEach(function (tab) {

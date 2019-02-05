@@ -20,7 +20,6 @@
 
   deferredobserver.observe(document.body, { childList: true, subtree: true })
 
-
   function scan(entries, observer) {
 
     entries.forEach(function (item) {

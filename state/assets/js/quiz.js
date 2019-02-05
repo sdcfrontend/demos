@@ -19,6 +19,8 @@
           return;
         }
         quiz.setAttribute('data-answered', true);
+        answers[answer].classList.remove('color-3');
+        answers[answer].classList.add(answers[answer].getAttribute('data-color'));
         if (answer !== index) {
           answers[index].setAttribute('data-correct', false);
           headline.textContent = "Incorrect"
@@ -28,6 +30,7 @@
           answers[index].setAttribute('data-correct', true);
 
         }
+        checkWaffleCharts(quiz.querySelectorAll('[data-role="waffle-chart"]'));
         answered = true;
       }
     })

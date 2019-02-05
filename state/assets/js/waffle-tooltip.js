@@ -23,6 +23,7 @@ function createWaffleTooltip(waffles) {
       };
 
       var targetclass = e.target.className.match(/color-./);
+      var seg = e.target.getAttribute('data-waffle-seg');
       var currentclass = tooltip.className.match(/color-./);
       var dims = e.target.getBoundingClientRect();
       var text = e.target.getAttribute('data-tooltip');
@@ -34,6 +35,7 @@ function createWaffleTooltip(waffles) {
       tooltip.style.cssText = "top:" + y + "px;left:" + (x + offset) + "px;opacity: 1";
       tooltip.classList.remove(currentclass ? currentclass[0] : "none");
       tooltip.classList.add(targetclass ? targetclass[0] : "none");
+      item.setAttribute('data-seg', seg);
       item.setAttribute('data-current-color', targetclass);
 
       if (text) {
