@@ -233,14 +233,16 @@
 
 .waffle__chart-seg {
   background: #ffa200;
-  border: 0.4vw solid #0e224b;
+  /* margin: 1px; */
+  border:  1px solid #0e224b;
   border-radius: 50%;
-  transition: transform 0.33s;
+  transition: transform 0.25s;
   will-change: transform; 
   transform: scale(0.999);
   cursor: pointer;
   position: relative;
   width: 10%;
+  /* contain: paint */
 }
 
 @media all and (min-width: 900px){

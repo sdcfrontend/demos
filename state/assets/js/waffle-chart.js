@@ -1,6 +1,6 @@
 function createWaffleChart(data) {
 
-  var template = '<div class="waffle__chart-seg color-#{color}" data-bg style="transition-delay: #{delay}ms;" data-tooltip="#{value}%|#{label}" aria-hidden></div>';
+  var template = '<div class="waffle__chart-seg color-#{color}" data-bg style="transition-delay: #{delay}ms;" data-tooltip="#{value}%|#{label}" aria-hidden data-waffle-seg></div>';
   var html = '';
   var index = 0;
   var summary = [];
@@ -10,7 +10,7 @@ function createWaffleChart(data) {
     var item = data[key];
     for (var i = item.value; --i > -1;) {
       index++;
-      html += template.replace(/#{color}/, key).replace(/#{seg}/, segment).replace(/#{delay}/, (index * 5)).replace(/#{value}/, item.value).replace(/#{label}/, item.label);
+      html += template.replace(/#{color}/, key).replace(/#{delay}/, (index * 5)).replace(/#{value}/, item.value).replace(/#{label}/, item.label);
       var text = item.label + " " + item.value + "%";
       if (summary.indexOf(text) === -1) {
         summary.push(text)
