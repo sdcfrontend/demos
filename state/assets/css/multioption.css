@@ -14,6 +14,8 @@
   flex-direction: column;
   align-items: center;
   margin: 0 0.1rem;
+  transition: 0.33s width;
+  will-change: width;
 }
 
 .sf-sons-multioption__stat {
@@ -48,4 +50,20 @@
   content: "";
   display: block;
   padding-bottom: 100%
+}
+
+.sf-sons-multioption__tabs {
+  flex-wrap: wrap;
+  justify-content: unset;
+  margin-bottom: 1.5rem;
+}
+
+.sf-sons-multioption__tabs
+.survey__tabs-link {
+  font-size: 0.9rem;
+}
+
+.sf-sons-multioption__tabs
+.survey__tabs-item {
+  margin: 0.2em 0.75em;
 }
