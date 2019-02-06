@@ -32,6 +32,13 @@
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  will-change: transform;
+  transition: transform 0.33s;
+  transform: scale(0.999)
+}
+
+.sf-sons-multioption__stat span[data-animate-in-view] {
+  transform: scale(0);
 }
 
 .sf-sons-multioption__stat span:after {
