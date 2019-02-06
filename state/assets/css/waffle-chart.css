@@ -224,6 +224,11 @@
     transform: translateX(-99.9%) scale(0.999)
   }
 
+  .waffle__chart--row[data-current-color="color-5"]
+  .waffle__chart-seg.color-6 {
+    transform: translateX(99.9%) scale(0.999)
+  }
+
   .waffle__chart--row.waffle--reverse[data-current-color="color-1"]
   .waffle__chart-seg:not(.color-1) {
     transform: translateX(-99.9%) scale(0.999)
@@ -232,8 +237,7 @@
 }
 
 .waffle__chart-seg {
-  background: #ccc;
-  border:  1px solid #0e224b;
+  border: 1px solid #0e224b;
   border-radius: 50%;
   transition: transform 0.25s, opacity 0.25s;
   will-change: transform; 
@@ -433,7 +437,7 @@
 }
 
 .waffle__chart-bar-label strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .waffle__chart-bar,

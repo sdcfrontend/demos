@@ -6,6 +6,7 @@
 .sf-sons-multioption__body {
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 
 .sf-sons-multioption__cell {
@@ -19,7 +20,8 @@
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  width: 100%;
 }
 
 .sf-sons-multioption__label {
@@ -34,7 +36,8 @@
   cursor: pointer;
   will-change: transform;
   transition: transform 0.33s;
-  transform: scale(0.999)
+  transform: scale(0.999);
+  width: 100%;
 }
 
 .sf-sons-multioption__stat span[data-animate-in-view] {
