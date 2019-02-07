@@ -265,7 +265,7 @@
   cursor: pointer;
   position: relative;
   width: 10%;
-  contain: paint
+  /* contain: paint */
 }
 
 @media all and (min-width: 800px){
