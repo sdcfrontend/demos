@@ -9,7 +9,7 @@ function createWaffleChart(data, reverse) {
     var item = data[key];
     for (var i = item.value; --i > -1;) {
       index++;
-      html += waffletemplate.replace(/#{color}/, key).replace(/#{delay}/, reverse ? (500 - (index * 5)) : (index * 5)).replace(/#{value}/, item.value).replace(/#{label}/, item.label);
+      html += waffletemplate.replace(/#{color}/, key).replace(/#{delay}/, reverse ? (600 - (index * 6)) : (index * 6)).replace(/#{value}/, item.value).replace(/#{label}/, item.label);
       var text = item.label + " " + item.value + "%";
       if (summary.indexOf(text) === -1) {
         summary.push(text)

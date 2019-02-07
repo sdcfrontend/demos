@@ -149,6 +149,10 @@
   transition: width 0.33s cubic-bezier(.75,-0.5,0,1.75);
 }
 
+.survey__tabs-link[aria-selected] {
+  pointer-events: none;
+}
+
 .survey__tabs-link[aria-selected]:after{
   width: 100%;
 }

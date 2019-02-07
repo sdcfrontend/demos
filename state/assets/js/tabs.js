@@ -24,19 +24,19 @@
 
           if (target.id === tabid) {
             target.removeAttribute('aria-hidden');
-            checkWaffleCharts(target.querySelectorAll('[data-role="waffle-chart"]'));
+            setTimeout(function () {
+              checkWaffleCharts(target.querySelectorAll('[data-role="waffle-chart"]'));
+            }, 25)
           }
 
           else {
             target.setAttribute('aria-hidden', true);
             target.querySelectorAll('.waffle__chart').forEach(function (waffle) {
-              waffle.innerHTML = "";
+              waffle.innerHTML = "<div class='waffle__chart-ghost'></div>";
             })
+
           }
 
-          // item.querySelectorAll('.waffle__chart').forEach(function (waffle) {
-          //   waffle.innerHTML = "";
-          // })
         });
 
 

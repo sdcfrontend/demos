@@ -5,8 +5,17 @@
   display: flex;
   flex-wrap: wrap;
   /* grid-template-columns: repeat(10, 1fr); */
-  contain: style;
+  contain: layout;
   transform: rotate(-90deg);
+}
+
+.waffle__chart-ghost {
+  display: none;
+}
+
+.waffle__chart-ghost:only-child {
+  padding-bottom: 100%;
+  display: block;
 }
 
 
@@ -249,8 +258,9 @@
 .waffle__chart-seg {
   border: 1px solid #0e224b;
   border-radius: 50%;
-  transition: transform 0.25s, opacity 0.25s;
-  will-change: transform; 
+  transition: transform 0.25s;
+  will-change: transform;
+  transition-delay: 0!important; 
   transform: scale(0.999);
   cursor: pointer;
   position: relative;
