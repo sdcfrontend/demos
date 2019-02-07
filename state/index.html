@@ -1687,17 +1687,17 @@
     var scrolling = false;
     var isscrollingtimeout;
 
-    window.addEventListener('scroll', function () {
-      if (scrolling !== true) {
-        document.body.style.pointerEvents = "none";
-      }
-      scrolling = true;
-      window.clearTimeout(isscrollingtimeout);
-      isscrollingtimeout = window.setTimeout(function () {
-        document.body.style.pointerEvents = "all";
-        scrolling = false;
-      }, 100)
-    })
+    // window.addEventListener('scroll', function () {
+    //   if (scrolling !== true) {
+    //     document.body.style.pointerEvents = "none";
+    //   }
+    //   scrolling = true;
+    //   window.clearTimeout(isscrollingtimeout);
+    //   isscrollingtimeout = window.setTimeout(function () {
+    //     document.body.style.pointerEvents = "all";
+    //     scrolling = false;
+    //   }, 100)
+    // })
 
 
   </script>
