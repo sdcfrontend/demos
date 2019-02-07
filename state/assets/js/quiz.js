@@ -30,7 +30,9 @@
           answers[index].setAttribute('data-correct', true);
 
         }
-        checkWaffleCharts(quiz.querySelectorAll('[data-role="waffle-chart"]'));
+        setTimeout(function () {
+          checkWaffleCharts([quiz.querySelector('[data-role="waffle-chart"]')]);
+        }, 33)
         answered = true;
       }
     })

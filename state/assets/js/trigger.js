@@ -10,7 +10,7 @@
       if (!target.rendered) {
         if (target.offsetWidth) {
           dims = target.getBoundingClientRect();
-          if (dims.top > 10 && (window.innerHeight - dims.top > 10)) {
+          if (dims.top > 0 && (window.innerHeight - dims.top > 0)) {
             target.removeAttribute('data-animate-in-view');
             target.rendered = true;
           }
