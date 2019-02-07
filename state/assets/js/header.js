@@ -7,7 +7,6 @@
   ['animationstart', 'MSAnimationStart'].forEach(function (evname) {
     document.addEventListener(evname, function (e) {
       if (e.animationName === 'video-listener') {
-        console.log('video ready');
         videoplay();
       }
     })
@@ -20,10 +19,13 @@
     }
 
     video.oncanplay = canplay;
+    var source = "source";
 
     if (window.matchMedia("(min-width: " + (video.dataset.threshold) + ")").matches) {
-      video.src = video.querySelector('source + source').src;
+      source = "source + source";
     }
+
+    video.src = video.querySelector(source).src;
 
   }
 
