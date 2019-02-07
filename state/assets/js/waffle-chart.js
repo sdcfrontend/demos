@@ -26,7 +26,7 @@ function checkWaffleCharts(waffles) {
     var reverse = item.hasAttribute('data-reverse');
     if (json && item.offsetWidth && !item.created) {
       item.innerHTML = createWaffleChart(JSON.parse(json), reverse);
-      item.created = true;
+      // item.created = true;
     }
   })
 }

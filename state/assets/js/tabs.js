@@ -29,6 +29,9 @@
 
           else {
             target.setAttribute('aria-hidden', true);
+            target.querySelectorAll('.waffle__chart').forEach(function (waffle) {
+              waffle.innerHTML = "";
+            })
           }
 
           // item.querySelectorAll('.waffle__chart').forEach(function (waffle) {
