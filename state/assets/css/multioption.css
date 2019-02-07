@@ -54,7 +54,7 @@
 
 .sf-sons-multioption__tabs {
   flex-wrap: wrap;
-  justify-content: unset;
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
@@ -65,5 +65,5 @@
 
 .sf-sons-multioption__tabs
 .survey__tabs-item {
-  margin: 0.2em 0.75em;
+  margin: 0.2em 0.5em;
 }

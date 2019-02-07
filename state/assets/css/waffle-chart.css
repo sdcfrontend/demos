@@ -204,7 +204,9 @@
   }
 
   .waffle__chart--row[data-current-color="color-4"]
-  .waffle__chart-seg.color-5 {
+  .waffle__chart-seg.color-5,
+  .waffle__chart--row[data-current-color="color-4"]
+  .waffle__chart-seg.color-6 {
     transform: translateX(99.9%) scale(0.999)
   }
 
@@ -316,7 +318,7 @@
 }
 
 .waffle__chart-label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding-top: 0.75em;
   font-weight: 500
 }
