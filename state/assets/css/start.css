@@ -1,5 +1,5 @@
-@font-face{font-family:Sky Text;src:url(assets/fonts/sky-regular.woff) format("woff")}
-@font-face{font-family:Sky Text;src:url(assets/fonts/sky-medium.woff) format("woff");font-weight:700}
+@font-face{font-family:Sky Text;src:url(../fonts/sky-regular.woff) format("woff")}
+@font-face{font-family:Sky Text;src:url(../fonts/sky-medium.woff) format("woff");font-weight:700}
 
 * {
   margin: 0;
@@ -50,4 +50,12 @@ body {
   .sky-news-header {
     height: 56px;
   }
+}
+
+.sf-share {
+  margin-bottom: 2rem;
+}
+
+.sdc-site-share__link[class] {
+  padding: 0.4em!important;
 }

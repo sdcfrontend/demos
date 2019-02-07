@@ -37,8 +37,9 @@
   margin-bottom: 1.6em
 }
 
-.survey__question-summary-byline {
-  font-size: 0.9em;
+.survey__question-summary-byline[class] {
+  font-size: 0.85em;
+  margin-bottom: 1em!important
 }
 
 .survey__key {
