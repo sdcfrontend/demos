@@ -18,6 +18,12 @@
   direction: rtl;
 }
 
+@supports not(display: grid){
+  .waffle__chart--row.waffle--reverse[class] {
+    transform: rotate(90deg);
+  }
+}
+
 /* 1/5 */
 .waffle__chart[data-current-color="color-1"]
 .waffle__chart-seg:not(.color-1) {
@@ -82,7 +88,9 @@
 }
 
 .waffle__chart[data-current-color="color-4"]
-.waffle__chart-seg.color-5 {
+.waffle__chart-seg.color-5,
+.waffle__chart[data-current-color="color-4"]
+.waffle__chart-seg.color-6 {
   transform: translateY(99.9%) scale(0.999)
 }
 

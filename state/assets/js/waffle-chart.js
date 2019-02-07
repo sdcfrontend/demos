@@ -1,7 +1,6 @@
 var waffletemplate = '<div class="waffle__chart-seg color-#{color}" data-bg style="transition-delay: #{delay}ms;" data-tooltip="#{value}%|#{label}" aria-hidden data-waffle-seg></div>';
 
 function createWaffleChart(data, reverse) {
-
   var html = '';
   var index = 0;
   var summary = [];
@@ -25,8 +24,9 @@ function checkWaffleCharts(waffles) {
   waffles.forEach(function (item) {
     var json = item.getAttribute('data-json');
     var reverse = item.hasAttribute('data-reverse');
-    if (json && item.offsetWidth) {
+    if (json && item.offsetWidth && !item.created) {
       item.innerHTML = createWaffleChart(JSON.parse(json), reverse);
+      item.created = true;
     }
   })
 }

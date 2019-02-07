@@ -1,36 +1,51 @@
 (function () {
-  var tabs = document.querySelectorAll('[data-role="tab-items"]');
+  var tabs = document.querySelectorAll('[data-role="tabs"]');
 
-  tabs.forEach(function (tabparent) {
-    var tabs = tabparent.querySelectorAll('[data-role="tab-item"]');
-    tabs.forEach(function (tab) {
+  tabs.forEach(function (tabbox) {
 
-      tab.addEventListener('click', function (event) {
+    var tabitems = tabbox.querySelectorAll('[data-role="tab-item"]');
+    var tabtargets = tabbox.querySelectorAll('[data-role="tab-target"]');
+
+    tabitems.forEach(function (tabitem) {
+
+      tabitem.addEventListener('click', function (event) {
 
         event.preventDefault();
 
-        tabs.forEach(function (tab) {
+        tabitems.forEach(function (tab) {
           tab.removeAttribute('aria-selected');
         });
 
         this.setAttribute('aria-selected', true);
 
         var tabid = this.getAttribute('aria-controls');
-        var tabidroot = tabid.split('-')[0];
 
-        var nonmatchingtabs = document.querySelectorAll('[id^="' + (tabidroot) + '"]');
-        nonmatchingtabs.forEach(function (item) {
-          item.setAttribute('aria-hidden', true);
-          item.querySelectorAll('.waffle__chart').forEach(function (waffle) {
-            waffle.innerHTML = "";
-          })
+        tabtargets.forEach(function (target) {
+
+          if (target.id === tabid) {
+            target.removeAttribute('aria-hidden');
+            checkWaffleCharts(target.querySelectorAll('[data-role="waffle-chart"]'));
+          }
+
+          else {
+            target.setAttribute('aria-hidden', true);
+          }
+
+          // item.querySelectorAll('.waffle__chart').forEach(function (waffle) {
+          //   waffle.innerHTML = "";
+          // })
         });
 
-        var matchingtab = document.querySelector('[id="' + (tabid) + '"]');
-        matchingtab.removeAttribute('aria-hidden');
-        checkWaffleCharts(matchingtab.querySelectorAll('[data-role="waffle-chart"]'));
+
 
       })
-    })
+
+    });
+
+
+
   });
+
+
+
 })()
