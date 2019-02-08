@@ -49,6 +49,13 @@
   left: 50%;
   padding: 0 0 0 22px;
   transform: translate(-7px, 50%);
+  transition: opacity 0.25s;
+  will-change: opacity;
+  opacity: 1
+}
+
+.sf-sons-plot__item[data-animate-in-view]{
+  opacity: 0
 }
 
 .sf-sons-plot__item--flip {
