@@ -56,6 +56,20 @@
   opacity: 0.7
 }
 
+.sf-sons-quiz__show-results {
+  margin: 0 auto;
+  -webkit-appearance: none;
+  appearance: none;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 0.5em 0.8em;
+  background: none;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
 .sf-sons-quiz
 .sf-sons-big-number[class] {
   margin-bottom: 0;

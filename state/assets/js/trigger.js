@@ -1,6 +1,5 @@
 (function () {
   if ('IntersectionObserver' in window) {
-    console.log('io');
 
     var observer = new IntersectionObserver(scan, { rootMargin: '18px', threshold: [0, 0.25, 0.5, 0.75, 1] });
 
@@ -8,12 +7,11 @@
       document.querySelectorAll('[data-trigger]').forEach(function (item) {
         observer.observe(item);
       });
-    }, 33);
+    }, 50);
 
   }
 
   else {
-    console.log('raf');
     var items = document.querySelectorAll('[data-trigger]');
     tick(items);
 

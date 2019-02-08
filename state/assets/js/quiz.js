@@ -10,32 +10,47 @@
 
     var answers = quiz.querySelectorAll('[data-role*="quiz-answer-"]');
     var headline = quiz.querySelector('[data-role="headline"]');
+    var show = quiz.querySelector('[data-role="quiz-show-results"]');
 
     answers.forEach(function (item, index) {
+
       item.onclick = function (event) {
-
         event.preventDefault();
-        if (answered) {
-          return;
-        }
-        quiz.setAttribute('data-answered', true);
-        answers[answer].classList.remove('color-3');
-        answers[answer].classList.add(answers[answer].getAttribute('data-color'));
-        if (answer !== index) {
-          answers[index].setAttribute('data-correct', false);
-          headline.textContent = "Incorrect"
-        }
-
-        else {
-          answers[index].setAttribute('data-correct', true);
-
-        }
-        setTimeout(function () {
-          checkWaffleCharts([quiz.querySelector('[data-role="waffle-chart"]')]);
-        }, 33)
-        answered = true;
+        showall(index);
       }
-    })
+    });
+
+    show.onclick = function () {
+      showall(answer)
+    };
+
+    function showall(index) {
+
+      show.style.display = "none";
+
+      event.preventDefault();
+      if (answered) {
+        return;
+      }
+      quiz.setAttribute('data-answered', true);
+      answers[answer].classList.remove('color-3');
+      answers[answer].classList.add(answers[answer].getAttribute('data-color'));
+      if (answer !== index) {
+        answers[index].setAttribute('data-correct', false);
+        headline.textContent = "Incorrect"
+      }
+
+      else {
+        answers[index].setAttribute('data-correct', true);
+
+      }
+
+      setTimeout(function () {
+        checkWaffleCharts([quiz.querySelector('[data-role="waffle-chart"]')]);
+      }, 33);
+
+      answered = true;
+    }
 
   });
 })();

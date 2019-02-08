@@ -4,9 +4,22 @@
 
 .survey__question {
   margin-bottom: 1.5rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 400
+}
+
+.survey__question+
+.survey__question-explainer {
+  margin-top: -1rem
+}
+
+.survey__question-explainer {
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0.9
 }
 
 .survey__question-summary {

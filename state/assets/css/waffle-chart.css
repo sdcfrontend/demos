@@ -9,15 +9,11 @@
   transform: rotate(-90deg);
 }
 
-.waffle__chart-ghost {
-  display: none;
-}
-
-.waffle__chart-ghost:only-child {
-  padding-bottom: 100%;
+.waffle__chart:empty:after {
+  content: "";
   display: block;
+  padding-bottom: 100%;
 }
-
 
 .waffle--invert {
   transform: rotate(90deg)
@@ -283,7 +279,6 @@
 .waffle__chart[data-animate-in-view] >
 .waffle__chart-seg {
   transform: scale(0.01);
-  opacity: 0
 }
 
 .waffle__chart-tool {
@@ -386,6 +381,11 @@
   opacity: 0.9
 }
 
+.waffle__chart-source strong {
+  display: block;
+  margin-bottom: 0.2em
+}
+
 
 
 @media all and (min-width: 1001px){
@@ -445,7 +445,7 @@
 
 .waffle__chart-bar-layout1 > div,
 .waffle__chart-bar-layout2 > div {
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
 }
 
 .waffle__chart-bar-label {

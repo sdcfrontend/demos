@@ -32,7 +32,7 @@
           else {
             target.setAttribute('aria-hidden', true);
             target.querySelectorAll('.waffle__chart').forEach(function (waffle) {
-              waffle.innerHTML = "<div class='waffle__chart-ghost'></div>";
+              waffle.innerHTML = "";
             })
 
           }
