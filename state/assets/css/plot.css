@@ -1,0 +1,78 @@
+
+.sf-sons-plot {
+ color: white;
+ position: relative;
+ padding: 7% 0;
+ margin-bottom: 1rem;
+}
+
+.sf-sons-plot__scale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  padding: 0 1em;
+}
+
+.sf-sons-plot__items {
+  list-style: none;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  min-height: 60vh;
+  font-size: 0.85rem
+}
+
+.sf-sons-plot__items:after {
+  content: "";
+  display: block;
+  padding-bottom: 50%
+}
+
+.sf-sons-plot:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: white;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 1px);
+}
+
+.sf-sons-plot__item {
+  position: absolute;
+  left: 50%;
+  padding: 0 0 0 22px;
+  transform: translate(-7px, 50%);
+}
+
+.sf-sons-plot__item--flip {
+  direction: rtl;
+  right: 50%;
+  left: auto;
+  padding: 0 22px 0 0;
+  transform: translate(7px, 50%)
+}
+
+.sf-sons-plot__item--flip:before {
+  right: 0;
+  left: auto;
+}
+
+.sf-sons-plot__item:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: block;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%)
+}
