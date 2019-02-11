@@ -27,7 +27,13 @@
         if (target.offsetWidth) {
           dims = target.getBoundingClientRect();
           if (dims.top > 0 && (window.innerHeight - dims.top > 0)) {
-            target.removeAttribute('data-animate-in-view');
+            if (target.classList.contains('waffle__chart')) {
+              checkWaffleCharts([target]);
+            }
+
+            else {
+              target.removeAttribute('data-animate-in-view');
+            }
             target.rendered = true;
           }
         }
@@ -54,8 +60,16 @@
 
         if (item.target.hasAttribute('data-trigger') && item.intersectionRatio >= ratio) {
           if (item.target.hasAttribute('data-animate-in-view')) {
+
             observer.unobserve(item.target);
-            item.target.removeAttribute('data-animate-in-view');
+            if (item.target.classList.contains('waffle__chart')) {
+              checkWaffleCharts([item.target]);
+            }
+
+            else {
+              item.target.removeAttribute('data-animate-in-view');
+            }
+
           }
         }
       }
