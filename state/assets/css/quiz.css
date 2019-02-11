@@ -6,7 +6,13 @@
 }
 
 .sf-sons-quiz__header[class] {
-  margin-bottom: 0.3em
+  margin-bottom: 0.8em;
+  background:white;
+  color: #0e224b;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.25em 0.4em;
+  border-radius: 3px;
 }
 
 .sf-sons-quiz__options {
@@ -68,7 +74,9 @@
   border: 1px solid white;
   cursor: pointer;
   margin-top: 1rem;
+  border-radius: 3px;
 }
+
 
 .sf-sons-quiz
 .sf-sons-big-number[class] {
@@ -88,8 +96,11 @@
 
 .sf-sons-quiz__result-text {
   margin: 2rem 0 2rem;
-  background: white;
-  color: black;
+  background-image: linear-gradient(90deg,#0e224b 0,rgba(204, 204, 204, 0.4) 20%,rgba(204, 204, 204, 0.4) 80%,#0e224b),linear-gradient(90deg,#0e224b 0,rgba(204, 204, 204, 0.4) 20%,rgba(204, 204, 204, 0.4) 80%,#0e224b);
+  background-size: 100% 1px,100% 1px;
+  background-repeat: no-repeat;
+  background-position: 50% 0,50% 100%;
+
 }
 
 .sf-sons-quiz__result-text .sf-sons-big-number[class] {

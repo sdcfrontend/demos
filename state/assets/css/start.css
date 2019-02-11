@@ -59,3 +59,7 @@ body {
 .sdc-site-share__link[class] {
   padding: 0.4em!important;
 }
+
+.no-js [data-animate-in-view][class] {
+  transform: none!important
+}
