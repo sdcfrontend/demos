@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: 'Sky Text';
+        src: url(sky-regular.woff) format('woff');
+        font-weight: normal
+      }
+
+      @font-face {
+        font-family: 'Sky Text';
+        src: url(sky-medium.woff) format('woff');
+        font-weight: bold
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box
+      }
+
+      html {
+        font-size: calc(14px + 1vw);
+        font-family: 'Sky Text', sans-serif;
+        line-height: 1.2
+      }
+
+      @media all and (max-width: 800px) {
+        html {
+          font-size: 22px;
+        }
+      }
+
+      body,
+      html {
+        overflow: none;
+        height: 100vh;
+        overscroll-behavior: none
+      }
+
+      .carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        overscroll-behavior: contain;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+      }
+
+      .carousel-item {
+        vertical-align: top;
+        position: relative;
+        display: inline-flex;
+        scroll-snap-align: start;
+        width: 100vw;
+        height: 100%;
+        background: linear-gradient(to bottom, royalblue 0%, #000022 100%);
+        justify-content: center;
+        padding: 2rem;
+        color: white;
+        white-space: normal;
+        flex-direction: column;
+        overflow: hidden;
+      }
+
+      .carousel-item-media {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        filter: brightness(0.8)
+      }
+
+      .carousel-item>div {
+        padding-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .carousel-item-head {
+        flex: 1;
+      }
+
+      .carousel-item-body {
+        flex: 10;
+        display: flex;
+        align-items: center;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        max-width: 600px;
+      }
+
+      .carousel-item-footer {
+        flex: 1;
+        padding-bottom: 0
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      .carousel-item-headline {
+        font-size: calc(1.5rem + 2vw);
+        font-weight: 500;
+      }
+
+      .carousel-item-text {
+        line-height: 1.4;
+        font-size: calc(0.9em + 1vw)
+      }
+
+      .carousel-item--t2 .carousel-item-body {
+        align-items: flex-end
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="carousel">
+
+      <div class="carousel-item">
+        <div class="carousel-item-head">
+          <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
+        </div>
+
+        <div class="carousel-item-body">
+          <h2 class="carousel-item-headline">Journey to the twilight zone: How Deep Ocean Live made history </h2>
+        </div>
+
+        <div class="carousel-item-footer">
+        </div>
+        <img src="https://transform.nws.ai/fca54db0-2f10-5fda-9e1c-c78c24d5fa16/f_jpg,so_0p/" alt=""
+          class="carousel-item-media">
+
+      </div>
+
+      <div class="carousel-item carousel-item--t2">
+        <div class="carousel-item-head">
+          <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
+        </div>
+
+        <div class="carousel-item-body">
+          <p class="carousel-item-text">Sky News has broadcast from the depths of the Indian Ocean</p>
+        </div>
+
+        <div class="carousel-item-footer">
+        </div>
+
+        <video playsinline muted preload loop class="carousel-item-media">
+          <source src="vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="carousel-item carousel-item--t2">
+        <div class="carousel-item-head">
+          <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
+        </div>
+
+        <div class="carousel-item-body">
+          <p class="carousel-item-text">We were live from 137m below the waves – a world first</p>
+        </div>
+
+        <div class="carousel-item-footer">
+        </div>
+        <video playsinline muted preload loop class="carousel-item-media">
+          <source src="vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="carousel-item carousel-item--t2">
+        <div class="carousel-item-head">
+          <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
+        </div>
+
+        <div class="carousel-item-body">
+          <p class="carousel-item-text">Our team in partnership with Nekton is exploring the oceans near Aldabra in the
+            Seychelles, one of the most protected coral atolls in the world</p>
+        </div>
+
+        <div class="carousel-item-footer">
+        </div>
+        <video playsinline muted preload loop class="carousel-item-media">
+          <source src="vid.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+
+  </body>
+  <script>
+
+    var videos = document.querySelectorAll('video');
+
+    function tick() {
+
+      videos.forEach(function (video) {
+
+        var l = video.getBoundingClientRect().left;
+
+        if (l > -1 && l < window.innerWidth) {
+          playpause(video, true)
+
+        }
+
+        else {
+          playpause(video, false)
+        }
+
+      })
+
+      window.setTimeout(function () {
+        requestAnimationFrame(tick);
+      }, 500)
+    }
+
+    tick();
+
+    function playpause(video, play) {
+      var isplaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+      var playpromise;
+      var promisesupported = ('Promise' in window);
+
+      if (play) {
+
+        if (!promisesupported) {
+          video.play()
+        }
+
+        else {
+
+          playpromise = video.play();
+
+          if (playpromise !== undefined) {
+            playpromise.then(function () {
+              video.play();
+            })
+              .catch(function () {
+                video.play();
+              });
+          }
+        }
+
+      }
+
+      else {
+        if (isplaying) {
+          video.pause();
+        }
+      }
+    }
+  </script>
+
+</html>
