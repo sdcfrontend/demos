@@ -95,6 +95,9 @@
 
       .carousel-item-head {
         flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .carousel-item-body {
@@ -138,10 +141,20 @@
         padding: 0.5em 1em
       }
 
+      .carousel-item-button {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 0;
+        background: 0;
+        display: none;
+      }
+
       .carousel-ticks {
         position: absolute;
         bottom: 1rem;
-        height: 0.3rem;
+        height: 0.25rem;
         display: flex;
         padding: 0 1.5rem;
         justify-content: space-between;
@@ -151,7 +164,9 @@
 
       .carousel-ticks span {
         flex: 1;
-        margin: 0 0.5rem
+        margin: 0 0.25rem;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.2)
       }
 
       .carousel-ticks span[data-active] {
@@ -168,6 +183,8 @@
       <div class="carousel-item">
         <div class="carousel-item-head">
           <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
+          <button data-role="full-screen" class="carousel-item-button"
+            href="#"><svg enable-background="new 0 0 472.3 472.3" viewBox="0 0 472.3 472.3" xmlns="http://www.w3.org/2000/svg"><g fill="white"><path d="m402.708 61.688-89.879-.022c-2.621 0-4.989 1.584-5.987 4.005-1.007 2.421-.455 5.203 1.398 7.064l33.839 33.838-234.719 235.967-33.809-33.809c-1.853-1.852-4.643-2.405-7.064-1.406-2.421 1.006-3.997 3.368-3.997 5.989l-.008 89.862c0 3.582 2.896 6.48 6.48 6.48l89.878.022c2.622 0 4.989-1.582 5.987-4.003 1.008-2.423.455-5.205-1.398-7.066l-33.809-33.808 178.827-180.133 55.862-55.864 33.809 33.809c1.853 1.853 4.643 2.406 7.064 1.406 2.421-1.006 3.997-3.366 3.997-5.987l.008-89.863c.001-3.582-2.897-6.481-6.479-6.481z"/><path d="m435.279 0h-398.257c-20.448 0-37.022 16.573-37.022 37.022v398.256c0 20.449 16.574 37.022 37.022 37.022h398.258c20.447 0 37.021-16.573 37.021-37.022v-398.256c-.001-20.449-16.574-37.022-37.022-37.022zm5.534 435.278c0 3.052-2.482 5.535-5.534 5.535h-398.257c-3.052 0-5.535-2.483-5.535-5.535v-398.256c0-3.053 2.483-5.536 5.535-5.536h398.258c3.051 0 5.534 2.483 5.534 5.536v398.256z"/></g></svg></button>
         </div>
 
         <div class="carousel-item-body">
@@ -175,8 +192,8 @@
         </div>
 
         <div class="carousel-item-footer">
-            <a data-role="full-screen" class="carousel-item-link"
-            href="#">Full screen</a>
+            <a class="carousel-item-link"
+            href="#">Swipe to start</a>
         </div>
         <img src="https://transform.nws.ai/fca54db0-2f10-5fda-9e1c-c78c24d5fa16/f_jpg,so_0p/" alt=""
           class="carousel-item-media">
@@ -320,7 +337,13 @@
       }
     }
 
-    document.querySelector('[data-role="full-screen"]').onclick = toggleFullscreen;
+    var fullscreenbutton = document.querySelector('[data-role="full-screen"]');
+
+    if (document.body.requestFullscreen) {
+      fullscreenbutton.style.display = "block";
+    }
+    
+    fullscreenbutton.onclick = toggleFullscreen;
 
     function toggleFullscreen(event) {
       event.preventDefault();
