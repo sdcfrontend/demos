@@ -321,7 +321,7 @@
 
     function toggleFullscreen(event) {
       event.preventDefault();
-      var elem = document.querySelector(".carousel");
+      var elem = document.querySelector("body");
 
       if (!document.fullscreenElement) {
         elem.requestFullscreen().then({}).catch(err => {
