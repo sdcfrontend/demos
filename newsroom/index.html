@@ -123,6 +123,16 @@
       .carousel-item--t2 .carousel-item-body {
         align-items: flex-end
       }
+
+      .carousel-item-link {
+        display: inline-block;
+        background: white;
+        border-radius: 20px;
+        font-size: calc(8px + 0.4rem);
+        color: black;
+        text-decoration: none;
+        padding: 0.5em 1em
+      }
     </style>
   </head>
 
@@ -140,13 +150,13 @@
         </div>
 
         <div class="carousel-item-footer">
+            <a data-role="full-screen" class="carousel-item-link"
+            href="#">Full screen</a>
         </div>
         <img src="https://transform.nws.ai/fca54db0-2f10-5fda-9e1c-c78c24d5fa16/f_jpg,so_0p/" alt=""
           class="carousel-item-media">
 
-      </div>
-
-      <div class="carousel-item carousel-item--t2">
+      </div><div class="carousel-item carousel-item--t2">
         <div class="carousel-item-head">
           <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
         </div>
@@ -156,14 +166,13 @@
         </div>
 
         <div class="carousel-item-footer">
+           
         </div>
 
         <video playsinline muted preload loop class="carousel-item-media">
           <source src="vid.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <div class="carousel-item carousel-item--t2">
+      </div><div class="carousel-item carousel-item--t2">
         <div class="carousel-item-head">
           <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
         </div>
@@ -177,9 +186,7 @@
         <video playsinline muted preload loop class="carousel-item-media">
           <source src="vid.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <div class="carousel-item carousel-item--t2">
+      </div><div class="carousel-item carousel-item--t2">
         <div class="carousel-item-head">
           <img src="https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker" alt="" class="logo">
         </div>
@@ -190,6 +197,9 @@
         </div>
 
         <div class="carousel-item-footer">
+          <a class="carousel-item-link"
+            href="https://news.sky.com/story/deep-ocean-live-sky-to-broadcast-first-tv-news-bulletins-under-the-sea-11669146">Learn
+            more</a>
         </div>
         <video playsinline muted preload loop class="carousel-item-media">
           <source src="vid.mp4" type="video/mp4">
@@ -258,6 +268,21 @@
         if (isplaying) {
           video.pause();
         }
+      }
+    }
+
+    document.querySelector('[data-role="full-screen"]').onclick = toggleFullscreen;
+
+    function toggleFullscreen(event) {
+      event.preventDefault();
+      var elem = document.querySelector(".carousel");
+
+      if (!document.fullscreenElement) {
+        elem.requestFullscreen().then({}).catch(err => {
+         
+        });
+      } else {
+        document.exitFullscreen();
       }
     }
   </script>
