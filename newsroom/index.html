@@ -57,6 +57,7 @@
       }
 
       .carousel-item {
+        will-change: all;
         vertical-align: top;
         position: relative;
         display: inline-flex;
@@ -133,6 +134,27 @@
         text-decoration: none;
         padding: 0.5em 1em
       }
+
+      .carousel-ticks {
+        position: absolute;
+        bottom: 1rem;
+        height: 0.3rem;
+        display: flex;
+        padding: 0 1.5rem;
+        justify-content: space-between;
+        z-index: 3;
+        width: 100%;
+      }
+
+      .carousel-ticks span {
+        flex: 1;
+        margin: 0 0.5rem
+      }
+
+      .carousel-ticks span[data-active] {
+        background: white;
+      }
+
     </style>
   </head>
 
@@ -208,12 +230,36 @@
 
     </div>
 
+    <div class="carousel-ticks">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
   </body>
   <script>
 
     var videos = document.querySelectorAll('video');
+    var items = document.querySelectorAll('.carousel-item');
+    var ticks = document.querySelectorAll('.carousel-ticks span');
+
+    var itemindex = 0;
 
     function tick() {
+      
+      items.forEach(function(item, index){
+        if(item.getBoundingClientRect().left < window.innerWidth){
+          itemindex = index;
+        }
+
+        ticks.forEach(function(tick){
+          tick.removeAttribute('data-active');
+        })
+
+        ticks[itemindex].setAttribute('data-active', true)
+
+      });
 
       videos.forEach(function (video) {
 
