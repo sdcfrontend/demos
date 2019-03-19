@@ -39,12 +39,14 @@
 
       body,
       html {
-        overflow: none;
+        overflow: auto;
         height: 100vh;
         overscroll-behavior: none
       }
 
       .carousel {
+        transform: translateZ(0);
+        will-change: all;
         position: absolute;
         top: 0;
         left: 0;
@@ -57,6 +59,7 @@
       }
 
       .carousel-item {
+        transform: translateZ(0);
         will-change: all;
         vertical-align: top;
         position: relative;
