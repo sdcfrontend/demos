@@ -643,7 +643,7 @@
         var index = ths.indexOf(this);
         this.classList.toggle('on');
         ths.forEach(function (item) {
-          item.setAttribute('data-sort', '');
+          item.setAttribute('data-sort-up', '');
         });
 
         this.setAttribute('data-sort-up', this.classList.contains('on'));
@@ -652,7 +652,6 @@
     });
 
     function parseDataType(string) {
-      console.log(string);
 
       // currency
       if (string.match(/^£|\$|€/)) {

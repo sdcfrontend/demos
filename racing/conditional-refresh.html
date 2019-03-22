@@ -48,16 +48,23 @@
           }
 
           conditionalrefresh = setInterval(function () {
+            console.log('refresh page');
             location.assign(location.pathname + content.url);
           }, parseInt(content.duration, 10) * 1000);
 
         };
 
+        set();
+
         window.addEventListener('mousemove', function () {
+          console.log('reset timer - mouse');
           set(true);
         });
 
-        set();
+        document.addEventListener('keydown', function() {
+          console.log('reset timer - key');
+          set(true);
+        });
 
       })();
     </script>
