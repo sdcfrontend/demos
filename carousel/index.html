@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box
+      }
+
+      body {
+        background: #eee;
+        padding: 1em;
+        font-family: sans-serif;
+      }
+
+      .carousel {
+        background: white;
+        padding: 1em;
+      }
+
+      .carousel-rail {
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+        overscroll-behavior: contain;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+
+      .carousel-item {
+        background: yellowgreen;
+        width: 300px;
+        max-width: 100%;
+        margin-left: 1em;
+        scroll-snap-align: start;
+        display: inline-block
+      }
+
+      .carousel-item:after {
+        content: "";
+        displaY: block;
+        padding-bottom: 75%;
+      }
+
+      .carousel-item:first-child {
+        margin-left: 0;
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 0.5em;
+      }
+
+      .carousel-nav-item {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border: 1px solid #aaa;
+        margin-left: 0.5em;
+      }
+
+      .carousel-nav-item[disabled] {
+        opacity: 0.2
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="carousel">
+      <div class="carousel-nav">
+        <button class="carousel-nav-item" data-role="carousel-nav-item"><</button>
+        <button class="carousel-nav-item" data-role="carousel-nav-item">></button>
+      </div>
+      <div class="carousel-rail" data-role="carousel-rail">
+
+        <div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div><div class="carousel-item" data-role="carousel-item"></div>
+
+      </div>
+    </div>
+
+    <script>
+
+      (function(){
+
+        var rail = document.querySelector('[data-role="carousel-rail"]');
+        var items = rail.querySelectorAll('[data-role="carousel-item"]');
+        var nav = document.querySelectorAll('[data-role="carousel-nav-item"]');
+        var position = 0;
+
+        nav.forEach(function(item, index){
+
+          item.onclick = function(){
+
+            var current = position;
+
+            if(index === 0){
+              current--;
+            }
+
+            else{
+              current++;
+            }
+
+            goto(current);
+          }
+        })
+
+        function goto(index){
+
+          var w = items[0].offsetWidth * index;
+          rail.scrollTo(w, 0);
+        }
+
+        function togglenav(index){
+
+          nav.forEach(function(item){
+            item.removeAttribute('disabled');
+          });
+
+          if(!isNaN(index)){
+            nav[index].setAttribute('disabled', true);
+          }
+         
+        }
+
+        function tick(){
+          
+          var current = items.length - 1;
+          items.forEach(function(item, num){
+            if(item.getBoundingClientRect().left < 50){
+              current = num
+            }
+          });
+
+          position = current;
+
+          togglenav();
+
+          if(rail.scrollLeft < 50){
+            togglenav(0)
+          }
+
+          if((rail.scrollWidth - rail.scrollLeft) - 50 < rail.offsetWidth){
+            togglenav(1);
+          };
+
+          setTimeout(function(){
+            requestAnimationFrame(tick);
+          }, 1000/6)
+        }
+
+        tick();
+
+      })();
+     
+    </script>
+  </body>
+
+</html>

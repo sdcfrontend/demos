@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="conditional-refresh" content="duration=30;expires=25-march-2019;url=?reload=true">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      (function () {
+
+        var meta = document.querySelector('meta[name="conditional-refresh"]');
+
+        if (!meta) {
+          return;
+        }
+
+        var conditionalrefresh;
+        var options = {};
+        var content = meta.content.split(';');
+
+        content.forEach(function (item) {
+          item = item.split(/=(.+)/);
+          if (item[0] && item[1]) {
+            content[item[0]] = item[1];
+          }
+        });
+
+        if (content.expires) {
+          content.expires = new Date(content.expires);
+        }
+
+        if (!content.duration) {
+          content.duration = "60";
+        }
+
+        if (!content.url) {
+          content.url = "";
+        }
+
+        function set(reset) {
+          if (reset) {
+            clearInterval(conditionalrefresh);
+          }
+
+          conditionalrefresh = setInterval(function () {
+            location.assign(location.pathname + content.url);
+          }, parseInt(content.duration, 10) * 1000);
+
+        };
+
+        window.addEventListener('mousemove', function () {
+          set(true);
+        });
+
+        set();
+
+      })();
+    </script>
+  </body>
+
+</html>
