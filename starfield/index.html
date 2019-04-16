@@ -172,8 +172,8 @@
       var h = document.documentElement.scrollHeight;
       var p = (100/h) * t;
 
-      layers[0].style.cssText = "height:"+(h)+"px;transform: translateY(-" + (p) + "%)";
-      layers[1].style.cssText = "height:"+(h*1.4)+"px;transform: translateY(-" + (p) + "%)";
+      layers[0].style.cssText = "height:"+(h)+"px;transform: translateY(-" + (p/4) + "%)";
+      layers[1].style.cssText = "height:"+(h*1.4)+"px;transform: translateY(-" + (p/3) + "%)";
 
       requestAnimationFrame(tick);
     }
