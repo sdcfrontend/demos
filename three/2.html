@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
+  <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/loaders/ColladaLoader.js"></script>
+  <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/TrackballControls.js"></script>
+  <style>
+      .container {
+        position: relative;
+        border: 4px solid red;
+        height: 100vh;
+      }
+    
+      .container > canvas[width] {
+        position: absolute;
+        width: 100%!important;
+        height: 100%!important;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+      </div>
+
+    <script>
+      var container = document.querySelector('.container');
+
+      var scene,
+          camera,
+          renderer,
+          controls,
+          light,
+          light2;
+      
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color( '#000055' );
+      
+      camera = new THREE.PerspectiveCamera( 10, window.innerWidth / window.innerHeight, 1, 1000 );
+      camera.position.set(-5, 12, 10);
+      camera.lookAt( scene.position );
+      
+      renderer = new THREE.WebGLRenderer({
+        alpha: true,
+          antialias: true
+      });
+      renderer.setPixelRatio( window.devicePixelRatio );
+      renderer.setSize( window.innerWidth, window.innerHeight );
+      
+      container.appendChild( renderer.domElement );
+      
+      
+      /////////////////////////////////////////
+      // Trackball Controller
+      /////////////////////////////////////////
+      
+      controls = new THREE.TrackballControls( camera, container);
+      controls.rotateSpeed = 5.0;
+      controls.zoomSpeed = 3.2;
+      controls.panSpeed = 0.8;
+      controls.noZoom = false;
+      controls.noPan = true;
+      controls.staticMoving = false;
+      controls.dynamicDampingFactor = 0.2;
+      
+      
+      /////////////////////////////////////////
+      // Lighting
+      /////////////////////////////////////////
+      
+      light = new THREE.DirectionalLight('red', 1);
+      // you set the position of the light and it shines into the origin
+      light.position.set(1, 2, 1).normalize();
+
+      light2 = new THREE.DirectionalLight('blue', 1);
+      // you set the position of the light and it shines into the origin
+      light2.position.set(100, 20, 10).normalize();
+
+      scene.add(light);
+      scene.add(light2);
+      
+      
+      /////////////////////////////////////////
+      // Utilities
+      /////////////////////////////////////////
+      
+      var axisHelper = new THREE.AxisHelper( 1.25 );
+      scene.add( axisHelper );
+      
+      
+      /////////////////////////////////////////
+      // Render Loop
+      /////////////////////////////////////////
+      
+      function renderPhone() {
+        renderer.render( scene, camera );
+      }
+      
+      // Render the scene when the controls have changed.
+      // If you don’t have other animations or changes in your scene,
+      // you won’t be draining system resources every frame to render a scene.
+      controls.addEventListener( 'change', renderPhone );
+      
+      // Avoid constantly rendering the scene by only 
+      // updating the controls every requestAnimationFrame
+      function animationLoop() {
+        requestAnimationFrame(animationLoop);
+        controls.update();
+      }
+      
+      animationLoop();
+      
+      
+      /////////////////////////////////////////
+      // Window Resizing
+      /////////////////////////////////////////
+      
+      window.addEventListener( 'resize', function () {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+          controls.handleResize();
+          renderPhone();
+      }, false );
+      
+      
+      /////////////////////////////////////////
+      // Object Loader
+      /////////////////////////////////////////
+      
+      var dae,
+          loader = new THREE.ColladaLoader();
+      
+      function loadCollada( collada ) {
+        dae = collada.scene;
+        dae.position.set(0.4, 0, 0.8);
+        scene.add(dae);
+        renderPhone();
+      }
+      
+      loader.options.convertUpAxis = true;
+      loader.load( 'ball.dae', loadCollada);
+      
+      </script>
+</body>
+</html>

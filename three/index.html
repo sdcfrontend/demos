@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/103/three.js"></script>
+  <script src="OBJLoader.js"></script>
+  <script src='https://threejs.org/examples/js/controls/TrackballControls.js'></script>
+
+<style>
+
+   * {
+    padding: 0;
+    margin: 0;
+   }
+
+  .container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .container > canvas[width] {
+    position: absolute;
+    width: 100%!important;
+    height: 100%!important;
+  }
+</style>
+  
+</head>
+<body>
+
+  <div class="container">
+
+  </div>
+  <script>
+
+    var camera, scene, renderer,
+    geometry, material, mesh, light, light2, controls;
+
+    var container = document.querySelector('.container');
+
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color( '#000' );
+
+    camera = new THREE.PerspectiveCamera( 100, container.offsetWidth / container.offsetHeight, 1, 10000 );
+    camera.position.z = 650;
+
+    var light = new THREE.AmbientLight( '#fffdea' );
+
+    var light2 = new THREE.DirectionalLight('blue', 1);
+
+    scene.add(light);
+    scene.add(light2);
+
+      // you set the position of the light and it shines into the origin
+    light2.position.set(100, 20, 10).normalize();
+
+    // geometry = new THREE.BoxGeometry( 400, 400, 400 );
+    // geometry = new THREE.TorusGeometry( 400, 90, 90, 100 );
+    geometry = new THREE.SphereGeometry( 400, 100, 100 );
+    // geometry = new THREE.TorusKnotGeometry( 400, 90, 100, 16 );
+
+    var texture = new THREE.TextureLoader().load( "./textures/Material.001_baseColor.jpg" );
+    texture.wrapS = THREE.RepeatWrapping;
+    texture.wrapT = THREE.RepeatWrapping;
+
+    var bump = new THREE.TextureLoader().load( "./textures/Material.001_emissive.jpg" );
+    var material = new THREE.MeshLambertMaterial( {
+      color: '#ccc',
+      // specular: 0x222222,
+      map: texture,
+      shininess: 25,
+      bumpMap: bump,
+      bumpScale: 1
+    });
+
+    mesh = new THREE.Mesh( geometry, material );
+    scene.add( mesh );
+
+    renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    controls = new THREE.TrackballControls( camera, container);
+    controls.rotateSpeed = 5.0;
+    controls.zoomSpeed = 3.2;
+    controls.panSpeed = 0.8;
+    controls.noZoom = false;
+    controls.noPan = true;
+    controls.staticMoving = false;
+    controls.dynamicDampingFactor = 0.2;
+  
+    container.appendChild( renderer.domElement );
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+</script>
+</body>
+</html>

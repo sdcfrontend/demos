@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
+  <script src="OrbitControls.js"></script>
+  <script src="GLTFLoader.js"></script>
+  <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/TrackballControls.js"></script>
+  <style>
+      .container {
+        position: relative;
+        height: 100vh;
+      }
+    
+      .container > canvas[width] {
+        position: absolute;
+        width: 100%!important;
+        height: 100%!important;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+      </div>
+
+    <script>
+      var container = document.querySelector('.container');
+
+      var container, stats, controls;
+			var camera, scene, renderer;
+
+			init();
+
+			function init() {
+
+        scene = new THREE.Scene();
+
+        var loader = new THREE.GLTFLoader();
+
+        loader.load('moon.gltf', function (gltf) {
+
+          scene.add(gltf.scene);
+          var light = new THREE.AmbientLight( '#fffdea' );
+          scene.add(light);
+
+          renderer = new THREE.WebGLRenderer( { antialias: true } );
+          renderer.setSize( container.offsetWidth, container.offsetHeight );
+          // renderer.gammaOutput = true;
+          container.appendChild( renderer.domElement );
+
+          camera = new THREE.PerspectiveCamera(50, container.offsetWidth / container.offsetHeight, 0.25, 200 );
+          camera.position.set( 3.4, 2.1, 0.6 );
+
+          controls = new THREE.OrbitControls( camera, container );
+          controls.target = new THREE.Vector3(0.5, 0.8, 0.6);
+          
+          // controls.noZoom = true;
+          controls.noPan = true;
+          controls.update();
+
+          animate();
+        });	
+    
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				renderer.render( scene, camera );
+			}
+      </script>
+</body>
+</html>
