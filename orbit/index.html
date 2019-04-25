@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @keyframes orbit {
+      100% {
+        transform: rotate(1turn)
+      }
+    }
+
+    body {
+      background: black;
+    }
+
+    .solar-system {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+    }
+
+    .solar-system:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%
+    }
+
+    .planet {
+      background: powderblue;
+      width: 25%;
+      height: 25%;
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0 0 23px rgba(0,0,0,0.2)
+    }
+
+    .orbit {
+      width: 46%;
+      height: 46%;
+      position: absolute;
+      left: calc(27% - 2px);
+      top: calc(27% - 2px);
+      will-change: transform;
+      animation: orbit 40s infinite;
+      animation-timing-function: linear;
+      border-radius: 50%;
+      border: 2px dashed #333;
+      pointer-events: none;
+    }
+
+    .moon {
+      display: block;
+      position: absolute;
+      width: 20%;
+      background: yellowgreen;
+      bottom: 50%;
+      left: -10%;
+      border-radius: 50%;
+      pointer-events: all;
+      box-shadow: inset 0 0 23px rgba(0,0,0,0.2)
+    }
+
+    .moon:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .orbit2 {
+      height: 74%;
+      width: 74%;
+      left: calc(13% - 2px);
+      top: calc(13% - 2px);
+      animation-duration: 32s;
+    }
+
+    .orbit2 .moon {
+      background: hotpink;
+      width: 8%;
+      bottom: auto;
+      top: 50%;
+      left: auto;
+      right: -4%
+    }
+
+    .orbit3 {
+      width: 87%;
+      height: 87%;
+      left: calc(6.5% - 2px);
+      top: calc(6.5% - 2px);
+      animation-duration: 48s;
+    }
+
+    .orbit3 .moon {
+      width: 4%;
+      background: orange;
+      bottom: -2%;
+      left: 50%;
+    }
+
+    .moon:hover {
+      background: white;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="galaxy">
+        <div class="solar-system">
+          <div class="planet"></div>
+          <div class="orbit">
+            <div class="moon"></div>
+          </div>
+          
+          <div class="orbit orbit2">
+            <div class="moon"></div>
+          </div>
+          
+           <div class="orbit orbit3">
+            <div class="moon"></div>
+          </div>
+          
+        </div>
+    </div>
+
+    <script>
+    
+    var moons = document.querySelectorAll('.moon');
+    moons.forEach(function(moon){
+      moon.onmouseenter = function(){
+        moon.parentNode.style.cssText = "animation-play-state: paused;"
+      }
+      moon.onmouseleave = function(){
+        moon.parentNode.style.cssText = ""
+      }
+    })
+
+</script>
+</body>
+</html>

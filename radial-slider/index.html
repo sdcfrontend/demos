@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+  background: #1d1d25;
+}
+
+.value {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  width: 100px;
+  top: 190px;
+  z-index: 100;
+  font-size: 40px;
+  display: block;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  color: #016C8F;
+  text-shadow: 0px 1px 0px black;
+}
+
+.radial-slider {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 1px solid transparent;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -200px;
+  background-color: #1d1d25;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.radial-slider .circle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  border-radius: 300px;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.4);
+  background: #242329;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.radial-slider .inner-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  top: 50%;
+  left: 50%;
+  margin-left: -140px;
+  margin-top: -140px;
+  border-radius: 290px;
+  background-color: #1d1d25;
+  background-position: center center;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.radial-slider .knob {
+  position: absolute;
+  top: -10px;
+  left: 140px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+  background: #e2e2e2;
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.2), 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+}
+.radial-slider .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -user-select: none;
+}
+
+  </style>
+</head>
+<body>
+  
+<figure class="radial-slider">
+    <span class="value">0</span>
+    <div class="circle">
+      <div class="knob" unselectable="on"></div>
+    </div>
+    <canvas class="progress"></canvas>
+    <div class="inner-circle"></div>
+  </figure>
+
+  <script>
+  (function () {
+  var Slider, j, lastTime, len, slider, vendor, vendors;
+
+  Slider = function () {
+    class Slider {
+      constructor($context) {
+        var bg, circleOffset;
+        this.updateSlider = this.updateSlider.bind(this);
+
+        // Callbacks
+        this.onMouseDown = this.onMouseDown.bind(this);
+        this.onMouseUp = this.onMouseUp.bind(this);
+        this.onMouseMove = this.onMouseMove.bind(this);
+        this.$context = $context;
+        this.$circle = this.$context.find(".circle");
+        this.$innerCircle = this.$context.find(".inner-circle");
+        this.$knob = this.$context.find(".knob");
+        this.$progress = this.$context.find(".progress");
+        this.ctx = this.$progress.get(0).getContext("2d");
+        circleOffset = this.$circle.offset();
+        this.elementPosition = {
+          x: circleOffset.left,
+          y: circleOffset.top };
+
+        this.centerX = this.$progress.width() / 2;
+        this.centerY = this.$progress.height() / 2;
+        this.canvasSize = this.$progress.width();
+        bg = this.getBackground();
+        this.$context.css({
+          backgroundImage: `url(${bg})` });
+
+        this.$innerCircle.css({
+          backgroundImage: `url(${bg})` });
+
+        this.addEventListeners();
+        this.updateSlider();
+        return;
+      }
+
+      addEventListeners() {
+        this.$context.on("mousedown", this.onMouseDown);
+        this.$context.on("mousemove", this.onMouseMove);
+        $("body").on("mouseup", this.onMouseUp);
+      }
+
+      updateSlider() {
+        this.raf = requestAnimationFrame(this.updateSlider);
+        this.setPosition();
+        this.drawArc();
+      }
+
+      setPosition() {
+        this.x = Math.round(this.radius * Math.sin(this.target * Math.PI / 180)) + this.radius - this.knobRadius + 4;
+        this.y = Math.round(this.radius * -Math.cos(this.target * Math.PI / 180)) + this.radius - this.knobRadius + 4;
+        this.$knob.css({
+          left: this.x,
+          top: this.y });
+
+      }
+
+      drawArc() {
+        this.$progress.get(0).width = this.canvasSize;
+        this.$progress.get(0).height = this.canvasSize;
+        this.ctx.save();
+        this.ctx.translate(this.centerX, this.centerY - this.radius);
+        this.ctx.rotate(-90 * Math.PI / 180);
+        this.ctx.strokeStyle = "#0083ad";
+        this.ctx.beginPath();
+        this.ctx.lineWidth = 8;
+        this.ctx.arc(0 - this.radius - 1, 0, this.radius - 1, 0, this.target * Math.PI / 180, false);
+        this.ctx.stroke();
+        this.ctx.restore();
+      }
+
+      setMousePosition(event) {
+        var atan, diff, target, val;
+        this.mPos = {
+          x: event.pageX - this.elementPosition.x,
+          y: event.pageY - this.elementPosition.y };
+
+        atan = Math.atan2(this.mPos.x - this.radius, this.mPos.y - this.radius);
+        target = -atan / (Math.PI / 180) + 180;
+        diff = Math.abs(target - this.target);
+        if (diff < this.maxDiff && target < this.constraint) {
+          this.target = target;
+          val = {
+            type: "sliderchange",
+            value: this.target };
+
+          this.$context.trigger(val);
+        }
+      }
+
+      getBackground() {
+        var dividerEvery, i, img, j, ref, steps;
+        steps = 60;
+        dividerEvery = 15;
+        this.$progress.get(0).height = this.canvasSize;
+        this.$progress.get(0).width = this.canvasSize;
+        this.ctx.save();
+        this.ctx.translate(this.centerX, this.centerY);
+        for (i = j = 0, ref = steps; j <= ref; i = j += 1) {
+          this.ctx.beginPath();
+          this.ctx.rotate(Math.PI * 2 / steps);
+          if (i % dividerEvery === dividerEvery - 1) {
+            this.ctx.lineWidth = 2;
+            this.ctx.moveTo(160, 0);
+            this.ctx.lineTo(136, 0);
+            this.ctx.strokeStyle = "#04465C";
+          } else {
+            this.ctx.lineWidth = 1;
+            this.ctx.lineTo(155, 0);
+            this.ctx.lineTo(135, 0);
+            this.ctx.strokeStyle = "#02394A";
+          }
+          this.ctx.stroke();
+        }
+        this.ctx.restore();
+        img = this.$progress.get(0).toDataURL();
+        this.ctx.clearRect(0, 0, this.canvasSize, this.canvasSize);
+        return img;
+      }
+
+      onMouseDown(event) {
+        this.mdown = true;
+      }
+
+      onMouseUp(event) {
+        this.mdown = false;
+      }
+
+      onMouseMove(event) {
+        if (this.mdown) {
+          this.setMousePosition(event);
+        }
+      }}
+
+    ;
+
+    Slider.prototype.raf = null;
+
+    Slider.prototype.mdown = false;
+
+    Slider.prototype.mPos = {
+      x: 0,
+      y: 0 };
+
+
+    Slider.prototype.elementPosition = {
+      x: 0,
+      y: 0 };
+
+
+    Slider.prototype.radius = 146;
+
+    Slider.prototype.knobRadius = 15;
+
+    Slider.prototype.maxDiff = 150;
+
+    Slider.prototype.constraint = 360;
+
+    Slider.prototype.target = 0;
+
+    Slider.prototype.centerX = 0;
+
+    Slider.prototype.centerY = 0;
+
+    Slider.prototype.$circle = null;
+
+    Slider.prototype.$knob = null;
+
+    Slider.prototype.$progress = null;
+
+    Slider.prototype.x = 0;
+
+    Slider.prototype.y = 0;
+
+    return Slider;
+
+  }.call(this);
+
+  this.$slider = $(".radial-slider");
+
+  this.$value = $(".value");
+
+  slider = new Slider(this.$slider);
+
+  $slider.on("sliderchange", event => {
+    this.$value.html(Math.round(event.value));
+  });
+
+
+  //https://github.com/sinisterchipmunk/jax/blob/96330f6aad1ca57c444f5a6e7e33deca2476226d/lib/assets/javascripts/jax/anim_frame.js.coffee
+  lastTime = 0;
+
+  vendors = ['ms', 'moz', 'webkit', 'o'];
+
+  this.cancelAnimationFrame || (this.cancelAnimationFrame = this.cancelRequestAnimationFrame);
+
+  if (!this.requestAnimationFrame) {
+    for (j = 0, len = vendors.length; j < len; j++) {
+      vendor = vendors[j];
+      this.requestAnimationFrame || (this.requestAnimationFrame = this[vendor + 'RequestAnimationFrame']);
+      this.cancelAnimationFrame = this.cancelRequestAnimationFrame || (this.cancelRequestAnimationFrame = this[vendor + 'CancelRequestAnimationFrame']);
+    }
+  }
+
+  if (!this.requestAnimationFrame) {
+    this.requestAnimationFrame = function (callback, element) {
+      var currTime, id, timeToCall;
+      currTime = new Date().getTime();
+      timeToCall = Math.max(0, 16 - (currTime - lastTime));
+      id = this.setTimeout(function () {
+        return callback(currTime + timeToCall);
+      }, timeToCall);
+      lastTime = currTime + timeToCall;
+      return id;
+    };
+  }
+
+  if (!this.cancelAnimationFrame) {
+    this.cancelAnimationFrame = this.cancelRequestAnimationFrame = function (id) {
+      return clearTimeout(id);
+    };
+  }
+
+}).call(this);
+
+//# sourceURL=coffeescript
+</script>
+</body>
+</html>
