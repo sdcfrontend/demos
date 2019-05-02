@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #000033;
+    }
+
+    .waffle {
+      margin: auto;
+      position: relative;
+      contain: content;
+      width: 300px;
+    }
+
+    .waffle:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .waffle canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+  <div class="waffle">
+    <canvas width="1000" height="1000"></canvas>
+  </div>
+
+  <script>
+  
+  var colors = {
+    "5": "orange",
+    "4": "yellow",
+    "3": "#ccc",
+    "2": "powderblue",
+    "1": "blue"
+  }
+
+  var data = [
+    {"color": "1", "value": "25", "sizing": [23, 23]},
+    {"color": "2", "value": "21", "sizing": [23, 23]},
+    {"color": "3", "value": "11", "sizing": [23, 23]},
+    {"color": "4", "value": "21", "sizing": [23, 23]},
+    {"color": "5", "value": "22", "sizing": [23, 23]} 
+  ];
+
+  var canvas = document.querySelector('canvas');
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1000, 1000);
+  ctx.beginPath();
+  ctx.rect(0, 0, 1000, 1000);
+  ctx.fillStyle = "transparent";
+  ctx.fill();
+
+  var hover = false;
+
+  function renderwaffle(data){
+
+    hover = true;
+
+    canvas.currentdata = data;
+    var prev = -1;
+
+    data.forEach(function(ob){
+      
+      var val = parseInt(ob.value, 10) + 1;
+
+      for(var i = prev; ++i<(prev + val);){
+          draw(
+            (Math.floor(i/10) * 100) + 50, 
+            (i%10 * 100) + 50, 
+            colors[ob.color], 
+            0,
+            ob.sizing || [23,23], 
+            ob.timing || 16
+          );
+        }
+        prev = (prev + val) -1;
+
+    });
+    
+
+    function draw(left, top, color, delay, size, timing) {
+
+      var s = size[0];
+      var shrink = !!(size[0] > size[1]);
+      
+      setTimeout(function(){
+        
+          function render(){
+
+            ctx.clearRect(left - 50, top - 50, 100, 100);
+            // ctx.restore();
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.arc(left, top, (s*2), 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.closePath();
+            // ctx.save();
+
+            if(shrink){
+              s--;
+              if(s>size[1]){
+                setTimeout(function(){
+                  requestAnimationFrame(render);
+                }, timing);
+              }
+            }
+
+            else {
+              s++;
+              if(s<size[1]){
+                setTimeout(function(){
+                  requestAnimationFrame(render);
+                }, timing);
+              }
+            }
+
+          }
+
+          render();
+        
+        }, delay);
+      
+      }
+
+      setTimeout(function(){
+        hover = false;
+      }, 200)
+    }
+
+  function getmousepos(canvas, evt) {
+
+    var rect = canvas.getBoundingClientRect();
+    var coords = {
+      x: Math.floor((evt.clientX - rect.left)/(rect.width/10)),
+      y: Math.ceil((evt.clientY - rect.top)/(rect.width/10))
+    };
+    
+    if(coords.x === 0){
+      coords.x = "";
+    }
+    
+    if(coords.y === 10){
+      return (coords.x + 1) * coords.y; 
+    }
+    
+    return (coords.x + "" + coords.y);
+  }
+
+  var currentsegment = -1;
+
+  canvas.onmousemove = function(evt){
+
+    var current = parseInt(getmousepos(canvas, evt), 10);
+    var local = [];
+    var index = 0;
+    var val = 0;
+    for(var i = -1;++i<data.length;){
+      val += parseInt(data[i].value, 10);
+      if(current <= val){
+        index = i;
+        break;
+      }
+    }
+      
+    var newdata = JSON.parse(JSON.stringify(data));
+    newdata.forEach(function(item, pos){
+      if(pos===index){
+        item.sizing = [canvas.currentdata[pos].sizing[1],23];
+      }
+      else {
+        item.sizing = [canvas.currentdata[pos].sizing[1],11]
+      }
+    });
+    
+    if(index!==currentsegment && hover === false){
+      renderwaffle(newdata);
+    }
+
+    currentsegment = index;
+
+  }
+
+  canvas.onmouseout = function(){
+
+    currentsegment = -1;
+    if(!canvas.currentdata){
+      return;
+    };
+
+    var localdata = canvas.currentdata;
+
+    localdata.forEach(function(item, pos){   
+      item.sizing.reverse();
+      item.sizing[1] = 23;
+    });
+    
+    renderwaffle(localdata);
+  }
+
+  renderwaffle(data);
+
+  window.onresize = function(){
+
+    clearTimeout(window.resizeTimer);
+    window.resizeTimer = setTimeout(function() {
+      renderwaffle(data);   
+    }, 250);
+
+  }
+
+</script>
+</body>
+</html>
