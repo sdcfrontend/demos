@@ -1,0 +1,2 @@
+rp_ad_response={"status":"ok","account_id":7908,"site_id":18326,"zone_id":54602,"size_id":57,"tracking":"","inventory":{},"ads":[{"status":"no-ads","reason":"floor-not-met","error_code":"10","impression_id":"412a8985-9228-4f80-aacf-17edb21b217f"}]};
+try{rp_onAdResponseLoaded(rp_ad_response);}catch(ignore){}
