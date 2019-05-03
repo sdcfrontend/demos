@@ -2116,17 +2116,30 @@ document.cookie = cookie;
   </div><script type="text/javascript" src="n.js"></script>
 <script>
 document.querySelector('.gravity').onclick = function(){
-    document.querySelectorAll('.sdc-site-tiles__item,.site-header,.site-nav-desktop__wrap,.sdc-site-component-header--h2').forEach(function(item, index){
-      var w = window.innerWidth;
-      var direction = 2;
-      var dims = item.getBoundingClientRect();
-      if(dims.left<(w/2)){
-        direction = -1;
-      }
+    this.classList.toggle('on');
 
-    item.style.cssText = "transition: transform 500s ease-out; transform: translateX("+(((Math.floor(Math.random() * 1000))+1000)*direction)+"px) rotate("+((Math.floor(Math.random() * 720) - 180)*direction)+"deg) translateY(-10000px) scale("+(1+Math.random())+"); z-index:"+index;
+    if(!this.classList.contains('on')){
+      this.textContent = 'Disable gravity';
+      document.querySelectorAll('.sdc-site-tiles__item,.site-header,.site-nav-desktop__wrap,.sdc-site-component-header--h2').forEach(function(item, index){
+        item.style.cssText = "transition: transform 20s; transform: none";
+      })
+    }
 
-    })
+    else {
+      this.textContent = 'Enable gravity';
+      document.querySelectorAll('.sdc-site-tiles__item,.site-header,.site-nav-desktop__wrap,.sdc-site-component-header--h2').forEach(function(item, index){
+        var w = window.innerWidth;
+        var direction = 1;
+        var dims = item.getBoundingClientRect();
+        if(dims.left<(w/2)){
+          direction = -1;
+        }
+
+      item.style.cssText = "transition: transform 500s ease-out; transform: translateX("+(((Math.floor(Math.random() * 1000))+1000)*direction)+"px) rotate("+((Math.floor(Math.random() * 720) - 180)*direction)+"deg) translateY(-10000px) scale("+(1+Math.random())+"); z-index:"+index;
+
+      })
+
+  }
 }
 </script>
   
