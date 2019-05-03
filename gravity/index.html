@@ -2118,7 +2118,7 @@ document.cookie = cookie;
 document.querySelector('.gravity').onclick = function(){
     document.querySelectorAll('.sdc-site-tiles__item,.site-header,.site-nav-desktop__wrap,.sdc-site-component-header--h2').forEach(function(item, index){
       var w = window.innerWidth;
-      var direction = 4;
+      var direction = 2;
       var dims = item.getBoundingClientRect();
       if(dims.left<(w/2)){
         direction = -1;
