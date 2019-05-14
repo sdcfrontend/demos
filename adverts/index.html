@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap"></div>
+  </header>
+  <nav class="main-nav">
+    <div class="wrap"></div>
+  </nav>
+
+  <div class="advert advert-banner sticky block">
+    <div class="advert-boundary">
+      <div class="advert-banner-body"></div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile tile-hero"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 class="title block wrap">Latest News</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 class="title block wrap">Video</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+  </main>
+  <div class="footer"></div>
+</body>
+
+<script>
+  (function(){
+    var banner = document.querySelector('.advert-banner');
+
+    function tick(){
+      var top = banner.getBoundingClientRect().top;
+
+      if(top < 1 ){
+        banner.classList.add('sticky');
+        setTimeout(function(){
+          banner.classList.remove('sticky');
+        }, 2000);
+      }
+
+      else {
+        banner.classList.remove('sticky');
+        requestAnimationFrame(tick);
+      }
+      
+    }
+
+    // tick()
+  })();
+</script>
+</html>
