@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap"></div>
+  </header>
+  <nav class="main-nav">
+    <div class="wrap"></div>
+  </nav>
+
+  <div class="advert-banner-wrap block">
+      <div class="advert-boundary">
+        <div class="advert-banner"></div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
+      <div class="tile tile-hero"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile-advert">
+        <div class="advert-mpu"></div>
+      </div>
+    </div>
+
+    <h2 class="title block wrap">Latest News</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 class="title block wrap">Video</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+  </main>
+  <div class="footer"></div>
+</body>
+
+<script>
+  (function(){
+    var banner = document.querySelector('.advert-banner-wrap');
+    var mpu = document.querySelector('.advert-mpu');
+    var boundary = document.querySelector('.advert-boundary');
+
+    function tick(){
+      var offset = (mpu.getBoundingClientRect().top) - (banner.getBoundingClientRect().top);
+      boundary.style.cssText = "height: " + (offset - 36) + "px";
+      
+      setTimeout(function(){
+        requestAnimationFrame(tick);
+      }, 333)
+    }
+
+    tick();
+
+  })();
+</script>
+</html>

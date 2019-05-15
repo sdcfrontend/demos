@@ -16,21 +16,22 @@
     <div class="wrap"></div>
   </nav>
 
-  <div class="advert advert-banner sticky block">
-    <div class="advert-boundary">
-      <div class="advert-banner-body"></div>
+  <div class="advert-banner-wrap block">
+      <div class="advert-boundary">
+        <div class="advert-banner"></div>
     </div>
   </div>
 
   <main class="main">
-    <div class="tile-group grid block-large wrap wrap--no-padding">
+    <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
       <div class="tile tile-hero"></div>
       <div class="tile"></div>
       <div class="tile"></div>
       <div class="tile"></div>
       <div class="tile"></div>
-      <div class="tile"></div>
-      <div class="tile"></div>
+      <div class="tile-advert">
+        <div class="advert-mpu"></div>
+      </div>
     </div>
 
     <h2 class="title block wrap">Latest News</h2>
@@ -59,25 +60,42 @@
 <script>
   (function(){
     var banner = document.querySelector('.advert-banner');
+    var boundary = document.querySelector('.advert-boundary');
+    var offset = banner.offsetTop;
+    var hasstuck = false;
 
     function tick(){
-      var top = banner.getBoundingClientRect().top;
 
-      if(top < 1 ){
-        banner.classList.add('sticky');
+      if(window.pageYOffset > offset){
         setTimeout(function(){
-          banner.classList.remove('sticky');
-        }, 2000);
-      }
+          var dims = banner.getBoundingClientRect();
+          if(dims.top < (dims.height*-1)){
+            boundary.style.cssText = "height: auto";
+          }
 
+          else {
+            boundary.style.cssText = "height: " + (window.pageYOffset) + "px;";
+          }
+          hasstuck = true;
+        }, 2000)
+      }
       else {
-        banner.classList.remove('sticky');
         requestAnimationFrame(tick);
       }
-      
+     
     }
 
-    // tick()
+    tick();
+
+    window.onscroll = function(){
+      if(hasstuck){
+        var dims = banner.getBoundingClientRect();
+        if(dims.top < (dims.height*-1)){
+          boundary.style.cssText = "height: auto";
+          window.onscroll = null;
+        }      
+      }
+    }
   })();
 </script>
 </html>
