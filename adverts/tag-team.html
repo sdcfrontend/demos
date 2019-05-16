@@ -16,11 +16,15 @@
     <div class="wrap"></div>
   </nav>
 
-  <div class="advert-banner-wrap block">
-      <div class="advert-boundary">
+  
+  <div class="advert-boundary">
+    <div class="advert-banner-wrap block">
         <div class="advert-banner"></div>
     </div>
   </div>
+
+  <div class="advert-banner-wrap advert-banner-wrap--ghost block"></div>
+
 
   <main class="main">
     <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
@@ -64,8 +68,8 @@
     var boundary = document.querySelector('.advert-boundary');
 
     function tick(){
-      var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (banner.getBoundingClientRect().top + window.pageYOffset);
-      boundary.style.cssText = "height: " + (offset - 36) + "px";
+      var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
+      boundary.style.cssText = "height: " + (offset) + "px";
       
       setTimeout(function(){
         requestAnimationFrame(tick);

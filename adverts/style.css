@@ -154,8 +154,20 @@ body {
   background: #ddd;
   padding: 0.5rem 0;
   min-height: 90px;
+  width: 100%;
   z-index: 99;
   position: relative;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.advert-banner-wrap--ghost {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .advert-boundary {
@@ -163,10 +175,10 @@ body {
   position: absolute;
   height: 1000px;
   width: 100%;
+  pointer-events: none;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  pointer-events: none;
 }
 
 .advert-banner,
@@ -174,15 +186,13 @@ body {
   width: 728px;
   height: 90px;
   background: hotpink;
-  position: sticky;
   top: 0;
-  pointer-events: all;
 }
 
 .advert-mpu {
   width: 300px;
   min-height: 250px;
-  position: stick;
+  position: sticky;
   top: 0;
 }
 
