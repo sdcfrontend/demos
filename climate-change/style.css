@@ -194,7 +194,7 @@ body.light {
   width: 100%;
   z-index: 99;
   position: relative;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   display: flex;
   align-items: flex-start;
@@ -208,7 +208,7 @@ body.light {
 }
 
 .advert-boundary {
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
   position: absolute;
   height: 1000px;
   width: 100%;
@@ -222,15 +222,15 @@ body.light {
 .advert-mpu {
   width: 728px;
   height: 90px;
-  background: hotpink;
+  background: #ccc;
   top: 0;
 }
 
 .advert-mpu {
   width: 300px;
   min-height: 250px;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  top: 18px;
 }
 
 @media all and (max-width: 730px){
