@@ -38,7 +38,13 @@
     <p class="wrap--narrow">Thomas Cook has reported a half-year loss of £1.46bn as it counted the cost of Brexit uncertainty causing UK consumers to delay holiday plans.
 
     <p class="wrap--narrow">Shares opened 21% lower after it also warned that "challenging" trading over the peak summer season would put profits for the remainder of the financial year under pressure.
-    <div class="advert-mpu"></div>
+    
+    <div class="article-aside">
+      <div class="advert-mpu"></div>
+    </div>
+    <div class="article-aside">
+      <div class="article-module article-module--outbrain wrap--narrow" data-title="Outbrain"></div>
+    </div>
 
     <p class="wrap--narrow">The bulk of the loss for the six months to the end of March was caused by Thomas Cook's decision to write down the value of part of the business by £1.1bn in the light of the weak trading environment.
 
@@ -49,7 +55,6 @@
 
     <p class="wrap--narrow">It added that that there had been "no tangible change to booking patterns in recent weeks since the announcement of a delay to Brexit".
 
-    <div class="article-module article-module--outbrain wrap--narrow" data-title="Outbrain"></div>
     <p class="wrap--narrow">The half-year result covers the winter period when travel companies traditionally struggle to turn a profit, but was still several times larger than the loss of £303m for the same period a year ago.
     <div class="article-module article-module--teads wrap--narrow" data-title="Teads"></div>
 
@@ -65,13 +70,8 @@
     <p class="wrap--narrow">The results come a day after rival TUI also cited Brexit as it reported widening half-year losses.
 
     <p class="wrap--narrow">EasyJet said last month that "unanswered questions" over Britain's departure from the EU were weakening demand.
-        <div class="article-module article-module--skybet wrap--narrow" data-title="Sky Bet"></div>
-
-      <div class="article-outbrain article-module article-module--outbrain wrap--narrow" data-title="Outbrain">
-
-      </div>
-
-
+      <div class="article-module article-module--skybet wrap--narrow" data-title="Sky Bet"></div>
+      <div class="article-outbrain article-module article-module--outbrain wrap--narrow" data-title="Outbrain"></div>
   </main>
   <div class="footer"></div>
 </body>
@@ -81,12 +81,13 @@
     var banner = document.querySelector('.advert-banner-wrap');
     var mpu = document.querySelector('.advert-mpu');
     var boundary = document.querySelector('.advert-boundary');
+    var aside = document.querySelector('.article-aside');
 
     function tick(){
-      mpu.classList.remove('advert-mpu--sticky');
-      var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
+      // mpu.classList.remove('advert-mpu--sticky');
+      var offset = (aside.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
       boundary.style.cssText = "height: " + (offset) + "px";  
-      mpu.classList.add('advert-mpu--sticky');
+      // mpu.classList.add('advert-mpu--sticky');
     }
 
     tick();

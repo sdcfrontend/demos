@@ -283,6 +283,22 @@ body.light {
     top: 18px
   }
 
+  .article-aside {
+    float: right;
+    margin: 0 0 1rem 1rem;
+    top: 18px;
+    /* outline: 2px solid red; */
+    min-height: 150vh;
+    clear: right;
+    width: 300px;
+  }
+
+  .article-aside > div {
+    position: sticky;
+    top: 18px;
+    min-height: 250px;
+  }
+
   .advert-mpu--sticky {
     position: sticky;
   }
@@ -336,7 +352,7 @@ body.light {
 }
 
 .article-module--teads {
-  background: #000;
+  background: hotpink;
   color: #fff;
 }
 
