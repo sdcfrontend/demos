@@ -329,19 +329,33 @@ body.light {
     margin-left: 0;
   }
 
-  .advert-mpu-container {
+  .advert-container {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
   }
 
-  /* .article-module--outbrain:not(.article-outbrain) {
+  .advert-container--split {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50%;
+    /* outline: 2px solid orange */
+  }
+
+  .advert-container--split ~
+  .advert-container--split {
+    top: 50%;
+  }
+  .advert-container--split
+  .article-module--outbrain {
     float: right;
     width: 300px;
+    height: 300px;
     position: sticky;
     top: 12px;
-  } */
+  }
 }
 
 .article-module {
