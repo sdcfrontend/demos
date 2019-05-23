@@ -236,6 +236,14 @@ body.light {
   top: 18px;
 }
 
+.article-body {
+  position: relative
+}
+
+.article-body-inner {
+  margin-left: 0
+}
+
 @media all and (max-width: 730px){
 
   .advert-banner-wrap {
@@ -319,6 +327,13 @@ body.light {
 
   .article-module[class] {
     margin-left: 0;
+  }
+
+  .advert-mpu-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
   }
 
   /* .article-module--outbrain:not(.article-outbrain) {
