@@ -90,7 +90,7 @@
       mpu.classList.remove('advert-mpu--sticky');
       var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
       boundary.style.cssText = "height: " + (offset) + "px";  
-      mpu.classList.add('advert-mpu--sticky');
+      mpu.classList.add('advert-mpu--article-sticky');
     }
 
     tick();

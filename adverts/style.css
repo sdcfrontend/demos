@@ -288,6 +288,11 @@ body.light {
     top: 18px
   }
 
+  .advert-mpu--article-sticky {
+    position: sticky;
+    top: 18px;
+  }
+
   .article-aside {
     float: right;
     margin: 0 0 1rem 1rem;
