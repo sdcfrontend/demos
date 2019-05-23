@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .smoke {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      z-index: 9;
+      opacity: 0.5;
+      transform: translateY(0%);
+      pointer-events: none;
+      contain: layout;
+      filter: invert(1);
+      mix-blend-mode: multiply;
+    }
+
+    .smoke > canvas {
+      position: absolute;
+      height: 100%!important;
+      width: 100%!important;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap"></div>
+  </header>
+  <nav class="main-nav">
+    <div class="wrap"></div>
+  </nav>
+
+  
+  <div class="advert-boundary">
+    <div class="advert-banner-wrap block">
+        <div class="advert-banner"></div>
+    </div>
+  </div>
+
+  <div class="advert-banner-wrap advert-banner-wrap--ghost block"></div>
+
+  <main class="main">
+    <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
+      <div class="tile tile-hero"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+    <h2 class="title block wrap">Analysis</h2>
+
+    <div class="tile-group tile-group--data grid block-large wrap wrap--no-padding">
+      <div class="tile-data">
+          <div class="tile block"></div>
+      </div>
+      <div class="tile-advert">
+        <div class="advert-mpu"></div>
+      </div>
+    </div>
+
+    <h2 class="title block wrap">More top stories</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 class="title block wrap">Video</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+  </main>
+  <div class="footer"></div>
+  <div class="smoke">
+  </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+  <script>
+    var camera, scene, renderer,
+    geometry, material, mesh;
+ 
+init();
+animate(); 
+
+function init() {
+   
+
+    clock = new THREE.Clock();
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+    scene = new THREE.Scene();
+ 
+    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.z = 1000;
+    scene.add( camera );
+ 
+    geometry = new THREE.CubeGeometry( 200, 200, 200 );
+    material = new THREE.MeshLambertMaterial( { color: 0xaa6666, wireframe: false } );
+    mesh = new THREE.Mesh( geometry, material );
+    //scene.add( mesh );
+    cubeSineDriver = 0;
+ 
+    THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
+
+    light = new THREE.DirectionalLight(0xffffff,0.5);
+    light.position.set(-1,0,1);
+    scene.add(light);
+  
+    smokeTexture = THREE.ImageUtils.loadTexture('smoke.png');
+    smokeMaterial = new THREE.MeshLambertMaterial({color: 0xffffff, map: smokeTexture, transparent: true});
+    smokeGeo = new THREE.PlaneGeometry(300,300);
+    smokeParticles = [];
+
+
+    for (p = 0; p < 150; p++) {
+        var particle = new THREE.Mesh(smokeGeo,smokeMaterial);
+        particle.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*1000-100);
+        particle.rotation.z = Math.random() * 360;
+        scene.add(particle);
+        smokeParticles.push(particle);
+    }
+ 
+    document.querySelector('.smoke').appendChild( renderer.domElement );
+ 
+}
+ 
+function animate() {
+ 
+    // note: three.js includes requestAnimationFrame shim
+    delta = clock.getDelta();
+    requestAnimationFrame( animate );
+    evolveSmoke();
+    render();
+}
+ 
+function evolveSmoke() {
+    var sp = smokeParticles.length;
+    while(sp--) {
+        smokeParticles[sp].rotation.z += (delta * 0.2);
+    }
+}
+
+function render() {
+ 
+    mesh.rotation.x += 0.005;
+    mesh.rotation.y += 0.01;
+    cubeSineDriver += .01;
+    mesh.position.z = 100 + (Math.sin(cubeSineDriver) * 500);
+    renderer.render( scene, camera );
+ 
+}
+
+  </script>
+</body>
+
+</html>
