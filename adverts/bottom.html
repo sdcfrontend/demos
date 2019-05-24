@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .advert-boundary {
+      bottom: 0;
+      height: auto;
+      position: fixed;
+      z-index: 99;
+      transition: transform 0.25s
+    }
+
+    .advert--inview {
+      transform: translateY(100%)
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap"></div>
+  </header>
+  <nav class="main-nav block">
+    <div class="wrap"></div>
+  </nav>
+
+  
+  <div class="advert-boundary advert--inview">
+    <div class="advert-banner-wrap">
+        <div class="advert-banner"></div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
+      <div class="tile tile-hero"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile-advert">
+        <div class="advert-mpu advert-mpu--sticky"></div>
+      </div>
+    </div>
+
+    <h2 class="title block wrap">Latest News</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+
+    <h2 class="title block wrap">Video</h2>
+    <div class="tile-group grid block-large wrap wrap--no-padding">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+    </div>
+  </main>
+  <div class="footer"></div>
+</body>
+
+<script>
+  (function(){
+    var banner = document.querySelector('.advert-banner-wrap');
+    var mpu = document.querySelector('.tile-advert');
+    var boundary = document.querySelector('.advert-boundary');
+
+    function tick(){
+      if(window.pageYOffset > screen.height){
+        boundary.classList.remove('advert--inview');
+      }
+
+      else {
+        boundary.classList.add('advert--inview')
+      }
+      
+      setTimeout(function(){
+        requestAnimationFrame(tick);
+      }, 1000/6)
+    }
+
+    tick();
+
+  })();
+</script>
+</html>
