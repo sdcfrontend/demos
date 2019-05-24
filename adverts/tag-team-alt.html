@@ -27,7 +27,7 @@
 
 
   <main class="main">
-    <div class="tile-group grid block-large wrap wrap--no-padding">
+    <div class="tile-group tile-group--mpu grid block-large wrap wrap--no-padding">
       <div class="tile tile-hero"></div>
       <div class="tile"></div>
       <div class="tile"></div>
@@ -77,6 +77,11 @@
     }
 
     tick();
+
+    var random = Math.floor(Math.random() * 111);
+    if((random%2) === 0) {
+      mpu.querySelector('div').style.height = "600px";
+    };
 
   })();
 </script>
