@@ -15,18 +15,116 @@
       top: 0%;
       left: 0%;
       z-index: 9;
-      opacity: 0.25;
+      opacity: 0.5;
       transform: translateY(0%);
       pointer-events: none;
-      contain: layout
+      contain: layout;
+      filter: invert(1);
+      mix-blend-mode: multiply;
     }
 
-    .smoke canvas {
+    .smoke > canvas {
       position: absolute;
       height: 100%!important;
       width: 100%!important;
       top: 0;
     }
+
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.smog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  contain: strict;
+  pointer-events: none;
+  overflow: hidden;
+  animation: fade 120s;
+  animation-fill-mode: both;
+}
+
+.smog-stack {
+/*   border: 1px solid red; */
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png) no-repeat center;
+  background-size: contain;
+  width: 150%;
+  min-width: 700px;
+  padding-bottom: 100%;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  animation: rotate 60s linear infinite;
+  opacity: 0.4;
+  will-change: all;
+  contain: strict;
+
+}
+
+.smog-stack:nth-child(2){
+  left: -20%;
+  top: -60%;
+  animation-direction: reverse;
+  aniamtion-duration: 50s;
+}
+
+.smog-stack:nth-child(3){
+  left: -40%;
+  top: -20%;
+  animation-duration: 80s;
+}
+
+.smog-stack:nth-child(4){
+  top: -10%;
+  left: -35%;
+  animation-direction: reverse;
+    animation-duration: 90s;
+
+
+}
+
+.smog-stack:nth-child(5){
+  top: -30%;
+  left: 35%;
+    animation-duration: 40s;
+
+}
+
+.smog-stack:nth-child(6){
+  top: -20%;
+  left: 20%;
+  animation-direction: reverse;
+  animation-duration: 55;
+}
+
+.smog-stack:nth-child(7){
+  top: 20%;
+  left: -10%;
+  animation-duration: 120s;
+}
+
+.smog-stack:nth-child(8){
+  top: 50%;
+  left: -50%;
+  animation-direction: reverse;
+  animation-duration: 100s;
+/*   outline: 10px solid red */
+}
   </style>
 </head>
 <body>
@@ -89,15 +187,23 @@
     </div>
   </main>
   <div class="footer"></div>
-  <div class="smoke">
-  </div>
+  <div class="smog">
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+      <div class="smog-stack"></div>
+    </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
   <script>
     var camera, scene, renderer,
     geometry, material, mesh;
  
-init();
-animate(); 
+// init();
+// animate(); 
 
 function init() {
    
@@ -121,7 +227,7 @@ function init() {
  
     THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
 
-    light = new THREE.DirectionalLight(0xffffff,1);
+    light = new THREE.DirectionalLight(0xffffff,0.5);
     light.position.set(-1,0,1);
     scene.add(light);
   
