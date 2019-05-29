@@ -46,15 +46,15 @@
     }
 
     function updatePosition(x,y,z) {
-      let transX = 0;
+      let transX = x;
       let transY = ((y-90)/90)*200;
-      let transZ = -z;
+      let transZ = 0;
 
 
 
       console.log( transX, transY, transZ );
 
-      document.getElementById("tilting-pic").style.transform = "scale(1.2) translate3d("+transX+"px,"+transY+"px, 0) rotate("+transZ+"deg)";
+      document.getElementById("tilting-pic").style.transform = "scale(1.2) translate3d("+transX+"px,"+transY+"px, 0) rotate(0deg)";
     }
 
     if (window.DeviceOrientationEvent) {
