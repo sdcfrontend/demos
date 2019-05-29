@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+  html {
+  font-family: sans-serif;
+  font-size: 20px
+}
+
+.sf-rockets__dial-box {
+  max-width: 500px;
+  margin: auto
+}
+
+.sf-rockets__dial {
+  padding-bottom: 100%;
+  border-radius: 50%;
+  background: #ccc;
+  position: relative;
+  box-shadow: inset 0 0 0px 20px #aaa
+}
+
+.sf-rockets__dial span {
+  background: #eee;
+  padding: 3px;
+  position: absolute;
+  transform
+}
+
+.sf-rockets__dial span:nth-child(3){
+  top: 0;
+  left: 50%;
+  transform: rotate(180deg) translateX(50%)
+}
+
+.sf-rockets__dial span:nth-child(2){
+  top: 50%;
+  right: 0;
+  transform: rotate(-90deg) translate(25%, 40%)
+}
+
+.sf-rockets__dial span:nth-child(1){
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.sf-rockets__dial span:nth-child(4){
+  top: 50%;
+  left: 0;
+  transform: rotate(90deg) translate(-25%, 40%)
+}
+
+.sf-rockets__slide {
+  border: 3px solid hotpink;
+  height: 40px;
+  overflow: auto;
+  transform: translateY(-100%);
+  -webkit-overflow-scroll: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+
+.sf-rockets__dial-slide::-webkit-scrollbar {
+  display: none;
+} 
+
+.sf-rockets__segments {
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  scroll-snap-align: start;
+}
+</style>
+</head>
+<body>
+  
+    <div class="sf-rockets__dial-box">
+  
+        <div class="sf-rockets__dial">
+          <span>1960</span>
+          <span>1970</span>
+          <span>1980</span>
+          <span>1990</span>
+          
+        </div>
+        
+        <div class="sf-rockets__slide">
+          <div class="sf-rockets__segments"></div>
+          <div class="sf-rockets__segments"></div>
+          <div class="sf-rockets__segments"></div>
+          <div class="sf-rockets__segments"></div>
+        </div>
+      </div>
+
+</body>
+
+<script>
+var dial = document.querySelector('.sf-rockets__dial');
+var slider = document.querySelector('.sf-rockets__slide');
+
+slider.onscroll = function(){
+  // console.log(slider.scrollWidth - slider.offsetWidth);
+  var degs = (360 / ((slider.scrollWidth - slider.offsetWidth)) * slider.scrollLeft) * 0.75;
+  dial.style.cssText = "transform: rotate(" + (degs) + "deg)";
+}
+</script>
+</html>

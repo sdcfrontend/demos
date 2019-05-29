@@ -68,6 +68,13 @@
     var banner = document.querySelector('.advert-banner-wrap');
     var mpu = document.querySelector('.tile-advert');
     var boundary = document.querySelector('.advert-boundary');
+    var ghost = document.querySelector('.advert-banner-wrap--ghost');
+
+    var random = Math.floor(Math.random()*111);
+    if((random%2) === 1){
+      banner.querySelector('div').style.height = "250px";
+      ghost.style.minHeight = "250px"; 
+    }
 
     function tick(){
       var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
@@ -79,6 +86,8 @@
     }
 
     tick();
+
+
 
   })();
 </script>
