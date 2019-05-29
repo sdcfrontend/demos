@@ -46,11 +46,12 @@
     }
 
     function updatePosition(x,y,z) {
-      let transX = x;
+      let transX = (x/90)*200;
       let transY = ((y-90)/90)*200;
       let transZ = 0;
 
-
+      // const transXlimited = Math.min(Math.max(parseInt(transX), 100), -100);
+      // const transYlimited = Math.min(Math.max(parseInt(transY), 200), -200);
 
       console.log( transX, transY, transZ );
 
