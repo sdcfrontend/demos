@@ -9,8 +9,11 @@
   <style>
     #tilting-pic {
       display: block;
-      width: 100%;
+      width: 200vw;
       height: auto;
+      position: absolute;
+      top: -50px;
+      left: -50vw
     }
   </style>
 </head>
@@ -23,6 +26,8 @@
       document.getElementById("doeSupported").innerHTML = [e.alpha, e.gamma, e.beta].join('<br>');
 
       updatePosition(e.alpha, e.gamma, e.beta);
+
+      // document.getElementById("tilting-pic").style.transform = "translate3d("+e.alpha+"px,"+e.gamma+"px,"+e.beta+"px)";
     }
 
     function updatePosition(x,y,z) {
@@ -30,16 +35,13 @@
       let transY = y;
       let transZ = z;
 
-      document.getElementById("tilting-pic").style.transform = "translate3d(",transX,",",transY,",",transZ,")";
+      document.getElementById("tilting-pic").style.transform = "translate3d("+transX+"px,"+transY+"px,"+transZ+"px)";
     }
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', deviceOrientationHandler, false);
     }
 </script>
-
-
-
 
   <img id="tilting-pic" src="pic.png" alt="whoa">
 
