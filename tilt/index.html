@@ -12,7 +12,7 @@
 
     function deviceOrientationHandler(e){
       console.log(e);
-      document.getElementById("doeSupported").innerText = [e.alpha, e.gamma, e.beta].join(',');
+      document.getElementById("doeSupported").innerHTML = [e.alpha, e.gamma, e.beta].join('<br>');
 
     }
     if (window.DeviceOrientationEvent) {
