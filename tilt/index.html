@@ -7,35 +7,50 @@
   <title>Document</title>
 
   <style>
+    #doeSupported {
+      position: relative;
+      z-index: 10;
+      color: white;
+      font-weight: bold;
+      opacity: 0.5;
+    }
     #tilting-pic {
       display: block;
       width: 200vw;
       height: auto;
       position: absolute;
       top: -50px;
-      left: -50vw
+      left: -50vw;
+      transform-origin: center;
     }
   </style>
 </head>
 <body>
   <div id="doeSupported"></div>
+  <img id="tilting-pic" src="pic.png" alt="whoa">
   <script>
 
     function deviceOrientationHandler(e){
       console.log(e);
       document.getElementById("doeSupported").innerHTML = [e.alpha, e.gamma, e.beta].join('<br>');
 
-      updatePosition(e.alpha, e.gamma, e.beta);
+      //e.alpha == left/right tilt
+      //e.beta  == up/down tilt
+      //e.gamma == rotate
 
-      // document.getElementById("tilting-pic").style.transform = "translate3d("+e.alpha+"px,"+e.gamma+"px,"+e.beta+"px)";
+      updatePosition(e.alpha, e.beta, e.gamma);
     }
 
     function updatePosition(x,y,z) {
-      let transX = x;
-      let transY = y;
-      let transZ = z;
+      let transX = 0;
+      let transY = (y/90)*400;
+      let transZ = -z;
 
-      document.getElementById("tilting-pic").style.transform = "translate3d("+transX+"px,"+transY+"px,"+transZ+"px)";
+
+
+      console.log( transX, transY, transZ );
+
+      document.getElementById("tilting-pic").style.transform = "translate3d("+transX+"px,"+transY+"px, 0) rotate("+transZ+"deg)";
     }
 
     if (window.DeviceOrientationEvent) {
@@ -43,7 +58,7 @@
     }
 </script>
 
-  <img id="tilting-pic" src="pic.png" alt="whoa">
+  
 
 </body>
 </html>
