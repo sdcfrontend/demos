@@ -25,6 +25,7 @@
       top: -50px;
       left: -50vw;
       transform-origin: center;
+      transform: scale(1.2) translate3d(0,0, 0) rotate(0deg);
     }
   </style>
 </head>
@@ -46,14 +47,14 @@
 
     function updatePosition(x,y,z) {
       let transX = 0;
-      let transY = ((y-90)/90)*400;
+      let transY = ((y-90)/90)*200;
       let transZ = -z;
 
 
 
       console.log( transX, transY, transZ );
 
-      document.getElementById("tilting-pic").style.transform = "translate3d("+transX+"px,"+transY+"px, 0) rotate("+transZ+"deg)";
+      document.getElementById("tilting-pic").style.transform = "scale(1.2) translate3d("+transX+"px,"+transY+"px, 0) rotate("+transZ+"deg)";
     }
 
     if (window.DeviceOrientationEvent) {
