@@ -7,50 +7,83 @@
   <title>Document</title>
 
   <style>
+
+    * {
+      box-sizing: border-box
+    }
+
   html {
   font-family: sans-serif;
   font-size: 20px
 }
 
-.sf-rockets__dial-box {
-  max-width: 500px;
-  margin: auto
+.sf-rockets__dial {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.sf-rockets__dial {
+.sf-rockets__dial-col {
+  border: 1px solid red;
+  width: 50%;
+  position: relative;
+}
+
+.sf-rockets__dial-wheel {
   padding-bottom: 100%;
   border-radius: 50%;
   background: #ccc;
   position: relative;
-  box-shadow: inset 0 0 0px 20px #aaa
 }
 
-.sf-rockets__dial span {
+.sf-rockets__dial-wheel-content {
+  background: orange;
+  position: absolute;
+  width: 78%;
+  height: 78%;
+  left: 11%;
+  top: 11%;
+  border-radius: 50%;
+  overflow: hidden
+}
+
+.sf-rockets__dial-wheel-content-items {
+  border: 3px solid red;
+}
+
+.sf-rockets__dial-wheel-content-item {
+  height: 100%;
+}
+
+.sf-rockets__dial-wheel-tick {
   background: #eee;
   padding: 3px;
   position: absolute;
   transform
 }
 
-.sf-rockets__dial span:nth-child(3){
+.sf-rockets__dial-wheel-tick:nth-child(3){
   top: 0;
   left: 50%;
   transform: rotate(180deg) translateX(50%)
 }
 
-.sf-rockets__dial span:nth-child(2){
+.sf-rockets__dial-wheel-tick:nth-child(2){
   top: 50%;
   right: 0;
   transform: rotate(-90deg) translate(25%, 40%)
 }
 
-.sf-rockets__dial span:nth-child(1){
+.sf-rockets__dial-wheel-tick:nth-child(1){
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0)
 }
 
-.sf-rockets__dial span:nth-child(4){
+.sf-rockets__dial-wheel-tick:nth-child(4){
   top: 50%;
   left: 0;
   transform: rotate(90deg) translate(-25%, 40%)
@@ -58,9 +91,11 @@
 
 .sf-rockets__slide {
   border: 3px solid hotpink;
-  height: 40px;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
   overflow: auto;
-  transform: translateY(-100%);
   -webkit-overflow-scroll: touch;
   overscroll-behavior: contain;
   scroll-behavior: smooth;
@@ -68,6 +103,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
   white-space: nowrap;
   scroll-snap-type: x mandatory;
+  width: 100%;
 }
 
 .sf-rockets__dial-slide::-webkit-scrollbar {
@@ -84,16 +120,30 @@
 </head>
 <body>
   
-    <div class="sf-rockets__dial-box">
-  
-        <div class="sf-rockets__dial">
-          <span>1960</span>
-          <span>1970</span>
-          <span>1980</span>
-          <span>1990</span>
+    <div class="sf-rockets__dial">
+
+      <div class="sf-rockets__dial-col sf-rockets__dial-col1">
+        <div class="sf-rockets__dial-wheel">
+          <span class="sf-rockets__dial-wheel-tick">1960</span>
+          <span class="sf-rockets__dial-wheel-tick">1970</span class="sf-rockets__dial-wheel-tick">
+          <span class="sf-rockets__dial-wheel-tick">1980</span>
+          <span class="sf-rockets__dial-wheel-tick">1990</span>
         </div>
+        <div class="sf-rockets__dial-wheel-content">
+          <div class="sf-rockets__dial-wheel-content-items">
+            <div class="sf-rockets__dial-wheel-content-item">1</div>
+            <div class="sf-rockets__dial-wheel-content-item">2</div>
+            <div class="sf-rockets__dial-wheel-content-item">3</div>
+            <div class="sf-rockets__dial-wheel-content-item">4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sf-rockets__dial-col sf-rockets__dial-col2">
+        content
+      </div>
         
-        <div class="sf-rockets__slide">
+      <div class="sf-rockets__slide">
           <div class="sf-rockets__segments"></div>
           <div class="sf-rockets__segments"></div>
           <div class="sf-rockets__segments"></div>
@@ -104,7 +154,7 @@
 </body>
 
 <script>
-var dial = document.querySelector('.sf-rockets__dial');
+var dial = document.querySelector('.sf-rockets__dial-wheel');
 var slider = document.querySelector('.sf-rockets__slide');
 var segments = document.querySelectorAll('.sf-rockets__segments');
 
