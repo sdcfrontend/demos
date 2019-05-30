@@ -246,6 +246,12 @@ body.light {
   top: 18px;
 }
 
+.advert-mpu--float[class] {
+  position: static;
+  float: right;
+  margin: 0 0 1rem 1rem
+}
+
 .article-body {
   position: relative
 }
@@ -263,6 +269,12 @@ body.light {
   .advert-banner {
     width: 300px;
     height: 50px;
+  }
+
+  .advert-mpu--float[class] {
+    position: static;
+    float: none;
+    margin: 0 auto 1rem auto
   }
 }
 
@@ -331,7 +343,7 @@ body.light {
     position: sticky;
   }
 
-  .article-body > p {
+  .article-body:not(.article-body--center) > p {
     margin-left: 0
   }
 
@@ -350,13 +362,14 @@ body.light {
     position: absolute;
     right: 0;
     top: 0;
-    height: 50%;
+    height: 40%;
     /* outline: 2px solid orange */
   }
 
   .advert-container--split ~
   .advert-container--split {
     top: 50%;
+    height: 50%;
   }
   .advert-container--split
   .article-module--outbrain {
@@ -408,5 +421,50 @@ body.light {
 .article-module--teads {
   background: hotpink;
   color: #fff;
+}
+
+.hero {
+  background: #aaa;
+  position: relative;
+  display: flex;
+  max-height: calc(100vh - 150px);
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 2rem
+}
+
+.hero:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%
+}
+
+.live-blog-block {
+  background: #eee;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.live-blog-block li {
+  font-size: 18px;
+  margin-bottom: 0.5rem
+}
+
+.live-blog-entry {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.live-blog-entry:before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #ccc;
+  position: absolute;
+  left: 0;
 }
 

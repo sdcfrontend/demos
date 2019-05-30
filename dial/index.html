@@ -91,7 +91,6 @@
           <span>1970</span>
           <span>1980</span>
           <span>1990</span>
-          
         </div>
         
         <div class="sf-rockets__slide">
@@ -107,10 +106,12 @@
 <script>
 var dial = document.querySelector('.sf-rockets__dial');
 var slider = document.querySelector('.sf-rockets__slide');
+var segments = document.querySelectorAll('.sf-rockets__segments');
+
+var index = 0;
 
 slider.onscroll = function(){
-  // console.log(slider.scrollWidth - slider.offsetWidth);
-  var degs = (360 / ((slider.scrollWidth - slider.offsetWidth)) * slider.scrollLeft) * 0.75;
+  var degs = (360 / ((slider.scrollWidth - slider.offsetWidth)) * slider.scrollLeft) * (1 - (1/segments.length));
   dial.style.cssText = "transform: rotate(" + (degs) + "deg)";
 }
 </script>
