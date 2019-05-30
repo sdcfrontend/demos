@@ -51,11 +51,13 @@
 }
 
 .sf-rockets__dial-wheel-content-items {
-  border: 3px solid red;
+  height: 100%;
+  transition: 0.33s transform;
 }
 
 .sf-rockets__dial-wheel-content-item {
   height: 100%;
+  text-align: center;
 }
 
 .sf-rockets__dial-wheel-tick {
@@ -157,12 +159,24 @@
 var dial = document.querySelector('.sf-rockets__dial-wheel');
 var slider = document.querySelector('.sf-rockets__slide');
 var segments = document.querySelectorAll('.sf-rockets__segments');
+var content = document.querySelector('.sf-rockets__dial-wheel-content-items');
 
 var index = 0;
 
 slider.onscroll = function(){
+  var pos = Math.round(((1 / slider.scrollWidth) * slider.scrollLeft) * (segments.length));
   var degs = (360 / ((slider.scrollWidth - slider.offsetWidth)) * slider.scrollLeft) * (1 - (1/segments.length));
   dial.style.cssText = "transform: rotate(" + (degs) + "deg)";
+  console.log(pos);
+  if(pos!==index){
+    index = pos;
+    setcontentposition(index);
+  };
+}
+
+function setcontentposition(pos){
+  
+  content.style.cssText = "transform: translateY("+(-100*(pos))+"%)"
 }
 </script>
 </html>
