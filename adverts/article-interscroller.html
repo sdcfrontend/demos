@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+  <header class="header">
+    <div class="wrap"></div>
+  </header>
+  <nav class="main-nav">
+    <div class="wrap"></div>
+  </nav>
+
+  
+  <div class="advert-boundary">
+    <div class="advert-banner-wrap block">
+        <div class="advert-banner"></div>
+    </div>
+  </div>
+
+  <div class="advert-banner-wrap advert-banner-wrap--ghost block"></div>
+
+
+  <main class="article wrap">
+    <div class="wrap--narrow block">
+      <h1 class="article-headline block">Thomas Cook slumps to £1.46bn half-year loss as Brexit hits holiday demand</h1>
+      <p class="article-snippet">Shares plunge after the firm warns of continuing pressure and says the delay to the UK's EU departure has not boosted bookings.</p>
+    </div>
+    <div class="article-media block">
+      <img intrinsicsize="1600 x 900" src="https://e3.365dm.com/19/05/2048x1152/skynews-thomas-cook-plane-aircraft_4657535.jpg?bypass-service-worker&20190503101552" alt="">
+    </div>
+    <div class="article-body block">
+    <p class="wrap--narrow">Thomas Cook has reported a half-year loss of £1.46bn as it counted the cost of Brexit uncertainty causing UK consumers to delay holiday plans.
+
+    <p class="wrap--narrow">Shares opened 21% lower after it also warned that "challenging" trading over the peak summer season would put profits for the remainder of the financial year under pressure.
+    <style>
+
+      @media all and (max-width: 600px){
+       .interscroller {
+          position: relative;
+          height: 100vh;
+          margin-bottom: 2rem;
+          border-top: 6px solid #ccc;
+          border-bottom: 6px solid #ccc
+        }
+
+        .interscroller-mask {
+          position: absolute;
+          height: 100vh;
+          width: 100%;
+          clip: rect(auto,auto,auto,auto);
+          overflow-y: scroll;
+        }
+
+        .interscroller-content {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center
+        }
+      }
+
+      </style>
+      <div class="interscroller">
+        <div class="interscroller-mask">
+          <div class="interscroller-content">
+            <div class="advert-mpu"></div>
+          </div>
+        </div>
+      </div>
+
+    <p class="wrap--narrow">The bulk of the loss for the six months to the end of March was caused by Thomas Cook's decision to write down the value of part of the business by £1.1bn in the light of the weak trading environment.
+
+    <div class="article-module article-module--skybet wrap--narrow" data-title="Sky Bet"></div>
+    <p class="wrap--narrow">CEO Peter Fankhauser said: "There is now little doubt that the Brexit process has led many UK customers to delay their holiday plans for the summer."
+
+    <p class="wrap--narrow">Thomas Cook said political uncertainty related to Britain's exit from the EU had led to "softer demand for summer holidays across the industry" while tough competition has meant it had to increase cut-price offers.
+
+    <p class="wrap--narrow">It added that that there had been "no tangible change to booking patterns in recent weeks since the announcement of a delay to Brexit".
+
+    <div class="article-module article-module--outbrain wrap--narrow" data-title="Outbrain"></div>
+    <p class="wrap--narrow">The half-year result covers the winter period when travel companies traditionally struggle to turn a profit, but was still several times larger than the loss of £303m for the same period a year ago.
+    <div class="article-module article-module--teads wrap--narrow" data-title="Teads"></div>
+
+    <p class="wrap--narrow">It also blamed the currency changes and the timing of Easter as its revenues for the six-month period fell by 6% to £3.02bn.
+    <div class="article-module wrap--narrow" data-title="Also see"></div>
+
+    <p class="wrap--narrow">Thomas Cook has already closed 21 stores, put up its airline business for sale - confirming today that it had received "multiple bids" for the business - and reduced capacity as it faces up to the challenges facing the sector.
+
+    <p class="wrap--narrow">It has also now agreed a new £300m banking facility with lenders to help see it through this winter.
+    <div class="article-module wrap--narrow" data-title="Live on Sky"></div>
+
+    <p class="wrap--narrow">Mr Fankhauser said that "continued competitive pressure resulting from consumer uncertainty" combined with higher fuel and hotel costs was "creating further headwinds to our progress over the remainder of the year".
+
+    <p class="wrap--narrow">The results come a day after rival TUI also cited Brexit as it reported widening half-year losses.
+
+    <p class="wrap--narrow">EasyJet said last month that "unanswered questions" over Britain's departure from the EU were weakening demand.
+      <div class="article-module article-module--skybet wrap--narrow" data-title="Sky Bet"></div>
+
+      <div class="article-outbrain article-module article-module--outbrain wrap--narrow" data-title="Outbrain">
+          
+
+      </div>
+
+      <div class="article-module wrap--narrow" data-title="Around Sky Sports"></div>
+
+
+  </main>
+  <div class="footer"></div>
+</body>
+
+<script>
+  (function(){
+    var banner = document.querySelector('.advert-banner-wrap');
+    var mpu = document.querySelector('.advert-mpu');
+    var boundary = document.querySelector('.advert-boundary');
+
+    function tick(){
+      mpu.classList.remove('advert-mpu--sticky');
+      var offset = (mpu.getBoundingClientRect().top + window.pageYOffset) - (boundary.getBoundingClientRect().top + window.pageYOffset);
+      boundary.style.cssText = "height: " + (offset) + "px";  
+      mpu.classList.add('advert-mpu--article-sticky');
+    }
+
+    tick();
+
+    window.onresize = function(){
+      requestAnimationFrame(tick)
+    }
+
+  })();
+</script>
+</html>
