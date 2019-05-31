@@ -27,7 +27,6 @@
 }
 
 .sf-rockets__col {
-  border: 1px solid red;
   width: 50%;
   position: relative;
 }
@@ -92,7 +91,6 @@
 }
 
 .sf-rockets__slide {
-  border: 3px solid hotpink;
   height: 50%;
   position: absolute;
   bottom: 0;
@@ -106,6 +104,7 @@
   white-space: nowrap;
   scroll-snap-type: x mandatory;
   width: 100%;
+  z-index: 2;
 }
 
 .sf-rockets__dial-slide::-webkit-scrollbar {
@@ -121,6 +120,22 @@
 
 .sf-rockets__tab[aria-hidden="true"] {
   display: none
+}
+
+.sf-rockets__dial-nav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3
+}
+
+.sf-rockets__dial-nav[data-direction="prev"]{
+  
+}
+
+.sf-rockets__dial-nav[data-direction="next"]{
+  right: 0;
+  left: auto;
 }
 </style>
 </head>
@@ -144,8 +159,15 @@
           </div>
         </div>
 
-        <button class="sf-rockets__dial-nav">prev</button>
-        <button class="sf-rockets__dial-nav">next</button>
+        <div class="sf-rockets__slide">
+            <div class="sf-rockets__segments"></div>
+            <div class="sf-rockets__segments"></div>
+            <div class="sf-rockets__segments"></div>
+            <div class="sf-rockets__segments"></div>
+          </div>
+
+        <button class="sf-rockets__dial-nav" data-direction="prev" disabled>prev</button>
+        <button class="sf-rockets__dial-nav" data-direction="next">next</button>
       </div>
 
       <div class="sf-rockets__dial-col">
@@ -155,12 +177,7 @@
         <div class="sf-rockets__tab" role="tabpanel" id="rockets-tab4" aria-hidden="true">tab4</div>
       </div>
         
-      <div class="sf-rockets__slide">
-          <div class="sf-rockets__segments"></div>
-          <div class="sf-rockets__segments"></div>
-          <div class="sf-rockets__segments"></div>
-          <div class="sf-rockets__segments"></div>
-        </div>
+     
       </div>
 
 </body>
@@ -171,6 +188,7 @@ var slider = document.querySelector('.sf-rockets__slide');
 var segments = document.querySelectorAll('.sf-rockets__segments');
 var content = document.querySelector('.sf-rockets__dial-content-items');
 var tabpanels = document.querySelectorAll('.sf-rockets__tab');
+var buttons = document.querySelectorAll('.sf-rockets__dial-nav');
 
 var index = 0;
 
@@ -178,7 +196,6 @@ slider.onscroll = function(){
   var pos = Math.round(((1 / slider.scrollWidth) * slider.scrollLeft) * (segments.length));
   var degs = (360 / ((slider.scrollWidth - slider.offsetWidth)) * slider.scrollLeft) * (1 - (1/segments.length));
   dial.style.cssText = "transform: rotate(" + (degs) + "deg)";
-  console.log(pos);
   if(pos!==index){
     index = pos;
     setcontentposition(index);
@@ -186,16 +203,54 @@ slider.onscroll = function(){
   };
 }
 
+buttons.forEach(function(button){
+  button.onclick = nav;
+})
+
 function setcontentposition(pos){
   content.style.cssText = "transform: translateY("+(-100*(pos))+"%)"
 }
 
 function settabs(pos){
+  console.log(pos);
+
   tabpanels.forEach(function(item){
     item.setAttribute('aria-hidden', true);
   });
 
   tabpanels[pos].removeAttribute('aria-hidden');
+}
+
+function setslider(pos){
+  slider.scrollLeft = segments[0].offsetWidth * pos
+}
+
+function nav(){
+  
+  var next = this.getAttribute('data-direction') === "next";
+
+  buttons.forEach(function(button){
+    button.removeAttribute('disabled');
+  });
+
+  if(next){
+    index++;
+    if(index > segments.length-2){
+      index = (segments.length - 1);
+      buttons[1].setAttribute('disabled', true)
+    }
+  }
+
+  else {
+    index--;
+    if(index < 1){
+      index = 0;
+      buttons[0].setAttribute('disabled', true)
+    }
+  }
+
+  setslider(index)
+
 }
 </script>
 </html>
