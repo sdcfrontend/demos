@@ -105,6 +105,8 @@
   scroll-snap-type: x mandatory;
   width: 100%;
   z-index: 2;
+  /* outline: 2px solid red; */
+  opacity: 0;
 }
 
 .sf-rockets__dial-slide::-webkit-scrollbar {
@@ -127,6 +129,10 @@
   left: 0;
   bottom: 0;
   z-index: 3
+}
+
+.sf-rockets__dial-nav[disabled] {
+  opacity: 0.5
 }
 
 .sf-rockets__dial-nav[data-direction="prev"]{
@@ -200,6 +206,7 @@ slider.onscroll = function(){
     index = pos;
     setcontentposition(index);
     settabs(index);
+    setbuttonstate(index);
   };
 }
 
@@ -212,7 +219,6 @@ function setcontentposition(pos){
 }
 
 function settabs(pos){
-  console.log(pos);
 
   tabpanels.forEach(function(item){
     item.setAttribute('aria-hidden', true);
@@ -225,19 +231,30 @@ function setslider(pos){
   slider.scrollLeft = segments[0].offsetWidth * pos
 }
 
-function nav(){
-  
-  var next = this.getAttribute('data-direction') === "next";
+function setbuttonstate(pos){
 
   buttons.forEach(function(button){
     button.removeAttribute('disabled');
   });
 
+  if(pos === 0) {
+    buttons[0].setAttribute('disabled', true)
+  }
+
+  if(pos === (segments.length -1)){
+    buttons[1].setAttribute('disabled', true)
+  }
+}
+
+function nav(){
+  
+  var next = this.getAttribute('data-direction') === "next";
+
   if(next){
     index++;
     if(index > segments.length-2){
       index = (segments.length - 1);
-      buttons[1].setAttribute('disabled', true)
+      
     }
   }
 
@@ -245,10 +262,10 @@ function nav(){
     index--;
     if(index < 1){
       index = 0;
-      buttons[0].setAttribute('disabled', true)
     }
   }
 
+  setbuttonstate(index);
   setslider(index)
 
 }
