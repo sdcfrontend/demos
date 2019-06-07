@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: sans-serif;
+      max-width: 670px;
+      margin: 0 auto;
+      background: black;
+      color: white
+    }
+
+    /* copy styles from here */
+
+    .sf-quiz {
+      text-align: center;
+      margin-bottom: 5em;
+      padding-bottom: 5em;
+      border-bottom: 1px dashed white
+    }
+
+    .sf-quiz__options {
+      display: flex;
+      list-style: none
+    }
+
+    .sf-quiz__option {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sf-quiz__option-button {
+      appearance: none;
+      background: none;
+      border: none;
+      display: block;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      color: inherit;
+      font-size: inherit;
+      cursor: pointer
+    }
+
+    .sf-quiz__option-button > img {
+      max-width: 90%;
+    }
+
+    .sf-quiz__answer {
+      display: none
+    }
+
+    .sf-quiz[data-answered]
+    .sf-quiz__answer {
+      display: block;
+    }
+
+    /* answered question */
+    .sf-quiz[data-answered]
+    .sf-quiz__option-button[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* highlight correct answer */
+    .sf-quiz[data-answered]
+    .sf-quiz__option-button[data-a] {
+      outline: 3px solid green;
+      opacity: 1
+    }
+
+    .sf-quiz[data-answered="correct"]
+    .sf-quiz__answer:before {
+      content: "Correct! - "
+    }
+
+    .sf-quiz[data-answered="wrong"]
+    .sf-quiz__answer:before {
+      content: "Wrong! - "
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <div class="sf-quiz" data-key="quiz-1">
+    <div class="sf-quiz__body">
+      <p class="sf-quiz__question">Which computer was the most powerful</p>
+      <ul class="sf-quiz__options">
+        <li class="sf-quiz__option">
+          <button class="sf-quiz__option-button" data-a>
+            <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+            <span>NASA moon lander<br>1969</span>
+          </button>
+        </li>
+        <li class="sf-quiz__option">
+          <button class="sf-quiz__option-button">
+            <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+            <span>NASA moon lander<br>1969</span>
+          </button>
+        </li>
+        <li class="sf-quiz__option">
+          <button class="sf-quiz__option-button">
+            <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+            <span>NASA moon lander<br>1969</span>
+          </button>
+        </li>
+      </ul>
+      <p class="sf-quiz__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti natus pariatur quisquam architecto quia vitae, aut iste voluptates cumque, delectus perferendis hic? Sequi, ipsam fuga non sit impedit id!</p>
+    </div>
+  </div>
+
+  <div class="sf-quiz" data-key="quiz-1">
+      <div class="sf-quiz__body">
+        <p class="sf-quiz__question">Which computer was the most powerful</p>
+        <ul class="sf-quiz__options">
+          <li class="sf-quiz__option">
+            <button class="sf-quiz__option-button">
+              <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+              <span>NASA moon lander<br>1969</span>
+            </button>
+          </li>
+          <li class="sf-quiz__option">
+            <button class="sf-quiz__option-button" data-a>
+              <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+              <span>NASA moon lander<br>1969</span>
+            </button>
+          </li>
+          <li class="sf-quiz__option">
+            <button class="sf-quiz__option-button">
+              <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+              <span>NASA moon lander<br>1969</span>
+            </button>
+          </li>
+        </ul>
+        <p class="sf-quiz__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti natus pariatur quisquam architecto quia vitae, aut iste voluptates cumque, delectus perferendis hic? Sequi, ipsam fuga non sit impedit id!</p>
+      </div>
+    </div>
+
+    <div class="sf-quiz" data-key="quiz-1">
+        <div class="sf-quiz__body">
+          <p class="sf-quiz__question">Which computer was the most powerful</p>
+          <ul class="sf-quiz__options">
+            <li class="sf-quiz__option">
+              <button class="sf-quiz__option-button">
+                <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+                <span>NASA moon lander<br>1969</span>
+              </button>
+            </li>
+            <li class="sf-quiz__option">
+              <button class="sf-quiz__option-button">
+                <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+                <span>NASA moon lander<br>1969</span>
+              </button>
+            </li>
+            <li class="sf-quiz__option">
+              <button class="sf-quiz__option-button" data-a>
+                <img intrinsicsize="500x500" src="https://i.ya-webdesign.com/images/gameboy-transparent-4.png" alt="">
+                <span>NASA moon lander<br>1969</span>
+              </button>
+            </li>
+          </ul>
+          <p class="sf-quiz__answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti natus pariatur quisquam architecto quia vitae, aut iste voluptates cumque, delectus perferendis hic? Sequi, ipsam fuga non sit impedit id!</p>
+        </div>
+      </div>
+  
+</body>
+
+<script>
+  (function () {
+    
+    var quizzes = document.querySelectorAll('.sf-quiz');
+
+    quizzes.forEach(function(quiz){
+      var options = quiz.querySelectorAll('.sf-quiz__option-button');
+      options.forEach(function(option){
+
+        option.onclick = function(){
+
+          this.setAttribute('data-selection', true);
+          quiz.setAttribute('data-answered', this.hasAttribute('data-a') ? "correct" : "wrong");
+
+          options.forEach(function(item){
+            item.setAttribute('disabled', 'disabled');
+          })
+        }
+
+      })
+    })
+  })()
+</script>
+</html>

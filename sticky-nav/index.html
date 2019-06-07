@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
+    .sf-moon-nav {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+
+    /* outline: 1px dashed blue; */
+    }
+
+    .sf-moon-nav__list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 4rem;
+        height: 98px;
+
+        /* outline: 1px dashed red; */
+    }
+
+    .sf-moon-nav__list li {
+        display: block;
+        position: relative;
+
+        /* outline: 1px dashed orange; */
+    }
+    .sf-moon-nav__list a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 0.8rem;
+        /* height: 0;
+        padding-top: 100%; */
+        
+    }
+
+    .sf-moon-nav__list a:hover div,
+    .sf-moon-nav__list a:focus div,
+    .sf-moon-nav__list .active div {
+        border-color: currentColor;
+    }
+
+    .sf-moon-nav__list a:hover,
+    .sf-moon-nav__list a:focus,
+    .sf-moon-nav__list .active {
+        color: #00B3DB;
+    }
+
+    .sf-moon-nav__list span {
+        position: absolute;
+        top: -45px;
+        white-space: nowrap;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 1.5rem;
+    }
+
+    .sf-moon-nav__list div {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        border: 2px dashed currentColor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: black;
+    }
+
+    .sf-moon-nav__list .active {
+        font-size: 1rem;
+    }
+
+    .sf-moon-nav__list .active div {
+        width: 98px;
+        height: 98px;
+    }
+
+    .header,
+    .footer {
+      height: 400px;
+      background: #aaa;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: black;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .block {
+      height: 100vh;
+    }
+
+    /* sticky nav css below */
+    .sf-sticky-nav {
+      position: sticky;
+      top: 15px;
+      transition: transform 0.75s 0.5s
+    }
+
+    .sf-sticky-nav[data-hide="true"]{
+      transform: translateY(calc(-100% - 15px))
+    }
+
+    .sf-sticky-nav__shim {
+      height: 1px;
+      background: hotpink
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header"></div>
+  <style data-role="sticky-nav-css"></style>
+  <div class="sf-sticky-nav__shim" data-role="sticky-nav-shim"></div>
+  <div class="sf-sticky-nav" data-role="sticky-nav">
+    <nav class="sf-sticky-nav__target sf-moon-nav site-wrap site-wrap-padding">
+      <ul class="sf-moon-nav__list">
+        <li data-role="sticky-nav-item"><a class="active" href="#intro">
+          <span>Intro</span>
+          <div></div>
+        </a></li>
+        <li data-role="sticky-nav-item"><a href="#the-moon">
+          <span>The Moon</span>
+          <div></div>
+        </a></li>
+        <li data-role="sticky-nav-item"><a href="#rocket-technology">
+          <span>Rocket Technology</span>
+          <div></div>
+        </a></li>
+        <li data-role="sticky-nav-item"><a href="#astronauts">
+          <span>Astronauts</span>
+          <div></div>
+        </a></li>
+        <li data-role="sticky-nav-item"><a href="#space-suits">
+          <span>Space Suits</span>
+          <div></div>
+        </a></li> 
+      </ul>
+    </nav>
+  </div>
+
+  <div class="block"></div>
+  <h2 data-role="sticky-nav-segment" id="intro">Header 1</h2>
+  <div class="block"></div>
+  <h2 data-role="sticky-nav-segment" id="the-moon">Header 2</h2>
+
+  <div class="block"></div>
+  <h2 data-role="sticky-nav-segment" id="rocket-technology">Header 3</h2>
+
+  <div class="block"></div>
+  <h2 data-role="sticky-nav-segment" id="astronauts">Header 4</h2>
+
+  <div class="block"></div>
+  <h2 data-role="sticky-nav-segment" id="space-suits">Header 5</h2>
+  <div class="block"></div>
+<div class="footer"></div>
+</body>
+<script>
+  var stickynavshim = document.querySelector('[data-role="sticky-nav-shim"]');
+  var stickynav = document.querySelector('[data-role="sticky-nav"]');
+  var stickysegments = document.querySelectorAll('[data-role="sticky-nav-segment"]');
+  var stickycss = document.querySelector('[data-role="sticky-nav-css"]');
+
+  var stuck = false;
+
+  function setsticky(){
+    requestAnimationFrame(function(){
+      stuck = ((this.oldScroll > this.scrollY) || stickynavshim.getBoundingClientRect().top > -100);
+      stickynav.setAttribute('data-hide', !stuck);
+      this.oldScroll = this.scrollY;
+      stickycss.textContent = 'li[data-role="sticky-nav-item"]:nth-child(-n+'+(setnavstate())+') a{color:#00B3DB}'
+    })
+  }
+
+  function setnavstate(){
+    var index = 1;
+    stickysegments.forEach(function(segment, pos){
+      if(segment.getBoundingClientRect().top < (window.innerHeight/2)){
+        index = (pos+1)
+      }
+    })
+
+    return index;
+  }
+
+  window.onscroll = setsticky;
+  setsticky();
+</script>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      min-height: 200vh
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .container--mpu {
+      position: relative;
+      width: 300px;
+    }
+
+    .container-ghost {
+      margin-bottom: 24px;
+      min-height: 90px;
+    }
+
+    .container-boundary {
+      position: absolute;
+      width: 100%;
+      outline: 3px solid black;
+      pointer-events: none;
+    }
+
+    .container--mpu
+    .container-boundary {
+      height: 70vh;
+      position: relative
+    }
+
+    .container-stick {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: all
+    }
+
+    .advert {
+      min-width: 728px;
+      height: 90px;
+      background: hotpink;
+    }
+
+    .advert:hover {
+      height: 200px;
+    }
+
+    .advert--mpu {
+      min-width: 300px;
+      height: 250px;
+      background: hotpink;
+    }
+
+    @media all and (max-width: 730px){
+      .advert {
+        min-width: 300px;
+        height: 50px;
+        background: hotpink;
+      }
+    }
+
+    .advert:hover {
+      height: 150px;
+    }
+
+    iframe {
+      height: 100%;
+      position: absolute;
+      width: 1px;
+      left: 0;
+      top: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    .block {
+      background: #ccc;
+      padding-bottom: 50%    
+    }
+  </style>
+</head>
+<body>
+<div class="container container--banner">
+  <div class="container-boundary">
+    <div class="container-stick">
+      <iframe src="" frameborder="0"></iframe>
+      <div class="advert"></div>
+    </div>
+  </div>
+</div>
+<div class="container-ghost"></div>
+
+<div class="block"></div>
+
+<div class="container container--mpu">
+  <div class="container-boundary">
+    <div class="container-stick">
+      <iframe src="" frameborder="0"></iframe>
+      <div class="advert advert--mpu"></div>
+    </div>
+  </div>
+</div>
+
+<div class="block"></div>
+<script>
+  var adverts = document.querySelectorAll('.container');
+  var ghost = document.querySelector('.container-ghost');
+  var iframe = document.querySelector('iframe');
+  var resizetimer;
+  iframe.contentWindow.document.open();
+  iframe.contentWindow.document.write(`
+    <script>window.onresize = function(){
+      var h = window.innerHeight;
+      window.parent.setghost(h);
+    }<\/script>
+  `);
+  iframe.contentWindow.document.close();
+
+  function setdiff(ad1, ad2){
+    var diff = adverts[ad2].getBoundingClientRect().top - adverts[ad1].getBoundingClientRect().top;
+    requestAnimationFrame(function(){
+      adverts[ad1].querySelector('.container-boundary').style.height = (diff + "px");
+    })
+  }
+
+  function setghost(height){
+    ghost.style.height = height + "px";
+    setdiff(0,1);
+  }
+
+  setdiff(0,1);
+
+  window.addEventListener('resize', function(){
+    clearTimeout(resizetimer);
+    resizetimer = setTimeout(function() {
+      setdiff(0,1)
+    }, 250);
+  })
+</script>
+</body>
+</html>
