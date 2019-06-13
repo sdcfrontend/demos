@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://news.sky.com/css/min/site-index-pages-5067bbf0bc44ebf80feb613279d95a3b.css">
+<style>
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+  }
+
+  body {
+    min-height: 500vh;
+  }
+
+  .block {
+    min-height: 50vh;
+    margin: 0 0 2em;
+    background: #aaa
+  }
+
+  .mpu {
+    width: 300px;
+    height: 250px;
+    background: hotpink
+  }
+
+  .outbrain {
+    background: orange;
+    height: 400px;
+    width: 300px;
+  }
+
+  .leaderboard-wrap {
+    background: #ccc;
+    padding: 1em 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .leaderboard {
+    width: 768px;
+    height: 90px;
+    background: hotpink
+  }
+
+  .leaderboard:hover {
+    height: 150px;
+  }
+
+  [data-role="tag-team"] {
+    outline: 1px solid blue;
+  }
+
+  .sdc-site-layout {
+    min-height: 200vh;
+    position: relative;
+  }
+
+  .sdc-site-layout__col {
+    outline: 2px solid red;
+  }
+
+  .sdc-site-layout-sticky-region,
+  .sdc-site-layout-sticky-region__ghost[class][class] {
+    position: relative
+  }
+
+  .sdc-site-layout-sticky-region__target {
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    pointer-events: all;
+  }
+
+  .sdc-site-layout-sticky-region[data-format="mpu"]
+  .sdc-site-layout-sticky-region__target {
+    top: 16px
+  }
+
+  .sdc-site-layout-sticky-region[data-format="leaderboard"] {
+    position: absolute;
+    width: 100%;
+    min-height: 126px;
+    pointer-events: none;
+  }
+
+  .sdc-site-layout-sticky-region__listener {
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  @media all and (min-width: 1024px) {
+    .sdc-site-layout--alt1 {
+      display: flex;
+    }
+
+    .sdc-site-layout--alt1
+    .sdc-site-layout__col1 {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    .sdc-site-layout--alt1
+    .sdc-site-layout__col2 {
+      width: 300px;
+    }
+
+    .sdc-site-layout-sticky-region[data-format="mpu"] {
+      position: absolute;
+      width: 300px;
+      right: 0;
+      top: 0;
+      height: 100%;
+      outline: 1px solid blue
+    }
+
+    .sdc-site-layout-sticky-region[data-split="2"] {
+      height: 40%;
+    }
+
+    .sdc-site-layout-sticky-region[data-split="2"] ~ 
+    .sdc-site-layout-sticky-region[data-split="2"] {
+      top: 60%;
+    }
+  }
+
+  @media all and (max-width: 1023px) {
+    
+    .sdc-site-layout--alt1 {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .sdc-site-layout-sticky-region[data-interscroller="true"]
+    .sdc-site-layout-sticky-region__target {
+      position: relative;
+      height: 100vh;
+      /* bordeR: 2px solid red; */
+      width: 100%;
+    }
+
+    .sdc-site-layout-sticky-region[data-interscroller="true"]
+    .sdc-site-layout-sticky-region__mask {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      clip: rect(auto,auto,auto,auto);
+      overflow-y: scroll;
+    }
+
+    .sdc-site-layout-sticky-region[data-interscroller="true"]
+    .sdc-site-layout-sticky-region__content {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sdc-site-layout-sticky-region__content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+</style>
+<body>
+
+  <div class="sdc-site-layout-sticky-region" data-format="leaderboard" data-role="tag-team">
+    <div class="sdc-site-layout-sticky-region__target">
+      <iframe class="sdc-site-layout-sticky-region__listener" frameborder="0" data-role="ghost-region-listener" data-controls="ghost-1"></iframe>
+      <div class="leaderboard-wrap">
+        <div class="leaderboard"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sdc-site-layout-sticky-region sdc-site-layout-sticky-region__ghost" id="ghost-1" data-format="leaderboard"></div>
+
+  <div class="block"></div>
+
+  <div class="site-wrap site-wrap-padding">
+    <div class="sdc-site-layout sdc-site-layout--alt1">
+      <div class="sdc-site-layout__col sdc-site-layout__col1">
+        
+        <div class="sdc-site-layout-sticky-region" data-split="2" data-interscroller="true" data-format="mpu" data-role="tag-team">
+          <div class="sdc-site-layout-sticky-region__target">
+            <div class="sdc-site-layout-sticky-region__mask">
+              <div class="sdc-site-layout-sticky-region__content">
+                <!-- content -->
+                <div class="mpu"></div>
+                <!-- content -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sdc-site-layout-sticky-region" data-split="2" data-format="mpu">
+          <div class="sdc-site-layout-sticky-region__target">
+            <div class="sdc-site-layout-sticky-region__mask">
+              <div class="sdc-site-layout-sticky-region__content">
+                <!-- content -->
+                <div class="outbrain"></div>
+                <!-- content -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="sdc-site-layout__col sdc-site-layout__col2">2</div>
+    </div>
+  </div>
+  
+</body>
+
+<script>
+
+  function hasSticky(){
+    var d = document.createElement("div");
+    d.style.cssText = "position:sticky;position:-webkit-sticky";
+    return (d.style.position === "sticky");
+  }
+
+
+  (function(){
+
+    // get tag team elements
+    var tagteam = document.querySelectorAll('[data-role="tag-team"]');
+    var regionobserver = document.querySelector('[data-role="ghost-region-listener"]');
+    var resizetimer;
+    
+    function setTagTeamOffset(el1, el2){
+      
+      if(!el1 || !el2 || !hasSticky()) {
+        return;
+      }
+
+      var diff = el2.getBoundingClientRect().top - el1.getBoundingClientRect().top;
+      console.log(el2.getBoundingClientRect().top);
+      requestAnimationFrame(function(){
+        el1.style.height = (diff + "px");
+      });
+
+    }
+
+    function setGhostObserver(iframe){
+
+      var controls = document.querySelector('#'+iframe.getAttribute('data-controls'));
+      if(!controls){
+        return;
+      }
+      
+      iframe.resize = function(height){
+        controls.style.height = height + "px";
+      };
+
+      iframe.contentWindow.document.open();
+      iframe.contentWindow.document.write("<script>window.onresize = function(){var h = window.innerHeight; window.frameElement.resize(h);}<\/script>");
+      iframe.contentWindow.document.close();
+
+    }
+
+    setTagTeamOffset(tagteam[0], tagteam[1]);
+    setGhostObserver(regionobserver);
+
+    window.addEventListener('resize', function(){
+
+      clearTimeout(resizetimer);
+      resizetimer = setTimeout(function() {
+        setTagTeamOffset(tagteam[0], tagteam[1]);
+      }, 250);
+
+    })
+
+  })();
+  
+</script>
+</html>
