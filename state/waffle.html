@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div style="width: 100%;max-width: 100%;" class="waffle__chart" data-role="waffle-chart" data-json="{&quot;1&quot;:{&quot;label&quot;:&quot;European&quot;,&quot;value&quot;:&quot;52&quot;},&quot;3&quot;:{&quot;label&quot;:&quot;Not sure&quot;,&quot;value&quot;:&quot;17&quot;},&quot;5&quot;:{&quot;label&quot;:&quot;Not European&quot;,&quot;value&quot;:&quot;31&quot;}}"></div>
+</body>
+
+<script src="assets/js/waffle-chart.js"></script>
+
+<script>
+
+  var waffles = document.querySelectorAll('[data-role="waffle-chart"]');
+  checkWaffleCharts(waffles);
+</script>
+
+</html>
