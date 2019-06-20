@@ -47,7 +47,8 @@
   }
 
   .leaderboard {
-    width: 768px;
+    width: 100%;
+    max-width: 768px;
     height: 90px;
     background: hotpink
   }
@@ -56,7 +57,7 @@
     height: 150px;
   }
 
-  [data-role="tag-team"] {
+  [data-role="sticky-region"] {
     outline: 1px solid blue;
   }
 
@@ -83,7 +84,7 @@
     pointer-events: all;
   }
 
-  .sdc-site-layout-sticky-region[data-format="mpu"]
+  .sdc-site-layout-sticky-region[data-format*="mpu"]
   .sdc-site-layout-sticky-region__target {
     top: 16px
   }
@@ -119,7 +120,7 @@
       width: 300px;
     }
 
-    .sdc-site-layout-sticky-region[data-format="mpu"] {
+    .sdc-site-layout-sticky-region[data-format="floated-mpu"] {
       position: absolute;
       width: 300px;
       right: 0;
@@ -149,6 +150,7 @@
     .sdc-site-layout-sticky-region__target {
       position: relative;
       height: 100vh;
+      max-height: 620px;
       /* bordeR: 2px solid red; */
       width: 100%;
     }
@@ -157,6 +159,7 @@
     .sdc-site-layout-sticky-region__mask {
       position: absolute;
       height: 100vh;
+      max-height: 620px;
       width: 100%;
       clip: rect(auto,auto,auto,auto);
       overflow-y: scroll;
@@ -184,7 +187,7 @@
 </style>
 <body>
 
-  <div class="sdc-site-layout-sticky-region" data-format="leaderboard" data-role="tag-team">
+  <div class="sdc-site-layout-sticky-region" data-format="leaderboard" data-role="sticky-region">
     <div class="sdc-site-layout-sticky-region__target">
       <iframe class="sdc-site-layout-sticky-region__listener" frameborder="0" data-role="ghost-region-listener" data-controls="ghost-1"></iframe>
       <div class="leaderboard-wrap">
@@ -192,6 +195,7 @@
       </div>
     </div>
   </div>
+  
   <div class="sdc-site-layout-sticky-region sdc-site-layout-sticky-region__ghost" id="ghost-1" data-format="leaderboard"></div>
 
   <div class="block"></div>
@@ -200,7 +204,7 @@
     <div class="sdc-site-layout sdc-site-layout--alt1">
       <div class="sdc-site-layout__col sdc-site-layout__col1">
         
-        <div class="sdc-site-layout-sticky-region" data-split="2" data-interscroller="true" data-format="mpu" data-role="tag-team">
+        <div class="sdc-site-layout-sticky-region" data-split="2" data-interscroller="true" data-format="floated-mpu" data-role="sticky-region">
           <div class="sdc-site-layout-sticky-region__target">
             <div class="sdc-site-layout-sticky-region__mask">
               <div class="sdc-site-layout-sticky-region__content">
@@ -212,7 +216,7 @@
           </div>
         </div>
 
-        <div class="sdc-site-layout-sticky-region" data-split="2" data-format="mpu">
+        <di*v class="sdc-site-layout-sticky-region" data-split="2" data-format="floated-mpu">
           <div class="sdc-site-layout-sticky-region__target">
             <div class="sdc-site-layout-sticky-region__mask">
               <div class="sdc-site-layout-sticky-region__content">
@@ -243,7 +247,7 @@
   (function(){
 
     // get tag team elements
-    var tagteam = document.querySelectorAll('[data-role="tag-team"]');
+    var tagteam = document.querySelectorAll('[data-role="sticky-region"]');
     var regionobserver = document.querySelector('[data-role="ghost-region-listener"]');
     var resizetimer;
     

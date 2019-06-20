@@ -83,7 +83,7 @@
 
 
         <style>
-            .gravity {
+            .sf-gravity-switch {
               padding: 6px 12px;
               font-size: 20px;
               background: hotpink;
@@ -167,7 +167,8 @@ document.cookie = cookie;
  })();</script><script>(function () { window.__cmp && typeof window.__cmp.hasConsentData === "function" && window.__cmp.hasConsentData(); })();</script><script>(function () { var d = new Date(); d.setTime(d.getTime()+90*24*60*60*1000); document.cookie='_sp_enable_dfp_personalized_ads=true; Path=/; Max-Age=7776000; expires='+d.toGMTString()+';'; })();</script><script src="aboK2IxLz4pPTM-Lyk0PWdAZVlOKy0tOT84PikzLmVeW1hOKyw6ZTArNj0vTjwvMC88PC88ZU49Lz09Mzk4KTwvMC88PC88ZU49Lz09Mzk4KTcvPT0rMS8pLTk_OD5lWE40QGVaVlhWWVldXU4tLi1lQTM4LjlBVik9OilWNz0xVikzOD4vPDgrNlYtLi1ZTjI8LzBlMj4-Oj1NW2lNWm5NWm44L0E9Vj01Q1YtOTdNWm5OLTk4PS84Pn19cWxl"></script><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-33/html/container.html"></head>
 <body class="">
 
-    <button class="gravity">Disable gravity</button>
+    <button class="sf-gravity-switch">Disable gravity</button>
+
             <div class="sdc-site-header sdc-site-header--news" data-component-name="sdc-site-header" role="banner" data-init="true">
         
           <div class="sdc-site-header__inner">
@@ -2827,34 +2828,54 @@ Upload date:July 16, 2015" class="sdc-site-tile__image" data-lazy-loaded="true">
     
     <div data-component-name="sdc-site-consent-management" data-campaign-id="2371" data-privacy-manager-id="5be44b558258ec45a3975501" data-selector="a[href=&#39;#privacy-options&#39;]" data-init="true">
     </div>
-
+    <style>
+      .will-change {
+        will-change: transform
+      }
+    </style>
     <script>
-        document.querySelector('.gravity').onclick = function(){
-            this.classList.toggle('on');
-        
-            if(!this.classList.contains('on')){
-              this.textContent = 'Disable gravity';
-              document.querySelectorAll('.sdc-site-tiles__item,.sdc-site-header,.sdc-site-component-header--h1,.sdc-site-component-header--h2,.sdc-site-au').forEach(function(item, index){
-                item.style.cssText = "transition: transform 20s; transform: none";
-              })
-            }
-        
-            else {
-              this.textContent = 'Enable gravity';
-              document.querySelectorAll('.sdc-site-tiles__item,.sdc-site-header,.sdc-site-au,.sdc-site-component-header--h1,.sdc-site-component-header--h2').forEach(function(item, index){
-                var w = window.innerWidth;
-                var direction = 1;
-                var dims = item.getBoundingClientRect();
-                if(dims.left<(w/2)){
-                  direction = -1;
-                }
-        
+      (function(){
+
+        var targets = document.querySelectorAll(".sdc-site-tiles__item,.sdc-site-header,.sdc-site-component-header--h1,.sdc-site-component-header--h2,.sdc-site-au");
+
+        targets.forEach(function(item){
+          item.classList.add('will-change');
+        })
+
+        document.querySelector('.sf-gravity-switch').onclick = function(){
+
+          this.classList.toggle('on');
+
+          if(!this.classList.contains('on')){
+
+            this.textContent = 'Disable gravity';
+
+            targets.forEach(function(item, index){
+              item.style.cssText = "transition: transform 2s; transform: none";
+            })
+          }
+
+          else {
+
+            this.textContent = 'Enable gravity';
+
+            targets.forEach(function(item, index){
+
+              var direction = 1;
+              if(Math.floor(Math.random()*1111) % 2){
+                directiomn = -1;
+              }
+              var dims = item.getBoundingClientRect();
+
               item.style.cssText = "transition: transform 500s ease-out; transform: translateX("+(((Math.floor(Math.random() * 1000))+1000)*direction)+"px) rotate("+((Math.floor(Math.random() * 720) - 180)*direction)+"deg) translateY(-10000px) scale("+(1+Math.random())+"); z-index:"+index;
-        
-              })
-        
+
+            })
+
           }
         }
-        </script>
+
+      })()
+
+    </script>
 
 <div id="dtmEvent"></div><script type="text/javascript" src="n.js"></script><script type="text/javascript" src="n(1).js"></script><iframe id="google_osd_static_frame_9946411747081" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="saved_resource(8).html"></iframe></body></html>
