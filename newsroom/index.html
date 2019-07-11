@@ -50,19 +50,19 @@
         left: 0;
         height: 100%;
         width: 100%;
-        scroll-behavior: smooth;
-        overscroll-behavior-x: contain;
+        overflow: auto;
+        overscroll-behavior: contain;
         scroll-snap-type: x mandatory;
-        scrollbar-width: thin;
+        white-space: nowrap;
+        scroll-behavior: smooth;
         -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;
       }
 
       .carousel-item {
         vertical-align: top;
         position: relative;
         display: inline-flex;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         scroll-snap-stop: always;
         width: 100vw;
         height: 100%;
