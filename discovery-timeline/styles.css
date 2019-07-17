@@ -1,3 +1,14 @@
+@font-face{
+  font-family:"skytext";
+  src:url(sky-regular.woff?r=20181120) format("woff");
+}
+
+@font-face{
+  font-family:"skytext";
+  src:url(sky-medium.woff?r=20181120) format("woff");
+  font-weight:700
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +18,8 @@
 html {
   scroll-behavior: smooth;
   font-size: calc(12px + 1vw);
-  color: #4a4a4a
+  color: #4a4a4a;
+  font-family: "skytext";
 }
 
 @media all and (min-width: 800px) {
@@ -15,10 +27,6 @@ html {
     font-size: 20px;
   }
 }
-
-body {
-  font-family: "Sky Text"
-} 
 
 .wrap {
   max-width: 960px;
