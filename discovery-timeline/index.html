@@ -11,99 +11,84 @@
 
   <body>
     <div class="wrap">
-      <ul class="timeline-list">
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
-        <li class="timeline-list__item">
-          <a href="#" class="timeline-list__link">
-            <span>August 2nd 2017</span><strong>1st cafe feedback competition</strong>
-          </a>
-        </li>
+      <ul class="timeline-list" data-role="list">
+
       </ul>
     </div>
   </body>
+  <script type="html/template" data-role="template">
+    <li class="timeline-list__item">
+      <button #{disabled} class="timeline-list__link" data-role="timeline-item" aria-controls="timeline-item-#{id}" data-hascontent="#{hascontent}">
+        <span>#{date}</span> <strong>#{title}<span class="timeline-list__icon"></span></strong>
+      </button>
+      <div class="timeline-list__content" aria-hidden="true" id="timeline-item-#{id}" data-role="timeline-content">
+        <p>#{content}</p><a href="#{link}">#{link}</a></div>
+    </li>
+  </script>
+  <script>
+    (function () {
+
+      var listnode = document.querySelector('[data-role="list"]');
+      var template = document.querySelector('[data-role="template"]').textContent;
+      var lines = [];
+
+      function renderlist(list) {
+        var html = "";
+        list.forEach(function (item, index) {
+          var hascontent = (!!item.content || !!item.link);
+          var isdisabled = hascontent ? "" : "disabled";
+
+          html += template
+            .replace(/#{date}/g, item.date)
+            .replace(/#{title}/g, item.title)
+            .replace(/#{content}/g, item.body)
+            .replace(/#{link}/g, item.link)
+            .replace(/#{hascontent}/g, hascontent)
+            .replace(/#{id}/g, (index + 1))
+            .replace(/#{disabled}/g, isdisabled);
+        });
+
+        listnode.innerHTML = html;
+      }
+
+      function renderevents() {
+        var items = document.querySelectorAll('[data-role="timeline-item"]');
+        items.forEach(function (item) {
+          item.onclick = function () {
+            item.classList.toggle('on');
+            var id = item.getAttribute('aria-controls');
+            var content = document.querySelector('#' + id);
+
+            item.setAttribute('aria-expanded', item.classList.contains('on'));
+            content.setAttribute('aria-hidden', !item.classList.contains('on'));
+          }
+        })
+      }
+
+      function parseentry(entry) {
+        var data = {};
+        entry = entry.split('\n');
+        entry.forEach(function (line) {
+          line = line.split(/:(.+)/);
+          data[line[0].trim().toLowerCase()] = line[1].trim();
+        });
+        return data;
+      }
+
+      var entries;
+      fetch('content.txt').then(function (resp) {
+        return resp.text();
+      }).then(function (text) {
+        entries = text.split('\n\n');
+        entries.forEach(function (entry) {
+          lines.push(parseentry(entry));
+        });
+
+        renderlist(lines);
+        renderevents()
+      })
+    })();
+
+  </script>
 
 </html>

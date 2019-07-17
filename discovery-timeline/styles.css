@@ -39,23 +39,23 @@ html {
   padding: 0
 }
 
-.timeline-list__item {
-  display: flex;
-}
-
 .timeline-list__link {
   display: flex;
   width: 100%;
-  min-height: 3rem;
   color: inherit;
   text-decoration: none;
   line-height: 1.16;
-  background: #eee;
-  padding: 1px 0
+  -webkit-appearance: none;
+  border: 0;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.timeline-list__link:not([disabled]) {
+  cursor: pointer
 }
 
 .timeline-list__link > span {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -63,8 +63,15 @@ html {
   padding-right: calc(2% + 1vw);
   position: relative;
   z-index: 1;
-  background: white;
+  height: 100%;
+  min-height: 3rem;
+  border-top: 1px solid #eee;
 } 
+
+.timeline-list__item:last-child
+.timeline-list__link > span {
+  border-bottom: 1px solid #eee
+}
 
 .timeline-list__link > span:after {
   content: "";
@@ -93,9 +100,9 @@ html {
   z-index: 3
 }
 
-
 .timeline-list__link > strong {
   height: 100%;
+  min-height: 3rem;
   display: flex;
   align-items: center;
   flex: 5;
@@ -106,5 +113,42 @@ html {
   border-right: 0;
   top:-1px;
   position: relative;
-  height: calc(100% + 2px)
+  height: calc(100% + 2px);
 } 
+
+.timeline-list__link[data-hascontent="false"]
+.timeline-list__icon {
+  display: none;
+}
+
+.timeline-list__icon {
+  position: absolute;
+  right: 0.75rem;
+  top: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzQgMzQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTYuMDIgMTIuNjdjLjAxLjE5NC4wODcuMzYyLjI0Ny41MjVsLjE4OC4xOTIgMTAuMDY1IDEwLjA2M2MuMTg4LjE5LjQ0LjI5NC43MDYuMjk0cy41MTgtLjEwNC43MDctLjI5M2wxMC4xMzUtMTAuMTM0LjEyMy0uMTI2Yy4xNjItLjE2My4yNC0uMzMyLjI0OC0uNTMuMDA2LS4xNzMtLjE1NS0uNDM4LS40NDItLjcyNS0uMTg3LS4xODctLjM4Ni0uMzY4LS41OS0uNTM3LS4wNS0uMDQtLjA5Ni0uMDc4LS4xMzgtLjExbC0uNDk2LjQ5NS05LjE5MyA5LjE5My0uMzU1LjM1NC0uMzU0LS4zNTQtOS4xOTctOS4xOTgtLjQ4NC0uNDg0Yy0uMDQzLjAzMy0uMDkuMDctLjE0LjExMi0uMjA0LjE2OC0uNDAyLjM0OC0uNTkuNTM2LS4yODUuMjg4LS40NDYuNTUzLS40NC43Mjd6Ii8+PC9zdmc+) no-repeat;
+  pointer-events: none;
+}
+
+.timeline-list__link[aria-expanded="true"]
+.timeline-list__icon {
+  transform: rotate(180deg)
+}
+
+.timeline-list__content[aria-hidden="true"] {
+  display: none;
+}
+
+.timeline-list__content[aria-hidden="false"] {
+  display: block;
+}
+
+.timeline-list__content {
+  text-align: center;
+  padding: 1rem 0
+}
+
+.timeline-list__content p {
+  margin-bottom: 1rem
+}
