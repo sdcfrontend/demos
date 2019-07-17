@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        list-style: none
+      }
+
+      html {
+        font-size: 16px;
+        font-family: sans-serif;
+        line-height: 1.4
+      }
+
+      body {
+        padding: 1em;
+      }
+
+      abbr span {
+        display: none;
+      }
+
+      abbr:after {
+        content: attr(data-title);
+      }
+
+      .menu[aria-hidden] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+
+
+    <ul>
+      <li><strong>Form:</strong> <span>145322</span></li>
+      <li><strong><abbr title="Weight"><span>W:</span></abbr></strong> 11-10</li>
+      <li><strong title="Age">A:</strong> 5</li>
+      <li><strong><abbr data-title="Official rating"><span></span></abbr></strong> 10</li>
+      <li><strong>Jockey:</strong> Mr Racer</li>
+      <li>
+        <button class="menu-button" aria-controls="menu" aria-expanded="false">Menu</button>
+        <ul class="menu" id="menu" aria-hidden="true">
+          <li>Menu item 1</li>
+          <li>Menu item 2</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+
+  <script>
+    document.querySelector('.menu-button').onclick = function () {
+      this.classList.toggle('selected');
+
+      if (this.classList.contains('selected')) {
+        this.setAttribute('aria-expanded', 'true');
+        document.querySelector('.menu').removeAttribute('aria-hidden');
+      }
+
+      else {
+        this.setAttribute('aria-expanded', 'false');
+        document.querySelector('.menu').setAttribute('aria-hidden', 'true');
+      }
+    }
+  </script>
+
+</html>

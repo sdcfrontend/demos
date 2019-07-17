@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(12px + 1vw);
+  color: #4a4a4a
+}
+
+@media all and (min-width: 800px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: "Sky Text"
+} 
+
+.wrap {
+  max-width: 960px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0
+}
+
+.timeline-list__item {
+  display: flex;
+}
+
+.timeline-list__link {
+  display: flex;
+  width: 100%;
+  min-height: 3rem;
+  color: inherit;
+  text-decoration: none;
+  line-height: 1.16;
+  background: #eee;
+  padding: 1px 0
+}
+
+.timeline-list__link > span {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 2;
+  padding-right: calc(2% + 1vw);
+  position: relative;
+  z-index: 1;
+  background: white;
+} 
+
+.timeline-list__link > span:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: #ef7d22;
+  right: 0;
+  top: -1px;
+  height: calc(100% + 2px);
+  z-index: 2
+}
+
+.timeline-list__link > span:before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 3px solid #ef7d22;
+  box-sizing: border-box;
+  right: 0;
+  transform: translateX(calc(50% - 1.5px));
+  z-index: 2;
+  border-radius: 50%;
+  z-index: 3
+}
+
+
+.timeline-list__link > strong {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 5;
+  padding-left: calc(4% + 1vw);;
+  background: #fff3ea;
+  border: 0.2em solid white; 
+  border-left: 0;
+  border-right: 0;
+  top:-1px;
+  position: relative;
+  height: calc(100% + 2px)
+} 
