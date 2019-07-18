@@ -3,10 +3,19 @@ Title: 1st cafe feedback competition
 Link: https://www.somelinkehere.com
 Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
+---
+
 Date: August 2nd 2017
 Title: 1st cafe feedback competition
+
+---
 
 Date: August 2nd 2017
 Title: 1st cafe feedback competition
 Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Body: Line 1 Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+
+Line 2 and then there were others who came
+
+Line 3 and so called me said
+
