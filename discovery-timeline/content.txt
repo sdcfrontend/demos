@@ -1,52 +1,122 @@
-Date: August 12 2019
-Title: Jimmy can edit
-Link: View Document | https://skyglobal-my.sharepoint.com/:b:/r/personal/jimmy_adams_sky_uk/Documents/Discovery/DinoSaw%20June%202019.pdf?csf=1&e=QdXm5p
-Body: *Some words in bold* Someother copy. _And here is something in italics_
+
+Date: July 24 2017
+Title: 1st Squad Discovery Sessions
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: July 13 2017
+Title: 1st Discovery App concept
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: July 10 2017
+Title: Designed the Discovery to Delivery process
+Body: Type here
+Link: View document | https://www.google.com
 Tags: Event, Milestone
 
 ---
 
 Date: Nov 1 2016
-Title: 1st Discovery Session
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
-
-Some more text here
-
-Some more text here
+Title: Joe Williams wins Head-to-Head Tournament
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
 
 ---
 
-Date: February 2017
-Title: Falling Down moment
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Date: May 2017
+Title: FSC Login peaked as a result of 1st Discovery Session
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: May 24 2017
+Title: 1st Head-to-Head Tournament Started
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: May 3 2017
+Title: Regular Discovery Session Begin
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: April 26 2017
+Title: Discovery Room Launch Party
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: April 18 2017
+Title: Mike joined the Discovery team
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: March 29 2017
+Title: Built the Discovery Room
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
+
+---
+
+Date: March 7 2017
+Title: 10 in 10 Weeks
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
 
 ---
 
 Date: March 1 2017
 Title: #discovery Slack channel created
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
 
 ---
 
-Date: March 7 2017
-Title: 10 Discovery Sessions in 10 weeks
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Date: Feb 2017
+Title: Jimmy loses faith
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
 
 ---
 
-Date: March 29 2017
-Title: Discovery Room launch party
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Date: Nov 4 2016
+Title: 1st Discovery Session
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
 
 ---
 
 Date: Nov 1 2016
-Title: Hey from the train
+Title: 1st Brief from Dave FSC logins
 Body: Type here
 Link: View document | https://www.google.com
 Tags: Event, Milestone
+
+---
+
+
