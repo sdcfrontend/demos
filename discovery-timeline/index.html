@@ -22,7 +22,7 @@
         <span>#{date}</span> <strong>#{title}<span class="timeline-list__icon"></span></strong>
       </button>
       <div class="timeline-list__content" aria-hidden="true" id="timeline-item-#{id}" data-role="timeline-content">
-        #{content}<a href="#{link}">#{link}</a></div>
+        #{content}<a href="#{link}" target="blank">#{linktext}</a></div>
     </li>
   </script>
   <script>
@@ -47,6 +47,17 @@
         return text;
       }
 
+      function parselink(link) {
+        link = link.split("|");
+        if (!link[1]) {
+          return link;
+        }
+
+        else {
+          return [link[0], link[1]]
+        }
+      }
+
       function renderlist(list) {
         var html = "";
         list.forEach(function (item, index) {
@@ -57,7 +68,8 @@
             .replace(/#{date}/g, item.date)
             .replace(/#{title}/g, item.title)
             .replace(/#{content}/g, parsetext(item.body))
-            .replace(/#{link}/g, item.link)
+            .replace(/#{link}/g, parselink(item.link)[1])
+            .replace(/#{linktext}/, parselink(item.link)[0])
             .replace(/#{hascontent}/g, hascontent)
             .replace(/#{id}/g, (index + 1))
             .replace(/#{disabled}/g, isdisabled);

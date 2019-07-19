@@ -51,6 +51,11 @@ html {
   font-family: inherit;
 }
 
+.timeline-list__link:active,
+.timeline-list__link:focus {
+  outline: none;
+}
+
 .timeline-list__link:not([disabled]) {
   cursor: pointer
 }
