@@ -45,7 +45,8 @@ Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
 ---
 
-Date: April 18 2017
-Title: Mike joined the Discovery team
-Link: https://www.somelinkehere.com
-Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Date: Nov 1 2016
+Title: Hey from the train
+Body: Type here
+Link: View document | https://www.google.com
+Tags: Event, Milestone
