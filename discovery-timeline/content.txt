@@ -1,4 +1,4 @@
-Date: Nov 1 2016
+Date: August 1 2018
 Title: 1st brief from Dave FSC logins
 Link: https://www.somelinkehere.com
 Body: *Some words in bold* Someother copy. _And here is something in italics_
