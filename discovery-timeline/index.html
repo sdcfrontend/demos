@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-<body>
-  <div class="wrap">
-    <ul class="timeline-list" data-role="list">
+  <body>
+    <div class="wrap">
+      <ul class="timeline-list" data-role="list">
 
-    </ul>
-  </div>
-</body>
-<script type="html/template" data-role="template">
+      </ul>
+    </div>
+  </body>
+  <script type="html/template" data-role="template">
     <li class="timeline-list__item">
       <button #{disabled} class="timeline-list__link" data-role="timeline-item" aria-controls="timeline-item-#{id}" data-hascontent="#{hascontent}">
         <span>#{date}</span> <strong>#{title}<span class="timeline-list__icon"></span></strong>
@@ -25,83 +25,98 @@
         #{content}<a href="#{link}">#{link}</a></div>
     </li>
   </script>
-<script>
-  (function () {
+  <script>
+    (function () {
 
-    var listnode = document.querySelector('[data-role="list"]');
-    var template = document.querySelector('[data-role="template"]').textContent;
-    var lines = [];
+      var listnode = document.querySelector('[data-role="list"]');
+      var template = document.querySelector('[data-role="template"]').textContent;
+      var lines = [];
 
-    function renderlist(list) {
-      var html = "";
-      list.forEach(function (item, index) {
-        var hascontent = (!!item.content || !!item.link);
-        var isdisabled = hascontent ? "" : "disabled";
-
-        html += template
-          .replace(/#{date}/g, item.date)
-          .replace(/#{title}/g, item.title)
-          .replace(/#{content}/g, item.body)
-          .replace(/#{link}/g, item.link)
-          .replace(/#{hascontent}/g, hascontent)
-          .replace(/#{id}/g, (index + 1))
-          .replace(/#{disabled}/g, isdisabled);
-      });
-
-      listnode.innerHTML = html;
-    }
-
-    function renderevents() {
-      var items = document.querySelectorAll('[data-role="timeline-item"]');
-      items.forEach(function (item) {
-        item.onclick = function () {
-          item.classList.toggle('on');
-          var id = item.getAttribute('aria-controls');
-          var content = document.querySelector('#' + id);
-
-          item.setAttribute('aria-expanded', item.classList.contains('on'));
-          content.setAttribute('aria-hidden', !item.classList.contains('on'));
+      function parsetext(text) {
+        if (!text) {
+          return
         }
+        text = text.replace(/\*(.+?)\*/g, function (item) {
+          return "<strong>" + item.replace(/\*/g, '') + "</strong>"
+        });
+
+        text = text.replace(/\_(.+?)\_/g, function (item) {
+          return "<em>" + item.replace(/\_/g, '') + "</em>"
+        });
+
+        return text;
+      }
+
+      function renderlist(list) {
+        var html = "";
+        list.forEach(function (item, index) {
+          var hascontent = (!!item.content || !!item.link);
+          var isdisabled = hascontent ? "" : "disabled";
+
+          html += template
+            .replace(/#{date}/g, item.date)
+            .replace(/#{title}/g, item.title)
+            .replace(/#{content}/g, parsetext(item.body))
+            .replace(/#{link}/g, item.link)
+            .replace(/#{hascontent}/g, hascontent)
+            .replace(/#{id}/g, (index + 1))
+            .replace(/#{disabled}/g, isdisabled);
+        });
+
+        listnode.innerHTML = html;
+      }
+
+      function renderevents() {
+        var items = document.querySelectorAll('[data-role="timeline-item"]');
+        items.forEach(function (item) {
+          item.onclick = function () {
+            item.classList.toggle('on');
+            var id = item.getAttribute('aria-controls');
+            var content = document.querySelector('#' + id);
+
+            item.setAttribute('aria-expanded', item.classList.contains('on'));
+            content.setAttribute('aria-hidden', !item.classList.contains('on'));
+          }
+        })
+      }
+
+      function parseentry(entry) {
+        var data = {};
+        entry = entry.split('\n');
+        entry.forEach(function (line) {
+          line = line.split(/:(.+)/);
+          if (line[1]) {
+            var content = line[1].trim();
+            if (line[0].match(/^body/i)) {
+              content = "<p>" + content + "</p>"
+            }
+            data[line[0].trim().toLowerCase()] = content;
+          }
+
+          else {
+            if (line[0].length) {
+              data['body'] += "<p>" + line[0] + "</p>"
+            }
+          }
+        });
+        return data;
+      }
+
+      var entries;
+      fetch('content.txt').then(function (resp) {
+        return resp.text();
+      }).then(function (text) {
+        text = text.trim();
+        entries = text.split('---');
+        entries.forEach(function (entry) {
+          lines.push(parseentry(entry.trim()));
+        });
+
+        renderlist(lines);
+        renderevents()
       })
-    }
+    })();
 
-    function parseentry(entry) {
-      var data = {};
-      entry = entry.split('\n');
-      entry.forEach(function (line) {
-        line = line.split(/:(.+)/);
-        if (line[1]) {
-          var content = line[1].trim();
-          if (line[0].match(/^body/i)) {
-            content = "<p>" + content + "</p>"
-          }
-          data[line[0].trim().toLowerCase()] = content;
-        }
-
-        else {
-          if (line[0].length) {
-            data['body'] += "<p>" + line[0] + "</p>"
-          }
-        }
-      });
-      return data;
-    }
-
-    var entries;
-    fetch('content.txt').then(function (resp) {
-      return resp.text();
-    }).then(function (text) {
-      text = text.trim();
-      entries = text.split('---');
-      entries.forEach(function (entry) {
-        lines.push(parseentry(entry.trim()));
-      });
-
-      renderlist(lines);
-      renderevents()
-    })
-  })();
-
-</script>
+  </script>
 
 </html>

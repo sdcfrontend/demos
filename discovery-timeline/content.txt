@@ -1,21 +1,51 @@
-Date: August 4th 2019
-Title: 1st cafe feedback competition
+Date: Nov 1 2016
+Title: 1st brief from Dave FSC logins
+Link: https://www.somelinkehere.com
+Body: *Some words in bold* Someother copy. _And here is something in italics_
+Tags: Event, Milestone
+
+---
+
+Date: Nov 1 2016
+Title: 1st Discovery Session
+Link: https://www.somelinkehere.com
+Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+
+Some more text here
+
+Some more text here
+
+---
+
+Date: February 2017
+Title: Falling Down moment
 Link: https://www.somelinkehere.com
 Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
 ---
 
-Date: August 2nd 2017
-Title: 1st cafe feedback competition
+Date: March 1 2017
+Title: #discovery Slack channel created
+Link: https://www.somelinkehere.com
+Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
 ---
 
-Date: August 2nd 2017
-Title: 1st cafe feedback competition
+Date: March 7 2017
+Title: 10 Discovery Sessions in 10 weeks
 Link: https://www.somelinkehere.com
-Body: Line 1 Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
+Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
-Line 2 and then there were others who came
+---
 
-Line 3 and so called me said
+Date: March 29 2017
+Title: Discovery Room launch party
+Link: https://www.somelinkehere.com
+Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
 
+---
+
+Date: April 18 2017
+Title: Mike joined the Discovery team
+Link: https://www.somelinkehere.com
+Body: Bssdf dfsd dfg dfg dfg dfg dfg g dg dgd gdfg
