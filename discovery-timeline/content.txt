@@ -1,6 +1,6 @@
 Date: August 12 2019
 Title: Jimmy can edit
-Link: Link text | https://skyglobal-my.sharepoint.com/:b:/r/personal/jimmy_adams_sky_uk/Documents/Discovery/DinoSaw%20June%202019.pdf?csf=1&e=QdXm5p
+Link: View Document | https://skyglobal-my.sharepoint.com/:b:/r/personal/jimmy_adams_sky_uk/Documents/Discovery/DinoSaw%20June%202019.pdf?csf=1&e=QdXm5p
 Body: *Some words in bold* Someother copy. _And here is something in italics_
 Tags: Event, Milestone
 
