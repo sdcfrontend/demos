@@ -127,7 +127,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   width: 20vw;
-  min-width: 85px;
+  /* min-width: 85px; */
   position: relative;
   z-index: 1;
   height: 100%;
@@ -160,7 +160,7 @@ body {
   z-index: 2;
   border-radius: 50%;
   z-index: 3;
-  background: linear-gradient(to left, #ed7723, #f4a229);
+  background: #f4a229;
 }
 
 .timeline-list__link > strong {
@@ -211,8 +211,8 @@ body {
 }
 
 .timeline-list__content {
-  text-align: center;
-  padding: 2rem 0;
+  text-align: left;
+  padding: 1.4rem calc(2% + 1vw) 1.8rem;
   background: #eee;
   margin: -1em 0 1em 20vw;
   border-radius: 8px;
@@ -222,6 +222,12 @@ body {
   font-size: 0.9rem
 }
 
+.timeline-list__content a {
+  text-decoration: none;
+  color: #ed7723;
+  font-weight: 600
+}
+
 .timeline-list__content p {
-  margin-bottom: 1rem
+  margin-bottom: 0.9rem
 }
