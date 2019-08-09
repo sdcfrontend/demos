@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-size: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    body {
+      font-size: 18px;
+      font-family: sans-serif;
+      color: #4a4a4a;
+      padding: 4em 0
+    }
+
+    .wrapper {
+      max-width: 1024px;
+      padding: 0 calc(8px + 2vw);
+      margin: 0 auto;
+    }
+
+    @media all and (max-width: 996px) {
+      .wrapper {
+        padding: 0 27px;
+      }
+    }
+
+    .article-header {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: calc(22px + 2vw);
+      line-height: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between
+    }
+
+    @media all and (min-width: 996px) {
+      .article-header {
+        font-size: 41px;
+      }
+    }
+
+    .article-header>* {
+      /* outline: 1px solid red; */
+    }
+
+    .article-header>h1 {
+      line-height: 1.2;
+      font-weight: 500;
+      font-size: 1em;
+      margin-bottom: 0.25em;
+    }
+
+    .article-header>h2 {
+      font-size: calc(4px + 0.5em);
+      font-weight: 500;
+      line-height: 1.4;
+      color: #707070;
+    }
+
+    .article-header>h1~*:not(h2),
+    .article-header>h2~* {
+      margin-top: 2em;
+    }
+
+    .article-header>h1+*:not(h2),
+    .article-header>h2+* {
+      /* width: 100% */
+    }
+
+    .article-header__tag[class] {
+      text-transform: uppercase;
+      list-style: none;
+      margin-bottom: 6px;
+      display: flex;
+    }
+
+    .article-header__tag-item {
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #ccc;
+      padding: 4px 9px;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .article-header__byline {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 1.2;
+      width: 100%;
+    }
+
+    .article-header__date {
+      font-size: 16px;
+      min-width: 280px
+    }
+
+    .article-header__topics {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-self: flex-end;
+      font-size: 16px;
+      max-width: 400px;
+    }
+
+    .article-header__topics>li:not(:last-child) {
+      margin-right: 0.25em
+    }
+
+    .article-header__topics-item {
+      font-size: 13px;
+      text-transform: uppercase;
+      background: #eee;
+      padding: 4px 9px;
+      border-radius: 10px;
+      display: block;
+      white-space: nowrap;
+      margin-bottom: 3px
+    }
+
+    .ticks {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="article-header">
+      <ul class="article-header__tag">
+        <li><a href="#" class="article-header__tag-item">Politics</a></li>
+      </ul>
+      <h1>Jeremy Corbyn asks for Boris Johnson to be blocked from forcing no-deal</h1>
+      <h2>Some fear that Boris Johnson will call an election date after the Brexit deadline in October has passed.
+      </h2>
+      <p class="article-header__byline">By Jon Craig, chief political correspondent</p>
+      <time class="article-header__date">Friday 9 August 2019 06:13, UK</time>
+      <ul class="article-header__topics">
+        <li><a href="#" class="article-header__topics-item">Brexit</a></li>
+        <li><a href="#" class="article-header__topics-item">Jeremy Corbyn</a></li>
+        <li><a href="#" class="article-header__topics-item">Boris Johnson</a></li>
+
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="ticks">
+    <label><input type="checkbox" name="" id="" checked> tag</label>
+    <label><input type="checkbox" name="" id="" checked> headline</label>
+    <label><input type="checkbox" name="" id="" checked> sub headline</label>
+    <label><input type="checkbox" name="" id="" checked> byline</label>
+    <label><input type="checkbox" name="" id="" checked> date</label>
+    <label><input type="checkbox" name="" id="" checked> topics</label>
+  </div>
+</body>
+<script>
+  var header = document.querySelector('.article-header');
+  var headeritems = document.querySelectorAll('.article-header > *');
+  var ticks = document.querySelectorAll('.ticks input');
+
+  ticks.forEach(function (item) {
+    item.onchange = function () {
+      ticks.forEach(function (items, index) {
+        if (items.checked) {
+          header.appendChild(headeritems[index])
+        }
+
+        else {
+          if (header.contains(headeritems[index])) {
+            header.removeChild(headeritems[index])
+          }
+        }
+      })
+    }
+  })
+</script>
+
+</html>
