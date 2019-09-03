@@ -256,9 +256,6 @@ body.light {
   position: relative
 }
 
-.article-body-inner {
-  margin-left: 0
-}
 
 @media all and (max-width: 730px){
 
@@ -317,6 +314,10 @@ body.light {
     float: right;
     margin: 0 0 1rem 1rem;
     top: 18px
+  }
+
+  .article-body-inner {
+    margin-left: 0
   }
 
   .advert-mpu--article-sticky {
@@ -387,6 +388,12 @@ body.light {
   }
 }
 
+@media all and (max-width:1024px) {
+  .advert-container--desktop {
+    display: none;
+  }
+}
+
 .article-module {
   background: #666;
   margin-bottom: 1.5rem;
@@ -420,6 +427,17 @@ body.light {
   height: auto!important;
   display: flex;
   justify-content: center;
+}
+
+
+.advert-container--desktop
+.article-module--outbrain {
+  border: 0;
+}
+
+.advert-container--desktop
+.article-module--outbrain:after {
+  content: "";
 }
 
 .article-module--teads {
