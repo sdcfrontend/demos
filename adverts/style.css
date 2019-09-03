@@ -281,7 +281,7 @@ body.light {
 .article {
   line-height: 1.5;
   font-size: calc(15px + 0.2rem);
-  padding-bottom: 2rem;
+  /* padding-bottom: 2rem; */
 }
 
 .article p {
@@ -296,8 +296,9 @@ body.light {
 }
 
 .article-outbrain[class] {
-  padding-bottom: 150%;
-  margin-left: 0
+  /* padding-bottom: 150%; */
+  margin: 0 auto 2em!important;
+  max-width: 1024px;
 }
 
 .article-body {
@@ -416,6 +417,9 @@ body.light {
   background: #fff;
   color: #f79828;
   border: 3px solid #f79828;
+  height: auto!important;
+  display: flex;
+  justify-content: center;
 }
 
 .article-module--teads {
