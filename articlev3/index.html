@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+    @font-face {
+      font-family: 'Sky Text'; 
+      src: url("sky-regular.woff") format('woff'); 
+      font-weight: normal
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    body {
+      font-family: 'Sky Text';
+    }
+    
+    .wrap {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 1em;
+    }
+
+    .sdc-article {
+      font-size: calc(14.8px + 1vw);
+      line-height: 1.5;
+    }
+
+    @media all and (min-width: 620px) {
+      .sdc-article {
+        font-size: 21px;
+      }
+    }
+
+    .sdc-article-head > *:not(:last-child) {
+      margin-bottom: calc(2% + 10px);
+    }
+
+    .sdc-article-headline {
+      font-size: 2.15em;
+      line-height: 1.2;
+      font-weight: normal;
+    }
+
+    .sdc-article-subheadline {
+      font-size: 1.15em;
+      line-height: 1.4;
+      font-weight: normal;
+    }
+
+    .sdc-article > *:not(:last-child),
+    .sdc-article-body > *:not(:last-child) {
+      margin-bottom: calc(5% + 12px);
+    }
+
+    .sdc-article-byline {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .sdc-article-head__row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .sdc-article-time {
+      font-size: 16px;
+      padding: 3px 12px 3px 0
+    }
+
+    .sdc-article-tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 3px 0;
+    }
+
+    .sdc-article-tags a {
+      margin: 2px;
+      font-size: 13px;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      line-height: 1;
+      border-radius: 10px;
+      background: #eee;
+      color: #444;
+      white-space: nowrap;
+    }
+
+    .sdc-article-media img {
+      display: block;
+    }
+
+    .sdc-article-container {
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+    }
+
+    .sdc-article-container--half-bleed {
+      width: 1024px;
+    }
+
+    .sdc-article-container--full-bleed {
+      width: 100vw;
+    }
+
+    .sdc-article-media__caption {
+      background: #eee;
+      font-size: 16px;
+      padding: 0.6em 1em
+    }
+
+    .sdc-article-body > p:first-of-type {
+      font-weight: bold;
+    }
+
+    .sdc-article-body > h3 {
+      font-size: 1.2em;
+      margin-bottom: 1em !important;
+    }
+
+    .sdc-article-body > h4 {
+      font-size: 1.05em;
+      margin-bottom: 1em !important;
+    }
+
+    .sdc-article-body > h3 + *:not(p):not(h4),
+    .sdc-article-body > h4 + *:not(p) {
+      margin-top: calc(5% + 12px);
+    }
+
+    .sdc-article-widget {
+      padding-bottom: 25%;
+      color: #aaa;
+      width: 100%;
+    }
+
+    .sdc-article-widget--shade {
+      background: #eee;
+    }
+
+    .sdc-article-tag[class] {
+      background: #ffcc00;
+      color: black;
+      font-weight: bold;
+      font-size: 13px;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      line-height: 0.8;
+      display: inline-block;
+      margin-bottom: 0
+    }
+
+    .sdc-site-share {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      height: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="sdc-article">
+      <div class="sdc-article-head">
+        <div class="sdc-article-tag">Breaking</div>
+        <h1 class="sdc-article-headline">The robots aren't coming, they're already here</h1>
+        <h2 class="sdc-article-subheadline">Following Mr Johnson's comments, her widower Brendan tweeted: "Feel a bit sick at Jo's name being used in this way."</h2>
+        <p class="sdc-article-byline">By Arthur Journo, reporter</p>
+        <div class="sdc-article-head__row">
+          <time class="sdc-article-time">Thursday 26 September 2019 10:13, UK</time>
+          <ul class="sdc-article-tags">
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Brexit</a></li>
+            <li><a href="#">Boris Johnson</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sdc-article-body">
+        
+        <div class="sdc-article-container">
+          <div class="sdc-article-media">
+            <img intrinsicsize="16x9" src="https://e3.365dm.com/19/09/2048x1152/skynews-boris-johnson_4786866.jpg?bypass-service-worker&20190926121933" alt="">
+          </div>
+        </div>
+
+        <div class="sdc-site-share">
+
+        </div>
+  
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <div class="sdc-article-container sdc-article-container--half-bleed">
+          <div class="sdc-article-media">
+            <img intrinsicsize="16x9" src="https://e3.365dm.com/19/09/2048x1152/skynews-boris-johnson_4786866.jpg?bypass-service-worker&20190926121933" alt="">
+          </div>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <div class="sdc-article-container sdc-article-container--full-bleed">
+          <div class="sdc-article-media">
+            <img intrinsicsize="16x9" src="https://e3.365dm.com/19/09/2048x1152/skynews-boris-johnson_4786866.jpg?bypass-service-worker&20190926121933" alt="">
+          </div>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+        
+        <div class="sdc-article-container">
+          <div class="sdc-article-widget sdc-article-widget--shade">
+            widget
+          </div>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <h3>Article header</h3>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <h4>Article subheader</h4>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <div class="sdc-article-container">
+          <div class="sdc-article-media">
+            <img intrinsicsize="16x9" src="https://e3.365dm.com/19/09/2048x1152/skynews-boris-johnson_4786866.jpg?bypass-service-worker&20190926121933" alt="">
+            <p class="sdc-article-media__caption">image caption</p>
+          </div>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <h3>Article header</h3>
+        <h4>Article subheader</h4>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <div class="sdc-article-container">
+          <div class="sdc-article-widget">
+            widget
+          </div>
+        </div>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis veniam deserunt reprehenderit atque totam est distinctio dolores quae, amet cupiditate incidunt maiores omnis odio, reiciendis id porro rerum excepturi laudantium.</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
