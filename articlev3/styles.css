@@ -33,7 +33,7 @@ body {
 }
 
 .sdc-article-head {
-  font-size: calc(12px + 1.6vw);
+  font-size: calc(11px + 1.6vw);
   line-height: 1.5;
   margin-bottom: var(--article-vertical-margin);
 }
