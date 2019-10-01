@@ -27,8 +27,8 @@ body {
 }
 
 .wrap--narrow {
-  max-width: 780px;
-  --wrap-narrow-width: 780px;
+  max-width: 750px;
+  --wrap-narrow-width: 750px;
 }
 
 @media all and (min-width: 920px) {
