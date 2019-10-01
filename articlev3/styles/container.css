@@ -9,16 +9,14 @@
   margin-bottom: calc(var(--article-vertical-margin) * 1.6);
 }
 
-.sdc-article-container--half-bleed {
+.sdc-article-container--half-bleed[class][class] {
   width: 1024px;
 }
 
-.sdc-article-container--full-bleed {
+.sdc-article-container--full-bleed[class][class] {
   width: 100vw;
 }
 
-.sdc-article-body
-.sdc-article-container {
-  max-width: 100%;
+.sdc-article-body[data-constrain] .sdc-article-container {
   width: 100%;
 }

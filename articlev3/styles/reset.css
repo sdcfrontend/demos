@@ -22,10 +22,13 @@ body {
   margin: 0 auto;
   padding: 0 calc(12px + 1vw);
   display: block;
+  --wrap-width: 976px;
+  --wrap-padding-edge: calc(12px + 1vw);
 }
 
 .wrap--narrow {
   max-width: 780px;
+  --wrap-narrow-width: 780px;
 }
 
 @media all and (min-width: 920px) {
