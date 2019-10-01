@@ -1,0 +1,12 @@
+.sdc-article-label[class] {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  line-height: 0.8;
+  display: inline-block;
+  margin-bottom: 0.1em;
+  text-shadow: none!important;
+}

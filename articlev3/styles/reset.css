@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Sky Text'; 
+  src: url("../sky-regular.woff") format('woff'); 
+  font-weight: normal
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Sky Text';
+}
+
+.wrap {
+  max-width: 976px;
+  margin: 0 auto;
+  padding: 0 calc(12px + 1vw);
+  display: block;
+}
+
+.wrap--narrow {
+  max-width: 780px;
+}
+
+@media all and (min-width: 920px) {
+  .columns {
+    display: flex;
+  }
+
+  .column1 {
+    flex: 1;
+    margin-right: 24px;
+  }
+
+  .column2 {
+    width: 300px;
+    background: #eee;
+  }
+}

@@ -1,0 +1,20 @@
+.sdc-article-container {
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(var(--article-vertical-margin) * 1.6);
+}
+
+.sdc-article-body:not([data-constrain])
+.sdc-article-container--half-bleed {
+  width: 1024px;
+}
+
+.sdc-article-body:not([data-constrain])
+.sdc-article-container--full-bleed {
+  width: 100vw;
+}

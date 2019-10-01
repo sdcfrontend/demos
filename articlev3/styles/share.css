@@ -1,0 +1,13 @@
+.sdc-site-share ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, calc(1.4vw + 28px));
+  list-style: none;
+  grid-gap: 0 12px
+}
+
+.sdc-site-share ul li {
+  padding-bottom: 80%; 
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background: #eee;
+}

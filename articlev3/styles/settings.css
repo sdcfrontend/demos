@@ -1,0 +1,10 @@
+:root {
+  --article-vertical-margin: calc(14.8px + 2vw);
+  --article-link-color:#3157a1;
+}
+
+@media all and (min-width: 620px) {
+  :root {
+    --article-vertical-margin: 28.2px
+  }
+}
