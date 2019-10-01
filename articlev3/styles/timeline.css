@@ -1,0 +1,39 @@
+.timeline[class] {
+  position: relative;
+}
+
+.timeline[class]:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: #eee;
+  background-image: linear-gradient(to bottom, #3157a1, #3157a1);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-attachment: fixed;
+  left: calc((var(--wrap-padding-edge) * -1));
+  top: 50%;
+  height: var(--timeline-height);
+}
+
+.timeline[class]:after {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 9px;
+  top: 50%;
+  left: calc((var(--wrap-padding-edge) * -1));
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px solid #3157a1;
+  background: white;
+  transition: all 0.166s;
+}
+
+.timeline[class][data-active]:after {
+  background: #3157a1;
+}
+
+.timeline[class] ~ .timeline[class]:before {
+  height: 10px;
+}

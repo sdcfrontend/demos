@@ -15,15 +15,22 @@ img {
 
 body {
   font-family: 'Sky Text';
+  padding: 0 0 50vh;
 }
 
 .wrap {
+  --wrap-padding-edge: 5vw;
   max-width: 976px;
   margin: 0 auto;
-  padding: 0 calc(12px + 1vw);
+  padding: 0 var(--wrap-padding-edge);
   display: block;
   --wrap-width: 976px;
-  --wrap-padding-edge: calc(12px + 1vw);
+}
+
+@media all and (min-width: 900px) {
+  .wrap {
+    --wrap-padding-edge: 24px;
+  }
 }
 
 .wrap--narrow {
