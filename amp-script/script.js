@@ -14,7 +14,7 @@ btn.addEventListener('click', () => {
     div.classList.remove('fancy-text--on');
   }, 2000);
 
-  fetch('http://localhost:8080/data.json').then(function(res){
+  fetch('https://sdcfrontend.github.io/demos/amp-script/data.json').then(function(res){
     return res.json();
   }).then(function(data){
     div.textContent = JSON.stringify(data.mydata);
