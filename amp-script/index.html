@@ -22,7 +22,8 @@
 
     <style amp-custom>
       /* any custom style goes here */
-      body {
+      body,
+      .container {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -30,9 +31,15 @@
         font-size: 18px;
       }
 
-      input, button {
+      .input[class], .button[class] {
         font-size: 16px;
-        padding: 0.2em
+        padding: 0.2em;
+        display: inline-block;
+        margin: 1px 2px;
+      }
+
+      .input[class] {
+        display: none;
       }
 
       .fancy-text {
@@ -55,9 +62,10 @@
   </head>
   <body>
     <h1>Javascript in amp</h1>
-    <amp-script src="script.js" layout="container">
-      <input type="text"><button>Add</button>
-      <br>
+    <amp-script src="script.js" layout="container" class="container">
+      <div>
+      <input class="input" type="text" placeholder="type something"><button class="button">Load json</button>
+    </div>
       <div class="fancy-text"></div>
     </amp-script>
   </body>
