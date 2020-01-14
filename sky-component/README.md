@@ -5,17 +5,20 @@ How would our site css structure look if we used css variables for skinning?
 
 ## File structure
 ```css
-@import "global-theme.css";
-@import "site-theme.css";
+/** 1. global theme - the basis for all sites **/
+@import "global/global-theme.css";
 
-@import "global-base.css";
+/** 2. global base styles - shared site start, elements, fonts etc **/
+@import "global/global-base.css";
 
-@import "component-a.css";
-@import "component-b.css";
-@import "component-c.css";
+/** 3. components - list of components used on this project **/
+@import "components/tiles.css";
+@import "components/menu.css";
+@import "components/hero.css";
 /** etc **/
 
-@import "site-overrides.css";
+/** 4. site theme - project specific theme **/
+@import "site/site-theme.css";
 ```
 
 ## Files
@@ -23,61 +26,61 @@ How would our site css structure look if we used css variables for skinning?
 Theme variables used in all projects. 
 ```css
 :root {
-     --brand1: #ccc;
-  --brand2: #aaa;
-  --brand3: #666;
-  
-  --shade0: white;
-  --shade1: #eee;
-  --shade2: #ccc;
-  --shade3: #aaa;
-  --shade4: #111;
-  
-  --border-color1: #aaa;
-  --border-color2: #888;
-  --icon-color: #777;
-  --site-bg: var(--shade1);
-  
-  --link-color: #3157a1;
-  --text-color: #333;
-  --text-color-invert: white;
-  --sub-text-color: #aaa;
+    --brand1: #ccc;
+    --brand2: #aaa;
+    --brand3: #666;
 
-  /* scaling units */
-  --base-scaler: calc(3.3px + 0.75vw);
-  --space-xs: calc(var(--base-scaler) * 1);
-  --space-s: calc(var(--base-scaler) * 2); 
-  --space-m: calc(var(--base-scaler) * 3);
-  --space-l: calc(var(--base-scaler) * 4);
-  --space-xl: calc(var(--base-scaler) * 5);
-  
-  --grid-gap: var(--space-s);
-  --column-gap: var(--space-m);
-  --component-margin: var(--space-l);
-  --component-padding: var(--space-m);
-  
-  --site-gutter: calc(var(--space-s) + 4px);
-  --site-width: 1024px;
-  --site-indent: var(--component-padding);
+    --shade0: white;
+    --shade1: #eee;
+    --shade2: #ccc;
+    --shade3: #aaa;
+    --shade4: #111;
 
-  /* fonts */
-  --base-font-name: 'skytext';
-  --base-font-load-setting: 'optional';
-  
-  --base-font-size: 18px;
-  --base-font-scaler: calc(21.2px + 3vw);
+    --border-color1: #aaa;
+    --border-color2: #888;
+    --icon-color: #777;
+    --site-bg: var(--shade1);
 
-  --font-scale-l: var(--base-font-scaler);
-  --font-scale-m: calc(var(--base-font-scaler) * 0.75);
-  --font-scale-s: calc((var(--base-font-scaler) * 0.375) + 6px);
-  --font-scale-xs: calc((var(--base-font-scaler) * 0.25) + 12px);
+    --link-color: #3157a1;
+    --text-color: #333;
+    --text-color-invert: white;
+    --sub-text-color: #aaa;
 
-  --font-fixed-s: 18px;
-  --font-fixed-xs: 16px;
-  --font-fixed-xxs: 14px;
+    /* scaling units */
+    --base-scaler: calc(3.3px + 0.75vw);
+    --space-xs: calc(var(--base-scaler) * 1);
+    --space-s: calc(var(--base-scaler) * 2); 
+    --space-m: calc(var(--base-scaler) * 3);
+    --space-l: calc(var(--base-scaler) * 4);
+    --space-xl: calc(var(--base-scaler) * 5);
 
-  --article-text: calc((var(--base-font-scaler) * 0.25) + 10px);
-  --component-text: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px);
+    --grid-gap: var(--space-s);
+    --column-gap: var(--space-m);
+    --component-margin: var(--space-l);
+    --component-padding: var(--space-m);
+
+    --site-gutter: calc(var(--space-s) + 4px);
+    --site-width: 1024px;
+    --site-indent: var(--component-padding);
+
+    /* fonts */
+    --base-font-name: 'skytext';
+    --base-font-load-setting: 'optional';
+
+    --base-font-size: 18px;
+    --base-font-scaler: calc(21.2px + 3vw);
+
+    --font-scale-l: var(--base-font-scaler);
+    --font-scale-m: calc(var(--base-font-scaler) * 0.75);
+    --font-scale-s: calc((var(--base-font-scaler) * 0.375) + 6px);
+    --font-scale-xs: calc((var(--base-font-scaler) * 0.25) + 12px);
+
+    --font-fixed-s: 18px;
+    --font-fixed-xs: 16px;
+    --font-fixed-xxs: 14px;
+
+    --article-text: calc((var(--base-font-scaler) * 0.25) + 10px);
+    --component-text: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px);
 }
 ```
 #### `site-theme.css`
@@ -140,16 +143,5 @@ For this specific component, the link, border and icon color are different from 
     width: 1em;
     height: 1em;
     fill: var(--icon-color);
-}
-```
-#### `site-overrides.css`
-If we need any site specific overrides that don't use the theming system, add them here (but use sparingly/with caution).
-```css
-@import "component-a.css";
-```
-##### `component-a.css`;
-```css
-.component-a-header {
-    background: hotpink;
 }
 ```
