@@ -6,18 +6,18 @@
   
   --shade0: white;
   --shade1: #eee;
-  --shade2: #ccc;
-  --shade3: #aaa;
+  --shade2: #bbb;
+  --shade3: #999;
   --shade4: #111;
   
-  --border-color1: #aaa;
-  --border-color2: #888;
-  --icon-color: #777;
+  --border-color1: var(--shade2);
+  --border-color2: var(--shade3);
+  --icon-color: var(--shade3);
   --site-bg: var(--shade1);
   --link-color: #3157a1;
-  --text-color: #333;
-  --text-color-invert: white;
-  --sub-text-color: #aaa;
+  --text-color: var(--shade4);
+  --text-color-invert: var(--shade0);
+  --sub-text-color: var(--shade3);
 
   /* scaling units */
   --base-scaler: calc(3.3px + 0.75vw);
