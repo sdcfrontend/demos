@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <br>
+    <div class="site-wrap site-wrap-padding">
+      <div class="menu">Font sizes</div>
+
+      <p title="article headline 32 > 48">The quick brown fox jumps over the lazy dog</p>
+      <p title="large tile headline 24 > 36">The quick brown fox jumps over the lazy dog</p>
+      <p title="article sub-headline 22 > 24">The quick brown fox jumps over the lazy dog</p>
+      <p title="small tile headline 18 > 24">The quick brown fox jumps over the lazy dog</p>
+      <p title="article text 18 > 22">The quick brown fox jumps over the lazy dog</p>
+      <p title="fixed 18">The quick brown fox jumps over the lazy dog</p>
+      <p title="fixed 16">The quick brown fox jumps over the lazy dog</p>
+      <p title="fixed 14">The quick brown fox jumps over the lazy dog</p>
+
+      <style>
+        p {
+          margin-bottom: 25px;
+          position: relative;
+        }
+
+        p:after {
+          content: attr(title);
+          position: absolute;
+          font-size: 12px;
+          padding: 1px;
+          background: yellow;
+          bottom: 0;
+          transform: translateY(50%);
+          left: 0
+        }
+
+        p:nth-of-type(1) {
+          font-size: var(--font-scale-l)
+        }
+
+        p:nth-of-type(2) {
+          font-size: var(--font-scale-m)
+        }
+
+        p:nth-of-type(3) {
+          font-size: var(--font-scale-s)
+        }
+
+        p:nth-of-type(4) {
+          font-size: var(--font-scale-xs)
+        }
+
+        p:nth-of-type(5) {
+          font-size: var(--article-text)
+        }
+
+        p:nth-of-type(6) {
+          font-size: var(--component-text)
+        }
+
+        p:nth-of-type(7) {
+          font-size: var(--font-fixed-s)
+        }
+
+        p:nth-of-type(8) {
+          font-size: var(--font-fixed-xs)
+        }
+
+        p:nth-of-type(9) {
+          font-size: var(--font-fixed-xxs)
+        }
+      </style>
+
+    </div>
+  </body>
+
+</html>

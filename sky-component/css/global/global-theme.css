@@ -46,8 +46,8 @@
 
   --font-scale-l: var(--base-font-scaler);
   --font-scale-m: calc(var(--base-font-scaler) * 0.75);
-  --font-scale-s: calc((var(--base-font-scaler) * 0.375) + 6px);
-  --font-scale-xs: calc((var(--base-font-scaler) * 0.25) + 12px);
+  --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 18px);
+  --font-scale-xs: calc((var(--base-font-scaler) * 0.375) + 6px);
 
   --font-fixed-s: 18px;
   --font-fixed-xs: 16px;
