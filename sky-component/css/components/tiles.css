@@ -1,7 +1,7 @@
 .tiles {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
-  grid-gap: var(--grid-gap, 1em);
+  grid-gap: var(--component-gap, 1em);
   margin-bottom: var(--component-margin, 1em);
 }
 
