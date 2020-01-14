@@ -1,0 +1,14 @@
+/** 1. global theme - the basis for all sites **/
+@import "global/global-theme.css";
+
+/** 2. global base styles - shared site start, elements, fonts etc **/
+@import "global/global-base.css";
+
+/** 3. components - list of components used on this project **/
+@import "components/tiles.css";
+@import "components/menu.css";
+@import "components/hero.css";
+/** etc **/
+
+/** 4. site theme - project specific theme **/
+@import "site/site-theme.css";

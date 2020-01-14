@@ -1,0 +1,18 @@
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-gap: var(--grid-gap, 1em);
+  margin-bottom: var(--component-margin, 1em);
+}
+
+.tile {
+  background: var(--shade0, #eee);
+  padding: var(--component-padding, 1em);
+  font-size: var(--component-text, 1em);
+}
+
+.tile__headline {
+  font-size: var(--font-scale-s, 1.2em);
+  line-height: 1.15;
+  margin-bottom: 0.25em;
+}

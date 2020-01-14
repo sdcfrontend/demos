@@ -1,0 +1,20 @@
+.hero {
+  height: 80vw;
+  max-height: 400px;
+  background: var(--shade2, #eee);
+  margin-bottom: var(--component-margin, 1em);
+  padding: var(--component-padding, 1em);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: var(--component-text, 1em);
+}
+
+.hero__title {
+  font-size: var(--font-scale-m, 1.5em);
+  margin-bottom: 0.25em;
+}
+
+.hero p {
+  margin-bottom: 0.5em;
+}

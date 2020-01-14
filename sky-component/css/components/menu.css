@@ -1,0 +1,7 @@
+
+.menu {
+  background: var(--brand1);
+  color: var(--text-color-invert);
+  padding: 1em var(--site-indent);
+  margin-bottom: var(--component-margin);
+}
