@@ -16,17 +16,14 @@ html {
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: none;
-  color: var(--text-color1);
-  background: var(--site-bg);
+  color: var(--body-text-color);
+  background: var(--body-bg);
 }
 
-.site-wrap {
-  max-width: var(--site-width);
-  margin-left: auto;
-  margin-right: auto;
+img {
+  max-width: 100%;
 }
 
-.site-wrap-padding {
-  padding-left: var(--site-gutter);
-  padding-right: var(--site-gutter);
+a {
+  color: inherit;
 }

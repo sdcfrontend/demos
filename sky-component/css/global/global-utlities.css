@@ -1,0 +1,23 @@
+/* site width limiters */
+.site-wrap {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-wrap-padding {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter);
+}
+
+.site-wrap-basic {
+
+}
+
+.site-wrap-amp {
+
+}
+
+.site-wrap--mobile-edge {
+
+}

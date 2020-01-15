@@ -12,11 +12,15 @@
   --border-color1: var(--shade2);
   --border-color2: var(--shade3);
   --icon-color: var(--shade3);
-  --site-bg: var(--shade1);
-  --link-color: #3157a1;
-  --text-color: var(--shade4);
-  --text-color-invert: var(--shade0);
-  --sub-text-color: var(--shade3);
+
+  --body-bg: var(--shade1);
+  --body-link-color: #3157a1;
+  --body-text-color: #4a4a4a;
+  --body-text-color-invert: white;
+  --body-subtext-color: #888;
+
+  --component-bg: var(--shade0);
+  --component-text-color: var(--body-text-color);
 
   /* scaling units */
   --base-scaler: calc(3.3px + 0.75vw);
@@ -27,9 +31,9 @@
   --space-xl: calc(var(--base-scaler) * 5);
   
   --component-gap: var(--space-s);
-  --component-column-gap: var(--space-m);
-  --component-margin: var(--space-l);
   --component-padding: var(--space-m);
+  --component-margin: var(--space-l);
+  
   --site-gutter: calc(var(--space-s) + 4px);
   --site-width: 1024px;
   --site-indent: var(--component-padding);

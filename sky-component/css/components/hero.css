@@ -1,7 +1,7 @@
 .hero {
   height: 80vw;
   max-height: 400px;
-  background: var(--shade2, #eee);
+  background: var(--component-bg, #eee);
   margin-bottom: var(--component-margin, 1em);
   padding: var(--component-padding, 1em);
   display: flex;

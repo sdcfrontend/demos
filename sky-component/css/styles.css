@@ -3,6 +3,7 @@
 
 /** 2. global base styles - shared site start, elements, fonts etc **/
 @import "global/global-base.css";
+@import "global/global-utlities.css";
 
 /** 3. components - list of components used on this project **/
 @import "components/tiles.css";
