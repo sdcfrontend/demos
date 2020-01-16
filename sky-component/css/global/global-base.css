@@ -16,7 +16,7 @@ html {
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: none;
-  color: var(--body-text-color);
+  color: var(--text-color);
   background: var(--body-bg);
 }
 

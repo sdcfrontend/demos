@@ -2,6 +2,8 @@
   height: 80vw;
   max-height: 400px;
   background: var(--component-bg, #eee);
+  color: var(--component-text-color, inherit);
+  border: 1px solid var(--border-color-light, #ccc);
   margin-bottom: var(--component-margin, 1em);
   padding: var(--component-padding, 1em);
   display: flex;

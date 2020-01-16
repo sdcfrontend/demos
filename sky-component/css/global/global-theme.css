@@ -1,26 +1,33 @@
 :root {
   /* colors */
-  --brand1: #ccc;
-  --brand2: #aaa;
-  --brand3: #666;
-  --shade0: white;
-  --shade1: #eee;
-  --shade2: #bbb;
-  --shade3: #999;
-  --shade4: #111;
+  --brand1: #333;
+  --brand2: #777;
+  --brand3: #CCC;
+
+  --shade0: #FFF;
+  --shade1: #F4F5F7;
+  --shade2: #EAEAEA;
+  --shade3: #C0C0C0;
+  --shade4: #7F7F7F;
+  --shade5: #4A4A4A;
+  --shade6: #000;
+
+  --success: #299934;
+  --alert: #EA021A;
+  --breaking: #FFE000;
   
-  --border-color1: var(--shade2);
-  --border-color2: var(--shade3);
-  --icon-color: var(--shade3);
+  --border-color-light: var(--shade2);
+  --border-color-heavy: var(--shade3);
+  --icon-color: var(--shade5);
 
   --body-bg: var(--shade1);
-  --body-link-color: #3157a1;
-  --body-text-color: #4a4a4a;
-  --body-text-color-invert: white;
-  --body-subtext-color: #888;
+  --link-color: #3157A1;
+  --text-color: var(--shade5);
+  --text-color-invert: var(--shade0);
+  --subtext-color: var(--shade4);
 
   --component-bg: var(--shade0);
-  --component-text-color: var(--body-text-color);
+  --component-text-color: var(--text-color);
 
   /* scaling units */
   --base-scaler: calc(3.3px + 0.75vw);
