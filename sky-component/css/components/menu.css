@@ -2,6 +2,6 @@
 .menu {
   background: var(--brand1);
   color: var(--text-color-invert);
-  padding: 1em var(--site-indent);
-  margin-bottom: var(--component-margin);
+  padding: 1em var(--component-padding);
+  margin-bottom: var(--space-xs);
 }

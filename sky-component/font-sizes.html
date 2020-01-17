@@ -14,15 +14,14 @@
     <div class="site-wrap site-wrap-padding">
       <div class="menu">Font sizes</div>
 
-      <p title="article headline 32 > 48">The quick brown fox jumps over the lazy dog</p>
-      <p title="large tile headline 24 > 36">The quick brown fox jumps over the lazy dog</p>
-      <p title="article sub-headline 22 > 24">The quick brown fox jumps over the lazy dog</p>
-      <p title="small tile headline 18 > 24">The quick brown fox jumps over the lazy dog</p>
-      <p title="article text 18 > 22">The quick brown fox jumps over the lazy dog</p>
-      <p title="component text 16 > 18">The quick brown fox jumps over the lazy dog</p>
-      <p title="fixed 18">The quick brown fox jumps over the lazy dog</p>
-      <p title="fixed 16">The quick brown fox jumps over the lazy dog</p>
-      <p title="fixed 14">The quick brown fox jumps over the lazy dog</p>
+      <p class="xl" title="xl - 32 > 48">The quick brown fox jumps over the lazy dog</p>
+      <p class="l" title="l - 24 > 36">The quick brown fox jumps over the lazy dog</p>
+      <p class="m" title="m - 24 > 30">The quick brown fox jumps over the lazy dog</p>
+      <p class="s" title="s - 22 > 24">The quick brown fox jumps over the lazy dog</p>
+      <p class="xs" title="xs - 18 > 22">The quick brown fox jumps over the lazy dog</p>
+      <p class="xxs" title="xxs - 18 > 22">The quick brown fox jumps over the lazy dog</p>
+      <p class="fixed-s" title="fixed-s - 18">The quick brown fox jumps over the lazy dog</p>
+      <p class="fixed-xs" title="fixed-xs - 15">The quick brown fox jumps over the lazy dog</p>
 
       <style>
         p {
@@ -41,40 +40,36 @@
           left: 0
         }
 
-        p:nth-of-type(1) {
+        .xl {
+          font-size: var(--font-scale-xl)
+        }
+
+        .l {
           font-size: var(--font-scale-l)
         }
 
-        p:nth-of-type(2) {
+        .m {
           font-size: var(--font-scale-m)
         }
 
-        p:nth-of-type(3) {
+        .s {
           font-size: var(--font-scale-s)
         }
 
-        p:nth-of-type(4) {
+        .xs {
           font-size: var(--font-scale-xs)
         }
 
-        p:nth-of-type(5) {
-          font-size: var(--article-text)
+        .xxs {
+          font-size: var(--font-scale-xxs)
         }
 
-        p:nth-of-type(6) {
-          font-size: var(--component-text)
-        }
-
-        p:nth-of-type(7) {
+        .fixed-s {
           font-size: var(--font-fixed-s)
         }
 
-        p:nth-of-type(8) {
+        .fixed-xs {
           font-size: var(--font-fixed-xs)
-        }
-
-        p:nth-of-type(9) {
-          font-size: var(--font-fixed-xxs)
         }
       </style>
 

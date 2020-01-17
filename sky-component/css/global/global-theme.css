@@ -1,30 +1,30 @@
 :root {
   /* colors */
-  --brand1: #333;
-  --brand2: #777;
-  --brand3: #CCC;
+  --brand1: #333333;
+  --brand2: #777777;
+  --brand3: #CCCCCC;
 
-  --shade0: #FFF;
+  --shade0: #FFFFFF;
   --shade1: #F4F5F7;
-  --shade2: #EAEAEA;
-  --shade3: #C0C0C0;
-  --shade4: #7F7F7F;
+  --shade2: #E2E2E2;
+  --shade3: #9F9F9F;
+  --shade4: #707070;
   --shade5: #4A4A4A;
-  --shade6: #000;
+  --shade6: #222222;
 
   --success: #299934;
   --alert: #EA021A;
   --breaking: #FFE000;
+  --breaking-color: var(--shade6);
+  --link-color: #3157A1;
   
-  --border-color-light: var(--shade2);
-  --border-color-heavy: var(--shade3);
+  --border-color: var(--shade2);
   --icon-color: var(--shade5);
 
   --body-bg: var(--shade1);
-  --link-color: #3157A1;
   --text-color: var(--shade5);
   --text-color-invert: var(--shade0);
-  --subtext-color: var(--shade4);
+  --secondary-text-color: var(--shade4);
 
   --component-bg: var(--shade0);
   --component-text-color: var(--text-color);
@@ -35,11 +35,12 @@
   --space-s: calc(var(--base-scaler) * 2); 
   --space-m: calc(var(--base-scaler) * 3);
   --space-l: calc(var(--base-scaler) * 4);
-  --space-xl: calc(var(--base-scaler) * 5);
+  --space-xl: calc(var(--base-scaler) * 6);
   
   --component-gap: var(--space-s);
   --component-padding: var(--space-m);
   --component-margin: var(--space-l);
+  --group-margin: var(--space-xl);
   
   --site-gutter: calc(var(--space-s) + 4px);
   --site-width: 1024px;
@@ -52,16 +53,19 @@
   --base-font-size: 18px;
   --base-font-scaler: calc(21.2px + 3vw);
 
-  --font-scale-l: var(--base-font-scaler);
-  --font-scale-m: calc(var(--base-font-scaler) * 0.75);
-  --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 18px);
-  --font-scale-xs: calc((var(--base-font-scaler) * 0.375) + 6px);
-  --font-fixed-s: 18px;
-  --font-fixed-xs: 16px;
-  --font-fixed-xxs: 14px;
+  --font-scale-xl: var(--base-font-scaler); /* 32 - 48 */
+  --font-scale-l: calc(var(--base-font-scaler) * 0.75); /* 24 - 36 */
+  --font-scale-m: calc(var(--base-font-scaler) * 0.35 + 13.2px); /* 24 - 30 */
+  --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 18px); /* 22 - 24 */
+  --font-scale-xs:  calc((var(--base-font-scaler) * 0.25) + 10px); /* 18 - 22 */
+  --font-scale-xxs:  calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px); /* 16 - 18 */
 
-  --article-text: calc((var(--base-font-scaler) * 0.25) + 10px);
-  --component-text: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px);
+  --article-text: var(--font-scale-xs); /* 18 - 22 */
+  --component-text: var(--font-scale-xxs); /* 16 - 18 */
+
+  --font-fixed-m: 18px;
+  --font-fixed-s: 16px;
+  --font-fixed-xs: 14px;
 }
 
 @media all and (max-width: 360px) {
