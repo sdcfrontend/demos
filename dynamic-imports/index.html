@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .my-component {
+        height: 200px;
+        width: 200px;
+        border: 3px solid hotpink;
+        margin: 10px;
+      }
+
+      button {
+        font-size: 20px;
+        padding: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-component-name="my-component" class="my-component"></div>
+    <button>add component</button>
+    <script>
+      // get elements in initial dom
+      document.querySelectorAll('[data-component-name]').forEach(function (el) {
+        getFunction(el, el.dataset.componentName);
+      });
+
+      // get elements added after page load
+      const observer = new MutationObserver(function (list) {
+        list.forEach(function (item) {
+          const el = item.addedNodes[0];
+          if (el && (el.nodeType === 1) && el.dataset.componentName) {
+            getFunction(el, el.dataset.componentName);
+          };
+        })
+      });
+
+      // Start observing the target node for configured mutations
+      observer.observe(document.body, {
+        attributes: true,
+        childList: true,
+        attributeFilter: ['data-component-name']
+      });
+
+      function getFunction(el, name) {
+        import(`./${name}.js`)
+          .then(module => {
+            module.default(el);
+          })
+          .catch(err => {
+            console.log('component does not exist');
+          });
+      }
+
+      document.querySelector('button').onclick = function () {
+        this.insertAdjacentHTML('beforebegin', '<div data-component-name="my-component" class="my-component"></div>')
+      }
+
+    </script>
+  </body>
+
+</html>

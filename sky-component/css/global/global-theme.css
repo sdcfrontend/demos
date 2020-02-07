@@ -44,6 +44,8 @@
   
   --site-gutter: calc(var(--space-s) + 4px);
   --site-width: 1024px;
+  --site-width-amp: 600px;
+  --site-width-inner: 976px;
   --site-indent: var(--component-padding);
 
   /* fonts */
@@ -62,6 +64,7 @@
 
   --article-text: var(--font-scale-xs); /* 18 - 22 */
   --component-text: var(--font-scale-xxs); /* 16 - 18 */
+  --label-text: var(--font-fixed-xs); /* 14 */
 
   --font-fixed-m: 18px;
   --font-fixed-s: 16px;

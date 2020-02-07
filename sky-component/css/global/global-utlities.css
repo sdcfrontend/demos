@@ -5,19 +5,32 @@
   margin-right: auto;
 }
 
+.site-wrap-edge {
+  max-width: var(--site-width-inner);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.site-wrap-amp {
+  max-width: var(--site-width-amp);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter);
+}
+
 .site-wrap-padding {
   padding-left: var(--site-gutter);
   padding-right: var(--site-gutter);
 }
 
-.site-wrap-basic {
-
-}
-
-.site-wrap-amp {
-
-}
-
 .site-wrap--mobile-edge {
+  padding-left: 0;
+  padding-right: 0;
+}
 
+.site-wrap-basic {
+  
 }
