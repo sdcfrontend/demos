@@ -110,6 +110,6 @@
 @media all and (min-width: 900px) {
   :root {
     --base-scaler: 10px;
-    --base-font-scaler: 48px;
+    --base-font-scaler: 48px
   }
 }
