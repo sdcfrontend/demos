@@ -1,0 +1,32 @@
+.nav {
+  background: white;
+  border-top: 3px solid var(--brand1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05), 0 3px 5px rgba(0,0,0,0.1);
+  padding: var(--component-padding) 0;
+  margin-bottom: var(--group-margin);
+}
+
+.nav-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h1 {
+  font-size: var(--display-3);
+}
+
+.nav-items ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-items a {
+  font-size: var(--display-5);
+  font-weight: bold;
+  display: block;
+  padding: 0.25em calc(var(--component-gap) * 1.5);
+} 

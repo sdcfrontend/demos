@@ -1,0 +1,35 @@
+.swatch-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: var(--component-gap);
+  margin-bottom: var(--group-margin);
+}
+
+.swatch {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.swatch-color {
+  padding-bottom: 40%;
+  background: #eee;
+}
+
+.swatch-body {
+  font-size: var(--font-fixed-xs);
+  padding: calc(var(--component-padding) / 2);
+}
+
+.swatch-hex {
+  margin-bottom: var(--component-gap);
+}
+
+.swatch-name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.swatch-code {
+  font-weight: normal;
+}

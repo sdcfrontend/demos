@@ -1,0 +1,115 @@
+:root {
+  /* ----------------- */
+  /* ---GLOBAL VARS--- */
+  /* ----------------- */
+
+  /* COLORS */
+
+  /* brand */
+  --brand1: #002672; /* placeholder - overriden by brand file */
+  --brand2: #EA021A; /* placeholder - overriden by brand file */
+  --brand3: linear-gradient(#002672, #00043B); /* placeholder - overriden by brand file */
+
+  /* shade colors (for internal use) */
+  --shade0: #FFFFFF;
+  --shade1: #F4F5F7;
+  --shade2: #E2E2E2;
+  --shade3: #707070;
+  --shade4: #4A4A4A;
+  --shade5: #222222;
+
+  /* shade gradients */
+  --gradient-radial: radial-gradient(circle at center,#fff 0,#e8e7ed 100%);
+  --gradient-pipe: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);
+
+  /* ui states */
+  --success: #299934; /* success messages */
+  --alert: #EA021A; /* alerts and warnings */
+  --breaking: #FFE000; /* breaking news components */
+  --link-color: #3157A1; /* global text link color */
+  
+  /* common alias values */
+  --body-bg: var(--shade1); /* mobile site bg (desktop uses a gradient) */
+  --component-bg: var(--shade0); /* components bg is generally white */
+  --component-shade: var(--shade1); /* component header bg */
+  --border-color: var(--shade2); /* border color for components */
+  --text-color: var(--shade4); /* main body text */
+  --text-color-invert: var(--shade0); /* text on dark backgrounds */
+  --secondary-text-color: var(--shade3); /* lighter body text */
+  --icon-color: var(--shade5); /* color for svg/ui icons */
+
+  /* SPACING */
+
+  /* scaling values (for internal use) - scales between 360 - 900px */
+  --base-scaler: calc(3.3px + 0.75vw);
+  --space-xs: calc(var(--base-scaler) * 1); /* 6 - 10px */
+  --space-s: calc(var(--base-scaler) * 2); /* 12 - 20px */
+  --space-m: calc(var(--base-scaler) * 3); /* 18 - 30px */
+  --space-l: calc(var(--base-scaler) * 4); /* 24 - 40px */
+  --space-xl: calc(var(--base-scaler) * 6); /* 36 - 60px */
+  
+  /* widths constraints */
+  --site-width: 1024px; /* max site width including gutters */
+  --site-width-amp: 600px; /* max site width for amp */
+  --site-width-inner: 976px; /* max site width minus gutters */
+
+  /* common alias values */
+  --component-gap: var(--space-s); /* gap between internal component elements */
+  --component-padding: var(--space-m); /* padding on main component container */
+  --component-margin: var(--space-l); /* vertical margin between different components */
+  --group-margin: var(--space-xl); /* large vertical margin between large or groups of components */
+  --site-gutter: calc(var(--space-s) + 4px); /* left and right gutter on site body */
+
+  --z-index-ui: 999; /* later for site ui elements - navs, menus etc */
+  --z-index-ads: 9999; /* layer for ads that go over ui */
+  --z-index-overlays: 99999; /* layer for overlays that sit on top of everything */
+
+  /* FONTS */
+
+  /* settings */
+  --base-font-name: 'skytext';
+  --base-font-load-setting: 'optional';
+  
+  /* bases */
+  --base-font-size: 18px;
+  --base-font-scaler: calc(21.2px + 3vw);
+
+  /* scaling values (for internal use) - scales between 360 - 900px */
+  --font-scale-xl: var(--base-font-scaler); /* 32 - 48px */
+  --font-scale-l: calc(var(--base-font-scaler) * 0.75); /* 24 - 36px */
+  --font-scale-m: calc(var(--base-font-scaler) * 0.35 + 13.2px); /* 24 - 30px */
+  --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 16px); /* 20 - 22px */
+  --font-scale-xs: calc( ( (var(--base-font-scaler)) / 8) + 14px); /* 18 - 20px */
+  --font-scale-xxs: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px); /* 16 - 18px */
+
+  /* fixed values */
+  --font-fixed-m: 18px;
+  --font-fixed-s: 16px;
+  --font-fixed-xs: 14px;
+
+  /* common alias values */
+  --article-text: var(--font-scale-xs); /* any large body of text */
+  --component-text: var(--font-scale-xxs); /* smaller blocks of text within components */
+  --label-text: var(--font-fixed-xs); /* label and note text */
+  --link-list: var(--font-fixed-s); /* accompanying link lists */
+  --display-1: var(--font-scale-xl); /* article headline/extra large header */
+  --display-2: var(--font-scale-l); /* large component/group header */
+  --display-3: var(--font-scale-m); /* med component header */
+  --display-4: var(--font-scale-s); /* standard component header */
+  --display-5: var(--font-scale-xs); /* small component header */
+  --display-6: var(--font-scale-xxs); /* x small component header */
+}
+
+@media all and (max-width: 360px) {
+  :root {
+    --base-scaler: 6px;
+    --base-font-scaler: 32px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  :root {
+    --base-scaler: 10px;
+    --base-font-scaler: 48px;
+  }
+}

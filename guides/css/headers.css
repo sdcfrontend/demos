@@ -1,0 +1,19 @@
+h2 {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  font-size: var(--display-5);
+  margin-bottom: var(--component-gap);
+}
+
+h3 {
+  font-size: var(--display-1);
+  margin-bottom: var(--group-margin);
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: var(--font-fixed-s);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4em;
+  margin-bottom: var(--component-gap);
+}

@@ -1,0 +1,21 @@
+.code-block {
+  background: #282b34;
+  color: #da616d;
+  font-family: 'Courier New', Courier, monospace;
+  padding: var(--component-gap);
+  line-height: 1.4;
+  font-size: var(--font-fixed-s);
+  margin-bottom: var(--group-margin);
+}
+
+.code-block i {
+  color: #888;
+}
+
+.code-block span {
+  color: #eee;
+}
+
+.code-block pre {
+  white-space: pre-wrap;
+}

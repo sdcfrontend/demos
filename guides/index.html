@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <nav class="nav" role="navigation">
+      <div class="wrap wrap-wide">
+        <div class="nav-body">
+          <h1>CORE Styleguide</h1>
+          <div class="nav-items">
+            <ul>
+              <li class="nav-item"><a href="#">Home</a></li>
+              <li class="nav-item"><a href="#">Colour</a></li>
+              <li class="nav-item"><a href="#">Typography</a></li>
+              <li class="nav-item"><a href="#">Spacing</a></li>
+              <li class="nav-item"><a href="#">Atoms</a></li>
+              <li class="nav-item"><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main role="main">
+      <div class="wrap">
+        <h2>Color</h2>
+        <h3>Global</h3>
+        <h4>Neutral</h4>
+
+        <div class="swatch-group">
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #fff"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FFFFFF</p>
+              <p class="swatch-name">
+                <span>Shade 0</span>
+                <span class="swatch-code">--shade0</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #f4f5f7"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#F4F5F7</p>
+              <p class="swatch-name">
+                <span>Shade 1</span>
+                <span class="swatch-code">--shade1</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #E2E2E2"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#E2E2E2</p>
+              <p class="swatch-name">
+                <span>Shade 2</span>
+                <span class="swatch-code">--shade2</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #707070"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#707070</p>
+              <p class="swatch-name">
+                <span>Shade 3</span>
+                <span class="swatch-code">--shade3</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #4A4A4A"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#4A4A4A</p>
+              <p class="swatch-name">
+                <span>Shade 4</span>
+                <span class="swatch-code">--shade-4</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: #222222"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#222222</p>
+              <p class="swatch-name">
+                <span>Shade 5</span>
+                <span class="swatch-code">--shade5</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h4 id="gradients">Gradients</h4>
+        <div class="swatch-group">
+          <div class="swatch">
+            <div class="swatch-color"
+              style="background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0), #e8e7ed 92%);"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FFF - #E8E7ED</p>
+              <p class="swatch-name">
+                <span>Gradient radial</span>
+                <span class="swatch-code">--gradiant-radial</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#D7D5DD - #EEE</p>
+              <p class="swatch-name">
+                <span>Gradient pipe</span>
+                <span class="swatch-code">--gradient-pipe</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <h4 id="utility">Utility</h4>
+        <div class="swatch-group">
+          <div class="swatch">
+            <div class="swatch-color" style="background: #299934"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#299934</p>
+              <p class="swatch-name">
+                <span>Success</span>
+                <span class="swatch-code">--success</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background:#EA021A;">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#EA021A</p>
+              <p class="swatch-name">
+                <span>Error &amp; Live</span>
+                <span class="swatch-code">--alert</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background:#FFE000;">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FFE000</p>
+              <p class="swatch-name">
+                <span>Error &amp; Live</span>
+                <span class="swatch-code">--breaking</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background:#3157A1;">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#3157A1</p>
+              <p class="swatch-name">
+                <span>Text links</span>
+                <span class="swatch-code">--link-color</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <h4 id="css-vars">CSS Vars</h4>
+        <div class="code-block">
+          <pre>
+<i>/* COLORS */</i>
+
+<i>/* neutral shades (for internal use) */</i>
+--shade0: <span>#FFFFFF;</span>
+--shade1: <span>#F4F5F7;</span>
+--shade2: <span>#E2E2E2;</span>
+--shade3: <span>#707070;</span>
+--shade4: <span>#4A4A4A;</span>
+--shade5: <span>#222222;</span>
+
+<i>/* gradients */</i>
+--gradient-radial: <span>radial-gradient(circle at center,#fff 0,#e8e7ed 100%);</span>
+--gradient-pipe: <span>linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);</span>
+
+<i>/* ui states */</i>
+--success: <span>#299934;</span> <i>/* success messages */</i>
+--alert: <span>#EA021A;</span> <i>/* alerts and warnings */</i>
+--breaking: <span>#FFE000;</span> <i>/* breaking news components */</i>
+--link-color: <span>#3157A1;</span> <i>/* global text link color */</i>
+
+<i>/* common alias values */</i>
+--body-bg: <span>var(--shade1);</span> <i>/* mobile site bg (desktop uses a gradient) */</i>
+--component-bg: <span>var(--shade0);</span> <i>/* components bg is generally white */</i>
+--component-shade: <span>var(--shade1);</span> <i>/* component header bg */</i>
+--border-color: <span>var(--shade2);</span> <i>/* border color for components */</i>
+--text-color: <span>var(--shade4);</span> <i>/* main body text */</i>
+--text-color-invert: <span>var(--shade0);</span> <i>/* text on dark backgrounds */</i>
+--secondary-text-color: <span>var(--shade3);</span> <i>/* lighter body text */</i>
+--icon-color: <span>var(--shade5);</span> <i>/* color for svg/ui icons */</i>
+        </pre>
+        </div>
+
+        <h4 id="example">Example</h4>
+        <div class="eg">
+          <div class="eg-item">
+            <p class="eg-row">Row header</p>
+            <div class="eg-cols">
+              <div class="eg-col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.</p>
+                <div class="eg-ass-text">Associated text</div>
+              </div>
+              <div class="eg-col eg-invert">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.
+              </div>
+            </div>
+            <div class="eg-footer">
+              <a href="#" class="eg-link">Supporting link</a>
+              <div class="eg-icon"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+
+</html>
