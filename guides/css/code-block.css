@@ -1,21 +1,25 @@
 .code-block {
-  background: #282b34;
-  color: #da616d;
-  font-family: 'Courier New', Courier, monospace;
-  padding: var(--component-gap);
-  line-height: 1.4;
-  font-size: var(--font-fixed-s);
-  margin-bottom: calc(var(--group-margin) * 1.5);
+    background: #282b34;
+    color: #da616d;
+    font-family: 'Courier New', Courier, monospace;
+    padding: var(--component-gap);
+    line-height: 1.4;
+    font-size: var(--font-fixed-s);
+    margin-bottom: calc(var(--group-margin) * 1.5);
+}
+
+.swatch-group+.code-block {
+    margin-top: calc(var(--component-margin) * -1.2);
 }
 
 .code-block i {
-  color: #888;
+    color: #888;
 }
 
 .code-block span {
-  color: #eee;
+    color: #eee;
 }
 
 .code-block pre {
-  white-space: pre-wrap;
+    white-space: pre-wrap;
 }

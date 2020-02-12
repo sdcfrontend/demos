@@ -1,40 +1,40 @@
 .eg {
-  background: var(--component-shade);
-  padding: calc(var(--component-padding) * 2);
-  margin-bottom: calc(var(--group-margin) * 1.5);
+    background: var(--component-shade);
+    padding: calc(var(--component-padding) * 2);
+    margin-bottom: calc(var(--group-margin) * 1.5);
 }
 
 .eg-item {
-  background: var(--component-bg);
-  padding: var(--component-padding);
-  border: 1px solid var(--border-color);
+    background: var(--component-bg);
+    padding: var(--component-padding);
+    border: 1px solid var(--border-color);
 }
 
 .eg-cols {
-  display: grid;
-  grid-gap: var(--component-gap);
-  margin-bottom: var(--component-gap);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: grid;
+    grid-gap: var(--component-gap);
+    margin-bottom: var(--component-gap);
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
 
-.eg-cols > div {
-  padding: var(--component-padding);
+.eg-cols>div {
+    padding: var(--component-padding);
 }
 
 .eg-row {
-  font-size: var(--display-4);
-  margin-bottom: var(--component-gap);
-  background: var(--component-shade);
-  padding: 0.5em;
+    font-size: var(--display-4);
+    margin-bottom: var(--component-gap);
+    background: var(--component-shade);
+    padding: 0.5em;
 }
 
 .eg-invert {
-  background: var(--shade5);
-  color: var(--text-color-invert);
+    background: var(--shade5);
+    color: var(--text-color-invert);
 }
 
 .eg-ass-text {
-  color: var(--secondary-text-color);
-  font-size: var(--font-fixed-xs);
-  padding-top: 1em;
+    color: var(--secondary-text-color);
+    font-size: var(--font-fixed-xs);
+    padding-top: 1em;
 }

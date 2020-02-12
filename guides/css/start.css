@@ -1,52 +1,56 @@
 @font-face {
-  font-family: "skytext";
-  src: url(../fonts/sky-regular.woff) format("woff");
-  font-weight: normal;
+    font-family: "skytext";
+    src: url(../fonts/sky-regular.woff) format("woff");
+    font-weight: normal;
 }
 
 @font-face {
-  font-family: "skytext";
-  src: url(../fonts/sky-medium.woff) format("woff");
-  font-weight: bold;
+    font-family: "skytext";
+    src: url(../fonts/sky-medium.woff) format("woff");
+    font-weight: bold;
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-}
-
-a {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  text-decoration-skip: ink;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'skytext', sans-serif;
-  font-size: var(--base-font-size);
-  color: var(--text-color);
+    font-family: 'skytext', sans-serif;
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-skip: ink;
 }
 
 .wrap {
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--site-gutter);
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--site-gutter);
 }
 
 .wrap-wide {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 main {
-  margin-bottom: var(--group-margin);
+    margin-bottom: var(--group-margin);
 }
