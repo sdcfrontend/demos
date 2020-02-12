@@ -2,14 +2,12 @@
   font-family: "skytext";
   src: url(../fonts/sky-regular.woff) format("woff");
   font-weight: normal;
-  font-display: optional;
 }
 
 @font-face {
   font-family: "skytext";
   src: url(../fonts/sky-medium.woff) format("woff");
   font-weight: bold;
-  font-display: optional;
 }
 
 * {
