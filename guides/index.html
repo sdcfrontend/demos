@@ -15,14 +15,29 @@
       <div class="wrap wrap-wide">
         <div class="nav-body">
           <h1>CORE Styleguide</h1>
-          <div class="nav-items">
+          <button class="nav-button" aria-expanded="false" aria-controls="menu" data-role="menu-button">
+            <span data-role="open" aria-hidden="true"><svg viewBox="0 0 38 23" xmlns="http://www.w3.org/2000/svg">
+                <path d="m36.5 3h-35a1.5 1.5 0 0 1 0-3h35a1.5 1.5 0 0 1 0 3z" fill="#4a4a4a" />
+                <path d="m36.5 23h-35a1.5 1.5 0 0 1 0-3h35a1.5 1.5 0 0 1 0 3z" fill="#4a4a4a" />
+                <path d="m32.5 13h-28a1.5 1.5 0 0 1 0-3h28a1.5 1.5 0 0 1 0 3z" fill="#9f9f9f" /></svg></span>
+            <span data-role="close" aria-hidden="true"><svg viewBox="0 0 27.75 27.75"
+                xmlns="http://www.w3.org/2000/svg">
+                <g fill="#4a4a4a">
+                  <path
+                    d="m26.25 27.75a1.49 1.49 0 0 1 -1.06-.44l-24.75-24.75a1.5 1.5 0 0 1 2.12-2.12l24.75 24.75a1.49 1.49 0 0 1 0 2.12 1.51 1.51 0 0 1 -1.06.44z" />
+                  <path
+                    d="m1.5 27.75a1.51 1.51 0 0 1 -1.06-.44 1.49 1.49 0 0 1 0-2.12l24.75-24.75a1.5 1.5 0 0 1 2.12 2.12l-24.75 24.75a1.51 1.51 0 0 1 -1.06.44z" />
+                </g>
+              </svg></span>
+          </button>
+          <div class="nav-items" id="menu" data-role="menu" aria-hidden="true">
             <ul>
-              <li class="nav-item"><a href="#">Home</a></li>
-              <li class="nav-item"><a href="#">Colour</a></li>
-              <li class="nav-item"><a href="#">Typography</a></li>
-              <li class="nav-item"><a href="#">Spacing</a></li>
-              <li class="nav-item"><a href="#">Atoms</a></li>
-              <li class="nav-item"><a href="#">Accessibility</a></li>
+              <li class="nav-item"><button>Home</button></li>
+              <li class="nav-item"><button>Colour</button></li>
+              <li class="nav-item"><button>Typography</button></li>
+              <li class="nav-item"><button>Spacing</button></li>
+              <li class="nav-item"><button>Atoms</button></li>
+              <!-- <li class="nav-item"><a href="#">Accessibility</a></li> -->
             </ul>
           </div>
         </div>
@@ -230,7 +245,7 @@
         </div>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 
 </html>
