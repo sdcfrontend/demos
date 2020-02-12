@@ -1,6 +1,7 @@
 .eg {
   background: var(--component-shade);
   padding: calc(var(--component-padding) * 2);
+  margin-bottom: calc(var(--group-margin) * 1.5);
 }
 
 .eg-item {

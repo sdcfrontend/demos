@@ -3,11 +3,15 @@ h2 {
   text-transform: uppercase;
   font-size: var(--display-5);
   margin-bottom: var(--component-gap);
+  display: flex;
+  align-items: center;
 }
 
 h3 {
   font-size: var(--display-1);
   margin-bottom: var(--group-margin);
+  display: flex;
+  align-items: center;
 }
 
 h4 {
@@ -16,4 +20,13 @@ h4 {
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.4em;
   margin-bottom: var(--component-gap);
+  display: flex;
+  align-items: center;
+}
+
+.ass-link {
+  font-size: var(--font-fixed-xs);
+  color: var(--link-color);
+  padding-left: var(--component-gap);
+  text-transform: none;
 }

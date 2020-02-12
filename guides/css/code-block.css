@@ -5,7 +5,7 @@
   padding: var(--component-gap);
   line-height: 1.4;
   font-size: var(--font-fixed-s);
-  margin-bottom: var(--group-margin);
+  margin-bottom: calc(var(--group-margin) * 1.5);
 }
 
 .code-block i {
