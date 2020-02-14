@@ -83,9 +83,9 @@
   --font-scale-xxs: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px); /* 16 - 18px */
 
   /* fixed values */
-  --font-fixed-m: 18px;
-  --font-fixed-s: 16px;
-  --font-fixed-xs: 14px;
+  --font-fixed-m: var(--base-font-size);
+  --font-fixed-s: calc(var(--base-font-size) - 2px);
+  --font-fixed-xs: calc(var(--base-font-size) - 4px);
 
   /* common alias values */
   --article-text: var(--font-scale-xs); /* any large body of text */

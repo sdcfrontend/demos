@@ -51,6 +51,10 @@ a:hover {
     max-width: 100%;
 }
 
-main {
-    margin-bottom: var(--group-margin);
+.main {
+  margin-bottom: var(--group-margin);
+}
+
+.group-margin[class] {
+  margin-bottom: calc(var(--group-margin) * 1.5);
 }

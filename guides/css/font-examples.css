@@ -1,0 +1,33 @@
+.font-examples {
+  margin-bottom: var(--component-margin);
+}
+
+.font-examples-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--component-gap);
+}
+
+.font-examples-item > span {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  padding-left: var(--component-gap);
+  /* border: 1px solid red; */
+  white-space: nowrap;
+}
+
+.font-examples-item > span ~ span {
+  flex: 1;
+}
+
+.font-examples-item__scaler {
+  color: var(--link-color);
+  display: flex;
+  align-items: flex-end;
+}
+
+.font-examples-item__scaler > span {
+  padding: 0 2%;
+  line-height: 1
+}

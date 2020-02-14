@@ -1,7 +1,8 @@
 .eg {
     background: var(--component-shade);
-    padding: calc(var(--component-padding) * 2);
-    margin-bottom: calc(var(--group-margin) * 1.5);
+    padding: calc(var(--component-padding));
+    margin-bottom: calc(var(--component-margin));
+    max-width: 800px;
 }
 
 .eg-item {

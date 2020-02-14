@@ -1,0 +1,32 @@
+.font-faces {
+  margin-bottom: var(--component-margin);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: var(--component-gap);
+  max-width: 800px;
+}
+
+.font-faces-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: var(--component-padding);
+}
+
+.font-faces-block:nth-child(odd) {
+  background: var(--component-shade);
+  padding: var(--component-padding);
+}
+
+.font-faces-block h5 {
+  margin-bottom: var(--component-gap);
+}
+
+.font-faces-item {
+  line-height: 1.4;
+  font-size: var(--display-4)
+}
+
+.font-faces-block .text-block {
+  margin: 0;
+}

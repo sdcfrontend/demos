@@ -5,11 +5,7 @@
     padding: var(--component-gap);
     line-height: 1.4;
     font-size: var(--font-fixed-s);
-    margin-bottom: calc(var(--group-margin) * 1.5);
-}
-
-.swatch-group+.code-block {
-    margin-top: calc(var(--component-margin) * -1.2);
+    margin-bottom: calc(var(--component-margin));
 }
 
 .code-block i {
