@@ -88,16 +88,16 @@
   --font-fixed-xs: calc(var(--base-font-size) - 4px);
 
   /* common alias values */
-  --article-text: var(--font-scale-xs); /* any large body of text */
-  --component-text: var(--font-scale-xxs); /* smaller blocks of text within components */
-  --label-text: var(--font-fixed-xs); /* label and note text */
-  --link-list: var(--font-fixed-s); /* accompanying link lists */
   --display-1: var(--font-scale-xl); /* article headline/extra large header */
   --display-2: var(--font-scale-l); /* large component/group header */
   --display-3: var(--font-scale-m); /* med component header */
   --display-4: var(--font-scale-s); /* standard component header */
   --display-5: var(--font-scale-xs); /* small component header */
   --display-6: var(--font-scale-xxs); /* x small component header */
+  --article-text: var(--font-scale-xs); /* any large body of text */
+  --component-text: var(--font-scale-xxs); /* smaller blocks of text within components */
+  --link-list: var(--font-fixed-s); /* accompanying link lists */
+  --label-text: var(--font-fixed-xs); /* label and note text */
 }
 
 @media all and (max-width: 360px) {

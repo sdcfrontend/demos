@@ -201,20 +201,24 @@
         </div>
 
         <h4 id="example">Example usage <a href="#" class="ass-link">github link</a></h4>
-        <div class="eg group-margin">
-          <div class="eg-item">
-            <p class="eg-row">Row header</p>
+        <div class="eg group-margin" data-label="--component-shade" data-inside>
+          <div class="eg-item" data-label="--component-bg" data-inside>
+            <p class="eg-row" data-label="--component-shade" data-inside data-right>Row
+              header</p>
             <div class="eg-cols">
               <div class="eg-col">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.</p>
-                <div class="eg-ass-text">Associated text</div>
+                <p data-label="--text-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  minus modi maiores quo.</p>
+
+                <div class="eg-ass-text" data-label="--secondary-text-color">Associated text</div>
               </div>
-              <div class="eg-col eg-invert">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.
+              <div class="eg-col eg-invert" data-label="--shade-5" data-inside>
+                <span data-label="--text-color-invert" data-inside>Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Quam minus modi maiores quo.</span>
               </div>
             </div>
             <div class="eg-footer">
-              <a href="#" class="eg-link">Supporting link</a>
+              <a href="#" class="eg-link" data-label="--link-color">Supporting link</a>
               <div class="eg-icon"></div>
             </div>
           </div>

@@ -83,9 +83,10 @@
                 This method is a powerful and time-saving approach to making text responsive for both designers and
                 developers, which removes the complexity of adding additional media queries.
         </div>
+
         <div class="font-examples">
           <div class="font-examples-item" style="font-size: var(--display-1);">
-            <span>--font-scale-xl</span>
+            <span>display-1</span>
             <span>32 > 48</span>
             <span class="font-examples-item__scaler">
               <span style="font-size: 32px">AA</span>
@@ -94,7 +95,7 @@
           </div>
 
           <div class="font-examples-item" style="font-size: var(--display-2);">
-            <span>--font-scale-l</span>
+            <span>display-2</span>
             <span>24 > 36</span>
             <span class="font-examples-item__scaler">
               <span style="font-size: 24px">AA</span>
@@ -103,66 +104,150 @@
           </div>
 
           <div class="font-examples-item" style="font-size: var(--display-3);">
-            <span>--font-scale-m</span>
+            <span>display-3</span>
             <span>24 > 30</span>
             <span class="font-examples-item__scaler">
               <span style="font-size: 24px">AA</span>
               <span style="font-size: 30px">AA</span>
             </span>
           </div>
+
+          <div class="font-examples-item" style="font-size: var(--display-4);">
+            <span>display-4</span>
+            <span>20 > 22</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 20px">AA</span>
+              <span style="font-size: 22px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--display-5);">
+            <span>display-5</span>
+            <span>18 > 20</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 18px">AA</span>
+              <span style="font-size: 20px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--display-6);">
+            <span>display-6</span>
+            <span>16 > 18</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 16px">AA</span>
+              <span style="font-size: 18px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--article-text);">
+            <span>article-text</span>
+            <span>18 > 20</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 18px">AA</span>
+              <span style="font-size: 18px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--component-text);">
+            <span>component-text</span>
+            <span>16 > 18</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 16px">AA</span>
+              <span style="font-size: 18px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--link-list);">
+            <span>link-list</span>
+            <span>16</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 16px">AA</span>
+              <span style="font-size: 16px">AA</span>
+            </span>
+          </div>
+
+          <div class="font-examples-item" style="font-size: var(--label-text);">
+            <span>label-text</span>
+            <span>14</span>
+            <span class="font-examples-item__scaler">
+              <span style="font-size: 14px">AA</span>
+              <span style="font-size: 14px">AA</span>
+            </span>
+          </div>
+
+
         </div>
         <h4 id="css-vars">CSS Vars</h4>
-        <div class="code-block">
+        <div class="code-block group-margin">
           <pre>
-<i>/* COLORS */</i>
+<i>/* FONTS */</i>
 
-<i>/* neutral shades (for internal use) */</i>
---shade0: <span>#FFFFFF;</span>
---shade1: <span>#F4F5F7;</span>
---shade2: <span>#E2E2E2;</span>
---shade3: <span>#707070;</span>
---shade4: <span>#4A4A4A;</span>
---shade5: <span>#222222;</span>
+<i>/* settings */</i>
+--base-font-name: <span>'skytext';</span>
+--base-font-load-setting: <span>'optional';</span>
 
-<i>/* gradients */</i>
---gradient-radial: <span>radial-gradient(circle at center,#fff 0,#e8e7ed 100%);</span>
---gradient-pipe: <span>linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);</span>
+<i>/* bases */</i>
+--base-font-size: <span>18px;</span>
+--base-font-scaler: <span>calc(21.2px + 3vw);</span>
 
-<i>/* ui states */</i>
---success: <span>#299934;</span> <i>/* success messages */</i>
---alert: <span>#EA021A;</span> <i>/* alerts and warnings */</i>
---breaking: <span>#FFE000;</span> <i>/* breaking news components */</i>
---link-color: <span>#3157A1;</span> <i>/* global text link color */</i>
+<i>/* scaling values (for internal use) - scales between 360 - 900px */</i>
+--font-scale-xl: <span>var(--base-font-scaler);</span> <i>/* 32 - 48px */</i>
+--font-scale-l: <span>calc(var(--base-font-scaler) * 0.75);</span> <i>/* 24 - 36px */</i>
+--font-scale-m: <span>calc(var(--base-font-scaler) * 0.35 + 13.2px);</span> <i>/* 24 - 30px */</i>
+--font-scale-s: <span>calc( ( (var(--base-font-scaler)) / 8) + 16px);</span> <i>/* 20 - 22px */</i>
+--font-scale-xs: <span>calc( ( (var(--base-font-scaler)) / 8) + 14px);</span> <i>/* 18 - 20px */</i>
+--font-scale-xxs: <span>calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px);</span> <i>/* 16 - 18px */</i>
+
+<i>/* fixed values */</i>
+--font-fixed-m: <span>var(--base-font-size);</span>
+--font-fixed-s: <span>calc(var(--base-font-size) - 2px);</span>
+--font-fixed-xs: <span>calc(var(--base-font-size) - 4px);</span>
 
 <i>/* common alias values */</i>
---body-bg: <span>var(--shade1);</span> <i>/* mobile site bg (desktop uses a gradient) */</i>
---component-bg: <span>var(--shade0);</span> <i>/* components bg is generally white */</i>
---component-shade: <span>var(--shade1);</span> <i>/* component header bg */</i>
---border-color: <span>var(--shade2);</span> <i>/* border color for components */</i>
---text-color: <span>var(--shade4);</span> <i>/* main body text */</i>
---text-color-invert: <span>var(--shade0);</span> <i>/* text on dark backgrounds */</i>
---secondary-text-color: <span>var(--shade3);</span> <i>/* lighter body text */</i>
---icon-color: <span>var(--shade5);</span> <i>/* color for svg/ui icons */</i>
+--display-1: <span>var(--font-scale-xl);</span> <i>/* article headline/extra large header */</i>
+--display-2: <span>var(--font-scale-l);</span> <i>/* large component/group header */</i>
+--display-3: <span>var(--font-scale-m);</span> <i>/* med component header */</i>
+--display-4: <span>var(--font-scale-s);</span> <i>/* standard component header */</i>
+--display-5: <span>var(--font-scale-xs);</span> <i>/* small component header */</i>
+--display-6: <span>var(--font-scale-xxs);</span> <i>/* x small component header */</i>
+--article-text: <span>var(--font-scale-xs);</span> <i>/* any large body of text */</i>
+--component-text: <span>var(--font-scale-xxs);</span> <i>/* smaller blocks of text within components */</i>
+--link-list: <span>var(--font-fixed-s);</span> <i>/* accompanying link lists */</i>
+--label-text: <span>var(--font-fixed-xs);</span> <i>/* label and note text */</i>
         </pre>
         </div>
 
         <h4 id="example">Example usage <a href="#" class="ass-link">github link</a></h4>
-        <div class="eg">
-          <div class="eg-item">
-            <p class="eg-row">Row header</p>
-            <div class="eg-cols">
-              <div class="eg-col">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.</p>
-                <div class="eg-ass-text">Associated text</div>
-              </div>
-              <div class="eg-col eg-invert">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus modi maiores quo.
-              </div>
-            </div>
-            <div class="eg-footer">
-              <a href="#" class="eg-link">Supporting link</a>
-              <div class="eg-icon"></div>
-            </div>
+        <div class="eg eg-article">
+          <div class="">
+            <h1 data-label="--display-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <h2 data-label="--display-4">Commodi voluptates quae dolores nihil quos quasi temporibus animi nostrum minus
+              consequatur.</h2>
+            <div class="eg-article-author" data-label="--label-text">By Peter Author</div>
+            <p data-label="--article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate sapiente
+              beatae exercitationem atque
+              voluptatem inventore est reiciendis incidunt quidem illo, odio, odit nesciunt, at quas. Nemo reiciendis
+              veniam laborum alias.
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam voluptatum eligendi ex, incidunt soluta
+                error odit cum esse et sit animi dolore doloribus itaque fugiat officiis eius dolores delectus nisi!
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vero quod minus tenetur?
+                  Tempore magni repudiandae hic, voluptatibus amet natus autem id, consequuntur architecto ad voluptate
+                  sapiente animi corporis expedita.
+                  <h3 data-label="--display-2">Exercitationem Necessitatibus</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id laborum cum in hic aut minima
+                    aspernatur odio unde repudiandae. Accusantium quae dolore quidem nemo reprehenderit odit laudantium
+                    possimus obcaecati illum!
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, eaque possimus nobis animi labore,
+                      aliquam, eligendi assumenda unde ea dolor sequi inventore amet sed. Unde distinctio vel rerum
+                      corrupti quas.
+                      <h4 data-label="--display-3">Nesciunt et modi</h4>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, aut suscipit repudiandae,
+                        cum facilis vel nobis praesentium magni beatae laboriosam laudantium. Quae sunt similique,
+                        dolores reiciendis natus a quam laudantium?
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus dolore, quis earum velit
+                          et beatae corrupti vitae, qui itaque nulla natus tenetur consectetur nihil quibusdam culpa
+                          odit. Eos, nulla reprehenderit.
           </div>
         </div>
 

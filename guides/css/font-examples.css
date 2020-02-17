@@ -12,13 +12,12 @@
   flex: 3;
   display: flex;
   align-items: center;
-  padding-left: var(--component-gap);
-  /* border: 1px solid red; */
   white-space: nowrap;
 }
 
 .font-examples-item > span ~ span {
-  flex: 1;
+  flex: 2;
+  padding-left: var(--component-gap);
 }
 
 .font-examples-item__scaler {
