@@ -6,17 +6,17 @@
   /* COLORS */
 
   /* brand */
-  --brand1: #002672; /* placeholder - overriden by brand file */
-  --brand2: #EA021A; /* placeholder - overriden by brand file */
-  --brand3: linear-gradient(#002672, #00043B); /* placeholder - overriden by brand file */
+  --brand-1: #002672; /* placeholder - overriden by brand file */
+  --brand-2: #EA021A; /* placeholder - overriden by brand file */
+  --brand-3: linear-gradient(#002672, #00043B); /* placeholder - overriden by brand file */
 
   /* shade colors (for internal use) */
-  --shade0: #FFFFFF;
-  --shade1: #F4F5F7;
-  --shade2: #E2E2E2;
-  --shade3: #707070;
-  --shade4: #4A4A4A;
-  --shade5: #222222;
+  --shade-0: #FFFFFF;
+  --shade-1: #F4F5F7;
+  --shade-2: #E2E2E2;
+  --shade-3: #707070;
+  --shade-4: #4A4A4A;
+  --shade-5: #222222;
 
   /* shade gradients */
   --gradient-radial: radial-gradient(circle at center,#fff 0,#e8e7ed 100%);
@@ -29,14 +29,14 @@
   --link-color: #3157A1; /* global text link color */
   
   /* common alias values */
-  --body-bg: var(--shade1); /* mobile site bg (desktop uses a gradient) */
-  --component-bg: var(--shade0); /* components bg is generally white */
-  --component-shade: var(--shade1); /* component header bg */
-  --border-color: var(--shade2); /* border color for components */
-  --text-color: var(--shade4); /* main body text */
-  --text-color-invert: var(--shade0); /* text on dark backgrounds */
-  --secondary-text-color: var(--shade3); /* lighter body text */
-  --icon-color: var(--shade5); /* color for svg/ui icons */
+  --body-bg: var(--shade-1); /* mobile site bg (desktop uses a gradient) */
+  --component-bg: var(--shade-0); /* components bg is generally white */
+  --component-shade: var(--shade-1); /* component header bg */
+  --border-color: var(--shade-2); /* border color for components */
+  --text-color: var(--shade-4); /* main body text */
+  --text-color-invert: var(--shade-0); /* text on dark backgrounds */
+  --secondary-text-color: var(--shade-3); /* lighter body text */
+  --icon-color: var(--shade-5); /* color for svg/ui icons */
 
   /* SPACING */
 
@@ -76,7 +76,7 @@
 
   /* scaling values (for internal use) - scales between 360 - 900px */
   --font-scale-xl: var(--base-font-scaler); /* 32 - 48px */
-  --font-scale-l: calc(var(--base-font-scaler) * 0.75); /* 24 - 36px */
+  --font-scale-l: calc((var(--base-font-scaler) * 1.25 / 2) + 6px); /* 26 - 36px */
   --font-scale-m: calc(var(--base-font-scaler) * 0.35 + 13.2px); /* 24 - 30px */
   --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 16px); /* 20 - 22px */
   --font-scale-xs: calc( ( (var(--base-font-scaler)) / 8) + 14px); /* 18 - 20px */

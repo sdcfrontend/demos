@@ -30,3 +30,9 @@
   padding: 0 2%;
   line-height: 1
 }
+
+@media all and (max-width: 460px) {
+  .font-examples-item__scaler[class] {
+    display: none;
+  }
+}

@@ -2,7 +2,7 @@
   background: var(--component-shade);
   padding: calc(var(--component-padding));
   margin-bottom: calc(var(--component-margin));
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .eg, 
@@ -59,7 +59,7 @@
 }
 
 .eg-invert {
-  background: var(--shade5);
+  background: var(--shade-5);
   color: var(--text-color-invert);
 }
 
@@ -99,6 +99,10 @@
   line-height: 1.4;
   margin-bottom: 1.75em;
   font-size: var(--article-text);
+}
+
+.eg-article > *:last-child {
+  margin-bottom: 0;
 }
 
 .eg-article h3 {
