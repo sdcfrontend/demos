@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <script>
+      const here = document.currentScript;
+      (async function () {
+        const nav = await import('./nav.js')
+        nav.default(here);
+      })();  
+    </script>
+
+    <main role="main">
+      <div class="wrap">
+        <h2>Atoms</h2>
+        <h3 id="atoms">Atoms</h3>
+        <div class="text-block">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, placeat. Optio deleniti hic ipsum,
+            perspiciatis dolores, aperiam porro quas odit nulla dolorum reiciendis incidunt voluptatum rerum? Sed eaque
+            beatae necessitatibus.
+        </div>
+
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>

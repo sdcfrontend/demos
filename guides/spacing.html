@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <script>
+      const here = document.currentScript;
+      (async function () {
+        const nav = await import('./nav.js')
+        nav.default(here);
+      })();  
+    </script>
+
+    <main role="main">
+      <div class="wrap">
+        <h2>Spacing</h2>
+        <h3 id="spacing">Spacing</h3>
+        <div class="text-block">
+          <p>We are using a scaling set of spacing values to create a more fluid layout that looks great no matter what
+            proportion and isn’t heavily reliant on specific breakpoints. We can achieve this by supplying a range of
+            units that are based off a calculation from the base unit - 18px and scaled up as per below.
+
+            <p>By embracing fluid spacing you may lose some of your “visual” control, but it’s in
+              favor of simplicity and maintainability. It is true that you won’t be able to set pixel-perfect values,
+              but you will deal with responsiveness to a whole new level: most of the work will be setting a robust
+              scale of values for spacing and typography. Then you can edit 2–3 variables at specific media queries to
+              create a cascade effect, as opposed to tweaking all components and sub-elements.</p>
+        </div>
+
+        <h4>Scaling space</h4>
+
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>
