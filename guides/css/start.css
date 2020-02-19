@@ -24,6 +24,7 @@ body {
     font-family: 'skytext', sans-serif;
     font-size: var(--base-font-size);
     color: var(--text-color);
+    line-height: 1.4;
 }
 
 img {
@@ -57,4 +58,8 @@ a:hover {
 
 .group-margin[class] {
   margin-bottom: calc(var(--group-margin) * 1.5);
+}
+
+:root {
+  --brand-1: #0a1388;
 }
