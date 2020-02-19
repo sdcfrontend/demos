@@ -96,7 +96,7 @@
   --display-6: var(--font-scale-xxs); /* x small component header */
   --article-text: var(--font-scale-xs); /* any large body of text */
   --component-text: var(--font-scale-xxs); /* smaller blocks of text within components */
-  --link-list: var(--font-fixed-s); /* accompanying link lists */
+  --supporting-text: var(--font-fixed-s); /* accompanying text */
   --label-text: var(--font-fixed-xs); /* label and note text */
 }
 

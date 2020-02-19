@@ -14,6 +14,7 @@
   font-size: var(--display-5);
   font-weight: normal;
   margin: 0;
+  line-height: 1.2;
 }
 
 .tile-img {
@@ -31,11 +32,18 @@
   padding: var(--component-padding);
   flex: 2;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .tile-hero h3 {
   font-size: var(--display-3);
+}
+
+.tile-supporting-link {
+  font-size: var(--supporting-text);
+  margin-top: var(--component-gap);
 }
 
 .tile-hero {
