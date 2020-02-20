@@ -38,6 +38,10 @@
   --secondary-text-color: var(--shade-3); /* lighter body text */
   --icon-color: var(--shade-5); /* color for svg/ui icons */
 
+  /* box shadows */
+  --drop-shadow: 0 3px 3px rgba(0, 0, 0, 0.15); /* horizontal drop shadow beneath a ui element */ 
+  --glow-shadow: 0 0 12px rgba(0,0,0,0.15); /* horizontal drop shadow beneath a ui element */ 
+
   /* SPACING */
 
   /* scaling values (for internal use) - scales between 360 - 900px */
