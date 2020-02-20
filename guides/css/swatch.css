@@ -17,8 +17,8 @@
 
 .swatch-shadow .swatch-color {
     margin: 12px;
-    background: var(--link-color);
-    /* border: 1px solid var(--border-color); */
+    background: var(--component-bg);
+    border: 1px solid var(--border-color);
 }
 
 .swatch-body {
