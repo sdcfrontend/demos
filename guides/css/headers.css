@@ -1,5 +1,5 @@
 h2 {
-  color: var(--secondary-text-color);
+  color: var(--text-color-secondary);
   text-transform: uppercase;
   font-size: var(--display-5);
   margin-bottom: var(--component-gap);

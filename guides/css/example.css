@@ -83,7 +83,7 @@
 }
 
 .eg-ass-text {
-    color: var(--secondary-text-color);
+    color: var(--text-color-secondary);
     font-size: var(--supporting-text);
     margin-top: 1.5em;
 }

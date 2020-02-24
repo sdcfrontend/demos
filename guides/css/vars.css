@@ -35,7 +35,8 @@
   --border-color: var(--shade-2); /* border color for components */
   --text-color: var(--shade-4); /* main body text */
   --text-color-invert: var(--shade-0); /* text on dark backgrounds */
-  --secondary-text-color: var(--shade-3); /* lighter body text */
+  --text-color-secondary: var(--shade-3); /* lighter body text */
+  --text-color-dark: var(--shade-5); /* lighter body text */
   --icon-color: var(--shade-5); /* color for svg/ui icons */
 
   /* box shadows */
