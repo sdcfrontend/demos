@@ -357,7 +357,7 @@ ul {
 
 /* breakpoints */
 .sdc-site-header {
-  background: linear-gradient(70deg, #f6f7f9 0%, #f6f7f9 50%, #f0f1f5 51%, #f0f1f5 100%);
+  background: linear-gradient(to bottom, #0b0b44 0%, #0e0e79 100%);
   color: white;
   position: relative;
   z-index: 99992; }
