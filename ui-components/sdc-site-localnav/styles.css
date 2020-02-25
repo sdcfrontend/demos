@@ -1,0 +1,1971 @@
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url("/node_modules/sdc-project-base/fonts/sky-regular.woff") format("woff");
+  font-display: "optional"; }
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url("/node_modules/sdc-project-base/fonts/sky-medium.woff") format("woff");
+  font-weight: bold;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: 'Sky Display';
+  src: url("/node_modules/sdc-project-base/fonts/sky-display-medium.woff") format("woff");
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Football";
+  src: url("/node_modules/sdc-project-base/fonts/sky-football.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Premier League";
+  src: url("/node_modules/sdc-project-base/fonts/sky-premier-league.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Cricket";
+  src: url("/node_modules/sdc-project-base/fonts/sky-cricket.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky F1";
+  src: url("/node_modules/sdc-project-base/fonts/sky-f1.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Golf";
+  src: url("/node_modules/sdc-project-base/fonts/sky-golf.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+@media all and (max-width: 939px) {
+  .site-wrap-basic {
+    width: 100%;
+    max-width: var(--site-width-inner);
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+.site-wrap, .sdc-site-localnav__inner {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-wrap-padding, .section-wrap__article-column, .sdc-site-localnav__inner {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter); }
+
+.site-indent[class] {
+  padding-left: var(--component-padding);
+  padding-right: var(--component-padding); }
+
+.site-component-vertical-margin {
+  margin-bottom: var(--component-margin); }
+
+.site-component-vertical-margin-negative, .blackjack-sdc-digrev-header + .sdc-site-localnav {
+  margin-top: calc(var(--component-margin) * -1); }
+
+.site-component-vertical-margin-l {
+  margin-bottom: var(--group-margin); }
+
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap); }
+
+.section-wrap {
+  background: white; }
+  .section-wrap > .site-component-vertical-margin:last-child {
+    margin-bottom: 0;
+    padding-bottom: var(--component-margin); }
+
+.section-wrap--padding {
+  padding: var(--component-margin) 0; }
+
+.section-wrap--shade {
+  padding: var(--group-margin) 0; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (max-width: 480px) {
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner, .sdc-site-tiles__inner.sdc-site-localnav__inner {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+.glints-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+.glints-wings {
+  transform-style: preserve-3d;
+  position: relative;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 0;
+  border-bottom: 0;
+  background-clip: padding-box;
+  box-shadow: none;
+  box-shadow: 4px 0 2px rgba(0, 0, 0, 0.1), -4px 0 2px rgba(0, 0, 0, 0.1); }
+
+@supports (transform-style: preserve-3d) {
+  .glints-wings:before {
+    background: rgba(255, 255, 255, 0.15); } }
+
+.glints-wings:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: calc(100%);
+  left: -12px;
+  width: calc(100% + 24px);
+  transform: translateZ(-1px);
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.47) 9%, rgba(255, 255, 255, 0.57) 26%, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 0.15)) 1;
+  border-right: 1px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px solid;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+.glints-wings:after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: calc(100% + 24px);
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(166deg, rgba(255, 255, 255, 0.09) 45%, rgba(255, 255, 255, 0) 45%);
+  background-size: 5px 100%, 5px 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) 0, 7px 0, 0 0; }
+
+.glints-wings > * {
+  transform: translateZ(1px); }
+
+.glints-wings--right {
+  border-left: 0; }
+
+.glints-wings--right:before {
+  left: 0;
+  width: calc(100% + 12px); }
+
+.glints-wings--right:after {
+  left: 0;
+  width: calc(100% + 12px);
+  background-size: 5px 100%, 0 0, 100%; }
+
+.glints-box-padding {
+  padding: var(--component-padding); }
+
+@media all and (max-width: 480px) {
+  .glints-wings {
+    border-left-width: 8px;
+    border-right-width: 8px; }
+  .glints-wings:before {
+    left: -8px;
+    width: calc(100% + 16px); }
+  .glints-wings:after {
+    left: -8px;
+    width: calc(100% + 16px);
+    background-position: calc(100% - 4px) 0, 4px 0, 0 0; }
+  .glints-wings--right:before {
+    left: 0;
+    width: calc(100% + 8px); }
+  .glints-wings--right:after {
+    left: 0;
+    width: calc(100% + 8px); } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-ui-external-link:after, .sdc-site-localnav [target="_blank"]:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-article-significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--breaking[class] {
+  color: #000000;
+  background: #ffe001; }
+
+.sdc-article-significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-article-significance--live[class] {
+  color: #ffffff;
+  background: #d0021b; }
+
+.sdc-article-significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--transfer[class] {
+  color: #ffe001;
+  background: #000000; }
+
+.sdc-article-significance--update[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--eyewitness[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--opinion[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--explainer[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+/* SDC site localnav skin
+  =========================================== */
+.sdc-site-localnav:not(.sdc-site-localnav--filter) {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.18); }
+
+a.sdc-site-localnav__header-logo-wrap:hover,
+a.sdc-site-localnav__header-logo-wrap[aria-current],
+.sdc-site-localnav__item-link:hover,
+.sdc-site-localnav__item-link[aria-current] {
+  background-image: linear-gradient(to top, #214cb8, #214cb8);
+  background-clip: content-box;
+  background-size: 1px 3px;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  text-decoration: none; }
+
+.sdc-site-localnav__header-title:hover {
+  text-decoration: none; }
+
+@media (hover: none) {
+  .sdc-site-localnav__item-link:hover {
+    background: none; } }
+
+.sdc-site-match-header + .sdc-site-localnav {
+  background: white; }
+
+@media all and (max-width: 480px) {
+  .blackjack-sdc-digrev-header + .sdc-site-localnav {
+    margin-top: 0; } }
+
+/* Default styling paramters for this component that can be overwritten at project level */
+/* Layout mixins */
+.sdc-site-localnav[data-swipe-nav] {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scroll-behavior: smooth; }
+
+.sdc-site-localnav__swipe {
+  content: "";
+  position: absolute;
+  left: 100%;
+  transform: translateX(-100%);
+  height: 3em;
+  width: 2.4em;
+  margin-top: -3em;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCIgZmlsbD0iI2ZmZiIgc3R5bGU9InRyYW5zZm9ybTogcm90YXRlKC05MGRlZykiPjxwYXRoIGQ9Ik02LjAyIDEyLjY3YS43OC43OCAwIDAgMCAuMjQ3LjUyNWwuMTg4LjE5MkwxNi41MiAyMy40NWEuOTk1Ljk5NSAwIDAgMCAxLjQxMy4wMDFsMTAuMTM1LTEwLjEzNC4xMjMtLjEyNmEuNzY3Ljc2NyAwIDAgMCAuMjQ4LS41M2MuMDA2LS4xNzMtLjE1NS0uNDM4LS40NDItLjcyNWE4LjU3NSA4LjU3NSAwIDAgMC0uNTktLjUzN2MtLjA1LS4wNC0uMDk2LS4wNzgtLjEzOC0uMTFsLS40OTYuNDk1LTkuMTkzIDkuMTkzLS4zNTUuMzU0LS4zNTQtLjM1NC05LjE5Ny05LjE5OC0uNDg0LS40ODRhOC4yOSA4LjI5IDAgMCAwLS43My42NDhjLS4yODUuMjg4LS40NDYuNTUzLS40NC43Mjd6Ii8+PC9zdmc+") no-repeat center;
+  background-color: inherit;
+  background-size: 60%;
+  cursor: pointer;
+  border: 0;
+  display: none;
+  background-blend-mode: difference;
+  opacity: 0.8; }
+
+.sdc-site-localnav[data-swipable="true"] .sdc-site-localnav__swipe {
+  display: block; }
+
+.sdc-site-localnav[data-swipe-nav]::-webkit-scrollbar {
+  display: none; }
+
+.sdc-site-localnav[data-swipe-nav] .sdc-site-localnav__items[class] {
+  white-space: nowrap;
+  padding-right: inherit; }
+
+.sdc-site-localnav__item-select-button {
+  display: table-cell;
+  background: 0;
+  border: 0;
+  line-height: 3em;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+  cursor: pointer; }
+
+.sdc-site-localnav__item-select-button-icon {
+  width: 11px;
+  height: 14px;
+  position: relative;
+  top: 1px;
+  vertical-align: middle; }
+
+.sdc-site-localnav__more .sdc-site-localnav__item-select-button-icon {
+  display: none; }
+
+.sdc-site-localnav__item-select-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 75vw;
+  max-width: 220px;
+  min-width: 100%;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #d4d4d4;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: none;
+  scrollbar-width: thin;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  color: #4a4a4a;
+  overscroll-behavior: contain;
+  z-index: 10; }
+
+.sdc-site-localnav__item-select-menu[aria-hidden="true"] {
+  display: none; }
+
+.no-js .sdc-site-localnav__item-select-menu[aria-hidden] {
+  display: block;
+  height: 122px !important; }
+
+.sdc-site-localnav__item-select-menu::-webkit-scrollbar {
+  width: 10px; }
+
+.sdc-site-localnav__item-select-menu::-webkit-scrollbar-track {
+  background: none; }
+
+.sdc-site-localnav__item-select-menu::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  border: 3px solid transparent;
+  background-clip: padding-box; }
+
+.sdc-site-localnav__item-select-menu::-moz-scrollbar {
+  width: 10px; }
+
+.sdc-site-localnav__item-select-menu-additional-links {
+  padding-bottom: 0.5em;
+  background: linear-gradient(#e2e2e2, #e2e2e2) no-repeat;
+  background-size: calc(100% - 2em) 1px;
+  background-position: 1em bottom; }
+
+.sdc-site-localnav__item-select-menu > :first-child {
+  margin-top: 0.75em; }
+
+.sdc-site-localnav__item-select-menu ul {
+  margin-bottom: 0.75em; }
+
+.sdc-site-localnav__item-select-menu h4 {
+  padding: 0.5em 1em; }
+
+.sdc-site-localnav__item-select-menu a {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em; }
+
+.sdc-site-localnav__item-select-menu a:hover {
+  text-decoration: none;
+  background: #f4f5f7; }
+
+.sdc-site-localnav__item-select-menu a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.95em; }
+
+/* The main structural styles to create a vanilla version of this component */
+.sdc-site-localnav {
+  position: relative;
+  background: #eaeaea;
+  color: inherit;
+  z-index: 99990;
+  margin-bottom: ignore;
+  margin-top: 0;
+  transform-style: preserve-3d; }
+
+.sdc-site-localnav ~ .sdc-site-localnav {
+  z-index: 99989; }
+
+.sdc-site-localnav__icon {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  fill: #444;
+  display: inline-block;
+  vertical-align: middle; }
+
+.sdc-site-localnav__header .sdc-site-localnav__icon {
+  left: -0.7em; }
+
+.sdc-site-localnav__header-logo-wrap {
+  display: block;
+  padding-right: 1.3em;
+  padding-left: .7em; }
+
+.sdc-site-localnav__header-logo {
+  display: inline-block;
+  height: 2.88em;
+  min-width: 2.5em;
+  vertical-align: middle; }
+
+.sdc-site-localnav__item {
+  display: inline-block;
+  position: relative; }
+
+.sdc-site-localnav__current-section-name,
+.sdc-site-localnav__item-link {
+  line-height: 3em;
+  padding: 0 0.67em;
+  position: relative; }
+
+.sdc-site-localnav__item-link {
+  display: block; }
+
+.sdc-site-localnav__logo--additional {
+  vertical-align: text-top;
+  position: relative;
+  top: -1px; }
+
+.sdc-site-localnav__current-section-name {
+  display: none; }
+
+.sdc-site-localnav__more .sdc-site-localnav__item-link {
+  padding: 0; }
+
+.sdc-site-localnav__item-link[aria-current="true"] {
+  font-weight: bold; }
+
+.sdc-site-localnav__item-link--additional[target="_blank"]:after {
+  display: none; }
+
+.sdc-site-localnav__item-link[target="_blank"]:not(:lang(de)):after {
+  display: none; }
+
+[data-hash-target][aria-hidden="true"] {
+  display: none; }
+
+.sdc-site-localnav--filter {
+  background: none;
+  margin-top: -.9em; }
+
+.sdc-site-localnav--filter > .sdc-site-localnav__inner {
+  margin-bottom: -.5em; }
+
+.sdc-site-localnav--filter .sdc-site-localnav__more {
+  background: white; }
+
+.sdc-site-localnav--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 99991; }
+
+@media all and (min-width: 540px) {
+  .sdc-site-localnav__wrap {
+    display: flex;
+    margin-left: -0.67em;
+    margin-right: -0.67em; }
+  .sdc-site-localnav__header {
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    font-size: 1.05em;
+    font-weight: bold; }
+  .sdc-site-localnav__header-title {
+    display: flex;
+    align-items: center;
+    height: 2.85em;
+    padding-right: 1.3em;
+    padding-left: 0.67em;
+    vertical-align: middle; }
+  .sdc-site-localnav__header .sdc-site-localnav__icon {
+    display: none; }
+  .sdc-site-localnav__header:after {
+    content: "";
+    height: .8em;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: currentColor;
+    opacity: 0.8; }
+  .sdc-site-localnav__header + .sdc-site-localnav__body .sdc-site-localnav__item:first-of-type > .sdc-site-localnav__item-link:not(.sdc-site-localnav__item-link--additional) {
+    padding-left: 1.3em; }
+  .sdc-site-localnav__header + .sdc-site-localnav__body .sdc-site-localnav__item[data-visibility="mobile"]:first-of-type + .sdc-site-localnav__item > .sdc-site-localnav__item-link:not(.sdc-site-localnav__item-link--additional) {
+    padding-left: 1.3em; }
+  .sdc-site-localnav__body {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    height: 3em; }
+  .localnav__body-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap; }
+  .localnav__body-navigation__group {
+    position: relative;
+    flex: 1; }
+  .localnav__body-navigation__group--additional[class] {
+    padding-right: 0.67em;
+    white-space: nowrap;
+    flex: 0 0 auto; }
+  .sdc-site-localnav__items--additional[class] {
+    padding-right: 0; }
+  .sdc-site-localnav__item--additional[class] {
+    text-align: right;
+    margin-left: 2px; }
+  .sdc-site-localnav__items {
+    width: 100%;
+    width: fit-content;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    padding-right: 80px; }
+  .no-js .sdc-site-localnav__items {
+    overflow: visible; }
+  .sdc-site-localnav__item[aria-hidden="true"] {
+    visibility: hidden; }
+  .no-js .sdc-site-localnav__item[aria-hidden="true"],
+  .sdc-site-localnav__item[aria-hidden="false"] {
+    visibility: visible; }
+  .sdc-site-localnav__item--more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden; }
+  .sdc-site-localnav__item-link--more:after {
+    content: none !important; }
+  .sdc-site-localnav__item-link > .sdc-site-localnav__icon {
+    margin: 0 0 0 .2em; }
+  .sdc-site-localnav__item-link[aria-expanded="true"] > .sdc-site-localnav__icon {
+    transform: rotate(180deg); }
+  .sdc-site-localnav__item-link:focus {
+    z-index: 2; }
+  .sdc-site-localnav__more {
+    position: absolute;
+    right: 0;
+    background: #eaeaea;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    width: 75vw;
+    max-width: 220px;
+    display: none;
+    font-size: 0.9em;
+    padding: 0.75em 1em 1em;
+    border-radius: 0 0 5px 5px; }
+  .sdc-site-localnav__more[aria-hidden="false"] {
+    display: block;
+    min-width: 180px; }
+  .sdc-site-localnav__more > .sdc-site-localnav__item {
+    display: none;
+    width: 100%; }
+  .sdc-site-localnav__more .sdc-site-localnav__item-link {
+    line-height: 2.6em; }
+  .sdc-site-localnav__more > .sdc-site-localnav__item:last-of-type {
+    border: 0; }
+  [data-visibility="mobile"] {
+    display: none; }
+  .sdc-site-localnav--single-item-mobile-nav {
+    display: none; }
+  .js .sdc-site-localnav--single-item-mobile-nav {
+    display: block; }
+  .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__item-link {
+    transition: text-shadow 0.2s ease-in-out; }
+    .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__item-link[aria-current="true"]:before {
+      transition: height 0.2s ease-in-out; }
+  .js .sdc-site-localnav__items {
+    height: 3em; }
+  .sdc-site-localnav__header-title--mobile {
+    display: none; } }
+
+@media all and (max-width: 539px) {
+  .sdc-site-localnav {
+    font-size: .94em; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__header-title {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.85em 0 0.85em 0.7em; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__header-title[aria-expanded="true"] > .sdc-site-localnav__icon,
+  .sdc-site-localnav--mobile .sdc-site-localnav__header-logo-wrap[aria-expanded="true"] > .sdc-site-localnav__icon {
+    transform: rotate(180deg); }
+  .sdc-site-localnav--mobile .sdc-site-localnav__items {
+    padding-right: 0 !important;
+    padding-bottom: 0.8em !important; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__item--more,
+  .sdc-site-localnav--mobile .sdc-site-localnav__more {
+    display: none; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__item {
+    width: 100%; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__item-link {
+    border-top: 1px solid #c0c0c0; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__item--additional {
+    display: inline-block;
+    width: auto;
+    border: 0;
+    margin-left: 0.65em; }
+  .sdc-site-localnav--mobile .sdc-site-localnav__item-link--additional {
+    border: 0; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__wrap {
+    display: flex;
+    margin-left: -0.67em;
+    margin-right: -0.67em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header {
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    font-size: 1.05em;
+    font-weight: bold; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header-title {
+    display: flex;
+    align-items: center;
+    height: 2.85em;
+    padding-right: 1.3em;
+    padding-left: 0.67em;
+    vertical-align: middle; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header .sdc-site-localnav__icon {
+    display: none; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header:after {
+    content: "";
+    height: .8em;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: currentColor;
+    opacity: 0.8; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header + .sdc-site-localnav__body .sdc-site-localnav__item:first-of-type > .sdc-site-localnav__item-link:not(.sdc-site-localnav__item-link--additional) {
+    padding-left: 1.3em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__header + .sdc-site-localnav__body .sdc-site-localnav__item[data-visibility="mobile"]:first-of-type + .sdc-site-localnav__item > .sdc-site-localnav__item-link:not(.sdc-site-localnav__item-link--additional) {
+    padding-left: 1.3em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__body {
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    height: 3em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .localnav__body-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .localnav__body-navigation__group {
+    position: relative;
+    flex: 1; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .localnav__body-navigation__group--additional[class] {
+    padding-right: 0.67em;
+    white-space: nowrap;
+    flex: 0 0 auto; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__items--additional[class] {
+    padding-right: 0; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item--additional[class] {
+    text-align: right;
+    margin-left: 2px; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__items {
+    width: 100%;
+    width: fit-content;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    padding-right: 80px; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .no-js .sdc-site-localnav__items {
+    overflow: visible; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item[aria-hidden="true"] {
+    visibility: hidden; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .no-js .sdc-site-localnav__item[aria-hidden="true"],
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item[aria-hidden="false"] {
+    visibility: visible; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item--more {
+    position: absolute;
+    right: 0;
+    top: 0;
+    visibility: hidden; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item-link--more:after {
+    content: none !important; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item-link > .sdc-site-localnav__icon {
+    margin: 0 0 0 .2em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item-link[aria-expanded="true"] > .sdc-site-localnav__icon {
+    transform: rotate(180deg); }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__item-link:focus {
+    z-index: 2; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__more {
+    position: absolute;
+    right: 0;
+    background: #eaeaea;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    width: 75vw;
+    max-width: 220px;
+    display: none;
+    font-size: 0.9em;
+    padding: 0.75em 1em 1em;
+    border-radius: 0 0 5px 5px; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__more[aria-hidden="false"] {
+    display: block;
+    min-width: 180px; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__more > .sdc-site-localnav__item {
+    display: none;
+    width: 100%; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__more .sdc-site-localnav__item-link {
+    line-height: 2.6em; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__more > .sdc-site-localnav__item:last-of-type {
+    border: 0; }
+  .sdc-site-localnav:not(.sdc-site-localnav--mobile) [data-visibility="mobile"] {
+    display: none; }
+  .sdc-site-localnav--single-item-mobile-nav {
+    display: none; }
+  .js .sdc-site-localnav--single-item-mobile-nav {
+    display: block; }
+  .sdc-site-localnav--single-item-mobile-nav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__items {
+    width: 100%;
+    position: relative; }
+  .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__item {
+    width: 100%; }
+    .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__item--more {
+      width: auto; }
+  .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__current-section-name {
+    display: table-cell;
+    font-weight: bold; }
+  .sdc-site-localnav--single-item-mobile-nav .sdc-site-localnav__item-link[aria-current="true"]:before {
+    display: none; }
+  .js .sdc-site-localnav:not(.sdc-site-localnav--mobile) .sdc-site-localnav__items {
+    height: 3em; }
+  .js .sdc-site-localnav__body {
+    display: none; }
+  .js .sdc-site-localnav__body[data-state-hidden="false"] {
+    display: block; }
+  .sdc-site-localnav__items > .sdc-site-localnav__item > .sdc-site-localnav__item-link {
+    padding-left: 0.65em;
+    padding-right: 0.65em; }
+  .sdc-site-localnav__header-title--desktop {
+    display: none !important; } }
+
+@media all and (min-width: 801px) {
+  .sdc-site-localnav {
+    margin-top: 0; } }
+
+.sdc-site-localnav--skysports[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--skysports[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--skysports[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--skysports[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--skysports[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--skysports-light[class] {
+  background: var(--sports-branding-skysports-light-primary);
+  color: var(--sports-branding-skysports-light-color); }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-light-color); }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-light-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--skysports-light[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--skysports-light[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--skysports-light[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--skysports-light[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--boxing[class] {
+  background: var(--sports-branding-boxing-primary);
+  color: var(--sports-branding-boxing-color); }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-boxing-color); }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-boxing-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--boxing[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--boxing[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--boxing[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--boxing[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--cricket[class] {
+  background: var(--sports-branding-cricket-primary);
+  color: var(--sports-branding-cricket-color); }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-cricket-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-cricket-color); }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-cricket-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--cricket[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--cricket[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--cricket[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--cricket[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--cycling[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--cycling[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--cycling[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--cycling[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--cycling[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--darts[class] {
+  background: var(--sports-branding-darts-primary);
+  color: var(--sports-branding-darts-color); }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-darts-color); }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-darts-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--darts[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--darts[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--darts[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--darts[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--esports[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--esports[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--esports[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--esports[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--esports[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--horseracing[class] {
+  background: var(--sports-branding-horseracing-primary);
+  color: var(--sports-branding-horseracing-color); }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-horseracing-color); }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-horseracing-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--horseracing[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--horseracing[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--horseracing[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--horseracing[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--horseracing-alt[class] {
+  background: var(--sports-branding-horseracing-alt-primary);
+  color: var(--sports-branding-horseracing-alt-color); }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item:first-child {
+    margin-left: 0.7em; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link[aria-current][class],
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link[class]:hover {
+    background: var(--sports-branding-horseracing-alt-secondary);
+    background-size: 100%;
+    background-clip: padding-box; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-horseracing-alt-color); }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-horseracing-alt-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--horseracing-alt[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--horseracing-alt[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--horseracing-alt[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--horseracing-alt[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--f1[class] {
+  background: var(--sports-branding-f1-primary);
+  color: var(--sports-branding-f1-color); }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-f1-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-f1-color); }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-f1-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--f1[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--f1[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--f1[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--f1[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--football[class] {
+  background: var(--sports-branding-football-primary);
+  color: var(--sports-branding-football-color); }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-football-color); }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-football-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--football[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--football[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--football[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--football[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--football[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--football[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--gaa[class] {
+  background: var(--sports-branding-gaa-primary);
+  color: var(--sports-branding-gaa-color); }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-gaa-color); }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-gaa-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--gaa[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--gaa[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--gaa[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--gaa[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--golf[class] {
+  background: var(--sports-branding-golf-primary);
+  color: var(--sports-branding-golf-color); }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-golf-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-golf-color); }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-golf-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--golf[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--golf[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--golf[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--golf[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--mma[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--mma[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--mma[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--mma[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--mma[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--more-sports[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--more-sports[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--more-sports[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--more-sports[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--more-sports[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--motorsport[class] {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-skysports-color); }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-skysports-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--motorsport[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--motorsport[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--motorsport[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--motorsport[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--nba[class] {
+  background: var(--sports-branding-nba-primary);
+  color: var(--sports-branding-nba-color); }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-nba-color); }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-nba-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--nba[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--nba[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--nba[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--nba[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--netball[class] {
+  background: var(--sports-branding-netball-primary);
+  color: var(--sports-branding-netball-color); }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-netball-color); }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-netball-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--netball[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--netball[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--netball[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--netball[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--nfl[class] {
+  background: var(--sports-branding-nfl-primary);
+  color: var(--sports-branding-nfl-color); }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-nfl-color); }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-nfl-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--nfl[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--nfl[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--nfl[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--nfl[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--premier-league[class] {
+  background: var(--sports-branding-premier-league-primary);
+  color: var(--sports-branding-premier-league-color); }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-premier-league-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-premier-league-color); }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-premier-league-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--premier-league[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--premier-league[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--premier-league[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--premier-league[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--rugby-league[class] {
+  background: var(--sports-branding-rugby-league-primary);
+  color: var(--sports-branding-rugby-league-color); }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-rugby-league-color); }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-rugby-league-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--rugby-league[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--rugby-league[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--rugby-league[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--rugby-league[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--rugby-union[class] {
+  background: var(--sports-branding-rugby-union-primary);
+  color: var(--sports-branding-rugby-union-color); }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-rugby-union-color); }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-rugby-union-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--rugby-union[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--rugby-union[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--rugby-union[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--rugby-union[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--tennis[class] {
+  background: var(--sports-branding-tennis-primary);
+  color: var(--sports-branding-tennis-color); }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-tennis-color); }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-tennis-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--tennis[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--tennis[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--tennis[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--tennis[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+.sdc-site-localnav--transfer-centre[class] {
+  background: var(--sports-branding-transfer-center-primary);
+  color: var(--sports-branding-transfer-center-color); }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: var(--sports-branding-transfer-center-secondary);
+    font-weight: normal; }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-transfer-center-color); }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-transfer-center-primary);
+    border-color: var(--sports-branding-transfer-center-primary); }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: var(--sports-branding-transfer-center-primary); }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--transfer-centre[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--transfer-centre[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, var(--sports-branding-transfer-center-secondary), var(--sports-branding-transfer-center-secondary));
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, var(--sports-branding-transfer-center-secondary), var(--sports-branding-transfer-center-secondary));
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--transfer-centre[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--transfer-centre[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid var(--sports-branding-transfer-center-primary); } }
+
+.sdc-site-localnav--wwe[class] {
+  background: var(--sports-branding-wwe-primary);
+  color: var(--sports-branding-wwe-color); }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__header-title {
+    font-family: var(--sports-branding-skysports-font), "Sky Text";
+    color: inherit;
+    font-weight: normal; }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link {
+    border: 0; }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__icon {
+    fill: var(--sports-branding-wwe-color); }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__more {
+    background: var(--sports-branding-wwe-primary);
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__more > .sdc-site-localnav__item {
+    border-color: rgba(225, 255, 225, 0.28); }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link--additional {
+    background: rgba(0, 0, 0, 0.17); }
+  .sdc-site-localnav--wwe[class] a.sdc-site-localnav__header-logo-wrap:hover,
+  .sdc-site-localnav--wwe[class] a.sdc-site-localnav__header-logo-wrap[aria-current],
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link:hover,
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link[aria-current],
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__header-title:hover {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: content-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link--additional:hover,
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__item-link--additional[aria-current] {
+    background-image: linear-gradient(to top, currentColor, currentColor);
+    background-clip: padding-box;
+    background-size: 1px 3px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    text-decoration: none; }
+  .sdc-site-localnav--wwe[class] .sdc-site-localnav__swipe {
+    background-blend-mode: normal; }
+
+@media (max-width: 539px) {
+  .sdc-site-localnav--wwe[class].sdc-site-localnav--mobile .sdc-site-localnav__item-link[class] {
+    border-top: 1px solid rgba(225, 255, 225, 0.28); } }
+
+body {
+  min-height: 300vh;
+  color: #4a4a4a; }
+
+.sdc-site-localnav {
+  margin-bottom: 70px; }
+
+.sdc-site-localnav:nth-of-type(10) {
+  z-index: 10000000; }

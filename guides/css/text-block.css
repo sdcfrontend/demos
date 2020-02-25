@@ -8,3 +8,8 @@
 .text-block p {
   margin-bottom: 1em;
 }
+
+.text-block ul {
+  list-style-position: inside;
+  padding-left: var(--component-gap);
+}

@@ -1,0 +1,22 @@
+.hero {
+  padding-bottom: 25%;
+  max-height: 300px;
+  min-height: 250px;
+  background: var(--brand-3);
+  margin-bottom: var(--group-margin);
+  margin-top: calc(var(--group-margin) * -1);
+  position: relative;
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url(/guides/img/header.jpg);
+  background-size: cover;
+  mix-blend-mode: overlay;
+  background-position: center 60%;
+}

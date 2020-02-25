@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-site-layout</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <h2>Sticky leaderboard layout</h2>
+<div class="sdc-site-layout-sticky-region" data-format="leaderboard" data-role="sticky-region"
+  data-component-name="sdc-site-layout">
+  <div class="sdc-site-layout-sticky-region__target">
+    <iframe class="sdc-site-layout-sticky-region__listener" frameborder="0" data-role="ghost-region-listener"
+      data-controls="ghost-1"></iframe>
+    <!-- add sdc component here and delete line below -->
+    <div class="placeholder placeholder--leaderboard">leaderboard</div>
+  </div>
+</div>
+<div class="sdc-site-layout-sticky-region sdc-site-layout-sticky-region__ghost" id="ghost-1" data-format="leaderboard">
+</div>
+<hr>
+
+<h2>Primary 2 col layout for articles, pages with MPU col - 1 floated item</h2>
+<div class="sdc-site-layout-wrap site-wrap site-wrap-padding" data-type="article">
+  <div class="sdc-site-layout sdc-site-layout--alt1">
+
+    <div class="sdc-site-layout__col sdc-site-layout__col1">
+      <div class="sdc-site-layout-sticky-region" data-interscroller="true" data-format="floated-mpu"
+        data-role="sticky-region" data-label="Advertisement" data-component-name="sdc-site-layout">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder placeholder--mpu sdc-site-au site-component-vertical-margin" data-ad-format="mpu" data-type="" aria-hidden="true">
+                  <div class="sdc-site-au__mpu"
+                      data-role="ad-container"
+                      data-config="{&quot;id&quot;:&quot;mpu-1&quot;,&quot;ad-type&quot;:&quot;mpu&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[300,250]],&quot;tablet&quot;:[[300,250]],&quot;desktop&quot;:[[300,250],[300,600]]}}"
+                      
+                      data-targeting-strnativekey="eY5NpN2YvRtG5PACRZHya5vd"
+                      data-targeting-platform="uat"
+                      data-tag="69550299/skysports/nba/news"
+                      data-component-name="sdc-site-mpu"
+                      aria-label="Advertisement"
+                      id="mpu-1"
+                      data-tolerance="2"
+                      
+                  ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdc-site-layout__col sdc-site-layout__col2"></div>
+
+  </div>
+</div>
+
+<hr>
+
+<h2>Primary 2 col layout for articles, pages with MPU col - 2 floated items</h2>
+<div class="sdc-site-layout-wrap site-wrap site-wrap-padding">
+  <div class="sdc-site-layout sdc-site-layout--alt1">
+
+    <div class="sdc-site-layout__col sdc-site-layout__col1">
+      <div class="sdc-site-layout-sticky-region" data-split="2" data-interscroller="true" data-format="floated-mpu" data-role="sticky-region">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder placeholder--mpu sdc-site-au site-component-vertical-margin" data-ad-format="mpu" data-type="" aria-hidden="true">
+                  <div class="sdc-site-au__mpu"
+                      data-role="ad-container"
+                      data-config="{&quot;id&quot;:&quot;mpu-1&quot;,&quot;ad-type&quot;:&quot;mpu&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[300,250]],&quot;tablet&quot;:[[300,250]],&quot;desktop&quot;:[[300,250],[300,600]]}}"
+                      
+                      data-targeting-strnativekey="eY5NpN2YvRtG5PACRZHya5vd"
+                      data-targeting-platform="uat"
+                      data-tag="69550299/skysports/nba/news"
+                      data-component-name="sdc-site-mpu"
+                      aria-label="Advertisement"
+                      id="mpu-1"
+                      data-tolerance="2"
+                      
+                  ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sdc-site-layout-sticky-region" data-split="2" data-format="floated-mpu" data-role="sticky-region">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder">outbrain</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdc-site-layout__col sdc-site-layout__col2">2</div>
+
+  </div>
+</div>
+
+<hr>
+
+<h2>Primary 3 col layout for articles, pages with MPU col - 3 floated items</h2>
+<div class="sdc-site-layout-wrap site-wrap site-wrap-padding">
+  <div class="sdc-site-layout sdc-site-layout--alt1">
+
+    <div class="sdc-site-layout__col sdc-site-layout__col1">
+      
+      <div class="sdc-site-layout-sticky-region" data-split="3" data-interscroller="true" data-format="floated-mpu" data-role="sticky-region">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder placeholder--mpu sdc-site-au site-component-vertical-margin" data-ad-format="mpu" data-type="" aria-hidden="true">
+                  <div class="sdc-site-au__mpu"
+                      data-role="ad-container"
+                      data-config="{&quot;id&quot;:&quot;mpu-1&quot;,&quot;ad-type&quot;:&quot;mpu&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[300,250]],&quot;tablet&quot;:[[300,250]],&quot;desktop&quot;:[[300,250],[300,600]]}}"
+                      
+                      data-targeting-strnativekey="eY5NpN2YvRtG5PACRZHya5vd"
+                      data-targeting-platform="uat"
+                      data-tag="69550299/skysports/nba/news"
+                      data-component-name="sdc-site-mpu"
+                      aria-label="Advertisement"
+                      id="mpu-1"
+                      data-tolerance="2"
+                      
+                  ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sdc-site-layout-sticky-region" data-split="3" data-format="floated-static" data-role="sticky-region">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder">content</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sdc-site-layout-sticky-region" data-split="3" data-format="floated-outbrain" data-role="sticky-region">
+        <div class="sdc-site-layout-sticky-region__target">
+          <div class="sdc-site-layout-sticky-region__mask">
+            <div class="sdc-site-layout-sticky-region__content">
+              <!-- add sdc component here and delete line below -->
+              <div class="placeholder">outbrain</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sdc-site-layout__col sdc-site-layout__col2">2</div>
+
+  </div>
+</div>
+<br><br>
+    </div>
+  </body>
+
+</html>

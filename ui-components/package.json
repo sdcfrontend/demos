@@ -1,0 +1,32 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sdc-project-base": "git+https://git.bskyb.com/sky-components/sdc-project-base.git#add-css-variables",
+    "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git#master",
+    "sdc-article-video": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-video.git#master",
+    "sdc-article-significance": "git+https://git.bskyb.com/sky-components/sdc-article-significance.git#master",
+    "sdc-site-layout": "git+https://git.bskyb.com/sky-components/sdc-site-layout.git#master",
+    "sdc-site-localnav": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-localnav.git#master",
+    "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git#master",
+    "sdc-site-carousel": "git+https://git.bskyb.com/sky-components/sdc-site-carousel.git#master",
+    "sdc-site-table": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-table.git#master",
+    "sdc-site-header": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-header.git#master",
+    "sdc-site-a11y-skip-links": "git+https://git.bskyb.com/sky-components/sdc-site-a11y-skip-links.git#v1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "handlebars": "^4.7.3",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.27",
+    "postcss-css-variables": "^0.14.0"
+  }
+}
