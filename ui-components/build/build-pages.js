@@ -1,8 +1,12 @@
+// get dependencies
 const fs = require('fs');
 const handlebars = require('handlebars');
 const path = require('path');
 const ROOT = path.resolve(process.cwd());
-var sass = require('node-sass');
+const sass = require('node-sass');
+const webpack = require('webpack');
+const webpackconfig = require('./webpack.config');
+
 var postcss = require('postcss');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
@@ -13,26 +17,29 @@ const page = fs.readFileSync(path.resolve(ROOT, 'build/page.html'), 'utf8').toSt
 const directory = fs.readFileSync(path.resolve(ROOT, 'build/directory.hbs'), 'utf8').toString();
 const cssvars = fs.readFileSync(path.resolve(ROOT, 'node_modules/sdc-project-base/css/base/core/_vars.scss'), 'utf8').toString();
 const helpers = require(path.resolve(ROOT, 'node_modules/sdc-project-base/js/helpers/all'));
-const list = [];
 
+// set up
 handlebars.registerHelper(helpers)
+const list = [];
 
 if (!package && package.dependencies) {
   return "no components found";
 }
 
 for (var item in package.dependencies) {
-  buildsection(item);
+  buildsection(item, package.dependencies[item]);
 };
 
-function buildsection(name) {
-  //get files
+function buildsection(name, gitlink) {
+
+  //get files based on component name
   if (name.match(/sdc-project/)) {
     return;
   }
 
   const template = fs.readFileSync(path.resolve(ROOT, 'node_modules', name, 'template.hbs'), 'utf8').toString();
   const csspath = path.resolve(ROOT, 'node_modules', name, `styles/preview.scss`);
+  const jspath = path.resolve(ROOT, 'node_modules', name, `src/components/${name}.js`);
 
   let data = {};
   try {
@@ -41,13 +48,15 @@ function buildsection(name) {
     data = [require(path.resolve(ROOT, 'node_modules', name, 'sample/data.json'))];
   }
 
-  // render template
+  // compile html
   const hbs = handlebars.compile(template);
   let html = '';
 
   data.forEach(function (item) {
     html += hbs(item) + "<br><br>";
   });
+
+  html = page.replace(/#{component}/g, html).replace(/#{name}/g, name).replace(/#{git-link}/g, gitlink.replace('git+', ''));
 
   // compile css
   sass.render({
@@ -59,7 +68,11 @@ function buildsection(name) {
     }
   });
 
-  html = page.replace(/#{component}/, html).replace(/#{name}/, name);
+  // compile js
+  const config = webpackconfig(jspath, path.resolve(ROOT, name), 'script');
+  webpack(config).run(function (error, stats) {
+    console.log(error);
+  });
 
   // make folder
   try {

@@ -1,15 +1,3 @@
-/*
- *  This file is used for previewing locally using the toolbelt.
- *  The actual entry point for your component styles are in
- *  /styles/components/sdc-site-a11y-skip-links.scss
- *
- *  To reference project-wide styles, sdc-project-base should
- *  be added to the component npm devDependencies and imported:
- *  @import "sdc-project-base/css/base/core/_start.scss";
- *
- *  Any other files referenced in here will not be imported
- *  when the component is consumed by your app project.
- */
 /* START/RESET */
 /* ========= */
 * {
@@ -57,6 +45,20 @@ a:hover {
 ul {
   list-style: none; }
 
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
 /* PROJECT COLOR PALETTE */
 /* ========= */
 /* primary */
@@ -286,5 +288,83 @@ ul {
   color: #ffffff;
   background: #0a1388; }
 
-.sdc-site-a11y-skip-links {
-  color: green; }
+/* sdc-site-component-header */
+/* ========= */
+/* SKIN */
+/* Default styling paramters for this component that can be overwritten at project level */
+/* ========= */
+/* COMPONENT */
+/* The main structural styles to create a vanilla version of this component */
+/* ========= */
+.sdc-site-component-header__body {
+  display: block; }
+
+/* Header size/importance hieracies in descending orders */
+.sdc-site-component-header--h1 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 2.3em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h2 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 2em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important;
+  line-height: 1.1; }
+
+.sdc-article-header--feature .sdc-site-component-header--h2 {
+  color: #fff; }
+
+.sdc-site-component-header--h3 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1.4em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h4 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1.1em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h5 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header__logo {
+  height: 0.8em; }
+
+.sdc-site-component-header--h1,
+.sdc-site-component-header__logo {
+  height: 1em; }
+
+@media all and (max-width: 600px) {
+  .sdc-site-component-header--h1 {
+    font-size: 1.65em !important;
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h2 {
+    font-size: 1.45em !important;
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h3 {
+    font-size: 1.25em !important;
+    margin-bottom: 0.75em !important; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-component-header__body[data-short-text] > [data-role="short-text-target"] {
+    display: none; }
+  .sdc-site-component-header__body[data-short-text]:before {
+    content: attr(data-short-text); }
+  .sdc-site-component-header--h1 {
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h2 {
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h3 {
+    margin-bottom: 0.75em !important; } }
