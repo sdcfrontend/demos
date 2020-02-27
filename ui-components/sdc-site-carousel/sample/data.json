@@ -1,0 +1,598 @@
+{
+  "data": {
+    "theme": "congress-blue",
+    "title": "Lakers vs Warriors",
+    "display": true,
+    "hasMultipleTabs": true,
+    "tabs": [
+      {
+        "title": "Latest",
+        "display": true,
+        "articles": [
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "https://e1.365dm.com/19/05/{width}x{height}/skysports-gareth-bale-real-madrid_4673532.jpg?20190519161516",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "https://e1.365dm.com/19/05/768x432/skysports-gareth-bale-real-madrid_4673532.jpg?20190519161516",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "https://e2.365dm.com/19/05/768x432/skysports-sanchez-alexis-manchester_4674121.jpg?20190520073627",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "https://e2.365dm.com/19/05/768x432/skysports-sanchez-alexis-manchester_4674121.jpg?20190520073627",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "https://e1.365dm.com/19/05/{width}x{height}/skysports-gareth-bale-real-madrid_4673532.jpg?20190519161516",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "https://e1.365dm.com/19/05/768x432/skysports-gareth-bale-real-madrid_4673532.jpg?20190519161516",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "https://e2.365dm.com/19/05/{width}x{height}/skysports-manchester-city-de-bruyne_4672735.jpg?20190518183147",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "https://e2.365dm.com/19/05/768x432/skysports-manchester-city-de-bruyne_4672735.jpg?20190518183147",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "https://e3.365dm.com/19/03/{width}x{height}/skysports-nani-orlando-city_4603137.jpg?20190310001709",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "https://e3.365dm.com/19/03/768x432/skysports-nani-orlando-city_4603137.jpg?20190310001709",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          }
+        ]
+      },
+      {
+        "title": "Top plays",
+        "articles": [
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          }
+        ]
+      },
+      {
+        "title": "Top dunks",
+        "articles": [
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          }
+        ]
+      },
+      {
+        "title": "Latest news",
+        "display": true,
+        "articles": [
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          }
+        ]
+      },
+      {
+        "title": "Latest other news",
+        "display": true,
+        "articles": [
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          },
+          {
+            "id": "90871625",
+            "title": "Lorem ipsum dolor sit amet, consectetuer",
+            "link": "/watch/video/sports/9697061/test-pre-roll-video",
+            "duration": "1.28",
+            "type": {
+              "video": true
+            },
+            "listingImage": {
+              "type": "image",
+              "template": "http://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+              "src": "http://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+              "aspectRatio": "4/3",
+              "dimensions": []
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

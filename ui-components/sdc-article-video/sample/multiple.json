@@ -1,0 +1,104 @@
+[
+  {
+    "id": "lxcjFrNjE6MZUqYTvl3LKZZEPf_8iyJ4",
+    "provider": "ooyala",
+    "providers": {
+      "svl": "false",
+      "ooyala": "true"
+    },
+    "playerId": "3d13c57cd8c0497c8c9be33dfa563acc",
+    "accountKey": "8wMGgyOs6juWbQc2b27BimBkwbzd.qGHZg",
+    "videoSrc": "http:\/\/ak.c.ooyala.com\/BvNDVuNjE6NmeuT3sHDjCyPuvSUrKNnq\/DOcJ-FxaFrRg4gtDEwOjM3NjowODE7Tz",
+    "caption": "DE video that fetches token via auth-manager - will need to edit preview.js with an up to date token.",
+    "captionPrefix": "Video:",
+    "html5SkinJs": "",
+    "ooyalaAssetOverride":"",
+    "ooyalaIndividualAssetOverride": {
+      "core": "",
+      "player": "",
+      "bitWrapper": "",
+      "skin": "",
+      "freewheel": "",
+      "googleima": "",
+      "discovery": ""
+    },
+    "enableDiscovery": null ,
+    "iosPlayMode": "inline",
+    "poster": {
+      "aspectRatio":"16\/9",
+      "src":"http:\/\/uat.e.365dm.com\/16\/09\/1920x1080\/Ut_HKthATH4eww8X4xMDoxOjA4MTsiGN_3429604.jpg",
+      "template": "http://e3.365dm.com/17/03/{width}x{height}/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170521064329",
+      "alt":"Sky News",
+      "caption":null
+    },
+    "aspectRatio": "16/10",
+    "dimension": {
+      "fullBleed": false,
+      "halfWidth": false
+    },
+    "skinOverride" : {
+      "startScreen": {
+        "playButtonPosition": "left"
+      }
+    },
+    "tokenRequired": true,
+    "tokenFetchMethod": "auth-manager",
+    "ooyalaAssetVersion": "4.11.13",
+    "inTile": true
+  },
+  {
+    "id": "J2MzVuNjE6G_8ucnchExapagwOu095Lf",
+    "provider": "ooyala",
+    "providers": {
+      "svl": "false",
+      "ooyala": "true"
+    },
+    "playerId": "f62a9d0d893b44b7aec9c77e53ac5fb8",
+    "accountKey": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN.IXUXg",
+    "videoSrc": "http:\/\/ak.c.ooyala.com\/dzdjc0NjE6bd74tZRSfNt0_4eX5OVfYf\/DOcJ-FxaFrRg4gtDEwOjNhMzowODE7ex",
+    "caption": "The Week's Entertainment News",
+    "captionPrefix": "Video:",
+    "poster": {
+      "aspectRatio":"16\/9",
+      "src":"http:\/\/uat.e.365dm.com\/16\/01\/1920x1080\/default-web-2048x1536_3371077.jpg?20160620164516",
+      "template": "http://e3.365dm.com/17/03/{width}x{height}/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170521064329",
+      "alt":"Sky News",
+      "caption":null
+    },
+    "aspectRatio": "16/10",
+    "dimension": {
+      "fullBleed": false,
+      "halfWidth": false
+    },
+    "skinOverride" : {
+      "startScreen": {
+        "playButtonPosition": "left"
+      }
+    }
+  },
+  {
+    "id": "news-1469599883560",
+    "provider": "svl",
+    "providers": {
+      "svl": true,
+      "ooyala": false
+    },
+    "videoSrc": "http:\/\/video.news.sky.com\/video\/h264\/vod\/700\/2016\/07\/DIG120716TUBOECONWAY11001468321813663700.mp4",
+    "caption": "Base Jumper Reaches 155mph",
+    "captionPrefix": "Video:",
+    "advertTag": "sky.portal.news.business.story",
+    "poster": {
+      "aspectRatio":"16\/9",
+      "src":"http:\/\/uat.e.365dm.com\/16\/01\/1920x1080\/default-web-2048x1536_3371077.jpg?20160620164516",
+      "template": "http://e3.365dm.com/17/03/{width}x{height}/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170521064329",
+      "alt":"Sky News",
+      "caption":null
+    },
+    "subdomain": "stage",
+    "aspectRatio": "16/10",
+    "dimension": {
+      "fullBleed": false,
+      "halfWidth": false
+    }
+  }
+]

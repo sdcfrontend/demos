@@ -1,0 +1,81 @@
+{
+  "properties": {
+    "modifier": "news",
+    "logo": "https://news.sky.com/resources/sky-news-logo.png?v=1?bypass-service-worker",
+    "logo-alt": "Skynews.com logo",
+    "logo-link": "/"
+  },
+  "amp": {
+    "navigation": {
+      "items": [
+        {
+          "label": "Home",
+          "link": "example.html"
+        },
+        {
+          "label": "Fußball",
+          "link": "#"
+        }
+      ]
+    }
+  },
+  "dark-mode": true,
+  "search": false,
+  "navigation": {
+    "menuLink": "#blackjack-sdc-site-footer",
+    "items": [
+      {
+        "label": "Home",
+        "link": "example.html"
+      },
+      {
+        "label": "UK",
+        "link": "#"
+      },
+      {
+        "label": "World",
+        "link": "#",
+        "current": true
+      },
+      {
+        "label": "Politics",
+        "link": "#"
+      },
+      {
+        "label": "US",
+        "link": "#"
+      },
+      {
+        "label": "Ocean Rescue",
+        "link": "#"
+      },
+      {
+        "label": "Business",
+        "link": "#"
+      },
+      {
+        "label": "Entertainment",
+        "link": "#"
+      },
+      {
+        "label": "Offbeat",
+        "link": "#"
+      },
+      {
+        "label": "Weather",
+        "link": "#"
+      }
+    ],
+    "overflow": {
+      "auto": true,
+      "label": "More",
+      "link": "#",
+      "items": true
+    },
+    "action-button": {
+      "link": "#",
+      "label": "Watch Live",
+      "top": true
+    }
+  }
+}

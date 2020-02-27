@@ -1,0 +1,300 @@
+[
+  {
+    "title-tag": "h1",
+    "properties": {
+      "sticky": false,
+      "mobile-nav": true
+    },
+    "navigation": {
+      "header": {
+        "title": "Fußball"
+      },
+      "items": [
+        {
+          "label": "Home",
+          "link": "/"
+        },
+        {
+          "label": "Spielplan",
+          "link": "/",
+          "external": true
+        },
+        {
+          "label": "Tabellen",
+          "link": "/"
+        },
+        {
+          "label": "Vereine",
+          "link": "/",
+          "menu": {
+            "label": "Teams",
+            "items": [{
+              "label": "Premier League",
+              "items": [
+                {
+                  "label": "Arsenal",
+                  "link": "/arsenal"
+                },{
+                  "label": "Aston Villa",
+                  "link": "/aston-villa"
+                },
+                {
+                  "label": "Arsenal",
+                  "link": "/arsenal"
+                },{
+                  "label": "Aston Villa",
+                  "link": "/aston-villa"
+                },
+                {
+                  "label": "Arsenal",
+                  "link": "/arsenal"
+                },{
+                  "label": "Aston Villa",
+                  "link": "/aston-villa"
+                },
+                {
+                  "label": "Arsenal",
+                  "link": "/arsenal"
+                },{
+                  "label": "Aston Villa",
+                  "link": "/aston-villa"
+                }
+              ]
+            },
+            {
+              "label": "Championship",
+              "items": [
+                {
+                  "label": "Birmingham",
+                  "link": "/birmingham"
+                },{
+                  "label": "Chelsea",
+                  "link": "/chelsea"
+                }
+              ]
+            }]
+          }
+        },
+        {
+          "label": "Ligen & Wettbewerbe",
+          "link": "/"
+        },
+        {
+          "label": "Transfermarkt",
+          "link": "/",
+          "current": true
+        }
+      ]
+    }
+  },
+
+  {
+    "properties": {
+      "sticky": false,
+      "mobile-nav": false
+    },
+    "navigation": {
+      "header": null,
+      "items": [
+        {
+          "label": "Home",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Spielplan",
+          "link": "/"
+        },
+        {
+          "label": "Tabellen",
+          "link": "/"
+          },
+        {
+          "label": "Vereine",
+          "link": "/"
+        },
+        {
+          "label": "Ligen & Wettbewerbe",
+          "link": "/"
+        },
+        {
+          "label": "Transfermarkt",
+          "link": "/"
+        }
+      ]
+    }
+  },
+
+  {
+    "properties": {
+      "sticky": false,
+      "mobile-nav": false,
+      "filter-nav": true
+    },
+    "navigation": {
+      "header": {
+        "title": "Filter"
+      },
+      "items": [
+        {
+          "label": "Home",
+          "link": "/",
+          "hash": "inpage",
+          "current": true
+          },
+
+        {
+          "label": "Spielplan",
+          "link": "/",
+          "hash": "inpage2"
+          },
+
+        {
+          "label": "Tabellen",
+          "link": "/",
+          "hash": "inpage3"
+          },
+        {
+          "label": "Vereine",
+          "link": "/",
+          "hash": "inpage4"
+        },
+        {
+          "label": "Ligen & Wettbewerbe",
+          "link": "/",
+          "hash": "inpage5"
+          },
+        {
+          "label": "Transfermarkt",
+          "link": "/",
+          "hash": "inpage6"
+        }
+      ]
+    }
+  },
+
+  {
+    "title-tag": "h1",
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "nba",
+      "headerLink": "https://www.nba.com",
+      "headerLogo": {
+        "src": "./assets/nba-logo-17.svg",
+        "alt": "NBA logo",
+        "width": 50
+      },
+      "additionalItems": [
+        {
+          "link": "http://www.nbastore.eu/stores/nba/en",
+          "label": "NBA Store",
+          "external": true,
+          "src": "/assets/logo-nba-store.svg",
+          "alt": "NBA Store logo",
+          "width": 68
+        },
+        {
+          "link": "https://watch.nba.com/packages?ls=leaguepass:localsite:uk:generic:topnav",
+          "label": "NBA League Pass",
+          "external": true,
+          "src": "/assets/logo-nba-league-pass.png",
+          "alt": "NBA League Pass logo",
+          "width": 119
+        }
+      ]
+    },
+    "navigation": {
+      "items": [{
+        "link": "https://www.nba.com",
+        "hash": null,
+        "label": "Home",
+        "current": true,
+        "external": false,
+        "visibility": "mobile"
+      }, {
+        "link": "/nba/news",
+        "hash": null,
+        "label": "News",
+        "current": false,
+        "external": false
+      }, {
+        "link": "/nba/video",
+        "hash": null,
+        "label": "Videos",
+        "current": false,
+        "external": false
+      }, {
+        "link": "/nba/video",
+        "hash": null,
+        "label": "Scores",
+        "current": false,
+        "external": false
+      }, {
+        "link": "/nba/video",
+        "hash": null,
+        "label": "Standings",
+        "current": false,
+        "external": false
+      }, {
+        "link": "/nba/video",
+        "hash": null,
+        "label": "Teams",
+        "current": false,
+        "external": false
+      }, {
+        "link": "/nba/video",
+        "hash": null,
+        "label": "Players",
+        "current": false,
+        "external": false
+      }],
+      "header": {
+        "title": "NBA"
+      }
+    }
+  },
+  {
+    "properties": {
+      "swipe-nav": true
+    },
+    "navigation": {
+      "items": [
+        {
+          "label": "15:45",
+          "link": "/",
+          "current": true,
+          "flagged": true
+        },
+        {
+          "label": "16:15",
+          "link": "/",
+          "flagged": true
+        },
+        {
+          "label": "16:45",
+          "link": "/"        
+        },
+        {
+          "label": "17:15",
+          "link": "/"
+        },
+        {
+          "label": "17:45",
+          "link": "/"
+        },
+        {
+          "label": "18:15",
+          "link": "/"
+        },
+        {
+          "label": "18:45",
+          "link": "/"
+        },
+        {
+          "label": "19:15",
+          "link": "/"
+        }
+      ]
+    }
+  }
+]

@@ -1,5 +1,16 @@
 @import 'vars.css';
 
+@font-face {
+  font-family: 'Sky Text';
+  src: url('./sky_reg-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url('./sky_med-webfont.woff') format('woff');
+  font-weight: bold;
+}
+
 * {
   box-sizing: border-box;
 }

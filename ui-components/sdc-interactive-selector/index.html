@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-interactive-selector</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-interactive-selector</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-interactive-selector">https://git.bskyb.com/sky-components/blackjack-sdc-interactive-selector</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41" data-url="./sample/data--ryder-cup-wildcards.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
+<br><br><div class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41" data-url="./sample/data--ryder-cup-fourballs.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
+<br><br><div class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41" data-url="./sample/data--ryder-cup-foursomes.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
+<br><br><div class="sdc-interactive-selector" data-component-name="sdc-interactive-selector" data-token="a9a00d56bb6ad32a8d59cabc2f555d41" data-url="./sample/data--ryder-cup-singles.json" data-post-url="" data-article-url="" data-facebook-share-url="" data-twitter-share-url="" data-whatsapp-share-url=""></div>
+<br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+    </script>
+  </body>
+
+</html>

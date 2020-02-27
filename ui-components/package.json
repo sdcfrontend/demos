@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "sdc-article-body": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-body.git",
+    "sdc-article-gallery": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-gallery.git",
+    "sdc-article-header": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-header.git",
     "sdc-article-significance": "git+https://git.bskyb.com/sky-components/sdc-article-significance.git",
     "sdc-article-video": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-video.git",
+    "sdc-interactive-selector": "git+https://git.bskyb.com/sky-components/blackjack-sdc-interactive-selector",
+    "sdc-interactive-super6": "git+https://git.bskyb.com/sky-components/sdc-interactive-super6.git",
     "sdc-project-base": "git+https://git.bskyb.com/sky-components/sdc-project-base.git#add-css-variables",
     "sdc-site-a11y-skip-links": "git+https://git.bskyb.com/sky-components/sdc-site-a11y-skip-links.git",
     "sdc-site-carousel": "git+https://git.bskyb.com/sky-components/sdc-site-carousel.git",
@@ -29,6 +34,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
+    "fse": "^4.0.1",
     "handlebars": "^4.7.3",
     "node-sass": "^4.13.1",
     "postcss": "^7.0.27",

@@ -1,0 +1,179 @@
+{
+	"id": "940fe18e5885fd2252fa1c92fdbe7a1b",
+	"title": "The Oscars",
+	"headerBackground": "",
+	"sponsorLink":"",
+	"sponsorImage":"",
+	"backgroundColour": "darkred",
+	"formation": "default",
+	"restrictSelections": true,
+	"categoriseParticipants": false,
+	"useParticipantImage": true,
+	"useTeamName": true,
+	"type": "oscars",
+	"numOfParticipants": 6,
+	"embed": false,
+	"successMessageTitle": "",
+  "successMessageText": "",
+	"staticData": {
+		"oscars": {
+			"formations": {
+	      "default": {
+	        "positions": {
+	          "1": {
+	            "id": "1",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Best Actor",
+	            "positionDisplayName": "Best Actor",
+	            "filter": ["default"]
+	          },
+						"2": {
+	            "id": "2",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Second Best Actor",
+	            "positionDisplayName": "Second Best Actor",
+	            "filter": ["default"]
+	          },
+	          "3": {
+	            "id": "3",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Best Actress",
+	            "positionDisplayName": "Best Actress",
+	            "filter": ["default"]
+	          },
+						"4": {
+	            "id": "4",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Second Best Actress",
+	            "positionDisplayName": "Second Best Actress",
+	            "filter": ["default"]
+	          },
+	          "5": {
+	            "id": "5",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Best Director",
+	            "positionDisplayName": "Best Director",
+	            "filter": ["default"]
+	          },
+	          "6": {
+	            "id": "6",
+	            "label": false,
+	            "group": "",
+	            "subGroup": "",
+	            "positionName": "Best Movie",
+	            "positionDisplayName": "Best Movie",
+	            "filter": ["default"]
+	          }
+					}
+				}
+			}
+		}
+	},
+	"participants": [{
+		"listPosition": 0,
+		"id": 1,
+		"longName": "Ann Actress",
+		"shortName": "A Actress",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Actress", "Second Best Actress"]
+		}
+	},{
+		"listPosition": 0,
+		"id": 2,
+		"longName": "Also Ann Actress",
+		"shortName": "A A Actress",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Actress", "Second Best Actress"]
+		}
+	}, {
+		"listPosition": 0,
+		"id": 3,
+		"longName": "Ant Actor",
+		"shortName": "A Actor",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Actor", "Second Best Actor"]
+		}
+	}, {
+		"listPosition": 0,
+		"id": 4,
+		"longName": "Another Ant Actor",
+		"shortName": "A A Actor",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Actor", "Second Best Actor"]
+		}
+	}, {
+		"listPosition": 0,
+		"id": 5,
+		"longName": "Dave Director",
+		"shortName": "D Director",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Director"]
+		}
+	}, {
+		"listPosition": 0,
+		"id": 6,
+		"longName": "Superfilm",
+		"shortName": "Superfilm",
+		"image": "http:\/\/img.skysports.com\/football\/players\/home\/head\/h_head_9017.png",
+		"team": {
+			"id": 123,
+			"name": "",
+			"shortName": "",
+			"image": ""
+		},
+		"position": {
+			"displayName": "default",
+			"filter": ["Best Movie"]
+		}
+	}]
+}

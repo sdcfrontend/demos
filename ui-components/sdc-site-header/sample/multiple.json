@@ -1,0 +1,170 @@
+[
+  {
+    "properties": {
+      "modifier": "news",
+      "logo": "https://news.sky.com/assets/sky-news-logo.png?bypass-service-worker",
+      "logo-alt": "Skynews.com logo",
+      "logo-link": "/"
+    },
+    "amp": {
+      "navigation": {
+        "items": [
+          {
+            "label": "Home",
+            "link": "example.html"
+          },
+          {
+            "label": "Fußball",
+            "link": "#"
+          }
+        ]
+      }
+    },
+    "search": false,
+    "navigation": {
+      "menuLink": "#blackjack-sdc-site-footer",
+      "items": [
+        {
+          "label": "Home",
+          "link": "example.html"
+        },
+        {
+          "label": "UK",
+          "link": "#"
+        },
+        {
+          "label": "World",
+          "link": "#",
+          "current": true
+        },
+        {
+          "label": "Politics",
+          "link": "#"
+        },
+        {
+          "label": "US",
+          "link": "#"
+        },
+        {
+          "label": "Ocean Rescue",
+          "link": "#"
+        },
+        {
+          "label": "Business",
+          "link": "#"
+        },
+        {
+          "label": "Entertainment",
+          "link": "#"
+        },
+        {
+          "label": "Offbeat",
+          "link": "#"
+        },
+        {
+          "label": "Weather",
+          "link": "#"
+        }
+      ],
+      "overflow": {
+        "auto": true,
+        "label": "More",
+        "link": "#",
+        "items": true
+      },
+      "action-button": {
+        "link": "#",
+        "label": "Watch Live",
+        "top": true
+      }
+    }
+  },
+  {
+    "properties": {
+      "logo": "https://sport.sky.de/assets/skysport.svg",
+      "logo-alt": "Skysports.com logo",
+      "logo-link": "/"
+    },
+    "amp": {
+      "navigation": {
+        "items": [
+          {
+            "label": "Home",
+            "link": "example.html"
+          },
+          {
+            "label": "Fußball",
+            "link": "#"
+          }
+        ]
+      }
+    },
+    "navigation": {
+      "menuLink": "#blackjack-sdc-site-footer",
+      "items": [
+        {
+          "label": "Home",
+          "link": "example.html"
+        },
+        {
+          "label": "Fußball",
+          "link": "#"
+        },
+        {
+          "label": "Formel 1",
+          "link": "#"
+        },
+        {
+          "label": "Golf",
+          "link": "#"
+        },
+        {
+          "label": "Handball",
+          "link": "#"
+        },
+        {
+          "label": "Basketball",
+          "link": "#"
+        },
+        {
+          "label": "Golf",
+          "link": "#"
+        }
+      ],
+      "overflow": {
+        "label": "Alle Sportarten",
+        "link": "#",
+        "stick": true,
+        "items": null,
+        "current": true
+      },
+      "action-button": {
+        "link": "#",
+        "label": "Sky Sport News HD Live",
+        "position": "top"
+      }
+    },
+    "secondaryNavigation": {
+      "label": "Sky Erleben",
+      "modifier": "mobile-hidden",
+      "items": [
+        {
+          "label": "Sky bestellen",
+          "link": "http://www.sky.de/bestellung/aktuelle-angebote-2629?wkz=WHPS18",
+          "external": true
+        },
+        {
+          "label": "Sky Go",
+          "link": "http://www.skygo.sky.de/",
+          "external": true
+        },
+        {
+          "label": "Sky Ticket",
+          "link": "https://skyticket.sky.de/?wkz=WHPS18T",
+          "external": true
+        }
+      ]
+    },
+    "login": "Login"
+  }
+]

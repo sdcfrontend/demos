@@ -1,0 +1,4189 @@
+{
+	"id": "91987704f86f9713e139a61209ad2540",
+	"title": "team selector 08022017 2",
+	"headerBackground": "",
+	"formation": "32325",
+	"restrictSelections": true,
+	"useParticipantImage": false,
+	"backgroundImage": "",
+	"type": "rugbyunion",
+	"numOfParticipants": 15,
+	"embed": true,
+	"participants": [{
+		"listPosition": 0,
+		"id": 51021,
+		"longName": "C Fearns",
+		"shortName": "C Fearns",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 47847,
+		"longName": "T Wood",
+		"shortName": "T Wood",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 59547,
+		"longName": "K Sinckler",
+		"shortName": "K Sinckler",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55915,
+		"longName": "J Launchbury",
+		"shortName": "J Launchbury",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10453,
+		"longName": "D Hartley",
+		"shortName": "D Hartley",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11032,
+		"longName": "J Simpson",
+		"shortName": "J Simpson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 47373,
+		"longName": "C Robshaw",
+		"shortName": "C Robshaw",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54554,
+		"longName": "J Joseph",
+		"shortName": "J Joseph",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 67828,
+		"longName": "C Ewels",
+		"shortName": "C Ewels",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56169,
+		"longName": "J Nowell",
+		"shortName": "J Nowell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55994,
+		"longName": "G Ford",
+		"shortName": "G Ford",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50828,
+		"longName": "D Cole",
+		"shortName": "D Cole",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 51391,
+		"longName": "O Farrell",
+		"shortName": "O Farrell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 48806,
+		"longName": "C Lawes",
+		"shortName": "C Lawes",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10204,
+		"longName": "T Croft",
+		"shortName": "T Croft",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 45728,
+		"longName": "M Mullan",
+		"shortName": "M Mullan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61534,
+		"longName": "T Harrison",
+		"shortName": "T Harrison",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11022,
+		"longName": "A Goode",
+		"shortName": "A Goode",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63666,
+		"longName": "A Lozowski",
+		"shortName": "A Lozowski",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56485,
+		"longName": "N Hughes",
+		"shortName": "N Hughes",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "no8",
+			"positionDisplayName": "No 8",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11385,
+		"longName": "D Strettle",
+		"shortName": "D Strettle",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10462,
+		"longName": "J Haskell",
+		"shortName": "J Haskell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54932,
+		"longName": "M Vunipola",
+		"shortName": "M Vunipola",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "looseHeadProp",
+			"positionDisplayName": "Loose Head Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72554,
+		"longName": "M Williams",
+		"shortName": "M Williams",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57397,
+		"longName": "J Marler",
+		"shortName": "J Marler",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57091,
+		"longName": "E Daly",
+		"shortName": "E Daly",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Outside Centre",
+		"filter": ["outsideCentre","insideCentre"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10391,
+		"longName": "N Abendanon",
+		"shortName": "N Abendanon",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11384,
+		"longName": "D Care",
+		"shortName": "D Care",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57631,
+		"longName": "B Vunipola",
+		"shortName": "B Vunipola",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 60898,
+		"longName": "J Clifford",
+		"shortName": "J Clifford",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 46415,
+		"longName": "B Youngs",
+		"shortName": "B Youngs",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 59542,
+		"longName": "A Watson",
+		"shortName": "A Watson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 59279,
+		"longName": "T Taylor",
+		"shortName": "T Taylor",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62899,
+		"longName": "H Slade",
+		"shortName": "H Slade",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54471,
+		"longName": "G Kruis",
+		"shortName": "G Kruis",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57545,
+		"longName": "J May",
+		"shortName": "J May",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72553,
+		"longName": "B Te\u0027o",
+		"shortName": "B Te\u0027o",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 47382,
+		"longName": "C Clark",
+		"shortName": "C Clark",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55711,
+		"longName": "M Yarde",
+		"shortName": "M Yarde",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 64283,
+		"longName": "M Itoje",
+		"shortName": "M Itoje",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 66684,
+		"longName": "E Genge",
+		"shortName": "E Genge",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10467,
+		"longName": "D Cipriani",
+		"shortName": "D Cipriani",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 13181,
+		"longName": "D Wilson",
+		"shortName": "D Wilson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10433,
+		"longName": "M Brown",
+		"shortName": "M Brown",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 66958,
+		"longName": "S Underhill",
+		"shortName": "S Underhill",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72552,
+		"longName": "J George",
+		"shortName": "J George",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62909,
+		"longName": "B Morgan",
+		"shortName": "B Morgan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50506,
+		"longName": "N Catt",
+		"shortName": "N Catt",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 47556,
+		"longName": "C Ashton",
+		"shortName": "C Ashton",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png",
+		"team": {
+			"id": 451,
+			"name": "England",
+			"shortName": "England",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/451.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61608,
+		"longName": "N Scannell",
+		"shortName": "N Scannell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62188,
+		"longName": "R Henshaw",
+		"shortName": "R Henshaw",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61026,
+		"longName": "I Henderson",
+		"shortName": "I Henderson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63169,
+		"longName": "T Furlong",
+		"shortName": "T Furlong",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "looseHeadProp",
+			"positionDisplayName": "Loose Head Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63643,
+		"longName": "A Byrne",
+		"shortName": "A Byrne",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57287,
+		"longName": "C Murray",
+		"shortName": "C Murray",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57003,
+		"longName": "L Marshall",
+		"shortName": "L Marshall",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 71533,
+		"longName": "M Moore",
+		"shortName": "M Moore",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55030,
+		"longName": "A Conway",
+		"shortName": "A Conway",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11536,
+		"longName": "J Ryan",
+		"shortName": "J Ryan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44913,
+		"longName": "D Toner",
+		"shortName": "D Toner",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61290,
+		"longName": "CJ Stander",
+		"shortName": "CJ Stander",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12059,
+		"longName": "S O\u0027Brien",
+		"shortName": "S O\u0027Brien",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44437,
+		"longName": "C Healy",
+		"shortName": "C Healy",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 60419,
+		"longName": "L McGrath",
+		"shortName": "L McGrath",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 48338,
+		"longName": "T O\u0027Donnell",
+		"shortName": "T O\u0027Donnell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62815,
+		"longName": "S McCloskey",
+		"shortName": "S McCloskey",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 64790,
+		"longName": "R Scannell",
+		"shortName": "R Scannell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 52582,
+		"longName": "A Trimble",
+		"shortName": "A Trimble",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62189,
+		"longName": "K Marmion",
+		"shortName": "K Marmion",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54371,
+		"longName": "D Kilcoyne",
+		"shortName": "D Kilcoyne",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54634,
+		"longName": "I Madigan",
+		"shortName": "I Madigan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72556,
+		"longName": "J Van Der Flier",
+		"shortName": "J Van Der Flier",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12109,
+		"longName": "J Sexton",
+		"shortName": "J Sexton",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57286,
+		"longName": "C Gilroy",
+		"shortName": "C Gilroy",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55303,
+		"longName": "S Zebo",
+		"shortName": "S Zebo",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63455,
+		"longName": "P O\u0027Mahony",
+		"shortName": "P O\u0027Mahony",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 46471,
+		"longName": "J Payne",
+		"shortName": "J Payne",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12115,
+		"longName": "J Heaslip",
+		"shortName": "J Heaslip",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "no8",
+			"positionDisplayName": "No 8",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 53604,
+		"longName": "D Kearney",
+		"shortName": "D Kearney",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12099,
+		"longName": "T Bowe",
+		"shortName": "T Bowe",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12058,
+		"longName": "F McFadden",
+		"shortName": "F McFadden",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61570,
+		"longName": "F Bealham",
+		"shortName": "F Bealham",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 45006,
+		"longName": "R Best",
+		"shortName": "R Best",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 67197,
+		"longName": "U Dillane",
+		"shortName": "U Dillane",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "secondRow",
+			"positionDisplayName": "Second Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12108,
+		"longName": "R Kearney",
+		"shortName": "R Kearney",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55325,
+		"longName": "J McGrath",
+		"shortName": "J McGrath",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11998,
+		"longName": "D Ryan",
+		"shortName": "D Ryan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 46284,
+		"longName": "K Earls",
+		"shortName": "K Earls",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 69097,
+		"longName": "D Leavy",
+		"shortName": "D Leavy",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56778,
+		"longName": "Jackson",
+		"shortName": "Jackson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62962,
+		"longName": "J Tracy",
+		"shortName": "J Tracy",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png",
+		"team": {
+			"id": 453,
+			"name": "Ireland",
+			"shortName": "Ireland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/453.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50550,
+		"longName": "A Dunbar",
+		"shortName": "A Dunbar",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55720,
+		"longName": "H Pyrgos",
+		"shortName": "H Pyrgos",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57831,
+		"longName": "J Hardie",
+		"shortName": "J Hardie",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 67799,
+		"longName": "A Dell",
+		"shortName": "A Dell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "looseHeadProp",
+			"positionDisplayName": "Loose Head Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10188,
+		"longName": "R Ford",
+		"shortName": "R Ford",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63584,
+		"longName": "J Gray",
+		"shortName": "J Gray",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "secondRow",
+			"positionDisplayName": "Second Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 59681,
+		"longName": "A Price",
+		"shortName": "A Price",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54659,
+		"longName": "D Weir",
+		"shortName": "D Weir",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11147,
+		"longName": "R Grant",
+		"shortName": "R Grant",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 69980,
+		"longName": "J Strauss",
+		"shortName": "J Strauss",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 47748,
+		"longName": "T Swinson",
+		"shortName": "T Swinson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 69193,
+		"longName": "H Jones",
+		"shortName": "H Jones",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 64378,
+		"longName": "M Bennett",
+		"shortName": "M Bennett",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57852,
+		"longName": "S Hogg",
+		"shortName": "S Hogg",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57006,
+		"longName": "F Brown",
+		"shortName": "F Brown",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56112,
+		"longName": "D Denton",
+		"shortName": "D Denton",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 49795,
+		"longName": "S Maitland",
+		"shortName": "S Maitland",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 66468,
+		"longName": "B Toolis",
+		"shortName": "B Toolis",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61972,
+		"longName": "F Russell",
+		"shortName": "F Russell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10189,
+		"longName": "K Brown",
+		"shortName": "K Brown",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 53043,
+		"longName": "WP Nel",
+		"shortName": "WP Nel",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "looseHeadProp",
+			"positionDisplayName": "Loose Head Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57564,
+		"longName": "R Harley",
+		"shortName": "R Harley",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44895,
+		"longName": "R Jackson",
+		"shortName": "R Jackson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12077,
+		"longName": "J Barclay",
+		"shortName": "J Barclay",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 53157,
+		"longName": "R Wilson",
+		"shortName": "R Wilson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 64342,
+		"longName": "A Dickinson",
+		"shortName": "A Dickinson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "looseHeadProp",
+			"positionDisplayName": "Loose Head Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 58982,
+		"longName": "H Watson",
+		"shortName": "H Watson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50397,
+		"longName": "G Gilchrist",
+		"shortName": "G Gilchrist",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 52377,
+		"longName": "P Horne",
+		"shortName": "P Horne",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44889,
+		"longName": "G Laidlaw",
+		"shortName": "G Laidlaw",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50381,
+		"longName": "D Taylor",
+		"shortName": "D Taylor",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44495,
+		"longName": "T Visser",
+		"shortName": "T Visser",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 64462,
+		"longName": "C Du Preez",
+		"shortName": "C Du Preez",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61969,
+		"longName": "D Hoyland",
+		"shortName": "D Hoyland",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 51184,
+		"longName": "R Gray",
+		"shortName": "R Gray",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 67815,
+		"longName": "Z Fagerson",
+		"shortName": "Z Fagerson",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63392,
+		"longName": "A Allan",
+		"shortName": "A Allan",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 51372,
+		"longName": "T Seymour",
+		"shortName": "T Seymour",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72555,
+		"longName": "M Scott",
+		"shortName": "M Scott",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63403,
+		"longName": "M Scott",
+		"shortName": "M Scott",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png",
+		"team": {
+			"id": 455,
+			"name": "Scotland",
+			"shortName": "Scotland",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/455.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55490,
+		"longName": "L Williams",
+		"shortName": "L Williams",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63299,
+		"longName": "L Williams",
+		"shortName": "L Williams",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 68289,
+		"longName": "S Evans",
+		"shortName": "S Evans",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 53023,
+		"longName": "J Davies",
+		"shortName": "J Davies",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 51154,
+		"longName": "S Warburton",
+		"shortName": "S Warburton",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54444,
+		"longName": "S Andrews",
+		"shortName": "S Andrews",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63137,
+		"longName": "N Smith",
+		"shortName": "N Smith",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10855,
+		"longName": "A Davies",
+		"shortName": "A Davies",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 46797,
+		"longName": "R Gill",
+		"shortName": "R Gill",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 12447,
+		"longName": "AW Jones",
+		"shortName": "AW Jones",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 46505,
+		"longName": "C Hill",
+		"shortName": "C Hill",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 62378,
+		"longName": "J Ball",
+		"shortName": "J Ball",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 67613,
+		"longName": "R Thornton",
+		"shortName": "R Thornton",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 3343,
+		"longName": "P James",
+		"shortName": "P James",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72559,
+		"longName": "P James",
+		"shortName": "P James",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 69348,
+		"longName": "T Faletau",
+		"shortName": "T Faletau",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 72557,
+		"longName": "R Evans",
+		"shortName": "R Evans",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 57441,
+		"longName": "A Cuthbert",
+		"shortName": "A Cuthbert",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 49919,
+		"longName": "R Webb",
+		"shortName": "R Webb",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44289,
+		"longName": "L Charteris",
+		"shortName": "L Charteris",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 1,
+			"positionName": "lock",
+			"positionDisplayName": "Lock",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "secondRow",
+			"subGroupDisplayName": "Second Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61122,
+		"longName": "T Francis",
+		"shortName": "T Francis",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 48713,
+		"longName": "J Tipuric",
+		"shortName": "J Tipuric",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 70594,
+		"longName": "K Giles",
+		"shortName": "K Giles",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11365,
+		"longName": "K Owens",
+		"shortName": "K Owens",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 52520,
+		"longName": "S Baldwin",
+		"shortName": "S Baldwin",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50269,
+		"longName": "L Halfpenny",
+		"shortName": "L Halfpenny",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 6,
+			"positionName": "fullBack",
+			"positionDisplayName": "Full Back",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "fullBacks",
+			"subGroupDisplayName": "Full Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56871,
+		"longName": "R Jones",
+		"shortName": "R Jones",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63128,
+		"longName": "E Walker",
+		"shortName": "E Walker",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 56124,
+		"longName": "S Lee",
+		"shortName": "S Lee",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "prop",
+			"positionDisplayName": "Prop",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 10874,
+		"longName": "J King",
+		"shortName": "J King",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "flanker",
+			"positionDisplayName": "Flanker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 45187,
+		"longName": "O Williams",
+		"shortName": "O Williams",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 11631,
+		"longName": "G Davies",
+		"shortName": "G Davies",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "scrumHalf",
+			"positionDisplayName": "Scrum Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 65653,
+		"longName": "A Hewitt",
+		"shortName": "A Hewitt",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50069,
+		"longName": "D Biggar",
+		"shortName": "D Biggar",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 44521,
+		"longName": "S Williams",
+		"shortName": "S Williams",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 68673,
+		"longName": "O Cracknell",
+		"shortName": "O Cracknell",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 55321,
+		"longName": "T Young",
+		"shortName": "T Young",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 54973,
+		"longName": "G North",
+		"shortName": "G North",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 5,
+			"positionName": "winger",
+			"positionDisplayName": "Winger",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "wingers",
+			"subGroupDisplayName": "Wingers"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 63150,
+		"longName": "R Moriarty",
+		"shortName": "R Moriarty",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50279,
+		"longName": "J Roberts",
+		"shortName": "J Roberts",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 4,
+			"positionName": "centre",
+			"positionDisplayName": "Centre",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "centres",
+			"subGroupDisplayName": "Centres"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 50934,
+		"longName": "K Dacey",
+		"shortName": "K Dacey",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 0,
+			"positionName": "hooker",
+			"positionDisplayName": "Hooker",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "frontRow",
+			"subGroupDisplayName": "Front Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 58522,
+		"longName": "T Faletau",
+		"shortName": "T Faletau",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 0,
+			"subGroupOrder": 2,
+			"positionName": "backRow",
+			"positionDisplayName": "Back Row",
+			"groupName": "forwards",
+			"groupDisplayName": "Forwards",
+			"subGroupName": "backRow",
+			"subGroupDisplayName": "Back Row"
+		}
+	}, {
+		"listPosition": 0,
+		"id": 61368,
+		"longName": "G Anscombe",
+		"shortName": "G Anscombe",
+		"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png",
+		"team": {
+			"id": 456,
+			"name": "Wales",
+			"shortName": "Wales",
+			"image": "http:\/\/e1.365dm.com\/rugbyunion\/badges\/192\/456.png"
+		},
+		"positionDisplayName": "Tight Head Prop",
+		"filter": ["tightHeadProp","hooker","looseHeadProp"],
+		"category": {
+			"groupOrder": 1,
+			"subGroupOrder": 3,
+			"positionName": "flyHalf",
+			"positionDisplayName": "Fly Half",
+			"groupName": "backs",
+			"groupDisplayName": "Backs",
+			"subGroupName": "halfBacks",
+			"subGroupDisplayName": "Half Backs"
+		}
+	}]
+}

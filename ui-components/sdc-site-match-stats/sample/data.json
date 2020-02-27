@@ -1,0 +1,246 @@
+{
+  "teams": {
+    "home": {
+      "shortName": "Leeds"
+    },
+    "away": {
+      "shortName": "Man U"
+    }
+  },
+  "data": [
+    {
+      "title": "Overall",
+      "type": "overall",
+      "stats": [
+        {
+          "name": "Possession %",
+          "type": "possession_percentage",
+          "home": {
+            "label": "44.4",
+            "percentage": "44.4"
+          },
+          "away": {
+            "label": "55.6",
+            "percentage": "55.6"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Shots",
+      "type": "shots",
+      "stats": [
+        {
+          "name": "Total shots",
+          "type": "total_shots",
+          "home": {
+            "label": "10",
+            "percentage": "40"
+          },
+          "away": {
+            "label": "15",
+            "percentage": "60"
+          }
+        },
+        {
+          "name": "On target",
+          "type": "shot_on_target",
+          "home": {
+            "label": "2",
+            "percentage": "29"
+          },
+          "away": {
+            "label": "5",
+            "percentage": "71"
+          }
+        },
+        {
+          "name": "Off target",
+          "type": "shot_off_target",
+          "home": {
+            "label": "7",
+            "percentage": "58"
+          },
+          "away": {
+            "label": "5",
+            "percentage": "42"
+          }
+        },
+        {
+          "name": "Blocked",
+          "type": "blocked",
+          "home": {
+            "label": "1",
+            "percentage": "17"
+          },
+          "away": {
+            "label": "5",
+            "percentage": "83"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Passes",
+      "type": "passes",
+      "stats": [
+        {
+          "name": "Passing %",
+          "type": "passing_percentage",
+          "home": {
+            "label": "78.8",
+            "percentage": "48"
+          },
+          "away": {
+            "label": "85",
+            "percentage": "52"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Attack",
+      "type": "attack",
+      "stats": [
+        {
+          "name": "Clear-Cut Chances",
+          "type": "big_chance_created",
+          "home": {
+            "label": "1",
+            "percentage": "100"
+          },
+          "away": {
+            "label": "0",
+            "percentage": "0"
+          }
+        },
+        {
+          "name": "Corners",
+          "type": "corners_won_total",
+          "home": {
+            "label": "11",
+            "percentage": "79"
+          },
+          "away": {
+            "label": "3",
+            "percentage": "21"
+          }
+        },
+        {
+          "name": "Offsides",
+          "type": "total_offside",
+          "home": {
+            "label": "2",
+            "percentage": "67"
+          },
+          "away": {
+            "label": "1",
+            "percentage": "33"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Defence",
+      "type": "defence",
+      "stats": [
+        {
+          "name": "Tackles %",
+          "type": "tackles_percentage",
+          "home": {
+            "label": "50",
+            "percentage": "35"
+          },
+          "away": {
+            "label": "94.4",
+            "percentage": "65"
+          }
+        },
+        {
+          "name": "Aerial Duels %",
+          "type": "aerial_duels_percentage",
+          "home": {
+            "label": "35.7",
+            "percentage": "36"
+          },
+          "away": {
+            "label": "64.3",
+            "percentage": "64"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Goalkeeping",
+      "type": "goalkeeping",
+      "stats": [
+        {
+          "name": "Saves",
+          "type": "saves",
+          "home": {
+            "label": "4",
+            "percentage": "57"
+          },
+          "away": {
+            "label": "3",
+            "percentage": "43"
+          }
+        }
+      ]
+    },
+    {
+      "title": "Discipline",
+      "type": "discipline",
+      "stats": [
+        {
+          "name": "Fouls Committed",
+          "type": "fouls",
+          "home": {
+            "label": "7",
+            "percentage": "47"
+          },
+          "away": {
+            "label": "8",
+            "percentage": "53"
+          }
+        },
+        {
+          "name": "Fouls Won",
+          "type": "fk_foul_won",
+          "home": {
+            "label": "8",
+            "percentage": "53"
+          },
+          "away": {
+            "label": "7",
+            "percentage": "47"
+          }
+        },
+        {
+          "name": "Yellow Cards",
+          "type": "total_yel_card",
+          "home": {
+            "label": "1",
+            "percentage": "100"
+          },
+          "away": {
+            "label": "0",
+            "percentage": "0"
+          }
+        },
+        {
+          "name": "Red Cards",
+          "type": "total_red_card",
+          "home": {
+            "label": "1",
+            "percentage": "100"
+          },
+          "away": {
+            "label": "0",
+            "percentage": "0"
+          }
+        }
+      ]
+    }
+  ]
+}

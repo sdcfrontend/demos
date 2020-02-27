@@ -1,0 +1,95 @@
+{
+  "id": "81bWVuYTE6f0bRmxarnEMOl3-8MrfXlt",
+  "sdcId": "3478070",
+  "originatorId": "36",
+  "package": "Sky Bundesliga",
+  "provider": "ooyala",
+  "providers": {
+    "svl": "false",
+    "ooyala": "true"
+  },
+  "adsproviders": {
+    "dfp": "true",
+    "freewheel": "false"
+  },
+  "playerId": "3d13c57cd8c0497c8c9be33dfa563acc",
+  "accountKey": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN.IXUXg",
+  "partnerCode": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN",
+  "videoSrc": "http:\/\/ak.c.ooyala.com\/dzdjc0NjE6bd74tZRSfNt0_4eX5OVfYf\/DOcJ-FxaFrRg4gtDEwOjNhMzowODE7ex",
+  "caption": "David Blevins looks back at the life of Martin McGuinness who has died at the age of 66.",
+  "captionPrefix": "Caption - ",
+  "headline": "Video headline",
+  "duration": 86,
+  "created": "2017-02-08T10:28",
+  "poster": {
+    "aspectRatio":"16\/9",
+    "src":"http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+    "template": "http://uat.e.365dm.com/17/04/{width}x{height}/ef4644b253abbfaef62595138017342e818bb148e5ae0e92dee21abfbdbafc7c_3478090.jpg?20170404145457",
+    "alt":"Martin McGuinness shakes hands with the Queen in 2016",
+    "caption":null,
+    "dimensions2": [{
+        "url": "http://e3.365dm.com/17/09/2048x1152/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 2048
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/1600x900/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 1600
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/992x558/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 992
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 768
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/384x216/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 384
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/192x108/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 192
+    }]
+  },
+  "aspectRatio": "16/10",
+  "autoplay": false,
+  "dimension": {
+    "fullBleed": false,
+    "halfWidth": false
+  },
+  "skinOverride": {
+    "startScreen": {
+      "playButtonPosition": "left"
+    }
+  },
+  "html5SkinJs": "",
+  "ooyalaAssetOverride":"",
+  "ooyalaIndividualAssetOverride": {
+    "core": "",
+    "player": "",
+    "bitWrapper": "",
+    "skin": "",
+    "freewheel": "",
+    "googleima": "",
+    "discovery": ""
+  },
+  "enableDiscovery": null ,
+  "iosPlayMode": "inline",
+  "blacklistedOriginatorIds": "",
+  "tokenRequired": false,
+  "tokenFetchMethod": "url",
+  "tokenFetchOptions": {
+    "url": "http://www.example.com?originator=34&embed_code=xla3k3OTE64Em_CXqaN0o3ImNOvlV_AO"
+  },
+  "ooyalaAssetVersion": "4.11.13",
+  "bitrates": {
+    "desktop": {
+      "level": "0.5",
+      "duration": "20"
+    }
+  },
+  "bitRateAdaption": null,
+  "competition": "bundesliga",
+  "sportsCategory": "soccer"
+}

@@ -1,0 +1,885 @@
+{
+  "id": "123",
+  "title": "British & Irish Lions",
+  "sponsorImage": "http://img.skysports.com/interactive-selector/sponsors/Standard-Life-Logo.png",
+  "formation": "32325",
+  "restrictSelections": true,
+  "useParticipantImage": true,
+  "backgroundImage": "",
+  "type": "rugbyunion",
+  "numOfParticipants": 15,
+  "embed": false,
+  "participants": [
+    {
+      "listPosition": 0,
+      "id": 54554,
+      "longName": "Jonathan Joseph",
+      "shortName": "Joseph",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_54554.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Centre",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "leftWing",
+          "outsideCentre",
+          "winger",
+          "rightWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 47247,
+      "longName": "Jamie George",
+      "shortName": "George",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_47247.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Hooker",
+        "filter": [
+          "hooker"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 10462,
+      "longName": "James Haskell",
+      "shortName": "Haskell",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_10462.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Flanker",
+        "filter": [
+          "blindsideFlanker",
+          "no8",
+          "backRow",
+          "opensideFlanker"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 59547,
+      "longName": "Kyle Sinckler",
+      "shortName": "Sinckler",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_59547.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Tight Head Prop",
+        "filter": [
+          "tightHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 47742,
+      "longName": "Ben Te'o",
+      "shortName": "Te'o",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_47742.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Centre",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "leftWing",
+          "outsideCentre",
+          "winger",
+          "rightWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 51391,
+      "longName": "Owen Farrell",
+      "shortName": "Farrell",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_51391.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Fly Half",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "outsideCentre",
+          "flyHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 54471,
+      "longName": "George Kruis",
+      "shortName": "Kruis",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_54471.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Lock",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "lock",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 57091,
+      "longName": "Elliot Daly",
+      "shortName": "Daly",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_57091.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Centre",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "leftWing",
+          "outsideCentre",
+          "winger",
+          "rightWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 59542,
+      "longName": "Anthony Watson",
+      "shortName": "Watson",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_59542.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Winger",
+        "filter": [
+          "rightWing",
+          "winger",
+          "leftWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 54932,
+      "longName": "Mako Vunipola",
+      "shortName": "Vunipola",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_54932.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Loose Head Prop",
+        "filter": [
+          "looseHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 50828,
+      "longName": "Dan Cole",
+      "shortName": "Cole",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_50828.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Tight Head Prop",
+        "filter": [
+          "tightHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 56169,
+      "longName": "Jack Nowell",
+      "shortName": "Nowell",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_56169.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Winger",
+        "filter": [
+          "rightWing",
+          "winger",
+          "leftWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 64283,
+      "longName": "Maro Itoje",
+      "shortName": "Itoje",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_64283.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Lock",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "lock",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 57397,
+      "longName": "Joe Marler",
+      "shortName": "Marler",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_57397.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Loose Head Prop",
+        "filter": [
+          "looseHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 48806,
+      "longName": "Courtney Lawes",
+      "shortName": "Lawes",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_48806.png",
+      "team": {
+        "id": 451,
+        "name": "England",
+        "shortName": "England",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/451.png"
+      },
+      "position": {
+        "displayName": "Lock",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "lock",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 57287,
+      "longName": "Conor Murray",
+      "shortName": "Murray",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_57287.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Scrum Half",
+        "filter": [
+          "scrumHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 12109,
+      "longName": "Jonny Sexton",
+      "shortName": "Sexton",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_12109.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Fly Half",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "outsideCentre",
+          "flyHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 45006,
+      "longName": "Rory Best",
+      "shortName": "Best",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_45006.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Hooker",
+        "filter": [
+          "hooker"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 61290,
+      "longName": "CJ Stander",
+      "shortName": "Stander",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_61290.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Blindside Flanker",
+        "filter": [
+          "blindsideFlanker",
+          "no8",
+          "backRow",
+          "opensideFlanker"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 55325,
+      "longName": "Jack McGrath",
+      "shortName": "McGrath",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_55325.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Loose Head Prop",
+        "filter": [
+          "looseHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 11005,
+      "longName": "Peter O'Mahony",
+      "shortName": "O'Mahony",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_11005.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Back Row",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 63169,
+      "longName": "Tadhg Furlong",
+      "shortName": "Furlong",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_63169.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Tight Head Prop",
+        "filter": [
+          "tightHeadProp"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 46471,
+      "longName": "Jared Payne",
+      "shortName": "Payne",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_46471.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Full Back",
+        "filter": [
+          "insideCentre",
+          "outsideCentre",
+          "fullBack",
+          "centre"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 12059,
+      "longName": "Sean O'Brien",
+      "shortName": "O'Brien",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_12059.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Back Row",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 62188,
+      "longName": "Robbie Henshaw",
+      "shortName": "Henshaw",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_62188.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Centre",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "leftWing",
+          "outsideCentre",
+          "winger",
+          "rightWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 61026,
+      "longName": "Iain Henderson",
+      "shortName": "Henderson",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_61026.png",
+      "team": {
+        "id": 453,
+        "name": "Ireland",
+        "shortName": "Ireland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/453.png"
+      },
+      "position": {
+        "displayName": "Lock",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "lock",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 57852,
+      "longName": "Stuart Hogg",
+      "shortName": "Hogg",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_57852.png",
+      "team": {
+        "id": 455,
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/455.png"
+      },
+      "position": {
+        "displayName": "Full Back",
+        "filter": [
+          "fullBack"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 51372,
+      "longName": "Tommy Seymour",
+      "shortName": "Seymour",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_51372.png",
+      "team": {
+        "id": 455,
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/455.png"
+      },
+      "position": {
+        "displayName": "Winger",
+        "filter": [
+          "rightWing",
+          "winger",
+          "leftWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 44889,
+      "longName": "Greg Laidlaw",
+      "shortName": "Laidlaw",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_44889.png",
+      "team": {
+        "id": 455,
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/455.png"
+      },
+      "position": {
+        "displayName": "Scrum Half",
+        "filter": [
+          "scrumHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 54973,
+      "longName": "George North",
+      "shortName": "North",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_54973.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Winger",
+        "filter": [
+          "rightWing",
+          "winger",
+          "leftWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 47741,
+      "longName": "Jonathan Davies",
+      "shortName": "Davies",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_47741.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Centre",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "leftWing",
+          "outsideCentre",
+          "winger",
+          "rightWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 48713,
+      "longName": "Justin Tipuric",
+      "shortName": "Tipuric",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_48713.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Openside Flanker",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 12447,
+      "longName": "Alun-Wyn Jones",
+      "shortName": "Jones",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_12447.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Lock",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "lock",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 51154,
+      "longName": "Sam Warburton",
+      "shortName": "Warburton",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_51154.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Openside Flanker",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 50269,
+      "longName": "Leigh Halfpenny",
+      "shortName": "Halfpenny",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_50269.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Full Back",
+        "filter": [
+          "fullBack"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 11365,
+      "longName": "Ken Owens",
+      "shortName": "Owens",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_11365.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Hooker",
+        "filter": [
+          "hooker"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 49919,
+      "longName": "Rhys Webb",
+      "shortName": "Webb",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_49919.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Scrum Half",
+        "filter": [
+          "scrumHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 50069,
+      "longName": "Dan Biggar",
+      "shortName": "Biggar",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_50069.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Fly Half",
+        "filter": [
+          "insideCentre",
+          "centre",
+          "outsideCentre",
+          "flyHalf"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 12431,
+      "longName": "Liam Williams",
+      "shortName": "Williams",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_12431.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Full Back",
+        "filter": [
+          "fullBack",
+          "rightWing",
+          "winger",
+          "leftWing"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 63150,
+      "longName": "Ross Moriarty",
+      "shortName": "Moriarty",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_63150.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "Back Row",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "opensideFlanker",
+          "no8"
+        ]
+      }
+    },
+    {
+      "listPosition": 0,
+      "id": 69348,
+      "longName": "Taulupe Faletau",
+      "shortName": "Faletau",
+      "image": "http://img.skysports.com/rugbyunion/players/lions/head/head_69348.png",
+      "team": {
+        "id": 456,
+        "name": "Wales",
+        "shortName": "Wales",
+        "image": "http://e1.365dm.com/rugbyunion/badges/192/456.png"
+      },
+      "position": {
+        "displayName": "No 8",
+        "filter": [
+          "blindsideFlanker",
+          "backRow",
+          "no8",
+          "opensideFlanker"
+        ]
+      }
+    }
+  ]
+}

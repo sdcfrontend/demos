@@ -1,0 +1,952 @@
+[
+  {
+    "items": [
+      {
+        "modifier": "hero-horizontal",
+        "indexTitle": "An inline video example",
+        "link": "/",
+        "tag": {
+          "label": "Video"
+        },
+        "inline-video": {
+          "id": "NtMHk1YzE6RbVMVGAiODj6p8Nyk8IHCp",
+          "sdcId": "4064302",
+          "originatorId": "36",
+          "package": "Sky Bundesliga",
+          "provider": "ooyala",
+          "providers": {
+            "svl": "false",
+            "ooyala": "true"
+          },
+          "adsproviders": {
+            "dfp": "true",
+            "freewheel": "false"
+          },
+          "playerId": "3d13c57cd8c0497c8c9be33dfa563acc",
+          "accountKey": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN.IXUXg",
+          "partnerCode": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN",
+          "videoSrc": "http:\/\/ak.c.ooyala.com\/dzdjc0NjE6bd74tZRSfNt0_4eX5OVfYf\/DOcJ-FxaFrRg4gtDEwOjNhMzowODE7ex",
+          "caption": "David Blevins looks back at the life of Martin McGuinness who has died at the age of 66.",
+          "headline": "Video headline",
+          "duration": 86,
+          "created": "2017-02-08T10:28",
+          "poster": {
+            "aspectRatio": "16\/9",
+            "src": "https://e3.365dm.com/17/03/536x302/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170321064329",
+            "template": "https://e3.365dm.com/17/03/{width}x{height}/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170521064329",
+            "alt": "Martin McGuinness shakes hands with the Queen in 2016",
+            "caption": null,
+            "dimensions2": [
+              {
+                "url": "http:\/\/uat.e.365dm.com\/17\/03\/536x302\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
+                "width": 536
+              },
+              {
+                "url": "http:\/\/uat.e.365dm.com\/17\/03\/736x414\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
+                "width": 736
+              },
+              {
+                "url": "http:\/\/uat.e.365dm.com\/17\/03\/992x558\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
+                "width": 992
+              },
+              {
+                "url": "http:\/\/uat.e.365dm.com\/17\/03\/1096x616\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
+                "width": 1096
+              }
+            ]
+          },
+          "aspectRatio": "16/10",
+          "dimension": {
+            "fullBleed": false,
+            "halfWidth": false
+          },
+          "skinOverride": {
+            "startScreen": {
+              "playButtonPosition": "left"
+            }
+          },
+          "tokenRequired": false,
+          "tokenFetchMethod": "url",
+          "tokenFetchOptions": {
+            "url": "https://www.example.com?originator=34&embed_code=xla3k3OTE64Em_CXqaN0o3ImNOvlV_AO"
+          },
+          "ooyalaAssetVersion": "4.11.13"
+        }
+      }
+    ]
+  },
+  {
+    "variant": "alt1",
+    "items": [
+      {
+        "modifier": "hero-horizontal",
+        "indexTitle": "Your home of live sport",
+        "showSnippet": true,
+        "snippet": "The home of live sport across 8 channels, with 126 live Premier League games and every F1 race",
+        "significance": "breaking",
+        "listingImage": {
+          "type": "image",
+          "template": "https://via.placeholder.com/{width}x{height}",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "relatedLinks": [
+          {
+            "label": "Get Sky Sports",
+            "link": "/"
+          },
+          {
+            "label": "Get a Now TV Pass",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "modifier": "hero",
+        "indexTitle": "Sky TV",
+        "showSnippet": true,
+        "snippet": "Watch the action in Ultra HD with Sky Q or get goals and highlights straight to your mobile with the Football Score Centre and Sky Sports apps.",
+        "listingImage": {
+          "type": "image",
+          "template": "https://via.placeholder.com/{width}x{height}",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "relatedLinks": [
+          {
+            "label": "Get Sky Sports",
+            "link": "/"
+          }
+        ],
+        "link": "/"
+      },
+      {
+        "modifier": "hero",
+        "indexTitle": "Now TV",
+        "showSnippet": true,
+        "snippet": "Watch Sky Sports with no contract. Only pay for the days you want with a NOW TV Sky Sports Day, Week or Month Pass.",
+        "listingImage": {
+          "type": "image",
+          "template": "https://via.placeholder.com/{width}x{height}",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "relatedLinks": [
+          {
+            "label": "Get Now TV",
+            "link": "/"
+          }
+        ],
+        "link": "/"
+      }
+    ]
+  },
+  {
+    "variant": null,
+    "items": [
+      {
+        "template": null,
+        "modifier": "hero-horizontal",
+        "hidden": false,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben: 'Sind noch nicht in Topverfassung'",
+        "significance": "breaking",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": [
+          {
+            "label": "Related link goes here and could be quite long",
+            "link": "/"
+          },
+          {
+            "label": "Related link",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "exclusive",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "sponsored",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "live",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "analysis",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "transfer",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "relatedLinks": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "update",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      }
+    ]
+  },
+  {
+    "variant": "alt9",
+    "items": [
+      {
+        "template": null,
+        "modifier": null,
+        "hidden": false,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "significance": "breaking",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": [
+          {
+            "label": "Related link goes here and could be quite long",
+            "link": "/"
+          },
+          {
+            "label": "Related link",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "exclusive",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "sponsored",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "live",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "analysis",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "transfer",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      }
+    ]
+  },
+  {
+    "variant": "alt3",
+    "items": [
+      {
+        "template": null,
+        "modifier": null,
+        "hidden": false,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "significance": "breaking",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": [
+          {
+            "label": "Related link goes here and could be quite long",
+            "link": "/"
+          },
+          {
+            "label": "Related link",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "update",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "exclusive",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "sponsored",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      },
+      {
+        "template": null,
+        "modifier": null,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      }
+    ]
+  },
+  {
+    "variant": "alt2",
+    "items": [
+      {
+        "template": null,
+        "modifier": "hero-horizontal hero-horizontal-t2",
+        "hidden": false,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": [
+          {
+            "label": "Related link goes here and could be quite long",
+            "link": "/"
+          },
+          {
+            "label": "Related link",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "template": null,
+        "modifier": "hero-horizontal hero-horizontal-t2",
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "live",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      }
+    ]
+  },
+  {
+    "variant": "alt2",
+    "hideTags": true,
+    "items": [
+      {
+        "template": null,
+        "modifier": "hero-horizontal hero-horizontal-t2",
+        "hidden": false,
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "2 Robben: 'Sind noch nicht in Topverfassung'",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": [
+          {
+            "label": "Related link goes here and could be quite long",
+            "link": "/"
+          },
+          {
+            "label": "Related link",
+            "link": "/"
+          }
+        ]
+      },
+      {
+        "template": null,
+        "modifier": "hero-horizontal hero-horizontal-t2",
+        "type": {
+          "video": true
+        },
+        "tag": {
+          "link": "/",
+          "label": "Football"
+        },
+        "title": "Robben: 'Sind noch nicht in Topverfassung'",
+        "indexTitle": "Robben Nicht Bereit",
+        "significance": "live",
+        "listingImage": {
+          "type": "image",
+          "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "alt": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "caption": "Manchester City's Argentinian striker Sergio Aguero celebrates scoring a goal during the UEFA Champions league first leg play-off football match between St",
+          "src": "https://uat.e.365dm.com/16/08/206x155/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
+          "aspectRatio": "4/3",
+          "dimensions": []
+        },
+        "author": {
+          "forename": "Jamie",
+          "surname": "Rednapp",
+          "image": {
+            "small": "https://e2.365dm.com/13/07/1-1/40/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047",
+            "large": "https://e2.365dm.com/13/07/1-1/30/jamie-redknapp-expert-football-opinion_2976900.jpg?20130723095047"
+          }
+        },
+        "link": "/",
+        "related": null
+      }
+    ]
+  }
+]

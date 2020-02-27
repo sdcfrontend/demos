@@ -1,0 +1,43 @@
+{
+  "title-tag": "h1",
+  "properties": {
+    "sticky": false,
+    "mobile-nav": true,
+    "single-item-mobile-nav": false,
+    "modifier": "mma"
+  },
+  "navigation": {
+    "header": {
+      "title": "Fußball"
+    },
+    "items": [
+      {
+        "label": "Home",
+        "link": "/football",
+        "flagged": true
+      },
+      {
+        "label": "Spielplan",
+        "link": "/",
+        "external": true
+      },
+      {
+        "label": "Tabellen",
+        "link": "/"
+      },
+      {
+        "label": "Vereine",
+        "link": "/"
+      },
+      {
+        "label": "Ligen & Wettbewerbe",
+        "link": "/"
+      },
+      {
+        "label": "Transfermarkt",
+        "link": "/",
+        "current": true
+      }
+    ]
+  }
+}

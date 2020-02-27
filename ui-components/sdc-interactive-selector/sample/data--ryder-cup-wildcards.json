@@ -1,0 +1,53 @@
+{  
+	"id":"0bef646d45bf9238e324d10f5c3396b7",
+	"title":"test",
+	"sponsorImage":"",
+	"formation":"wildcards-eu",
+	"restrictSelections":true,
+	"useParticipantImage":true,
+	"notCategorisedParticipants": true,
+	"backgroundImage":"#316dca",
+	"type":"golfrydercup",
+	"numOfParticipants":8,
+	"embed":true,
+	"participants":[  
+		 {  
+				"listPosition":0,
+				"id":6779,
+				"longName":"test",
+				"shortName":"test",
+				"image":"\/\/uatimg.skysports.com\/18\/08\/247x247\/skysports-test-sports-referee_3792599.jpg",
+				"team":{  
+					 "id":1,
+					 "name":"England",
+					 "shortName":"England",
+					 "image":"http:\/\/e1.365dm.com\/golf\/badges\/192\/eu-flag.png"
+				},
+				"position":{  
+					 "displayName":"Europe",
+					 "filter":[  
+							"europe"
+					 ]
+				}
+		 },
+		 {  
+				"listPosition":0,
+				"id":35,
+				"longName":"Tiger Woods",
+				"shortName":"Tiger Woods",
+				"image":"http:\/\/img.skysports.com\/golf\/players\/home\/head\/h_head_35.png",
+				"team":{  
+					 "id":18,
+					 "name":"USA",
+					 "shortName":"USA",
+					 "image":"http:\/\/img.skysports.com\/golf\/badges\/192\/usa-flag.png"
+				},
+				"position":{  
+					 "displayName":"USA",
+					 "filter":[  
+							"usa"
+					 ]
+				}
+		 }
+	]
+}

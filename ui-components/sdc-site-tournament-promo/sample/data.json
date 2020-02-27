@@ -1,0 +1,66 @@
+{
+  "next": {
+    "title": "Next 3",
+    "items": [
+      {
+        "label": "15:20",
+        "text": "Wincanton",
+        "link": "#"
+      },
+      {
+        "label": "15:20",
+        "text": "Wincanton",
+        "link": "#"
+      },
+      {
+        "label": "15:20",
+        "text": "Wincanton",
+        "link": "#"
+      }
+    ],
+    "links": [
+      {
+        "text": "Racecards",
+        "link": "#"
+      },
+      {
+        "text": "Bet now",
+        "link": "#"
+      }
+    ]
+  },
+  "previous": {
+    "title": "Latest Result",
+    "status": "Result",
+    "header": {
+      "label": "14:47",
+      "text": "Chepstow"
+    },
+    "items": [
+      {
+        "label": "1st",
+        "number": "1",
+        "text": "Mr Frisky",
+        "odds": "6/4"
+      },
+      {
+        "label": "2nd",
+        "number": "2",
+        "text": "Christ's Chin",
+        "odds": "6/4"
+      },
+      {
+        "label": "3rd",
+        "number": "8",
+        "text": "Zana Badawi",
+        "odds": "6/4"
+      }
+    ],
+    "links": [
+      {
+        "text": "Fast results",
+        "link": "#"
+      }
+    ]
+  }
+}

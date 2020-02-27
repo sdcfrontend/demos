@@ -1,0 +1,1226 @@
+[
+  {
+    "properties": {
+      "mobile-nav": true,
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Default"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "football",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Football"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": false,
+      "modifier": "football",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Football"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "swipe-nav": true,
+      "modifier": "football",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "sticky": true,
+      "modifier": "football",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Football"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports-light",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Football Team"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "rugby-union",
+      "headerLink": "/rugby-union"
+    },
+    "navigation": {
+      "header": {
+        "title": "Rugby Union"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "rugby-league",
+      "headerLink": "/rugby-league"
+    },
+    "navigation": {
+      "header": {
+        "title": "Rugby League"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "premier-league",
+      "headerLink": "/football"
+    },
+    "navigation": {
+      "header": {
+        "title": "Premier League"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "menu": {
+            "label": "Teams",
+            "link": "/teams-index",
+            "additionalLinks": [
+              {
+                "label": "All Teams",
+                "link": "/"
+              }
+            ],
+            "items": [
+              {
+                "label": "Premier League",
+                "items": [
+                  {
+                    "label": "Arsenal",
+                    "link": "Arsenal",
+                    "image": "https://e2.365dm.com/football/badges/24/413.png"
+                  },
+                  {
+                    "label": "Aston Villa",
+                    "link": "Aston Villa",
+                    "image": "https://e0.365dm.com/football/badges/24/238.png"
+                  },
+                  {
+                    "label": "Bournemouth",
+                    "link": "Bournemouth",
+                    "image": "https://e2.365dm.com/football/badges/24/333.png"
+                  },
+                  {
+                    "label": "Brighton",
+                    "link": "Brighton",
+                    "image": "https://e2.365dm.com/football/badges/24/212.png"
+                  },
+                  {
+                    "label": "Burnley",
+                    "link": "Burnley",
+                    "image": "https://e2.365dm.com/football/badges/24/160.png"
+                  },
+                  {
+                    "label": "Chelsea",
+                    "link": "Chelsea",
+                    "image": "https://e1.365dm.com/football/badges/24/524.png"
+                  },
+                  {
+                    "label": "Crystal Palace",
+                    "link": "Crystal Palace",
+                    "image": "https://e1.365dm.com/football/badges/24/234.png"
+                  },
+                  {
+                    "label": "Everton",
+                    "link": "Everton",
+                    "image": "https://e1.365dm.com/football/badges/24/229.png"
+                  },
+                  {
+                    "label": "Leicester City",
+                    "link": "Leicester City",
+                    "image": "https://e1.365dm.com/football/badges/24/152.png"
+                  },
+                  {
+                    "label": "Liverpool",
+                    "link": "Liverpool",
+                    "image": "https://e2.365dm.com/football/badges/24/155.png"
+                  },
+                  {
+                    "label": "Manchester City",
+                    "link": "Manchester City",
+                    "image": "https://e0.365dm.com/football/badges/24/345.png"
+                  },
+                  {
+                    "label": "Manchester United",
+                    "link": "Manchester United",
+                    "image": "https://e2.365dm.com/football/badges/24/210.png"
+                  },
+                  {
+                    "label": "Newcastle United",
+                    "link": "Newcastle United",
+                    "image": "https://e1.365dm.com/football/badges/24/409.png"
+                  },
+                  {
+                    "label": "Norwich City",
+                    "link": "Norwich City",
+                    "image": "https://e0.365dm.com/football/badges/24/290.png"
+                  },
+                  {
+                    "label": "Sheffield United",
+                    "link": "Sheffield United",
+                    "image": "https://e1.365dm.com/football/badges/24/444.png"
+                  },
+                  {
+                    "label": "Southampton",
+                    "link": "Southampton",
+                    "image": "https://e2.365dm.com/football/badges/24/392.png"
+                  },
+                  {
+                    "label": "Tottenham Hotspur",
+                    "link": "Tottenham Hotspur",
+                    "image": "https://e1.365dm.com/football/badges/24/608.png"
+                  },
+                  {
+                    "label": "Watford",
+                    "link": "Watford",
+                    "image": "https://e1.365dm.com/football/badges/24/508.png"
+                  },
+                  {
+                    "label": "West Ham United",
+                    "link": "West Ham United",
+                    "image": "https://e0.365dm.com/football/badges/24/367.png"
+                  },
+                  {
+                    "label": "Wolverhampton",
+                    "link": "Wolverhampton",
+                    "image": "https://e2.365dm.com/football/badges/24/206.png"
+                  }
+                ]
+              },
+              {
+                "label": "Championship",
+                "items": [
+                  {
+                    "label": "Birmingham",
+                    "link": "/birmingham"
+                  },
+                  {
+                    "label": "Chelsea",
+                    "link": "/chelsea"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "cricket",
+      "headerLink": "/cricket"
+    },
+    "navigation": {
+      "header": {
+        "title": "Cricket"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "boxing",
+      "headerLink": "/boxing"
+    },
+    "navigation": {
+      "header": {
+        "title": "Boxing"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "darts",
+      "headerLink": "/darts"
+    },
+    "navigation": {
+      "header": {
+        "title": "Darts"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "nfl",
+      "headerLink": "/nfl"
+    },
+    "navigation": {
+      "header": {
+        "title": "NFL"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "netball",
+      "headerLink": "/netball"
+    },
+    "navigation": {
+      "header": {
+        "title": "Netball"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "gaa",
+      "headerLink": "/gaa"
+    },
+    "navigation": {
+      "header": {
+        "title": "GAA"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "golf",
+      "headerLink": "/golf"
+    },
+    "navigation": {
+      "header": {
+        "title": "Golf"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "modifier": "horseracing",
+      "mobile-nav": true
+    },
+    "navigation": {
+      "header": {
+        "title": "Racing"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "modifier": "horseracing-alt",
+      "swipe-nav": true
+    },
+    "navigation": {
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "modifier": "f1",
+      "mobile-nav": true
+    },
+    "navigation": {
+      "header": {
+        "title": "F1"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "nba",
+      "headerLink": "https://www.nba.com",
+      "headerLogo": {
+        "src": "./assets/nba-logo-17.svg",
+        "alt": "NBA logo",
+        "width": 50
+      },
+      "additionalItems": [
+        {
+          "link": "http://www.nbastore.eu/stores/nba/en",
+          "label": "NBA Store",
+          "external": true,
+          "src": "/assets/logo-nba-store.svg",
+          "alt": "NBA Store logo",
+          "width": 68
+        }
+      ]
+    },
+    "navigation": {
+      "header": {
+        "title": "NBA"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "wwe",
+      "headerLink": "/wwe"
+    },
+    "navigation": {
+      "header": {
+        "title": "WWE"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "transfer-centre"
+    },
+    "navigation": {
+      "header": {
+        "title": "Transfer Centre"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "tennis"
+    },
+    "navigation": {
+      "header": {
+        "title": "Tennis"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports",
+      "headerLink": "/cycling"
+    },
+    "navigation": {
+      "header": {
+        "title": "Cycling"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports"
+    },
+    "navigation": {
+      "header": {
+        "title": "MMA"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports",
+      "headerLink": "/motorsport"
+    },
+    "navigation": {
+      "header": {
+        "title": "Motorsport"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports",
+      "headerLink": "/esports"
+    },
+    "navigation": {
+      "header": {
+        "title": "eSports"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  },
+  {
+    "properties": {
+      "mobile-nav": true,
+      "modifier": "skysports",
+      "headerLink": "/more-sports"
+    },
+    "navigation": {
+      "header": {
+        "title": "More Sports"
+      },
+      "items": [
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/",
+          "current": true
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        },
+        {
+          "label": "Navigation item",
+          "link": "/"
+        }
+      ]
+    }
+  }
+]

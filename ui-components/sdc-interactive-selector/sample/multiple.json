@@ -1,0 +1,34 @@
+[
+  {
+    "token": "a9a00d56bb6ad32a8d59cabc2f555d41",
+    "json-data-url": "./sample/data--ryder-cup-wildcards.json",
+    "article-url": "",
+    "facebook-share-url": "",
+    "twitter-share-url": "",
+    "post-url": ""
+  },
+  {
+    "token": "a9a00d56bb6ad32a8d59cabc2f555d41",
+    "json-data-url": "./sample/data--ryder-cup-fourballs.json",
+    "article-url": "",
+    "facebook-share-url": "",
+    "twitter-share-url": "",
+    "post-url": ""
+  },
+  {
+    "token": "a9a00d56bb6ad32a8d59cabc2f555d41",
+    "json-data-url": "./sample/data--ryder-cup-foursomes.json",
+    "article-url": "",
+    "facebook-share-url": "",
+    "twitter-share-url": "",
+    "post-url": ""
+  },
+  {
+    "token": "a9a00d56bb6ad32a8d59cabc2f555d41",
+    "json-data-url": "./sample/data--ryder-cup-singles.json",
+    "article-url": "",
+    "facebook-share-url": "",
+    "twitter-share-url": "",
+    "post-url": ""
+  }
+]

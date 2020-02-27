@@ -1,5 +1,6 @@
 // get dependencies
 const fs = require('fs');
+const fse = require('fs-extra');
 const handlebars = require('handlebars');
 const path = require('path');
 const ROOT = path.resolve(process.cwd());
@@ -17,9 +18,11 @@ const page = fs.readFileSync(path.resolve(ROOT, 'build/page.html'), 'utf8').toSt
 const directory = fs.readFileSync(path.resolve(ROOT, 'build/directory.hbs'), 'utf8').toString();
 const cssvars = fs.readFileSync(path.resolve(ROOT, 'node_modules/sdc-project-base/css/base/core/_vars.scss'), 'utf8').toString();
 const helpers = require(path.resolve(ROOT, 'node_modules/sdc-project-base/js/helpers/all'));
+const localhelpers = require('./helpers');
 
 // set up
-handlebars.registerHelper(helpers)
+handlebars.registerHelper(helpers);
+handlebars.registerHelper(localhelpers);
 const list = [];
 
 if (!package && package.dependencies) {
@@ -63,6 +66,7 @@ function buildsection(name, gitlink) {
     file: csspath,
     includePaths: ['node_modules']
   }, function (err, result) {
+    console.log(err);
     if (result && result.css) {
       fs.writeFileSync(path.resolve(ROOT, name, 'styles.css'), result.css.toString());
     }
@@ -70,9 +74,7 @@ function buildsection(name, gitlink) {
 
   // compile js
   const config = webpackconfig(jspath, path.resolve(ROOT, name), 'script');
-  webpack(config).run(function (error, stats) {
-    console.log(error);
-  });
+  webpack(config).run(function (error, stats) { });
 
   // make folder
   try {
@@ -85,7 +87,12 @@ function buildsection(name, gitlink) {
     name: name,
     link: `${name}/index.html`
   });
+
+  // copy sample folder
+  fse.copySync(path.resolve(ROOT, 'node_modules', name, 'sample'), path.resolve(ROOT, name, 'sample'));
+
 }
+
 
 // render vars file
 sass.render({

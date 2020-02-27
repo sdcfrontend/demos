@@ -1,0 +1,58 @@
+[
+  {
+    "dev": true,
+    "provider": "brightcove",
+    "originatorId": "rJtrO8EKW",
+    "id": "bc_2",
+    "playerId": "default",
+    "videoId": "6079741848001",
+    "accountId": "6057994456001",
+    "caption": "Here is a video caption for this video",
+    "captionPrefix": "Video",
+    "poster": {
+      "imgsrc": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+    },
+    "sdcVideoId": "12345",
+    "duration": "12:23",
+    "sensitive": "no",
+    "entitlement": {
+      "restricted": true,
+      "message": "You are not a customer of mine"
+    },
+    "assets": {
+      "css": {},
+      "js": {}
+    },
+    "consentString": "I consent",
+    "providerConfig": {},
+    "skin": {},
+    "assetOverride": {}
+  },
+  {
+    "dev": true,
+    "provider": "brightcove",
+    "originatorId": "rJtrO8EKW",
+    "id": "bc_1",
+    "videoId": "6129772790001",
+    "playerId": "OqdPJBXJ",
+    "accountId": "6058004219001",
+    "poster": {
+      "imgsrc": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+    },
+    "sdcVideoId": "12345",
+    "sensitive": "no",
+    "autoplay": true,
+    "entitlement": {
+      "restricted": true,
+      "message": "You are not a customer of mine"
+    },
+    "assets": {
+      "css": {},
+      "js": {}
+    },
+    "consentString": "I consent",
+    "providerConfig": {},
+    "skin": {},
+    "assetOverride": {}
+  }
+]
