@@ -640,9 +640,6 @@ ul {
   justify-content: center;
   padding-right: 18%; }
 
-.sdc-site-video .vjs-modal-dialog {
-  background: rgba(0, 0, 0, 0.55); }
-
 .sdc-site-video[class] .vjs-modal-dialog-content {
   padding: var(--component-padding);
   max-width: 85%; }
@@ -671,7 +668,8 @@ ul {
 .sdc-site-video[class] .vjs-ended .vjs-dock-shelf {
   opacity: 1; }
 
-.sdc-site-video .vjs-dock-text {
+.sdc-site-video .vjs-dock-text,
+.sdc-site-video .vjs-modal-dialog {
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(5px);
   height: 100%; }
