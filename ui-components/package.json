@@ -29,7 +29,7 @@
     "sdc-site-table": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-table.git",
     "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git",
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
-    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#rework-js"
+    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#sdc-skin"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
