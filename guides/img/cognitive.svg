@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="182px" height="182px" viewBox="0 0 182 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Accessibility" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="accessibility" transform="translate(-295.000000, -1410.000000)">
+            <g id="Group" transform="translate(294.000000, 1410.000000)">
+                <g id="Group-10" transform="translate(1.000000, 0.000000)">
+                    <circle id="Oval-Copy-2" fill="#FFE100" cx="91" cy="91" r="91"></circle>
+                    <g id="head" transform="translate(57.000000, 53.000000)">
+                        <path d="M33.6992479,1.70598005 C25.9686573,1.70598005 18.9697397,4.83170024 13.9035887,9.88586399 C8.83890212,14.9385668 5.70598005,21.9187144 5.70598005,29.6289753 C5.70598005,37.9290434 9.33662023,45.3829355 15.099206,50.497234 L15.099229,76.2940199 L47.0500816,76.2940199 L47.0500057,67.1979017 L57.3206284,67.1986136 C58.5278061,67.1986136 59.6208075,66.7092602 60.4119849,65.9180828 C61.2031623,65.1269054 61.6925157,64.033904 61.6925157,62.826608 L61.6919346,51.2117222 L67.5693246,51.2127479 C68.0787368,51.2127479 68.5781478,51.0692308 69.0100929,50.7986248 C69.6452894,50.4006854 70.0590551,49.7829546 70.2145368,49.1059096 C70.3700185,48.4288645 70.2672163,47.6925052 69.8692769,47.0573087 L61.7043526,34.0249564 L61.6378155,31.38982 C61.6741065,30.8075225 61.6925157,30.2203943 61.6925157,29.6289753 C61.6925157,21.9187144 58.5595936,14.9385668 53.494907,9.88586399 C48.4287561,4.83170024 41.4298384,1.70598005 33.6992479,1.70598005 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="3.4119601"></path>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="2.5" cx="22.5" cy="29.5" r="8.25"></circle>
+                        <circle id="Oval-Copy-5" stroke="#FFFFFF" stroke-width="2" cx="40" cy="17" r="4"></circle>
+                        <g id="Group-7" transform="translate(26.000000, 11.000000)" stroke="#FFFFFF" stroke-linecap="square">
+                            <line x1="2.58097166" y1="0.0598296237" x2="2.58097166" y2="4.793025" id="Line-5"></line>
+                            <line x1="2.58097166" y1="0.0598296237" x2="2.58097166" y2="4.793025" id="Line-5-Copy" transform="translate(2.580972, 2.429150) rotate(-270.000000) translate(-2.580972, -2.429150) "></line>
+                        </g>
+                        <path d="M-8.95283847e-13,71.3696703 L69.1001075,6 L72.7194523,9.4239509 L3.61934479,74.7936212 L-8.95283847e-13,71.3696703 Z" id="Line-Copy" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
