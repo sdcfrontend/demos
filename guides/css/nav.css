@@ -117,6 +117,7 @@ body {
     transform: translateX(-50%);
     background: white;
     padding: var(--component-gap);
+    z-index: 2;
   }
 
   .nav-items[aria-hidden="true"] {

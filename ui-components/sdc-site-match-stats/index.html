@@ -8,6 +8,7 @@
     <title>sdc-site-match-stats</title>
     <link rel="stylesheet" href="../css/page.css">
     <link rel="stylesheet" href="styles.css">
+    <base target="_top">
     <script>
       document.documentElement.className = 'js';
     </script>
@@ -15,7 +16,7 @@
   </head>
 
   <body>
-    <div class="header">
+    <!-- <div class="header">
       <div class="wrap">
         <div class="header-body">
           <h1>SDC UI Components</h1>
@@ -25,7 +26,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="info">
       <div class="wrap wrap-gutter">
         <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-site-match-stats.git">https://git.bskyb.com/sky-components/blackjack-sdc-site-match-stats.git</a></p>
@@ -260,6 +261,12 @@
           func.default(el);
         })
       });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
     </script>
   </body>
 

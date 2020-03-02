@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <script>
+      const here = document.currentScript;
+      (async function () {
+        const nav = await import('./nav.js')
+        nav.default(here);
+      })();  
+    </script>
+
+   
+    <main role="main">
+      <div class="wrap">
+        <h2>Accessibility</h2>
+        <h3 id="guides">Accessibility Guidelines</h3>
+        <h4>Why is accessibility important?</h4>
+        <div class="text-block">
+          <p>We are committed to make our product accessible for all, by applying inclusive design principles and  taking advantage of what the latest technology can offer us. We want our users to have equal access and enjoyment of our products.</p>
+        </div>
+        <h4>Designing for different users</h4>
+        <div class="text-block">
+          <p>There are many different users using our products, some users are neurodiverse - perhaps they have autism or dyslexia, some users may have physical disabilities, and some, hearing or visual impairments.  We want out products to be inclusive to all so its important for us to consider the needs of a diverse set of people.</p>
+        </div>
+        <div class="a11y-matrix">
+          <div class="a11y-matrix-panel a11y-matrix-panel--visual">
+            <h5 class="a11y-matrix-header">Visual impairment</h5>
+            <h6 class="a11y-matrix-subheader">Designing for users with low vision</h6>
+            <ul class="a11y-matrix-list">
+              <li>Use good colour contrasts and a readable font size
+              <li>Use a combination of colour, shapes and text for UI elements, using colour to convey meaning
+              <li>Publish all information on webpages rather than bury information in downloads
+              <li>Follow a linear, logical layout rather than spread content all over a page
+              <li>Put buttons and notifications in context and avoid seperating actions from their context
+            </ul>
+          </div>
+          <div class="a11y-matrix-panel a11y-matrix-panel--hearing">
+            <h5 class="a11y-matrix-header">Hearing impairment</h5>
+            <h6 class="a11y-matrix-subheader">Designing for users who are deaf or hard of hearing</h6>
+            <ul class="a11y-matrix-list">
+              <li>Write in plain english and avoid using complicated words or figures of speech
+              <li>Use subtitles or provide transcripts for videos
+              <li>Use a linear, logical layout and avoid overly complex layouts and menus
+              <li>Break up content with sub-headings, images and videos
+            </ul>
+          </div>
+          <div class="a11y-matrix-panel a11y-matrix-panel--cognitive">
+            <h5 class="a11y-matrix-header">Cognitive impairment</h5>
+            <h6 class="a11y-matrix-subheader">Designing for users of screenreaders</h6>
+            <ul class="a11y-matrix-list">
+              <li>Describe images and provide transcripts for video, don’t onlt show information in an image or video
+              <li>Follow a linear logical layout and avoid spreading content all over a page
+              <li>Structure content using semantic HTML5 and avoid just relying on text size and placement for structure and hierarchy.
+              <li>Build for keyboard use and don’t force mouse or screen use
+              <li>Write descriptive links and headings and avoid writing uninformative links and headings
+            </ul>
+          </div>
+          <div class="a11y-matrix-panel a11y-matrix-panel--motor">
+            <h5 class="a11y-matrix-header">Motor Impairment</h5>
+            <h6 class="a11y-matrix-subheader">Designing for users with physical disabilies</h6>
+            <ul class="a11y-matrix-list">
+              <li>Do make large clickable actions and steer clear of actions that need precision
+              <li>Do give clickable elements space, avoid bunching interactive elements up together
+              <li>Design for keyboard or speech only use and avoid designing a lot of dynamic content that relies on a lot of mouse movement
+              <li>Provide shortcuts where possible
+            </ul>
+          </div>
+        </div>
+
+        <h4>WCAG Guidelines</h4>
+        <div class="text-block">
+          <p>It is a government requirement for our digital ecosystem to be AA compliant. For more information on how to be WCAG AA compliant visit the <a href="#" target="_blank">WCAG website</a></p>
+        </div>
+        <h4>useful resources</h4>
+        <div class="text-block">
+          <p>If you see a mistake or something that is missing please contact one of the following people:</p>
+          <ul>
+            <li>An accessibility checklist <a href="#" target="_blank">a11yproject.com/checklist/</a>
+            <li>The bible of web accessibility <a href="#" target="_blank">w3.org/WAI/</a>
+            <li>Stark plugin for sketc <a href="#" target="_blank">getstark.co/</a>
+            <li>HTML code sniffer <a href="#" target="_blank">squizlabs.github.io/HTML_CodeSniffer/</a>
+            <li>Government do’s and don’ts on designing for accessibility <a href="#" target="_blank">https://accessibility.blog.gov.uk/2016/09/02/dos-and-donts-on-designing-for-accessibility/</a>
+          
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>

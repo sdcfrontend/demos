@@ -17,6 +17,7 @@
     "sdc-article-video": "git+https://git.bskyb.com/sky-components/blackjack-sdc-article-video.git",
     "sdc-interactive-selector": "git+https://git.bskyb.com/sky-components/blackjack-sdc-interactive-selector",
     "sdc-interactive-super6": "git+https://git.bskyb.com/sky-components/sdc-interactive-super6.git",
+    "sdc-news-listing": "git+https://git.bskyb.com/sky-components/blackjack-sdc-news-listing.git",
     "sdc-project-base": "git+https://git.bskyb.com/sky-components/sdc-project-base.git#add-css-variables",
     "sdc-site-a11y-skip-links": "git+https://git.bskyb.com/sky-components/sdc-site-a11y-skip-links.git",
     "sdc-site-carousel": "git+https://git.bskyb.com/sky-components/sdc-site-carousel.git",
@@ -29,7 +30,8 @@
     "sdc-site-table": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-table.git",
     "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git",
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
-    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#sdc-skin"
+    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#sdc-skin",
+    "sdc-site-countdown-timer": "git+https://git.bskyb.com/sky-components/sdc-site-countdown-timer.git"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

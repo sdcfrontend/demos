@@ -1,0 +1,96 @@
+{
+  "stories": [
+    {
+      "id": 1602440,
+      "link": "http://stage.skynews.com/story/1602440/thousands-sign-ban-trump-from-uk-petition",
+      "indexTitle": "Thousands Sign 'Ban Trump From UK' Petition",
+      "snippet": "The presidential hopeful defends his call for a ban on Muslims entering the US despite drawing criticism from the United Nations.",
+      "listingImage": {
+        "type": "image",
+        "dimensions": [{
+            "url": "https://e3.365dm.com/20/03/1024x768/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/800x600/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/504x378/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 504
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 264
+          }
+        ],
+        "src" : "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+        "alt":  "A petition to ban Donald Trump from the UK is attracting thousands of signatures."
+      },
+      "updated": "19:15, 04 March 2016",
+      "domainName": "news.sky.com"
+    },
+    {
+      "id": 1602596,
+      "link": "http://stage.skynews.com/story/1602596/ex-oz-pms-attacks-on-islam-trumpify-politics",
+      "indexTitle": "Ex-Oz PM's Attacks On Islam 'Trumpify' Politics",
+      "snippet": "Former Prime Minister Tony Abbott is compared to Donald Trump after urging the West to proclaim its superiority over Islam.",
+      "listingImage": {
+        "type": "image",
+        "dimensions": [
+          {
+            "url": "https://e3.365dm.com/20/03/1024x768/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/800x600/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/504x378/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 504
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 264
+          }
+        ],
+        "src" : "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+        "alt":  "Donald Trump and Tony Abbott"
+      },
+      "updated": "11:22, 21 January 2016",
+      "domainName": "news.sky.com"
+    },
+    {
+      "id": 1511143,
+      "link": "http://stage.skynews.com/story/1511143/trump-sues-univision-over-miss-usa-boycott",
+      "indexTitle": "Trump Sues Univision Over Miss USA Boycott",
+      "snippet": "The broadcaster said it would fight Mr Trump's \"legally ridiculous\" efforts to run away from his insulting Mexican remarks.",
+      "listingImage": {
+        "type": "image",
+        "dimensions": [
+          {
+            "url": "https://e3.365dm.com/20/03/1024x768/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 1024
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/800x600/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 800
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/504x378/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 504
+          },
+          {
+            "url": "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+            "width": 264
+          }
+        ],
+        "src" : "https://e3.365dm.com/20/03/264x198/skynews-joe-lycett-hugo-boss_4936038.jpg",
+        "alt":  "Donald Trump"
+      },
+      "updated": "15:53, 23 November 2015",
+      "domainName": "news.sky.com"
+    }
+  ]
+}

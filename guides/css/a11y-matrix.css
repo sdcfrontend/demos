@@ -1,0 +1,68 @@
+.a11y-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: var(--component-gap) var(--group-margin);
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--component-margin);
+}
+
+.a11y-matrix-panel {
+  display: flex;
+  flex-direction: column; 
+  line-height: 1.25;
+}
+
+.a11y-matrix-panel:before {
+  display: block;
+  content: "";
+  height: calc(var(--space-xl) * 3);
+  width: calc(var(--space-xl) * 3);
+  background: var(--bg);
+  border-radius: 100%;
+  margin: 0 auto var(--component-gap);
+  color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.a11y-matrix-header {
+  font-size: var(--display-5);
+  margin-bottom: var(--component-margin);
+  padding-bottom: var(--component-gap);
+  text-align: center;
+}
+
+.a11y-matrix-subheader {
+  font-size: var(--display-5);
+  text-align: left;
+  margin-bottom: var(--space-s);
+}
+
+.a11y-matrix-list {
+  font-size: var(--supporting-text);
+  padding: 0 var(--component-gap) 0 2em;
+  margin-bottom: var(--component-margin);
+}
+
+.a11y-matrix-list li {
+  padding-bottom: 0.5em;
+}
+
+.a11y-matrix-panel--visual {
+  --bg: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MSA4MSI+PHBhdGggZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNzMuNDY1Ljc5MmwzLjc5MiAzLjgyTDYyLjUgMTkuNDc0YTQzLjI5OCA0My4yOTggMCAwMTE3Ljc0MiAxOS45NDNsLjQ4MiAxLjA5Ny0uNDgyIDEuMDk3Yy02Ljg1MSAxNS42MTQtMjIuMzUzIDI1LjkxMS0zOS43NCAyNS45MTFhNDMuMzgxIDQzLjM4MSAwIDAxLTIwLjU3LTUuMTY4TDQuODU4IDc3LjUzNGwtMy43OTItMy44MiAxNC4xNzUtMTQuMjc4QTQzLjI3OCA0My4yNzggMCAwMS43NjMgNDEuNjExbC0uNDgxLTEuMDk3LjQ4MS0xLjA5N2M2Ljg1Mi0xNS42MTQgMjIuMzUzLTI1LjkxMiAzOS43NC0yNS45MTIgNS45NTggMCAxMS42OTUgMS4yMSAxNi45MzkgMy40MjhMNzMuNDY1Ljc5M3ptLTE0LjkgMjIuNjQ4bC0zNC42NSAzNC45YTM4LjE0NCAzOC4xNDQgMCAwMDE2LjU4OCAzLjc4YzE0Ljg1OSAwIDI4LjEzMy04LjU1MSAzNC4zNjUtMjEuNjA2QTM3Ljk1MSAzNy45NTEgMCAwMDU4LjU2NiAyMy40NHptLTE4LjA2Mi00LjUzM2MtMTQuODU5IDAtMjguMTMzIDguNTUyLTM0LjM2NSAyMS42MDdhMzcuOSAzNy45IDAgMDAxMi45NTMgMTUuMDQ3bDM0LjIwNy0zNC40NTVhMzguMTc1IDM4LjE3NSAwIDAwLTEyLjc5NS0yLjE5OXptMTIuMjggMTQuMzE5YTE0Ljc3NyAxNC43NzcgMCAwMTEuOTEgNy4yODhjMCA4LjIxNC02LjY3IDE0Ljg1NC0xNC44NzMgMTQuODU0LTIuNzYgMC01LjM0NS0uNzUtNy41NjItMi4wNmw0LjA3OC0zLjk5YTkuNjE4IDkuNjE4IDAgMDAzLjQ4NC42NDljNS4yOCAwIDkuNTQtNC4yNDMgOS41NC05LjQ1M2E5LjMzOSA5LjMzOSAwIDAwLS42MTMtMy4zNDFsNC4wMzYtMy45NDd6TTM5LjgyIDI1LjY1OWMxLjY3NyAwIDMuMjkuMjc4IDQuNzk2Ljc5TDM5LjkgMzEuMDZoLS4wODFjLTUuMjY3IDAtOS41MiA0LjIyMS05LjU0MSA5LjQxNGwtNC42MzggNC41MzdhMTQuODUgMTQuODUgMCAwMS0uNjk0LTQuNDk4YzAtOC4yMTUgNi42NjktMTQuODU1IDE0Ljg3My0xNC44NTV6Ii8+PC9zdmc+) var(--success);
+}
+
+.a11y-matrix-panel--hearing {
+  --bg: var(--alert);
+}
+
+.a11y-matrix-panel--cognitive {
+  --bg: var(--breaking);
+}
+
+.a11y-matrix-panel--motor {
+  --bg: var(--link-color);
+}

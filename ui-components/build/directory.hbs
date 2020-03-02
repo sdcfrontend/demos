@@ -19,10 +19,18 @@
         </div>
       </div>
     </div>
-    <div class="wrap wrap-gutter">
-      <ul class="directory-list">{{#each .}}<li><a href="{{link}}">{{name}}</a></li>{{/each}}
-      </ul>
+    <div class="wrap-gutter directory-grid">
+      
+      <div class="directory-grid-col1">  
+        <ul class="directory-list" data-role="director-list">{{#each .}}<li><a data-label="{{name}}" href="{{link}}">{{name}}</a></li>{{/each}}
+        </ul>
+      </div>
+
+      <div class="directory-grid-col2">
+        <iframe src="" frameborder="0" class="directory-grid-frame" data-role="directory-frame"></iframe>
+      </div>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 
 </html>
