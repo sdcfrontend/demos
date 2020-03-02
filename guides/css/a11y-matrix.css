@@ -56,13 +56,13 @@
 }
 
 .a11y-matrix-panel--hearing {
-  --bg: var(--alert);
+  --bg: var(--alert)
 }
 
 .a11y-matrix-panel--cognitive {
-  --bg: var(--breaking);
+  --bg: var(--breaking)
 }
 
 .a11y-matrix-panel--motor {
-  --bg: var(--link-color);
+  --bg: var(--link-color)
 }
