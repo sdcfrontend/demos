@@ -647,8 +647,7 @@ ul {
 .sdc-site-video[class] .vjs-social-title {
   font-weight: 400;
   line-height: 1.2;
-  font-size: var(--display-4);
-  margin-bottom: 0.5em; }
+  font-size: var(--display-4); }
 
 .sdc-site-video[class] .vjs-dock-title,
 .sdc-site-video[class] .vjs-dock-description {
@@ -711,6 +710,16 @@ ul {
 .sdc-site-video[class] .vjs-share-control span[aria-live="polite"] {
   position: absolute;
   clip: rect(0, 0, 0, 0); }
+
+.sdc-site-video[class] .vjs-social-share-link {
+  padding: 1.8%; }
+
+.sdc-site-video[class] .vjs-social-label-text {
+  font-size: var(--font-fixed-s); }
+
+.sdc-site-video[class] .vjs-social-share-links,
+.vjs-social-overlay .vjs-social-description {
+  margin-bottom: var(--space-xs); }
 
 /* volume slider */
 .sdc-site-video .vjs-volume-horizontal[class] {
