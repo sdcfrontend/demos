@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-site-calendar</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-site-calendar</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/sdc-site-calendar.git">https://git.bskyb.com/sky-components/sdc-site-calendar.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-site-calendar" data-component-name="sdc-site-calendar" 
+    data-link-format="/racecards/${dd}-${mm}-${yyyy}" data-selected-date="17-april-2019">
+    <script>["22 march 2019", "23 march 2019", "27 april 2019", "28 april 2019"]</script>
+    <h4 class="sdc-site-calendar__head">
+        <button href="#" class="sdc-site-calendar__nav sdc-site-calendar__nav--prev" data-role="calendar-nav"
+            data-title="Previous month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+        <span class="sdc-site-calendar__title" data-role="calendar-title"></span>
+        <button class="sdc-site-calendar__nav sdc-site-calendar__nav--next" href="#" data-role="calendar-nav"
+            data-title="Next month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+    </h4>
+    <div class="sdc-site-calendar__days" aria-hidden="true">
+        <span>M</span>
+        <span>T</span>
+        <span>W</span>
+        <span>T</span>
+        <span>F</span>
+        <span>S</span>
+        <span>S</span>
+    </div>
+    <div class="sdc-site-calendar__body" data-role="calendar-body">
+    </div>
+    <button class="sdc-site-calendar__today-button" data-role="today-button" type="button">Back to today</button>
+</div><br><br><div class="sdc-site-calendar" data-component-name="sdc-site-calendar" 
+    data-link-format="${dd} ${month} ${yyyy}" data-selected-date="17-march-2019" data-populate-field="#form-field-date">
+    <script>[]</script>
+    <h4 class="sdc-site-calendar__head">
+        <button href="#" class="sdc-site-calendar__nav sdc-site-calendar__nav--prev" data-role="calendar-nav"
+            data-title="Previous month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+        <span class="sdc-site-calendar__title" data-role="calendar-title"></span>
+        <button class="sdc-site-calendar__nav sdc-site-calendar__nav--next" href="#" data-role="calendar-nav"
+            data-title="Next month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+    </h4>
+    <div class="sdc-site-calendar__days" aria-hidden="true">
+        <span>M</span>
+        <span>T</span>
+        <span>W</span>
+        <span>T</span>
+        <span>F</span>
+        <span>S</span>
+        <span>S</span>
+    </div>
+    <div class="sdc-site-calendar__body" data-role="calendar-body">
+    </div>
+    <button class="sdc-site-calendar__today-button" data-role="today-button" type="button">Back to today</button>
+</div><br><br><div class="sdc-site-calendar" data-component-name="sdc-site-calendar" 
+    data-link-format="${dd} ${month} ${yyyy}" " data-populate-field="#form-field-date" data-no-past-dates="true" data-no-pad="true" data-mixed-case="true">
+    <script>["22 april 2019", "23 april 2019", "27 april 2019", "28 april 2019"]</script>
+    <h4 class="sdc-site-calendar__head">
+        <button href="#" class="sdc-site-calendar__nav sdc-site-calendar__nav--prev" data-role="calendar-nav"
+            data-title="Previous month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+        <span class="sdc-site-calendar__title" data-role="calendar-title"></span>
+        <button class="sdc-site-calendar__nav sdc-site-calendar__nav--next" href="#" data-role="calendar-nav"
+            data-title="Next month" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" class="sdc-site-calendar__nav-icon">
+                <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                </path>
+            </svg>
+        </button>
+    </h4>
+    <div class="sdc-site-calendar__days" aria-hidden="true">
+        <span>M</span>
+        <span>T</span>
+        <span>W</span>
+        <span>T</span>
+        <span>F</span>
+        <span>S</span>
+        <span>S</span>
+    </div>
+    <div class="sdc-site-calendar__body" data-role="calendar-body">
+    </div>
+    <button class="sdc-site-calendar__today-button" data-role="today-button" type="button">Back to today</button>
+</div><br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

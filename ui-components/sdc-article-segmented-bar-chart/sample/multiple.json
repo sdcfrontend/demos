@@ -1,0 +1,76 @@
+[{
+  "type": "sdc-article-segmented-bar-chart",
+  "title": "Latest Poll",
+  "titleTextColour": "#ffffff",
+  "titleBackgroundColour": "#cccccc",
+  "source": "RealClear Politics",
+  "leftColumn": {
+    "columnPercentageValue": 50,
+    "columnLabel": "Democrat",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#06476c"
+  },
+  "rightColumn": {
+    "columnPercentageValue": 50,
+    "columnLabel": "Republican",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#c8373a"
+  }
+},
+{
+  "type": "sdc-article-segmented-bar-chart",
+  "title": "Latest Poll",
+  "titleTextColour": "#ffffff",
+  "titleBackgroundColour": "#cccccc",
+  "source": "RealClear Politics",
+  "leftColumn": {
+    "columnPercentageValue": 10,
+    "columnLabel": "Democrat",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#06476c"
+  },
+  "rightColumn": {
+    "columnPercentageValue": 90,
+    "columnLabel": "Republican",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#c8373a"
+  }
+},
+{
+  "type": "sdc-article-segmented-bar-chart",
+  "title": "Latest Poll",
+  "titleTextColour": "#666",
+  "titleBackgroundColour": "#fff",
+  "source": "RealClear Politics",
+  "leftColumn": {
+    "columnPercentageValue": 10,
+    "columnLabel": "Democrat",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#06476c"
+  },
+  "rightColumn": {
+    "columnPercentageValue": 10,
+    "columnLabel": "Republican",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#c8373a"
+  }
+},
+{
+  "type": "sdc-article-segmented-bar-chart",
+  "title": "Latest Poll",
+  "titleTextColour": "#ffffff",
+  "titleBackgroundColour": "#cccccc",
+  "source": "RealClear Politics",
+  "leftColumn": {
+    "columnPercentageValue": 90,
+    "columnLabel": "Democrat",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#06476c"
+  },
+  "rightColumn": {
+    "columnPercentageValue": 5,
+    "columnLabel": "Republican",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#c8373a"
+  }
+}]

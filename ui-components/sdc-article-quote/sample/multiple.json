@@ -1,0 +1,28 @@
+[
+    {
+        "quote": "Checking! Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Quisque placerat facilisis egestas cillum dolore.",
+        "name": "Some Person",
+        "image": {
+            "alt": "hello",
+            "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+        },
+        "dimension": {
+            "fullBleed": false,
+            "halfWidth": true
+        }
+    },
+    {
+        "quote":
+            "Checking! Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Cum ceteris in veneratione tui montes, nascetur mus. Quisque placerat facilisis egestas cillum dolore.",
+        "name": "Some Person",
+        "image": {
+            "alt": "hello",
+            "template":
+            "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+        },
+        "dimension": {
+            "fullBleed": true,
+            "halfWidth": false
+        }
+    }
+]

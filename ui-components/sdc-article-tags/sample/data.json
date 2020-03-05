@@ -1,0 +1,21 @@
+{
+  "heading": "Tags heading",
+  "participants": [
+    {
+    "id": "3216",
+    "type": "Topic",
+    "name": "US Elections",
+    "url": "/topic/us_elections-3216"
+    }, {
+      "id": "3215",
+      "type": "Topic",
+      "name": "Elections",
+      "url": "/topic/elections-3215"
+    }, {
+      "id": "3218",
+      "type": "Topic",
+      "name": "Florida",
+      "url": "/topic/florida-3218"
+    }
+  ]
+}

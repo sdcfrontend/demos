@@ -1,0 +1,62 @@
+{
+  "id": 1,
+    "type": "barvert",
+    "title": "Pies Eaten By Age Group",
+    "credit": {
+      "text": "Data from World Pie Organisation - 2018",
+      "url" : "http://www.pies.com"
+    },
+    "skin": "skynews",
+    "animated": true,
+    "key": true,
+    "dataUrl": false,
+    "externalTrigger": false,
+    "drawing": {
+      "grid": {
+        "majorLines": true,
+        "minorLines": false
+      },
+      "axes": {
+        "x": {
+          "label": "Men",
+          "units": false
+        },
+        "y": {
+          "label": "Pies",
+          "units": "Kg"
+        }
+      }
+    },
+    "points": [
+      {
+        "values": [15],
+        "label": "Under 18",
+        "subLabel": "",
+        "colourIndex": "4"
+      },
+      {
+        "values": [15],
+        "label": "18 - 25",
+        "subLabel": "",
+        "colourIndex": "3"
+      },
+      {
+        "values": [20],
+        "label": "25 - 40",
+        "subLabel": "",
+        "colourIndex": "2"
+      },
+      {
+        "values": [20],
+        "label": "40 - 65",
+        "subLabel": "",
+        "colourIndex": "1"
+      },
+      {
+        "values": [32],
+        "label": "65+",
+        "subLabel": "",
+        "colourIndex": "0"
+      }
+    ]
+}

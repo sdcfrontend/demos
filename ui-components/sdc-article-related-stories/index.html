@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-article-related-stories</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-article-related-stories</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/sdc-article-related-stories.git">https://git.bskyb.com/sky-components/sdc-article-related-stories.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-article-widget sdc-article-related-stories" data-component-name="sdc-article-related-stories">
+  <div class="sdc-article-related-stories__content">
+    <h3 class="sdc-article-related-stories__title">Related stories</h3>
+
+    <ul class="sdc-article-related-stories__list">
+        <li class="sdc-article-related-stories__item">
+          <a class="sdc-article-related-stories__link" href="https://news.sky.com/story/who-is-the-crocodile-emmerson-mnangagwa-11136829">
+            <h4 class="sdc-article-related-stories__headline">Who is 'The Crocodile?'</h4>
+          </a>
+        </li>
+        <li class="sdc-article-related-stories__item">
+          <a class="sdc-article-related-stories__link" href="https://news.sky.com/story/suicide-bombing-kills-at-least-50-in-nigeria-11136849">
+            <h4 class="sdc-article-related-stories__headline">Teen suicide bomber kills at least 50 in Nigeria</h4>
+          </a>
+        </li>
+        <li class="sdc-article-related-stories__item">
+          <a class="sdc-article-related-stories__link" href="https://news.sky.com/story/10000-forensic-tests-may-have-been-manipulated-11137005">
+            <h4 class="sdc-article-related-stories__headline">10,000 forensic tests 'may have been manipulated'</h4>
+          </a>
+        </li>
+        <li class="sdc-article-related-stories__item">
+          <a class="sdc-article-related-stories__link" href="https://news.sky.com/story/impeachment-proceedings-begin-against-zimbabwes-president-robert-mugabe-11137130">
+            <h4 class="sdc-article-related-stories__headline">Impeachment proceedings begin against Zimbabwe's President Robert Mugabe</h4>
+          </a>
+        </li>
+        <li class="sdc-article-related-stories__item">
+          <a class="sdc-article-related-stories__link" href="https://news.sky.com/story/deficit-widens-in-october-ahead-of-hammonds-budget-11136831">
+            <h4 class="sdc-article-related-stories__headline">Deficit widened in October ahead of Hammond's £££ Budget</h4>
+          </a>
+        </li>
+    </ul>
+  </div>
+</div>
+<br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+  "aspectRatio": "16/9",
+  "template" : "http://stage.e3.365dm.com/16/06/{width}x{height}/germany-v-poland_3485359.jpg?20160616213333",
+  "caption": "Arsenal's Mikel Arteta is set to retire very soon and here is lots of text that goes onto two lines.",
+  "dimensions": [
+    {
+        "url": "http://e3.365dm.com/17/09/2048x1152/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 2048
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/1600x900/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 1600
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/992x558/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 992
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 768
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/384x216/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 384
+    },
+    {
+        "url": "http://e3.365dm.com/17/09/192x108/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+        "width": 192
+    }
+  ],
+  "alt": "Arsenal's Mikel Arteta.",
+  "dimension": {
+    "fullBleed": false,
+    "halfWidth": false,
+    "captionOverlay": false
+  },
+  "originator": "Getty"
+}

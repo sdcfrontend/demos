@@ -1,0 +1,290 @@
+[
+  {
+    "title": "World Cup 2018 Venues Guide",
+    "modifier": "world-cup-guide",
+    "label": "WM 2018 Spielorte",
+    "id": "76891",
+    "touch-library": "https://hammerjs.github.io/dist/hammer.min.js",
+    "image": {
+      "src": "assets/map-russia.svg"
+    },
+    "pins": [
+      {
+        "title": "Kaliningrad",
+        "coords": {
+          "top": "28%",
+          "left": "5%"
+        },
+        "cards": [
+          {
+            "title": "Kaliningrad-Stadion",
+            "image": "https://img.skysports.com/stadium-images/kaliningrad.jpg",
+            "text": "<ul><li>Kapazität: <strong>35,212</strong><li>Eröffnet: <strong>2018</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Moskau",
+        "flip": true,
+        "coords": {
+          "top": "23%",
+          "left": "40%"
+        },
+        "cards": [
+          {
+            "title": "Luschniki-Stadion",
+            "image": "https://img.skysports.com/stadium-images/luzhniki.jpg",
+            "text": "<ul><li>Kapazität: <strong>81,006</strong><li>Eröffnet: <strong>1956</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          },
+          {
+            "title": "Spartak-Stadion",
+            "image": "https://img.skysports.com/stadium-images/spartak.jpg",
+            "text": "<ul><li>Kapazität: <strong>43,298</strong><li>Eröffnet: <strong>2014</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Sankt Petersburg",
+        "coords": {
+          "top": "8%",
+          "left": "26%"
+        },
+        "cards": [
+          {
+            "title": "Sankt-Petersburg-Stadion",
+            "image": "https://img.skysports.com/stadium-images/petersburg.jpg",
+            "text": "<ul><li>Kapazität: <strong>68,134</strong><li>Eröffnet: <strong>2017</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Sotschi",
+        "coords": {
+          "top": "63%",
+          "left": "46%"
+        },
+        "cards": [
+          {
+            "title": "Fischt-Stadion",
+            "image": "https://img.skysports.com/stadium-images/fisht.jpg",
+            "text": "<ul><li>Kapazität: <strong>47,700</strong><li>Eröffnet: <strong>2013</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Rostow am Don",
+        "flip": true,
+        "coords": {
+          "top": "52%",
+          "left": "45%"
+        },
+        "cards": [
+          {
+            "title": "Rostow-Arena",
+            "image": "https://img.skysports.com/stadium-images/rostov.jpg",
+            "text": "<ul><li>Kapazität: <strong>45,145</strong><li>Eröffnet: <strong>2018</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Wolgograd",
+        "coords": {
+          "top": "49%",
+          "left": "57%"
+        },
+        "cards": [
+          {
+            "title": "Wolgograd-Arena",
+            "image": "https://img.skysports.com/stadium-images/volgograd.jpg",
+            "text": "<ul><li>Kapazität: <strong>45,568</strong><li>Eröffnet: <strong>2018</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Nischni Nowgorod",
+        "coords": {
+          "top": "21%",
+          "left": "53%"
+        },
+        "cards": [
+          {
+            "title": "Nischni-Nowgorod-Stadion",
+            "image": "https://img.skysports.com/stadium-images/nizhny.jpg",
+            "text": "<ul><li>Kapazität: <strong>45,331</strong><li>Eröffnet: <strong>2017</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Saransk",
+        "flip": true,
+        "coords": {
+          "top": "32%",
+          "left": "55%"
+        },
+        "cards": [
+          {
+            "title": "Mordwinien-Arena",
+            "image": "https://img.skysports.com/stadium-images/mordovia.jpg",
+            "text": "<ul><li>Kapazität: <strong>44,442</strong><li>Eröffnet: <strong>2018</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Kasan",
+        "coords": {
+          "top": "27%",
+          "left": "62%"
+        },
+        "cards": [
+          {
+            "title": "Kasan-Arena",
+            "image": "https://img.skysports.com/stadium-images/kazan.jpg",
+            "text": "<ul><li>Kapazität: <strong>44,779</strong><li>Eröffnet: <strong>2013</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Samara",
+        "coords": {
+          "top": "33%",
+          "left": "67%"
+        },
+        "cards": [
+          {
+            "title": "Samara-Arena",
+            "image": "https://img.skysports.com/stadium-images/samara.jpg",
+            "text": "<ul><li>Kapazität: <strong>44,807</strong><li>Eröffnet: <strong>2018</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      },
+      {
+        "title": "Jekaterinburg",
+        "flip": true,
+        "coords": {
+          "top": "14%",
+          "left": "88%"
+        },
+        "cards": [
+          {
+            "title": "Jekaterinburg-Arena",
+            "image": "https://img.skysports.com/stadium-images/ekaterinburg.jpg",
+            "text": "<ul><li>Kapazität: <strong>35,696</strong><li>Eröffnet: <strong>1953</strong></ul><p><a href='https://sport.sky.de/fussball/artikel/hier-sitzen-zuschauer-draussen-die-wm-stadien-2018/11129350/34709'>Mehr Informationen</a></p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Royal wedding dress",
+    "modifier": "royal-wedding",
+    "id": "76890",
+    "touch-library": "https://hammerjs.github.io/dist/hammer.min.js",
+    "image": {
+      "src": "assets/royal-wedding.jpg"
+    },
+    "pins": [
+      {
+        "title": "Wrist thing",
+        "flip": true,
+        "coords": {
+          "top": "59%",
+          "left": "15%"
+        },
+        "cards": [
+          {
+            "title": "Prince William's thing",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Sash",
+        "flip": true,
+        "coords": {
+          "top": "35%",
+          "left": "33%"
+        },
+        "cards": [
+          {
+            "title": "Prince William's Sash",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Medal",
+        "flip": true,
+        "coords": {
+          "top": "43%",
+          "left": "38%"
+        },
+        "cards": [
+          {
+            "title": "Prince William's medal",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Flowers",
+        "coords": {
+          "top": "59%",
+          "left": "59%"
+        },
+        "cards": [
+          {
+            "title": "Catherine's flowers",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Dress",
+        "flip": true,
+        "coords": {
+          "top": "47%",
+          "left": "62%"
+        },
+        "cards": [
+          {
+            "title": "Catherine's dress",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Tiara",
+        "coords": {
+          "top": "13%",
+          "left": "63%"
+        },
+        "cards": [
+          {
+            "title": "Catherines tiara",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      },
+      {
+        "title": "Earrings",
+        "coords": {
+          "top": "28%",
+          "left": "68%"
+        },
+        "cards": [
+          {
+            "title": "Catherine's earrings",
+            "image": null,
+            "text": "Like her dress, Kate’s footwear was designed by Sarah Burton for Alexander McQueen and was made of ivory duchesse satin with lace hand-embroidered by the Royal School of Needlework."
+          }
+        ]
+      }
+    ]
+  }
+]

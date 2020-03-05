@@ -1,0 +1,19 @@
+[{
+  "link-format": "/racecards/${dd}-${mm}-${yyyy}",
+  "selected-date": "17-april-2019",
+  "disabled-dates": "[\"22 march 2019\", \"23 march 2019\", \"27 april 2019\", \"28 april 2019\"]"
+},
+{
+  "link-format": "${dd} ${month} ${yyyy}",
+  "selected-date": "17-march-2019",
+  "populate-field": "#form-field-date"
+},
+{
+  "link-format": "${dd} ${month} ${yyyy}",
+  "selected-date": false,
+  "disabled-dates": "[\"22 april 2019\", \"23 april 2019\", \"27 april 2019\", \"28 april 2019\"]",
+  "populate-field": "#form-field-date",
+  "no-past-dates": true,
+  "no-pad": true,
+  "mixed-case": true
+}]

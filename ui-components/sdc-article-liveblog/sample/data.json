@@ -1,0 +1,22 @@
+{
+    "network": "bskyb-int-0.fyre.co",
+    "iconPath": "http://uatimg.skysports.com/liveblog/icons/",
+    "pinned": {
+        "el": "pinned",
+        "dataUrl": "http://bskyb-int-0.bootstrap.fyre.co/bs3/v3.1/bskyb-int-0.fyre.co/305002/OTc0NTg2OQ==/featured"
+    },
+    "blog": {
+        "siteId": "305002",
+        "articleId": "9762402",
+        "el": "livefyre-blog",
+        "collectionMeta": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoibGl2ZWJsb2ciLCJpZCI6Ijc1NDE3NTY2IiwiYXJ0aWNsZUlkIjo5NzYyNDAyLCJ0aXRsZSI6IlRoaXMgaXMgdGVzdCBMaXZlIGJsb2ciLCJ1cmwiOiJodHRwOlwvXC91YXQtMS5za3lzcG9ydHMuY29tIiwidGFncyI6Im1vcmUtc3BvcnRzIiwiaXNzIjoidXJuOmxpdmVmeXJlOmJza3liLWludC0wLmZ5cmUuY286c2l0ZT0zMDUwMDIifQ.qwvVzMBLa_GGmDSctMy5YLsXlIoY85NgpuVsYiyipWk",
+        "datetimeFormat": {
+            "minutesUntilAbsoluteTime":-1,
+            "absoluteFormat":"HH:mm"
+        },
+        "disableThirdPartyAnalytics": true,
+        "disableAvatars": true,
+        "readOnly": true
+    },
+    "crawlableContent": "<p>This content is included in a noscript tag</p>"
+}

@@ -66,7 +66,6 @@ function buildsection(name, gitlink) {
     file: csspath,
     includePaths: ['node_modules']
   }, function (err, result) {
-    console.log(err);
     if (result && result.css) {
       fs.writeFileSync(path.resolve(ROOT, name, 'styles.css'), result.css.toString());
     }
@@ -90,6 +89,11 @@ function buildsection(name, gitlink) {
 
   // copy sample folder
   fse.copySync(path.resolve(ROOT, 'node_modules', name, 'sample'), path.resolve(ROOT, name, 'sample'));
+
+  // copy assets folder
+  try {
+    fse.copySync(path.resolve(ROOT, 'node_modules', name, 'assets'), path.resolve(ROOT, name, 'assets'));
+  } catch (error) {}
 
 }
 

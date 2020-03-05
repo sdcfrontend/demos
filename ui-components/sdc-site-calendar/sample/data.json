@@ -1,0 +1,5 @@
+{
+  "link-format": "/racecards/${dd}-${month}-${yyyy}",
+  "selected-date": "17-april-2019",
+  "disabled-dates": "[\"22 march 2019\", \"23 march 2019\", \"27 april 2019\", \"28 april 2019\"]"
+}

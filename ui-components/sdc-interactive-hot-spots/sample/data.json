@@ -1,0 +1,111 @@
+{
+  "title": "Wedding Day Dress",
+  "tracking": "wedding-day-dress",
+  "modifier": "wedding-day-dress",
+  "id": "10001",
+  "touch-library": "https://hammerjs.github.io/dist/hammer.min.js",
+  "image": {
+    "src": "https://img.skysports.com/royal-wedding/meghan-full-large.jpg?bypass-service-worker",
+    "small-src": "https://img.skysports.com/royal-wedding/meghan-full-small.jpg?bypass-service-worker"
+  },
+  "pins": [
+    {
+      "title": "Tiara",
+      "flip": true,
+      "coords": {
+        "top": "10%",
+        "left": "34%"
+      },
+      "cards": [
+        {
+          "title": "Tiara",
+          "text": "Veil held in place by Queen Mary's diamond and platinum bandeau tiara, lent by The Queen."
+        }
+      ]
+    },
+    {
+      "title": "Hair and make-up",
+      "flip": true,
+      "coords": {
+        "top": "29%",
+        "left": "33%"
+      },
+      "cards": [
+        {
+          "title": "Hair and make-up",
+          "text": "The bride’s hair was styled by Serge Normant, with make-up by her friend and make-up artist Daniel Martin."
+        }
+      ]
+    },
+    {
+      "title": "Earrings",
+      "flip": false,
+      "coords": {
+        "top": "24%",
+        "left": "55%"
+      },
+      "cards": [
+        {
+          "title": "Earrings",
+          "text": "Meghan’s earrings and bracelet are by Cartier."
+        }
+      ]
+    },
+    {
+      "title": "The veil",
+      "flip": false,
+      "coords": {
+        "top": "42%",
+        "left": "76%"
+      },
+      "cards": [
+        {
+          "title": "The veil",
+          "text": "Five-metres long, made from silk tulle, featuring hand-embroidered flowers from each of the 53 Commonwealth countries."
+        }
+      ]
+    },
+    {
+      "title": "The dress",
+      "flip": true,
+      "coords": {
+        "top": "50%",
+        "left": "33%"
+      },
+      "cards": [
+        {
+          "title": "The dress",
+          "text": "By British designer, Clare Waight Keller. Features an open bateau neckline, three-quarter sleeves and underskirt in triple silk organza."
+        }
+      ]
+    },
+    {
+      "title": "The fabric",
+      "flip": false,
+      "coords": {
+        "top": "60%",
+        "left": "63%"
+      },
+      "cards": [
+        {
+          "title": "The fabric",
+          "text": "A double-bonded silk cady with soft matt lustre. The pure white was chosen by Meghan and the designer to bring a \"fresh modernity\"."
+        }
+      ]
+    },
+    {
+      "title": "The flowers",
+      "flip": false,
+      "coords": {
+        "top": "75%",
+        "left": "59%"
+      },
+      "cards": [
+        {
+          "title": "The flowers",
+          "text": "Bouquet included flowers handpicked by Harry at Kensington Palace, as well as the Princess of Wales’ favourite flower forget-me-nots."
+        }
+      ]
+    }
+  ]
+}

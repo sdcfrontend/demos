@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-article-strapline</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-article-strapline</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-article-strapline.git">https://git.bskyb.com/sky-components/blackjack-sdc-article-strapline.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+          <div class="sdc-article-widget sdc-article-strapline sdc-article-strapline--default-layout" data-component-name="sdc-article-strapline">
+        <div class="sdc-article-strapline__link">
+            <div class="sdc-article-strapline__image-wrap">
+                <picture>
+                    <source srcset="http://stage.e3.365dm.com/16/06/320x180/germany-v-poland_3485359.jpg?20160616213333 320w, http://stage.e3.365dm.com/16/06/640x380/germany-v-poland_3485359.jpg?20160616213333 640w" media="(max-width: 480px)">
+                    <source srcset="http://stage.e3.365dm.com/16/06/256x256/germany-v-poland_3485359.jpg?20160616213333 256w, http://stage.e3.365dm.com/16/06/512x512/germany-v-poland_3485359.jpg?20160616213333 512w" media="(min-width: 481px)">
+                    <img src="http://stage.e3.365dm.com/16/06/512x512/germany-v-poland_3485359.jpg?20160616213333" alt="Sky Sports Fantasy Football" class="sdc-article-strapline__image">
+                </picture>
+            </div>
+
+        <div class="sdc-article-strapline__body">
+                <h3 class="sdc-article-strapline__title">Sky Sports Fantasy Football</h3>
+                <p class="sdc-article-strapline__text">Who makes your XI this season? Pick your team here to win the £25k jackpot</p>
+                <a href="#" class="sdc-article-strapline__button"  >Start over</a>
+        </div>
+        </div>
+    </div>
+<br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

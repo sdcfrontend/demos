@@ -1,0 +1,19 @@
+{
+  "title": "Latest Table",
+  "caption": "Premier League",
+  "headers": ["Pos", "Team", "Pld", "Pts"],
+  "rows": [
+    {
+      "cells": [1, "Man City", 12, 13]
+    },
+    {
+      "cells": [1, "Man City", 12, 13]
+    },
+    {
+      "cells": [1, "Man City", 12, 13]
+    },
+    {
+      "cells": [1, "Man City", 12, 13]
+    }
+  ]
+}

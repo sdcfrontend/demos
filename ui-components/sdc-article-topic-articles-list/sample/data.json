@@ -1,0 +1,32 @@
+{
+    "title": "Sky News Topics",
+    "basketId": 100,
+    "participantColumnHeading": "Topics",
+    "articleColumnHeading": "Articles",
+    "participants": [
+        {
+            "id": 3218,
+            "typeId": 26,
+            "name": "Syria",
+            "url": "/topic/syria-1234",
+            "articles": [
+                {
+                    "id": 9786427,
+                    "headline": {
+                        "index": "Deadly IS Blasts In Syria As US-Russia Talks Stall",
+                        "long": "Syria Rocked By Bombings Claimed By Islamic State As US-Russia Talks Stall",
+                        "mobile": "Deadly IS Blasts In Syria As US-Russia Talks Stall",
+                        "canonical": ""
+                    },
+                    "url": "/story/syria-rocked-by-bombings-claimed-by-islamic-state-as-us-russia-talks-stall-9786427",
+                    "significance": {
+                        "id": 0,
+                        "description": "None"
+                    },
+                    "lastUpdated": "2016-09-14T12:22",
+                    "created": "2016-09-06T11:26"
+                }
+            ]
+        }
+    ]
+}

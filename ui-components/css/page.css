@@ -48,6 +48,8 @@ body {
 .header h1 {
   font-size: var(--display-3);
   white-space: nowrap;
+  line-height: 1;
+  margin-right: var(--component-margin);
 }
 
 .header .wrap {
@@ -59,7 +61,7 @@ body {
 
 .header-body {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
@@ -77,6 +79,11 @@ body {
   font-weight: bold;
   color: var(--link-color);
   padding-right: var(--component-gap);
+}
+
+.header a {
+  color: var(--link-color);
+  padding: 0.2em 0
 }
 
 .info {
@@ -114,6 +121,8 @@ body {
 
 .directory-list {
   line-height: 1.2;
+  top: var(--component-gap);
+  position: sticky;
 }
 
 .directory-list a {

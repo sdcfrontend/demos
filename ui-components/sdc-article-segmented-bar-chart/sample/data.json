@@ -1,0 +1,19 @@
+{
+  "type": "sdc-article-segmented-bar-chart",
+  "title": "Latest Poll",
+  "titleTextColour": "#ffffff",
+  "titleBackgroundColour": "#cccccc",
+  "source": "RealClear Politics",
+  "leftColumn": {
+    "columnPercentageValue": 10,
+    "columnLabel": "Democrat",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#06476c"
+  },
+  "rightColumn": {
+    "columnPercentageValue": 90,
+    "columnLabel": "Republican",
+    "columnTextColour": "#ffffff",
+    "columnBackgroundColour": "#c8373a"
+  }
+}
