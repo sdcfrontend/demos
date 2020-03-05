@@ -612,7 +612,7 @@ ul {
   background: var(--shade-2);
   background: rgba(255, 255, 255, 0.8); }
 
-.vjs-progress-control.vjs-control[class][class] {
+.sdc-site-video .vjs-progress-control.vjs-control[class][class] {
   height: 25px !important;
   transform: none !important;
   top: auto !important;
@@ -633,7 +633,11 @@ ul {
   right: 0;
   top: 50%;
   border-radius: 50%;
-  transform: translate(50%, -50%); }
+  transform: translate(50%, -50%) scale(0);
+  transition: transform 0.25s; }
+
+.sdc-site-video .vjs-progress-control:hover .vjs-play-progress:after {
+  transform: translate(50%, -50%) scale(1); }
 
 .sdc-site-video .vjs-load-progress div {
   opacity: 0; }
