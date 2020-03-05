@@ -770,6 +770,11 @@ ul {
   padding-left: 0;
   margin-left: var(--space-xs); }
 
+.sdc-site-video .vjs-time-control.vjs-current-time[class],
+.sdc-site-video .vjs-time-control.vjs-time-divider,
+.sdc-site-video .vjs-duration.vjs-time-control {
+  display: block !important; }
+
 /* enter fullscreen */
 .sdc-site-video .vjs-fullscreen-control {
   background-position: 2px center;
