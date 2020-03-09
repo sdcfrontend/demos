@@ -1,0 +1,16 @@
+{
+    "providerOptions": {
+        "name": "target",
+        "mbox": "HP_Tile_MySky_Sports_App",
+        "appUrl": "http://localhost:8089/target"
+    },
+    "providerData": {
+        "page": {
+            "pageName": "sky\/portal\/sports\/home",
+            "breadCrumb": "home",
+            "siteName": "skysports"
+        }
+    },
+    "siblingToReplace": "previous",
+    "targetUrl": "https://admin5.testandtarget.omniture.com/admin/rest/v1/libraries/atjs/download?client=britishskybroadcasti&version=1.2.2"
+}

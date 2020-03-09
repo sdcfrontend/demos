@@ -8,10 +8,10 @@ const sass = require('node-sass');
 const webpack = require('webpack');
 const webpackconfig = require('./webpack.config');
 
-var postcss = require('postcss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-var cssvariables = require('postcss-css-variables');
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const cssvariables = require('postcss-css-variables');
 
 const package = require(path.resolve(ROOT, 'package.json'));
 const page = fs.readFileSync(path.resolve(ROOT, 'build/page.html'), 'utf8').toString();
@@ -43,6 +43,13 @@ function buildsection(name, gitlink) {
   const template = fs.readFileSync(path.resolve(ROOT, 'node_modules', name, 'template.hbs'), 'utf8').toString();
   const csspath = path.resolve(ROOT, 'node_modules', name, `styles/preview.scss`);
   const jspath = path.resolve(ROOT, 'node_modules', name, `src/components/${name}.js`);
+
+  try {
+    const partials = require(path.resolve(ROOT, 'node_modules', name, `src/partials.js`));
+    handlebars.registerPartial(partials);
+  } catch (error) {
+    
+  }
 
   let data = {};
   try {

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-site-header-simple</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-site-header-simple</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-site-header-simple.git">https://git.bskyb.com/sky-components/blackjack-sdc-site-header-simple.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-site-header-simple" data-component-name="sdc-site-header-simple">
+  <div class="sdc-site-header-simple__inner">
+    <div class="sdc-site-header-simple__body">
+
+        <div class="sdc-site-header-simple__cell sdc-site-header-simple__nav-item">
+
+        </div>
+
+        <div class="sdc-site-header-simple__cell sdc-site-header-simple__main">
+          <p class="sdc-site-header-simple__title"><a href="/" class="sdc-site-header-simple__title-link">
+              <span class="sdc-site-header-simple__logo"><img class="sdc-site-header-simple__logo-image" src="https://www.skysports.com/assets/sky-logo.png" alt="Scholarships"></span>
+              <span class="sdc-site-header-simple__title-text">Scholarships</span></a></p>
+        </div>
+
+        <div class="sdc-site-header-simple__cell sdc-site-header-simple__nav-item">
+
+        </div>
+
+    </div>
+  </div>
+</div>
+<br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

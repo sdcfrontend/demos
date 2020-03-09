@@ -1,18 +1,18 @@
 [
   {
     "title": "Countdown to the Royal Wedding",
-    "target-date": "May 26 2018 15:25",
+    "target-date": "May 26 2020 15:25",
     "modifier": "royal-wedding"
   },
   {
     "title": "Countdown to the Royal Wedding",
-    "target-date": "May 26 2018 15:25",
+    "target-date": "May 26 2020 15:25",
     "modifier": "royal-wedding",
     "logo": "http://10.23.192.246:8080/assets/royal-wedding/countdown-logo.png",
     "show-seconds": true
   },
   {
-    "target-date": "May 26 2018 15:25",
+    "target-date": "May 26 2020 15:25",
     "modifier": "royal-wedding",
     "logo": "http://10.23.192.246:8088/assets/world-cup/wc-logo.png"
   }

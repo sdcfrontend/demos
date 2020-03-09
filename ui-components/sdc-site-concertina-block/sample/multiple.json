@@ -1,0 +1,177 @@
+[
+  {
+    "id": "block-1",
+    "title": "Vital Stats",
+    "footer-links": [
+      {
+        "title": "All hot jockeys",
+        "link": "#"
+      }
+    ],
+    "open": true,
+    "disable-toggle": false,
+    "content-data": {
+      "form": false,
+      "stats": true,
+      "period": [
+        {
+          "entries": [
+            {
+              "time": "Lifetime (Flat)",
+              "details": []
+            },
+            {
+              "time": "Lifetime (Jump)",
+              "details": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "block-1",
+    "title": "Future Entries",
+    "footer-links": [
+      {
+        "title": "All hot jockeys",
+        "link": "#"
+      }
+    ],
+    "open": false,
+    "disable-toggle": false,
+    "content-data": {
+      "form": false,
+      "stats": true,
+      "period": [
+        {
+          "entries": [
+            {
+              "time": "16:25 30th Apr 19",
+              "details": [
+                {
+                  "label": "Course",
+                  "value": "Brighton"
+                },
+                {
+                  "label": "Distance",
+                  "value": "6f 210y"
+                },
+                {
+                  "label": "Class",
+                  "value": "5"
+                },
+                {
+                  "label": "Jockey",
+                  "value": "S W Kelly"
+                },
+                {
+                  "label": "Trainer",
+                  "value": "Miss Gay Kelleway"
+                }
+              ]
+            },
+            {
+              "time": "16:25 30th Apr 19",
+              "details": [
+                {
+                  "label": "Course",
+                  "value": "Brighton"
+                },
+                {
+                  "label": "Distance",
+                  "value": "6f 210y"
+                },
+                {
+                  "label": "Class",
+                  "value": "5"
+                },
+                {
+                  "label": "Jockey",
+                  "value": "S W Kelly"
+                },
+                {
+                  "label": "Trainer",
+                  "value": "Miss Gay Kelleway"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "content-data2": {
+      "headings": [
+        {
+          "longName": "Selection",
+          "sort": true
+        },
+        {
+          "longName": "Race",
+          "sort": true,
+          "sort-up": true
+        },
+        {
+          "longName": "Tipster",
+          "sort": true
+        },
+        {
+          "longName": "W",
+          "sort": true
+        },
+        {
+          "longName": "L",
+          "sort": true
+        },
+        {
+          "longName": "£1 Stake",
+          "sort": true
+        },
+        {
+          "longName": "Sky Bet",
+          "sort": true
+        }
+      ],
+      "align": [
+        "left",
+        "left",
+        "left"
+      ],
+      "rows": [
+        {
+          "cells": [
+            "Timassini (IRE)",
+            "14:00 Hunt",
+            "<strong>Western Morning News</strong><br>West Tip",
+            "0",
+            "6",
+            "-34.58",
+            "4/1"
+          ]
+        },
+        {
+          "cells": [
+            "Snookered (IRE)",
+            "14:20 Hunt",
+            "<strong>Sheffield Star</strong><br>Fortunatus",
+            "1",
+            "8",
+            "+24.56",
+            "4/6"
+          ]
+        },
+        {
+          "cells": [
+            "Bonne Question (FR)",
+            "14:30 Hunt",
+            "<strong>attheraces.com</strong><br>Lawrence Taylor",
+            "0",
+            "1",
+            "+10.94",
+            "Evs"
+          ]
+        }
+      ]
+    }
+  }
+]

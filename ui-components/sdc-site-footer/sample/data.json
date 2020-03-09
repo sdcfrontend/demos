@@ -1,0 +1,154 @@
+{
+  "groups": [
+    {
+      "header": "Beliebte Links",
+      "items": [
+        {
+          "label": "Bundesliga",
+          "link": "/bundesliga"
+        },
+        {
+          "label": "2. Bundesliga",
+          "link": "/2bundesliga"
+        },
+        {
+          "label": "DFB Pokal",
+          "link": "/dfb-pokal"
+        },
+        {
+          "label": "Formel 1",
+          "link": "/formel1"
+        },
+        {
+          "label": "Tennis",
+          "link": "/tennis"
+        },
+        {
+          "label": "Champions League",
+          "link": "/champions-league"
+        },
+        {
+          "label": "Europa League",
+          "link": "/europa-league"
+        },
+        {
+          "label": "Handball",
+          "link": "/handball"
+        },
+        {
+          "label": "Alle Sportarten",
+          "link": "/alle-sport"
+        }
+      ]
+    },
+    {
+      "header": "Mehr von Sky",
+      "items": [
+        {
+          "label": "Sky bestellen",
+          "link": "http://www.sky.de/bestellung/aktuelle-angebote-2629?wkz=WHPS18",
+          "external": true
+        },
+        {
+          "label": "Sky Go",
+          "link": "http://www.skygo.sky.de/",
+          "external": true
+        },
+        {
+          "label": "Sky Ticket",
+          "link": "https://skyticket.sky.de/?wkz=WHPS18T",
+          "external": true
+        },
+        {
+          "label": "Sky.de",
+          "link": "http://www.sky.de/home",
+          "external": true
+        },
+        {
+          "label": "6er Pack",
+          "link": "https://6erpack.sky.de/",
+          "external": true
+        },
+        {
+          "label": "Sky Finder",
+          "link": "http://business.sky.at/sbs/cms/de/skyfinder-start.jsp",
+          "external": true
+        },
+        {
+          "label": "Trikot-Shop",
+          "link": "https://www.sky-trikots.de/",
+          "external": true
+        },
+        {
+          "label": "Skysports.com",
+          "link": "http://www.skysports.com/",
+          "external": true
+        },
+        {
+          "label": "Sky Media",
+          "link": "http://www.skymedia.de/advert/cms/de/index.jsp",
+          "external": true
+        },
+        {
+          "label": "Sky.at",
+          "link": "http://www.sky.at/",
+          "external": true
+        }
+      ]
+    }
+  ],
+  "social": [
+    {
+      "label": "Facebook",
+      "link": "https://facebook.com/SkySportDE",
+      "external": true
+    },
+    {
+      "label": "Twitter",
+      "link": "https://twitter.com/SkySportNewsHD",
+      "external": true
+    },
+    {
+      "label": "WhatsApp",
+      "link": "#"
+    },
+    {
+      "label": "YouTube",
+      "link": "https://www.youtube.com/user/SkySportHD",
+      "external": true
+    },
+    {
+      "label": "Instagram",
+      "link": "https://www.instagram.com/skysporthd/",
+      "external": true
+    }
+  ],
+  "supplemental": [
+    {
+      "label": "Impressum",
+      "link": "#"
+    },
+    {
+      "label": "AGB",
+      "link": "#"
+    },
+    {
+      "label": "Datenschutz & Cookies",
+      "link": "#"
+    },
+    {
+      "label": "Nutzungsbedingungen",
+      "link": "#"
+    },
+    {
+      "label": "Kontakt",
+      "link": "#"
+    }
+  ],
+  "logo": {
+    "url": "https://sport.sky.de/assets/skysport.svg",
+    "alt": "Skysport.de logo",
+    "link": "/"
+  },
+  "copyright": "&copy; 2016 Sky Sport"
+}

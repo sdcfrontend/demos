@@ -1,0 +1,22 @@
+{
+  "demo": true,
+  "items": [
+    {
+      "label": "All runs",
+      "filter": "all",
+      "selected": true
+    },
+    {
+      "label": "Wins only",
+      "filter": "win"
+    },
+    {
+      "label": "Wins &amp; places",
+      "filter": "win place"
+    },
+    {
+      "label": "After 60-day break",
+      "filter": "after-60"
+    }
+  ]
+}

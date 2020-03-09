@@ -11,7 +11,7 @@
     item.onclick = function(ev){
 
       ev.preventDefault();
-
+      window.scrollTo(0, 0);
       links.forEach(function(item){
         item.classList.remove('on');
       });

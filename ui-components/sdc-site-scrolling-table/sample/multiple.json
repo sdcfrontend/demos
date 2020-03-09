@@ -1,0 +1,281 @@
+[
+  {
+    "headings": [
+      {
+        "longName": "Selection",
+        "sort": true
+      },
+      {
+        "longName": "Race",
+        "sort": true,
+        "sort-up": true
+      },
+      {
+        "longName": "Tipster",
+        "sort": true
+      },
+      {
+        "longName": "W",
+        "sort": true
+      },
+      {
+        "longName": "L",
+        "sort": true
+      },
+      {
+        "longName": "£1 Stake",
+        "sort": true
+      },
+      {
+        "longName": "Sky Bet",
+        "sort": true
+      }
+    ],
+    "align": [
+      "left",
+      "left",
+      "left"
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "text": "Abracadabra (IRE)",
+            "link": "#"
+          },
+          {
+            "heading": "14:20",
+            "text": "Hunt",
+            "link": "#"
+          },
+          {
+            "heading": "Sheffield Star",
+            "text": "Fortunatus"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "8"
+          },
+          {
+            "text": "+24.56"
+          },
+          {
+            "text": "3/1",
+            "link": "#",
+            "betting": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "text": "Snookered (IRE)",
+            "link": "#"
+          },
+          {
+            "heading": "14:20",
+            "text": "Hunt",
+            "link": "#"
+          },
+          {
+            "heading": "Sheffield Star",
+            "text": "Fortunatus"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "8"
+          },
+          {
+            "text": "+24.56"
+          },
+          {
+            "text": "100/1",
+            "link": "#",
+            "betting": true
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "text": "Zeppelin (IRE)",
+            "link": "#"
+          },
+          {
+            "heading": "14:20",
+            "text": "Hunt",
+            "link": "#"
+          },
+          {
+            "heading": "Sheffield Star",
+            "text": "Fortunatus"
+          },
+          {
+            "text": "1"
+          },
+          {
+            "text": "8"
+          },
+          {
+            "text": "+24.56"
+          },
+          {
+            "text": "4/6",
+            "link": "#",
+            "betting": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modifier": "compact",
+    "headings": [
+      {
+        "longName": "Period"
+      },
+      {
+        "longName": "Runs"
+      },
+      {
+        "longName": "1st"
+      },
+      {
+        "longName": "2nd"
+      },
+      {
+        "longName": "3rd"
+      },
+      {
+        "longName": "Win%"
+      },
+      {
+        "longName": "£1 stake"
+      }
+    ],
+    "align": [
+      "left"
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "text": "Last 7 Days (Flat)"
+          },
+          {
+            "text": "14"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "0"
+          },
+          {
+            "text": "28.57%"
+          },
+          {
+            "text": "+£4.23"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "text": "Last 7 Days (Flat)"
+          },
+          {
+            "text": "14"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "0"
+          },
+          {
+            "text": "28.57%"
+          },
+          {
+            "text": "-£0.33"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "text": "Last 7 Days (Flat)"
+          },
+          {
+            "text": "14"
+          },
+          {
+            "text": "4"
+          },
+          {
+            "text": "2"
+          },
+          {
+            "text": "0"
+          },
+          {
+            "text": "28.57%"
+          },
+          {
+            "text": "-£3.45"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "modifier": "compact",
+    "headings": [
+      {
+        "longName": "Horse"
+      },
+      {
+        "longName": "Going"
+      }
+    ],
+    "align": [
+      "left",
+      "left"
+    ],
+    "sizing": [
+      "compact"
+    ],
+    "rows": [
+      {
+        "cells": [
+          {
+            "text": "<strong>Newcastle</strong>"
+          },
+          {
+            "text": "Good"
+          }
+        ]
+      },
+      {
+        "cells": [
+          {
+            "text": "<strong>Wolverhampton</strong>"
+          },
+          {
+            "text": "Firm"
+          }
+        ]
+      }
+    ]
+  }
+]
