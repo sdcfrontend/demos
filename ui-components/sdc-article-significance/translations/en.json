@@ -1,0 +1,19 @@
+{
+  "sdc-article-significance": {
+    "significance": {
+      "exclusive": "Exclusive",
+      "breaking": "Breaking",
+      "sponsored": "Sponsored",
+      "live": "Live",
+      "analysis": "Analysis",
+      "transfer": "Transfer",
+      "update": "Update",
+      "eyewitness": "Eyewitness",
+      "skybet": "Sky Bet",
+      "prominent": "Prominent",
+      "skyviews": "Sky Views",
+      "opinion": "Opinion",
+      "explainer": "Explainer"
+    }
+  }
+}

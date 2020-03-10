@@ -1,0 +1,23 @@
+{
+  "sdc-site-match-stats": {
+    "away": "Away",
+    "home": "Home"
+  },
+  "possession_percentage": "Possession %",
+  "total_shots": "Total Shots",
+  "ontarget_scoring_att": "On Target",
+  "shot_off_target": "Off Target",
+  "blocked_scoring_att": "Blocked",
+  "passing_percentage": "Passing %",
+  "big_chance_created": "Clear-Cut Chances",
+  "won_corners": "Corners",
+  "total_offside": "Offsides",
+  "tackles_percentage": "Tackles %",
+  "aerial_duels_percentage": "Aerial Duels %",
+  "saves": "Saves",
+  "fk_foul_lost": "Fouls Committed",
+  "fk_foul_won": "Fouls Won",
+  "total_yel_card": "Yellow Cards",
+  "total_red_card": "Red Cards",
+  "vs": "vs"
+}

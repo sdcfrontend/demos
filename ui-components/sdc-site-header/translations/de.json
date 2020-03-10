@@ -1,0 +1,12 @@
+{
+  "sdc-site-header": {
+    "newWindow": "In neuem Fenster öffnen",
+    "menuText": "Menü",
+    "menuOpenText": "Menü öffnen",
+    "menuCloseText": "Menü schließen",
+    "loginText": "Login",
+    "loggedInText": "Hallo #{name}",
+    "logoutText": "Logout",
+    "skipToContent": "Zum Inhalte wechseln"
+  }
+}

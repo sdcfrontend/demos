@@ -1,0 +1,149 @@
+{
+  "teams": [
+    {
+      "name": "Brighton",
+      "results": [
+        {
+          "date": "2015-05-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 8,
+            "away": 1
+          },
+          "opponent": "Borussia Monchengladbach",
+          "side": {
+            "home": false
+          },
+          "outcome": "lose",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-11",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "opponent": "Other team",
+          "side": {
+            "home": false
+          },
+          "outcome": "win",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-11",
+          "competition": "American MLS League",
+          "score": {
+            "home": 2,
+            "away": 1
+          },
+          "opponent": "Other team",
+          "side": {
+            "home": true
+          },
+          "outcome": "win",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-11",
+          "competition": "American MLS League",
+          "score": {
+            "home": 3,
+            "away": 1
+          },
+          "opponent": "Other team",
+          "side": {
+            "home": false
+          },
+          "outcome": "win",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-11",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "opponent": "Other team",
+          "side": {
+            "home": false
+          },
+          "outcome": "win",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        }
+      ]
+    },{
+      "name": "Team Name 2",
+      "results": [
+        {
+          "date": "2015-05-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "opponent": "Other team",
+          "outcome": "draw",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-11",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "opponent": "Other team",
+          "outcome": "draw",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "opponent": "Other team",
+          "outcome": "draw",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 0
+          },
+          "opponent": "Other team",
+          "outcome": "draw",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "opponent": "Other team",
+          "outcome": "lose",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        },
+        {
+          "date": "2015-06-12",
+          "competition": "American MLS League",
+          "score": {
+            "home": 1,
+            "away": 0
+          },
+          "opponent": "Other team",
+          "outcome": "win",
+          "url": "http://uat-1.skysports.com/football/man-city-vs-stoke-city/form/344190"
+        }
+      ]
+    }
+  ]
+}

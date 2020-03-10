@@ -1,0 +1,18 @@
+{
+  "sdc-article-significance": {
+    "significance": {
+      "exclusive": "Exklusiv",
+      "breaking": "Breaking",
+      "sponsored": "Anzeige",
+      "live": "Live",
+      "analysis": "Analyse",
+      "transfer": "Transfer",
+      "update": "Update",
+      "eyewitness": "Augenzeuge",
+      "skybet": "Sky Bet",
+      "prominent": "Prominent",
+      "skyviews": "Sky Views",
+      "opinion": "Meinung"
+    }
+  }
+}

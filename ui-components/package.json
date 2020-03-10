@@ -51,6 +51,7 @@
     "sdc-site-header": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-header.git",
     "sdc-site-header-simple": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-header-simple.git",
     "sdc-site-hero": "git+https://git.bskyb.com/sky-components/sdc-site-hero.git",
+    "sdc-site-last-games": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-last-games.git",
     "sdc-site-layout": "git+https://git.bskyb.com/sky-components/sdc-site-layout.git",
     "sdc-site-localnav": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-localnav.git",
     "sdc-site-match-stats": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-match-stats.git",

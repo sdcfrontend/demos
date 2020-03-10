@@ -1,0 +1,8 @@
+{
+  "sdc-site-countdown-timer": {
+    "days": "Tag(e)",
+    "hours": "Std.",
+    "minutes": "Min.",
+    "seconds": "Sek."
+  }
+}

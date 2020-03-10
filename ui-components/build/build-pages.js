@@ -102,6 +102,12 @@ function buildsection(name, gitlink) {
     fse.copySync(path.resolve(ROOT, 'node_modules', name, 'assets'), path.resolve(ROOT, name, 'assets'));
   } catch (error) {}
 
+  try {
+    fse.copySync(path.resolve(ROOT, 'node_modules', name, 'translations'), path.resolve(ROOT, name, 'translations'));
+  } catch (error) {
+    
+  }
+
 }
 
 

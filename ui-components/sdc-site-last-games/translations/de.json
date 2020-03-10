@@ -1,0 +1,11 @@
+{
+  "sdc-site-last-games": {
+    "away": "a",
+    "home": "h",
+    "win": "s",
+    "lose": "n",
+    "draw": "u",
+    "vs": "vs.",
+    "nogames": "Heute keine Spiele."
+  }
+}

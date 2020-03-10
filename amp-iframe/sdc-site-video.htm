@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-site-video</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+ 
+    <div class="wrap">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.js"></script>
+
+<div class="sdc-site-video callfn" data-fn="sdc-site-video"
+  data-component-name="sdc-site-video" data-lite="true" data-id="bc_2" data-video-id="6079741848001"
+  data-account-id="6057994456001" data-provider="brightcove" data-originator-id="rJtrO8EKW"
+  data-sdc-video-id="12345" data-sensitive="no" data-player-id="default"
+  data-autoplay="" data-state="not-ready">
+
+  <div class="sdc-site-video__inner">
+
+    <div class="sdc-site-video__content">
+      <span aria-hidden="true" data-role="poster" class="sdc-site-video__poster"
+        style="background-image: url(http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145)" >
+        <span class="sdc-site-video__loader"></span>
+        <span class="sdc-site-video__time">12:23</span>
+      </span>
+      <video id="bc_2" data-video-id="6079741848001" data-account="6057994456001"
+        data-player="default" data-embed="default" data-application-id
+        class="video-js sdc-site-video__tag" controls></video>
+    </div>
+
+    <figcaption class="sdc-site-video__caption">
+      <span class="sdc-site-video__visually-hidden">Video</span> 
+      <span class="sdc-site-video__caption-text" data-role="caption-text">Here is a video caption for this video</span>
+    </figcaption>
+
+  </div>
+
+</div>
+
+
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+    </script>
+  </body>
+
+</html>

@@ -19,7 +19,7 @@ body {
   background: var(--shade-1) !important;
   /* padding-top: calc(var(--group-margin) * 1.5 + var(--group-margin)) !important; */
   padding: 0 !important;
-  min-height: 10px !important;
+  min-height: 100vh !important;
   max-width: 100% !important;
   width: 100% !important;
 }

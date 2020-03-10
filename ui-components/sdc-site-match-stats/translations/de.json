@@ -1,0 +1,23 @@
+{
+  "sdc-site-match-stats": {
+    "away": "Away",
+    "home": "Home"
+  },
+  "possession_percentage": "Ballbesitz in %",
+  "total_shots": "Torschüsse",
+  "ontarget_scoring_att": "Torschüsse (auf das Tor)",
+  "shot_off_target": "Versuche am Tor vorbei",
+  "blocked_scoring_att": "Abgeblockte Schüsse",
+  "passing_percentage": "Passquote in %",
+  "big_chance_created": "Großchancen",
+  "won_corners": "Ecken",
+  "total_offside": "Abseits",
+  "tackles_percentage": "Erfolgreiche Zweikämpfe in %",
+  "aerial_duels_percentage": "Kopfballduelle in %",
+  "saves": "Gehaltene Bälle",
+  "fk_foul_lost": "Begangene Fouls",
+  "fk_foul_won": "Erlittene Fouls",
+  "total_yel_card": "Gelbe Karten",
+  "total_red_card": "Rote Karten",
+  "vs": "vs"
+}
