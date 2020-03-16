@@ -25,6 +25,7 @@
   /* ui states */
   --success: #299934; /* success messages */
   --alert: #EA021A; /* alerts and warnings */
+  --live: #EA021A; /* live scores and coverage */
   --breaking: #FFE000; /* breaking news components */
   --link-color: #3157A1; /* global text link color */
   
