@@ -6,21 +6,20 @@
   "videoId": "6129772790001",
   "playerId": "OqdPJBXJ",
   "accountId": "6058004219001",
+  "caption": "Here is a video caption for this video",
+  "captionPrefix": "Video",
   "poster": {
-    "imgsrc": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+    "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+    "sizes": ["768x432", "1600x900"]
   },
-  "sdcVideoId": "12345",
-  "sensitive": "no",
+  "aspectRatio": "16/9",
+  "iframeUrl": "https://sdcfrontend.github.io/demos/amp-iframe/",
+  "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
+  "sensitive": false,
+  "autoplay": false,
   "entitlement": {
     "restricted": true,
     "message": "You are not a customer of mine"
   },
-  "assets": {
-    "css": {},
-    "js": {}
-  },
-  "consentString": "I consent",
-  "providerConfig": {},
-  "skin": {},
-  "assetOverride": {}
+  "consentString": "I consent"
 }

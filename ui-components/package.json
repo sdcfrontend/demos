@@ -46,11 +46,14 @@
     "sdc-site-concertina-block": "git+https://git.bskyb.com/sky-components/sdc-site-concertina-block.git",
     "sdc-site-cookie-notice": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-cookie-notice.git",
     "sdc-site-countdown-timer": "git+https://git.bskyb.com/sky-components/sdc-site-countdown-timer.git",
+    "sdc-site-error-page": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-error-page.git",
+    "sdc-site-feature-tile": "git+https://git.bskyb.com/sky-components/sdc-site-feature-tile.git",
     "sdc-site-filter-nav": "git+https://git.bskyb.com/sky-components/sdc-site-filter-nav.git",
     "sdc-site-footer": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-footer.git",
     "sdc-site-header": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-header.git",
     "sdc-site-header-simple": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-header-simple.git",
     "sdc-site-hero": "git+https://git.bskyb.com/sky-components/sdc-site-hero.git",
+    "sdc-site-information-list": "git+https://git.bskyb.com/sky-components/sdc-site-information-list",
     "sdc-site-last-games": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-last-games.git",
     "sdc-site-layout": "git+https://git.bskyb.com/sky-components/sdc-site-layout.git",
     "sdc-site-localnav": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-localnav.git",
@@ -61,7 +64,7 @@
     "sdc-site-table": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-table.git",
     "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git",
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
-    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#sdc-skin"
+    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git#VIDEO-13-explore-adding-translations"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",

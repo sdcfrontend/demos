@@ -1,0 +1,22 @@
+{
+  "title": "Sorry, we could not find the page you were looking for ",
+  "text": [
+    "Make sure the URL in the address bar contains no capital letters or spaces and please check your bookmarks.",
+    "If that doesn't work then try something else!"
+  ],
+  "relatedLinks-title": "Popular Links",
+  "relatedLinks":[
+    {
+    "label": "Sky Sports Home",
+     "link": "http://www.skysports.com/"
+   },
+  {
+    "label": "Sky Sports Football",
+     "link": "http://www.skysports.com/football"
+   },
+  {
+    "label": "Sky Sports Score Centre",
+     "link": "http://www.skysports.com/live-scores"
+   }
+  ]
+}

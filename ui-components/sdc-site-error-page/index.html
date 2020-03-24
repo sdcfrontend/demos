@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-site-error-page</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-site-error-page</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-site-error-page.git">https://git.bskyb.com/sky-components/blackjack-sdc-site-error-page.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-site-error-page">
+  <div class="sdc-site-error-page__inner">
+    <div class="sdc-site-error-page__body">
+      <h1 class="sdc-site-error-page__title">Sorry, we could not find the page you were looking for </h1>
+      <div class="sdc-site-error-page__body">
+        <p class="sdc-site-error-page__text">Make sure the URL in the address bar contains no capital letters or spaces and please check your bookmarks.</p><p class="sdc-site-error-page__text">If that doesn&#x27;t work then try something else!</p>
+      </div>
+      <h2 class="sdc-site-error-page__link-text">Popular Links</h2>
+          <ul class="sdc-site-error-page__link-list">
+              <li class="sdc-site-error-page__link-list-item">
+                <a href="http://www.skysports.com/" class="sdc-site-error-page__link-list-item">Sky Sports Home</a>
+              </li>
+              <li class="sdc-site-error-page__link-list-item">
+                <a href="http://www.skysports.com/football" class="sdc-site-error-page__link-list-item">Sky Sports Football</a>
+              </li>
+              <li class="sdc-site-error-page__link-list-item">
+                <a href="http://www.skysports.com/live-scores" class="sdc-site-error-page__link-list-item">Sky Sports Score Centre</a>
+              </li>
+          </ul>
+
+    </div>
+  </div>
+</div><br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

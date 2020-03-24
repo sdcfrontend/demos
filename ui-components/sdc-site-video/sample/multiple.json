@@ -3,56 +3,70 @@
     "dev": true,
     "provider": "brightcove",
     "originatorId": "rJtrO8EKW",
-    "id": "bc_2",
+    "id": "bc_1",
     "playerId": "default",
     "videoId": "6079741848001",
     "accountId": "6057994456001",
     "caption": "Here is a video caption for this video",
     "captionPrefix": "Video",
     "poster": {
-      "imgsrc": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+      "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+      "sizes": ["768x432", "1600x900"]
     },
-    "sdcVideoId": "12345",
+    "aspectRatio": "16/9",
+    "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
     "duration": "12:23",
-    "sensitive": "no",
+    "sensitive": false,
     "entitlement": {
       "restricted": true,
       "message": "You are not a customer of mine"
     },
-    "assets": {
-      "css": {},
-      "js": {}
-    },
-    "consentString": "I consent",
-    "providerConfig": {},
-    "skin": {},
-    "assetOverride": {}
+    "consentString": "I consent"
   },
   {
     "dev": true,
     "provider": "brightcove",
     "originatorId": "rJtrO8EKW",
-    "id": "bc_1",
-    "videoId": "6129772790001",
+    "id": "bc_2",
     "playerId": "OqdPJBXJ",
+    "videoId": "6133830285001",
     "accountId": "6058004219001",
+    "caption": "Here is a video caption for this video",
+    "captionPrefix": "Video",
     "poster": {
-      "imgsrc": "http://e3.365dm.com/17/09/768x432/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145"
+      "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+      "sizes": ["600x600", "1200x1200"]
     },
-    "sdcVideoId": "12345",
-    "sensitive": "no",
-    "autoplay": true,
+    "aspectRatio": "1/1",
+    "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
+    "duration": "12:23",
+    "sensitive": false,
     "entitlement": {
       "restricted": true,
       "message": "You are not a customer of mine"
     },
-    "assets": {
-      "css": {},
-      "js": {}
+    "consentString": "I consent"
+  },
+  {
+    "dev": true,
+    "provider": "brightcove",
+    "originatorId": "rJtrO8EKW",
+    "id": "bc_3",
+    "videoId": "6129772790001",
+    "playerId": "OqdPJBXJ",
+    "accountId": "6058004219001",
+    "poster": {
+      "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+      "sizes": ["768x432", "1600x900"]
     },
-    "consentString": "I consent",
-    "providerConfig": {},
-    "skin": {},
-    "assetOverride": {}
+    "aspectRatio": "16/9",
+    "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
+    "sensitive": false,
+    "autoplay": false,
+    "entitlement": {
+      "restricted": true,
+      "message": "You are not a customer of mine"
+    },
+    "consentString": "I consent"
   }
 ]

@@ -1,0 +1,12 @@
+{
+  "indexTitle": "This is an index title",
+  "snippet": "This is a short snippet text for the feature",
+  "listingImage": {
+    "caption": "",
+    "alt": "An image of a thing",
+    "src": "https://e3.365dm.com/18/03/750x563/skynews-uk-snow-winter-weather_4244652.jpg?20180302113619",
+    "template": "https://e3.365dm.com/18/03/{width}x{height}/skynews-uk-snow-winter-weather_4244652.jpg?20180314150312"
+  },
+  "link": "/link" 
+}
+
