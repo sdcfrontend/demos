@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/min/site-core.css">
+    <style>
+    .long {
+      height: 600px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="blackjack-sdc-site-tiles blackjack-sdc-site-tiles--alt6">
+        <div class="blackjack-sdc-site-tiles__inner">
+          <div class="blackjack-sdc-site-tiles__group">
+            #{componentHTML}
+            #{componentHTML}
+            <div style="background: hotpink; width: 300px; height: 250px;" class="blackjack-sdc-site-au blackjack-sdc-site-tiles__item" data-ad-format="mpu-1" data-type=""><div class="blackjack-sdc-site-au__mpu-1" data-role="ad-container"></div></div>
+          </div>
+        </div>
+    </div>
+
+
+  <button>toggle height</button>
+  <script>
+    var l = document.querySelector('.blackjack-sdc-site-live-on-sky');
+    var b = document.querySelector('button');
+    b.onclick = function(){
+      l.classList.toggle('long');
+    }
+  </script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+  <script>
+    requirejs.config({
+      "paths": {
+        "#{componentName}": "script"
+      }
+    });
+  </script>
+  <script src="/js/min/site-main.js"></script>
+  <script>
+    requirejs(['site-main'], function(site){
+      site.init();
+    })
+  </script> -->
+
+  </body>
+</html>

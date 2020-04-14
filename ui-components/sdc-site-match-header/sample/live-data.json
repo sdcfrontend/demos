@@ -1,0 +1,98 @@
+{
+	"football": [
+		{
+			"id": 365489,
+			"competition": {
+				"id": 233,
+				"name": {
+					"full": "UEFA Champions League Qualifying",
+					"short": "Champions League Qualifying",
+					"code": "UCLQ"
+				}
+			},
+			"round": {
+				"id": 501,
+				"name": {
+					"full": "Third Round",
+					"short": "3rd Rnd"
+				}
+			},
+			"status": 1,
+			"start": {
+				"timestamp": 1470162600000
+			},
+			"referee": {
+				"name": {
+					"forename": "Luca",
+					"surname": "Banti"
+				}
+			},
+			"teams": {
+				"home": {
+					"id": 1699,
+					"name": {
+						"full": "Crvena Zvezda",
+						"short": "Crvena Zvezda",
+						"panel": ""
+					},
+					"score": 2,
+					"synopsis": "E O'Connell 17 og~M Longstaff 20~M Almirón 26~Joelinton 82~M Djenan 17~M Donald s/o 17~G Kanga s/o 45+3~L Ibanez 62 pen",
+					"aggregate": 4
+				},
+				"away": {
+					"id": 4197,
+					"name": {
+						"full": "Ludogorets",
+						"short": "Ludogorets",
+						"panel": "Ludogor"
+					},
+					"score": 4,
+					"synopsis": "J Barbosa 24~W Cristaldo Farias 40, 92, 97~I Plastun s/o 44~Pele 37, 68",
+					"aggregate": 6
+				}
+			},
+			"venue": {
+				"name": "Crvena Zvezda Stadium"
+			},
+			"betting": {
+				"active": true,
+				"count": 61,
+				"markets": [
+					{
+						"active": true,
+						"order": 1,
+						"id": 40065238,
+						"selections": [
+							{
+								"description": "Cardiff",
+								"contentId": 202,
+								"price": "2/1",
+								"id": 161522577,
+								"active": true,
+								"order": 1
+							},
+							{
+								"active": true,
+								"price": "9/2",
+								"order": 2,
+								"id": 161522578,
+								"description": "Draw"
+							},
+							{
+								"description": "Reading",
+								"contentId": 216,
+								"price": "11/1",
+								"id": 161522579,
+								"active": true,
+								"order": 3
+							}
+						],
+						"description": "Full Time Result"
+					}
+				],
+				"id": 17193372,
+				"description": "Cardiff v Reading"
+			}
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+  "football":[
+    {
+      "status":1,
+      "id":12345,
+      "teams":{
+        "home":{
+          "aggregate":1,
+          "score":0
+        },
+        "away":{
+          "aggregate":2,
+          "score":0
+        }
+      }
+    }
+  ]
+}

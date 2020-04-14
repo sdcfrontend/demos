@@ -1,0 +1,933 @@
+{
+  "00-agg": {
+    "status": 0,
+    "aggregate": [1,1]
+  },
+  "00": {
+    "status": 0
+  },
+  "01": {
+    "status": 1,
+    "score": [1,0]
+  },
+  "02": {
+    "status": 2,
+    "score": [1,0],
+    "half_time": [1,0]
+  },
+  "03": {
+    "status": 3,
+    "score": [1,0],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"M Donald",
+      "events":[{
+        "time":"17'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    },
+    {
+      "player": "G Kanga",
+      "events": [
+        {
+          "time":"45+3'",
+          "eventId":5,
+          "eventType":"red-card",
+          "redCard": true
+        }
+      ]
+    },
+    {
+      "player": "L Ibanez",
+      "events": [{
+          "time":"62'",
+          "eventId":3,
+          "eventType":"penalty",
+          "penalty": true
+        }
+      ]
+    },
+    {
+      "player":"W Cristaldo Farias",
+      "events":[{
+        "time":"40'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"92'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"97'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "04": {
+    "status": 4,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "05": {
+    "status": 5,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "06": {
+    "status": 6,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "07": {
+    "status": 7,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "08": {
+    "status": 8,
+    "score": [2,2],
+    "half_time": [1,1],
+    "aggregate": [3,3],
+    "summary": "Bayern win 4-3 on penalties",
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "09": {
+    "status": 9,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "10": {
+    "status": 10,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "11": {
+    "status": 11,
+    "score": [2,2],
+    "half_time": [1,1],
+    "aggregate": [3,3],
+    "summary": "Bayern win 4-3 on penalties",
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "12": {
+    "status": 12,
+    "score": [2,2],
+    "half_time": [1,1],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "13": {
+    "status": 13,
+    "score": [2,2],
+    "half_time": [1,1],
+    "summary": "Match postponed due to bear on pitch",
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "14": {
+    "status": 14,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "15": {
+    "status": 15,
+    "score": [1,1],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "16": {
+    "status": 16,
+    "score": [2,2],
+    "half_time": [1,1],
+    "summary": "Match cancelled as world ended",
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "17": {
+    "status": 17,
+    "score": [2,2],
+    "half_time": [1,1],
+    "summary": "Match abandoned as world ended",
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "18": {
+    "status": 18,
+    "score": [1,1],
+    "half_time": [1,0],
+    "aggregate": [2,2],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "21": {
+    "status": 21,
+    "score": [1,1],
+    "half_time": [1,0],
+    "aggregate": [2,2],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "30": {
+    "status": 0
+  },
+  "40": {
+    "status": 40,
+    "score": [1,0],
+    "half_time": [1,0],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  },
+  "50": {
+    "status": 50,
+    "score": [1,1],
+    "half_time": [1,0],
+    "aggregate": [2,2],
+    "synopsis": [{
+      "player":"G Cahill",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":3,
+        "eventType":"penalty",
+        "penalty": true
+      },
+      {
+        "time":"51'",
+        "eventId":4,
+        "eventType":"own-goal",
+        "ownGoal": true
+      },
+      {
+        "time":"56'",
+        "eventId":5,
+        "eventType":"red-card",
+        "redCard": true
+      }]
+    },
+    {
+      "player":"B Player",
+      "events":[{
+        "time":"18'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      },
+      {
+        "time":"29'",
+        "eventId":2,
+        "eventType":"goal",
+        "goal": true
+      }]
+    }]
+  }
+}

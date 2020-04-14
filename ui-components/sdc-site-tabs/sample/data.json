@@ -1,0 +1,33 @@
+{
+  "items": [
+    {
+      "label": "Overview",
+      "link": "http://skysport.de/overview"
+    },
+    {
+      "label": "Line-up",
+      "link": "http://skysport.de/overview",
+      "highlighted": true
+    },
+    {
+      "label": "Preview",
+      "link": "http://skysport.de/overview"
+    },
+    {
+      "label": "Live",
+      "link": "http://skysport.de/overview"
+    },
+    {
+      "label": "Report",
+      "link": "http://skysport.de/overview"
+    },
+    {
+      "label": "Table",
+      "link": "http://skysport.de/overview"
+    },
+    {
+      "label": "Video &amp; News",
+      "link": "http://skysport.de/overview"
+    }
+  ]
+}

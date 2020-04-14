@@ -1,0 +1,170 @@
+[
+  {
+    "optaConfig": {
+      "markup": null,
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin",
+      "v2": true
+    },
+    "widgetConfig": {
+      "sport": "tennis",
+      "widget": "seasonschedule",
+      "competition": "9767",
+      "season": "2017",
+      "live": "true",
+      "show_details": "true",
+      "date_layout": "one_col",
+      "hide_international": "false",
+      "order_by": "date_asc",
+      "template": "competition",
+      "match_link": "/tennis/kalender-ergebnisse/ergebnisse",
+      "pre_match": "false",
+      "narrow_limit": "400",
+      "date_from": "2017-06-19",
+      "opta_logo": "false"
+    }
+  },
+  {
+    "optaConfig": {
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin",
+      "v2": true
+    },
+    "widgetConfig": {
+      "sport": "tennis",
+      "widget": "livescores",
+      "competition": "9768",
+      "season": "2017",
+      "live": "true",
+      "show_time": "true",
+      "show_seed": "true",
+      "show_nationality": "true",
+      "show_score": "true",
+      "show_flag": "true",
+      "show_tie_break_scores": "false",
+      "show_server": "true",
+      "show_only": "",
+      "by_court": "true",
+      "order_by": "date_asc",
+      "opta_logo": "false"
+    }
+  },
+  {
+    "optaConfig": {
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin",
+      "v2": true
+    },
+    "widgetConfig": {
+      "sport": "tennis",
+      "widget": "rankings",
+      "template": "normal",
+      "competition": "1",
+      "season": "2017",
+      "show_nationality": "true",
+      "show_points": "true",
+      "show_flag": "true",
+      "opta_logo": "false"
+    }
+  },
+  {
+    "optaConfig": {
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin"
+    },
+    "widgetConfig": {
+      "sport": "football",
+      "widget": "squad",
+      "template": "normal",
+      "competition": "8",
+      "season": "2015",
+      "team": "1",
+      "navigation": "tabs_more",
+      "column_count": "1",
+      "show_position": "true",
+      "show_images": "false",
+      "show_country": "true",
+      "show_flags": "false",
+      "show_key": "false",
+      "show_goalkeepers": "true",
+      "show_defenders": "true",
+      "show_midfielders": "true",
+      "show_forwards": "true",
+      "show_managers": "true",
+      "show_goals": "false",
+      "show_caps": "false",
+      "order_by": "jersey",
+      "group_by_position": "false",
+      "default_nav": 1,
+      "team_naming": "full",
+      "player_naming": "full",
+      "show_logo": "true",
+      "title": "",
+      "show_title": "true",
+      "breakpoints": "400"
+    }
+  },
+  {
+    "optaConfig": {
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin"
+    },
+    "widgetConfig": {
+      "sport": "football",
+      "widget": "season_team_stats",
+      "template": "normal",
+      "competition": "8",
+      "season": "2016",
+      "team": "1",
+      "navigation": "tabs_more",
+      "default_nav": "1",
+      "show_general": true,
+      "show_distribution": true,
+      "show_attack": true,
+      "show_defence": true,
+      "show_discipline": true,
+      "team_naming": "full",
+      "show_logo": true,
+      "title": "",
+      "show_title": true,
+      "breakpoints": "400"
+    }
+  },
+  {
+    "optaConfig": {
+      "subscription_id": "ddc2ee3d445a17e68808e2ea20400463",
+      "language": "de_DE",
+      "timezone": "Europe/Berlin"
+    },
+    "widgetConfig": {
+      "sport": "football",
+      "widget": "player_ranking",
+      "template": "normal",
+      "competition": "8",
+      "season": "2015",
+      "team": "",
+      "navigation": "tabs_more",
+      "show_crests": false,
+      "show_images": false,
+      "show_ranks": true,
+      "show_appearances": true,
+      "visible_categories": "goals_conceded,passes,cards_yellow,cards_red,saves",
+      "limit": "10",
+      "hide_zeroes": true,
+      "show_team_names": true,
+      "team_naming": "full",
+      "player_naming": "full",
+      "team_link": "",
+      "player_link": "",
+      "show_logo": true,
+      "title": "",
+      "show_title": true,
+      "breakpoints": "400"
+    }
+  }
+]

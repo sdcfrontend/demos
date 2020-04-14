@@ -16,7 +16,7 @@
   "iframeUrl": "https://sdcfrontend.github.io/demos/amp-iframe/",
   "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
   "sensitive": false,
-  "autoplay": false,
+  "autoplay": true,
   "entitlement": {
     "restricted": true,
     "message": "You are not a customer of mine"

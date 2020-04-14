@@ -1,0 +1,135 @@
+{
+	"id": 353101,
+	"status": 1,
+	"pollUrl": null,
+	"start": {
+		"time": "17:00",
+		"date": "Saturday 17th November"
+	},
+	"competition": {
+		"id": 120,
+		"importance": 1,
+		"code": "EC",
+		"name": {
+			"full": "European Championships",
+			"short": "European Championships"
+		},
+		"round": {
+			"importance": 1,
+			"name": {
+				"full": "Semi-final",
+				"short": "Semi-final"
+			}
+		}
+	},
+	"teams": {
+		"home": {
+			"score": {
+				"current": 2,
+				"half_time": null,
+				"aggregate": null
+			},
+			"badge": "http://e0.365dm.com/football/badges/96/530.png",
+			"id": 530,
+			"name": {
+				"full": "Bayern Munich",
+				"short": "Bayern"
+			},
+			"synopsis": [{
+	      "player":"M Donald",
+	      "events":[{
+	        "time":"17'",
+		    "formatted_time": "17th minute'",
+	        "eventId":2,
+	        "eventType":"goal",
+	        "goal": true
+	    	}]
+			},
+			{
+				"player":"G Kanga",
+				"events": [{
+					"time": "45+3'",
+					"formatted_time": "48th minute'",
+					"eventId": 5,
+					"eventType": "red-card",
+					"redCard": true
+				}]
+			},
+			{
+				"player":"L Ibanex",
+				"events": [{
+					"time": "62'",
+					"formatted_time": "62nd minute'",
+					"eventId": 2,
+					"eventType": "penalty",
+					"penalty": true
+				}]
+			}]
+		},
+		"away": {
+			"score": {
+				"current": 4,
+				"half_time": null,
+				"aggregate": null
+			},
+			"badge": "http://e0.365dm.com/football/badges/96/934.png",
+			"id": 934,
+			"name": {
+				"full": "Bayer Leverkusen",
+				"short": "Leverkusen"
+			},
+			"synopsis": [
+				{
+					"player": "J Barbosa",
+					"events": [
+						{
+							"time": "24'",
+							"formatted_time": "24th minute'",
+							"eventId": 1,
+							"eventType": "goal",
+							"goal": true
+						}
+					]
+				},
+				{
+					"player": "W Cristaldo Farias",
+					"events": [
+						{
+							"time": "40'",
+							"formatted_time": "40th minute'",
+							"eventId": 1,
+							"eventType": "goal",
+							"goal": true
+						},
+						{
+							"time": "92'",
+							"formatted_time": "92nd minute'",
+							"eventId": 1,
+							"eventType": "goal",
+							"goal": true
+						},
+						{
+							"time": "97'",
+							"formatted_time": "97th minute'",
+							"eventId": 1,
+							"eventType": "goal",
+							"goal": true
+						}
+					]
+				},
+				{
+					"player": "I Plastun",
+					"events": [
+						{
+							"time": "40'",
+							"eventId": 5,
+							"eventType": "red-card",
+							"redCard": true
+						}
+					]
+				}
+			]
+		}
+	},
+	"summary": null
+}

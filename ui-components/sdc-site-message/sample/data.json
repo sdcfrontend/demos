@@ -1,0 +1,15 @@
+{
+  "header": "Sorry!",
+  "body": "There are no fixtures today",
+  "modifier": "box",
+  "links": [
+    {
+      "url": "www.skysports.com",
+      "text": "www.skysports.com"
+    },
+    {
+      "url": "www.skysports.com",
+      "text": "www.skysports.com"
+    }
+  ]
+}

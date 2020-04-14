@@ -1,0 +1,70 @@
+[
+  {
+    "id": "leaderboard",
+    "ad-type": "leaderboard",
+    "advertData": {
+      "id": "leaderboard",
+      "tag": "/20346936/skysports/homepage",
+      "size": {
+        "mobile": [[320, 50], [300, 50]],
+        "tablet": [[728, 90]],
+        "desktop": [[728, 90], [970, 250]]
+      }
+    },
+    "partial-class": "sdc-site-au--full-bleed",
+    "tag": "/20346936/skysports/homepage",
+    "targeting-strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+    "targeting-platform": "live",
+    "advert-targeting": {
+      "platform": "live",
+      "strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+      "Sport": "Football",
+      "Sig": "News Story"
+    }
+  },
+
+  {
+    "id": "mpu",
+    "ad-type": "mpu",
+    "advertData": {
+      "id": "mpu",
+      "tag": "/20346936/skysports/homepage",
+      "size": {
+        "mobile": [[300, 250]],
+        "tablet": [[300, 250]],
+        "desktop":[[300,250], [300, 600]]
+      }
+    },
+    "tag": "/20346936/skysports/homepage",
+    "targeting-strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+    "targeting-platform": "live",
+    "advert-targeting": {
+      "platform": "live",
+      "strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+      "Sport": "Football",
+      "Sig": "News Story"
+    }
+  },
+  {
+    "id": "sponsor-position",
+    "ad-type": "sponsor-position",
+    "advertData": {
+      "id": "sponsor-position",
+      "tag": "/20346936/skysports/football/english-championship/homepage",
+      "size": {
+        "mobile": [[88, 31]],
+        "tablet": [[88, 31]],
+        "desktop": [[120, 60]]
+      }
+    },
+    "tag": "/20346936/skysports/homepage",
+    "targeting-strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+    "targeting-platform": "live",
+    "advert-targeting": {
+      "platform": "live",
+      "strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+      "Sport": "Football",
+      "Sig": "News Story"
+    }
+  }
+]

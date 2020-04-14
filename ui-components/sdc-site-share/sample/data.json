@@ -1,0 +1,33 @@
+{
+  "title": "Other providers",
+  "snippet": "Sky Sports is available on Virgin Media, Talk Talk and BT. Please consult your provider for more information",
+  "links": [
+    {
+      "iconName": "twitter",
+      "icon": "icons/twitter.svg",
+      "url": "https://twitter.com/intent/tweet?url=http://skysports.de&amp;text=pagetext",
+      "title": "Share this page on twitter",
+      "external": true
+    },
+    {
+      "iconName": "facebook",
+      "icon": "icons/facebook.svg",
+      "url": "https://www.facebook.com/sharer/sharer.php?u=http://skysports.de",
+      "title": "Share this page on facebook",
+      "external": true
+    },
+    {
+      "iconName": "whatsapp",
+      "icon": "icons/whatsapp.svg",
+      "url": "whatsapp://send?text=whatsapptext - http://skysports.de",
+      "title": "Share this page on whatsapp",
+      "mobileOnly": true
+    },
+    {
+      "iconName": "email",
+      "icon": "icons/email.svg",
+      "url": "mailto:?subject=emailtitle&amp;body=emailtext - http://www.skysports.de",
+      "title": "Share this page by email"
+    }
+  ]
+}

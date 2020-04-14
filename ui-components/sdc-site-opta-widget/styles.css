@@ -1,0 +1,1102 @@
+/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/sdc-site-opta-widget.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+@media all and (max-width: 939px) {
+  .site-wrap-basic {
+    width: 100%;
+    max-width: var(--site-width-inner);
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+.site-wrap, .sdc-site-opta-widget:not(.sdc-article-widget), .sdc-site-opta-widget {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-wrap-padding, .section-wrap__article-column, .sdc-site-opta-widget:not(.sdc-article-widget) {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter); }
+
+.site-indent[class] {
+  padding-left: var(--component-padding);
+  padding-right: var(--component-padding); }
+
+.site-component-vertical-margin, .sdc-site-opta-widget:not(.sdc-article-widget) {
+  margin-bottom: var(--component-margin); }
+
+.site-component-vertical-margin-negative {
+  margin-top: calc(var(--component-margin) * -1); }
+
+.site-component-vertical-margin-l {
+  margin-bottom: var(--group-margin); }
+
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap); }
+
+.section-wrap {
+  background: white; }
+  .section-wrap > .site-component-vertical-margin:last-child, .section-wrap > .sdc-site-opta-widget:last-child:not(.sdc-article-widget) {
+    margin-bottom: 0;
+    padding-bottom: var(--component-margin); }
+
+.section-wrap--padding {
+  padding: var(--component-margin) 0; }
+
+.section-wrap--shade {
+  padding: var(--group-margin) 0; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (max-width: 480px) {
+  .site-wrap--mobile-edge, .sdc-site-opta-widget:not(.sdc-article-widget) {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner, .sdc-site-tiles__inner.sdc-site-opta-widget {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+.glints-box, .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class],
+.sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class] {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before, .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class]:before,
+.sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class]:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+.glints-wings {
+  transform-style: preserve-3d;
+  position: relative;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 0;
+  border-bottom: 0;
+  background-clip: padding-box;
+  box-shadow: none;
+  box-shadow: 4px 0 2px rgba(0, 0, 0, 0.1), -4px 0 2px rgba(0, 0, 0, 0.1); }
+
+@supports (transform-style: preserve-3d) {
+  .glints-wings:before {
+    background: rgba(255, 255, 255, 0.15); } }
+
+.glints-wings:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: calc(100%);
+  left: -12px;
+  width: calc(100% + 24px);
+  transform: translateZ(-1px);
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.47) 9%, rgba(255, 255, 255, 0.57) 26%, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 0.15)) 1;
+  border-right: 1px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px solid;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+.glints-wings:after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: calc(100% + 24px);
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(166deg, rgba(255, 255, 255, 0.09) 45%, rgba(255, 255, 255, 0) 45%);
+  background-size: 5px 100%, 5px 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) 0, 7px 0, 0 0; }
+
+.glints-wings > * {
+  transform: translateZ(1px); }
+
+.glints-wings--right {
+  border-left: 0; }
+
+.glints-wings--right:before {
+  left: 0;
+  width: calc(100% + 12px); }
+
+.glints-wings--right:after {
+  left: 0;
+  width: calc(100% + 12px);
+  background-size: 5px 100%, 0 0, 100%; }
+
+.glints-box-padding, .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class],
+.sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class] {
+  padding: var(--component-padding); }
+
+@media all and (max-width: 480px) {
+  .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class],
+  .sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class] {
+    border: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    background-image: none; }
+  .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class]:after,
+  .sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class]:after,
+  .sdc-site-opta-widget:not(.sdc-article-widget) .Opta[class]:before,
+  .sdc-site-opta-widget:not(.sdc-article-widget) .opta-widget-container[class]:before {
+    content: none; }
+  .glints-wings {
+    border-left-width: 8px;
+    border-right-width: 8px; }
+  .glints-wings:before {
+    left: -8px;
+    width: calc(100% + 16px); }
+  .glints-wings:after {
+    left: -8px;
+    width: calc(100% + 16px);
+    background-position: calc(100% - 4px) 0, 4px 0, 0 0; }
+  .glints-wings--right:before {
+    left: 0;
+    width: calc(100% + 8px); }
+  .glints-wings--right:after {
+    left: 0;
+    width: calc(100% + 8px); } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-article-significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--breaking[class] {
+  color: #000000;
+  background: #ffe001; }
+
+.sdc-article-significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-article-significance--live[class] {
+  color: #ffffff;
+  background: #d0021b; }
+
+.sdc-article-significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--transfer[class] {
+  color: #ffe001;
+  background: #000000; }
+
+.sdc-article-significance--update[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--eyewitness[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--opinion[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--explainer[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+/* sdc-site-component-header */
+/* ========= */
+/* SKIN */
+/* Default styling paramters for this component that can be overwritten at project level */
+/* ========= */
+/* COMPONENT */
+/* The main structural styles to create a vanilla version of this component */
+/* ========= */
+.sdc-site-component-header__body {
+  display: block; }
+
+/* Header size/importance hieracies in descending orders */
+.sdc-site-component-header--h1 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 2.3em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h2 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 2em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important;
+  line-height: 1.1; }
+
+.sdc-article-header--feature .sdc-site-component-header--h2 {
+  color: #fff; }
+
+.sdc-site-component-header--h3, .sdc-site-opta-widget .opta-widget-container h2 span {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1.4em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h4, .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date h3 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1.1em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header--h5 {
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: 1em !important;
+  text-align: auto;
+  margin-bottom: 0.75em !important; }
+
+.sdc-site-component-header__logo {
+  height: 0.8em; }
+
+.sdc-site-component-header--h1,
+.sdc-site-component-header__logo {
+  height: 1em; }
+
+@media all and (max-width: 600px) {
+  .sdc-site-component-header--h1 {
+    font-size: 1.65em !important;
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h2 {
+    font-size: 1.45em !important;
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h3, .sdc-site-opta-widget .opta-widget-container h2 span {
+    font-size: 1.25em !important;
+    margin-bottom: 0.75em !important; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-component-header__body[data-short-text] > [data-role="short-text-target"] {
+    display: none; }
+  .sdc-site-component-header__body[data-short-text]:before {
+    content: attr(data-short-text); }
+  .sdc-site-component-header--h1 {
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h2 {
+    margin-bottom: 0.75em !important; }
+  .sdc-site-component-header--h3, .sdc-site-opta-widget .opta-widget-container h2 span {
+    margin-bottom: 0.75em !important; } }
+
+.sdc-site-opta-widget {
+  width: 100%;
+  font-size: 16px; }
+  .sdc-site-opta-widget .Opta,
+  .sdc-site-opta-widget .opta-widget-container {
+    font-family: "Sky Text", sans-serif;
+    font-size: 1em;
+    color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta *,
+    .sdc-site-opta-widget .Opta .Opta-Title,
+    .sdc-site-opta-widget .Opta .Opta-Title-Extra,
+    .sdc-site-opta-widget .Opta .Opta-Graph-Title,
+    .sdc-site-opta-widget .Opta .Opta-Nav a,
+    .sdc-site-opta-widget .Opta .Opta-Stat .Opta-Value,
+    .sdc-site-opta-widget .Opta .Opta-Stat .Opta-Label,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td,
+    .sdc-site-opta-widget .Opta .Opta-PlayerName,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td,
+    .sdc-site-opta-widget .Opta .Opta-PlayerName a,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader th,
+    .sdc-site-opta-widget .Opta .Opta-PlayerName,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader th,
+    .sdc-site-opta-widget .Opta .Opta-PlayerName a,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td.Opta-Games,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td.Opta-Score,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader th.Opta-Games,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader th.Opta-Score,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-Team,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-Games,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td .Opta-Team,
+    .sdc-site-opta-widget .opta-widget-container *,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Title,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Title-Extra,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Graph-Title,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Nav a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stat .Opta-Value,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stat .Opta-Label,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PlayerName,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PlayerName a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader th,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PlayerName,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader th,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PlayerName a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td.Opta-Games,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td.Opta-Score,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader th.Opta-Games,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader th.Opta-Score,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-Team,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-Games,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td .Opta-Team {
+      font-size: 1em;
+      font-weight: 400;
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta .Opta-Even td,
+    .sdc-site-opta-widget .Opta .Opta-Even th,
+    .sdc-site-opta-widget .Opta .Opta-Striped li:nth-child(even),
+    .sdc-site-opta-widget .Opta .Opta-Striped tbody tr:nth-child(even) td,
+    .sdc-site-opta-widget .Opta .Opta-Striped tbody tr:nth-child(even) th,
+    .sdc-site-opta-widget .Opta div.Opta-Even,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Even td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Even th,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Striped li:nth-child(even),
+    .sdc-site-opta-widget .opta-widget-container .Opta-Striped tbody tr:nth-child(even) td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Striped tbody tr:nth-child(even) th,
+    .sdc-site-opta-widget .opta-widget-container div.Opta-Even {
+      background: none; }
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-Games,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-Score,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-Games,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-Score {
+      width: 20%; }
+    .sdc-site-opta-widget .Opta .Opta-Title,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Title {
+      font-size: 1.4em; }
+    .sdc-site-opta-widget .Opta .Opta-H2,
+    .sdc-site-opta-widget .Opta h2,
+    .sdc-site-opta-widget .opta-widget-container .Opta-H2,
+    .sdc-site-opta-widget .opta-widget-container h2 {
+      background: none;
+      line-height: 1.1;
+      margin-bottom: .75em;
+      text-align: center;
+      font-weight: 200;
+      color: #4a4a4a;
+      height: auto;
+      overflow: visible; }
+    .sdc-site-opta-widget .Opta .Opta-H4,
+    .sdc-site-opta-widget .Opta h4,
+    .sdc-site-opta-widget .opta-widget-container .Opta-H4,
+    .sdc-site-opta-widget .opta-widget-container h4 {
+      background: none;
+      font-size: 1.3em;
+      line-height: 1.1;
+      margin: 1em 0 0 0;
+      border: 0;
+      text-align: center;
+      font-weight: 200;
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta h4 > span,
+    .sdc-site-opta-widget .opta-widget-container h4 > span {
+      float: none; }
+    .sdc-site-opta-widget .Opta .Opta-Logo,
+    .sdc-site-opta-widget .Opta .opta-logo-white,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Logo,
+    .sdc-site-opta-widget .opta-widget-container .opta-logo-white {
+      display: none; }
+    .sdc-site-opta-widget .Opta th,
+    .sdc-site-opta-widget .Opta td,
+    .sdc-site-opta-widget .opta-widget-container th,
+    .sdc-site-opta-widget .opta-widget-container td {
+      padding: .6em;
+      background: none;
+      border-bottom: 1px solid #eaeaea;
+      height: 3.6em;
+      text-align: center; }
+    .sdc-site-opta-widget .Opta th,
+    .sdc-site-opta-widget .opta-widget-container th {
+      color: #4a4a4a;
+      font-size: .9em; }
+    .sdc-site-opta-widget .Opta .Opta-Name,
+    .sdc-site-opta-widget .Opta .Opta-PlayerName,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td .Opta-PlayerName,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Name,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PlayerName,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td .Opta-PlayerName {
+      font-weight: 700;
+      text-align: left;
+      width: 100%;
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta .Opta-Stat .Opta-Value,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stat .Opta-Value {
+      font-size: 2em;
+      color: #0072c9;
+      fill: #0072c9; }
+    .sdc-site-opta-widget .Opta .Opta-Stats-Bars.Opta-Stats-Bars-Simple .Opta-Bar-Track .Opta-Bar-Fill,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stats-Bars.Opta-Stats-Bars-Simple .Opta-Bar-Track .Opta-Bar-Fill {
+      background: #0072c9; }
+    .sdc-site-opta-widget .Opta .Opta-Nav li.Opta-On a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Nav li.Opta-On a {
+      background-color: #0072c9; }
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td {
+      background: none;
+      border-bottom: 1px solid #000;
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta .Opta-Position td,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Position td {
+      border: 0; }
+    .sdc-site-opta-widget .Opta .Opta-Score div,
+    .sdc-site-opta-widget .Opta .Opta-Ranking .Opta-FeatureHeader td.Opta-Score div,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Score div,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking .Opta-FeatureHeader td.Opta-Score div {
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta .Opta-Stat .Opta-Arc.Opta-Arc,
+    .sdc-site-opta-widget .Opta .Opta-Stats-Cross .Opta-Stat circle,
+    .sdc-site-opta-widget .Opta .Opta-Bar-Fill.Opta-Bar-Fill,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stat .Opta-Arc.Opta-Arc,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stats-Cross .Opta-Stat circle,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Bar-Fill.Opta-Bar-Fill {
+      fill: #0072c9; }
+    .sdc-site-opta-widget .Opta .Opta-TabbedContent > li > div:not(:last-child),
+    .sdc-site-opta-widget .opta-widget-container .Opta-TabbedContent > li > div:not(:last-child) {
+      margin-bottom: 3em; }
+    .sdc-site-opta-widget .Opta .Opta-TabbedContent > li > h3,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TabbedContent > li > h3 {
+      background: none;
+      font-size: 1.3em;
+      height: auto;
+      line-height: 1.2em;
+      border: 0;
+      margin-bottom: .5em;
+      text-align: center;
+      cursor: default; }
+    .sdc-site-opta-widget .Opta .Opta-TabbedContent > li > h3:hover,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TabbedContent > li > h3:hover {
+      text-decoration: none; }
+    .sdc-site-opta-widget .Opta .Opta-TabbedContent > li > h3 > span,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TabbedContent > li > h3 > span {
+      float: none; }
+    .sdc-site-opta-widget .Opta .Opta-TabbedContent > li > h3 .Opta-Icon,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TabbedContent > li > h3 .Opta-Icon {
+      display: none; }
+    .sdc-site-opta-widget .Opta .Opta-Stats-Goal-Methods .Opta-Goal-Figure,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Stats-Goal-Methods .Opta-Goal-Figure {
+      filter: hue-rotate(42deg) saturate(500%) brightness(72%); }
+    .sdc-site-opta-widget .Opta .Opta-Dropdown-Label,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown-Label {
+      text-align: left; }
+    .sdc-site-opta-widget .Opta .Opta-Dropdown-Label-Text,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown-Label-Text {
+      color: white; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet-Tickboxes,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet-Tickboxes {
+      background: white; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet .Opta-Shirt,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet .Opta-Shirt {
+      font-size: 14px;
+      min-width: 26px;
+      margin-right: .25em;
+      white-space: nowrap; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet .Opta-Name,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet .Opta-Name {
+      font-size: 16px;
+      font-weight: normal; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet dt,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet dt {
+      display: flex;
+      align-items: center; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet-Holder .Opta-Teamsheet-Button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet-Holder .Opta-Teamsheet-Button {
+      line-height: inherit; }
+    .sdc-site-opta-widget .Opta .Opta-TimeControls .Opta-PeriodButtons.Opta-Periods-2 button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TimeControls .Opta-PeriodButtons.Opta-Periods-2 button {
+      height: auto; }
+    .sdc-site-opta-widget .Opta .Opta-Team-Score[class][class][class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Team-Score[class][class][class] {
+      background: #222; }
+    .sdc-site-opta-widget .Opta .Opta-Percent[class][class][class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Percent[class][class][class] {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Home.Opta-Percent[class][class][class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Home.Opta-Percent[class][class][class] {
+      background: #e6e6e6; }
+    .sdc-site-opta-widget .Opta .Opta-Nav[class] a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Nav[class] a {
+      background: none; }
+    .sdc-site-opta-widget .Opta .Opta-Nav[class] a:hover,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Nav[class] a:hover {
+      background: #e2e2e2; }
+    .sdc-site-opta-widget .Opta .Opta-On[class][class] a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-On[class][class] a {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-FootballPitch[class] .Opta-Node circle.Opta-Home,
+    .sdc-site-opta-widget .Opta .Opta-FootballPitch-Subplayers[class] .Opta-Sub .Opta-Circle,
+    .sdc-site-opta-widget .opta-widget-container .Opta-FootballPitch[class] .Opta-Node circle.Opta-Home,
+    .sdc-site-opta-widget .opta-widget-container .Opta-FootballPitch-Subplayers[class] .Opta-Sub .Opta-Circle {
+      fill: #214cb8;
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-FootballPitch[class] .Opta-Node circle.Opta-Away,
+    .sdc-site-opta-widget .Opta .Opta-FootballPitch-Subplayers[class] .Opta-Sub.Opta-Away .Opta-Circle,
+    .sdc-site-opta-widget .opta-widget-container .Opta-FootballPitch[class] .Opta-Node circle.Opta-Away,
+    .sdc-site-opta-widget .opta-widget-container .Opta-FootballPitch-Subplayers[class] .Opta-Sub.Opta-Away .Opta-Circle {
+      fill: #002672;
+      background: #002672; }
+    .sdc-site-opta-widget .Opta .Opta-Teamsheet-Holder[class] .Opta-Teamsheet-Button,
+    .sdc-site-opta-widget .Opta .Opta-dropdown-buttons[class] .Opta-events-button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Teamsheet-Holder[class] .Opta-Teamsheet-Button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-dropdown-buttons[class] .Opta-events-button {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-PeriodButtons[class] button.Opta-On,
+    .sdc-site-opta-widget .Opta .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed,
+    .sdc-site-opta-widget .Opta .Opta-PeriodButtons[class] button.Opta-On:hover,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PeriodButtons[class] button.Opta-On,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PeriodButtons[class] button.Opta-On:hover {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed li a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed li a {
+      color: white; }
+    .sdc-site-opta-widget .Opta .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed li.Opta-Overflow a,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tabs[class] .Opta-Nav > ul.Opta-Overflowed li.Opta-Overflow a {
+      color: #4a4a4a; }
+    .sdc-site-opta-widget .Opta .Opta-PeriodButtons[class] button:hover,
+    .sdc-site-opta-widget .opta-widget-container .Opta-PeriodButtons[class] button:hover {
+      background: #e2e2e2; }
+    .sdc-site-opta-widget .Opta .Opta-Overlay[class] li.Opta-Circle.Opta-Home[class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Overlay[class] li.Opta-Circle.Opta-Home[class] {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Overlay[class] li.Opta-Circle.Opta-Away[class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Overlay[class] li.Opta-Circle.Opta-Away[class] {
+      background: #002672; }
+    .sdc-site-opta-widget .Opta .Opta-Ranking-Bars[class] .Opta-Score > div,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking-Bars[class] .Opta-Score > div {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Ranking-Bars[class] .Opta-Score > div > span,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Ranking-Bars[class] .Opta-Score > div > span {
+      text-shadow: none; }
+    .sdc-site-opta-widget .Opta .Opta-Dropdown[class][class] .Opta-Dropdown-Label-Text,
+    .sdc-site-opta-widget .Opta .Opta-Dropdown[class][class] .Opta-Dropdown-Label-Button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown[class][class] .Opta-Dropdown-Label-Text,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown[class][class] .Opta-Dropdown-Label-Button {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Dropdown[class][class] .Opta-Dropdown-Label:hover .Opta-Dropdown-Label-Text,
+    .sdc-site-opta-widget .Opta .Opta-Dropdown[class][class] .Opta-Dropdown-Label:hover .Opta-Dropdown-Label-Button,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown[class][class] .Opta-Dropdown-Label:hover .Opta-Dropdown-Label-Text,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Dropdown[class][class] .Opta-Dropdown-Label:hover .Opta-Dropdown-Label-Button {
+      background: #1a409e; }
+    .sdc-site-opta-widget .Opta .Opta-TimeControls[class] .Opta-TimeSpan,
+    .sdc-site-opta-widget .Opta .Opta-TimeControls[class] .Opta-Dragger path,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TimeControls[class] .Opta-TimeSpan,
+    .sdc-site-opta-widget .opta-widget-container .Opta-TimeControls[class] .Opta-Dragger path {
+      fill: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-JS-Tip,
+    .sdc-site-opta-widget .opta-widget-container .Opta-JS-Tip {
+      cursor: default; }
+    .sdc-site-opta-widget .Opta .Opta-Tooltip[class],
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tooltip[class] {
+      font-size: 16px;
+      color: inherit; }
+    .sdc-site-opta-widget .Opta .Opta-Tooltip[class] h3,
+    .sdc-site-opta-widget .Opta .Opta-Info[class].active,
+    .sdc-site-opta-widget .Opta .Opta-Info[class]:hover,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tooltip[class] h3,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Info[class].active,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Info[class]:hover {
+      background: #214cb8; }
+    .sdc-site-opta-widget .Opta .Opta-Tooltip[class] h3 span,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tooltip[class] h3 span {
+      color: white; }
+    .sdc-site-opta-widget .Opta .Opta-Tooltip[class] p,
+    .sdc-site-opta-widget .opta-widget-container .Opta-Tooltip[class] p {
+      color: inherit; }
+    @media all and (max-width: 600px) {
+      .sdc-site-opta-widget .Opta,
+      .sdc-site-opta-widget .opta-widget-container {
+        font-size: .95em; } }
+    @media all and (max-width: 480px) {
+      .sdc-site-opta-widget .Opta,
+      .sdc-site-opta-widget .opta-widget-container {
+        font-size: .85em; } }
+  .sdc-site-opta-widget .opta-widget-container th,
+  .sdc-site-opta-widget .opta-widget-container td,
+  .sdc-site-opta-widget .opta-widget-container .position {
+    color: inherit;
+    padding: 1.2em .6em;
+    height: auto; }
+  .sdc-site-opta-widget .opta-widget-container th {
+    border-top: 0; }
+  .sdc-site-opta-widget .opta-widget-container h2, .sdc-site-opta-widget .opta-widget-container h3 {
+    font-size: inherit;
+    text-align: center; }
+  .sdc-site-opta-widget .opta-widget-container h2 span {
+    padding: 0; }
+  .sdc-site-opta-widget .opta-widget-container .tennis {
+    margin: 0;
+    border-radius: 0; }
+  .sdc-site-opta-widget .opta-widget-container .tennis > h3 {
+    display: none;
+    text-align: center; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures {
+    border: 0; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date,
+  .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date h3 {
+    font-size: inherit;
+    border: 0;
+    padding: 0; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date h3 {
+    background: transparent;
+    font-weight: normal;
+    font-size: 1.2em; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date .tennis-court {
+    background: #efedee;
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
+    text-align: left; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures .tennis-date h4:not(.tennis-court) {
+    display: none; }
+  .sdc-site-opta-widget .opta-widget-container .fixtures .matches dt {
+    border-color: #dad8da;
+    font-size: inherit; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .fixtures .matches .tennis-match .match-time {
+    font-size: inherit;
+    color: inherit;
+    padding-right: .2em;
+    width: 15%; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match {
+    font-size: inherit;
+    margin: .9em auto;
+    border-collapse: separate;
+    border-spacing: .3em;
+    max-width: 670px; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match td {
+    padding: 0; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-score {
+    line-height: 2em;
+    width: 2.2em; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-score strong {
+    font-weight: bold; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-server {
+    padding: 0 .6em; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-server:not(:empty):before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #f3a43c; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-server:not(:empty) img {
+    display: none; }
+  .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-match-player {
+    width: auto !important; }
+  .sdc-site-opta-widget .opta-widget-container .tennis-match-nationality {
+    font-size: 0; }
+  .sdc-site-opta-widget .opta-widget-container .tennis-match-nationality .flag {
+    display: block;
+    margin: 2px 20px; }
+  .sdc-site-opta-widget .opta-widget-container .tennis[style] {
+    border: 0 !important; }
+  .sdc-site-opta-widget .Opta,
+  .sdc-site-opta-widget .opta-loader {
+    box-sizing: border-box;
+    height: auto;
+    text-align: center; }
+  .sdc-site-opta-widget .opta-loader p,
+  .sdc-site-opta-widget .Opta .Opta-Load {
+    box-sizing: border-box;
+    background: none;
+    background: transparent;
+    margin: 0 0 40px;
+    padding: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    line-height: 1em;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    color: #0072c9;
+    border: 3px solid;
+    border-color: transparent currentColor currentColor;
+    vertical-align: middle;
+    overflow: hidden;
+    text-indent: -100%;
+    border-radius: 100%;
+    animation: spin 1s infinite linear; }
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn); } }
+  .sdc-site-opta-widget .opta-widget-container .seasonschedule .external-link {
+    text-decoration: none; }
+  .sdc-site-opta-widget .opta-widget-container .seasonschedule .external-link:hover {
+    color: inherit;
+    text-decoration: underline; }
+  .sdc-site-opta-widget .Opta-FootballPitch.Opta-FootballPitch-Horizontal[class][class] {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAABWUlEQVR4Ae3T0Q2AIBTFUMC4/5bGD3fQMU4wZYE+btN53c87Nn/nscacc8tfrC2v/tHRCcAyE5AAvADGV0AC8AIYXwEJwAtgfAUkAC+A8RWQALwAxldAAvACGF8BCcALYHwFJAAvgPEVkAC8AMZXQALwAhhfAQnAC2B8BSQAL4DxFZAAvADGV0AC8AIYXwEJwAtgfAUkAC+A8RWQALwAxldAAvACGF8BCcALYHwFJAAvgPEVkAC8AMZXQALwAhhfAQnAC2B8BSQAL4DxFZAAvADGV0AC8AIYXwEJwAtgfAUkAC+A8RWQALwAxldAAvACGF8BCcALYHwFJAAvgPEVkAC8AMZXQALwAhhfAQnAC2B8BSQAL4DxFZAAvADGV0AC8AIYXwEJwAtgfAUkAC+A8RWQALwAxldAAvACGF8BCcALYHwFJAAvgPEVkAC8AMZXQALwAhhfAVjAB44sBIavSMuNAAAAAElFTkSuQmCC");
+    background-size: 20% !important; }
+  .sdc-site-opta-widget .Opta-FootballPitch.Opta-FootballPitch-Horizontal[class] .Opta-Field {
+    stroke: #d2d2d2; }
+  .sdc-site-opta-widget .Opta-FootballPitch[class] .Opta-Field > .Opta-Markings {
+    opacity: 1; }
+  .sdc-site-opta-widget .Opta_F_AA_G[class] .Opta-FootballPitch .Opta-Node text,
+  .sdc-site-opta-widget .Opta_F_AA_N[class] .Opta-FootballPitch .Opta-Node text,
+  .sdc-site-opta-widget .Opta-FootballPitch[class] .Opta-Players-Formation .Opta-Node text,
+  .sdc-site-opta-widget .Opta_W.Opta_F_AT[class][class] .Opta-thirds {
+    filter: none !important;
+    fill: #4a4a4a !important; }
+  .sdc-site-opta-widget .Opta-FootballPitch[class][class] .Opta-Players-Formation .Opta-Node .Opta-JerseyNumber {
+    fill: white !important; }
+  .sdc-site-opta-widget .Opta-FootballPitch[class] .Opta-Node text {
+    fill: #4a4a4a; }
+  .sdc-site-opta-widget .Opta_F_MPC_D[class][class] .Opta-Selects > div[class],
+  .sdc-site-opta-widget .Opta_F_TC_D[class][class] .Opta-Selects > div[class] {
+    border-bottom: 0; }
+  .sdc-site-opta-widget .Opta-Scroll[class][class] .Opta-Scroller {
+    background: #214cb8; }
+  .sdc-site-opta-widget .Opta-Ranking[class] .Opta-FeatureHeader td.Opta-Name {
+    font-weight: bold; }
+  .sdc-site-opta-widget .Opta-Ranking[class][class] .Opta-FeatureHeader td.Opta-Rank {
+    font-weight: normal;
+    font-size: 1em; }
+  .sdc-site-opta-widget .Opta-Stats-Text[class] .Opta-Stat.Opta-Stat-Card.Opta-Stat-Red .Opta-Value {
+    background: #ea021a;
+    color: white;
+    border: none; }
+  .sdc-site-opta-widget .Opta-Stats-Text[class] .Opta-Stat.Opta-Stat-Card.Opta-Stat-Yellow .Opta-Value {
+    background: #f4d53a;
+    color: white;
+    border: none; }
+  .sdc-site-opta-widget .Opta-EventTicker[class] .Opta-EventTicker-Event[class] {
+    border-bottom: none !important; }
+  .sdc-site-opta-widget .Opta_F_GR_N[class][class] .Opta-FootballPitch .Opta-Node text {
+    fill: white !important; }
+  @media (max-width: 900px) {
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match {
+      border-top: 1px solid #dad8da;
+      display: block;
+      position: relative;
+      padding: 1.2em 20px 1.2em 0 !important;
+      width: 100%; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule th {
+      display: none; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match td {
+      padding: .1em 0;
+      margin: 0;
+      border: 0;
+      display: block;
+      width: 100%; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .external-link:hover {
+      color: inherit;
+      text-decoration: underline; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match .match-link {
+      position: absolute;
+      padding: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match .match-link .external-link {
+      position: absolute;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTQnIGhlaWdodD0nMjgnIHZpZXdCb3g9JzAgMCAxNCAyOCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48dGl0bGU+TmV4dDwvdGl0bGU+PHBhdGggZD0nTS42NzcuMzgzQy41NzcuNDkzLjQ4NS42MS40LjczOC4zMi44NjYuMjI3Ljk5My4xMjYgMS4xMkwwIDEuMjYgMTEuNDg0IDEzLjc4IDAgMjYuMzA2aC4wNWMuMDM0LjAxOC4wNi4wNTQuMDc1LjExLjExNy4yNTQuMy41LjU1Mi43MzdsLjQ1LjM1NmMuMTE4LjA5LjIzNS4xNC4zNTIuMTUuMTE2LjAxLjIxMyAwIC4yODgtLjAyNy4wNzUtLjAyNi4xNy0uMDk1LjI4OC0uMjA0bDExLjU4NC0xMi42NmMuMjM0LS4yMzcuMzUtLjUzLjM1LS44NzUgMC0uMzQ2LS4xMTYtLjYzNy0uMzUtLjg3NEwxLjkzLjI0NkMxLjg4LjE5IDEuOC4xMzYgMS42OTQuMDgyIDEuNTgzLjAyNyAxLjQ3NSAwIDEuMzY3IDBjLS4xMSAwLS4yMjIuMDQ2LS4zNC4xMzdDLjkxMi4yMjcuNzk1LjMxLjY3OC4zODN6JyBmaWxsPScjNGE0YTRhJyBmaWxsLXJ1bGU9J2V2ZW5vZGQnLz48L3N2Zz4=");
+      background-repeat: no-repeat;
+      background-size: 12px 20px;
+      background-position: 100% 50%;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -999em;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match .tour-location,
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match .competition-name {
+      padding: .1em .2em 0 0;
+      margin: 0;
+      border: 0;
+      display: inline-block;
+      width: auto; }
+    .sdc-site-opta-widget .opta-widget-container .seasonschedule .match .tour-location:after {
+      content: ". "; } }
+  @media (max-width: 470px) {
+    .sdc-site-opta-widget .opta-widget-container .rankings th:nth-of-type(3),
+    .sdc-site-opta-widget .opta-widget-container .rankings td:nth-of-type(3),
+    .sdc-site-opta-widget .tennis .tennis-match .tennis-match-nationality {
+      display: none; } }
+  @media (max-width: 360px) {
+    .sdc-site-opta-widget .opta-widget-container .tennis .tennis-match .tennis-score {
+      width: 1em; } }
+
+.sdc-site-opta-widget:not(.sdc-article-widget) .Opta-TabsMore .Opta-Nav {
+  display: none; }
+
+.sdc-site-opta-widget:not(.sdc-article-widget) .Opta-TabbedContent > li > div,
+.sdc-site-opta-widget:not(.sdc-article-widget) .Opta-TabbedContent > li > h3 {
+  display: block; }
+
+.sdc-site-opta-widget[class*="sdc-article-widget"][class] {
+  padding: 1em;
+  background: white;
+  box-sizing: border-box;
+  font-size: 16px; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-FootballPitch .Opta-Node .Opta-thirds-box[class] {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-bargraph[class][class].Opta-Home {
+  fill: #e6e6e6; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-bargraph[class][class].Opta-Away {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-Timeinteravalslider-PeriodButtons[class] button.Opta-On,
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-Timeinteravalslider-PeriodButtons[class] button.Opta-On:hover {
+  background: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-Timeinteravalslider-PeriodButtons[class] button:hover {
+  background: #e2e2e2; }
+
+.sdc-site-opta-widget[data-widget="action_areas"] .Opta-TimeSpan-Circle[class] {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="attacking_thirds"] .Opta_W.Opta_F_AT[class][class] .Opta-FootballPitch .Opta-arrow.Opta-Home {
+  stroke: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="attacking_thirds"] .Opta_W.Opta_F_AT[class][class] .Opta-FootballPitch marker.Opta-Home {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="attacking_thirds"] .Opta_W.Opta_F_AT[class][class] .Opta-FootballPitch .Opta-arrow.Opta-Away {
+  stroke: #002672; }
+
+.sdc-site-opta-widget[data-widget="attacking_thirds"] .Opta_W.Opta_F_AT[class][class] .Opta-FootballPitch marker.Opta-Away {
+  fill: #002672; }
+
+.sdc-site-opta-widget[data-widget="chalkboard"] .Opta-Teamsheet-Button[class],
+.sdc-site-opta-widget[data-widget="chalkboard"] .Opta-events-button[class] {
+  line-height: inherit; }
+
+.sdc-site-opta-widget[data-widget="chalkboard"] .Opta_F_CB[class] .Opta-FootballPitch .Opta-Player.Opta-Home .Opta-Shape {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="chalkboard"] .Opta_F_CB[class] .Opta-FootballPitch .Opta-Player.Opta-Away .Opta-Shape {
+  fill: #002672; }
+
+.sdc-site-opta-widget[data-widget="chalkboard"] .Opta_F_CB .Opta-CheckBoxes dl .Opta-Action {
+  filter: saturate(0); }
+
+.sdc-site-opta-widget[data-widget="matchstats"] .Opta td,
+.sdc-site-opta-widget[data-widget="matchstats"] .Opta-Stats-Bars-Text {
+  height: 1em; }
+
+.sdc-site-opta-widget[data-widget="matchstats"] .Opta-MatchHeader {
+  margin-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="matchstats"] .Opta-MatchHeader td {
+  padding-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="matchstats"] .Opta-Outer[class] {
+  font-size: 16px; }
+
+.sdc-site-opta-widget[data-widget="matchday_live"] .Opta-Overlay li {
+  text-align: left; }
+
+.sdc-site-opta-widget[data-widget="match_player_compare"] .Opta td,
+.sdc-site-opta-widget[data-widget="match_player_compare"] .Opta-Stats-Bars-Text {
+  height: 1em; }
+
+.sdc-site-opta-widget[data-widget="match_player_compare"] .Opta-MatchHeader {
+  margin-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="match_player_compare"] .Opta-MatchHeader td {
+  padding-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="match_player_compare"] .Opta-Outer[class] {
+  font-size: 16px; }
+
+.sdc-site-opta-widget[data-widget="player_ranking"] .Opta-Name {
+  width: auto; }
+
+.sdc-site-opta-widget[data-widget="player_ranking"] .Opta-Score[class] {
+  width: 50%; }
+
+.sdc-site-opta-widget[data-widget="average_positions"] .Opta-TabbedContent {
+  display: none; }
+
+.sdc-site-opta-widget[data-widget="team_compare"] .Opta td,
+.sdc-site-opta-widget[data-widget="team_compare"] .Opta-Stats-Bars-Text {
+  height: 1em; }
+
+.sdc-site-opta-widget[data-widget="team_compare"] .Opta-MatchHeader {
+  margin-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="team_compare"] .Opta-MatchHeader td {
+  padding-bottom: 1.5em; }
+
+.sdc-site-opta-widget[data-widget="team_compare"] .Opta-Outer[class] {
+  font-size: 16px; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventTicker-Text {
+  font-size: 14px; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-Selected .Opta-eventtext strong,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-Selected .Opta-Name,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-Event-Time,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-Event-Time abbr {
+  color: white; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventButtons button {
+  line-height: 1; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventButtons[class] button.Opta-On,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventButtons[class] button.Opta-On:hover {
+  background: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventButtons[class] button:hover {
+  background: #e2e2e2; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventTicker[class] li.Opta-Selected:not(.Opta-EventTicker-TimeMarker).Opta-Home,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventTicker[class] li.Opta-Home .Opta-JerseyNumber,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay.Opta-Home h3,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay.Opta-Home .Opta-Shirt {
+  background: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventTicker[class] li.Opta-Selected:not(.Opta-EventTicker-TimeMarker).Opta-Away,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventTicker[class] li.Opta-Away .Opta-JerseyNumber,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay.Opta-Away h3,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay.Opta-Away .Opta-Shirt {
+  background: #002672; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventsBar[class] .Opta-EventsPanel .Opta-Player.Opta-Home .Opta-Shape {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventsBar[class] .Opta-EventsPanel .Opta-Player.Opta-Away .Opta-Shape {
+  fill: #002672; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventsBar[class] .Opta-EventsPanel .Opta-Player.Opta-Selected .Opta-Shape {
+  stroke: #e2e2e2; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay h3 > span,
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N[class] .Opta-Overlay h3 abbr {
+  color: #e2e2e2; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventsBar[class] .Opta-TimeSpan {
+  fill: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta-EventsBar[class] .Opta-Timestrip .Opta-CurrentTime {
+  stroke: #214cb8; }
+
+.sdc-site-opta-widget[data-widget="goal_replay"] .Opta_F_GR_N .Opta-playcontrol > button {
+  color: transparent;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAnCAYAAADkUNMNAAAAAXNSR0IArs4c6QAAAnFJREFUSA2tl89PE0EUx+fN7gGFk3iBNKHbaMR4Mv6IB7nRIiaFUo0hXrwRz6In418AmBhPEvwDTC/YIiAqNGrCyXjy1liuJsR4wEi7bsd5xSnt7M52Zrtz6HTee/P5zrx5O9sC6bGdye8kPLf+kjB2kRFYuXIi86RQAA+x0AvbyX8YYa5bJowkWxyAjf6+RO5b4UI9MjwQ/F8BAF7du5S5GwkeBj7eAb1vDNcDw6adTOWM4CbgyvOzNW24KRjTowWPAtaCRwUjnOKHqo3mdpK+OpaDeV3j4WGOZZctG8QYwbW/tTIfjwibrz8CzwSBMTYw5wLMegAHwuMCI7wj51pgAus8x8pUIFS0Vs51wADkjZVM3VLlWEBF38y5HhhKJ/sSt/G2E5O79fR8/uMQVkXY4fEVFE3BKEwP3T/PwsAEYPXU8GmjFYsdUQ5Oi4GvB9geHBq882X5suvzaRgo3/K+Ko77rv788euayt/NzlcOi6ogxtgAaXjrzvT7MVVMmJ3ulTIvgJKnqiAhkMq+u66KUdmbpYhOZ2pziTXIA2UgwAEQOvm9lP6sipHtLTg64hbogMct4IPHKRAIj0tACY9DoOPKRWB7qxZvzAPQpXZb+3csU0YaG6rnIHTlAuRktxYZa8yLsdzzn28HhFo3q6/HP7X7tOA4IYqANlxHgL+Sf4NlTYodGMF1BWxKxyrF9NfQA0WY3KqlzMOwQyaE9XvMW8B5xnCc1E2A37RNbiT4sYD/uuYv8brNrMcYExl+JDDxiJdh633AD7BGKZ2trI3vot/4QHGS3Jzs2wX+h2vOsq3pymq6LPt7Hp+b2hqWIf8A7bZFsgnlKecAAAAASUVORK5CYII=") no-repeat center;
+  background-size: 30%; }
+
+body {
+  background: #eee; }
+
+.sdc-site-opta-widget[class] {
+  max-width: 660px;
+  margin: 0 auto; }

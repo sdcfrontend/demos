@@ -1,0 +1,56 @@
+{
+  "imageServerUrl": "http://e2.365dm.com",
+  "id": 123456,
+  "modifier": null,
+  "showCompetitionCode": true,
+  "link": "/",
+  "status": 1,
+  "start": {
+    "time": "17:00"
+  },
+  "competition": {
+    "id": 120,
+    "importance": 1,
+    "code": "EC",
+    "name": {
+      "full": "European Championships",
+      "short": "European Championships"
+    },
+    "round": {
+      "importance": 1,
+      "name": {
+        "full": null,
+        "short": null
+      }
+    }
+  },
+  "teams": {
+    "home": {
+      "score": {
+        "current": 2,
+        "halfTime": null,
+        "aggregate": null
+      },
+      "badge": "http://e0.365dm.com/football/badges/96/530.png",
+      "id": 530,
+      "name": {
+        "full": "Bayern Munich",
+        "short": "Bayern"
+      }
+    },
+    "away": {
+      "score": {
+        "current": 1,
+        "halfTime": null,
+        "aggregate": null
+      },
+      "badge": "http://e0.365dm.com/football/badges/96/934.png",
+      "id": 934,
+      "name": {
+        "full": "Bayer Leverkusen",
+        "short": "Leverkusen"
+      }
+    }
+  },
+  "summary": null
+}

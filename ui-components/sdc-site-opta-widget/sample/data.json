@@ -1,0 +1,39 @@
+{
+  "optaConfig": {
+    "subscription_id": "fdd48e9d52b551c6428e1dac8e5f9da5",
+    "language": "en_GB",
+    "timezone": "Europe/London",
+    "v2": false
+  },
+  "widgetConfig": {
+    "sport": "football",
+    "widget": "squad",
+    "template": "normal",
+    "competition": "8",
+    "season": "2015",
+    "team": "8",
+    "navigation": "tabs_more",
+    "column_count": "1",
+    "show_position": "true",
+    "show_images": "false",
+    "show_country": "true",
+    "show_flags": "false",
+    "show_key": "false",
+    "show_goalkeepers": "true",
+    "show_defenders": "true",
+    "show_midfielders": "true",
+    "show_forwards": "true",
+    "show_managers": "true",
+    "show_goals": "false",
+    "show_caps": "false",
+    "order_by": "jersey",
+    "group_by_position": "false",
+    "default_nav": 1,
+    "team_naming": "full",
+    "player_naming": "full",
+    "show_logo": "true",
+    "title": "",
+    "show_title": "true",
+    "breakpoints": "400"
+  }
+}

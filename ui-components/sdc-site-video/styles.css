@@ -10,6 +10,7 @@
  *  Any other files referenced in here will not be imported
  *  when the component is consumed by your app project.
  */
+/* import any project base styles you neeed for previewing here */
 :root {
   /* ----------------- */
   /* ---GLOBAL VARS--- */
@@ -22,6 +23,8 @@
   /* placeholder - overriden by brand file */
   --brand-3: linear-gradient(#002672, #00043B);
   /* placeholder - overriden by brand file */
+  --brand-highlight: #3578FF;
+  /* used for ui highlights */
   /* shade colors (for internal use) */
   --shade-0: #FFFFFF;
   --shade-1: #F4F5F7;
@@ -37,6 +40,8 @@
   /* success messages */
   --alert: #EA021A;
   /* alerts and warnings */
+  --live: #EA021A;
+  /* live scores and coverage */
   --breaking: #FFE000;
   /* breaking news components */
   --link-color: #3157A1;
@@ -441,21 +446,25 @@ ul {
   --supporting-text: 16px;
   --brand-highlight: #3578ff; }
 
+/* import the component-specific styles here */
 @keyframes sdc-site-video-loader {
   0% {
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
 
-.sdc-site-video[data-component-name="sdc-site-video"] {
+.sdc-site-video {
   padding: 0;
-  font-size: var(--component-text, 1em); }
+  font-size: var(--component-text, 1em);
+  margin-bottom: var(--component-margin); }
 
 .sdc-site-video__content {
   position: relative;
-  padding-bottom: 56.25%; }
+  /* set 16/9 as a fallback if no aspectRatio is specified */
+  padding-bottom: calc(100% / (16 / 9)); }
 
-.sdc-site-video__content > * {
+/* note - amp provides its own aspect ratio management so exclude it from this */
+.sdc-site-video__content > *:not(amp-iframe) {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -463,7 +472,6 @@ ul {
   top: 0; }
 
 .sdc-site-video__poster {
-  background-size: cover;
   z-index: 2;
   border: 0;
   appearance: none;
@@ -471,6 +479,15 @@ ul {
   cursor: pointer;
   overflow: hidden;
   pointer-events: none; }
+
+.sdc-site-video__poster-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  object-fit: cover; }
 
 .sdc-site-video__loader {
   position: absolute;
@@ -525,6 +542,7 @@ ul {
 .sdc-site-video[data-autoplay="true"] .sdc-site-video__poster {
   display: none; }
 
+/* hide the dock shelf before player has loaded to avoid it capturing the keyboard focus */
 .sdc-site-video[data-state="ready"] .vjs-dock-shelf {
   visibility: hidden; }
 
@@ -532,6 +550,10 @@ ul {
 .sdc-site-video[data-state="ready"]:not([data-autoplay="true"]) .sdc-site-video__tag[class] {
   overflow: visible; }
 
+.sdc-site-video-is-mouse .sdc-site-video * {
+  outline: 0; }
+
+/* This file restyles the default Brightcove ui */
 .sdc-site-video .vjs-big-play-button:focus,
 .sdc-site-video .vjs-big-play-button:active,
 .sdc-site-video__tag:hover .vjs-big-play-button,
@@ -572,7 +594,7 @@ ul {
   width: auto; }
 
 .sdc-site-video:hover .vjs-control-bar[class][class][class][class][class][class][class] {
-  transition-delay: 0.01s !important; }
+  transition-delay: 0.01s; }
 
 .sdc-site-video .vjs-control-bar > :last-child {
   margin-left: var(--component-gap); }
@@ -595,13 +617,13 @@ ul {
 .sdc-site-video .vjs-control-bar > *:first-child {
   margin-right: var(--space-xs); }
 
-.sdc-site-video .not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
-.sdc-site-video .not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
-.sdc-site-video .not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
-.sdc-site-video .not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
-.sdc-site-video .vjs-has-started.vjs-paused.vjs-ad-playing.vjs-user-inactive .vjs-control-bar,
-.sdc-site-video .vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible) {
-  transform: translateY(calc(100% + 12px)) !important; }
+.sdc-site-video[class] .not-hover.vjs-has-started.vjs-paused.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
+.sdc-site-video[class] .not-hover.vjs-has-started.vjs-paused.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
+.sdc-site-video[class] .not-hover.vjs-has-started.vjs-playing.vjs-user-active .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
+.sdc-site-video[class] .not-hover.vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible),
+.sdc-site-video[class] .vjs-has-started.vjs-paused.vjs-ad-playing.vjs-user-inactive .vjs-control-bar,
+.sdc-site-video[class] .vjs-has-started.vjs-playing.vjs-user-inactive .vjs-control-bar:not(.vjs-focus-within):not(.vjs-control-bar-visible) {
+  transform: translateY(calc(100% + 12px)); }
 
 .sdc-site-video .vjs-volume-level,
 .sdc-site-video .vjs-play-progress,
@@ -611,15 +633,16 @@ ul {
 .sdc-site-video .vjs-slider {
   background: rgba(255, 255, 255, 0.4); }
 
+/* progress bar */
 .sdc-site-video .vjs-load-progress {
   background: var(--shade-2);
   background: rgba(255, 255, 255, 0.8); }
 
-.sdc-site-video .vjs-progress-control.vjs-control[class][class] {
-  height: 25px !important;
-  transform: none !important;
-  top: auto !important;
-  z-index: 2000 !important;
+.sdc-site-video[class] .vjs-progress-control.vjs-control[class][class] {
+  height: 25px;
+  transform: none;
+  top: auto;
+  z-index: 2000;
   bottom: calc(var(--space-xl)); }
 
 .sdc-site-video .vjs-progress-control .vjs-load-progress,
@@ -658,10 +681,11 @@ ul {
 .sdc-site-video .vjs-social-embed-code {
   display: none; }
 
-.sdc-site-video .vjs-text-track-display {
+/* overlay text */
+.sdc-site-video[class] .vjs-text-track-display {
   background: none;
   height: 100%;
-  opacity: 0 !important; }
+  opacity: 0; }
 
 .sdc-site-video[class] .vjs-dock-text {
   padding: var(--component-padding);
@@ -724,15 +748,18 @@ ul {
 .sdc-site-video .vjs-button[class*="vjs-vol"] {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMTUuMzEgMTAuNzg1bC0yLjI2NSAyLjI1NWgtNC4wN2MtLjgyNyAwLTEuNS4xNzItMS41IDF2NS41YzAgLjgzLjY3MyAxLjUgMS41IDEuNWg0LjA3bDIuMjYzIDIuMjU2Yy44NS44NDggMi4wOTMgMS44NTIgMy4xNjguNzhWMTAuMDA1Yy0xLjA3NS0xLjA3Mi0yLjMxNy0uMDY3LTMuMTY3Ljc4ek0yMy44ODcgMjAuMTY4YzEuNjU2LTIuODYzLjgxNy02LjQ0Ny0xLjg5My04LjI4N2wuMDEyLS4wMTQtLjg5NC0uNTIzLS4xMzYuMTRjLS4wNC4wNDItLjA5Mi4xMDUtLjE1Ni4xOTMtLjA2LjA4Mi0uMTE1LjE2OC0uMTY3LjI1Ny0uMTM0LjIzLS4xNzMuNDI2LS4xMi42MDMuMDI3LjA4NS4wNjguMTYuMTI0LjIzbC0uMDIyLjAzNi4yMi4xMjdjMS4wOTYuNjMzIDEuODggMS42NTcgMi4yMDggMi44ODVzLjE2IDIuNTA3LS40NzUgMy42MDRjLS40MTIuNzEyLTEuMDA2IDEuMzA4LTEuNzIgMS43MjItLjE1Ni4wOS0uMjY2LjIyNC0uMzIuMzg4LS4wNTQuMTc2LS4wMTcuMzczLjExNC42MDMuMDUuMDkuMTA2LjE3Ny4xNjUuMjYuMDYzLjA5LjExNS4xNTQuMTU2LjE5NWwuMTM1LjE0LjUxLS4yOTJjLjkzNy0uNTUgMS43MTgtMS4zMzMgMi4yNi0yLjI2OHoiLz4KICA8cGF0aCBzdHlsZT0iZmlsbDogd2hpdGUiIGQ9Ik0yNy40MiAxNC42NjdjLS42MzctMi4zOTQtMi4xNy00LjM5NS00LjMxNC01LjYzNGwtLjQ4Mi0uMjgtLjEzNi4xNGMtLjA0LjA0LS4wOTIuMTA0LS4xNTcuMTkzLS4wNTcuMDgyLS4xMTIuMTY3LS4xNjQuMjU2LS4xMzIuMjI2LS4xNzIuNDMtLjEyLjYwMy4wMy4wOS4wNzYuMTczLjE0LjI0NGwtLjAxNC4wMzUuMTg0LjEwNmMxLjc5IDEuMDM0IDMuMDcgMi43MDcgMy42MDQgNC43MS41MzUgMiAuMjYgNC4wOS0uNzc0IDUuODgtLjYzOCAxLjEwMi0xLjUyIDItMi42MjUgMi42NzZsLS4xOS4xMWMtLjE1OC4wOS0uMjY4LjIyNS0uMzIuMzktLjA1NC4xNzQtLjAxNi4zNy4xMTUuNjAyLjA1Mi4wOS4xMDcuMTc2LjE2NS4yNi4wNjIuMDg2LjExMy4xNS4xNTIuMTlsLjEzNi4xNDcuOTYtLjU3LS4wMS0uMDFjMS4xOS0uNzkzIDIuMjQ0LTEuODkgMi45MTYtMy4wNDQgMS4yNC0yLjEzIDEuNTctNC42MTcuOTM2LTcuMDAzeiIvPgo8L3N2Zz4K"); }
 
+/* volume mute */
 .sdc-site-video .vjs-button[class*="vjs-vol-0"] {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNCAzNCI+CiAgPHBhdGggc3R5bGU9ImZpbGw6IHdoaXRlIiBkPSJNMjQuNTEgMTcuMDRsMi43NTgtMi43Ni0uMTAyLS4xNjZjLS4wMy0uMDUtLjA4LS4xMTgtLjE0Ny0uMi0uMDY1LS4wNzgtLjEzMy0uMTUzLS4yMDctLjIyNy0uMTgtLjE4LS4zNTUtLjI3LS41NTMtLjI3LS4xNzQuMDA4LS4zMjcuMDc3LS40NTcuMjA2bC0yLjM1NCAyLjM1NC0yLjc1Ni0yLjc1NS0uMTY2LjA5NmMtLjA1LjAzLS4xMi4wOC0uMjA0LjE1LS4wNzguMDYyLS4xNTQuMTMyLS4yMjcuMjA1LS4xODguMTg4LS4yNzUuMzY4LS4yNy41NTMuMDA4LjE3Mi4wOC4zMy4yMDcuNDU3bDIuMzU0IDIuMzU1LTIuNzYgMi43Ni4xMDMuMTY2Yy4wMy4wNS4wOC4xMTYuMTUuMi4wNjMuMDc4LjEzMi4xNTQuMjA0LjIyNi4xOC4xOC4zNTUuMjcuNTUuMjcuMTctLjAwNi4zMy0uMDc3LjQ2LS4yMDZsMi4zNTQtMi4zNTQgMi43NiAyLjc2LjE2Ni0uMTAzYy4wNS0uMDMuMTE2LS4wNzguMi0uMTQ3LjA3OC0uMDY0LjE1NC0uMTMzLjIyNi0uMjA2LjE4OC0uMTg4LjI3Ni0uMzcuMjctLjU1LS4wMDctLjE3My0uMDc4LS4zMzItLjIwNy0uNDZMMjQuNTEgMTcuMDR6TTE1LjMxMiAxMC43ODVsLTIuMjY0IDIuMjU1aC00LjA3Yy0uODI3IDAtMS41LjE3Mi0xLjUgMXY1LjVjMCAuODMuNjczIDEuNSAxLjUgMS41aDQuMDdsMi4yNjMgMi4yNTZjLjU4OC41ODUgMS4zNjIgMS4yNDUgMi4xNCAxLjI0NS4zNDcgMCAuNjk2LS4xMzIgMS4wMy0uNDY0di0xNC4wN2MtLjMzNC0uMzMzLS42ODMtLjQ2Ni0xLjAzLS40NjYtLjc3NyAwLTEuNTUuNjYtMi4xMzggMS4yNDV6bTEuNjY3IDExLjk5Yy0uMTU4LS4xMi0uMzYtLjI5My0uNjEtLjU0NGwtMi4yNjQtMi4yNTQtLjQ0LS40MzdIOC45OHYtNUgxMy42NjdsLjQ0LS40MzcgMi4yNjQtMi4yNTVjLjI1LS4yNS40NS0uNDIzLjYxLS41NDJ2MTEuNDY4eiIvPgo8L3N2Zz4K"); }
 
+/* picture in picture */
 .sdc-site-video[class] .vjs-picture-in-picture-control {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNiAzNyI+PHBhdGggZmlsbD0iI0ZGRiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzAuNTg4IDYuNjI1YzEuNzQ3IDAgMy4xNjIgMS41MSAzLjE2MiAzLjM3NXYxOGMwIDEuODY0LTEuNDE1IDMuMzc1LTMuMTYyIDMuMzc1SDUuNDEzYy0xLjc0OCAwLTMuMTYzLTEuNTEtMy4xNjMtMy4zNzVWMTBjMC0xLjg2NCAxLjQxNS0zLjM3NSAzLjE2My0zLjM3NXptMCAyLjI1SDUuNDEzYy0uNTgyIDAtMS4wNTUuNTA0LTEuMDU1IDEuMTI1djE4LjAzNGMwIC42Mi40NzMgMS4xMjUgMS4wNTUgMS4xMjVoMjUuMTc1Yy41ODIgMCAxLjA1NS0uNTA1IDEuMDU1LTEuMTI1VjEwYzAtLjYyMS0uNDczLTEuMTI1LTEuMDU1LTEuMTI1em0tMi40ODUgMTEuMjVjLjQ2OCAwIC44NDcuMzguODQ3Ljg0N3Y1LjA1NWMwIC40NjgtLjM4Ljg0OC0uODQ3Ljg0OGgtNi4xOGEuODQ4Ljg0OCAwIDAxLS44NDgtLjg0OHYtNS4wNTVjMC0uNDY4LjM4LS44NDcuODQ4LS44NDdoNi4xOHoiLz48L3N2Zz4="); }
 
+/* share and close buttons */
 .sdc-site-video[class] .vjs-close-button,
 .sdc-site-video[class] .vjs-share-control {
-  width: var(--space-l) !important;
+  width: var(--space-l);
   height: var(--space-l);
   right: var(--component-padding);
   top: var(--component-padding);
@@ -759,8 +786,8 @@ ul {
   margin-bottom: var(--space-xs); }
 
 /* volume slider */
-.sdc-site-video .vjs-volume-horizontal[class] {
-  height: 100% !important;
+.sdc-site-video[class][class][class][class] .vjs-volume-horizontal[class] {
+  height: 100%;
   display: flex;
   align-items: center; }
 
@@ -784,10 +811,10 @@ ul {
   padding-left: 0;
   margin-left: var(--space-xs); }
 
-.sdc-site-video .vjs-time-control.vjs-current-time[class],
-.sdc-site-video .vjs-time-control.vjs-time-divider,
-.sdc-site-video .vjs-duration.vjs-time-control {
-  display: flex !important; }
+.sdc-site-video[class] .vjs-time-control.vjs-current-time[class],
+.sdc-site-video[class] .vjs-time-control.vjs-time-divider,
+.sdc-site-video[class] .vjs-duration.vjs-time-control {
+  display: flex; }
 
 /* enter fullscreen */
 .sdc-site-video .vjs-fullscreen-control {

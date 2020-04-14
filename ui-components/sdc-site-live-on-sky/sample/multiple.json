@@ -1,0 +1,442 @@
+[
+  {
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "default",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "skysports",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/"
+    },
+    "link": "/football",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "skysports-light",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": null,
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "football",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": null,
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "premier-league",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/"
+    },
+    "link": "/football",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "isArticle": true,
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "default",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "isArticle": true,
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "skysports",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/"
+    },
+    "link": "/football",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "isArticle": true,
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "skysports-light",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "isArticle": true,
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "football",
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/"
+    },
+    "link": "/football",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  },
+  {
+    "isArticle": true,
+    "additionalInfo": "Monday Night Football",
+    "sport": "football",
+    "theme": "premier-league",
+    "isLive": true,
+    "tvListing": {
+      "channelId": 1,
+      "competitionId": 1,
+      "channelName": "Sky Sports Football"
+    },"event": {
+      "versus": true,
+      "home": "Aston Villa",
+      "away": "Newcastle",
+      "badges": {
+        "home": "http://e2.365dm.com/football/badges/192/238.png",
+        "away": "http://e1.365dm.com/football/badges/192/409.png"
+      },
+      "scores": {
+        "home": "2",
+        "away": "0"
+      },
+      "title": "Aston Villa v Newcastle"
+    },
+    "time": "7:00pm",
+    "channel": {
+      "logo": "http://e0.365dm.com/tvlogos/channels/3838-Logo.svg",
+      "alt": "Sky Sports Football"
+    },
+    "tag": {
+      "label": "Football",
+      "link": "/football/"
+    },
+    "link": "/",
+    "related": [
+      {
+        "label": "Get Sky Sports",
+        "link": "/get-sky-sports/"
+      },
+      {
+        "label": "Get a Sky Sports Pass",
+        "link": "/get-day-pass/",
+        "external": true
+      }
+    ]
+  }
+]

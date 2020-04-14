@@ -1,0 +1,448 @@
+[
+  {
+    "imageServerUrl": "http://e2.365dm.com",
+    "id": 353101,
+    "status": 0,
+    "pollUrl": null,
+    "start": {
+      "time": "17:00",
+      "date": "Saturday 17th November"
+    },
+    "tvListing": {
+      "channel": "Sky Sports 1",
+      "logo": "http://www.skysports.com/core/img/channels/Sky-Sports-1-Logo.svg",
+      "time": "16:45",
+      "id": "1"
+    },
+    "links": [
+      {
+        "label": "Jetzt Sky bestellen",
+        "link": "http://sky.de/jetzt-sky-bestellen",
+        "external": true
+      },
+      {
+        "label": "Jetzt Tagesticket holen",
+        "link": "http://sky.de/jetzt-tagesticket-holen",
+        "external": true
+      }
+    ],
+    "video": {
+      "description": "Watch match highlights",
+      "thumbnail": "http://e2.365dm.com/18/05/384x216/skysports-lionel-messi-argentina_4323956.jpg?20180530073120",
+      "url": "video.url"
+    },
+    "competition": {
+      "id": 120,
+      "importance": 1,
+      "code": "EC",
+      "name": {
+        "full": "European Championships",
+        "short": "European Championships"
+      },
+      "round": {
+        "importance": 1,
+        "name": {
+          "full": "Semi-final",
+          "short": "Semi-final"
+        }
+      }
+    },
+    "teams": {
+      "home": {
+        "url": "/bayern-munich/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/530.png",
+        "id": 530,
+        "name": {
+          "full": "Bayern Munich",
+          "short": "Bayern"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      },
+      "away": {
+        "url": "/bayer-levurkusen/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/934.png",
+        "id": 934,
+        "name": {
+          "full": "Bayer Leverkusen",
+          "short": "Leverkusen"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      }
+    },
+    "skin": {
+      "name": "",
+      "bodyBackgroundColour": "#002C5E",
+      "backgroundImage": {
+        "src": "/18/06/{width}x{height}/skysports-champions-league_4336185.jpg?20180614162259"
+      }
+    },
+    "livestream": {
+      "url": "",
+      "buttonText": "Hier geht's zum Livestream"
+    },
+    "modal": "<div class=\"sdc-site-modal\" data-role=\"modal\" hidden><div class=\"sdc-site-modal__backing\"><div class=\"sdc-site-modal__message\"><button class=\"sdc-site-modal__close-button\" data-role=\"modal-toggle\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 34 34\"><path d=\"M25.775 24.857a.776.776 0 0 0-.252-.537l-6.534-6.534-.354-.354.354-.354 7.031-7.031a7.798 7.798 0 0 0-.648-.728c-.384-.384-.614-.441-.716-.441a.777.777 0 0 0-.547.252l-6.534 6.534-.354.354-.354-.354-7.031-7.03a7.602 7.602 0 0 0-.728.648c-.287.287-.448.552-.441.726a.774.774 0 0 0 .252.537l6.534 6.534.354.354-.354.354-7.031 7.031a7.602 7.602 0 0 0 .648.728c.384.384.613.442.716.442a.777.777 0 0 0 .547-.252l6.535-6.535.354-.354.354.354 7.031 7.031a8.203 8.203 0 0 0 .728-.648c.286-.287.446-.552.44-.727z\"/></svg> Close</button><h4 class=\"sdc-site-modal__heading\">Watch [team a] v [team b] on Sky Go</h4><p class=\"sdc-site-modal__text\">Watch on Sky Go</p><a href=\"\" class=\"sdc-site-modal__button\">Click here for Sky Go</a></div></div></div>",
+    "summary": null
+  },  
+  {
+    "imageServerUrl": " http://e2.365dm.com",
+    "id": 353101,
+    "status": 1,
+    "pollUrl": null,
+    "start": {
+      "time": "17:00",
+      "date": "Saturday 17th November"
+    },
+    "tvListing": {
+      "channel": "Sky Sports 1",
+      "logo": "http://www.skysports.com/core/img/channels/Sky-Sports-1-Logo.svg",
+      "time": "16:45"
+    },
+    "links": [
+      {
+        "label": "Jetzt Sky bestellen",
+        "link": "http://sky.de/jetzt-sky-bestellen",
+        "external": true
+      },
+      {
+        "label": "Jetzt Tagesticket holen",
+        "link": "http://sky.de/jetzt-tagesticket-holen",
+        "external": true
+      }
+    ],
+    "video": {
+      "description": "Watch match highlights",
+      "thumbnail": "http://e2.365dm.com/18/05/384x216/skysports-lionel-messi-argentina_4323956.jpg?20180530073120",
+      "url": "video.url"
+    },
+    "competition": {
+      "id": 120,
+      "importance": 1,
+      "code": "EC",
+      "name": {
+        "full": "European Championships",
+        "short": "European Championships"
+      },
+      "round": {
+        "importance": 1,
+        "name": {
+          "full": "Semi-final",
+          "short": "Semi-final"
+        }
+      }
+    },
+    "teams": {
+      "home": {
+        "url": "/bayern-munich/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/530.png",
+        "id": 530,
+        "name": {
+          "full": "Bayern Munich",
+          "short": "Bayern"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      },
+      "away": {
+        "url": "/bayer-levurkusen/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/934.png",
+        "id": 934,
+        "name": {
+          "full": "Bayer Leverkusen",
+          "short": "Leverkusen"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      }
+    },
+    "skin": {
+      "name": "championsleague",
+      "bodyBackgroundColour": "#002C5E",
+      "backgroundImage": {
+        "src": "/18/06/{width}x{height}/skysports-champions-league_4336185.jpg?20180614162259"
+      }
+    },
+    "livestream": {
+      "url": "",
+      "buttonText": "Hier geht's zum Livestream"
+    },
+    "summary": null
+  },
+  {
+    "imageServerUrl": " http://e2.365dm.com",
+    "id": 353101,
+    "status": 8,
+    "pollUrl": null,
+    "start": {
+      "time": "17:00",
+      "date": "Saturday 17th November"
+    },
+    "tvListing": {
+      "channel": "Sky Sports 1",
+      "logo": "http://www.skysports.com/core/img/channels/Sky-Sports-1-Logo.svg",
+      "time": "16:45"
+    },
+    "links": [
+      {
+        "label": "Jetzt Sky bestellen",
+        "link": "http://sky.de/jetzt-sky-bestellen",
+        "external": true
+      },
+      {
+        "label": "Jetzt Tagesticket holen",
+        "link": "http://sky.de/jetzt-tagesticket-holen",
+        "external": true
+      }
+    ],
+    "video": {
+      "description": "Watch match highlights",
+      "thumbnail": "http://e2.365dm.com/18/05/384x216/skysports-lionel-messi-argentina_4323956.jpg?20180530073120",
+      "url": "video.url"
+    },
+    "competition": {
+      "id": 120,
+      "importance": 1,
+      "code": "EC",
+      "name": {
+        "full": "European Championships",
+        "short": "European Championships"
+      },
+      "round": {
+        "importance": 1,
+        "name": {
+          "full": "Semi-final",
+          "short": "Semi-final"
+        }
+      }
+    },
+    "teams": {
+      "home": {
+        "url": "/bayern-munich/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/530.png",
+        "id": 530,
+        "name": {
+          "full": "Bayern Munich",
+          "short": "Bayern"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      },
+      "away": {
+        "url": "/bayer-levurkusen/",
+        "score": {
+          "current": 1,
+          "half_time": null,
+          "aggregate": null
+        },
+        "badge": "http://e0.365dm.com/football/badges/96/934.png",
+        "id": 934,
+        "name": {
+          "full": "Bayer Leverkusen",
+          "short": "Leverkusen"
+        },
+        "synopsis": {
+          "player":"G Cahill",
+          "events":[
+            {
+              "time":"2",
+              "eventId":1,
+              "eventType":"goal",
+              "goal": true
+            },
+            {
+              "time":"12",
+              "eventId":2,
+              "eventType":"penalty",
+              "penalty": true
+            },
+            {
+              "time":"17",
+              "eventId":3,
+              "eventType":"own-goal",
+              "ownGoal": true
+            },
+            {
+              "time":"35",
+              "eventId":5,
+              "eventType":"red-card",
+              "redCard": true
+            }
+          ]
+        }
+      }
+    },
+    "skin": {
+      "name": "premierleague",
+      "bodyBackgroundColour": "#002C5E",
+      "backgroundImage": {
+        "src": "/18/06/{width}x{height}/skysports-champions-league_4336185.jpg?20180614162259"
+      }
+    },
+    "livestream": {
+      "url": "",
+      "buttonText": "Hier geht's zum Livestream"
+    },
+    "summary": null
+  }  
+]

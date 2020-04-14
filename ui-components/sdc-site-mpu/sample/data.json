@@ -1,0 +1,23 @@
+{
+  "id": "leaderboard",
+  "ad-type": "leaderboard",
+  "advertData": {
+    "id": "leaderboard",
+    "tag": "/20346936/skysports/homepage",
+    "size": {
+      "mobile": [[320, 50], [300, 50]],
+      "tablet": [[728, 90]],
+      "desktop": [[728, 90], [970, 250]]
+    }
+  },
+  "targeting": {},
+  "tag": "/20346936/skysports/homepage",
+  "targeting-strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+  "targeting-platform": "live",
+  "advert-targeting": {
+      "platform": "live",
+      "strnativekey": "eY5NpN2YvRtG5PACRZHya5vd",
+      "Sport": "Football",
+      "Sig": "News Story"
+    }
+}

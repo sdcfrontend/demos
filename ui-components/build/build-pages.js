@@ -16,9 +16,10 @@ const cssvariables = require('postcss-css-variables');
 const package = require(path.resolve(ROOT, 'package.json'));
 const page = fs.readFileSync(path.resolve(ROOT, 'build/page.html'), 'utf8').toString();
 const directory = fs.readFileSync(path.resolve(ROOT, 'build/directory.hbs'), 'utf8').toString();
-const cssvars = fs.readFileSync(path.resolve(ROOT, 'node_modules/sdc-project-base/css/base/core/_vars.scss'), 'utf8').toString();
+const cssvars = fs.readFileSync(path.resolve(ROOT, 'node_modules/sdc-project-base/css/base/core/vars/_vars-global.css'), 'utf8').toString();
 const helpers = require(path.resolve(ROOT, 'node_modules/sdc-project-base/js/helpers/all'));
 const localhelpers = require('./helpers');
+const translations = require('../translations/en.json');
 
 // set up
 handlebars.registerHelper(helpers);
@@ -43,6 +44,14 @@ function buildsection(name, gitlink) {
   const template = fs.readFileSync(path.resolve(ROOT, 'node_modules', name, 'template.hbs'), 'utf8').toString();
   const csspath = path.resolve(ROOT, 'node_modules', name, `styles/preview.scss`);
   const jspath = path.resolve(ROOT, 'node_modules', name, `src/components/${name}.js`);
+
+  try {
+    let compTranslations = require(path.resolve(ROOT, 'node_modules', name, 'translations/en.json'));
+    translations[name] = compTranslations[name];
+    fs.writeFileSync(`../translations/en.json`, JSON.stringify(translations), 'utf8');
+  } catch (error) {
+    
+  }
 
   try {
     const partials = require(path.resolve(ROOT, 'node_modules', name, `src/partials.js`));
@@ -73,6 +82,7 @@ function buildsection(name, gitlink) {
     file: csspath,
     includePaths: ['node_modules']
   }, function (err, result) {
+    console.log(err);
     if (result && result.css) {
       fs.writeFileSync(path.resolve(ROOT, name, 'styles.css'), result.css.toString());
     }
@@ -101,12 +111,6 @@ function buildsection(name, gitlink) {
   try {
     fse.copySync(path.resolve(ROOT, 'node_modules', name, 'assets'), path.resolve(ROOT, name, 'assets'));
   } catch (error) {}
-
-  try {
-    fse.copySync(path.resolve(ROOT, 'node_modules', name, 'translations'), path.resolve(ROOT, name, 'translations'));
-  } catch (error) {
-    
-  }
 
 }
 

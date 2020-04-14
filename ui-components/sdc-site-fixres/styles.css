@@ -1,0 +1,649 @@
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: "Sky Text", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* significance */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+@media all and (max-width: 939px) {
+  .site-wrap-basic {
+    width: 100%;
+    max-width: var(--site-width-inner);
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+.site-wrap, .sdc-site-fixres-wrap {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-wrap-padding, .section-wrap__article-column, .sdc-site-fixres-wrap {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter); }
+
+.site-indent[class] {
+  padding-left: var(--component-padding);
+  padding-right: var(--component-padding); }
+
+.site-component-vertical-margin, .sdc-site-fixres-wrap {
+  margin-bottom: var(--component-margin); }
+
+.site-component-vertical-margin-negative {
+  margin-top: calc(var(--component-margin) * -1); }
+
+.site-component-vertical-margin-l {
+  margin-bottom: var(--group-margin); }
+
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap); }
+
+.section-wrap {
+  background: white; }
+  .section-wrap > .site-component-vertical-margin:last-child, .section-wrap > .sdc-site-fixres-wrap:last-child {
+    margin-bottom: 0;
+    padding-bottom: var(--component-margin); }
+
+.section-wrap--padding {
+  padding: var(--component-margin) 0; }
+
+.section-wrap--shade {
+  padding: var(--group-margin) 0; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (max-width: 480px) {
+  .site-wrap--mobile-edge, .sdc-site-fixres-wrap {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner, .sdc-site-tiles__inner.sdc-site-fixres-wrap {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+.glints-box, .sdc-site-fixres-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before, .sdc-site-fixres-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+.glints-wings {
+  transform-style: preserve-3d;
+  position: relative;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 0;
+  border-bottom: 0;
+  background-clip: padding-box;
+  box-shadow: none;
+  box-shadow: 4px 0 2px rgba(0, 0, 0, 0.1), -4px 0 2px rgba(0, 0, 0, 0.1); }
+
+@supports (transform-style: preserve-3d) {
+  .glints-wings:before {
+    background: rgba(255, 255, 255, 0.15); } }
+
+.glints-wings:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: calc(100%);
+  left: -12px;
+  width: calc(100% + 24px);
+  transform: translateZ(-1px);
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.47) 9%, rgba(255, 255, 255, 0.57) 26%, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 0.15)) 1;
+  border-right: 1px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px solid;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+.glints-wings:after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: calc(100% + 24px);
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(166deg, rgba(255, 255, 255, 0.09) 45%, rgba(255, 255, 255, 0) 45%);
+  background-size: 5px 100%, 5px 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) 0, 7px 0, 0 0; }
+
+.glints-wings > * {
+  transform: translateZ(1px); }
+
+.glints-wings--right {
+  border-left: 0; }
+
+.glints-wings--right:before {
+  left: 0;
+  width: calc(100% + 12px); }
+
+.glints-wings--right:after {
+  left: 0;
+  width: calc(100% + 12px);
+  background-size: 5px 100%, 0 0, 100%; }
+
+.glints-box-padding, .sdc-site-fixres-box {
+  padding: var(--component-padding); }
+
+@media all and (max-width: 480px) {
+  .sdc-site-fixres-box[class] {
+    border: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    background-image: none; }
+  .sdc-site-fixres-box:after,
+  .sdc-site-fixres-box:before {
+    content: none; }
+  .glints-wings {
+    border-left-width: 8px;
+    border-right-width: 8px; }
+  .glints-wings:before {
+    left: -8px;
+    width: calc(100% + 16px); }
+  .glints-wings:after {
+    left: -8px;
+    width: calc(100% + 16px);
+    background-position: calc(100% - 4px) 0, 4px 0, 0 0; }
+  .glints-wings--right:before {
+    left: 0;
+    width: calc(100% + 8px); }
+  .glints-wings--right:after {
+    left: 0;
+    width: calc(100% + 8px); } }
+
+/* SDC site shared ui skin
+  =========================================== */
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+.sdc-article-significance--exclusive[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--breaking[class] {
+  color: #000000;
+  background: #ffe001; }
+
+.sdc-article-significance--sponsored[class] {
+  color: #707070; }
+
+.sdc-article-significance--live[class] {
+  color: #ffffff;
+  background: #d0021b; }
+
+.sdc-article-significance--analysis[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--transfer[class] {
+  color: #ffe001;
+  background: #000000; }
+
+.sdc-article-significance--update[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--eyewitness[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--opinion[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+.sdc-article-significance--explainer[class] {
+  color: #ffffff;
+  background: #0a1388; }
+
+/* SDC site fixres skin
+  =========================================== */
+.sdc-site-fixres__header3 a:after {
+  content: "";
+  width: 0.35em;
+  height: 0.35em;
+  display: inline-block;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: 0.9;
+  margin-left: 0.25em; }
+
+@media (hover: hover) {
+  .sdc-site-fixres__match:hover {
+    text-decoration: none; }
+  .sdc-site-fixres__match:hover .sdc-site-fixres__team-name {
+    text-decoration: underline; } }
+
+/* FIXRES */
+/* =================== */
+/* FIXRES SKIN */
+/* =================== */
+a:hover {
+  text-decoration: underline; }
+
+/* FIXRES COMPONENT */
+/* =================== */
+@keyframes goalflash {
+  0% {
+    color: black; }
+  50% {
+    color: rgba(0, 0, 0, 0); }
+  100% {
+    color: black; } }
+
+.sdc-site-fixres {
+  font-size: 1em;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea; }
+
+.sdc-site-fixres + .sdc-site-fixres {
+  border-top: 0; }
+
+.sdc-site-fixres__match {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  line-height: 1;
+  color: inherit;
+  padding: 0.55em 0 0.65em; }
+
+.sdc-site-fixres__match[href] {
+  cursor: pointer; }
+
+.sdc-site-fixres__match[href]:hover {
+  background-color: #f4f5f7; }
+
+.sdc-site-fixres__match-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 1.5em;
+  position: relative; }
+
+.sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+  width: 4.5em; }
+
+.sdc-site-fixres__match-cell--hometeam {
+  padding-right: 1em;
+  text-align: right; }
+
+.sdc-site-fixres__match-cell--awayteam {
+  padding-left: 1em;
+  text-align: left; }
+
+.sdc-site-fixres__match-cell--score {
+  width: 4em; }
+
+.sdc-site-fixres__match-cell--badge {
+  width: 2em; }
+
+.sdc-site-fixres__team-name {
+  font-weight: bold;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.sdc-site-fixres__score {
+  white-space: nowrap; }
+
+.sdc-site-fixres__score-side {
+  display: inline-block;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  width: 1.5em;
+  height: 1.5em;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #d0021b;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
+  transition: background 0.33s, color 0.33s; }
+
+.sdc-site-fixres__score-side:after {
+  position: absolute;
+  padding: 1px;
+  background: inherit;
+  color: inherit;
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  margin-top: -44%; }
+
+.sdc-site-fixres__score-side--home {
+  margin-right: 0.4em; }
+
+.sdc-site-fixres__score-ko {
+  display: none; }
+
+.sdc-site-fixres__badge {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  top: 2px;
+  background-size: 100%; }
+
+.sdc-site-fixres__note {
+  text-align: center;
+  font-size: 0.85em;
+  padding: 0 0 0.8em 0; }
+
+.sdc-site-fixres__note + .sdc-site-fixres__note {
+  margin-top: -0.2em; }
+
+.sdc-site-fixres__note[data-label]:before {
+  content: attr(data-label) " "; }
+
+.sdc-site-fixres__note:empty {
+  display: none; }
+
+.sdc-site-fixres__live-status {
+  font-size: 0.75em;
+  padding: 0.28em 0.5em;
+  background: #d0021b;
+  color: white;
+  display: inline-block;
+  line-height: 0.8;
+  vertical-align: top; }
+
+.sdc-site-fixres__live-status:after {
+  content: attr(data-label-live); }
+
+.sdc-site-fixres__status, .sdc-site-fixres__info {
+  font-size: 0.85em; }
+
+.sdc-site-fixres__header1 {
+  font-size: 1.75em;
+  font-weight: 400;
+  text-align: center; }
+
+.sdc-site-fixres__header2 {
+  font-weight: normal;
+  font-size: 1em;
+  text-align: center; }
+
+.sdc-site-fixres__header3 {
+  font-size: 0.82em;
+  font-weight: normal;
+  text-align: center; }
+
+.sdc-site-fixres + .sdc-site-fixres__header1, .sdc-site-fixres + .sdc-site-fixres__header2 {
+  margin-top: 1.25em; }
+
+.sdc-site-fixres + .sdc-site-fixres__header3 {
+  margin-top: 1em; }
+
+/* STATUS CHANGES
+for reference see here https://tools.skybet.net/confluence/display/SSDM/Football+Statuses
+0: "KO", // is a fixture
+1: "IP", // kick off
+2: "HT", // half time (could change to HT if we want to show that)
+3: "IP", // second half started
+4: "FT", // full time
+5: "ET", // extra time to be played
+6: "ET", // extra time started
+7: "ET", // extra time 2nd half started
+8: "AET", // extra time full time
+9: "ET", // extra time full time penalties being played
+10: "ET", // penalties
+11: "AET", // penalties complete
+12: "FT", // result
+13: "P-P", // postponed
+14: "IP", // suspended
+15: "IP", // resumed
+16: "C-C", // cancelled
+17: "A-A", // abandonded
+18: "ET", // ET
+21: "ET", // extra time half time
+30: "KO", // teams in
+40: "IP", // second half complete
+50: "ET" // extra time complete
+*/
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__score-side {
+  background: white;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  animation: none !important; }
+
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__time {
+  display: none; }
+
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__score-ko,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__score-ko,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__time {
+  display: inline; }
+
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__status:empty:after {
+  content: attr(data-label-ft); }
+
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__status:empty:after {
+  content: attr(data-label-aet); }
+
+.sdc-site-fixres[data-sport="football"][data-status="2"] .sdc-site-fixres__live-status:empty:after {
+  content: attr(data-label-ht); }
+
+.sdc-site-fixres[data-sport="football"][data-status="5"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="6"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="7"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="9"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="10"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="18"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="21"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="50"] .sdc-site-fixres__live-status:empty:after {
+  content: attr(data-label-et); }
+
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-postponed); }
+
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-cancelled); }
+
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-abandoned); }
+
+.sdc-site-fixres__score-side[data-updated] {
+  background: #ffcc00;
+  color: black;
+  animation: goalflash 1s ease-in-out 15; }
+
+@media all and (max-width: 840px) {
+  .sdc-site-fixres__team-name-target {
+    display: none; }
+  .sdc-site-fixres__team-name:after {
+    content: attr(data-short-name); } }
+
+@media all and (max-width: 700px) {
+  .sdc-site-fixres[class] {
+    font-size: 0.95em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.6em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.6em; }
+  .sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+    width: 3em; } }
+
+@media all and (max-width: 600px) {
+  .sdc-site-fixres__match-cell--badge {
+    display: none; }
+  .sdc-site-fixres__badge {
+    background: none !important; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-fixres[class] {
+    font-size: 0.9em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.4em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.4em; }
+  .sdc-site-fixres__score-side--home {
+    margin-right: 0.2em; }
+  .sdc-site-fixres[data-sport="football"][data-status="1"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="3"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="14"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="15"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="40"] .sdc-site-fixres__live-status {
+    display: none; } }
+
+@media all and (max-width: 380px) {
+  .sdc-site-fixres__match-cell--score {
+    width: 3.7em; }
+  .sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+    width: 2.15em; }
+  .sdc-site-fixres__score {
+    font-size: 0.9em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.2em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.2em; }
+  .sdc-site-fixres__live-status,
+  .sdc-site-fixres__status,
+  .sdc-site-fixres__info {
+    font-size: 0.8em; }
+  .sdc-site-fixres__header1 {
+    font-size: 1.5em; } }
+
+.sdc-site-fixres--compact {
+  font-size: 0.96em; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__match {
+  padding: 0.4em 0 0.45em; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__team-name-target {
+  display: none; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__team-name:after {
+  content: attr(data-short-name); }

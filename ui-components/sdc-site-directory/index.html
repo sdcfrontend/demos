@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sdc-site-directory</title>
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_top">
+    <script>
+      document.documentElement.className = 'js';
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <div class="header">
+      <div class="wrap">
+        <div class="header-body">
+          <h1>SDC UI Components</h1>
+          <ul>
+            <li><a href="../index.html">sdc-ui-components ></a></li>
+            <li>sdc-site-directory</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <div class="info">
+      <div class="wrap wrap-gutter">
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/blackjack-sdc-site-directory.git">https://git.bskyb.com/sky-components/blackjack-sdc-site-directory.git</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="sdc-site-directory sdc-site-directory--2col" data-component-name="sdc-site-directory">
+  <div class="sdc-site-directory__inner">
+      <div class="sdc-site-directory__section" id="leagues" data-hash-target data-role="section">
+        <h2 class="sdc-site-directory__heading">
+            Leagues
+        </h2>
+
+        <div class="sdc-site-directory__categories">
+            <div class="sdc-site-directory__category">
+              <div class="sdc-site-directory__body">
+                    <a href="#" class="sdc-site-directory__content">
+
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Bundesliga</span></p>
+
+                    </a>
+                    <a href="#" class="sdc-site-directory__content">
+
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Premier League</span></p>
+
+                    </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="sdc-site-directory__section" id="bundesliga" data-hash-target data-role="section">
+        <h2 class="sdc-site-directory__heading">
+            Bundesliga
+        </h2>
+
+        <div class="sdc-site-directory__categories">
+            <div class="sdc-site-directory__category">
+              <div class="sdc-site-directory__body">
+                    <a href="#" class="sdc-site-directory__content">
+
+                        <span class="sdc-site-directory__image-wrap">
+                          <img src="http://e1.365dm.com/football/badges/192/934.png" class="sdc-site-directory__image" aria-hidden="true" alt="">
+                        </span>
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Bayer Leverkusen</span></p>
+
+                    </a>
+                    <a href="#" class="sdc-site-directory__content">
+
+                        <span class="sdc-site-directory__image-wrap">
+                          <img src="http://e0.365dm.com/football/badges/192/530.png" class="sdc-site-directory__image" aria-hidden="true" alt="">
+                        </span>
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Bayern Munich</span></p>
+
+                    </a>
+                    <a href="#" class="sdc-site-directory__content">
+
+                        <span class="sdc-site-directory__image-wrap">
+                          <img src="http://e0.365dm.com/football/badges/192/530.png" class="sdc-site-directory__image" aria-hidden="true" alt="">
+                        </span>
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Bayern Munich</span></p>
+
+                    </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="sdc-site-directory__section" id="premier-league" data-hash-target data-role="section">
+        <h2 class="sdc-site-directory__heading">
+            <a href="#" class="sdc-site-directory__heading-link">
+              Premier League
+            </a>
+        </h2>
+
+        <div class="sdc-site-directory__categories">
+            <div class="sdc-site-directory__category">
+                <div class="sdc-site-directory__label">
+                  <div class="sdc-site-directory__content">
+                    <p class="sdc-site-directory__text">A</p>
+                  </div>
+                </div>
+              <div class="sdc-site-directory__body">
+                    <a href="#" class="sdc-site-directory__content">
+
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Arsenal</span></p>
+
+                    </a>
+              </div>
+            </div>
+            <div class="sdc-site-directory__category">
+                <div class="sdc-site-directory__label">
+                  <div class="sdc-site-directory__content">
+                    <p class="sdc-site-directory__text">B</p>
+                  </div>
+                </div>
+              <div class="sdc-site-directory__body">
+                    <a href="#" class="sdc-site-directory__content">
+
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Bournemouth</span></p>
+
+                    </a>
+                    <a href="#" class="sdc-site-directory__content">
+
+
+                        <p class="sdc-site-directory__text"><span class="sdc-site-directory__text-wrap">Burnley</span></p>
+
+                    </a>
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<br><br>
+    </div>
+    <script>
+      require(['script.js'], function (func) {
+        document.querySelectorAll('[data-component-name]').forEach(function (el) {
+          func.default(el);
+        })
+      });
+      const iframe = window.parent.document.querySelector('iframe');
+      if(iframe){
+        iframe.style.height = null;
+        iframe.style.height = document.body.clientHeight + 'px';
+      }
+
+    </script>
+  </body>
+
+</html>

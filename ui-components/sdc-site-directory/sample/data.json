@@ -1,0 +1,86 @@
+{
+  "2col": true,
+  "section": [
+  {
+      "heading": "Leagues",
+      "id": "leagues",
+      "link": null,
+      "category": [
+        {
+          "label": null,
+          "items": [
+            {
+              "image": null,
+              "text": "Bundesliga",
+              "link": "#"
+            },
+            {
+              "image": null,
+              "text": "Premier League",
+              "link": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Bundesliga",
+      "id": "bundesliga",
+      "link": null,
+      "category": [
+        {
+          "label": null,
+          "items": [
+            {
+              "image": "http://e1.365dm.com/football/badges/192/934.png",
+              "text": "Bayer Leverkusen",
+              "link": "#"
+            },
+            {
+              "image": "http://e0.365dm.com/football/badges/192/530.png",
+              "text": "Bayern Munich",
+              "link": "#"
+            },
+            {
+              "image": "http://e0.365dm.com/football/badges/192/530.png",
+              "text": "Bayern Munich",
+              "link": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Premier League",
+      "id": "premier-league",
+      "link": "#",
+      "category": [
+        {
+          "label": "A",
+          "items": [
+            {
+              "image": null,
+              "text": "Arsenal",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "label": "B",
+          "items": [
+            {
+              "image": null,
+              "text": "Bournemouth",
+              "link": "#"
+            },
+            {
+              "image": null,
+              "text": "Burnley",
+              "link": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

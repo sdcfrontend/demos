@@ -1,0 +1,16 @@
+{
+  "sdc-site-fixres": {
+    "shortStatus": {
+      "postponed": "X",
+      "abandoned": "X",
+      "cancelled": "X",
+      "aet": "n.V.",
+      "ft": "",
+      "et": "Verl.",
+      "ht": "HZ",
+      "live": "LIVE"
+    },
+    "agg": "Gesamtergebnis",
+    "vs": "vs."
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "iconsPath": "https:\/\/e3.365dm.de\/timeline\/icons\/",
+    "pollUrl": "http://localhost:8090/timeline/360854/poll",
+    "pollInterval": "3",
+    "items": []
+}

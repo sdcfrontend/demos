@@ -10,6 +10,8 @@
   /* placeholder - overriden by brand file */
   --brand-3: linear-gradient(#002672, #00043B);
   /* placeholder - overriden by brand file */
+  --brand-highlight: #3578FF;
+  /* used for ui highlights */
   /* shade colors (for internal use) */
   --shade-0: #FFFFFF;
   --shade-1: #F4F5F7;
@@ -25,6 +27,8 @@
   /* success messages */
   --alert: #EA021A;
   /* alerts and warnings */
+  --live: #EA021A;
+  /* live scores and coverage */
   --breaking: #FFE000;
   /* breaking news components */
   --link-color: #3157A1;

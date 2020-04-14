@@ -1,0 +1,163 @@
+{
+  "imageServerUrl": " http://e2.365dm.com",
+  "id": 353101,
+  "attendance": 48086,
+  "status": 4,
+  "pollUrl": null,
+  "start": {
+    "time": "17:00",
+    "date": "Saturday 17th November"
+  },
+  "tvListing": {
+    "channel": "Sky Sports 1",
+    "logo": "http://www.skysports.com/core/img/channels/Sky-Sports-1-Logo.svg",
+    "time": "16:45"
+  },
+  "links": [
+    {
+      "label": "Jetzt Sky bestellen",
+      "link": "http://sky.de/jetzt-sky-bestellen",
+      "external": true
+    },
+    {
+      "label": "Jetzt Tagesticket holen",
+      "link": "http://sky.de/jetzt-tagesticket-holen",
+      "external": true
+    }
+  ],
+  "video": {
+    "description": "Watch match highlights",
+    "thumbnail": "http://e2.365dm.com/18/05/384x216/skysports-lionel-messi-argentina_4323956.jpg?20180530073120",
+    "url": "video.url"
+  },
+  "competition": {
+    "id": 120,
+    "importance": 1,
+    "code": "EC",
+    "name": {
+      "full": "European Championships",
+      "short": "European Championships"
+    },
+    "round": {
+      "importance": 1,
+      "name": {
+        "full": "Semi-final",
+        "short": "Semi-final"
+      }
+    }
+  },
+  "teams": {
+    "home": {
+      "url": "/bayern-munich/",
+      "score": {
+        "current": 1,
+        "half_time": null,
+        "aggregate": null
+      },
+      "badge": "http://e0.365dm.com/football/badges/96/530.png",
+      "id": 530,
+      "name": {
+        "full": "Bayern Munich",
+        "short": "Bayern"
+      },
+      "synopsis": {
+        "player":"G Cahill",
+        "events":[
+          {
+            "time":"2'",
+            "formatted_time":"2nd minute",
+            "eventId":1,
+            "eventType":"goal",
+            "goal": true
+          },
+          {
+            "time":"12'",
+            "formatted_time":"12th minute",
+            "eventId":2,
+            "eventType":"penalty",
+            "penalty": true
+          },
+          {
+            "time":"17'",
+            "formatted_time":"17th minute",
+            "eventId":3,
+            "eventType":"own-goal",
+            "ownGoal": true
+          },
+          {
+            "time":"35'",
+            "formatted_time":"35th minute",
+            "eventId":5,
+            "eventType":"red-card",
+            "redCard": true
+          }
+        ]
+      }
+    },
+    "away": {
+      "url": "/bayer-levurkusen/",
+      "score": {
+        "current": 1,
+        "half_time": null,
+        "aggregate": null
+      },
+      "badge": "http://e0.365dm.com/football/badges/96/934.png",
+      "id": 934,
+      "name": {
+        "full": "Bayer Leverkusen",
+        "short": "Leverkusen"
+      },
+      "synopsis": {
+        "player":"G Cahill",
+        "events":[
+          {
+            "time":"2'",
+            "formatted_time":"2nd minute",
+            "eventId":1,
+            "eventType":"goal",
+            "goal": true
+          },
+          {
+            "time":"12'",
+            "formatted_time":"12th minute",
+            "eventId":2,
+            "eventType":"penalty",
+            "penalty": true
+          },
+          {
+            "time":"17'",
+            "formatted_time":"17th minute",
+            "eventId":3,
+            "eventType":"own-goal",
+            "ownGoal": true
+          },
+          {
+            "time":"35'",
+            "formatted_time":"35th minute",
+            "eventId":5,
+            "eventType":"red-card",
+            "redCard": true
+          }
+        ]
+      }
+    }
+  },
+  "skin": {
+    "name": "championsleague",
+    "bodyBackgroundColour": "#002C5E",
+    "headerBackgroundImage": "dist/UCL_bg.png",
+    "backgroundImage": {
+      "src": "/18/06/{width}x{height}/skysports-champions-league_4336185.jpg?20180614162259"
+    }
+  },
+  "livestream": {
+    "url": "",
+    "buttonText": "Hier geht's zum Livestream"
+  },
+  "venue": {
+    "id": 131,
+    "name": "American Express Community Stadium",
+    "city": "New York"
+  },
+  "summary": null
+}

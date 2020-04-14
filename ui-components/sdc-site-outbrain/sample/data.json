@@ -1,0 +1,21 @@
+{
+    "src": "http://news.sky.com/story/1562067/council-did-not-think-sinkhole-would-collapse",
+    "widgetId": "AR_3",
+    "obTemplate": "skynews",
+    "widgetPlacement": "footer",
+    "widgetMapping": {
+        "footer": {
+            "app": {
+                "phone": "AR_3",
+                "tablet": "AR_1"
+            }
+        }
+    },
+    "target": "web",
+    "installationKeys": {
+        "app": {
+            "phone": "SKY1",
+            "tablet": "SKY2"
+        }
+    }
+}

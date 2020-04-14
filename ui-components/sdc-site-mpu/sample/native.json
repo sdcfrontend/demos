@@ -1,0 +1,17 @@
+{
+  "id": "native-ad",
+  "ad-type": "native-ad",
+  "partial-class": "sdc-site-tiles__item",
+  "advertData": {
+    "id": "native-ad", 
+    "ad-type": "native-ad",
+    "targeting": [],
+    "size": {
+      "desktop": [[3,3]]
+    }
+  },
+  "targeting": {},
+  "tag": "20346936/skynews/uk-homepage",
+  "targeting-strnativekey": "dohLgLeB2waZW5Sk43Kx5yoE",
+  "targeting-platform": "uat"
+}

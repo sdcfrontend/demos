@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../../../css/min/site-core.css">
+    <style>
+      div[data-status]:after {
+        background: hotpink;
+        display: inline-block;
+        padding: 0.4em;
+        font-size: 15px;
+        margin: 0.5em;
+        content: "status - " attr(data-status)
+      }
+    </style>
+  </head>
+  <body>
+  <div style="max-width: 960px;padding: 15px;margin: 0 auto" data-component-name="sdc-site-fixres">
+  <h6 class="sdc-site-fixres__header3">Paste json in below to update fixture</h6>
+  <br>
+  <textarea name="name" rows="8" cols="40" style="font-size: 16px; color: #777;padding: 0.4em;display: block;width: 100%">#{textarea-data}</textarea>
+  <br>
+  <button id="button1">Update JSON</button>
+  <br>
+  <br>
+  <h6 class="sdc-site-fixres__header3">Paste json url endpoint</h6>
+  <input value="http://d.365dm.com/api/score-centre/v1/multisport/fixture/?football=353105" type="text" style="font-size: 16px; color: #777;padding: 0.4em;display: block;width: 100%">
+  <br>
+  <button id="button2">Update endpoint</button>
+  <br>
+  <br>
+  #{componentHTML}
+  </div>
+  <br>
+  <!-- call using the require js component loader
+    add the module options as data attributes on the component parent div:
+    <div class="#{componentName}" data-my-parameter="2">
+    maps to {myParameter: 2}
+  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"></script>
+  <script>
+    requirejs.config({
+      "paths": {
+        "#{componentName}": "script"
+      }
+    });
+  </script>
+  <script src="/js/min/site-main.js"></script>
+  <script>
+    requirejs(['site-main'], function(site){
+      site.init();
+    })
+  </script>
+
+  <script>
+
+    var textFile = null;
+    function makeJSON(text) {
+      var data = new Blob([text], {type: 'text/plain'});
+      // If we are replacing a previously generated file we need to
+      // manually revoke the object URL to avoid memory leaks.
+      if (textFile !== null) {
+        window.URL.revokeObjectURL(textFile);
+      }
+
+      textFile = window.URL.createObjectURL(data);
+      return textFile;
+    };
+
+    document.querySelector('#button1').onclick = function(){
+
+      var livematch = document.querySelector('[data-component-name="sdc-site-fixres"]');
+      var textarea = document.querySelector('textarea').value;
+      textarea = textarea.trim();
+      var json = JSON.parse(textarea);
+
+      livematch.querySelector('[data-id]').setAttribute('data-id', json.football[0].id);
+      livematch.setAttribute('data-url', makeJSON(textarea));
+    };
+
+    document.querySelector('#button2').onclick = function(){
+      var livematch = document.querySelector('[data-component-name="sdc-site-fixres"]');
+      var textbox = document.querySelector('input').value;
+
+      livematch.querySelector('[data-id]').setAttribute('data-id', textbox.split('football=')[1].split(',')[0]);
+      livematch.setAttribute('data-url', textbox);
+
+    }
+
+  </script>
+
+  <!-- or call the js module directly -->
+  <!-- <script src="js/bundle.js"></script>
+  <script>
+    window['#{componentName}'](document.querySelector('.#{componentName}'))
+  </script> -->
+  </body>
+</html>
