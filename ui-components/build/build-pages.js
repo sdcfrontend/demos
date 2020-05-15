@@ -75,6 +75,8 @@ function buildsection(name, gitlink) {
     html += hbs(item) + "<br><br>";
   });
 
+  html = html.replace(/http:/g, 'https:');
+
   html = page.replace(/#{component}/g, html).replace(/#{name}/g, name).replace(/#{git-link}/g, gitlink.replace('git+', ''));
 
   // compile css
