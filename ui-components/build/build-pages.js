@@ -62,7 +62,7 @@ function buildsection(name, gitlink) {
 
   let data = {};
   try {
-    data = [require(path.resolve(ROOT, 'node_modules', name, 'sample/data.json'))];
+    data = require(path.resolve(ROOT, 'node_modules', name, 'sample/multiple.json'));
   } catch (error) {
     data = [require(path.resolve(ROOT, 'node_modules', name, 'sample/data.json'))];
   }

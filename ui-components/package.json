@@ -76,7 +76,7 @@
     "sdc-site-share": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-share.git",
     "sdc-site-table": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-table.git",
     "sdc-site-tabs": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tabs.git",
-    "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git",
+    "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git#css-variables",
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
     "sdc-site-trending": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-trending.git",
     "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git"

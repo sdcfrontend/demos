@@ -9,68 +9,25 @@
           "label": "Video"
         },
         "inline-video": {
-          "id": "NtMHk1YzE6RbVMVGAiODj6p8Nyk8IHCp",
-          "sdcId": "4064302",
-          "originatorId": "36",
-          "package": "Sky Bundesliga",
-          "provider": "ooyala",
-          "providers": {
-            "svl": "false",
-            "ooyala": "true"
+          "dev": true,
+          "provider": "brightcove",
+          "originatorId": "rJtrO8EKW",
+          "id": "edc29e5d-4be5-4840-b34d-c2ac42afcc21",
+          "playerId": "OqdPJBXJ",
+          "videoId": "edc29e5d-4be5-4840-b34d-c2ac42afcc21",
+          "accountId": "6058004219001",
+          "caption": "Here is a video caption for this video",
+          "captionPrefix": "Video",
+          "options": {},
+          "posterTemplate": {
+            "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
+            "sizes": ["768x432", "1600x900"]
           },
-          "adsproviders": {
-            "dfp": "true",
-            "freewheel": "false"
-          },
-          "playerId": "3d13c57cd8c0497c8c9be33dfa563acc",
-          "accountKey": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN.IXUXg",
-          "partnerCode": "Bqb2cyOuiQ2XtkNjDDX3A_UsQevN",
-          "videoSrc": "http:\/\/ak.c.ooyala.com\/dzdjc0NjE6bd74tZRSfNt0_4eX5OVfYf\/DOcJ-FxaFrRg4gtDEwOjNhMzowODE7ex",
-          "caption": "David Blevins looks back at the life of Martin McGuinness who has died at the age of 66.",
-          "headline": "Video headline",
-          "duration": 86,
-          "created": "2017-02-08T10:28",
-          "poster": {
-            "aspectRatio": "16\/9",
-            "src": "https://e3.365dm.com/17/03/536x302/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170321064329",
-            "template": "https://e3.365dm.com/17/03/{width}x{height}/3bea5fef9e1017d161808bd991930cbb507c2b061ef5d6cf2ec477c66c9990f6_3913689.jpg?20170521064329",
-            "alt": "Martin McGuinness shakes hands with the Queen in 2016",
-            "caption": null,
-            "dimensions2": [
-              {
-                "url": "http:\/\/uat.e.365dm.com\/17\/03\/536x302\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
-                "width": 536
-              },
-              {
-                "url": "http:\/\/uat.e.365dm.com\/17\/03\/736x414\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
-                "width": 736
-              },
-              {
-                "url": "http:\/\/uat.e.365dm.com\/17\/03\/992x558\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
-                "width": 992
-              },
-              {
-                "url": "http:\/\/uat.e.365dm.com\/17\/03\/1096x616\/94513dfc2800f4481a9ca360f7ae2f5811ef45c637232662649a512d194e239a_3475368.jpg?20170320121719",
-                "width": 1096
-              }
-            ]
-          },
-          "aspectRatio": "16/10",
-          "dimension": {
-            "fullBleed": false,
-            "halfWidth": false
-          },
-          "skinOverride": {
-            "startScreen": {
-              "playButtonPosition": "left"
-            }
-          },
-          "tokenRequired": false,
-          "tokenFetchMethod": "url",
-          "tokenFetchOptions": {
-            "url": "https://www.example.com?originator=34&embed_code=xla3k3OTE64Em_CXqaN0o3ImNOvlV_AO"
-          },
-          "ooyalaAssetVersion": "4.11.13"
+          "aspectRatio": "16/9",
+          "iframeUrl": "https://sdcfrontend.github.io/demos/amp-iframe/",
+          "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
+          "sensitive": false,
+          "autoplay": false
         }
       }
     ]
@@ -207,7 +164,7 @@
           "label": "Football"
         },
         "title": "2 Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "exclusive",
         "listingImage": {
           "type": "image",
@@ -240,7 +197,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "sponsored",
         "listingImage": {
           "type": "image",
@@ -273,7 +230,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "live",
         "listingImage": {
           "type": "image",
@@ -306,7 +263,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "analysis",
         "listingImage": {
           "type": "image",
@@ -339,7 +296,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "transfer",
         "listingImage": {
           "type": "image",
@@ -372,7 +329,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "update",
         "listingImage": {
           "type": "image",
@@ -453,7 +410,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "exclusive",
         "listingImage": {
           "type": "image",
@@ -486,7 +443,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "sponsored",
         "listingImage": {
           "type": "image",
@@ -519,7 +476,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "live",
         "listingImage": {
           "type": "image",
@@ -552,7 +509,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "analysis",
         "listingImage": {
           "type": "image",
@@ -585,7 +542,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "transfer",
         "listingImage": {
           "type": "image",
@@ -666,7 +623,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "update",
         "listingImage": {
           "type": "image",
@@ -699,7 +656,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "exclusive",
         "listingImage": {
           "type": "image",
@@ -732,7 +689,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "sponsored",
         "listingImage": {
           "type": "image",
@@ -765,7 +722,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "listingImage": {
           "type": "image",
           "template": "https://uat.e.365dm.com/16/08/{width}x{height}/sergio-aguero-aguero-man-city-aguero-scores_3766300_3424114.jpg?20160818004905",
@@ -844,7 +801,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "live",
         "listingImage": {
           "type": "image",
@@ -925,7 +882,7 @@
           "label": "Football"
         },
         "title": "Robben: 'Sind noch nicht in Topverfassung'",
-        "indexTitle": "Robben Nicht Bereit",
+        "indexTitle": "China economic growth hits lowest level for three decades",
         "significance": "live",
         "listingImage": {
           "type": "image",

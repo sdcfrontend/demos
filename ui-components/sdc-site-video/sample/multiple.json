@@ -9,9 +9,12 @@
     "accountId": "6058004219001",
     "caption": "Today's front pages",
     "captionPrefix": "Video",
-    "poster": {
+    "posterTemplate": {
       "template": "https://e3.365dm.com/20/04/{width}x{height}/skynews-coronvirus_4974066.jpg?bypass-service-worker&20200421214526",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
     "aspectRatio": "16/9",
     "sdcVideoId": "11223344",
@@ -21,17 +24,27 @@
   {
     "dev": true,
     "provider": "brightcove",
-    "originatorId": "49",
-    "originatorHandle": "brightcove-sport-gb",
-    "playerId": "default",
-    "videoId": "Z0M2U4YjE61HXOv9qAUeVC72njP-177I",
-    "accountId": "6057994515001",
-    "caption": "Goals of the week",
+    "originatorId": "51",
+    "originatorHandle": "brightcove-news-gb",
+    "playerId": "OqdPJBXJ",
+    "videoId": "BpZG4yYTE6qKBg7O7_nx0nyYnRw-ZqmJ",
+    "accountId": "6058004219001",
+    "caption": "Setting Vertical volume panel",
     "captionPrefix": "Video",
-    "options": {"controlBar": {"volumePanel": {"inline": false, "vertical": true}}},
-    "poster": {
+    "options": {
+      "controlBar": {
+        "volumePanel": {
+          "inline": false,
+          "vertical": true
+        }
+      }
+    },
+    "posterTemplate": {
       "template": "https://e3.365dm.com/20/04/{width}x{height}/promo411742386_4973630.jpg?20200421135558",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
     "aspectRatio": "16/9",
     "sdcVideoId": "11223344",
@@ -48,9 +61,12 @@
     "accountId": "6058004219001",
     "caption": "This video does not exist on Video Cloud on the News Dev account",
     "captionPrefix": "Video",
-    "poster": {
+    "posterTemplate": {
       "template": "https://e3.365dm.com/20/04/{width}x{height}/skynews-lockdown-road-thumbnail_4973944.jpg?bypass-service-worker&20200421180851",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
     "aspectRatio": "16/9",
     "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
@@ -65,10 +81,20 @@
     "videoId": "8595ee0f-c94b-4f11-b3c9-379ad000b906",
     "playerId": "OqdPJBXJ",
     "accountId": "6058004219001",
-    "options": {"language":"de","languages":{"de":{"Play Video":"DE: Play Video"}}},
-    "poster": {
+    "options": {
+      "language": "de",
+      "languages": {
+        "de": {
+          "Play Video": "DE: Play Video"
+        }
+      }
+    },
+    "posterTemplate": {
       "template": "https://e3.365dm.com/20/04/{width}x{height}/skynews-coronavirus-hancock_4973917.jpg?bypass-service-worker&20200421172749",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
     "aspectRatio": "16/9",
     "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
@@ -83,9 +109,12 @@
     "videoId": "6d311d46-2fdc-4b24-954e-11fe0c971823",
     "playerId": "OqdPJBXJ",
     "accountId": "6058004219001",
-    "poster": {
+    "posterTemplate": {
       "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
     "aspectRatio": "16/9",
     "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
@@ -100,11 +129,16 @@
     "videoId": "1111-22222-4444-5666778",
     "playerId": "OqdPJBXJ",
     "accountId": "6058004219001",
-    "poster": {
+    "posterTemplate": {
       "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
-    "options": {"language": "de"},
+    "options": {
+      "language": "de"
+    },
     "aspectRatio": "16/9",
     "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
     "sensitive": false,
@@ -118,11 +152,33 @@
     "videoId": "1ecb3dd0-8492-11ea-bc55-0242ac130003",
     "playerId": "default",
     "accountId": "6058004176001",
-    "poster": {
+    "posterTemplate": {
       "template": "https://e6.365dm.de/20/04/{width}x{height}/c4acf44dd0b90e6a4161121cd9b5ca4d653a09695629368df9f52707e575f336_4974183.jpg?bypass-service-worker&20200422084141",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
-    "options": {"controlBar": {"volumePanel": {"inline": false, "vertical": true}} ,"errors": {"en": [{"headline": "Headline overridden", "message": "Message overridden", "dismiss": false, "errorCodes": ["VIDEO_CLOUD_ERR_VIDEO_NOT_FOUND"]}]}},
+    "options": {
+      "controlBar": {
+        "volumePanel": {
+          "inline": false,
+          "vertical": true
+        }
+      },
+      "errors": {
+        "en": [
+          {
+            "headline": "Headline overridden",
+            "message": "Message overridden",
+            "dismiss": false,
+            "errorCodes": [
+              "VIDEO_CLOUD_ERR_VIDEO_NOT_FOUND"
+            ]
+          }
+        ]
+      }
+    },
     "aspectRatio": "16/9",
     "sdcVideoId": "EyajZhajE6qOqZO9FH0r9TRKk9CZmaV8",
     "sensitive": false,
@@ -136,11 +192,34 @@
     "videoId": "ac0916e6-8491-11ea-bc55-0242ac130003",
     "playerId": "default",
     "accountId": "6058004176001",
-    "poster": {
+    "posterTemplate": {
       "template": "https://e6.365dm.de/20/04/{width}x{height}/cfcc9e817dcba27eea0906c66959cb05bdb241e1aaf1537017421006b91ddc06_4974276.jpg?bypass-service-worker&20200422102851",
-      "sizes": ["768x432", "1600x900"]
+      "sizes": [
+        "768x432",
+        "1600x900"
+      ]
     },
-    "options": {"controlBar": {"volumePanel": {"inline": false, "vertical": true}} ,"language": "de","errors": {"de": [{"headline": "DE Error Headline overridden", "message": "DE Error Message overridden", "dismiss": false, "errorCodes": ["VIDEO_CLOUD_ERR_VIDEO_NOT_FOUND"]}]}},
+    "options": {
+      "controlBar": {
+        "volumePanel": {
+          "inline": false,
+          "vertical": true
+        }
+      },
+      "language": "de",
+      "errors": {
+        "de": [
+          {
+            "headline": "DE Error Headline overridden",
+            "message": "DE Error Message overridden",
+            "dismiss": false,
+            "errorCodes": [
+              "VIDEO_CLOUD_ERR_VIDEO_NOT_FOUND"
+            ]
+          }
+        ]
+      }
+    },
     "aspectRatio": "16/9",
     "sdcVideoId": "112233456789",
     "sensitive": false,

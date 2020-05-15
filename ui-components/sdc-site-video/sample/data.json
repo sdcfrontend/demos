@@ -9,7 +9,7 @@
   "caption": "Here is a video caption for this video",
   "captionPrefix": "Video",
   "options": {},
-  "poster": {
+  "posterTemplate": {
     "template": "http://e3.365dm.com/17/09/{width}x{height}/3473a86cb49601cfbf554e083ada62fff2b3f99febd994f2495b99e3c9fbaca3_4088406.jpg?20170901040145",
     "sizes": ["768x432", "1600x900"]
   },

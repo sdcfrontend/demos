@@ -458,6 +458,9 @@ ul {
   font-size: var(--component-text, 1em);
   margin-bottom: var(--component-margin); }
 
+.sdc-site-video[data-amp-iframe-embed="true"][class] {
+  margin-bottom: 0; }
+
 .sdc-site-video__content {
   position: relative;
   /* set 16/9 as a fallback if no aspectRatio is specified */
