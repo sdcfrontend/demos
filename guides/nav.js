@@ -24,7 +24,7 @@ export default function (el) {
           <li class="nav-item"><a class="nav-item-link" href="color.html">Colour</a></li>
           <li class="nav-item"><a class="nav-item-link" href="typography.html">Typography</a></li>
           <li class="nav-item"><a class="nav-item-link" href="spacing.html">Spacing</a></li>
-          <li class="nav-item"><a class="nav-item-link" href="atoms.html">Atoms</a></li>
+          <!--<li class="nav-item"><a class="nav-item-link" href="atoms.html">Atoms</a></li>-->
           <li class="nav-item"><a class="nav-item-link" href="accessibility.html">A11y</a></li>
         </ul>
       </div>
