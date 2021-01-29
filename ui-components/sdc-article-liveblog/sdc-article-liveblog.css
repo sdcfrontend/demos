@@ -1,0 +1,582 @@
+@charset "UTF-8";
+/* ==========================================================================
+   TOOLS IMPORTS
+   ========================================================================== */
+/**
+ * Contains partials which do not directly compile to CSS – variables, mixins,
+ * functions and the like. This is useful for use in third party components which
+ * need access to the settings and tools, but not base styles.
+ */
+/* ==========================================================================
+   SETTINGS
+   ========================================================================== */
+/**
+ * CONTENTS
+ *
+ * Config...............Configuration and environment settings.
+ * Globals..............Globally available settings for the entire project.
+ * Colors...............Brand colours are centrally managed for later use.
+ * Typography...........Define our typographical settings in one place.
+ * Breakpoints..........Hold sitewide breakpoint values in an array for use with
+ *                      Sass MQ.
+ */
+/* ==========================================================================
+   TOOLS
+   ========================================================================== */
+/**
+ * CONTENTS
+ *
+ * Sass MQ..............Neat little library for managing and using Media Queries
+ *                      throughout the rest of the project.
+ * Supercell............Third-party width generator mixin.
+ * Functions............A collection of custom Sass functions.
+ * Mixins...............A collection of custom Sass mixins.
+ * Mixins UI............A collection of custom Sass mixins supporting UI components.
+ * Typography...........Mixins specifically for helping with setting type.
+ * Gradients............Mixins specifically for helping with creating gradients.
+ * Divider..............Mixins specifically for helping with creating styles
+ *                      for use in dividers.
+ * Page.................Mixin specifically for helping with creating the
+ *                      default page background.
+ * Legacy...............Temporary wrappers for tools to be deprecated.
+ */
+/* stylelint-disable string-no-newline */
+/* stylelint-enable */
+.sdc-article-liveblog,
+.sdc-article-liveblog * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+.sdc-article-liveblog {
+  width: 100%; }
+  .sdc-article-liveblog ul {
+    list-style: none; }
+  .sdc-article-liveblog-video {
+    position: relative;
+    padding-top: 56.25%; }
+    .sdc-article-liveblog-video iframe {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      overflow: hidden; }
+
+.fyre-liveblog .fyre-auth,
+.fyre-liveblog .fyre-stream-stats,
+.fyre-liveblog .fyre-help,
+.fyre-liveblog .fyre-stream-sort-bar,
+.fyre-liveblog .fyre-stream-header,
+.fyre-liveblog .fyre-flag-link,
+.fyre-liveblog .fyre-share-link {
+  display: none !important; }
+
+.fyre-liveblog .fyre-login-bar > a {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  line-height: 25px;
+  margin-top: 0 !important;
+  color: #214cb8; }
+
+.fyre-liveblog .fyre-stream-livecount {
+  font-size: 16px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  color: #999; }
+
+.fyre-liveblog .fyre-live-container {
+  height: 25px; }
+
+.fyre-liveblog .fyre-editor {
+  top: -12px;
+  clear: both;
+  margin: 0;
+  padding: 12px;
+  background: #f4f4f4; }
+
+.fyre-liveblog .fyre-stream-header {
+  position: relative;
+  clear: both;
+  margin: 0 0 18px; }
+
+.fyre-liveblog .fyre-follow-conversation {
+  font-size: 16px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  position: absolute;
+  right: 12px !important;
+  bottom: 12px;
+  display: inline-block;
+  padding: 2px 4px 2px 1px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #333; }
+
+.fyre-liveblog .fyre-follow-conversation:before {
+  font-family: icons;
+  font-size: .75em;
+  position: relative;
+  left: 1px;
+  display: inline-block;
+  margin-right: 5px;
+  content: "\e052";
+  color: #999; }
+
+.fyre-liveblog .fyre-stream-sort {
+  float: none !important;
+  margin: 0 !important; }
+
+.fyre-liveblog .fyre-stream-sort-options {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif; }
+
+.fyre-liveblog .fyre-stream-sort-options > .fyre-stream-sort-newest,
+.fyre-liveblog .fyre-stream-sort-options > .fyre-stream-sort-oldest {
+  display: block;
+  display: inline-block;
+  padding: 12px 0;
+  vertical-align: top;
+  color: #333 !important; }
+
+.fyre-liveblog .fyre-stream-sort-options > a:active {
+  font-weight: normal !important; }
+
+.fyre-liveblog .fyre-stream-sort-options > .fyre-stream-sort-selected {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  font-weight: normal !important;
+  pointer-events: none;
+  color: #333 !important;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAHAQMAAADETHrjAAAAA1BMVEUhTLgHgyq6AAAADElEQVQIHWNgoDUAAABiAAEjI2VLAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: 0 155%;
+  background-origin: content-box;
+  background-size: 100% 2px; }
+
+.livefyre-logo__link {
+  background-image: url("//zor.livefyre.com/wjs/v1.0/images/icons/poweredbylivefyre.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 24px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #404040;
+  padding-left: 28px;
+  padding-top: 4px;
+  font-family: sans-serif; }
+  .livefyre-logo__link:hover {
+    background-color: rgba(0, 0, 0, 0.08); }
+
+.sdc-article-liveblog .fyre .fyre-stream-more {
+  background: none !important; }
+
+.sdc-article-liveblog .fyre .fyre-stream-more .fyre-stream-more-container {
+  font-size: 16px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  color: #214cb8;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  display: block;
+  height: auto;
+  padding-top: .65em;
+  padding-bottom: .65em;
+  border-radius: 0; }
+
+.sdc-article-liveblog .fyre .fyre-stream-more .fyre-stream-more-container:hover {
+  background: rgba(0, 0, 0, .08) !important; }
+
+.sdc-article-liveblog .fyre .fyre-stream-more .fyre-stream-more-container .fyre-text {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  line-height: inherit !important;
+  color: #333; }
+
+@media all and (max-width: 600px) {
+  .site-layout-primary__col1 {
+    padding: 0 0 !important; }
+  .fyre-liveblog .fyre-stream-header {
+    margin-bottom: 9px; }
+  .livefyre-logo__link {
+    margin: 0 9px 12px; }
+  .article.article--livefyre {
+    padding: 0; } }
+
+.livefyre-pinned {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  display: none;
+  margin-bottom: 12px;
+  color: #333; }
+  .livefyre-pinned--active {
+    display: block; }
+
+.livefyre-pinned a {
+  -ms-word-break: break-all;
+  /* Be VERY careful with this, breaks normal words wh_erever */
+  word-break: break-all;
+  /* Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto; }
+
+.livefyre-pinned__item {
+  background: #f4f4f4;
+  border-bottom: 1px solid #eaeaea;
+  padding: 24px;
+  line-height: 1.4em; }
+
+.livefyre-pinned__item p {
+  margin: 0 0 1.1em; }
+
+.livefyre-pinned__item p:last-child {
+  margin-bottom: 0; }
+
+.livefyre-pinned__item ul {
+  list-style: disc; }
+
+.livefyre-pinned__item ul,
+.livefyre-pinned__item ol {
+  margin-bottom: .6em;
+  padding-left: 24px; }
+
+.livefyre-pinned__item a {
+  color: #214cb8;
+  text-decoration: underline;
+  font-weight: 600;
+  text-decoration-skip: ink; }
+
+.livefyre-pinned__item strong {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: bold; }
+
+.fyre-liveblog .fyre-comment-wrapper {
+  float: left;
+  clear: both;
+  width: 100%;
+  padding: 12px 0 0 0 !important; }
+
+.fyre-liveblog .fyre-comment-head {
+  float: left;
+  width: 20%;
+  margin: 0 !important;
+  padding-right: 18px; }
+
+.fyre-liveblog .fyre-comment-body {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  float: left;
+  width: 80%;
+  margin: 0 !important;
+  padding: 0 0 0 1px;
+  color: #333; }
+
+.fyre-liveblog .fyre-comment-footer {
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 24px !important;
+  margin: 0 !important; }
+
+.fyre-liveblog .fyre-comment-divider {
+  clear: both; }
+
+.fyre-liveblog .fyre-comment-user,
+.fyre-liveblog .fyre-comment-username,
+.fyre-liveblog .fyre-comment-user-rating,
+.fyre-liveblog .fyre-comment-author-tag,
+.fyre-liveblog .fyre-comment-tag,
+.fyre-liveblog .fyre-comment-action-button,
+.fyre-liveblog .fyre-comment-like-count,
+.fyre-liveblog .fyre-comment-head .fyre-comment-title,
+.fyre-liveblog .fyre-comment p > br:first-child,
+.fyre-liveblog .fyre-comment-from-text {
+  display: none !important; }
+
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="twitter.com"][href*="status"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="vine.co"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="vimeo.com"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="soundcloud.com"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="audioboo.fm"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="facebook.com"][href*="posts"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="youtube.com"],
+.fyre-liveblog .fyre-comment a[rel="nofollow"][href*="audioboom.com"] {
+  display: none; }
+
+.fyre-liveblog .article.fyre-comment-article {
+  display: block !important;
+  height: auto !important;
+  transition: opacity 1s ease-on-out; }
+
+.fyre-liveblog .article.fyre-comment-article[style^="display: none"] {
+  opacity: 0; }
+
+.fyre-liveblog .fyre-comment-date {
+  float: none !important;
+  height: auto !important;
+  text-align: center;
+  line-height: 22px !important;
+  background-image: none !important;
+  padding: 0 !important;
+  color: #4c4c4c !important; }
+
+.fyre-liveblog .fyre-comment-wrapper a,
+.fyre-liveblog .fyre-comment-wrapper a:hover {
+  color: #214cb8 !important; }
+
+.fyre-liveblog .fyre-comment strong a,
+.fyre-liveblog .fyre-comment a strong {
+  font-weight: bold; }
+
+.fyre-liveblog .fyre-comment-wrapper p {
+  line-height: 1.4em;
+  margin-bottom: 1.1em !important; }
+
+.fyre-liveblog .fyre-comment-wrapper .fyre-comment ul,
+.fyre-liveblog .fyre-comment-wrapper .fyre-comment ol {
+  margin: 0 0 1em 0 !important; }
+
+.fyre-liveblog .fyre-comment-wrapper li {
+  list-style-position: outside !important;
+  margin: 0 0 .5em 1em !important;
+  line-height: 1.4em !important; }
+
+.fyre-liveblog .fyre-comment-wrapper strong {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  color: #333;
+  font-weight: bold; }
+
+.fyre-liveblog .fyre-comment-wrapper p:last-child,
+.fyre-liveblog .fyre-comment-wrapper .fyre-comment ul:last-child,
+.fyre-liveblog .fyre-comment-wrapper .fyre-comment ol:last-child {
+  margin-bottom: 0 !important; }
+
+.fyre-liveblog .fyre-liveblog-expanded > .fyre-comment-wrapper .fyre-comment-reply {
+  margin-right: 0 !important; }
+
+.fyre-liveblog .fyre-liveblog-expanded > .fyre-comment-wrapper .fyre-comment-footer .fyre-comment-actions {
+  margin: 0 !important; }
+
+.fyre-liveblog .fyre-liveblog-expanded .fyre-comment-footer,
+.fyre-liveblog .fyre-liveblog-expanded.fyre-comment-source-13 .fyre-comment-footer {
+  margin: 0 !important; }
+
+.fyre-liveblog .fyre-liveblog .fyre-liveblog-expanded .fyre-comment-replies {
+  margin-top: -152px !important; }
+
+.fyre-liveblog .fyre-comment-wrapper > .fyre-comment-footer > .fyre-editor {
+  margin-top: 12px !important; }
+
+.fyre-liveblog .fyre-comment-media {
+  margin-top: 1.5em; }
+
+.fyre-liveblog .fyre-comment-raw-html {
+  text-align: left; }
+
+.fyre-liveblog .fyre-comment-media img {
+  height: auto; }
+
+.fyre-liveblog .fyre-comment-media .fyre-comment-media-play {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODQiIGhlaWdodD0iMzg0IiB2aWV3Qm94PSIwIDAgMzg0IDM4NCIgY2xhc3M9IiN7Y2xhc3N9IiBzdHlsZT0iZmlsbDogd2hpdGUiPiAgICAgICAgICA8cGF0aCBkPSJNMTkyIDI0LjAwMWM5Mi42NDEgMCAxNjcuOTk4IDc1LjM1OCAxNjcuOTk4IDE2Ny45OTVzLTc1LjM1NyAxNjguMDAyLTE2Ny45OTggMTY4LjAwMmMtOTIuNjM2IDAtMTY3Ljk5OS03NS4zNjUtMTY3Ljk5OS0xNjguMDAyIDAtOTIuNjM2IDc1LjM2My0xNjcuOTk1IDE2Ny45OTktMTY3Ljk5NW0wLTI0LjAwMWMtMTA2LjAzNiAwLTE5MiA4NS45NTctMTkyIDE5MS45OTYgMCAxMDYuMDQ3IDg1Ljk2NCAxOTIuMDA0IDE5MiAxOTIuMDA0IDEwNi4wMzUgMCAxOTItODUuOTU3IDE5Mi0xOTIuMDA0IDAtMTA2LjAzOS04NS45NjUtMTkxLjk5Ni0xOTItMTkxLjk5NnoiLz48cGF0aCBkPSJNMjU1LjcyNSAxODIuODQ4bC02Ni4xODYtNjUuOTFjLTEwLjIwNi0xMC4xNzMtMjUuMTE1LTIyLjIyOS0zOC4wMDktOS4zNnYxNjguODQ0YzEyLjg5NCAxMi44NjEgMjcuODAzLjgwNyAzOC4wMDktOS4zNjdsNjYuMTg2LTY1LjkwMmM1LjA2OC01LjA1NSA1LjA2OC0xMy4yNTggMC0xOC4zMDV6Ii8+PC9zdmc+");
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  width: 100px;
+  background-position: 0 0;
+  background-size: 100px; }
+
+.fyre-liveblog .fyre-comment-media blockquote {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  margin-bottom: 1.25em;
+  padding: 0 1em; }
+
+.fyre-liveblog .fyre-comment-media blockquote:last-child {
+  margin-bottom: 0; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails {
+  margin-top: 5px !important;
+  width: 100%;
+  float: left; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails img.fyre-img-thumb,
+.fyre-liveblog .fyre-comment-media-thumbnails .fyre-video-thumbnail {
+  max-height: none !important; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails > div,
+.fyre-liveblog .fyre-comment-media-thumbnails .fyre-img-thumb {
+  display: inline-block;
+  width: 24.25% !important;
+  margin-right: 1% !important;
+  margin-bottom: 1%;
+  border-radius: 0 !important; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails > div {
+  height: 0;
+  padding-bottom: 13.7%; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails .fyre-video-thumbnail {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails .fyre-video-play {
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: contain;
+  background-position: center center; }
+
+.fyre-liveblog .fyre-comment-media-thumbnails > *:nth-child(4n+4) {
+  margin-right: 0 !important; }
+
+.fyre-liveblog .fyre-tag-content-icon-goal .fyre-comment-body,
+.fyre-liveblog .fyre-tag-content-icon-wicket .fyre-comment-body,
+.fyre-liveblog .fyre-tag-content-icon-game-set-match .fyre-comment-body {
+  background: #333;
+  padding: 24px;
+  color: #fff !important; }
+  .fyre-liveblog .fyre-tag-content-icon-goal .fyre-comment-body strong,
+  .fyre-liveblog .fyre-tag-content-icon-wicket .fyre-comment-body strong,
+  .fyre-liveblog .fyre-tag-content-icon-game-set-match .fyre-comment-body strong {
+    color: #fff;
+    font-weight: bold; }
+
+.fyre-liveblog .fyre-tag-content-icon-bn .fyre-comment-body {
+  font-size: 18px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #ffe001;
+  padding: 24px; }
+
+.fyre-liveblog .fyre-tag-content-icon-bn .fyre-comment-body p {
+  line-height: 1.4em; }
+
+.fyre-liveblog .fyre-tag-content-icon-bn .fyre-comment-head:after {
+  display: none; }
+
+.fyre-liveblog .fyre-tag-content-icon-betting .fyre-comment-body {
+  background: #284f9a;
+  padding: 24px;
+  color: #fff !important; }
+  .fyre-liveblog .fyre-tag-content-icon-betting .fyre-comment-body strong {
+    color: #fff;
+    font-weight: bold; }
+
+.fyre-liveblog .fyre-tag-content-icon-red-card .fyre-comment-body {
+  background: #eaeaea;
+  padding: 24px; }
+
+.fyre-liveblog .fyre-tag-content-icon-bn .fyre-comment-body a,
+.fyre-liveblog .fyre-tag-content-icon-bn .fyre-comment-body a:hover,
+.fyre-liveblog .fyre-tag-content-icon-betting .fyre-comment-body a,
+.fyre-liveblog .fyre-tag-content-icon-betting .fyre-comment-body a:hover {
+  color: inherit !important;
+  text-decoration: underline !important; }
+
+.fyre-static {
+  display: block; }
+  .fyre-static .fyre-comment-date {
+    display: block; }
+  .fyre-static .fyre-comment-divider {
+    background: #eee;
+    height: 1px;
+    margin: -2px 0 10px 0;
+    position: relative; }
+  .fyre-static .fyre-comment-media {
+    overflow-x: auto; }
+  .fyre-static .fyre-comment-media * {
+    max-width: 100%; }
+  .fyre-static .fyre-comment-media img {
+    max-height: 480px; }
+
+.fyre .fyre-comment-wrapper .fyre-comment-head time.fyre-comment-date {
+  font-size: 22px;
+  font-family: Sky Text, Helvetica, Arial, sans-serif; }
+
+@-moz-document url-prefix("") {
+  .fyre .fyre-comment-media .fyre-comment-media-expanded img {
+    width: 100%;
+    max-height: none !important; } }
+
+@keyframes nodeInserted {
+  from {
+    opacity: .99; }
+  to {
+    opacity: 1; } }
+
+.fyre-comment-wrapper {
+  animation-duration: .001s;
+  animation-name: nodeInserted; }
+
+.livefyre-blog__icon {
+  width: 48px;
+  height: 48px;
+  margin: 12px auto 0;
+  display: block; }
+
+.fyre-tag-content-icon-twitter .livefyre-blog__icon {
+  color: #4099ff; }
+
+.media-holder {
+  position: relative; }
+
+.media-holder--video {
+  width: 100%;
+  padding-bottom: 56%; }
+
+.media-holder > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.fyre-edit-profile-link {
+  display: none !important; }
+
+.embedly-embed {
+  max-width: 100% !important; }
+
+@media all and (max-width: 600px) {
+  .livefyre-blog__icon {
+    font-size: 32px;
+    line-height: 32px;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 32px;
+    height: 32px;
+    margin: 0; }
+  .fyre-liveblog .fyre-comment-stream {
+    padding: 0 0; }
+  .fyre-liveblog .fyre-comment-head {
+    line-height: 32px;
+    position: relative;
+    float: none;
+    width: 100%;
+    padding: 0 !important; }
+  .fyre-liveblog .fyre-comment-body {
+    font-size: 16px !important;
+    font-family: Sky Text, Helvetica, Arial, sans-serif;
+    float: none;
+    width: 100%; }
+  .fyre-liveblog .fyre-comment-wrapper strong {
+    font-size: 16px;
+    font-family: Sky Text, Helvetica, Arial, sans-serif;
+    font-weight: bold; }
+  .fyre-liveblog .fyre-comment-date {
+    font-size: 20px !important;
+    font-family: Sky Text, Helvetica, Arial, sans-serif;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: inherit !important; }
+  .fyre-liveblog .fyre-comment-media .fyre-comment-media-play {
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    width: 60px;
+    background-size: 60px; } }

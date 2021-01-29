@@ -1,0 +1,91 @@
+/* sdc-site-cookie-notice skin */
+.sdc-site-cookie-notice {
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  font-size: 0.875rem;
+  display: block;
+  visibility: hidden;
+  pointer-events: none; }
+  .no-js .sdc-site-cookie-notice {
+    display: none; }
+  .sdc-site-cookie-notice--fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .sdc-site-cookie-notice--fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  .sdc-site-cookie-notice--fixed-top-overlap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000050;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  .sdc-site-cookie-notice--hidden {
+    display: none; }
+  .sdc-site-cookie-notice--visible {
+    visibility: visible;
+    pointer-events: all; }
+  .sdc-site-cookie-notice a {
+    color: #3157a1;
+    text-decoration: none; }
+    .sdc-site-cookie-notice a:hover {
+      border-bottom: 1px solid #000;
+      color: #333; }
+  .sdc-site-cookie-notice__wrapper {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1024px; }
+  .sdc-site-cookie-notice__text {
+    display: inline-block;
+    max-width: 85%; }
+  .sdc-site-cookie-notice__close {
+    float: right;
+    margin: 2px 0;
+    padding: 0;
+    border: none;
+    background: 0 0;
+    font-size: 100%;
+    font-family: inherit;
+    cursor: pointer;
+    appearance: none; }
+    .sdc-site-cookie-notice__close-text {
+      position: absolute;
+      overflow: auto;
+      clip: rect(1px, 1px, 1px, 1px);
+      margin-right: 8px;
+      width: 1px;
+      height: 1px; }
+      .sdc-site-cookie-notice__close-text:hover {
+        border-bottom: 1px solid #000;
+        color: #333; }
+    .sdc-site-cookie-notice__close-icon {
+      position: relative;
+      top: -1px; }
+      .sdc-site-cookie-notice__close-icon svg {
+        width: 1.3em;
+        height: 1.3em;
+        vertical-align: middle; }
+      .sdc-site-cookie-notice__close-icon path {
+        fill: #3157a1; }
+
+@media screen and (min-width: 480px) {
+  .sdc-site-cookie-notice__text {
+    max-width: 95%; } }
+
+@media screen and (min-width: 800px) {
+  .sdc-site-cookie-notice__text {
+    max-width: 90%; }
+  .sdc-site-cookie-notice__close-text {
+    position: static;
+    clip: rect(auto, auto, auto, auto);
+    width: auto;
+    height: auto; } }

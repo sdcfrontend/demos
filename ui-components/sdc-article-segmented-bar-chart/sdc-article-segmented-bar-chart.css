@@ -1,0 +1,48 @@
+.sdc-article-segmented-bar-chart {
+  line-height: normal; }
+  .sdc-article-segmented-bar-chart__inner {
+    width: 100%; }
+  .sdc-article-segmented-bar-chart__title {
+    width: 100%;
+    font-weight: normal;
+    font-size: 1.25rem;
+    background-color: #f4f5f7;
+    padding: 0.3rem;
+    margin-bottom: 1px; }
+  .sdc-article-segmented-bar-chart__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background: linear-gradient(to bottom, #bbb 0%, #ddd 100%); }
+  .sdc-article-segmented-bar-chart__item {
+    background-color: #eee;
+    display: block;
+    overflow: visible;
+    flex: 0 0 50%;
+    padding: 0.3rem;
+    max-width: 50%; }
+    .sdc-article-segmented-bar-chart__item--right {
+      text-align: right;
+      direction: rtl; }
+  .sdc-article-segmented-bar-chart__value {
+    width: 50%;
+    flex: 1 1 50%;
+    max-width: 50%;
+    order: -1; }
+  .sdc-article-segmented-bar-chart__container {
+    width: 200%; }
+  .sdc-article-segmented-bar-chart__bar {
+    padding: 0.3rem;
+    white-space: nowrap;
+    font-size: 2em; }
+  .sdc-article-segmented-bar-chart__text-value {
+    position: relative;
+    z-index: 10; }
+  .sdc-article-segmented-bar-chart__source {
+    display: block;
+    font-size: .875em;
+    clear: both;
+    color: #707070;
+    margin-top: 0.3rem;
+    padding-left: 0.3rem; }

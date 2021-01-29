@@ -1,0 +1,47 @@
+/* BLACKJACK CONTENT FACTBOX */
+/* =================== */
+/* BLACKJACK CONTENT IMAGE SKIN */
+/* =================== */
+/* BLACKJACK CONTENT FACTBOX COMPONENT */
+/* =================== */
+.sdc-article-factbox {
+  max-width: 100%;
+  font-size: 1em; }
+
+.sdc-article-factbox__text-wrapper {
+  color: #4a4a4a;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.2em 32px;
+  border-top: 1px solid #eaeaea;
+  border-right: 0;
+  border-bottom: 1px solid #eaeaea;
+  border-left: 0; }
+
+.sdc-article-factbox__title {
+  font-size: 1.5555em;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 0.75em 0;
+  text-align: center; }
+
+.sdc-article-factbox__list {
+  list-style-position: inside;
+  list-style-type: disc; }
+
+.sdc-article-factbox__text {
+  line-height: 1.4;
+  font-size: 1.1em;
+  text-align: left; }
+
+.sdc-article-factbox__text + .sdc-article-factbox__text {
+  margin: 0.5em 0 0 0; }
+
+@media all and (max-width: 680px) {
+  .sdc-article-factbox__text-wrapper {
+    padding: 1.5rem 16px; } }
+
+@media all and (max-width: 480px) {
+  .sdc-article-factbox__text-wrapper {
+    padding: 1.5rem 10.66667px;
+    font-size: 0.9em; } }

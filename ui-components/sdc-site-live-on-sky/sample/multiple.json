@@ -3,6 +3,7 @@
     "additionalInfo": "Monday Night Football",
     "sport": "football",
     "theme": "default",
+    "isLive": true,
     "tvListing": {
       "channelId": 1,
       "competitionId": 1,

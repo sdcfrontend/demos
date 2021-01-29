@@ -1,0 +1,10 @@
+.sdc-article-youtube__inner {
+  position: relative;
+  padding-bottom: 56.25%; }
+
+.sdc-article-youtube__inner > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0; }

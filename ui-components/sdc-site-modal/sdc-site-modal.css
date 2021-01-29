@@ -1,0 +1,145 @@
+.sdc-site-modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000005; }
+
+.sdc-site-modal[aria-hidden="true"] {
+  display: none; }
+
+.sdc-site-modal[fading] .sdc-site-modal__backing {
+  opacity: 0; }
+
+.sdc-site-modal[fading] .sdc-site-modal__message {
+  transform: scale(0.75); }
+
+.sdc-site-modal__backing {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 1em;
+  opacity: 1;
+  transition: opacity .33s; }
+  .sdc-site-modal__backing:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  @media all and (min-width: 500px) {
+    .sdc-site-modal__backing {
+      padding: 1.5em; } }
+  @media all and (min-width: 800px) {
+    .sdc-site-modal__backing {
+      padding: 2em; } }
+
+.sdc-site-modal__backing-safari {
+  padding-top: 2em; }
+
+.sdc-site-modal__message {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 98%;
+  left: -1%;
+  max-width: 464px;
+  max-height: calc(100vh - 4em);
+  padding: 1.5em;
+  background: #fff;
+  border-radius: .4em;
+  box-shadow: 0 0.5em 2em rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+  transition: transform .33s; }
+  @media all and (min-width: 800px) {
+    .sdc-site-modal__message {
+      padding: 2em; } }
+
+.sdc-site-modal__message-safari {
+  vertical-align: inherit;
+  max-height: calc(100vh - 8.5em); }
+
+.sdc-site-modal__message-content {
+  overflow: auto;
+  max-height: calc(100vh - 6em); }
+  .sdc-site-modal__message-content *:last-child {
+    margin-bottom: 0; }
+
+.sdc-site-modal__message-content-safari {
+  max-height: calc(100vh - 10.5em); }
+
+.sdc-site-modal__content-section + .sdc-site-modal__content-section {
+  margin-top: 2em; }
+
+.sdc-site-modal__message-content h4 {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 0 0 .5em 0;
+  color: #4a4a4a;
+  text-align: left; }
+  @media all and (min-width: 800px) {
+    .sdc-site-modal__message-content h4 {
+      font-size: 1.7em; } }
+
+.sdc-site-modal__message-content p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #4a4a4a;
+  text-align: left;
+  margin-bottom: 1.25em; }
+  @media all and (min-width: 800px) {
+    .sdc-site-modal__message-content p {
+      font-size: 1.125em; } }
+
+.sdc-site-modal__button {
+  display: block;
+  line-height: 1.4em;
+  padding: .5em 1em .5em .8em;
+  background-color: #214cb8;
+  margin: 0 auto;
+  border: 0;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: .9em;
+  border-radius: 3px;
+  cursor: pointer; }
+  .sdc-site-modal__button:hover {
+    opacity: .75;
+    text-decoration: none; }
+
+.sdc-site-modal__button + .sdc-site-modal__button {
+  margin-top: 1em; }
+
+.sdc-site-modal__close-button {
+  position: absolute;
+  right: .25em;
+  top: .25em;
+  font: inherit;
+  background: none;
+  width: 2em;
+  height: 2em;
+  padding: .25em;
+  border: 0;
+  overflow: hidden;
+  cursor: pointer; }
+  .sdc-site-modal__close-button:hover {
+    opacity: .5; }
+  .sdc-site-modal__close-button svg {
+    fill: #707070; }
+
+.html--instant-scroll {
+  scroll-behavior: auto; }
+
+.body--freeze {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  background-attachment: fixed; }
+
+.js .sdc-site-modal__content[aria-hidden="true"] {
+  display: none; }

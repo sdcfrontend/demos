@@ -1,0 +1,122 @@
+.sdc-site-calendar {
+  background: white;
+  font-size: 16px;
+  padding: calc(1em + 1%) 1em 1em;
+  min-width: 270px;
+  max-width: 500px;
+  border-radius: 4px;
+  line-height: 1.08;
+  margin-left: auto;
+  text-align: center; }
+
+.sdc-site-calendar__head {
+  font-size: 21px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc((100% / 14) - 15px); }
+
+.sdc-site-calendar__nav {
+  width: calc(100% / 7);
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  position: relative; }
+
+.sdc-site-calendar__nav-icon {
+  transform: rotate(-90deg);
+  width: 80%;
+  left: 10%;
+  position: absolute;
+  top: 10%; }
+
+.sdc-site-calendar__nav--prev
+.sdc-site-calendar__nav-icon {
+  transform: rotate(90deg); }
+
+.sdc-site-calendar__title {
+  display: block;
+  padding: .4em 0; }
+
+.sdc-site-calendar__days {
+  font-size: 14px;
+  display: flex;
+  color: #9f9f9f; }
+
+.sdc-site-calendar__days span {
+  flex: 1;
+  padding: 5.5% 0 3%; }
+
+.sdc-site-calendar__body {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.sdc-site-calendar__cell {
+  width: calc(100% / 7 - 3.8%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: inherit;
+  border-radius: 50%;
+  margin: 1.9%; }
+
+a.sdc-site-calendar__cell:hover {
+  text-decoration: none;
+  background: #f4f5f7; }
+
+.sdc-site-calendar__cell:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; }
+
+.sdc-site-calendar__cell:focus {
+  z-index: 2; }
+
+.sdc-site-calendar__cell[data-today]:not([data-selected]) {
+  border: 1px solid #9f9f9f;
+  font-weight: 500; }
+
+.sdc-site-calendar__cell[data-disabled] {
+  color: #e2e2e2;
+  pointer-events: none; }
+
+.sdc-site-calendar__cell[data-selected],
+.sdc-site-calendar__cell[data-selected]:hover {
+  background: #299934;
+  color: white;
+  font-weight: 500; }
+
+.sdc-site-calendar__today-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  border-top: 1px solid #d4d4d4;
+  background: 0;
+  line-height: 1;
+  border-radius: 4px;
+  margin: 1em 0 -.6em;
+  cursor: pointer;
+  text-decoration: underline; }
+
+button.sdc-site-calendar__today-button:after {
+  content: "";
+  display: block;
+  padding-bottom: calc(1.1em + 10%); }
+
+.sdc-site-calendar__today-button:hover {
+  text-decoration: none; }
+
+.sdc-site-calendar[data-is-today="true"]
+.sdc-site-calendar__today-button {
+  display: none; }

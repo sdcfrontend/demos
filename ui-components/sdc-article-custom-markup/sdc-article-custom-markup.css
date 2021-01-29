@@ -1,0 +1,16 @@
+/* sdc-article-custom-markup skin */
+/* sdc-article-custom-markup */
+.sdc-article-custom-markup {
+  background: transparent;
+  display: block;
+  max-width: 100%; }
+
+.sdc-article-custom-markup * {
+  max-width: 100%; }
+
+.sdc-article-custom-markup--top-media {
+  max-width: 976px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important; }

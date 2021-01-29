@@ -1,0 +1,20 @@
+.sdc-site-information-list[class] {
+  color: #4a4a4a; }
+  .sdc-site-information-list[class] .sdc-site-information-list-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -10px; }
+    .sdc-site-information-list[class] .sdc-site-information-list-list__item {
+      padding: 0 20px 0 0;
+      margin-top: 10px;
+      width: 100%; }
+      @media (min-width: 600px) {
+        .sdc-site-information-list[class] .sdc-site-information-list-list__item {
+          width: 33%; } }
+      .sdc-site-information-list[class] .sdc-site-information-list-list__item::before {
+        content: none; }
+    .sdc-site-information-list[class] .sdc-site-information-list-list__item_heading {
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.3px;
+      font-weight: normal; }

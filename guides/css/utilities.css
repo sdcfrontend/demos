@@ -1,0 +1,35 @@
+.site-wrap {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-wrap-padding {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter);
+}
+
+.site-component-vertical-margin {
+  margin-bottom: var(--component-margin);
+}
+
+.site-component-vertical-margin-negative {
+  margin-top: calc(var(--component-margin) * -1);
+}
+
+.site-component-vertical-margin-l {
+  margin-bottom: var(--group-margin);
+}
+
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap);
+}
+
+@media all and (max-width: 600px) {
+
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}

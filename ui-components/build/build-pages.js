@@ -43,6 +43,7 @@ function buildsection(name, gitlink) {
 
   const template = fs.readFileSync(path.resolve(ROOT, 'node_modules', name, 'template.hbs'), 'utf8').toString();
   const csspath = path.resolve(ROOT, 'node_modules', name, `styles/preview.scss`);
+  const componentcsspath = path.resolve(ROOT, 'node_modules', name, `styles/components/${name}.scss`);
   const jspath = path.resolve(ROOT, 'node_modules', name, `src/components/${name}.js`);
 
   try {
@@ -87,6 +88,16 @@ function buildsection(name, gitlink) {
     console.log(err);
     if (result && result.css) {
       fs.writeFileSync(path.resolve(ROOT, name, 'styles.css'), result.css.toString());
+    }
+  });
+
+  sass.render({
+    file: componentcsspath,
+    includePaths: ['node_modules']
+  }, function (err, result) {
+    console.log(err);
+    if (result && result.css) {
+      fs.writeFileSync(path.resolve(ROOT, name, `${name}.css`), result.css.toString());
     }
   });
 

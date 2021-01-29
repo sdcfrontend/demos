@@ -1,0 +1,332 @@
+/* FIXRES */
+/* =================== */
+/* FIXRES SKIN */
+/* =================== */
+a:hover {
+  text-decoration: underline; }
+
+/* FIXRES COMPONENT */
+/* =================== */
+@keyframes goalflash {
+  0% {
+    color: black; }
+  50% {
+    color: rgba(0, 0, 0, 0); }
+  100% {
+    color: black; } }
+
+.sdc-site-fixres {
+  font-size: 1em;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa; }
+
+.sdc-site-fixres + .sdc-site-fixres {
+  border-top: 0; }
+
+.sdc-site-fixres__match {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  line-height: 1;
+  color: inherit;
+  padding: 0.55em 0 0.65em; }
+
+.sdc-site-fixres__match[href] {
+  cursor: pointer; }
+
+.sdc-site-fixres__match[href]:hover {
+  background-color: #eee; }
+
+.sdc-site-fixres__match-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 1.5em;
+  position: relative; }
+
+.sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+  width: 4.5em; }
+
+.sdc-site-fixres__match-cell--hometeam {
+  padding-right: 1em;
+  text-align: right; }
+
+.sdc-site-fixres__match-cell--awayteam {
+  padding-left: 1em;
+  text-align: left; }
+
+.sdc-site-fixres__match-cell--score {
+  width: 4em; }
+
+.sdc-site-fixres__match-cell--badge {
+  width: 2em; }
+
+.sdc-site-fixres__team-name {
+  font-weight: bold;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.sdc-site-fixres__score {
+  white-space: nowrap; }
+
+.sdc-site-fixres__score-side {
+  display: inline-block;
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  width: 1.5em;
+  height: 1.5em;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  position: relative;
+  transition: background 0.33s, color 0.33s; }
+
+.sdc-site-fixres__score-side:after {
+  position: absolute;
+  padding: 1px;
+  background: inherit;
+  color: inherit;
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  margin-top: -44%; }
+
+.sdc-site-fixres__score-side--home {
+  margin-right: 0.4em; }
+
+.sdc-site-fixres__score-ko {
+  display: none; }
+
+.sdc-site-fixres__badge {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  top: 2px;
+  background-size: 100%; }
+
+.sdc-site-fixres__note {
+  text-align: center;
+  font-size: 0.85em;
+  padding: 0 0 0.8em 0; }
+
+.sdc-site-fixres__note + .sdc-site-fixres__note {
+  margin-top: -0.2em; }
+
+.sdc-site-fixres__note[data-label]:before {
+  content: attr(data-label) " "; }
+
+.sdc-site-fixres__note:empty {
+  display: none; }
+
+.sdc-site-fixres__live-status {
+  font-size: 0.75em;
+  padding: 0.28em 0.5em;
+  background: red;
+  color: white;
+  display: inline-block;
+  line-height: 0.8;
+  vertical-align: top; }
+
+.sdc-site-fixres__live-status:after {
+  content: attr(data-label-live); }
+
+.sdc-site-fixres__status, .sdc-site-fixres__info {
+  font-size: 0.85em; }
+
+.sdc-site-fixres__header1 {
+  font-size: 1.75em;
+  font-weight: 400;
+  text-align: center; }
+
+.sdc-site-fixres__header2 {
+  font-weight: normal;
+  font-size: 1em;
+  text-align: center; }
+
+.sdc-site-fixres__header3 {
+  font-size: 0.82em;
+  font-weight: normal;
+  text-align: center; }
+
+.sdc-site-fixres + .sdc-site-fixres__header1, .sdc-site-fixres + .sdc-site-fixres__header2 {
+  margin-top: 1.25em; }
+
+.sdc-site-fixres + .sdc-site-fixres__header3 {
+  margin-top: 1em; }
+
+/* STATUS CHANGES
+for reference see here https://tools.skybet.net/confluence/display/SSDM/Football+Statuses
+0: "KO", // is a fixture
+1: "IP", // kick off
+2: "HT", // half time (could change to HT if we want to show that)
+3: "IP", // second half started
+4: "FT", // full time
+5: "ET", // extra time to be played
+6: "ET", // extra time started
+7: "ET", // extra time 2nd half started
+8: "AET", // extra time full time
+9: "ET", // extra time full time penalties being played
+10: "ET", // penalties
+11: "AET", // penalties complete
+12: "FT", // result
+13: "P-P", // postponed
+14: "IP", // suspended
+15: "IP", // resumed
+16: "C-C", // cancelled
+17: "A-A", // abandonded
+18: "ET", // ET
+21: "ET", // extra time half time
+30: "KO", // teams in
+40: "IP", // second half complete
+50: "ET" // extra time complete
+*/
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__score-side {
+  background: white;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  animation: none !important; }
+
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__score-side,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__live-status,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__time {
+  display: none; }
+
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__score-ko,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__score-ko,
+.sdc-site-fixres[data-sport="football"][data-status="0"] .sdc-site-fixres__time,
+.sdc-site-fixres[data-sport="football"][data-status="30"] .sdc-site-fixres__time {
+  display: inline; }
+
+.sdc-site-fixres[data-sport="football"][data-status="4"] .sdc-site-fixres__status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="12"] .sdc-site-fixres__status:empty:after {
+  content: attr(data-label-ft); }
+
+.sdc-site-fixres[data-sport="football"][data-status="8"] .sdc-site-fixres__status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="11"] .sdc-site-fixres__status:empty:after {
+  content: attr(data-label-aet); }
+
+.sdc-site-fixres[data-sport="football"][data-status="2"] .sdc-site-fixres__live-status:empty:after {
+  content: attr(data-label-ht); }
+
+.sdc-site-fixres[data-sport="football"][data-status="5"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="6"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="7"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="9"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="10"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="18"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="21"] .sdc-site-fixres__live-status:empty:after,
+.sdc-site-fixres[data-sport="football"][data-status="50"] .sdc-site-fixres__live-status:empty:after {
+  content: attr(data-label-et); }
+
+.sdc-site-fixres[data-sport="football"][data-status="13"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-postponed); }
+
+.sdc-site-fixres[data-sport="football"][data-status="16"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-cancelled); }
+
+.sdc-site-fixres[data-sport="football"][data-status="17"] .sdc-site-fixres__score-side:after {
+  content: attr(data-label-abandoned); }
+
+.sdc-site-fixres__score-side[data-updated] {
+  background: #ffcc00;
+  color: black;
+  animation: goalflash 1s ease-in-out 15; }
+
+@media all and (max-width: 840px) {
+  .sdc-site-fixres__team-name-target {
+    display: none; }
+  .sdc-site-fixres__team-name:after {
+    content: attr(data-short-name); } }
+
+@media all and (max-width: 700px) {
+  .sdc-site-fixres[class] {
+    font-size: 0.95em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.6em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.6em; }
+  .sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+    width: 3em; } }
+
+@media all and (max-width: 600px) {
+  .sdc-site-fixres__match-cell--badge {
+    display: none; }
+  .sdc-site-fixres__badge {
+    background: none !important; } }
+
+@media all and (max-width: 480px) {
+  .sdc-site-fixres[class] {
+    font-size: 0.9em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.4em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.4em; }
+  .sdc-site-fixres__score-side--home {
+    margin-right: 0.2em; }
+  .sdc-site-fixres[data-sport="football"][data-status="1"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="3"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="14"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="15"] .sdc-site-fixres__live-status,
+  .sdc-site-fixres[data-sport="football"][data-status="40"] .sdc-site-fixres__live-status {
+    display: none; } }
+
+@media all and (max-width: 380px) {
+  .sdc-site-fixres__match-cell--score {
+    width: 3.7em; }
+  .sdc-site-fixres__match-cell--info, .sdc-site-fixres__match-cell--status {
+    width: 2.15em; }
+  .sdc-site-fixres__score {
+    font-size: 0.9em; }
+  .sdc-site-fixres__match-cell--hometeam {
+    padding-right: 0.2em; }
+  .sdc-site-fixres__match-cell--awayteam {
+    padding-left: 0.2em; }
+  .sdc-site-fixres__live-status,
+  .sdc-site-fixres__status,
+  .sdc-site-fixres__info {
+    font-size: 0.8em; }
+  .sdc-site-fixres__header1 {
+    font-size: 1.5em; } }
+
+.sdc-site-fixres--compact {
+  font-size: 0.96em; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__match {
+  padding: 0.4em 0 0.45em; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__team-name-target {
+  display: none; }
+
+.sdc-site-fixres--compact .sdc-site-fixres__team-name:after {
+  content: attr(data-short-name); }

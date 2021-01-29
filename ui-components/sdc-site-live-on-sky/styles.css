@@ -10,6 +10,8 @@
  *  Any other files referenced in here will not be imported
  *  when the component is consumed by your app project.
  */
+@import url(../node_modules/sdc-project-base/css/base/core/vars/_vars-global.css);
+@import url(../node_modules/sdc-project-base/css/base/core/vars/_vars-uk-sport.css);
 /* START/RESET */
 /* ========= */
 * {
@@ -553,12 +555,8 @@ ul {
 
 /* SDC site live on sky skin
   =========================================== */
-/* BLACKJACK-SDC-SITE-PUNDITS */
-/* ========= */
-/* BLACKJACK-SDC-LIVE-ON-SKY SKIN */
-/* ========= */
-/* BLACKJACK-SDC-SITE-LIVE-ON-SKY */
 .sdc-site-live-on-sky {
+  font-size: var(--component-text);
   display: flex; }
 
 .sdc-site-live-on-sky.sdc-site-tiles__item {
@@ -568,7 +566,7 @@ ul {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 1.4em calc(1em + 2%); }
+  padding: var(--component-padding); }
 
 .sdc-site-live-on-sky__wrap {
   display: flex;
@@ -582,7 +580,7 @@ ul {
   position: relative; }
 
 .sdc-site-live-on-sky__col1 {
-  padding-bottom: 1em; }
+  padding-bottom: var(--component-padding); }
 
 .sdc-site-live-on-sky__col2 {
   justify-content: flex-end; }
@@ -593,7 +591,9 @@ ul {
 .sdc-site-live-on-sky__category[class] {
   margin-bottom: auto;
   position: relative;
-  z-index: 6; }
+  z-index: 6;
+  font-size: var(--label-text);
+  color: var(--link-color); }
 
 .sdc-site-live-on-sky__badges[class] {
   height: 2.5em;
@@ -608,7 +608,7 @@ ul {
   transform: translateX(calc(100% + 2%)); }
 
 .sdc-site-live-on-sky__title {
-  font-size: 1.5em;
+  font-size: var(--display-3);
   line-height: 1.1; }
 
 .sdc-site-live-on-sky__time[class] {
@@ -616,7 +616,7 @@ ul {
 
 .sdc-site-live-on-sky__logo {
   height: 20px;
-  margin-bottom: 0.8em; }
+  margin-bottom: var(--component-gap); }
 
 .sdc-site-live-on-sky__links {
   color: inherit;
@@ -640,7 +640,7 @@ ul {
   opacity: 1; }
 
 .sdc-site-live-on-sky__links-item:not(:last-child) {
-  margin-right: 1em; }
+  margin-right: var(--component-gap); }
 
 .sdc-site-live-on-sky__wrap:before {
   content: "";
@@ -657,7 +657,7 @@ ul {
 
 .sdc-site-live-on-sky__status-live {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: var(--label-text);
   font-weight: 700;
   line-height: 1.08;
   display: inline-table;
@@ -668,7 +668,7 @@ ul {
   text-overflow: ellipsis;
   cursor: default;
   vertical-align: middle;
-  background-color: #d0021b;
+  background-color: var(--live);
   color: white; }
 
 @media all and (min-width: 600px) {
@@ -679,8 +679,7 @@ ul {
     width: 7.1em;
     height: 3.5em; }
   .sdc-article-widget .sdc-site-live-on-sky__title {
-    font-size: 1.75em;
-    padding-right: 4em; }
+    padding-right: var(--component-padding); }
   .sdc-article-widget .sdc-site-live-on-sky__action {
     display: flex;
     justify-content: space-between;

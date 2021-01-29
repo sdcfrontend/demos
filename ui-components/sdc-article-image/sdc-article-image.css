@@ -1,0 +1,51 @@
+/* CONTENT IMAGE */
+/* =================== */
+/* BLACKJACK CONTENT IMAGE SKIN */
+/* =================== */
+.sdc-article-image {
+  font-size: 0.9em; }
+  .sdc-article-image__figure {
+    margin: 0; }
+  .sdc-article-image__wrapper {
+    position: relative;
+    padding-bottom: 56.25%; }
+    .sdc-article-image__wrapper[data-aspect-ratio="4/3"] {
+      padding-bottom: 75%; }
+    .sdc-article-image__wrapper[data-aspect-ratio="1/1"] {
+      padding-bottom: 100%; }
+  .sdc-article-image__item {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden; }
+  .sdc-article-image__caption {
+    padding: 1em 1em;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #eee;
+    color: #aaa; }
+  .sdc-article-image__caption-text {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; }
+  .sdc-article-image__visually-hidden {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+  .sdc-article-image__simple--fill {
+    position: relative;
+    width: 100%;
+    height: 161px; }
+    .sdc-article-image__simple--fill img {
+      object-fit: contain; }
+
+@media screen and (min-width: 321px) {
+  .sdc-article-image__simple--fill {
+    height: 192px; } }
+
+@media screen and (min-width: 481px) {
+  .sdc-article-image__simple--fill {
+    height: 320px; } }

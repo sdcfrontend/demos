@@ -1,0 +1,8 @@
+/* Default styling paramters for this component that can be overwritten at project level */
+.sdc-site-outbrain {
+  clear: both;
+  margin-bottom: 0; }
+  .sdc-site-outbrain--match-article-body-copy-width .AR_3.ob-widget {
+    max-width: 100%; }
+  .sdc-site-outbrain--match-article-body-copy-width .AR_3.ob-two-rows-strip-layout .ob-dynamic-rec-container {
+    max-width: 300px; }

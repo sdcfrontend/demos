@@ -1,0 +1,20 @@
+/* sdc-site-message */
+/* sdc-site-message SKIN */
+/* ========= */
+/* sdc-site-message */
+.sdc-site-message {
+  background-color: none;
+  color: inherit;
+  font-size: 1em;
+  text-align: center;
+  padding: 1em; }
+
+.sdc-site-message__header {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 0.1em; }
+
+.sdc-site-message__link {
+  margin: 0.75em 0.75em 0 0.75em;
+  display: inline-block;
+  color: inherit; }

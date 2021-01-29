@@ -1,0 +1,58 @@
+/* SDC-SITE-HEADER-SIMPLE */
+/* ========= */
+/* comment these files out when commiting changes */
+/* SKIN */
+/* Default styling paramters for this component that can be overwritten at project level */
+/* ========= */
+/* COMPONENT */
+/* The main structural styles to create a vanilla version of this component */
+/* ========= */
+.sdc-site-header-simple {
+  font-size: 1em;
+  color: inherit;
+  background: #aaa;
+  margin: 0; }
+
+.sdc-site-header-simple__body {
+  display: table;
+  width: 100%; }
+
+.sdc-site-header-simple__cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 2em;
+  line-height: 1; }
+
+.sdc-site-header-simple__title {
+  line-height: 0; }
+
+.sdc-site-header-simple__logo,
+.sdc-site-header-simple__title-text {
+  display: inline-block;
+  vertical-align: middle; }
+
+.sdc-site-header-simple__title-text {
+  margin-left: 0.4em;
+  font-size: inherit; }
+
+.sdc-site-header-simple__logo-image {
+  height: 1em;
+  display: block;
+  position: relative;
+  top: 1px; }
+
+.sdc-site-header-simple__main {
+  width: 100%;
+  padding-bottom: 0.1em; }
+
+.sdc-site-header-simple__title-link {
+  display: inline-block; }
+
+@media all and (min-width: 480px) {
+  .sdc-site-header-simple {
+    font-size: 1.45em; } }
+
+@media all and (min-width: 800px) {
+  .sdc-site-header-simple {
+    font-size: 1.75em; } }

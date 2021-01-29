@@ -1,0 +1,56 @@
+.sdc-article-related-stories--hidden {
+  display: none; }
+
+.sdc-article-related-stories__content {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px; }
+
+.sdc-article-related-stories__title {
+  font-weight: bold;
+  font-size: inherit;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000; }
+
+.sdc-article-related-stories__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.sdc-article-related-stories__item {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px; }
+  .sdc-article-related-stories__item:last-child {
+    margin-bottom: 0; }
+
+.sdc-article-related-stories__link {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #00f;
+  flex-direction: row-reverse; }
+
+.sdc-article-related-stories__image {
+  width: 50px;
+  display: block;
+  margin-right: 10px; }
+
+.sdc-article-related-stories__headline {
+  line-height: 1.2;
+  color: inherit;
+  font-size: inherit;
+  flex-grow: 1;
+  margin: 0; }
+
+@media screen and (min-width: 650px) {
+  .sdc-article-related-stories__item {
+    width: calc(50% - 20px / 2); }
+    .sdc-article-related-stories__item:nth-last-child(2) {
+      margin-bottom: 0; } }

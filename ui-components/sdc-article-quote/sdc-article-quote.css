@@ -1,0 +1,158 @@
+.sdc-article-quote {
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 1rem;
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+  clear: both; }
+  .sdc-article-quote__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; }
+  .sdc-article-quote__content {
+    margin: 0;
+    text-align: center;
+    border-radius: 4px;
+    padding: 32px;
+    box-sizing: border-box;
+    background: #fff;
+    border-top: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    width: 100%;
+    z-index: 10; }
+  .sdc-article-quote__text {
+    display: block;
+    color: #333;
+    font-size: 1.33333em;
+    margin-bottom: 0.75em;
+    line-height: 1.2; }
+    .sdc-article-quote__text:before {
+      content: "\201C"; }
+    .sdc-article-quote__text:after {
+      content: "\201D"; }
+  .sdc-article-quote__citation {
+    color: #666;
+    font-size: 0.88889em;
+    font-style: normal; }
+    .sdc-article-quote__citation:before {
+      content: "\2014\00a0"; }
+
+@media (min-width: 681px) {
+  .sdc-article-quote__content {
+    padding: 64px; }
+  .sdc-article-quote__text {
+    font-size: 1.55556em; }
+  .sdc-article-quote__citation {
+    font-size: 1em; } }
+
+.sdc-article-quote--full-bleed {
+  background-color: #f4f4f4; }
+  .sdc-article-quote--full-bleed .sdc-article-quote__content {
+    margin: 32px 14px;
+    max-width: 996px;
+    border: none; }
+
+@media (min-width: 851px) {
+  .sdc-article-quote--full-bleed .sdc-article-quote__text {
+    font-size: 2.11111em;
+    margin-bottom: 0.5em; } }
+
+@media (min-width: 1020px) {
+  .sdc-article-quote--full-bleed .sdc-article-quote__text {
+    font-size: 2.66667em;
+    line-height: 1.05; }
+  .sdc-article-quote--full-bleed__citation {
+    font-size: 1.11111em; } }
+
+@media (min-width: 851px) {
+  .sdc-article-quote--half-width .sdc-article-quote__content {
+    margin: 0;
+    padding: 48px; }
+  .sdc-article-quote--half-width .sdc-article-quote__text {
+    font-size: 1.33333em; }
+  .sdc-article-quote--half-width .sdc-article-quote__citation {
+    font-size: 0.88889em; } }
+
+.sdc-article-quote--with-image {
+  box-sizing: border-box;
+  min-height: 93vw;
+  display: flex;
+  background-color: #000; }
+  .sdc-article-quote--with-image .sdc-article-quote__inner {
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    height: 100%;
+    width: 100%; }
+  .sdc-article-quote--with-image .sdc-article-quote__content {
+    background: transparent;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%; }
+  .sdc-article-quote--with-image .sdc-article-quote__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 0;
+    opacity: 0.6; }
+  .sdc-article-quote--with-image .sdc-article-quote__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .sdc-article-quote--with-image .sdc-article-quote__image-element {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+    object-fit: cover; }
+  .sdc-article-quote--with-image .sdc-article-quote__citation, .sdc-article-quote--with-image .sdc-article-quote__text {
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.75); }
+
+@media (min-width: 481px) {
+  .sdc-article-quote--with-image {
+    min-height: 62.5vw; } }
+
+@media (min-width: 992px) {
+  .sdc-article-quote--with-image {
+    min-height: 0;
+    display: block; }
+    .sdc-article-quote--with-image:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 62.5%; }
+    .sdc-article-quote--with-image .sdc-article-quote__inner {
+      position: absolute; } }
+
+@media (min-width: 851px) {
+  .sdc-article-quote--half-width.sdc-article-quote--with-image {
+    background-color: transparent;
+    min-height: 0;
+    display: block; }
+    .sdc-article-quote--half-width.sdc-article-quote--with-image:before {
+      display: none; }
+    .sdc-article-quote--half-width.sdc-article-quote--with-image .sdc-article-quote__inner {
+      height: auto;
+      position: relative;
+      background-color: #000; }
+    .sdc-article-quote--half-width.sdc-article-quote--with-image .sdc-article-quote__image:before {
+      display: none; } }

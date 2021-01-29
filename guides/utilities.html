@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <script>
+      const here = document.currentScript;
+      (async function () {
+        const nav = await
+          import('./nav.js')
+        nav.default(here);
+      })();
+    </script>
+
+    <main role="main">
+      <div class="wrap">
+        <h2>Utilities</h2>
+        <h3 id="utility-layout">Layout</h3>
+        <h4>Site wrap</h4>
+        <div class="code-block">
+          <pre>
+<i>/* fix max width of element to site width */</i>
+<e>&lt;</e>div <se>class</se><e>=</e><c>&quot;site-wrap&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
+
+<i>/* add site gutter padding left and right */</i>
+<e>&lt;</e>div <se>class</se><e>=</e><c>&quot;site-wrap site-wrap-padding&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
+
+<i>/* remove site gutters at mobile view */</i>
+<e>&lt;</e>div <se>class</se><e>=</e><c>&quot;site-wrap site-wrap-padding site-wrap--mobile-edge&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
+</pre>
+</div>
+</div>
+        <div class="eg eg--full-width group-margin">
+          <div class="eg-item eg-item-xray site-wrap" data-label="site-wrap" data-top>
+            <div class="eg-item-component"></div>
+            </div>
+            <div class="eg-item eg-item-xray site-wrap site-wrap-padding" data-label="site-wrap site-wrap-padding" data-top>
+              <div class="eg-item-component"></div>
+            </div>
+            <div class="eg-item eg-item-xray site-wrap site-wrap-padding site-wrap--mobile-edge" data-label="site-wrap site-wrap-padding site-wrap--mobile-edge" data-top>
+              <div class="eg-item-component"></div>
+            </div>
+      
+       
+        </div>
+  </div>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+
+</html>

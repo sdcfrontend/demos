@@ -1,0 +1,88 @@
+/* sdc-site-match-stats */
+/* ========= */
+/* SKIN */
+/* Default styling paramters for this component that can be overwritten at project level */
+/* ========= */
+/* COMPONENT */
+/* The main structural styles to create a vanilla version of this component */
+/* ========= */
+.sdc-site-match-stats__team-names {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  padding: 0.5em 0;
+  margin-top: -0.5em;
+  transform: translateZ(-1px); }
+
+.sdc-site-match-stats__team-name {
+  font-weight: normal;
+  text-align: left; }
+  .sdc-site-match-stats__team-name--away {
+    float: right; }
+
+.sdc-site-match-stats__visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; }
+
+.sdc-site-match-stats__stats {
+  width: 100%; }
+
+.sdc-site-match-stats__stats:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.sdc-site-match-stats__name {
+  text-align: center;
+  clear: both;
+  font-weight: normal;
+  padding: 1.9em 0 0.75em 0; }
+
+.sdc-site-match-stats__name:first-of-type {
+  padding-top: 0.4em; }
+
+.sdc-site-match-stats__val {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.4em;
+  padding-bottom: 0.45em; }
+
+.sdc-site-match-stats__stats-home,
+.sdc-site-match-stats__stats-away {
+  float: left;
+  width: 50%;
+  position: relative;
+  background: #e2e2e2; }
+
+.sdc-site-match-stats__stats-home {
+  text-align: right;
+  border-right: 1px solid #ffffff;
+  direction: rtl; }
+  .sdc-site-match-stats__stats-home .sdc-site-match-stats__stats-label {
+    text-align: left; }
+  .sdc-site-match-stats__stats-home .sdc-site-match-stats__val {
+    left: 0;
+    right: auto; }
+
+.sdc-site-match-stats__stats-away {
+  text-align: left;
+  border-left: 1px solid #ffffff; }
+  .sdc-site-match-stats__stats-away .sdc-site-match-stats__stats-label {
+    text-align: right; }
+
+.sdc-site-match-stats__stats-label {
+  display: block;
+  background: #4a4a4a;
+  color: inherit;
+  white-space: nowrap;
+  height: 2px; }
+
+@media all and (max-width: 480px) {
+  .sdc-site-match-stats {
+    font-size: 0.9em; } }

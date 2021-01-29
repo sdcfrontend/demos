@@ -5,6 +5,13 @@
     max-width: 900px;
 }
 
+.eg--full-width {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .eg,
 .eg * {
     position: relative;
@@ -52,11 +59,20 @@
 }
 
 .eg-item {
-    background: var(--component-bg);
-    padding: var(--component-padding);
-    border: 1px solid var(--border-color);
     margin-bottom: var(--component-margin);
+}
+
+.eg-item:not(.site-wrap) {
+    background: var(--component-bg);
+    border: 1px solid var(--border-color);
     font-size: var(--component-text);
+    padding: var(--component-padding);
+}
+
+.eg-item-component {
+    background: var(--component-bg);
+    border: 4px solid var(--border-color);
+    padding-bottom: 20%;
 }
 
 .eg-cols {

@@ -16,6 +16,19 @@
     color: #eee;
 }
 
+.code-block c {
+    color: #8bc34a;
+}
+
+.code-block e {
+    color: #ad636d;
+}
+
+.code-block se {
+    color: #dca6a6;
+}
+
 .code-block pre {
     white-space: pre-wrap;
 }
+

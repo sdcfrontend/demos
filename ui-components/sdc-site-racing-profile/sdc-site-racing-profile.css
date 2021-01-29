@@ -1,0 +1,148 @@
+.sdc-site-racing-profile {
+  font-size: calc(13px + 0.9vw);
+  line-height: 1;
+  margin-bottom: 1em; }
+
+@media all and (min-width: 1000px) {
+  .sdc-site-racing-profile {
+    font-size: 22px; } }
+
+.sdc-site-racing-profile__body {
+  padding: 1.5em 1em;
+  background-color: white; }
+
+.sdc-site-concertina-block .sdc-site-racing-profile__body {
+  padding: 1.5em 1em 1em; }
+
+.sdc-site-racing-profile__item {
+  display: flex;
+  position: relative;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+  transform-style: preserve-3d;
+  border-bottom: 1px solid #e2e2e2; }
+
+.sdc-site-racing-profile__item[aria-hidden="true"] {
+  display: none; }
+
+.sdc-site-racing-profile__item:first-child {
+  margin-top: -1em; }
+
+.sdc-site-racing-profile__cell {
+  font-size: calc(0.45em + 8px);
+  flex: 2;
+  padding: 0 0.2em; }
+
+.sdc-site-racing-profile__cell--1 {
+  padding-right: 0;
+  line-height: 1.2; }
+
+.sdc-site-racing-profile__cell--2 {
+  padding: 0 0.7em;
+  flex: 2;
+  text-align: center; }
+
+.sdc-site-racing-profile__cell--3 {
+  flex: 13; }
+
+.sdc-site-racing-profile__cell--4 {
+  text-align: right; }
+
+.sdc-site-racing-profile__pos {
+  display: block;
+  font-size: 1.95em;
+  font-weight: normal;
+  line-height: 0.82; }
+
+.sdc-site-racing-profile__pos sup {
+  font-size: 0.4em;
+  padding-left: 0.2em;
+  position: relative;
+  top: -1px;
+  font-weight: 500; }
+
+.sdc-site-racing-profile small {
+  font-size: 0.8em;
+  white-space: nowrap;
+  padding-top: 0.1em; }
+
+.sdc-site-racing-profile__details {
+  display: inline-flex;
+  flex-wrap: wrap;
+  min-width: 50%;
+  line-height: 1.2; }
+
+.sdc-site-racing-profile__details:last-child {
+  margin-bottom: -0.5em; }
+
+.sdc-site-racing-profile__details-item {
+  margin: 0 0.75em 0.4em 0; }
+
+.sdc-site-racing-profile__details-item > span, .sdc-site-racing-profile__details-item > strong {
+  display: inline-block; }
+
+.sdc-site-racing-profile[data-type="stats"] .sdc-site-racing-profile__cell--1 {
+  flex: 4;
+  padding-right: 1em;
+  min-width: 93px; }
+
+.sdc-site-racing-profile__cell--1 span:not(:only-child) {
+  padding-right: 0.75em;
+  display: inline-block;
+  padding-bottom: 0.4em;
+  white-space: nowrap; }
+
+.sdc-site-racing-profile[data-type="stats"] .sdc-site-racing-profile__cell--3 {
+  flex: 15; }
+
+.sdc-site-racing-profile__odds {
+  font-size: 1.15em;
+  color: #707070; }
+
+.sdc-site-racing-profile__header {
+  background: #f4f5f7;
+  padding: 1em 0.75em;
+  font-size: calc(0.5em + 8px);
+  margin: -1px 0 2px; }
+
+.sdc-site-racing-profile__col-labels {
+  display: flex;
+  font-size: calc(0.5em + 5px);
+  padding: 0.2em 0 1.2em; }
+
+.sdc-site-racing-profile__col-labels > span {
+  padding: 0 0.26em;
+  flex: 2;
+  color: #707070; }
+
+.sdc-site-racing-profile__col-labels > span:nth-child(1) {
+  padding-right: 0; }
+
+.sdc-site-racing-profile__col-labels > span:nth-child(2) {
+  text-align: center;
+  padding: 0 0.5em;
+  flex: 2; }
+
+.sdc-site-racing-profile__col-labels > span:nth-child(3) {
+  flex: 13; }
+
+.sdc-site-racing-profile__col-labels > span:nth-child(4) {
+  padding-right: 0.2em;
+  text-align: right;
+  flex: 2; }
+
+.sdc-site-racing-profile__item a:hover {
+  text-decoration: underline; }
+
+.sdc-site-racing-profile__item[data-has-link] a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0); }
+
+.sdc-site-racing-profile .sdc-site-filter-nav {
+  margin-bottom: 1.5em; }

@@ -29,7 +29,7 @@
     </div> -->
     <div class="info">
       <div class="wrap wrap-gutter">
-        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/sdc-site-carousel.git">https://git.bskyb.com/sky-components/sdc-site-carousel.git</a></p>
+        <p><strong>Git link: </strong> <a target="_blank" href="https://git.bskyb.com/sky-components/sdc-site-carousel.git#css-variables">https://git.bskyb.com/sky-components/sdc-site-carousel.git#css-variables</a></p>
       </div>
     </div>
     <div class="wrap">
@@ -41,38 +41,38 @@
       <h2 class="sdc-site-carousel__title">Lakers vs Warriors</h2>
 
       <div class="sdc-site-carousel__nav-wrap">
-        <ul class="sdc-site-carousel__nav" role="tablist" tabs="true" >
-          <li class="sdc-site-carousel__nav-label sdc-site-carousel__selected"
-            tabindex="0" aria-selected="true"  data-section-name="Latest" >
+        <div class="sdc-site-carousel__nav" role="tablist" tabs="true" >
+          <button role="tab" class="sdc-site-carousel__nav-label sdc-site-carousel__selected"
+             aria-selected="true"  aria-controls="sdc-carousel-tab-0" data-section-name="Latest" >
             Latest
-          </li>
-          <li class="sdc-site-carousel__nav-label "
-            tabindex="-1" aria-selected="false"  data-section-name="Top plays" >
+          </button>
+          <button role="tab" class="sdc-site-carousel__nav-label "
+             aria-selected="false"  aria-controls="sdc-carousel-tab-1" data-section-name="Top plays" >
             Top plays
-          </li>
-          <li class="sdc-site-carousel__nav-label "
-            tabindex="-1" aria-selected="false"  data-section-name="Top dunks" >
+          </button>
+          <button role="tab" class="sdc-site-carousel__nav-label "
+             aria-selected="false"  aria-controls="sdc-carousel-tab-2" data-section-name="Top dunks" >
             Top dunks
-          </li>
-          <li class="sdc-site-carousel__nav-label "
-            tabindex="-1" aria-selected="false"  data-section-name="Latest news" >
+          </button>
+          <button role="tab" class="sdc-site-carousel__nav-label "
+             aria-selected="false"  aria-controls="sdc-carousel-tab-3" data-section-name="Latest news" >
             Latest news
-          </li>
-          <li class="sdc-site-carousel__nav-label "
-            tabindex="-1" aria-selected="false"  data-section-name="Latest other news" >
+          </button>
+          <button role="tab" class="sdc-site-carousel__nav-label "
+             aria-selected="false"  aria-controls="sdc-carousel-tab-4" data-section-name="Latest other news" >
             Latest other news
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
-      <div class="sdc-site-carousel__rail-wrap" role="region" aria-label="carousel" tabindex="0">
-        <div class="sdc-site-carousel__rail-group sdc-site-carousel__show">
+      <div class="sdc-site-carousel__rail-wrap" role="region" aria-label="carousel">
+        <div class="sdc-site-carousel__rail-group" aria-hidden="false" id="sdc-carousel-tab-0" role="tabpanel">
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--left" disabled
-            data-role="nav-direction-item" data-section-name="Latest" ></button>
+            data-role="nav-direction-item" data-section-name="Latest"  aria-hidden="true"></button>
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--right"
-            data-role="nav-direction-item" data-section-name="Latest" ></button>
+            data-role="nav-direction-item" data-section-name="Latest"  aria-hidden="true"></button>
           <div class="sdc-site-carousel__rail" data-role="carousel-rail">
 <div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -109,7 +109,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -146,7 +146,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -183,7 +183,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -220,7 +220,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -257,7 +257,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -294,7 +294,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -331,7 +331,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -368,7 +368,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -405,7 +405,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -443,14 +443,14 @@
               </a>
             </div>          </div>
         </div>
-        <div class="sdc-site-carousel__rail-group">
+        <div class="sdc-site-carousel__rail-group" aria-hidden="true" id="sdc-carousel-tab-1" role="tabpanel">
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--left" disabled
-            data-role="nav-direction-item" data-section-name="Top plays" ></button>
+            data-role="nav-direction-item" data-section-name="Top plays"  aria-hidden="true"></button>
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--right"
-            data-role="nav-direction-item" data-section-name="Top plays" ></button>
+            data-role="nav-direction-item" data-section-name="Top plays"  aria-hidden="true"></button>
           <div class="sdc-site-carousel__rail" data-role="carousel-rail">
 <div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -487,7 +487,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -524,7 +524,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -561,7 +561,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -598,7 +598,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -635,7 +635,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -672,7 +672,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -709,7 +709,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top plays" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -747,14 +747,14 @@
               </a>
             </div>          </div>
         </div>
-        <div class="sdc-site-carousel__rail-group">
+        <div class="sdc-site-carousel__rail-group" aria-hidden="true" id="sdc-carousel-tab-2" role="tabpanel">
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--left" disabled
-            data-role="nav-direction-item" data-section-name="Top dunks" ></button>
+            data-role="nav-direction-item" data-section-name="Top dunks"  aria-hidden="true"></button>
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--right"
-            data-role="nav-direction-item" data-section-name="Top dunks" ></button>
+            data-role="nav-direction-item" data-section-name="Top dunks"  aria-hidden="true"></button>
           <div class="sdc-site-carousel__rail" data-role="carousel-rail">
 <div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -791,7 +791,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -828,7 +828,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -865,7 +865,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -902,7 +902,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Top dunks" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -940,14 +940,14 @@
               </a>
             </div>          </div>
         </div>
-        <div class="sdc-site-carousel__rail-group">
+        <div class="sdc-site-carousel__rail-group" aria-hidden="true" id="sdc-carousel-tab-3" role="tabpanel">
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--left" disabled
-            data-role="nav-direction-item" data-section-name="Latest news" ></button>
+            data-role="nav-direction-item" data-section-name="Latest news"  aria-hidden="true"></button>
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--right"
-            data-role="nav-direction-item" data-section-name="Latest news" ></button>
+            data-role="nav-direction-item" data-section-name="Latest news"  aria-hidden="true"></button>
           <div class="sdc-site-carousel__rail" data-role="carousel-rail">
 <div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -984,7 +984,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1021,7 +1021,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1058,7 +1058,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1096,14 +1096,14 @@
               </a>
             </div>          </div>
         </div>
-        <div class="sdc-site-carousel__rail-group">
+        <div class="sdc-site-carousel__rail-group" aria-hidden="true" id="sdc-carousel-tab-4" role="tabpanel">
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--left" disabled
-            data-role="nav-direction-item" data-section-name="Latest other news" ></button>
+            data-role="nav-direction-item" data-section-name="Latest other news"  aria-hidden="true"></button>
           <button class="sdc-site-carousel__direction-nav sdc-site-carousel__direction-nav--right"
-            data-role="nav-direction-item" data-section-name="Latest other news" ></button>
+            data-role="nav-direction-item" data-section-name="Latest other news"  aria-hidden="true"></button>
           <div class="sdc-site-carousel__rail" data-role="carousel-rail">
 <div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1140,7 +1140,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1177,7 +1177,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>
@@ -1214,7 +1214,7 @@
               </div>
               </a>
             </div><div class="sdc-site-carousel__rail-item  sdc-site-carousel__has-link"
-              data-role="carousel-item" role="tabpanel" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
+              data-role="carousel-item" data-item-title="Lorem ipsum dolor sit amet, consectetuer" data-section-name="Latest other news" >
               <figure class="sdc-site-carousel__rail-figure">
                 <div class="sdc-site-carousel__rail-image-wrap">
                   <div class="sdc-site-carousel__running-time">1.28</div>

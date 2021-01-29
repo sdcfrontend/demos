@@ -1,0 +1,65 @@
+.sdc-site-share {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0; }
+  .sdc-site-share__title {
+    margin-bottom: 1em; }
+  .sdc-site-share__snippet {
+    margin: .5em 0 1.5em;
+    line-height: 1.35em;
+    max-width: 60%;
+    display: inline-block; }
+  .sdc-site-share__list {
+    margin: 0;
+    padding: 0; }
+  .sdc-site-share__item {
+    display: inline; }
+  .sdc-site-share__link {
+    padding: 8px 9px 6px 9px;
+    display: inline-block;
+    border: 1px solid #eee;
+    vertical-align: middle;
+    margin-right: 7px;
+    background-color: #fff;
+    border-radius: 0;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; }
+    .sdc-site-share__link:hover[href], .sdc-site-share__link:focus[href] {
+      background-color: #f2f2f2;
+      border-color: #d5d5d5; }
+    .sdc-site-share__item:last-child .sdc-site-share__link {
+      margin-right: 0; }
+    @media screen and (min-width: 900px) {
+      .sdc-site-share__link--mobile-only {
+        display: none; } }
+  .sdc-site-share__icon {
+    position: relative;
+    width: 20px;
+    height: 20px; }
+  .sdc-site-share__icon > svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  .sdc-site-share__icon > svg * {
+    fill: #4a4a4a;
+    transition: fill 0.2s ease-in-out; }
+  .sdc-site-share__link:hover .sdc-site-share__icon > svg *,
+  .sdc-site-share__link:focus .sdc-site-share__icon > svg * {
+    fill: #313131; }
+  .sdc-site-share__link--facebook:hover .sdc-site-share__icon > svg *,
+  .sdc-site-share__link--facebook:focus .sdc-site-share__icon > svg * {
+    fill: #3b5998; }
+  .sdc-site-share__link--whatsapp:hover .sdc-site-share__icon > svg *,
+  .sdc-site-share__link--whatsapp:focus .sdc-site-share__icon > svg * {
+    fill: #25d366; }
+  .sdc-site-share__link--twitter:hover .sdc-site-share__icon > svg *,
+  .sdc-site-share__link--twitter:focus .sdc-site-share__icon > svg * {
+    fill: #00aced; }
+  .sdc-site-share__link--email:hover .sdc-site-share__icon > svg *,
+  .sdc-site-share__link--email:focus .sdc-site-share__icon > svg * {
+    fill: #dd4b39; }
+  .sdc-site-share.sdc-site-share--timeline, .sdc-site-share.sdc-site-share--narrate {
+    text-align: center;
+    margin-bottom: 2em; }

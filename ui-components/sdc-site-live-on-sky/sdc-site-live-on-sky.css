@@ -1,0 +1,243 @@
+.sdc-site-live-on-sky {
+  font-size: var(--component-text);
+  display: flex; }
+
+.sdc-site-live-on-sky.sdc-site-tiles__item {
+  padding: 0 !important; }
+
+.sdc-site-live-on-sky__inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: var(--component-padding); }
+
+.sdc-site-live-on-sky__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; }
+
+.sdc-site-live-on-sky__col {
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.sdc-site-live-on-sky__col1 {
+  padding-bottom: var(--component-padding); }
+
+.sdc-site-live-on-sky__col2 {
+  justify-content: flex-end; }
+
+.sdc-site-live-on-sky__col > *:not(:last-child) {
+  padding-bottom: 1em; }
+
+.sdc-site-live-on-sky__category[class] {
+  margin-bottom: auto;
+  position: relative;
+  z-index: 6;
+  font-size: var(--label-text);
+  color: var(--link-color); }
+
+.sdc-site-live-on-sky__badges[class] {
+  height: 2.5em;
+  position: relative;
+  margin-bottom: 0.5em; }
+
+.sdc-site-live-on-sky__badge {
+  position: absolute;
+  height: 100%; }
+
+.sdc-site-live-on-sky__badge + .sdc-site-live-on-sky__badge {
+  transform: translateX(calc(100% + 2%)); }
+
+.sdc-site-live-on-sky__title {
+  font-size: var(--display-3);
+  line-height: 1.1; }
+
+.sdc-site-live-on-sky__time[class] {
+  padding-bottom: 0.5em; }
+
+.sdc-site-live-on-sky__logo {
+  height: 20px;
+  margin-bottom: var(--component-gap); }
+
+.sdc-site-live-on-sky__links {
+  color: inherit;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 0.25em;
+  display: flex;
+  flex-wrap: wrap; }
+
+.sdc-site-live-on-sky__links--non-clickable {
+  z-index: 2; }
+
+.sdc-site-live-on-sky__link:before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  height: 400%;
+  width: 200%;
+  z-index: 5;
+  opacity: 1; }
+
+.sdc-site-live-on-sky__links-item:not(:last-child) {
+  margin-right: var(--component-gap); }
+
+.sdc-site-live-on-sky__wrap:before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: 0.33s opacity; }
+
+.sdc-site-live-on-sky:hover .sdc-site-live-on-sky__wrap:before {
+  opacity: 1; }
+
+.sdc-site-live-on-sky__status-live {
+  text-transform: uppercase;
+  font-size: var(--label-text);
+  font-weight: 700;
+  line-height: 1.08;
+  display: inline-table;
+  padding: 2px 5px 1px 6px !important;
+  margin: 0 6px 2px 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+  vertical-align: middle;
+  background-color: var(--live);
+  color: white; }
+
+@media all and (min-width: 600px) {
+  .sdc-article-widget .sdc-site-live-on-sky__badges[class] {
+    position: absolute;
+    right: 0;
+    top: 1.8em;
+    width: 7.1em;
+    height: 3.5em; }
+  .sdc-article-widget .sdc-site-live-on-sky__title {
+    padding-right: var(--component-padding); }
+  .sdc-article-widget .sdc-site-live-on-sky__action {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -0.4em; } }
+
+.sdc-site-live-on-sky[data-livestream="true"][class] .sdc-site-live-on-sky__inner {
+  background: #002672;
+  color: #fff; }
+
+.sdc-site-live-on-sky[data-livestream="true"][class] .sdc-site-live-on-sky__category {
+  color: #fff; }
+
+.sdc-site-live-on-sky[data-livestream="true"][class] .sdc-site-live-on-sky__wrap[class]:before {
+  background: radial-gradient(circle at center, #0037a5 0, #00153f 100%); }
+
+.sdc-site-live-on-sky--default[class] .sdc-site-live-on-sky__title {
+  font-family: inherit; }
+
+.sdc-site-live-on-sky--default[class] .sdc-site-live-on-sky__category-link {
+  color: inherit; }
+
+.sdc-site-live-on-sky--default[class] .sdc-site-live-on-sky__inner {
+  background: white;
+  color: inherit; }
+
+.sdc-site-live-on-sky--default[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: rgba(0, 0, 0, 0.5); }
+
+.sdc-site-live-on-sky--default[class] .sdc-site-live-on-sky--has-link:hover,
+.sdc-site-live-on-sky--default[class] .sdc-site-live-on-sky--has-link:hover .sdc-site-live-on-sky__category {
+  color: white; }
+
+.sdc-article-widget.sdc-site-live-on-sky--default[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--football[class] .sdc-site-live-on-sky__title {
+  font-family: var(--sports-branding-football-font);
+  font-weight: normal; }
+
+.sdc-site-live-on-sky--football[class] .sdc-site-live-on-sky__category-link {
+  color: var(--sports-branding-football-color); }
+
+.sdc-site-live-on-sky--football[class] .sdc-site-live-on-sky__inner {
+  background: var(--sports-branding-football-primary-gradient);
+  color: var(--sports-branding-football-color); }
+
+.sdc-site-live-on-sky--football[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--football[class] .sdc-site-live-on-sky--has-link:hover,
+.sdc-site-live-on-sky--football[class] .sdc-site-live-on-sky--has-link:hover .sdc-site-live-on-sky__category {
+  color: inherit; }
+
+.sdc-article-widget.sdc-site-live-on-sky--football[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--premierleague[class] .sdc-site-live-on-sky__title {
+  font-family: var(--sports-branding-premier-league-font);
+  font-weight: normal; }
+
+.sdc-site-live-on-sky--premierleague[class] .sdc-site-live-on-sky__category-link {
+  color: var(--sports-branding-premier-league-color); }
+
+.sdc-site-live-on-sky--premierleague[class] .sdc-site-live-on-sky__inner {
+  background: var(--sports-branding-premier-league-gradient);
+  color: var(--sports-branding-premier-league-color); }
+
+.sdc-site-live-on-sky--premierleague[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--premierleague[class] .sdc-site-live-on-sky--has-link:hover,
+.sdc-site-live-on-sky--premierleague[class] .sdc-site-live-on-sky--has-link:hover .sdc-site-live-on-sky__category {
+  color: inherit; }
+
+.sdc-article-widget.sdc-site-live-on-sky--premierleague[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--skysports[class] .sdc-site-live-on-sky__title {
+  font-family: var(--sports-branding-skysports-font);
+  font-weight: normal; }
+
+.sdc-site-live-on-sky--skysports[class] .sdc-site-live-on-sky__category-link {
+  color: var(--sports-branding-skysports-color); }
+
+.sdc-site-live-on-sky--skysports[class] .sdc-site-live-on-sky__inner {
+  background: var(--sports-branding-skysports-primary);
+  color: var(--sports-branding-skysports-color); }
+
+.sdc-site-live-on-sky--skysports[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--skysports[class] .sdc-site-live-on-sky--has-link:hover,
+.sdc-site-live-on-sky--skysports[class] .sdc-site-live-on-sky--has-link:hover .sdc-site-live-on-sky__category {
+  color: inherit; }
+
+.sdc-article-widget.sdc-site-live-on-sky--skysports[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--skysports-light[class] .sdc-site-live-on-sky__title {
+  font-family: var(--sports-branding-skysports-font);
+  font-weight: normal; }
+
+.sdc-site-live-on-sky--skysports-light[class] .sdc-site-live-on-sky__category-link {
+  color: var(--sports-branding-skysports-light-color); }
+
+.sdc-site-live-on-sky--skysports-light[class] .sdc-site-live-on-sky__inner {
+  background: var(--sports-branding-skysports-light-primary);
+  color: var(--sports-branding-skysports-light-color); }
+
+.sdc-site-live-on-sky--skysports-light[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }
+
+.sdc-site-live-on-sky--skysports-light[class] .sdc-site-live-on-sky--has-link:hover,
+.sdc-site-live-on-sky--skysports-light[class] .sdc-site-live-on-sky--has-link:hover .sdc-site-live-on-sky__category {
+  color: inherit; }
+
+.sdc-article-widget.sdc-site-live-on-sky--skysports-light[class]:hover .sdc-site-live-on-sky__wrap:before {
+  background: inherit; }

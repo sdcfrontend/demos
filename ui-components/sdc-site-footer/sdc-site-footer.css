@@ -1,0 +1,114 @@
+/* BLACKJACK-SDC-SITE-FOOTER */
+.sdc-site-footer {
+  margin-top: 0;
+  padding: 1em;
+  padding: 2em 0;
+  background-color: #eee;
+  font-size: 1em;
+  position: relative;
+  z-index: 99;
+  display: block !important; }
+
+.sdc-site-footer__inner {
+  width: 100%; }
+
+.sdc-site-footer__body {
+  display: table;
+  width: 100%;
+  border-collapse: collapse; }
+
+.sdc-site-footer__group-header {
+  margin-bottom: .7em;
+  font-weight: normal;
+  font-size: 1.2em; }
+
+.sdc-site-footer__group-item-link,
+.sdc-site-footer__supp-item-link {
+  display: block;
+  padding: 0 0 .4em; }
+
+.sdc-site-footer__group-item-link-text {
+  padding-bottom: 0.12em; }
+
+.sdc-site-footer__group-item {
+  padding: .5em .5em .5em 0;
+  vertical-align: top;
+  display: inline-block;
+  width: 50%; }
+
+.sdc-site-footer__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sdc-site-footer__supp {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 1px solid #ccc;
+  text-align: center; }
+
+.sdc-site-footer__supp-items {
+  margin-bottom: 1em; }
+
+.sdc-site-footer__supp-item {
+  display: inline-block;
+  margin: .2em .5em; }
+
+.sdc-site-footer__logo {
+  display: block;
+  margin: 1.5em auto .5em;
+  max-width: 6em; }
+
+.sdc-site-footer__logo-img {
+  height: 19px; }
+
+.sdc-site-footer__copyright {
+  font-size: .8em; }
+
+@media all and (max-width: 460px) {
+  .sdc-site-footer {
+    padding-top: 1.4em; }
+  .sdc-site-footer__supp {
+    margin-top: 1.4em;
+    padding-top: 1.4em; } }
+
+@media all and (max-width: 760px) {
+  .sdc-site-footer {
+    font-size: .95em; }
+  .sdc-site-footer__body {
+    display: block; }
+  .sdc-site-footer__group {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #ccc; }
+  .sdc-site-footer__group:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0; } }
+
+@media all and (min-width: 761px) {
+  .sdc-site-footer__group {
+    display: table-cell;
+    margin-left: -1px;
+    padding: 0 2em;
+    width: 50%;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    vertical-align: top; }
+  .sdc-site-footer__group:first-of-type {
+    padding-left: 0;
+    border-left: 0; }
+  .sdc-site-footer__group:last-of-type {
+    padding-right: 0;
+    border-right: 0; }
+  .sdc-site-footer__supp {
+    display: table-caption;
+    caption-side: bottom; } }
