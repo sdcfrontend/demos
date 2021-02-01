@@ -1,0 +1,170 @@
+/* SDC site shared ui skin
+  =========================================== */
+  /* // BULLET LIST */
+  /* // a generic bulleted list with appended > link arrows */
+  .sdc-ui-bullet-list {
+    padding: 0;
+    list-style: none;
+    font-size: var(--supporting-text);
+    color: inherit;
+  }
+  
+  .sdc-ui-bullet-list > li:not(:last-of-type) {
+    margin-bottom: 0.25em;
+  }
+  
+  .sdc-ui-bullet-list > li > a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2em 0;
+    line-height: 1;
+    vertical-align: middle;
+  }
+  
+  .sdc-ui-bullet-list > li > a:hover {
+    background: none;
+    text-decoration: underline;
+    text-decoration-skip: ink;
+  }
+  
+  .sdc-ui-bullet-list > li > a:after {
+    content: "";
+    width: 0.35em;
+    height: 0.35em;
+    display: inline-block;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(-45deg) translateY(-1px);
+    opacity: 0.9;
+    margin-left: 0.25em;
+  }
+  
+  /* // MEDIA CAPTION */
+  .sdc-ui-media-caption {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: var(--component-padding);
+    padding-right: var(--component-padding);
+    line-height: 1.4;
+    text-align: left;
+    font-size: var(--supporting-text);
+    background: var(--component-shade);
+    color: var(--text-color-secondary);
+  }
+  
+  /* // hide the first span if there are two (its a visually hidden piece of text for screen readers) */
+  .sdc-ui-media-caption > span:first-of-type:not(:only-child) {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .sdc-ui-media-caption > span:last-of-type {
+    /* @extend %sdc-article-body-width-limiter !optional; */
+    display: block;
+  }
+  
+  /* // EXTERNAL LINK ICON */
+  .sdc-ui-external-link:after {
+    width: 0.9em;
+    height: 0.9em;
+    margin-left: 0.2em;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+  
+  /* // LABEL */
+  /* // used for tags and labels */
+  .sdc-ui-label {
+    font-size: 15px;
+    color: var(--brand-1);
+  }
+  
+  /* // SIGNIFICANCE */
+  .sdc-article-significance--breaking[class],
+  .sdc-article-significance--transfer[class]{
+    color: #000;
+    background: var(--breaking);
+  }
+  
+  .sdc-article-significance--sponsored[class]{
+    color: var(--text-color-secondary);
+  }
+  
+  .sdc-article-significance--live[class]{
+    color: var(--text-color-invert);
+    background: var(--live);
+  }
+  
+  .sdc-article-significance--analysis[class],
+  .sdc-article-significance--exclusive[class],
+  .sdc-article-significance--explainer[class],
+  .sdc-article-significance--podcast[class],
+  .sdc-article-significance--eyewitness[class],
+  .sdc-article-significance--opinion[class],
+  .sdc-article-significance--update[class]{
+    color: var(--text-color-invert);
+    background: var(--brand-1);
+  }
+  
+  /* // BUTTON */
+  .sdc-ui-button {
+    --sdc-ui-button-color: var(--brand-1);
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0.64em 1em;
+    line-height: 1;
+    font-size: var(--supporting-text);
+    font-family: inherit;
+    font-weight: normal;
+    border-radius: 3px;
+    cursor: pointer;
+    background: var(--sdc-ui-button-color);
+    color: var(--text-color-invert);
+    border: 1px solid var(--sdc-ui-button-color);
+  }
+
+  .sdc-ui-button:hover {
+    text-decoration: none;
+    filter: brightness(0.9) sepia(0.18) contrast(1.25);
+  }
+
+  .sdc-ui-button--invert {
+    border-color: var(--sdc-ui-button-color);
+    color: var(--sdc-ui-button-color);
+    background: none;
+  }
+
+  .sdc-ui-button--invert:hover {
+    background: var(--sdc-ui-button-color);
+    color: var(--text-color-invert);
+    border: 1px solid var(--sdc-ui-button-color);
+  }
+
+  .sdc-ui-button--action {
+    --sdc-ui-button-color: var(--live);
+  }
+
+  .sdc-ui-button--strong {
+    font-weight: bold;
+    border-width: 2px;
+  }
+
+  .sdc-ui-button--small {
+    font-size: var(--label-text);
+  }
+
+  .sdc-ui-button--large {
+    font-size: var(--display-5);
+  }

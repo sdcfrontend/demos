@@ -56,8 +56,12 @@ a:hover {
   margin-bottom: var(--group-margin);
 }
 
+.component-margin {
+    margin-bottom: var(--component-margin);
+}
+
 .group-margin[class] {
-  margin-bottom: calc(var(--group-margin) * 1.5);
+  margin-bottom: calc(var(--group-margin) * 1.25);
 }
 
 :root {

@@ -9,6 +9,10 @@
   padding-right: var(--site-gutter);
 }
 
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap);
+}
+
 .site-component-vertical-margin {
   margin-bottom: var(--component-margin);
 }
@@ -19,10 +23,6 @@
 
 .site-component-vertical-margin-l {
   margin-bottom: var(--group-margin);
-}
-
-.site-component-vertical-margin-s {
-  margin-bottom: var(--component-gap);
 }
 
 @media all and (max-width: 600px) {

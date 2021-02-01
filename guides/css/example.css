@@ -58,7 +58,8 @@
     transform: translateY(100%) !important;
 }
 
-.eg-item {
+.eg-item:not([class*=site-component-vertical-margin]),
+.eg-item-clean:not([class*=site-component-vertical-margin]) {
     margin-bottom: var(--component-margin);
 }
 
@@ -68,6 +69,14 @@
     font-size: var(--component-text);
     padding: var(--component-padding);
 }
+
+.eg-item-clean {
+    background-color: var(--component-bg);
+    font-size: var(--component-text);
+    padding: var(--component-padding);
+    position: relative;
+}
+
 
 .eg-item-component {
     background: var(--component-bg);

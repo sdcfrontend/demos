@@ -9,7 +9,7 @@ h2 {
 
 h3 {
   font-size: var(--display-1);
-  margin-bottom: var(--group-margin);
+  margin-bottom: calc(var(--group-margin) * 0.9);
   display: flex;
   align-items: center;
 }
