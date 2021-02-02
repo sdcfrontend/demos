@@ -117,8 +117,14 @@
   <h4 id="ui">UI elements</h4>
           <div class="code-block">
             <pre>
-  <i>/* Adds the standard polaris forward arrow bulleted list */</i>
-  <e>&lt;</e>div <se>class</se><e>=</e><c>&quot;sdc-ui-bullet-list&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
+  <i>/* Adds the standard polaris forward arrow */</i>
+  <e>&lt;</e>a <se>class</se><e>=</e><c>&quot;sdc-ui-link-arrow&quot;</c> <se>href</se><e>=</e><c>&quot;#&quot;</c><e>&gt;link&lt;/</e>a<e>&gt;</e>
+
+  <i>/* Adds the standard polaris bulleted list with forward arrow */</i>
+  <e>&lt;</e>ul <se>class</se><e>=</e><c>&quot;sdc-ui-bullet-list&quot;</c><e>&gt;</e>
+    <e>&lt;</e>li<e>&gt;</e><e>&lt;</e>a <se>href</se><e>=</e><c>&quot;#&quot;</c><e>&gt;</e>A text link<e>&lt;/</e>a<e>&gt;&lt;/</e>li<e>&gt;</e>
+    <e>&lt;</e>li<e>&gt;</e><e>&lt;</e>a <se>href</se><e>=</e><c>&quot;#&quot;</c><e>&gt;</e>A text link<e>&lt;/</e>a<e>&gt;&lt;/</e>li<e>&gt;</e>
+  &lt;/</e>ul<e>&gt;</e>
 
   <i>/* Adds various stylings for buttons */</i>
   <e>&lt;</e>div <se>class</se><e>=</e><c>&quot;sdc-ui-button&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
@@ -129,11 +135,21 @@
   <e>&lt;</e>div <se>class</se><e>=</e><c>&quot;sdc-ui-button sdc-ui-button--large&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
 
   <i>/* Adds the caption that goes underneath images and videos */</i>
-  <e>&lt;</e>div <se>class</se><e>=</e><c>&quot;sdc-ui-media-caption&quot;</c><e>&gt;&lt;/</e>div<e>&gt;</e>
+  <e>&lt;</e>p <se>class</se><e>=</e><c>&quot;sdc-ui-media-caption&quot;</c><e>&gt;&lt;/</e>p<e>&gt;</e>
+
+  <i>/* Adds a small blue text label */</i>
+  <e>&lt;</e>p <se>class</se><e>=</e><c>&quot;sdc-ui-label&quot;</c><e>&gt;&lt;/</e>p<e>&gt;</e>
+
+  <i>/* Adds a significance label - see css for full list of types */</i>
+  <e>&lt;</e>p <se>class</se><e>=</e><c>&quot;sdc-article-significance&quot;</c><e>&gt;&lt;/</e>p<e>&gt;</e>
+  <e>&lt;</e>p <se>class</se><e>=</e><c>&quot;sdc-article-significance sdc-article-significance--breaking&quot;</c><e>&gt;&lt;/</e>p<e>&gt;</e>
               </pre>
           </div>
 
           <div class="eg group-margin">
+            <div class="eg-item eg-item-xray" data-label="sdc-ui-link-arrow" data-top data-inside>
+              <a href="#" class="sdc-ui-link-arrow">A text link</a>
+            </div>
             <div class="eg-item eg-item-xray" data-label="sdc-ui-bullet-list" data-top data-inside>
               <ul class="sdc-ui-bullet-list">
                 <li><a href="#">Item 1</a></li>
@@ -154,8 +170,25 @@
 
             <div class="eg-item eg-item-xray" data-label="sdc-ui-media-caption" data-top data-inside>
               <p class="sdc-ui-media-caption">
-                Here is an image caption
+                Here is an image or video caption
               </p>
+            </div>
+
+            <div class="eg-item eg-item-xray" data-label="sdc-ui-label" data-top data-inside>
+              <p class="sdc-ui-label">
+                Text label
+              </p>
+            </div>
+
+            <div class="eg-item eg-item-xray" data-label="sdc-ui-media-caption" data-top data-inside>
+              
+                <div class="sdc-article-significance">Default</div>
+                <div class="sdc-article-significance sdc-article-significance--breaking">Breaking</div>
+                <div class="sdc-article-significance sdc-article-significance--sponsored">sponsored</div>
+                <div class="sdc-article-significance sdc-article-significance--transfer">transfer</div>
+                <div class="sdc-article-significance sdc-article-significance--live">live</div>
+                <div class="sdc-article-significance sdc-article-significance--analysis">analysis</div>
+                <div class="sdc-article-significance sdc-article-significance--exclusive">exclusive</div>
             </div>
           </div>
 

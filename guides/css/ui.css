@@ -28,7 +28,8 @@
     text-decoration-skip: ink;
   }
   
-  .sdc-ui-bullet-list > li > a:after {
+  .sdc-ui-bullet-list > li > a:after,
+  .sdc-ui-link-arrow:after {
     content: "";
     width: 0.35em;
     height: 0.35em;
@@ -66,8 +67,15 @@
     /* @extend %sdc-article-body-width-limiter !optional; */
     display: block;
   }
+
+  /* LABEL */
+  /* used for tags and labels */
+  .sdc-ui-label {
+    font-size: 15px;
+    color: var(--brand-1);
+  }
   
-  /* // EXTERNAL LINK ICON */
+  /* EXTERNAL LINK ICON */
   .sdc-ui-external-link:after {
     width: 0.9em;
     height: 0.9em;
@@ -82,14 +90,31 @@
     opacity: 0.5;
   }
   
-  /* // LABEL */
-  /* // used for tags and labels */
+  /* LABEL */
+  /* used for tags and labels */
   .sdc-ui-label {
     font-size: 15px;
     color: var(--brand-1);
   }
   
-  /* // SIGNIFICANCE */
+  /* SIGNIFICANCE */
+  .sdc-article-significance {
+    color: var(--text-color-invert);
+    background: var(--brand-1);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.08;
+    display: inline-block;
+    padding: 2px 5px 1px 6px;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: default;
+    vertical-align: middle;
+  }
+
   .sdc-article-significance--breaking[class],
   .sdc-article-significance--transfer[class]{
     color: #000;
@@ -97,6 +122,7 @@
   }
   
   .sdc-article-significance--sponsored[class]{
+    background: none;
     color: var(--text-color-secondary);
   }
   
@@ -105,24 +131,25 @@
     background: var(--live);
   }
   
-  .sdc-article-significance--analysis[class],
+  /* all below use default style */
+  /* .sdc-article-significance--analysis[class],
   .sdc-article-significance--exclusive[class],
   .sdc-article-significance--explainer[class],
   .sdc-article-significance--podcast[class],
   .sdc-article-significance--eyewitness[class],
   .sdc-article-significance--opinion[class],
   .sdc-article-significance--update[class]{
-    color: var(--text-color-invert);
-    background: var(--brand-1);
   }
-  
+  */
+
   /* // BUTTON */
   .sdc-ui-button {
     --sdc-ui-button-color: var(--brand-1);
     appearance: none;
     display: inline-block;
+    width: -moz-fit-content;
+    width: fit-content;
     vertical-align: middle;
-    box-sizing: border-box;
     padding: 0.64em 1em;
     line-height: 1;
     font-size: var(--supporting-text);
