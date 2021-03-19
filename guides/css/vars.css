@@ -56,7 +56,7 @@
   --success: #299934; /* success messages */
   --alert: #EA021A; /* alerts and warnings */
   --live: #EA021A; /* live scores and coverage */
-  --breaking: #FFE000; /* breaking news components */
+  --breaking: #FDE000; /* breaking news components */
   --link-color: #3157A1; /* global text link color */
 
   --live-bg: linear-gradient(180deg, #E90E10 0%, #BC0000 100%); /* gradient version of live */
