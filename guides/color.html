@@ -87,16 +87,39 @@
               </p>
             </div>
           </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--shade-6)"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#000</p>
+              <p class="swatch-name">
+                <span>Shade 6</span>
+                <span class="swatch-code">--shade-6</span>
+              </p>
+            </div>
+          </div>
         </div>
 
         <h4 id="gradients">Gradients</h4>
         <div class="swatch-group group-margin">
+
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--gradient-linear)">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#F5F5F5 - #E3E4E4</p>
+              <p class="swatch-name">
+                <span>Linear gradient</span>
+                <span class="swatch-code">--gradient-linear</span>
+              </p>
+            </div>
+          </div>
+
           <div class="swatch">
             <div class="swatch-color" style="background: var(--gradient-radial)"></div>
             <div class="swatch-body">
               <p class="swatch-hex">#FFF - #E8E7ED</p>
               <p class="swatch-name">
-                <span>Gradient radial</span>
+                <span>Radial gradient</span>
                 <span class="swatch-code">--gradiant-radial</span>
               </p>
             </div>
@@ -107,7 +130,7 @@
             <div class="swatch-body">
               <p class="swatch-hex">#D7D5DD - #EEE</p>
               <p class="swatch-name">
-                <span>Gradient pipe</span>
+                <span>Pipe gradient</span>
                 <span class="swatch-code">--gradient-pipe</span>
               </p>
             </div>
@@ -152,6 +175,18 @@
           </div>
 
           <div class="swatch">
+            <div class="swatch-color" style="background: var(--live-bg)">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#E90E10 - #BC0000</p>
+              <p class="swatch-name">
+                <span>Live Gradient</span>
+                <span class="swatch-code">--live-bg</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
             <div class="swatch-color" style="background: var(--breaking)">
             </div>
             <div class="swatch-body">
@@ -159,6 +194,18 @@
               <p class="swatch-name">
                 <span>Breaking</span>
                 <span class="swatch-code">--breaking</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background: var(--breaking-bg)">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#F8EB1F - #F2CA06</p>
+              <p class="swatch-name">
+                <span>Breaking Gradient</span>
+                <span class="swatch-code">--breaking-bg</span>
               </p>
             </div>
           </div>
@@ -238,6 +285,18 @@
           </div>
 
           <div class="swatch">
+            <div class="swatch-color" style="background: var(--text-color-tertiary)">
+            </div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#9F9F9F</p>
+              <p class="swatch-name">
+                <span>Tertiary text</span>
+                <span class="swatch-code">--text-color-tertiary</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
             <div class="swatch-color" style="background: var(--text-color-dark)">
             </div>
             <div class="swatch-body">
@@ -277,6 +336,42 @@
 
         </div>
 
+        <h4 id="utility">Transulent blacks</h4>
+        <div class="swatch-group group-margin">
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--black-op40)"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">rgba(0, 0, 0, 0.4)</p>
+              <p class="swatch-name">
+                <span>Overlay 40%</span>
+                <span class="swatch-code">--black-op40</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--black-op60)"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">rgba(0, 0, 0, 0.6)</p>
+              <p class="swatch-name">
+                <span>Overlay 60%</span>
+                <span class="swatch-code">--black-op60</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--black-op80)"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">rgba(0, 0, 0, 0.8)</p>
+              <p class="swatch-name">
+                <span>Overlay 80%</span>
+                <span class="swatch-code">--black-op80</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
         <h4 id="css-vars">CSS Vars <a href="#" class="ass-link">github link</a></h4>
         <div class="code-block group-margin">
           <pre>
@@ -289,16 +384,22 @@
 --shade-3: <span>#707070;</span>
 --shade-4: <span>#4A4A4A;</span>
 --shade-5: <span>#222222;</span>
+--shade-6: <span>#000000;</span>
 
 <i>/* gradients */</i>
+--gradient-linear: <span>linear-gradient(180deg, #F5F5F5, #E3E4E4);</span>
 --gradient-radial: <span>radial-gradient(circle at center,#fff 0,#e8e7ed 100%);</span>
 --gradient-pipe: <span>linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);</span>
 
 <i>/* ui states */</i>
 --success: <span>#299934;</span> <i>/* success messages */</i>
 --alert: <span>#EA021A;</span> <i>/* alerts and warnings */</i>
+--live: <span>#EA021A;</span> <i>/* live coverage/scores */</i>
 --breaking: <span>#FFE000;</span> <i>/* breaking news components */</i>
 --link-color: <span>#3157A1;</span> <i>/* global text link color */</i>
+
+--live-bg: <span>linear-gradient(180deg, #E90E10, #BC0000)</span> <i>/* gradient version of live */</i>
+--breaking-bg: <span>linear-gradient(180deg, #F8EB1F, #F2CA06);</span> <i>/* gradient version of breaking */</i>
 
 <i>/* common alias values */</i>
 --body-bg: <span>var(--shade-1);</span> <i>/* mobile site bg (desktop uses a gradient) */</i>
@@ -308,11 +409,18 @@
 --text-color: <span>var(--shade-4);</span> <i>/* main body text */</i>
 --text-color-invert: <span>var(--shade-0);</span> <i>/* text on dark backgrounds */</i>
 --text-color-secondary: <span>var(--shade-3);</span> <i>/* lighter body text */</i>
+--text-color-tertiary: <span>#9F9F9F;</span> <i>/* lightest body text */</i>
+--text-color-dark: <span>var(--shade-5);</span> <i>/* darker body text */</i>
 --icon-color: <span>var(--shade-5);</span> <i>/* color for svg/ui icons */</i>
 
 <i>/* box shadows */</i>
 --drop-shadow: <span>0 3px 3px rgba(0, 0, 0, 0.15);</span> <i>/* horizontal drop shadow beneath a ui element */</i>
---glow-shadow: <span>0 0 12px rgba(0,0,0,0.15);</span> <i>/* glow shadow around a ui element */</i> 
+--glow-shadow: <span>0 0 12px rgba(0,0,0,0.15);</span> <i>/* glow shadow around a ui element */</i>
+
+<i>/* overlays */</i>
+--black-op40: <span>rgba(0, 0, 0, 0.4);</span> <i>/* a black overlay at 40% opacity */</i>
+--black-op60: <span>rgba(0, 0, 0, 0.6);</span> <i>/* a black overlay at 60% opacity */</i>
+--black-op80: <span>rgba(0, 0, 0, 0.8);</span> <i>/* a black overlay at 80% opacity */</i>
         </pre>
         </div>
 
@@ -406,22 +514,47 @@
             </div>
           </div>
           <div class="swatch">
-            <div class="swatch-color" style="background: linear-gradient(#032C67, #063E7B)"></div>
+            <div class="swatch-color" style="background: linear-gradient(180deg, #164C99, #032C77);"></div>
             <div class="swatch-body">
-              <p class="swatch-hex">#032C67 - #063E7B</p>
+              <p class="swatch-hex">#164C99 - #032C77</p>
               <p class="swatch-name">
                 <span>News Gradient</span>
                 <span class="swatch-code">--brand-3</span>
               </p>
             </div>
           </div>
+
+          <div class="swatch">
+            <div class="swatch-color" style="background: #D0021B"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#D0021B</p>
+              <p class="swatch-name">
+                <span>Live</span>
+                <span class="swatch-code">--live</span>
+              </p>
+            </div>
+          </div> 
+          <div class="swatch">
+            <div class="swatch-color" style="background: #FF2744;"></div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FF2744</p>
+              <p class="swatch-name">
+                <span>Alert</span>
+                <span class="swatch-code">--alert</span>
+              </p>
+            </div>
+          </div>
+
+          
         </div>
         <h4>CSS Vars <a href="#" class="ass-link">github link</a></h4>
         <div class="code-block group-margin">
           <pre><i>/* Brand */</i>
 --brand-1: <span>#063E7B;</span>
 --brand-2: <span>#D0021B;</span>
---brand-3: <span>linear-gradient(#032C67, #063E7B);</span></pre>
+--brand-3: <span>linear-gradient(180deg, #164C99, #032C77);</span>
+--live: <span>#D0021B;</span>
+--alert: <span>#FF2744;</span></pre>
         </div>
 
         <h3 id="color-news">Sky Sports Germany</h3>
