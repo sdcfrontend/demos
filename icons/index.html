@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Icons</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+      font-family: 'Sky Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+      grid-column: 1/-1;
+      text-transform: capitalize;
+    }
+
+    body h1 {
+      padding: 1em 0;
+      display: flex !important; 
+      align-items: center;
+    }
+
+    h1 span {
+      display: block;
+      font-size: 14px;
+      padding: 0.1em 0.2em;
+      background: #ffcc00;
+      width: fit-content;
+
+    }
+
+    h2:not(:first-of-type),
+    h3 {
+      margin-top: 2em;
+    }
+
+    h2 + h3 {
+      margin-top: 0;
+    }
+
+    header {
+      font-size: clamp(2rem, 2rem + 1vw, 3.5rem);
+    }
+
+    .wrap {
+      width: clamp(300px, 90%, 1024px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+      grid-gap: clamp(18px, 2.5vw, 28px);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="wrap">Live Blog Icons <span></span></h1>
+  <main class="wrap"></main>
+  <script>
+    (async ()=>{
+      const main = document.querySelector('main');
+      const url = `https://e3.365dm.com/liveblog-icons/`;
+      const icons = await fetch('./icons.json');
+      const json = await icons.json();
+      let html = '';
+      let count = 0;
+      Object.entries(json).forEach((item) => {
+        html += `<h2>${item[0]}</h2>`;
+        Object.entries(item[1]).forEach((cat)=>{
+          html += `<h3>${cat[0]}</h3>`;
+          cat[1].forEach((path)=>{
+            count++;
+            html += (`<img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}">`);
+          })
+        });
+      });
+
+      main.insertAdjacentHTML('afterbegin', html);
+      document.querySelector('h1 span').textContent = `${count} icons`;
+    })();
+    
+  </script>
+</body>
+</html>

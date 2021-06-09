@@ -1,0 +1,5249 @@
+﻿{
+  "icons": {
+    "Icons from Icon font": [
+      {
+        "tag": "icon-x"
+      },
+      {
+        "tag": "icon-wicket"
+      },
+      {
+        "tag": "icon-warning"
+      },
+      {
+        "tag": "icon-video"
+      },
+      {
+        "tag": "icon-user"
+      },
+      {
+        "tag": "icon-umpire-review"
+      },
+      {
+        "tag": "icon-ufc"
+      },
+      {
+        "tag": "icon-twitter"
+      },
+      {
+        "tag": "icon-tv"
+      },
+      {
+        "tag": "icon-toss"
+      },
+      {
+        "tag": "icon-thunder"
+      },
+      {
+        "tag": "icon-tennis"
+      },
+      {
+        "tag": "icon-tea"
+      },
+      {
+        "tag": "icon-sunny"
+      },
+      {
+        "tag": "icon-sunny-rain"
+      },
+      {
+        "tag": "icon-substitution"
+      },
+      {
+        "tag": "icon-stop"
+      },
+      {
+        "tag": "icon-stats"
+      },
+      {
+        "tag": "icon-star"
+      },
+      {
+        "tag": "icon-speedway"
+      },
+      {
+        "tag": "icon-snow"
+      },
+      {
+        "tag": "icon-snooker"
+      },
+      {
+        "tag": "icon-sky-plus"
+      },
+      {
+        "tag": "icon-search"
+      },
+      {
+        "tag": "icon-rugby-union"
+      },
+      {
+        "tag": "icon-rugby-league"
+      },
+      {
+        "tag": "icon-record"
+      },
+      {
+        "tag": "icon-recommend"
+      },
+      {
+        "tag": "icon-rain"
+      },
+      {
+        "tag": "icon-quotes"
+      },
+      {
+        "tag": "icon-quote"
+      },
+      {
+        "tag": "icon-power-play"
+      },
+      {
+        "tag": "icon-plus"
+      },
+      {
+        "tag": "icon-play"
+      },
+      {
+        "tag": "icon-play-btn"
+      },
+      {
+        "tag": "icon-pause"
+      },
+      {
+        "tag": "icon-partially-sunny"
+      },
+      {
+        "tag": "icon-olympics"
+      },
+      {
+        "tag": "icon-nfl"
+      },
+      {
+        "tag": "icon-new-window"
+      },
+      {
+        "tag": "icon-multiroom"
+      },
+      {
+        "tag": "icon-mobile"
+      },
+      {
+        "tag": "icon-minus"
+      },
+      {
+        "tag": "icon-menu"
+      },
+      {
+        "tag": "icon-menu-sub"
+      },
+      {
+        "tag": "icon-lunch"
+      },
+      {
+        "tag": "icon-link"
+      },
+      {
+        "tag": "icon-like"
+      },
+      {
+        "tag": "icon-itunes"
+      },
+      {
+        "tag": "icon-ice-hockey"
+      },
+      {
+        "tag": "icon-horse-racing"
+      },
+      {
+        "tag": "icon-home"
+      },
+      {
+        "tag": "icon-hd"
+      },
+      {
+        "tag": "icon-hat-trick"
+      },
+      {
+        "tag": "icon-google-plus"
+      },
+      {
+        "tag": "icon-golf"
+      },
+      {
+        "tag": "icon-gallery"
+      },
+      {
+        "tag": "icon-formula-one"
+      },
+      {
+        "tag": "icon-goal"
+      },
+      {
+        "tag": "icon-five-wicket-innings"
+      },
+      {
+        "tag": "icon-feedback"
+      },
+      {
+        "tag": "icon-facebook"
+      },
+      {
+        "tag": "icon-envelope"
+      },
+      {
+        "tag": "icon-end-of-innings"
+      },
+      {
+        "tag": "icon-download"
+      },
+      {
+        "tag": "icon-darts"
+      },
+      {
+        "tag": "icon-cycling"
+      },
+      {
+        "tag": "icon-cricket"
+      },
+      {
+        "tag": "icon-competition"
+      },
+      {
+        "tag": "icon-comment"
+      },
+      {
+        "tag": "icon-cloudy"
+      },
+      {
+        "tag": "icon-close"
+      },
+      {
+        "tag": "icon-camera"
+      },
+      {
+        "tag": "icon-calendar"
+      },
+      {
+        "tag": "icon-boxing"
+      },
+      {
+        "tag": "icon-basketball"
+      },
+      {
+        "tag": "icon-bad-light"
+      },
+      {
+        "tag": "icon-audio"
+      },
+      {
+        "tag": "icon-audio-off"
+      },
+      {
+        "tag": "icon-arrow-up"
+      },
+      {
+        "tag": "icon-arrow-right"
+      },
+      {
+        "tag": "icon-arrow-right-2"
+      },
+      {
+        "tag": "icon-arrow-left"
+      },
+      {
+        "tag": "icon-arrow-down"
+      },
+      {
+        "tag": "icon-arrow-down-3"
+      },
+      {
+        "tag": "icon-anytime"
+      },
+      {
+        "tag": "icon-accordion-expand"
+      },
+      {
+        "tag": "icon-accordion-contract"
+      },
+      {
+        "tag": "icon-400"
+      },
+      {
+        "tag": "icon-300"
+      },
+      {
+        "tag": "icon-200"
+      },
+      {
+        "tag": "icon-100"
+      },
+      {
+        "tag": "icon-50"
+      },
+      {
+        "tag": "icon-10-wicket-bowler"
+      },
+      {
+        "tag": "icon-3d"
+      },
+      {
+        "tag": "icon-dropped-catch"
+      },
+      {
+        "tag": "icon-6"
+      },
+      {
+        "tag": "icon-4"
+      },
+      {
+        "tag": "icon-now-tv"
+      },
+      {
+        "tag": "icon-added-minutes"
+      },
+      {
+        "tag": "icon-disallowed-goal"
+      },
+      {
+        "tag": "icon-flag"
+      },
+      {
+        "tag": "icon-full-time"
+      },
+      {
+        "tag": "icon-free-kick"
+      },
+      {
+        "tag": "icon-half-time"
+      },
+      {
+        "tag": "icon-injury"
+      },
+      {
+        "tag": "icon-kick-off"
+      },
+      {
+        "tag": "icon-ouch"
+      },
+      {
+        "tag": "icon-penalty"
+      },
+      {
+        "tag": "icon-red-card"
+      },
+      {
+        "tag": "icon-save"
+      },
+      {
+        "tag": "icon-yellow-card"
+      },
+      {
+        "tag": "icon-penalty-missed"
+      },
+      {
+        "tag": "icon-extra-time"
+      },
+      {
+        "tag": "icon-penalty-shoot-out"
+      },
+      {
+        "tag": "icon-back"
+      },
+      {
+        "tag": "icon-menu-sub-1"
+      },
+      {
+        "tag": "icon-refresh"
+      },
+      {
+        "tag": "icon-menu-sub-2"
+      },
+      {
+        "tag": "icon-arrow-down-2"
+      },
+      {
+        "tag": "icon-arrow-up-2"
+      },
+      {
+        "tag": "icon-tie-break"
+      },
+      {
+        "tag": "icon-set"
+      },
+      {
+        "tag": "icon-game-set-match"
+      },
+      {
+        "tag": "icon-break"
+      },
+      {
+        "tag": "icon-info"
+      },
+      {
+        "tag": "icon-whistle"
+      },
+      {
+        "tag": "icon-tackle"
+      },
+      {
+        "tag": "icon-post"
+      },
+      {
+        "tag": "icon-newspaper"
+      },
+      {
+        "tag": "icon-microphone"
+      },
+      {
+        "tag": "icon-missed-chance"
+      },
+      {
+        "tag": "icon-eagle"
+      },
+      {
+        "tag": "icon-albatross"
+      },
+      {
+        "tag": "icon-drop-goal-union"
+      },
+      {
+        "tag": "icon-drop-goal-league"
+      },
+      {
+        "tag": "icon-video-ref"
+      },
+      {
+        "tag": "icon-40-20"
+      },
+      {
+        "tag": "icon-try"
+      },
+      {
+        "tag": "icon-penalty-rugby"
+      },
+      {
+        "tag": "icon-final-horn"
+      },
+      {
+        "tag": "icon-play-suspended"
+      },
+      {
+        "tag": "icon-hole-in-1"
+      },
+      {
+        "tag": "icon-clubhouse"
+      },
+      {
+        "tag": "icon-winner"
+      },
+      {
+        "tag": "icon-baseball"
+      },
+      {
+        "tag": "icon-goal-rugby-league"
+      },
+      {
+        "tag": "icon-180"
+      },
+      {
+        "tag": "icon-bullseye"
+      },
+      {
+        "tag": "icon-checkout"
+      },
+      {
+        "tag": "icon-double-top"
+      },
+      {
+        "tag": "icon-game-shot"
+      },
+      {
+        "tag": "icon-magic-darts"
+      },
+      {
+        "tag": "icon-nine-darter"
+      },
+      {
+        "tag": "icon-darts-set"
+      },
+      {
+        "tag": "icon-bid-accepted"
+      },
+      {
+        "tag": "icon-bid-rejected"
+      },
+      {
+        "tag": "icon-contract-signed"
+      },
+      {
+        "tag": "icon-scout"
+      },
+      {
+        "tag": "icon-speculation"
+      },
+      {
+        "tag": "icon-loan-deal"
+      },
+      {
+        "tag": "icon-done-deal"
+      },
+      {
+        "tag": "icon-alpine-skiing"
+      },
+      {
+        "tag": "icon-biathlon"
+      },
+      {
+        "tag": "icon-bobsleigh"
+      },
+      {
+        "tag": "icon-cross-country"
+      },
+      {
+        "tag": "icon-curling"
+      },
+      {
+        "tag": "icon-figure-skating"
+      },
+      {
+        "tag": "icon-freestyle-skiing"
+      },
+      {
+        "tag": "icon-ice-hockey2"
+      },
+      {
+        "tag": "icon-luge"
+      },
+      {
+        "tag": "icon-nordic-combined"
+      },
+      {
+        "tag": "icon-short-track"
+      },
+      {
+        "tag": "icon-skeleton"
+      },
+      {
+        "tag": "icon-ski-jumping"
+      },
+      {
+        "tag": "icon-snowboarding"
+      },
+      {
+        "tag": "icon-speed-skating"
+      },
+      {
+        "tag": "icon-football-2plus-goals"
+      },
+      {
+        "tag": "icon-penalty-missed"
+      },
+      {
+        "tag": "icon-assist"
+      },
+      {
+        "tag": "icon-towel"
+      },
+      {
+        "tag": "icon-tko"
+      },
+      {
+        "tag": "icon-round-10"
+      },
+      {
+        "tag": "icon-round-9"
+      },
+      {
+        "tag": "icon-round-8"
+      },
+      {
+        "tag": "icon-round-7"
+      },
+      {
+        "tag": "icon-round-6"
+      },
+      {
+        "tag": "icon-round-5"
+      },
+      {
+        "tag": "icon-round-4"
+      },
+      {
+        "tag": "icon-round-3"
+      },
+      {
+        "tag": "icon-round-2"
+      },
+      {
+        "tag": "icon-round-1"
+      },
+      {
+        "tag": "icon-referee"
+      },
+      {
+        "tag": "icon-ouch"
+      },
+      {
+        "tag": "icon-on-the-floor"
+      },
+      {
+        "tag": "icon-ko"
+      },
+      {
+        "tag": "icon-judges"
+      },
+      {
+        "tag": "icon-dazed"
+      },
+      {
+        "tag": "icon-cut-above-eye"
+      },
+      {
+        "tag": "icon-world-cup-trophy"
+      },
+      {
+        "tag": "icon-gaelic-save"
+      },
+      {
+        "tag": "icon-gaelic-post"
+      },
+      {
+        "tag": "icon-gaelic-goal"
+      },
+      {
+        "tag": "icon-gaelic-football"
+      },
+      {
+        "tag": "icon-gaelic-drop-kick"
+      },
+      {
+        "tag": "icon-gaelic-black-card"
+      },
+      {
+        "tag": "icon-round-12"
+      },
+      {
+        "tag": "icon-round-11"
+      },
+      {
+        "tag": "icon-hurling-save"
+      },
+      {
+        "tag": "icon-hurling-goal"
+      },
+      {
+        "tag": "icon-hurling"
+      },
+      {
+        "tag": "icon-rss"
+      }
+    ]
+  },
+  "boxing": {
+    "Experts": [
+      {
+        "tag": "icon-oleksandr-usyk"
+      },
+      {
+        "tag": "icon-richard-riakporhe"
+      },
+      {
+        "tag": "icon-amir-khan"
+      },
+      {
+        "tag": "icon-jim-watt"
+      },
+      {
+        "tag": "icon-johnny-nelson"
+      },
+      {
+        "tag": "icon-glenn-mccrory"
+      },
+      {
+        "tag": "icon-david-haye"
+      },
+      {
+        "tag": "icon-paulie-malignaggi"
+      },
+      {
+        "tag": "icon-jamie-moore"
+      },
+      {
+        "tag": "icon-johnny-nelson"
+      },
+      {
+        "tag": "icon-floyd-mayweather-fighting"
+      },
+      {
+        "tag": "icon-floyd-mayweather-clothed"
+      },
+      {
+        "tag": "icon-floyd-mayweather-snr"
+      },
+      {
+        "tag": "icon-freddie-roach"
+      },
+      {
+        "tag": "icon-manny-pacquaio-clothed"
+      },
+      {
+        "tag": "icon-manny-pacquaio-fighting"
+      },
+      {
+        "tag": "icon-scott-quigg"
+      },
+      {
+        "tag": "icon-paul-smith"
+      },
+      {
+        "tag": "icon-carl-froch"
+      },
+      {
+        "tag": "icon-george-groves"
+      },
+      {
+        "tag": "icon-anthony-joshua"
+      },
+      {
+        "tag": "icon-carl-froch-2"
+      },
+      {
+        "tag": "icon-george-groves-2"
+      },
+      {
+        "tag": "icon-james-degale"
+      },
+      {
+        "tag": "icon-james-mcdonnell"
+      },
+      {
+        "tag": "icon-kevin-mitchel"
+      },
+      {
+        "tag": "icon-anthony-crolla"
+      },
+      {
+        "tag": "icon-callum-smith"
+      },
+      {
+        "tag": "icon-eddie-hearn"
+      },
+      {
+        "tag": "icon-kell-brook"
+      },
+      {
+        "tag": "icon-lee-selby"
+      },
+      {
+        "tag": "icon-luke-campbell"
+      },
+      {
+        "tag": "icon-martin-murray"
+      },
+      {
+        "tag": "icon-rocky-fielding"
+      },
+      {
+        "tag": "icon-tony-bellew"
+      },
+      {
+        "tag": "icon-tony-bellew-pundit"
+      },
+      {
+        "tag": "icon-tommy-coyle"
+      },
+      {
+        "tag": "icon-tyson-fury"
+      },
+      {
+        "tag": "icon-wladimir-klitschko"
+      },
+      {
+        "tag": "icon-dillian-whyte"
+      },
+      {
+        "tag": "icon-andre-berto"
+      },
+      {
+        "tag": "icon-badou-jack"
+      },
+      {
+        "tag": "icon-brian-rose"
+      },
+      {
+        "tag": "icon-deontay-wilder"
+      },
+      {
+        "tag": "icon-frankie-gavin"
+      },
+      {
+        "tag": "icon-gennady-golovkin"
+      },
+      {
+        "tag": "icon-josh-warrington"
+      },
+      {
+        "tag": "icon-khalid-yafai"
+      },
+      {
+        "tag": "icon-liam-smith"
+      },
+      {
+        "tag": "icon-matthew-macklin"
+      },
+      {
+        "tag": "icon-sam-eggington"
+      },
+      {
+        "tag": "icon-stephen-smith"
+      },
+      {
+        "tag": "icon-terry-flanagan"
+      },
+      {
+        "tag": "icon-darleys-perez"
+      },
+      {
+        "tag": "icon-joe-gallagher"
+      },
+      {
+        "tag": "icon-abraham-arthur"
+      },
+      {
+        "tag": "icon-carl-frampton"
+      },
+      {
+        "tag": "icon-miguel-cotto"
+      },
+      {
+        "tag": "icon-saul-alvarez"
+      },
+      {
+        "tag": "icon-hughie-fury"
+      },
+      {
+        "tag": "icon-peter-fury"
+      },
+      {
+        "tag": "icon-johnathon-banks"
+      },
+      {
+        "tag": "icon-lucian-bute"
+      },
+      {
+        "tag": "icon-diego-chaves"
+      },
+      {
+        "tag": "icon-chris-eubank"
+      },
+      {
+        "tag": "icon-chris-eubank-junior-fighting"
+      },
+      {
+        "tag": "icon-gary-osullivan-fighting"
+      },
+      {
+        "tag": "icon-adam-booth"
+      },
+      {
+        "tag": "icon-carl-frampton-fighting"
+      },
+      {
+        "tag": "icon-hughie-fury-fighting"
+      },
+      {
+        "tag": "icon-david-haye-fighting"
+      },
+      {
+        "tag": "icon-john-fury"
+      },
+      {
+        "tag": "icon-barry-mcguigan"
+      },
+      {
+        "tag": "icon-shane-mcguigan-suit"
+      },
+      {
+        "tag": "icon-scott-quigg-suit"
+      },
+      {
+        "tag": "icon-gavin-mcdonnell"
+      },
+      {
+        "tag": "icon-ryan-burnett"
+      },
+      {
+        "tag": "icon-oscar-de-la-hoya"
+      },
+      {
+        "tag": "icon-saul-alvarez-fighter"
+      },
+      {
+        "tag": "icon-virgil-hunter"
+      },
+      {
+        "tag": "icon-bradley-skeete"
+      },
+      {
+        "tag": "icon-gamal-yafai"
+      },
+      {
+        "tag": "icon-richard-towers"
+      },
+      {
+        "tag": "icon-scott-cardle"
+      },
+      {
+        "tag": "icon-paul-smith-boxer"
+      },
+      {
+        "tag": "icon-david-price"
+      },
+      {
+        "tag": "icon-dereck-chisora"
+      },
+      {
+        "tag": "icon-charles-martin"
+      },
+      {
+        "tag": "icon-shane-mcguigan"
+      },
+      {
+        "tag": "icon-david-coldwell"
+      },
+      {
+        "tag": "icon-david-coldwell-pundit"
+      },
+      {
+        "tag": "icon-adam-etches"
+      },
+      {
+        "tag": "icon-breazeale-clothed-boxing"
+      },
+      {
+        "tag": "icon-breazeale-boxing-fight"
+      },
+      {
+        "tag": "icon-anthony-ogogo-boxing"
+      },
+      {
+        "tag": "icon-conor-benn-boxing"
+      },
+      {
+        "tag": "icon-nigel-benn-clothed"
+      },
+      {
+        "tag": "icon-ohara-davies-boxing"
+      },
+      {
+        "tag": "icon-jake-ball-boxing"
+      },
+      {
+        "tag": "icon-ryan-burnett-boxing"
+      },
+      {
+        "tag": "icon-gamal-yafai-boxing"
+      },
+      {
+        "tag": "icon-tom-doran-boxing"
+      },
+      {
+        "tag": "icon-lee-haskins-boxer"
+      },
+      {
+        "tag": "icon-kell-brook-clothed"
+      },
+      {
+        "tag": "icon-johriel-casimero-boxer"
+      },
+      {
+        "tag": "icon-gennady-golivkin-clothed"
+      },
+      {
+        "tag": "icon-charlie-edwards-boxer"
+      },
+      {
+        "tag": "icon-dominic-ingle-trainer"
+      },
+      {
+        "tag": "icon-abel-sanchez-trainer"
+      },
+      {
+        "tag": "icon-jorge-linares-boxer"
+      },
+      {
+        "tag": "icon-hoseem-burton-boxer"
+      },
+      {
+        "tag": "icon-isaac-lowe-boxer"
+      },
+      {
+        "tag": "icon-craig-richards-boxer"
+      },
+      {
+        "tag": "icon-marcus-morrison-boxer"
+      },
+      {
+        "tag": "icon-juergen-braehmer-boxer"
+      },
+      {
+        "tag": "icon-stuart-hall-boxer"
+      },
+      {
+        "tag": "icon-nathan-cleverly-boxer"
+      },
+      {
+        "tag": "icon-david-allen-boxer"
+      },
+      {
+        "tag": "icon-conor-benn-boxer"
+      },
+      {
+        "tag": "icon-nigel-benn-trainer"
+      },
+      {
+        "tag": "icon-oahara-davies-boxer"
+      },
+      {
+        "tag": "icon-jake-ball-boxer"
+      },
+      {
+        "tag": "icon-anthony-ogogo-boxer"
+      },
+      {
+        "tag": "icon-ryan-burnett-boxer"
+      },
+      {
+        "tag": "icon-yagai-gamal-boxer"
+      },
+      {
+        "tag": "icon-eric-molina-boxer"
+      },
+      {
+        "tag": "icon-frank-buglioni-boxer"
+      },
+      {
+        "tag": "icon-hosea-burton-boxer"
+      },
+      {
+        "tag": "icon-katie-taylor-boxer"
+      },
+      {
+        "tag": "icon-luis-ortiz-boxer"
+      },
+      {
+        "tag": "icon-tedcheeseman-boxer"
+      },
+      {
+        "tag": "icon-andyfowler"
+      },
+      {
+        "tag": "icon-andytownend"
+      },
+      {
+        "tag": "icon-derrickjames-trainer"
+      },
+      {
+        "tag": "icon-erroljr"
+      },
+      {
+        "tag": "icon-fedorchudinov"
+      },
+      {
+        "tag": "icon-jamiecox"
+      },
+      {
+        "tag": "icon-cordina"
+      },
+      {
+        "tag": "icon-joshkelly"
+      },
+      {
+        "tag": "icon-lawrenceokolie"
+      },
+      {
+        "tag": "icon-savannahmarshall"
+      },
+      {
+        "tag": "icon-danawhite"
+      },
+      {
+        "tag": "icon-jimmylennonjr"
+      },
+      {
+        "tag": "icon-shawnporter"
+      },
+      {
+        "tag": "icon-ashleytheophane"
+      },
+      {
+        "tag": "icon-gervontadavis"
+      },
+      {
+        "tag": "icon-owenroddy"
+      },
+      {
+        "tag": "icon-floydmayweather"
+      },
+      {
+        "tag": "icon-conormcgregorfighter"
+      },
+      {
+        "tag": "icon-conormcgregorpress"
+      },
+      {
+        "tag": "icon-carlostakamboxer"
+      },
+      {
+        "tag": "icon-robertheleniusboxer"
+      },
+      {
+        "tag": "icon-callumjohnsonboxer"
+      },
+      {
+        "tag": "icon-joshuabuatsiboxer"
+      },
+      {
+        "tag": "icon-robmccrackenboxer"
+      },
+      {
+        "tag": "icon-kubratpulevboxer"
+      },
+      {
+        "tag": "icon-alexanderpovetkin"
+      },
+      {
+        "tag": "icon-andytownendboxer"
+      },
+      {
+        "tag": "icon-carlosmolina"
+      },
+      {
+        "tag": "icon-davidhiggins"
+      },
+      {
+        "tag": "icon-davidprice"
+      },
+      {
+        "tag": "icon-eddiehearn"
+      },
+      {
+        "tag": "icon-josephparker"
+      },
+      {
+        "tag": "icon-kevinbarry"
+      },
+      {
+        "tag": "icon-lewisritson"
+      },
+      {
+        "tag": "icon-lucasbrowne"
+      },
+      {
+        "tag": "icon-ismaelsalas"
+      },
+      {
+        "tag": "icon-joejoyce"
+      },
+      {
+        "tag": "icon-lenroythomas"
+      },
+      {
+        "tag": "icon-martinjward"
+      },
+      {
+        "tag": "icon-natashajones"
+      },
+      {
+        "tag": "icon-phillogreco"
+      },
+      {
+        "tag": "icon-seandodd"
+      },
+      {
+        "tag": "icon-conorbenn"
+      },
+      {
+        "tag": "icon-samuelvargasboxer"
+      },
+      {
+        "tag": "icon-danielromanboxer"
+      },
+      {
+        "tag": "icon-joegoossen"
+      },
+      {
+        "tag": "icon-jessievargasboxer"
+      },
+      {
+        "tag": "icon-isaacchamberlain"
+      },
+      {
+        "tag": "icon-jordangillboxer"
+      },
+      {
+        "tag": "icon-mattyaskinboxer"
+      },
+      {
+        "tag": "icon-amirkhanboxer"
+      },
+      {
+        "tag": "icon-yvanmendyboxer"
+      },
+      {
+        "tag": "icon-arthurbeterbieboxer"
+      }
+    ],
+    "TV Shows": [
+      {
+        "tag": "icon-ringside"
+      }
+    ],
+    "Logos": [
+      {
+        "tag": "icon-ssbo-logo"
+      }
+    ],
+    "Icons": [
+      {
+        "tag": "icon-boxing-celebrate"
+      },
+      {
+        "tag": "icon-boxing-on-a-knee"
+      },
+      {
+        "tag": "icon-boxing-ref-steps-in"
+      },
+      {
+        "tag": "icon-boxing-vegas"
+      },
+      {
+        "tag": "icon-boxing-weigh-in"
+      },
+      {
+        "tag": "icon-champion-belt"
+      }
+    ]
+  },
+  "cricket": {
+    "Experts": [
+      {
+        "tag": "icon-andrewstrauss"
+      },
+      {
+        "tag": "icon-benedictbermange"
+      },
+      {
+        "tag": "icon-davidgower"
+      },
+      {
+        "tag": "icon-davidlloyd"
+      },
+      {
+        "tag": "icon-gregblewett"
+      },
+      {
+        "tag": "icon-ianbotham"
+      },
+      {
+        "tag": "icon-ianward"
+      },
+      {
+        "tag": "icon-michaelholding"
+      },
+      {
+        "tag": "icon-mikeatherton"
+      },
+      {
+        "tag": "icon-nasserhussain"
+      },
+      {
+        "tag": "icon-shanewarne"
+      },
+      {
+        "tag": "icon-michaelvaughan"
+      },
+      {
+        "tag": "icon-tommoody"
+      },
+      {
+        "tag": "icon-markbutcher"
+      },
+      {
+        "tag": "icon-robertkey"
+      },
+      {
+        "tag": "icon-bobwillis"
+      },
+      {
+        "tag": "icon-nickknight"
+      },
+      {
+        "tag": "icon-howzaat"
+      },
+      {
+        "tag": "icon-natashafarrant"
+      },
+      {
+        "tag": "icon-chriswoakes"
+      },
+      {
+        "tag": "icon-jeremyconey"
+      },
+      {
+        "tag": "icon-ramizraja"
+      },
+      {
+        "tag": "icon-wasimakram"
+      },
+      {
+        "tag": "icon-ravishastri"
+      }
+    ],
+    "Players": [
+      {
+        "tag": "icon-alastaircook"
+      },
+      {
+        "tag": "icon-eoinmorgan"
+      }
+    ],
+    "Badges": [
+      {
+        "tag": "icon-cricket-england"
+      },
+      {
+        "tag": "icon-cricket-australia"
+      },
+      {
+        "tag": "icon-cricket-india"
+      },
+      {
+        "tag": "icon-cricket-pakistan"
+      },
+      {
+        "tag": "icon-cricket-srilanka"
+      },
+      {
+        "tag": "icon-cricket-westindies"
+      },
+      {
+        "tag": "icon-cricket-southafrica"
+      },
+      {
+        "tag": "icon-cricket-newzealand"
+      },
+      {
+        "tag": "icon-cricket-zimbabwe"
+      },
+      {
+        "tag": "icon-cricket-scotland"
+      },
+      {
+        "tag": "icon-cricket-ireland"
+      },
+      {
+        "tag": "icon-cricket-afghanistan"
+      },
+      {
+        "tag": "icon-cricket-bangladesh"
+      },
+      {
+        "tag": "icon-cricket-derbyshire"
+      },
+      {
+        "tag": "icon-cricket-durham"
+      },
+      {
+        "tag": "icon-cricket-essex"
+      },
+      {
+        "tag": "icon-cricket-glamorgan"
+      },
+      {
+        "tag": "icon-cricket-gloucestershire"
+      },
+      {
+        "tag": "icon-cricket-hampshire"
+      },
+      {
+        "tag": "icon-cricket-kent"
+      },
+      {
+        "tag": "icon-cricket-lancashire"
+      },
+      {
+        "tag": "icon-cricket-leicestershire"
+      },
+      {
+        "tag": "icon-cricket-middlesex"
+      },
+      {
+        "tag": "icon-cricket-northamptonshire"
+      },
+      {
+        "tag": "icon-cricket-nottinghamshire"
+      },
+      {
+        "tag": "icon-cricket-somerset"
+      },
+      {
+        "tag": "icon-cricket-surrey"
+      },
+      {
+        "tag": "icon-cricket-sussex"
+      },
+      {
+        "tag": "icon-cricket-warwickshire"
+      },
+      {
+        "tag": "icon-cricket-worcestershire"
+      },
+      {
+        "tag": "icon-cricket-yorkshire"
+      }
+    ],
+    "TV Shows": [
+      {
+        "tag": "icon-cricketam"
+      }
+    ],
+    "The Hundred": [
+      {
+        "tag": "icon-birmingham-phoenix"
+      },
+      {
+        "tag": "icon-london-spirit"
+      },
+      {
+        "tag": "icon-manchester-originals"
+      },
+      {
+        "tag": "icon-oval-invincibles"
+      },
+      {
+        "tag": "icon-southern-brave"
+      },
+      {
+        "tag": "icon-super-northern-chargers"
+      },
+      {
+        "tag": "icon-trent-rockets"
+      },
+      {
+        "tag": "icon-welsh-fire"
+      }
+    ],
+    "Caricatures": [
+      {
+        "tag": "icon-bob-willis-caricature"
+      },
+      {
+        "tag": "icon-david-gower-caricature"
+      },
+      {
+        "tag": "icon-david-lloyd-caricature"
+      },
+      {
+        "tag": "icon-ebony-rainford-brent-caricature"
+      },
+      {
+        "tag": "icon-eoin-morgan-caricature"
+      },
+      {
+        "tag": "icon-heather-knight-caricature"
+      },
+      {
+        "tag": "icon-ian-botham-caricature"
+      },
+      {
+        "tag": "icon-ian-ward-caricature"
+      },
+      {
+        "tag": "icon-isa-guha-caricature"
+      },
+      {
+        "tag": "icon-joe-root-caricature"
+      },
+      {
+        "tag": "icon-kumar-sangakkara-caricature"
+      },
+      {
+        "tag": "icon-mark-butcher-caricature"
+      },
+      {
+        "tag": "icon-michael-atherton-caricature"
+      },
+      {
+        "tag": "icon-michael-holding-caricature"
+      },
+      {
+        "tag": "icon-nasser-hussain-caricature"
+      },
+      {
+        "tag": "icon-ricky-ponting-caricature"
+      },
+      {
+        "tag": "icon-rob-key-caricature"
+      },
+      {
+        "tag": "icon-virat-kohli-caricature"
+      },
+      {
+        "tag": "icon-wasi-akram-caricature"
+      }
+    ],
+    "Misc": [
+      {
+        "tag": "icon-drinksbottle"
+      },
+      {
+        "tag": "icon-drssuccess"
+      },
+      {
+        "tag": "icon-drsfailure"
+      },
+      {
+        "tag": "icon-duck"
+      },
+      {
+        "tag": "icon-bat"
+      },
+      {
+        "tag": "icon-urn"
+      },
+      {
+        "tag": "icon-maiden"
+      }
+    ]
+  },
+  "cycling": {
+    "Experts": [
+      {
+        "tag": "icon-richardmoore"
+      }
+    ]
+  },
+  "darts": {
+    "Experts": [
+      {
+        "tag": "icon-adrianlewis"
+      },
+      {
+        "tag": "icon-daveclark"
+      },
+      {
+        "tag": "icon-ericbristow"
+      },
+      {
+        "tag": "icon-jameswade"
+      },
+      {
+        "tag": "icon-michaelvangerwen"
+      },
+      {
+        "tag": "icon-philtaylor"
+      },
+      {
+        "tag": "icon-raymondvanbarneveld"
+      },
+      {
+        "tag": "icon-rodharrington"
+      },
+      {
+        "tag": "icon-simonwhitlock"
+      },
+      {
+        "tag": "icon-waynemardle"
+      },
+      {
+        "tag": "icon-peterwright"
+      },
+      {
+        "tag": "icon-garyanderson"
+      },
+      {
+        "tag": "icon-davechisnall"
+      },
+      {
+        "tag": "icon-robthornton"
+      },
+      {
+        "tag": "icon-michaelsmith"
+      }
+    ]
+  },
+  "nba": {
+    "Teams": [
+      {
+        "tag": "icon-ahawks"
+      },
+      {
+        "tag": "icon-bceltics"
+      },
+      {
+        "tag": "icon-bklynnets"
+      },
+      {
+        "tag": "icon-cbulls"
+      },
+      {
+        "tag": "icon-ccavaliers"
+      },
+      {
+        "tag": "icon-chornets"
+      },
+      {
+        "tag": "icon-dmavericks"
+      },
+      {
+        "tag": "icon-dnuggets"
+      },
+      {
+        "tag": "icon-dpistons"
+      },
+      {
+        "tag": "icon-gswarriors"
+      },
+      {
+        "tag": "icon-hrockets"
+      },
+      {
+        "tag": "icon-ipacers"
+      },
+      {
+        "tag": "icon-laclippers"
+      },
+      {
+        "tag": "icon-lalakers"
+      },
+      {
+        "tag": "icon-mbucks"
+      },
+      {
+        "tag": "icon-mgrizzlies"
+      },
+      {
+        "tag": "icon-mheat"
+      },
+      {
+        "tag": "icon-mtimberwolves"
+      },
+      {
+        "tag": "icon-nopelicans"
+      },
+      {
+        "tag": "icon-nyknicks"
+      },
+      {
+        "tag": "icon-okcthunder"
+      },
+      {
+        "tag": "icon-omagic"
+      },
+      {
+        "tag": "icon-p76ers"
+      },
+      {
+        "tag": "icon-psuns"
+      },
+      {
+        "tag": "icon-ptrailblazers"
+      },
+      {
+        "tag": "icon-saspurs"
+      },
+      {
+        "tag": "icon-skings"
+      },
+      {
+        "tag": "icon-traptors"
+      },
+      {
+        "tag": "icon-ujazz"
+      },
+      {
+        "tag": "icon-wwizards"
+      }
+    ]
+  },
+  "f1": {
+    "Icons": [
+      {
+        "tag": "icon-chequered-flag"
+      },
+      {
+        "tag": "icon-red-flag"
+      },
+      {
+        "tag": "icon-green-flag"
+      },
+      {
+        "tag": "icon-crashed-car"
+      },
+      {
+        "tag": "icon-stopclock"
+      },
+      {
+        "tag": "icon-safety-car"
+      },
+      {
+        "tag": "icon-team-radio"
+      },
+      {
+        "tag": "icon-pits"
+      },
+      {
+        "tag": "icon-broken-down-car"
+      },
+      {
+        "tag": "icon-abandoned-car"
+      },
+      {
+        "tag": "icon-podium"
+      }
+    ],
+    "Teams": [
+      {
+        "tag": "icon-ferrari"
+      },
+      {
+        "tag": "icon-force-india"
+      },
+      {
+        "tag": "icon-lotus"
+      },
+      {
+        "tag": "icon-mclaren"
+      },
+      {
+        "tag": "icon-mercedes"
+      },
+      {
+        "tag": "icon-red-bull"
+      },
+      {
+        "tag": "icon-sauber"
+      },
+      {
+        "tag": "icon-toro-rosso"
+      },
+      {
+        "tag": "icon-williams"
+      },
+      {
+        "tag": "icon-renault"
+      },
+      {
+        "tag": "icon-haas"
+      },
+      {
+        "tag": "icon-manor"
+      },
+      {
+        "tag": "icon-alfa-romeo"
+      },
+      {
+        "tag": "icon-alpha-tauri"
+      },
+      {
+        "tag": "icon-racing-point"
+      }
+    ],
+    "Experts": [
+      {
+        "tag": "icon-anthonydavidson"
+      },
+      {
+        "tag": "icon-damonhill"
+      },
+      {
+        "tag": "icon-davidcroft"
+      },
+      {
+        "tag": "icon-markhughes"
+      },
+      {
+        "tag": "icon-martinbrundle"
+      },
+      {
+        "tag": "icon-pauldiresta"
+      },
+      {
+        "tag": "icon-johnnyherbert"
+      },
+      {
+        "tag": "icon-nataliepinkham"
+      },
+      {
+        "tag": "icon-tedkravitz"
+      },
+      {
+        "tag": "icon-simonlazenby"
+      },
+      {
+        "tag": "icon-nicorosberg"
+      },
+      {
+        "tag": "icon-craigslater"
+      },
+      {
+        "tag": "icon-karunchandhok"
+      },
+      {
+        "tag": "icon-rachelbrooks"
+      }
+    ]
+  },
+  "football": {
+    "Experts": [
+      {
+        "tag": "icon-andywalker"
+      },
+      {
+        "tag": "icon-alansmith"
+      },
+      {
+        "tag": "icon-charlienicholas"
+      },
+      {
+        "tag": "icon-chriskamara"
+      },
+      {
+        "tag": "icon-davidjones"
+      },
+      {
+        "tag": "icon-garyneville"
+      },
+      {
+        "tag": "icon-graemesouness"
+      },
+      {
+        "tag": "icon-jamiecarragher"
+      },
+      {
+        "tag": "icon-jamieredknapp"
+      },
+      {
+        "tag": "icon-jeffstelling"
+      },
+      {
+        "tag": "icon-kevinphillips"
+      },
+      {
+        "tag": "icon-martintyler"
+      },
+      {
+        "tag": "icon-mattletissier"
+      },
+      {
+        "tag": "icon-neilmccann"
+      },
+      {
+        "tag": "icon-paulmerson"
+      },
+      {
+        "tag": "icon-paulwalsh"
+      },
+      {
+        "tag": "icon-peterbeagrie"
+      },
+      {
+        "tag": "icon-philthompson"
+      },
+      {
+        "tag": "icon-tonycottee"
+      },
+      {
+        "tag": "icon-johnnyphilips"
+      },
+      {
+        "tag": "icon-alanmcinally"
+      },
+      {
+        "tag": "icon-royhodgson"
+      },
+      {
+        "tag": "icon-thierryhenry"
+      },
+      {
+        "tag": "icon-ianholloway"
+      },
+      {
+        "tag": "icon-alanmcnally"
+      },
+      {
+        "tag": "icon-alexscott"
+      },
+      {
+        "tag": "icon-andyhinchcliffe"
+      },
+      {
+        "tag": "icon-dannyhigginbotham"
+      },
+      {
+        "tag": "icon-jimwhite"
+      },
+      {
+        "tag": "icon-josemourinho"
+      },
+      {
+        "tag": "icon-roykeane"
+      },
+      {
+        "tag": "icon-dharmeshshesh"
+      },
+      {
+        "tag": "icon-jamescole"
+      },
+      {
+        "tag": "icon-kavehsolhekol"
+      },
+      {
+        "tag": "icon-keithdowney"
+      },
+      {
+        "tag": "icon-lyallthomas"
+      },
+      {
+        "tag": "icon-rebeccawilliams"
+      },
+      {
+        "tag": "icon-robdorsett"
+      },
+      {
+        "tag": "icon-simeongholam"
+      },
+      {
+        "tag": "icon-timthornton"
+      },
+      {
+        "tag": "icon-krisboyd"
+      },
+      {
+        "tag": "icon-lukeshanley"
+      },
+      {
+        "tag": "icon-davidprutton"
+      }
+    ],
+    "Editors": [
+      {
+        "tag": "icon-adambate"
+      },
+      {
+        "tag": "icon-gerardbrand"
+      },
+      {
+        "tag": "icon-jackwilkinson"
+      },
+      {
+        "tag": "icon-nickwright"
+      },
+      {
+        "tag": "icon-petersmith"
+      }
+    ],
+    "Players": [
+      {
+        "tag": "icon-lionelmessi"
+      },
+      {
+        "tag": "icon-cristianoronaldo"
+      },
+      {
+        "tag": "icon-waynerooney"
+      }
+    ],
+    "Managers": [
+      {
+        "tag": "icon-arsenewenger"
+      },
+      {
+        "tag": "icon-jurgenklopp"
+      },
+      {
+        "tag": "icon-pepguardiola"
+      },
+      {
+        "tag": "icon-mauriciopochettino"
+      },
+      {
+        "tag": "icon-unaiemery"
+      },
+      {
+        "tag": "icon-mauriziosarri"
+      },
+      {
+        "tag": "icon-garethsouthgate"
+      },
+      {
+        "tag": "icon-dsmith"
+      },
+      {
+        "tag": "icon-gpotter"
+      },
+      {
+        "tag": "icon-ehowe"
+      },
+      {
+        "tag": "icon-sdyche"
+      },
+      {
+        "tag": "icon-flampard"
+      },
+      {
+        "tag": "icon-rhodgson"
+      },
+      {
+        "tag": "icon-msilva"
+      },
+      {
+        "tag": "icon-brodgers"
+      },
+      {
+        "tag": "icon-ogsolskjaer"
+      },
+      {
+        "tag": "icon-dfarke"
+      },
+      {
+        "tag": "icon-sbruce"
+      },
+      {
+        "tag": "icon-cwilder"
+      },
+      {
+        "tag": "icon-rhasenhuttl"
+      },
+      {
+        "tag": "icon-qsanchezflores"
+      },
+      {
+        "tag": "icon-mpellegrini"
+      },
+      {
+        "tag": "icon-nespiritosanto"
+      }
+    ],
+    "TV Shows": [
+      {
+        "tag": "icon-championsleague"
+      },
+      {
+        "tag": "icon-fl72"
+      },
+      {
+        "tag": "icon-footballersfootballshow"
+      },
+      {
+        "tag": "icon-gamechangers"
+      },
+      {
+        "tag": "icon-goalsonsunday"
+      },
+      {
+        "tag": "icon-mondaynightfootball"
+      },
+      {
+        "tag": "icon-revistadelaliga"
+      },
+      {
+        "tag": "icon-saturdaynightfootball"
+      },
+      {
+        "tag": "icon-socceram"
+      },
+      {
+        "tag": "icon-soccersaturday"
+      },
+      {
+        "tag": "icon-soccerspecial"
+      },
+      {
+        "tag": "icon-scottishfootball"
+      },
+      {
+        "tag": "icon-supersunday"
+      },
+      {
+        "tag": "icon-sundaysupplement"
+      },
+      {
+        "tag": "icon-fridaynightfootball"
+      },
+      {
+        "tag": "icon-goalsonsunday"
+      },
+      {
+        "tag": "icon-thedebate"
+      },
+      {
+        "tag": "icon-premierleaguelive"
+      }
+    ],
+    "Features": [
+      {
+        "tag": "icon-sst"
+      }
+    ],
+    "Premier League Teams": [
+      {
+        "tag": "icon-arsenal"
+      },
+      {
+        "tag": "icon-astonvilla"
+      },
+      {
+        "tag": "icon-cardiff"
+      },
+      {
+        "tag": "icon-chelsea"
+      },
+      {
+        "tag": "icon-crystalpalace"
+      },
+      {
+        "tag": "icon-everton"
+      },
+      {
+        "tag": "icon-fulham"
+      },
+      {
+        "tag": "icon-hull"
+      },
+      {
+        "tag": "icon-liverpool"
+      },
+      {
+        "tag": "icon-manchestercity"
+      },
+      {
+        "tag": "icon-manchesterunited"
+      },
+      {
+        "tag": "icon-newcastle"
+      },
+      {
+        "tag": "icon-norwich"
+      },
+      {
+        "tag": "icon-southampton"
+      },
+      {
+        "tag": "icon-stoke"
+      },
+      {
+        "tag": "icon-sunderland"
+      },
+      {
+        "tag": "icon-swansea"
+      },
+      {
+        "tag": "icon-tottenham"
+      },
+      {
+        "tag": "icon-westbrom"
+      },
+      {
+        "tag": "icon-westham"
+      }
+    ],
+    "Champions League Teams": [
+      {
+        "tag": "icon-acmilan"
+      },
+      {
+        "tag": "icon-ajax"
+      },
+      {
+        "tag": "icon-atleticomadrid"
+      },
+      {
+        "tag": "icon-austriawien"
+      },
+      {
+        "tag": "icon-barcelona"
+      },
+      {
+        "tag": "icon-basel"
+      },
+      {
+        "tag": "icon-bayerleverkusen"
+      },
+      {
+        "tag": "icon-bayernmunich"
+      },
+      {
+        "tag": "icon-benfica"
+      },
+      {
+        "tag": "icon-borussiadortmund"
+      },
+      {
+        "tag": "icon-celtic"
+      },
+      {
+        "tag": "icon-fccopenhagen"
+      },
+      {
+        "tag": "icon-fcporto"
+      },
+      {
+        "tag": "icon-juventus"
+      },
+      {
+        "tag": "icon-galatasaray"
+      },
+      {
+        "tag": "icon-lazio"
+      },
+      {
+        "tag": "icon-marseille"
+      },
+      {
+        "tag": "icon-napoli"
+      },
+      {
+        "tag": "icon-olympiakos"
+      },
+      {
+        "tag": "icon-pacosdeferreira"
+      },
+      {
+        "tag": "icon-parissaintgermain"
+      },
+      {
+        "tag": "icon-realmadrid"
+      },
+      {
+        "tag": "icon-realsociedad"
+      },
+      {
+        "tag": "icon-roma"
+      },
+      {
+        "tag": "icon-shakhtardonetskea"
+      },
+      {
+        "tag": "icon-schalke"
+      },
+      {
+        "tag": "icon-steauabucuresti"
+      },
+      {
+        "tag": "icon-viktoriaplzen"
+      },
+      {
+        "tag": "icon-zenitsaintpetersburg"
+      }
+    ],
+    "Serie A Teams": [
+      {
+        "tag": "icon-palermo"
+      }
+    ],
+    "Primeira Liga Teams": [
+      {
+        "tag": "icon-sportinglisbon"
+      }
+    ],
+    "Spanish Teams": [
+      {
+        "tag": "icon-vilarreal"
+      },
+      {
+        "tag": "icon-athleticbilbao"
+      },
+      {
+        "tag": "icon-celtavigo"
+      },
+      {
+        "tag": "icon-eibar"
+      },
+      {
+        "tag": "icon-deportivo"
+      },
+      {
+        "tag": "icon-malaga"
+      },
+      {
+        "tag": "icon-getafe"
+      },
+      {
+        "tag": "icon-realbetis"
+      },
+      {
+        "tag": "icon-valencia"
+      },
+      {
+        "tag": "icon-rayovallecano"
+      },
+      {
+        "tag": "icon-sportinggijon"
+      },
+      {
+        "tag": "icon-espanyol"
+      },
+      {
+        "tag": "icon-laspalmas"
+      },
+      {
+        "tag": "icon-granada"
+      },
+      {
+        "tag": "icon-levante"
+      }
+    ],
+    "League Two Teams": [
+      {
+        "tag": "icon-bristolrovers"
+      },
+      {
+        "tag": "icon-barnet"
+      },
+      {
+        "tag": "icon-grimsbytown"
+      },
+      {
+        "tag": "icon-lincoln"
+      },
+      {
+        "tag": "icon-forestgreenrovers"
+      }
+    ],
+    "Ligue 1 Teams": [
+      {
+        "tag": "icon-lyon"
+      },
+      {
+        "tag": "icon-monaco"
+      }
+    ],
+    "International Teams": [
+      {
+        "tag": "icon-england"
+      },
+      {
+        "tag": "icon-northernireland"
+      },
+      {
+        "tag": "icon-republicofireland"
+      },
+      {
+        "tag": "icon-wales"
+      },
+      {
+        "tag": "icon-scotland"
+      }
+    ],
+    "Championship Teams": [
+      {
+        "tag": "icon-barnsley"
+      },
+      {
+        "tag": "icon-birmingham"
+      },
+      {
+        "tag": "icon-blackburn"
+      },
+      {
+        "tag": "icon-blackpool"
+      },
+      {
+        "tag": "icon-bolton"
+      },
+      {
+        "tag": "icon-bournemouth"
+      },
+      {
+        "tag": "icon-brighton"
+      },
+      {
+        "tag": "icon-burnley"
+      },
+      {
+        "tag": "icon-charlton"
+      },
+      {
+        "tag": "icon-derby"
+      },
+      {
+        "tag": "icon-doncaster"
+      },
+      {
+        "tag": "icon-huddersfield"
+      },
+      {
+        "tag": "icon-ipswich"
+      },
+      {
+        "tag": "icon-leeds"
+      },
+      {
+        "tag": "icon-leicester"
+      },
+      {
+        "tag": "icon-middlesbrough"
+      },
+      {
+        "tag": "icon-millwall"
+      },
+      {
+        "tag": "icon-nottinghamforest"
+      },
+      {
+        "tag": "icon-qpr"
+      },
+      {
+        "tag": "icon-reading"
+      },
+      {
+        "tag": "icon-sheffieldwednesday"
+      },
+      {
+        "tag": "icon-watford"
+      },
+      {
+        "tag": "icon-wigan"
+      },
+      {
+        "tag": "icon-wolves"
+      },
+      {
+        "tag": "icon-yeovil"
+      }
+    ],
+    "Domestic Teams": [
+      {
+        "tag": "icon-brentford"
+      },
+      {
+        "tag": "icon-rotherham"
+      },
+      {
+        "tag": "icon-wimbledon"
+      },
+      {
+        "tag": "icon-aberdeen"
+      },
+      {
+        "tag": "icon-accringtonstanley"
+      },
+      {
+        "tag": "icon-bradford"
+      },
+      {
+        "tag": "icon-bristol"
+      },
+      {
+        "tag": "icon-burtonalbion"
+      },
+      {
+        "tag": "icon-bury"
+      },
+      {
+        "tag": "icon-cambridge"
+      },
+      {
+        "tag": "icon-carlisle"
+      },
+      {
+        "tag": "icon-celtic"
+      },
+      {
+        "tag": "icon-cheltenham"
+      },
+      {
+        "tag": "icon-chesterfield"
+      },
+      {
+        "tag": "icon-colchester"
+      },
+      {
+        "tag": "icon-coventry"
+      },
+      {
+        "tag": "icon-crawley"
+      },
+      {
+        "tag": "icon-crewe"
+      },
+      {
+        "tag": "icon-dagenham"
+      },
+      {
+        "tag": "icon-dundee"
+      },
+      {
+        "tag": "icon-dundeeunited"
+      },
+      {
+        "tag": "icon-exeter"
+      },
+      {
+        "tag": "icon-fleetwoodtown"
+      },
+      {
+        "tag": "icon-gillingham"
+      },
+      {
+        "tag": "icon-hamilton"
+      },
+      {
+        "tag": "icon-hartlepool"
+      },
+      {
+        "tag": "icon-inverness"
+      },
+      {
+        "tag": "icon-kilmarnock"
+      },
+      {
+        "tag": "icon-leytonorient"
+      },
+      {
+        "tag": "icon-luton"
+      },
+      {
+        "tag": "icon-mansfield"
+      },
+      {
+        "tag": "icon-mkdons"
+      },
+      {
+        "tag": "icon-morecambe"
+      },
+      {
+        "tag": "icon-motherwell"
+      },
+      {
+        "tag": "icon-newport"
+      },
+      {
+        "tag": "icon-northampton"
+      },
+      {
+        "tag": "icon-nottscounty"
+      },
+      {
+        "tag": "icon-oldham"
+      },
+      {
+        "tag": "icon-oxford"
+      },
+      {
+        "tag": "icon-partickthistle"
+      },
+      {
+        "tag": "icon-peterborough"
+      },
+      {
+        "tag": "icon-plymouth"
+      },
+      {
+        "tag": "icon-portvale"
+      },
+      {
+        "tag": "icon-portsmouth"
+      },
+      {
+        "tag": "icon-preston"
+      },
+      {
+        "tag": "icon-rochdale"
+      },
+      {
+        "tag": "icon-rosscounty"
+      },
+      {
+        "tag": "icon-scunthorpe"
+      },
+      {
+        "tag": "icon-sheffieldunited"
+      },
+      {
+        "tag": "icon-shrewsbury"
+      },
+      {
+        "tag": "icon-southend"
+      },
+      {
+        "tag": "icon-stjohnstone"
+      },
+      {
+        "tag": "icon-stmirren"
+      },
+      {
+        "tag": "icon-stevenage"
+      },
+      {
+        "tag": "icon-swindon"
+      },
+      {
+        "tag": "icon-tranmere"
+      },
+      {
+        "tag": "icon-walsall"
+      },
+      {
+        "tag": "icon-wycombe"
+      },
+      {
+        "tag": "icon-york"
+      }
+    ],
+    "Europa League Badges": [
+      {
+        "tag": "icon-villarreal"
+      },
+      {
+        "tag": "icon-torino"
+      },
+      {
+        "tag": "icon-redbullsalzburg"
+      },
+      {
+        "tag": "icon-besiktas"
+      },
+      {
+        "tag": "icon-dinamomoscow"
+      },
+      {
+        "tag": "icon-psveindhoven"
+      },
+      {
+        "tag": "icon-internazionale"
+      },
+      {
+        "tag": "icon-sevilla"
+      },
+      {
+        "tag": "icon-feyenoord"
+      },
+      {
+        "tag": "icon-wolfsburg"
+      },
+      {
+        "tag": "icon-napoli"
+      },
+      {
+        "tag": "icon-spartaprague"
+      },
+      {
+        "tag": "icon-dynamokiev"
+      },
+      {
+        "tag": "icon-fiorentina"
+      },
+      {
+        "tag": "icon-legiawarsaw"
+      },
+      {
+        "tag": "icon-dnipro"
+      }
+    ],
+    "Football Competitions": [
+      {
+        "tag": "icon-world-cup"
+      },
+      {
+        "tag": "icon-fifa"
+      },
+      {
+        "tag": "icon-europa-league"
+      },
+      {
+        "tag": "icon-laligalogo"
+      },
+      {
+        "tag": "icon-fa-cup"
+      },
+      {
+        "tag": "icon-capital-one-cup"
+      },
+      {
+        "tag": "icon-johnstones-paint-trophy"
+      },
+      {
+        "tag": "icon-premier-league"
+      },
+      {
+        "tag": "icon-championship"
+      },
+      {
+        "tag": "icon-league-one"
+      },
+      {
+        "tag": "icon-league-two"
+      },
+      {
+        "tag": "icon-conference"
+      },
+      {
+        "tag": "icon-football-league"
+      },
+      {
+        "tag": "icon-seriea"
+      },
+      {
+        "tag": "icon-bundesliga-badge"
+      },
+      {
+        "tag": "icon-ligue1"
+      },
+      {
+        "tag": "icon-eredivisie"
+      },
+      {
+        "tag": "icon-rangers"
+      },
+      {
+        "tag": "icon-hearts"
+      },
+      {
+        "tag": "icon-hibernian"
+      },
+      {
+        "tag": "icon-borussia-monchengladbach"
+      },
+      {
+        "tag": "icon-chinese-super-league"
+      },
+      {
+        "tag": "icon-mls"
+      },
+      {
+        "tag": "icon-sky-bet-efl"
+      },
+      {
+        "tag": "icon-sky-bet-efl-league-two"
+      },
+      {
+        "tag": "icon-sky-bet-efl-league-one"
+      },
+      {
+        "tag": "icon-sky-bet-efl-championship"
+      },
+      {
+        "tag": "icon-efl-trophy"
+      },
+      {
+        "tag": "icon-efl-trophy-cup"
+      },
+      {
+        "tag": "icon-carabaocup"
+      },
+      {
+        "tag": "icon-championsleague"
+      },
+      {
+        "tag": "icon-nationsleague"
+      },
+      {
+        "tag": "icon-scottishpremiership"
+      }
+    ],
+    "Euro Flags": [
+      {
+        "tag": "icon-flag-france"
+      },
+      {
+        "tag": "icon-flag-romania"
+      },
+      {
+        "tag": "icon-flag-albania"
+      },
+      {
+        "tag": "icon-flag-switzerland"
+      },
+      {
+        "tag": "icon-flag-england"
+      },
+      {
+        "tag": "icon-flag-russia"
+      },
+      {
+        "tag": "icon-flag-slovakia"
+      },
+      {
+        "tag": "icon-flag-wales"
+      },
+      {
+        "tag": "icon-flag-turkey"
+      },
+      {
+        "tag": "icon-flag-croatia"
+      },
+      {
+        "tag": "icon-flag-poland"
+      },
+      {
+        "tag": "icon-flag-northernireland"
+      },
+      {
+        "tag": "icon-flag-germany"
+      },
+      {
+        "tag": "icon-flag-ukraine"
+      },
+      {
+        "tag": "icon-flag-spain"
+      },
+      {
+        "tag": "icon-flag-czechrepublic"
+      },
+      {
+        "tag": "icon-flag-republicofireland"
+      },
+      {
+        "tag": "icon-flag-sweden"
+      },
+      {
+        "tag": "icon-flag-belgium"
+      },
+      {
+        "tag": "icon-flag-italy"
+      },
+      {
+        "tag": "icon-flag-austria"
+      },
+      {
+        "tag": "icon-flag-hungary"
+      },
+      {
+        "tag": "icon-flag-portugal"
+      },
+      {
+        "tag": "icon-flag-iceland"
+      }
+    ],
+    "World Flags": [
+      {
+        "tag": "icon-worldflag-argentina"
+      },
+      {
+        "tag": "icon-worldflag-australia"
+      },
+      {
+        "tag": "icon-worldflag-belgium"
+      },
+      {
+        "tag": "icon-worldflag-brazil"
+      },
+      {
+        "tag": "icon-worldflag-colombia"
+      },
+      {
+        "tag": "icon-worldflag-costarica"
+      },
+      {
+        "tag": "icon-worldflag-croatia"
+      },
+      {
+        "tag": "icon-worldflag-denmark"
+      },
+      {
+        "tag": "icon-worldflag-egypt"
+      },
+      {
+        "tag": "icon-worldflag-england"
+      },
+      {
+        "tag": "icon-worldflag-france"
+      },
+      {
+        "tag": "icon-worldflag-germany"
+      },
+      {
+        "tag": "icon-worldflag-ghana"
+      },
+      {
+        "tag": "icon-worldflag-iceland"
+      },
+      {
+        "tag": "icon-worldflag-iran"
+      },
+      {
+        "tag": "icon-worldflag-japan"
+      },
+      {
+        "tag": "icon-worldflag-mexico"
+      },
+      {
+        "tag": "icon-worldflag-morocco"
+      },
+      {
+        "tag": "icon-worldflag-nigeria"
+      },
+      {
+        "tag": "icon-worldflag-panama"
+      },
+      {
+        "tag": "icon-worldflag-peru"
+      },
+      {
+        "tag": "icon-worldflag-poland"
+      },
+      {
+        "tag": "icon-worldflag-portugal"
+      },
+      {
+        "tag": "icon-worldflag-russia"
+      },
+      {
+        "tag": "icon-worldflag-saudiarabia"
+      },
+      {
+        "tag": "icon-worldflag-senegal"
+      },
+      {
+        "tag": "icon-worldflag-serbia"
+      },
+      {
+        "tag": "icon-worldflag-southkorea"
+      },
+      {
+        "tag": "icon-worldflag-spain"
+      },
+      {
+        "tag": "icon-worldflag-sweden"
+      },
+      {
+        "tag": "icon-worldflag-switzerland"
+      },
+      {
+        "tag": "icon-worldflag-tunisia"
+      },
+      {
+        "tag": "icon-worldflag-uruguay"
+      }
+    ],
+    "World Badges": [
+      {
+        "tag": "icon-worldbadge-argentina"
+      },
+      {
+        "tag": "icon-worldbadge-australia"
+      },
+      {
+        "tag": "icon-worldbadge-belgium"
+      },
+      {
+        "tag": "icon-worldbadge-brazil"
+      },
+      {
+        "tag": "icon-worldbadge-colombia"
+      },
+      {
+        "tag": "icon-worldbadge-costarica"
+      },
+      {
+        "tag": "icon-worldbadge-croatia"
+      },
+      {
+        "tag": "icon-worldbadge-denmark"
+      },
+      {
+        "tag": "icon-worldbadge-egypt"
+      },
+      {
+        "tag": "icon-worldbadge-england"
+      },
+      {
+        "tag": "icon-worldbadge-france"
+      },
+      {
+        "tag": "icon-worldbadge-germany"
+      },
+      {
+        "tag": "icon-worldbadge-ghana"
+      },
+      {
+        "tag": "icon-worldbadge-iceland"
+      },
+      {
+        "tag": "icon-worldbadge-iran"
+      },
+      {
+        "tag": "icon-worldbadge-japan"
+      },
+      {
+        "tag": "icon-worldbadge-mexico"
+      },
+      {
+        "tag": "icon-worldbadge-morocco"
+      },
+      {
+        "tag": "icon-worldbadge-nigeria"
+      },
+      {
+        "tag": "icon-worldbadge-panama"
+      },
+      {
+        "tag": "icon-worldbadge-peru"
+      },
+      {
+        "tag": "icon-worldbadge-poland"
+      },
+      {
+        "tag": "icon-worldbadge-portugal"
+      },
+      {
+        "tag": "icon-worldbadge-russia"
+      },
+      {
+        "tag": "icon-worldbadge-saudiarabia"
+      },
+      {
+        "tag": "icon-worldbadge-senegal"
+      },
+      {
+        "tag": "icon-worldbadge-serbia"
+      },
+      {
+        "tag": "icon-worldbadge-southkorea"
+      },
+      {
+        "tag": "icon-worldbadge-spain"
+      },
+      {
+        "tag": "icon-worldbadge-sweden"
+      },
+      {
+        "tag": "icon-worldbadge-switzerland"
+      },
+      {
+        "tag": "icon-worldbadge-tunisia"
+      },
+      {
+        "tag": "icon-worldbadge-uruguay"
+      },
+      {
+        "tag": "icon-netherlands"
+      }
+    ],
+    "Transfer Centre": [
+      {
+        "tag": "icon-update"
+      },
+      {
+        "tag": "icon-top-story"
+      },
+      {
+        "tag": "icon-done-deal-1"
+      },
+      {
+        "tag": "icon-done-deal-2"
+      },
+      {
+        "tag": "icon-bid-made"
+      },
+      {
+        "tag": "icon-investigating"
+      },
+      {
+        "tag": "icon-transfer-centre"
+      }
+    ],
+    "Other": [
+      {
+        "tag": "icon-offside"
+      },
+      {
+        "tag": "icon-var"
+      }
+    ]
+  },
+  "golf": {
+    "Experts": [
+      {
+        "tag": "icon-colinmontgomerie"
+      },
+      {
+        "tag": "icon-paulmcginley"
+      },
+      {
+        "tag": "icon-ewen-murray"
+      },
+      {
+        "tag": "icon-wayne-riley"
+      },
+      {
+        "tag": "icon-rob-lee"
+      },
+      {
+        "tag": "icon-richard-kaufman"
+      },
+      {
+        "tag": "icon-richard-boxall"
+      },
+      {
+        "tag": "icon-rich-beem"
+      },
+      {
+        "tag": "icon-paul-mcginley"
+      },
+      {
+        "tag": "icon-nick-dougherty"
+      },
+      {
+        "tag": "icon-mark-roe"
+      },
+      {
+        "tag": "icon-gary-christian"
+      },
+      {
+        "tag": "icon-colin-montgomerie"
+      },
+      {
+        "tag": "icon-butch-harmon"
+      },
+      {
+        "tag": "icon-bogey"
+      },
+      {
+        "tag": "icon-eagle-golf"
+      },
+      {
+        "tag": "icon-birdie"
+      },
+      {
+        "tag": "icon-flag1"
+      },
+      {
+        "tag": "icon-flag2"
+      },
+      {
+        "tag": "icon-flag3"
+      },
+      {
+        "tag": "icon-flag4"
+      },
+      {
+        "tag": "icon-flag5"
+      },
+      {
+        "tag": "icon-flag6"
+      },
+      {
+        "tag": "icon-flag7"
+      },
+      {
+        "tag": "icon-flag8"
+      },
+      {
+        "tag": "icon-flag9"
+      },
+      {
+        "tag": "icon-flag10"
+      },
+      {
+        "tag": "icon-flag11"
+      },
+      {
+        "tag": "icon-flag12"
+      },
+      {
+        "tag": "icon-flag13"
+      },
+      {
+        "tag": "icon-flag14"
+      },
+      {
+        "tag": "icon-flag15"
+      },
+      {
+        "tag": "icon-flag16"
+      },
+      {
+        "tag": "icon-flag17"
+      },
+      {
+        "tag": "icon-flag18"
+      }
+    ],
+    "Ryder Cup": [
+      {
+        "tag": "icon-europe"
+      },
+      {
+        "tag": "icon-unitedstates"
+      },
+      {
+        "tag": "icon-rydercup"
+      }
+    ],
+    "Icons": [
+      {
+        "tag": "icon-water"
+      },
+      {
+        "tag": "icon-bunker"
+      },
+      {
+        "tag": "icon-bag"
+      }
+    ]
+  },
+  "nfl": {
+    "Experts": [
+      {
+        "tag": "icon-kevincadle"
+      }
+    ],
+    "Teams": [
+      {
+        "tag": "icon-seattleseahawks"
+      },
+      {
+        "tag": "icon-broncos"
+      },
+      {
+        "tag": "icon-cardinals"
+      },
+      {
+        "tag": "icon-falcons"
+      },
+      {
+        "tag": "icon-ravens"
+      },
+      {
+        "tag": "icon-bulls"
+      },
+      {
+        "tag": "icon-panthers"
+      },
+      {
+        "tag": "icon-bears"
+      },
+      {
+        "tag": "icon-bengals"
+      },
+      {
+        "tag": "icon-browns"
+      },
+      {
+        "tag": "icon-cowboys"
+      },
+      {
+        "tag": "icon-broncos"
+      },
+      {
+        "tag": "icon-lions"
+      },
+      {
+        "tag": "icon-packers"
+      },
+      {
+        "tag": "icon-texans"
+      },
+      {
+        "tag": "icon-colts"
+      },
+      {
+        "tag": "icon-jaguars"
+      },
+      {
+        "tag": "icon-chiefs"
+      },
+      {
+        "tag": "icon-dolphins"
+      },
+      {
+        "tag": "icon-vikings"
+      },
+      {
+        "tag": "icon-patriots"
+      },
+      {
+        "tag": "icon-saints"
+      },
+      {
+        "tag": "icon-giants"
+      },
+      {
+        "tag": "icon-jets"
+      },
+      {
+        "tag": "icon-raiders"
+      },
+      {
+        "tag": "icon-eagles"
+      },
+      {
+        "tag": "icon-steelers"
+      },
+      {
+        "tag": "icon-chargers"
+      },
+      {
+        "tag": "icon-49ers"
+      },
+      {
+        "tag": "icon-seahawks"
+      },
+      {
+        "tag": "icon-rams"
+      },
+      {
+        "tag": "icon-buccaneers"
+      },
+      {
+        "tag": "icon-titans"
+      },
+      {
+        "tag": "icon-redskins"
+      }
+    ],
+    "Icons": [
+      {
+        "tag": "icon-touchdown"
+      }
+    ]
+  },
+  "other": {
+    "Logos": [
+      {
+        "tag": "icon-bn"
+      },
+      {
+        "tag": "icon-sst"
+      },
+      {
+        "tag": "icon-ssnhq"
+      },
+      {
+        "tag": "icon-sky-sports"
+      },
+      {
+        "tag": "icon-sky-sports-main-event"
+      },
+      {
+        "tag": "icon-sky-sports-premier-league"
+      },
+      {
+        "tag": "icon-sky-sports-football"
+      },
+      {
+        "tag": "icon-sky-sports-cricket"
+      },
+      {
+        "tag": "icon-sky-sports-golf"
+      },
+      {
+        "tag": "icon-sky-sports-f1"
+      },
+      {
+        "tag": "icon-sky-sports-action"
+      },
+      {
+        "tag": "icon-sky-sports-arena"
+      },
+      {
+        "tag": "icon-sky-sports-news"
+      },
+      {
+        "tag": "icon-sky-sports-mix"
+      },
+      {
+        "tag": "icon-sky-sports-boxoffice"
+      },
+      {
+        "tag": "icon-questionmark"
+      },
+      {
+        "tag": "icon-facebooksquare"
+      },
+      {
+        "tag": "icon-facebooklive"
+      },
+      {
+        "tag": "icon-wwe"
+      },
+      {
+        "tag": "icon-instagram"
+      },
+      {
+        "tag": "icon-youtube"
+      },
+      {
+        "tag": "icon-play-circle"
+      },
+      {
+        "tag": "icon-twitter-black"
+      },
+      {
+        "tag": "icon-undertheradar"
+      },
+      {
+        "tag": "icon-facebook-circle"
+      },
+      {
+        "tag": "icon-snapchat"
+      }
+    ]
+  },
+  "rugby-league": {
+    "Experts": [
+      {
+        "tag": "icon-barrymcdermott"
+      },
+      {
+        "tag": "icon-briancarney"
+      },
+      {
+        "tag": "icon-phillclarke"
+      },
+      {
+        "tag": "icon-stevo"
+      },
+      {
+        "tag": "icon-terryoconner"
+      },
+      {
+        "tag": "icon-barrievterry"
+      }
+    ],
+    "TV Shows": [
+      {
+        "tag": "icon-bootsnall"
+      }
+    ],
+    "Super League": [
+      {
+        "tag": "icon-castlefordtigers"
+      },
+      {
+        "tag": "icon-catalansdragons"
+      },
+      {
+        "tag": "icon-huddersfieldgiants"
+      },
+      {
+        "tag": "icon-hullfc"
+      },
+      {
+        "tag": "icon-hullkr"
+      },
+      {
+        "tag": "icon-leedsrhinos"
+      },
+      {
+        "tag": "icon-londonbroncos"
+      },
+      {
+        "tag": "icon-salfordreddevils"
+      },
+      {
+        "tag": "icon-sthelens"
+      },
+      {
+        "tag": "icon-wakefieldtrinity"
+      },
+      {
+        "tag": "icon-warringtonwolves"
+      },
+      {
+        "tag": "icon-wiganwarriors"
+      }
+    ],
+    "Other": [
+      {
+        "tag": "icon-try-rugbyleague"
+      }
+    ]
+  },
+  "rugby-union": {
+    "Experts": [
+      {
+        "tag": "icon-deanryan"
+      },
+      {
+        "tag": "icon-jonathandavies"
+      },
+      {
+        "tag": "icon-milesharrison"
+      },
+      {
+        "tag": "icon-philedwards"
+      },
+      {
+        "tag": "icon-robvickerman"
+      },
+      {
+        "tag": "icon-stuartbarnes"
+      },
+      {
+        "tag": "icon-willgreenwood"
+      },
+      {
+        "tag": "icon-dewimorris"
+      },
+      {
+        "tag": "icon-seanfitzpatrick"
+      },
+      {
+        "tag": "icon-michaellynagh"
+      }
+    ],
+    "TV Shows": [
+      {
+        "tag": "icon-rugbyclub"
+      }
+    ],
+    "Badges": [
+      {
+        "tag": "icon-england-ru"
+      },
+      {
+        "tag": "icon-ireland-ru"
+      },
+      {
+        "tag": "icon-scotland-ru"
+      },
+      {
+        "tag": "icon-wales-ru"
+      },
+      {
+        "tag": "icon-france-ru"
+      },
+      {
+        "tag": "icon-newzealand-ru"
+      },
+      {
+        "tag": "icon-argentina-ru"
+      },
+      {
+        "tag": "icon-australia-ru"
+      },
+      {
+        "tag": "icon-southafrica-ru"
+      },
+      {
+        "tag": "icon-japan-ru"
+      },
+      {
+        "tag": "icon-fiji-ru"
+      },
+      {
+        "tag": "icon-tonga-ru"
+      },
+      {
+        "tag": "icon-samoa-ru"
+      },
+      {
+        "tag": "icon-usa-ru"
+      },
+      {
+        "tag": "icon-canada-ru"
+      },
+      {
+        "tag": "icon-georgia-ru"
+      },
+      {
+        "tag": "icon-romania-ru"
+      },
+      {
+        "tag": "icon-britishirishlions-ru"
+      },
+      {
+        "tag": "icon-wasps-ru"
+      },
+      {
+        "tag": "icon-exeter-ru"
+      },
+      {
+        "tag": "icon-saracens-ru"
+      },
+      {
+        "tag": "icon-leicester-ru"
+      },
+      {
+        "tag": "icon-bath-ru"
+      },
+      {
+        "tag": "icon-bristol-ru"
+      },
+      {
+        "tag": "icon-gloucester-ru"
+      },
+      {
+        "tag": "icon-worcester-ru"
+      },
+      {
+        "tag": "icon-newcastle-ru"
+      },
+      {
+        "tag": "icon-londonirish-ru"
+      },
+      {
+        "tag": "icon-harlequins-ru"
+      },
+      {
+        "tag": "icon-salesharks-ru"
+      },
+      {
+        "tag": "icon-northampton-ru"
+      },
+      {
+        "tag": "icon-leinster-ru"
+      },
+      {
+        "tag": "icon-ulster-ru"
+      },
+      {
+        "tag": "icon-munster-ru"
+      },
+      {
+        "tag": "icon-connacht-ru"
+      },
+      {
+        "tag": "icon-glasgow-ru"
+      },
+      {
+        "tag": "icon-edinburgh-ru"
+      },
+      {
+        "tag": "icon-ospreys-ru"
+      },
+      {
+        "tag": "icon-dragons-ru"
+      },
+      {
+        "tag": "icon-scarlets-ru"
+      },
+      {
+        "tag": "icon-cardiffblues-ru"
+      },
+      {
+        "tag": "icon-bennetton-ru"
+      },
+      {
+        "tag": "icon-zebre-ru"
+      },
+      {
+        "tag": "icon-cheetahs-ru"
+      },
+      {
+        "tag": "icon-southernkings-ru"
+      },
+      {
+        "tag": "icon-lyon-ru"
+      },
+      {
+        "tag": "icon-toulouse-ru"
+      },
+      {
+        "tag": "icon-montpellier-ru"
+      },
+      {
+        "tag": "icon-larochelle-ru"
+      },
+      {
+        "tag": "icon-bordeauxbegles-ru"
+      },
+      {
+        "tag": "icon-toulon-ru"
+      },
+      {
+        "tag": "icon-sectionpaloise-ru"
+      },
+      {
+        "tag": "icon-racing92-ru"
+      },
+      {
+        "tag": "icon-clermontauvergne-ru"
+      },
+      {
+        "tag": "icon-stadefrancais-ru"
+      },
+      {
+        "tag": "icon-castres-ru"
+      },
+      {
+        "tag": "icon-oyannax-ru"
+      },
+      {
+        "tag": "icon-agen-ru"
+      },
+      {
+        "tag": "icon-brive-ru"
+      }
+    ]
+  },
+  "sky-bet": {
+    "Icons": [
+      {
+        "tag": "icon-betting"
+      },
+      {
+        "tag": "icon-fantasy-football"
+      },
+      {
+        "tag": "icon-fantasy-five-a-side"
+      },
+      {
+        "tag": "icon-price-boost"
+      },
+      {
+        "tag": "icon-super-6"
+      }
+    ],
+    "Experts": [
+      {
+        "tag": "icon-alex-hammond"
+      },
+      {
+        "tag": "icon-alex-payne"
+      },
+      {
+        "tag": "icon-rob-lee"
+      },
+      {
+        "tag": "icon-keith-senior"
+      }
+    ]
+  },
+  "speedway": {
+    "Experts": [
+      {
+        "tag": "icon-kelvintatum"
+      }
+    ]
+  },
+  "tennis": {
+    "Experts": [
+      {
+        "tag": "icon-barrycowan"
+      },
+      {
+        "tag": "icon-markpetchey"
+      },
+      {
+        "tag": "icon-racket"
+      }
+    ]
+  },
+  "gaa": {
+    "Icons": [
+      {
+        "tag": "icon-goal-gaa"
+      },
+      {
+        "tag": "icon-minute-45"
+      },
+      {
+        "tag": "icon-minute-65"
+      }
+    ],
+    "Teams": [
+      {
+        "tag": "icon-gaa-antrim"
+      },
+      {
+        "tag": "icon-gaa-armagh"
+      },
+      {
+        "tag": "icon-gaa-carlow"
+      },
+      {
+        "tag": "icon-gaa-cavan"
+      },
+      {
+        "tag": "icon-gaa-clare"
+      },
+      {
+        "tag": "icon-gaa-cork"
+      },
+      {
+        "tag": "icon-gaa-derry"
+      },
+      {
+        "tag": "icon-gaa-donegal"
+      },
+      {
+        "tag": "icon-gaa-down"
+      },
+      {
+        "tag": "icon-gaa-dublin"
+      },
+      {
+        "tag": "icon-gaa-fermanagh"
+      },
+      {
+        "tag": "icon-gaa-galway"
+      },
+      {
+        "tag": "icon-gaa-kerry"
+      },
+      {
+        "tag": "icon-gaa-kildare"
+      },
+      {
+        "tag": "icon-gaa-kilkenny"
+      },
+      {
+        "tag": "icon-gaa-laois"
+      },
+      {
+        "tag": "icon-gaa-leitrim"
+      },
+      {
+        "tag": "icon-gaa-limerick"
+      },
+      {
+        "tag": "icon-gaa-london"
+      },
+      {
+        "tag": "icon-gaa-longford"
+      },
+      {
+        "tag": "icon-gaa-louth"
+      },
+      {
+        "tag": "icon-gaa-mayo"
+      },
+      {
+        "tag": "icon-gaa-meath"
+      },
+      {
+        "tag": "icon-gaa-moaghan"
+      },
+      {
+        "tag": "icon-gaa-offaly"
+      },
+      {
+        "tag": "icon-gaa-roscommon"
+      },
+      {
+        "tag": "icon-gaa-sligo"
+      },
+      {
+        "tag": "icon-gaa-tipperary"
+      },
+      {
+        "tag": "icon-gaa-tyrone"
+      },
+      {
+        "tag": "icon-gaa-waterford"
+      },
+      {
+        "tag": "icon-gaa-westmeath"
+      },
+      {
+        "tag": "icon-gaa-wexford"
+      },
+      {
+        "tag": "icon-gaa-wicklow"
+      }
+    ]
+  },
+  "de-football": {
+    "Bundesliga": [
+      {
+        "tag": "icon-bayern-munchen"
+      },
+      {
+        "tag": "icon-rasenballsport-leipzig"
+      },
+      {
+        "tag": "icon-borussia-dortmund"
+      },
+      {
+        "tag": "icon-tsg-1899-hoffenheim"
+      },
+      {
+        "tag": "icon-hertha-bsc"
+      },
+      {
+        "tag": "icon-sc-freiburg"
+      },
+      {
+        "tag": "icon-sv-werder-bremen"
+      },
+      {
+        "tag": "icon-borussia-monchengladbach"
+      },
+      {
+        "tag": "icon-fc-shalke-04"
+      },
+      {
+        "tag": "icon-eintracht-frankfurt"
+      },
+      {
+        "tag": "icon-bayer-04-leverkusen"
+      },
+      {
+        "tag": "icon-fc-augsburg"
+      },
+      {
+        "tag": "icon-1-fsv-mainz-05"
+      },
+      {
+        "tag": "icon-vfl-wolfsburg"
+      },
+      {
+        "tag": "icon-hannover-96"
+      },
+      {
+        "tag": "icon-vfb-stuttgart"
+      },
+      {
+        "tag": "icon-fortuna-dusseldorf"
+      },
+      {
+        "tag": "icon-fc-nurnberg"
+      }
+    ],
+    "2. Bundesliga": [
+      {
+        "tag": "icon-fc-koln"
+      },
+      {
+        "tag": "icon-hamburger-sv"
+      },
+      {
+        "tag": "icon-fc-magdeburg"
+      },
+      {
+        "tag": "icon-sc-paderborn"
+      },
+      {
+        "tag": "icon-fc-ingolstadt-04"
+      },
+      {
+        "tag": "icon-sv-darmstadt-98"
+      },
+      {
+        "tag": "icon-eintracht-braunschweig"
+      },
+      {
+        "tag": "icon-fc-union-berlin"
+      },
+      {
+        "tag": "icon-dynamo-dresden"
+      },
+      {
+        "tag": "icon-fc-heidenheim"
+      },
+      {
+        "tag": "icon-fc-st-pauli"
+      },
+      {
+        "tag": "icon-spvgg-greuther-furth"
+      },
+      {
+        "tag": "icon-vfl-bochum"
+      },
+      {
+        "tag": "icon-sv-sandhausen"
+      },
+      {
+        "tag": "icon-fc-kaiserslautern"
+      },
+      {
+        "tag": "icon-erzgebirge-aue"
+      },
+      {
+        "tag": "icon-arminia-bielefeld"
+      },
+      {
+        "tag": "icon-msv-duisburg"
+      },
+      {
+        "tag": "icon-holstein-kiel"
+      },
+      {
+        "tag": "icon-jahn-regensburg"
+      }
+    ],
+    "Premier League Teams": [
+      {
+        "tag": "icon-arsenal"
+      },
+      {
+        "tag": "icon-astonvilla"
+      },
+      {
+        "tag": "icon-cardiff"
+      },
+      {
+        "tag": "icon-chelsea"
+      },
+      {
+        "tag": "icon-crystalpalace"
+      },
+      {
+        "tag": "icon-everton"
+      },
+      {
+        "tag": "icon-fulham"
+      },
+      {
+        "tag": "icon-hull"
+      },
+      {
+        "tag": "icon-liverpool"
+      },
+      {
+        "tag": "icon-manchester-city"
+      },
+      {
+        "tag": "icon-manchesterunited"
+      },
+      {
+        "tag": "icon-newcastle"
+      },
+      {
+        "tag": "icon-norwich"
+      },
+      {
+        "tag": "icon-southampton"
+      },
+      {
+        "tag": "icon-stoke"
+      },
+      {
+        "tag": "icon-sunderland"
+      },
+      {
+        "tag": "icon-swansea"
+      },
+      {
+        "tag": "icon-tottenham"
+      },
+      {
+        "tag": "icon-westbrom"
+      },
+      {
+        "tag": "icon-westham"
+      }
+    ],
+    "Champions League Teams": [
+      {
+        "tag": "icon-aek-athen"
+      },
+      {
+        "tag": "icon-ajax"
+      },
+      {
+        "tag": "icon-atleticomadrid"
+      },
+      {
+        "tag": "icon-barcelona"
+      },
+      {
+        "tag": "icon-bayernmunich"
+      },
+      {
+        "tag": "icon-bern"
+      },
+      {
+        "tag": "icon-belgrad"
+      },
+      {
+        "tag": "icon-benfica"
+      },
+      {
+        "tag": "icon-borussiadortmund"
+      },
+      {
+        "tag": "icon-bruegge"
+      },
+      {
+        "tag": "icon-galatasaray"
+      },
+      {
+        "tag": "icon-internazionale"
+      },
+      {
+        "tag": "icon-tsg-1899-hoffenheim"
+      },
+      {
+        "tag": "icon-juventus"
+      },
+      {
+        "tag": "icon-liverpool"
+      },
+      {
+        "tag": "icon-lokomotiv-moskau"
+      },
+      {
+        "tag": "icon-lyon"
+      },
+      {
+        "tag": "icon-manchester-city"
+      },
+      {
+        "tag": "icon-manchesterunited"
+      },
+      {
+        "tag": "icon-monaco"
+      },
+      {
+        "tag": "icon-napoli"
+      },
+      {
+        "tag": "icon-parissaintgermain"
+      },
+      {
+        "tag": "icon-fcporto"
+      },
+      {
+        "tag": "icon-psveindhoven"
+      },
+      {
+        "tag": "icon-realmadrid"
+      },
+      {
+        "tag": "icon-roma"
+      },
+      {
+        "tag": "icon-shakhtardonetskea"
+      },
+      {
+        "tag": "icon-schalke"
+      },
+      {
+        "tag": "icon-tottenham"
+      },
+      {
+        "tag": "icon-valencia"
+      },
+      {
+        "tag": "icon-viktoriaplzen"
+      },
+      {
+        "tag": "icon-zska-moskau"
+      }
+    ],
+    "Spanish Teams": [
+      {
+        "tag": "icon-vilarreal"
+      },
+      {
+        "tag": "icon-athleticbilbao"
+      },
+      {
+        "tag": "icon-celtavigo"
+      },
+      {
+        "tag": "icon-eibar"
+      },
+      {
+        "tag": "icon-deportivo"
+      },
+      {
+        "tag": "icon-malaga"
+      },
+      {
+        "tag": "icon-getafe"
+      },
+      {
+        "tag": "icon-realbetis"
+      },
+      {
+        "tag": "icon-valencia"
+      },
+      {
+        "tag": "icon-rayovallecano"
+      },
+      {
+        "tag": "icon-sportinggijon"
+      },
+      {
+        "tag": "icon-espanyol"
+      },
+      {
+        "tag": "icon-laspalmas"
+      },
+      {
+        "tag": "icon-granada"
+      },
+      {
+        "tag": "icon-levante"
+      }
+    ],
+    "Ligue 1 Teams": [
+      {
+        "tag": "icon-lyon"
+      },
+      {
+        "tag": "icon-monaco"
+      }
+    ],
+    "Europa League Badges": [
+      {
+        "tag": "icon-aek-larnaca"
+      },
+      {
+        "tag": "icon-akhisar"
+      },
+      {
+        "tag": "icon-anderlecht"
+      },
+      {
+        "tag": "icon-apollon"
+      },
+      {
+        "tag": "icon-arsenal"
+      },
+      {
+        "tag": "icon-astana"
+      },
+      {
+        "tag": "icon-bate-borisov"
+      },
+      {
+        "tag": "icon-besiktas"
+      },
+      {
+        "tag": "icon-realbetis"
+      },
+      {
+        "tag": "icon-bordeaux"
+      },
+      {
+        "tag": "icon-celtic"
+      },
+      {
+        "tag": "icon-chelsea"
+      },
+      {
+        "tag": "icon-fccopenhagen"
+      },
+      {
+        "tag": "icon-dinamo-zagreb"
+      },
+      {
+        "tag": "icon-dudelange"
+      },
+      {
+        "tag": "icon-dynamo-kyiv"
+      },
+      {
+        "tag": "icon-fenerbahce"
+      },
+      {
+        "tag": "icon-eintracht-frankfurt"
+      },
+      {
+        "tag": "icon-genk"
+      },
+      {
+        "tag": "icon-jablonec"
+      },
+      {
+        "tag": "icon-krasnodar"
+      },
+      {
+        "tag": "icon-lazio"
+      },
+      {
+        "tag": "icon-rasenballsport-leipzig"
+      },
+      {
+        "tag": "icon-bayerleverkusen"
+      },
+      {
+        "tag": "icon-ludogorets"
+      },
+      {
+        "tag": "icon-malmo"
+      },
+      {
+        "tag": "icon-marseille"
+      },
+      {
+        "tag": "icon-acmilan"
+      },
+      {
+        "tag": "icon-olympiakos"
+      },
+      {
+        "tag": "icon-paok"
+      },
+      {
+        "tag": "icon-qarabag"
+      },
+      {
+        "tag": "icon-rangers"
+      },
+      {
+        "tag": "icon-rapid-wien"
+      },
+      {
+        "tag": "icon-rennes"
+      },
+      {
+        "tag": "icon-rosenborg"
+      },
+      {
+        "tag": "icon-redbullsalzburg"
+      },
+      {
+        "tag": "icon-sarpsborg"
+      },
+      {
+        "tag": "icon-sevilla"
+      },
+      {
+        "tag": "icon-slavia-praha"
+      },
+      {
+        "tag": "icon-spartak-moskva"
+      },
+      {
+        "tag": "icon-spartak-trnava"
+      },
+      {
+        "tag": "icon-sporting-cp"
+      },
+      {
+        "tag": "icon-standard-liege"
+      },
+      {
+        "tag": "icon-vidi"
+      },
+      {
+        "tag": "icon-villarreal"
+      },
+      {
+        "tag": "icon-vorskla"
+      },
+      {
+        "tag": "icon-zenitsaintpetersburg"
+      },
+      {
+        "tag": "icon-zurich"
+      }
+    ],
+    "Football Competitions": [
+      {
+        "tag": "icon-bundesligalogo"
+      },
+      {
+        "tag": "icon-austriabundesliga"
+      },
+      {
+        "tag": "icon-austriaersteliga"
+      },
+      {
+        "tag": "icon-championsleaguelogo"
+      },
+      {
+        "tag": "icon-confederationscup"
+      },
+      {
+        "tag": "icon-dfbpokal"
+      },
+      {
+        "tag": "icon-eredivisielogo"
+      },
+      {
+        "tag": "icon-uefaeuro2020"
+      },
+      {
+        "tag": "icon-uefaeuropaleague"
+      },
+      {
+        "tag": "icon-germansupercup"
+      },
+      {
+        "tag": "icon-laligalogo"
+      },
+      {
+        "tag": "icon-ligue1logo"
+      },
+      {
+        "tag": "icon-premierleaguelogo"
+      },
+      {
+        "tag": "icon-ligaportugallogo"
+      },
+      {
+        "tag": "icon-russianpremierleague"
+      },
+      {
+        "tag": "icon-seriealogo"
+      },
+      {
+        "tag": "icon-swisssuperleague"
+      },
+      {
+        "tag": "icon-turkishsuperleague"
+      },
+      {
+        "tag": "icon-russianworldcup2018"
+      },
+      {
+        "tag": "icon-fifa"
+      },
+      {
+        "tag": "icon-europa-league"
+      },
+      {
+        "tag": "icon-fa-cup"
+      },
+      {
+        "tag": "icon-capital-one-cup"
+      },
+      {
+        "tag": "icon-johnstones-paint-trophy"
+      },
+      {
+        "tag": "icon-premier-league"
+      },
+      {
+        "tag": "icon-championship"
+      },
+      {
+        "tag": "icon-league-one"
+      },
+      {
+        "tag": "icon-league-two"
+      },
+      {
+        "tag": "icon-conference"
+      },
+      {
+        "tag": "icon-football-league"
+      },
+      {
+        "tag": "icon-seriea"
+      },
+      {
+        "tag": "icon-bundesliga"
+      },
+      {
+        "tag": "icon-ligue1"
+      },
+      {
+        "tag": "icon-eredivisie"
+      },
+      {
+        "tag": "icon-rangers"
+      },
+      {
+        "tag": "icon-hearts"
+      },
+      {
+        "tag": "icon-hibernian"
+      },
+      {
+        "tag": "icon-borussia-monchengladbach"
+      }
+    ],
+    "Features": [
+      {
+        "tag": "icon-transfercentre"
+      },
+      {
+        "tag": "icon-deadlineday"
+      }
+    ]
+  },
+  "de-f1": {
+    "Icons": [
+      {
+        "tag": "icon-chequered-flag"
+      },
+      {
+        "tag": "icon-red-flag"
+      },
+      {
+        "tag": "icon-green-flag"
+      },
+      {
+        "tag": "icon-crashed-car"
+      },
+      {
+        "tag": "icon-stopclock"
+      },
+      {
+        "tag": "icon-safety-car"
+      },
+      {
+        "tag": "icon-team-radio"
+      },
+      {
+        "tag": "icon-pits"
+      },
+      {
+        "tag": "icon-broken-down-car"
+      },
+      {
+        "tag": "icon-abandoned-car"
+      },
+      {
+        "tag": "icon-podium"
+      }
+    ],
+    "Teams": [
+      {
+        "tag": "icon-ferrari"
+      },
+      {
+        "tag": "icon-force-india"
+      },
+      {
+        "tag": "icon-lotus"
+      },
+      {
+        "tag": "icon-mclaren"
+      },
+      {
+        "tag": "icon-mercedes"
+      },
+      {
+        "tag": "icon-red-bull"
+      },
+      {
+        "tag": "icon-sauber"
+      },
+      {
+        "tag": "icon-toro-rosso"
+      },
+      {
+        "tag": "icon-williams"
+      },
+      {
+        "tag": "icon-renault"
+      },
+      {
+        "tag": "icon-haas"
+      },
+      {
+        "tag": "icon-manor"
+      }
+    ]
+  },
+  "de-golf": {
+    "Icons": [
+      {
+        "tag": "icon-golfball"
+      }
+    ]
+  },
+  "de-other": {
+    "Logos": [
+      {
+        "tag": "icon-beachvolleyball"
+      }
+    ],
+    "Icons": [
+      {
+        "tag": "icon-handball"
+      },
+      {
+        "tag": "icon-liveicon"
+      },
+      {
+        "tag": "icon-rumours"
+      },
+      {
+        "tag": "icon-yellowflag"
+      },
+      {
+        "tag": "icon-tennisball"
+      },
+      {
+        "tag": "icon-updates"
+      }
+    ],
+    "Channels": [
+      {
+        "tag": "icon-skybundesligahd"
+      },
+      {
+        "tag": "icon-skybundesliga1hd"
+      },
+      {
+        "tag": "icon-skybundesliga2hd"
+      },
+      {
+        "tag": "icon-skybundesliga3hd"
+      },
+      {
+        "tag": "icon-skybundesliga4hd"
+      },
+      {
+        "tag": "icon-skybundesliga5hd"
+      },
+      {
+        "tag": "icon-skybundesliga6hd"
+      },
+      {
+        "tag": "icon-skybundesliga7hd"
+      },
+      {
+        "tag": "icon-skybundesliga8hd"
+      },
+      {
+        "tag": "icon-skybundesliga9hd"
+      },
+      {
+        "tag": "icon-skybundesliga10hd"
+      },
+      {
+        "tag": "icon-skysporthd"
+      },
+      {
+        "tag": "icon-skysport1hd"
+      },
+      {
+        "tag": "icon-skysport2hd"
+      },
+      {
+        "tag": "icon-skysport3hd"
+      },
+      {
+        "tag": "icon-skysport4hd"
+      },
+      {
+        "tag": "icon-skysport5hd"
+      },
+      {
+        "tag": "icon-skysport6hd"
+      },
+      {
+        "tag": "icon-skysport7hd"
+      },
+      {
+        "tag": "icon-skysport8hd"
+      },
+      {
+        "tag": "icon-skysport9hd"
+      },
+      {
+        "tag": "icon-skysport10hd"
+      },
+      {
+        "tag": "icon-skysport11hd"
+      },
+      {
+        "tag": "icon-skysportnewshd"
+      }
+    ]
+  },
+  "news": {
+    "Political Parties": [
+      {
+        "tag": "icon-brexit"
+      },
+      {
+        "tag": "icon-conservative"
+      },
+      {
+        "tag": "icon-dup"
+      },
+      {
+        "tag": "icon-greenparty"
+      },
+      {
+        "tag": "icon-labour"
+      },
+      {
+        "tag": "icon-libdem"
+      },
+      {
+        "tag": "icon-plaidcymru"
+      },
+      {
+        "tag": "icon-sdlp"
+      },
+      {
+        "tag": "icon-sinnfein"
+      },
+      {
+        "tag": "icon-snp"
+      },
+      {
+        "tag": "icon-ukip"
+      }
+    ],
+    "US Politics": [
+      {
+        "tag": "icon-us-democrats"
+      },
+      {
+        "tag": "icon-us-republicans"
+      }
+    ],
+    "Politicians": [
+      {
+        "tag": "icon-arlenefoster"
+      },
+      {
+        "tag": "icon-carolinelucas"
+      },
+      {
+        "tag": "icon-gerryadams"
+      },
+      {
+        "tag": "icon-jeremycorbyn"
+      },
+      {
+        "tag": "icon-leannewood"
+      },
+      {
+        "tag": "icon-nicolasturgeon"
+      },
+      {
+        "tag": "icon-paulnuttall"
+      },
+      {
+        "tag": "icon-theresamay"
+      },
+      {
+        "tag": "icon-timfarron"
+      },
+      {
+        "tag": "icon-davidcameron"
+      },
+      {
+        "tag": "icon-amberrudd"
+      },
+      {
+        "tag": "icon-andrealeadsom"
+      },
+      {
+        "tag": "icon-ianblackford"
+      },
+      {
+        "tag": "icon-jeremyhunt"
+      },
+      {
+        "tag": "icon-johnbercow"
+      },
+      {
+        "tag": "icon-liamfox"
+      },
+      {
+        "tag": "icon-michaelgove"
+      },
+      {
+        "tag": "icon-nigeldodds"
+      },
+      {
+        "tag": "icon-pennymordaunt"
+      },
+      {
+        "tag": "icon-philliphammond"
+      },
+      {
+        "tag": "icon-sajidjavid"
+      },
+      {
+        "tag": "icon-sirvincecable"
+      },
+      {
+        "tag": "icon-borisjohnson2"
+      },
+      {
+        "tag": "icon-joswinson"
+      },
+      {
+        "tag": "icon-nigelfarage2"
+      },
+      {
+        "tag": "icon-adamprice"
+      },
+      {
+        "tag": "icon-jonathanbartley"
+      },
+      {
+        "tag": "icon-michelleoneill"
+      },
+      {
+        "tag": "icon-annasoubry"
+      },
+      {
+        "tag": "icon-columeastwood"
+      },
+      {
+        "tag": "icon-sianberry"
+      },
+      {
+        "tag": "icon-keirstarmer"
+      },
+      {
+        "tag": "icon-rishisunak"
+      },
+      {
+        "tag": "icon-sireddaveyld"
+      },
+      {
+        "tag": "icon-donaldtrump"
+      },
+      {
+        "tag": "icon-joebiden"
+      },
+      {
+        "tag": "icon-kamarlaharris"
+      },
+      {
+        "tag": "icon-mikepence"
+      },
+      {
+        "tag": "icon-chriswhitty"
+      },
+      {
+        "tag": "icon-patrickvallance"
+      }
+    ],
+    "Election Misc": [
+      {
+        "tag": "icon-constiuency"
+      },
+      {
+        "tag": "icon-moment"
+      },
+      {
+        "tag": "icon-result"
+      },
+      {
+        "tag": "icon-swing"
+      },
+      {
+        "tag": "icon-vote"
+      },
+      {
+        "tag": "icon-brexit-party"
+      },
+      {
+        "tag": "icon-change-party"
+      }
+    ],
+    "Royal Family": [
+      {
+        "tag": "icon-dutchessofcambridge"
+      },
+      {
+        "tag": "icon-meghanmarkle"
+      },
+      {
+        "tag": "icon-miketindall"
+      },
+      {
+        "tag": "icon-princeandrew"
+      },
+      {
+        "tag": "icon-princecharles"
+      },
+      {
+        "tag": "icon-princeedward"
+      },
+      {
+        "tag": "icon-princegeorge"
+      },
+      {
+        "tag": "icon-princeharry"
+      },
+      {
+        "tag": "icon-princephilip"
+      },
+      {
+        "tag": "icon-princessanne"
+      },
+      {
+        "tag": "icon-princessbeatrice"
+      },
+      {
+        "tag": "icon-princesscharlotte"
+      },
+      {
+        "tag": "icon-princesseuginie"
+      },
+      {
+        "tag": "icon-princesszara"
+      },
+      {
+        "tag": "icon-princewilliam"
+      },
+      {
+        "tag": "icon-thequeen"
+      }
+    ],
+    "Royal Wedding": [
+      {
+        "tag": "icon-binoculars"
+      },
+      {
+        "tag": "icon-brideandgroom"
+      },
+      {
+        "tag": "icon-bridesmaids"
+      },
+      {
+        "tag": "icon-carriage"
+      },
+      {
+        "tag": "icon-cash"
+      },
+      {
+        "tag": "icon-champagneglasses"
+      },
+      {
+        "tag": "icon-daddancing"
+      },
+      {
+        "tag": "icon-flowers"
+      },
+      {
+        "tag": "icon-largecrown"
+      },
+      {
+        "tag": "icon-lovehearts"
+      },
+      {
+        "tag": "icon-musicnotes"
+      },
+      {
+        "tag": "icon-police"
+      },
+      {
+        "tag": "icon-smallcrown"
+      },
+      {
+        "tag": "icon-tieredcake"
+      },
+      {
+        "tag": "icon-tophat"
+      },
+      {
+        "tag": "icon-usflag"
+      },
+      {
+        "tag": "icon-weddingcamera"
+      },
+      {
+        "tag": "icon-weddingdress"
+      },
+      {
+        "tag": "icon-weddingrings"
+      },
+      {
+        "tag": "icon-windsorcastle"
+      }
+    ],
+    "Brexit": [
+      {
+        "tag": "icon-britishflag"
+      },
+      {
+        "tag": "icon-commonslogo"
+      },
+      {
+        "tag": "icon-euflag"
+      },
+      {
+        "tag": "icon-exclusiveicon"
+      },
+      {
+        "tag": "icon-frenchflag"
+      },
+      {
+        "tag": "icon-germanflag"
+      },
+      {
+        "tag": "icon-irishflag"
+      },
+      {
+        "tag": "icon-italianflag"
+      },
+      {
+        "tag": "icon-lordslogo"
+      },
+      {
+        "tag": "icon-podcasts"
+      },
+      {
+        "tag": "icon-redbudgetbriefcase"
+      },
+      {
+        "tag": "icon-spanishflag"
+      },
+      {
+        "tag": "icon-theindependentgroup"
+      },
+      {
+        "tag": "icon-independentmp"
+      },
+      {
+        "tag": "icon-borisjohnson"
+      },
+      {
+        "tag": "icon-brandonlewis"
+      },
+      {
+        "tag": "icon-daviddavis"
+      },
+      {
+        "tag": "icon-esthermcvey"
+      },
+      {
+        "tag": "icon-grahambrady"
+      },
+      {
+        "tag": "icon-jamescleverly"
+      },
+      {
+        "tag": "icon-liztruss"
+      },
+      {
+        "tag": "icon-matthancock"
+      },
+      {
+        "tag": "icon-nigelfarage"
+      },
+      {
+        "tag": "icon-rorystewart"
+      },
+      {
+        "tag": "icon-tobiasellwood"
+      },
+      {
+        "tag": "icon-jacobreesmogg"
+      }
+    ],
+    "Journalists": [
+      {
+        "tag": "icon-adamboulton"
+      },
+      {
+        "tag": "icon-adamparsons"
+      },
+      {
+        "tag": "icon-alaisterbunkall"
+      },
+      {
+        "tag": "icon-alexcrawford"
+      },
+      {
+        "tag": "icon-ashishjoshi"
+      },
+      {
+        "tag": "icon-cordelialynch"
+      },
+      {
+        "tag": "icon-davidblevins"
+      },
+      {
+        "tag": "icon-dermotmurnaghan"
+      },
+      {
+        "tag": "icon-edconway"
+      },
+      {
+        "tag": "icon-gregmilam"
+      },
+      {
+        "tag": "icon-hannahthomaspeters"
+      },
+      {
+        "tag": "icon-ianking"
+      },
+      {
+        "tag": "icon-inzamanrashid"
+      },
+      {
+        "tag": "icon-jamesmatthews"
+      },
+      {
+        "tag": "icon-jasonfarrell"
+      },
+      {
+        "tag": "icon-joncraig"
+      },
+      {
+        "tag": "icon-kayburley"
+      },
+      {
+        "tag": "icon-lisaholland"
+      },
+      {
+        "tag": "icon-markaustin"
+      },
+      {
+        "tag": "icon-markstone"
+      },
+      {
+        "tag": "icon-martinbrunt"
+      },
+      {
+        "tag": "icon-paulkelso"
+      },
+      {
+        "tag": "icon-rolandmanthorpe"
+      },
+      {
+        "tag": "icon-sallylockwood"
+      },
+      {
+        "tag": "icon-samcoates"
+      },
+      {
+        "tag": "icon-thomasmoore"
+      },
+      {
+        "tag": "icon-tomrayner"
+      },
+      {
+        "tag": "icon-alifortescue"
+      },
+      {
+        "tag": "icon-beckjohnson"
+      },
+      {
+        "tag": "icon-bethrigby"
+      },
+      {
+        "tag": "icon-danwhitehead"
+      },
+      {
+        "tag": "icon-frazermaude"
+      },
+      {
+        "tag": "icon-gerardtubb"
+      },
+      {
+        "tag": "icon-helenannesmith"
+      },
+      {
+        "tag": "icon-joepike"
+      },
+      {
+        "tag": "icon-katemccann"
+      },
+      {
+        "tag": "icon-katerinavittozzi"
+      },
+      {
+        "tag": "icon-laurabundock"
+      },
+      {
+        "tag": "icon-lisadowd"
+      },
+      {
+        "tag": "icon-markkleinman"
+      },
+      {
+        "tag": "icon-marthakelner"
+      },
+      {
+        "tag": "icon-nickmartin"
+      },
+      {
+        "tag": "icon-rhiannonmills"
+      },
+      {
+        "tag": "icon-robpowell"
+      },
+      {
+        "tag": "icon-stephenmurphy"
+      },
+      {
+        "tag": "icon-tamaracohen"
+      },
+      {
+        "tag": "icon-tomparmenter"
+      },
+      {
+        "tag": "icon-alexrossi"
+      },
+      {
+        "tag": "icon-amandawalker"
+      },
+      {
+        "tag": "icon-ashnahurynag"
+      },
+      {
+        "tag": "icon-deborahhaynes"
+      },
+      {
+        "tag": "icon-dianamagnay"
+      },
+      {
+        "tag": "icon-dominicwaghorn"
+      },
+      {
+        "tag": "icon-ednabrady"
+      },
+      {
+        "tag": "icon-hannahthomaspeter"
+      },
+      {
+        "tag": "icon-johnsparks"
+      },
+      {
+        "tag": "icon-katiespencer"
+      },
+      {
+        "tag": "icon-markwhite"
+      },
+      {
+        "tag": "icon-michelleclifford"
+      },
+      {
+        "tag": "icon-noelphillips"
+      },
+      {
+        "tag": "icon-siobhanrobbins"
+      },
+      {
+        "tag": "icon-tomcheshire"
+      }
+    ],
+    "Baftas": [
+      {
+        "tag": "icon-bafta"
+      },
+      {
+        "tag": "icon-brit-award"
+      },
+      {
+        "tag": "icon-dress"
+      },
+      {
+        "tag": "icon-emmy"
+      },
+      {
+        "tag": "icon-golden-globe"
+      },
+      {
+        "tag": "icon-grammy"
+      },
+      {
+        "tag": "icon-oscar"
+      },
+      {
+        "tag": "icon-suit"
+      }
+    ],
+    "Other": [
+      {
+        "tag": "icon-aeroplane"
+      },
+      {
+        "tag": "icon-facemask"
+      },
+      {
+        "tag": "icon-needle"
+      },
+      {
+        "tag": "icon-rnumber"
+      },
+      {
+        "tag": "icon-whitehouse"
+      },
+      {
+        "tag": "icon-covid"
+      },
+      {
+        "tag": "icon-no-10"
+      }
+    ]
+  }
+}
