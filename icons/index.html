@@ -23,6 +23,7 @@
       display: block;
       aspect-ratio: 1/1;
       object-fit: contain;
+      user-select: none;
     }
 
     h1, h2, h3 {
@@ -67,6 +68,19 @@
       grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
       grid-gap: clamp(18px, 2.5vw, 28px);
     }
+
+    .icon {
+      position: relative;
+      counter-increment: icon;
+    }
+
+    .icon:before {
+      font-size: 14px;
+      padding: 0.2em;
+      content: counter(icon);
+      z-index: 99;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -86,7 +100,7 @@
           html += `<h3 id="${item[0].toLowerCase().replace(/ /g, '-')}-${cat[0].toLowerCase().replace(/ /g, '-')}">${cat[0]}</h3>`;
           cat[1].forEach((path)=>{
             count++;
-            html += (`<img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}">`);
+            html += (`<span class="icon"><img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}"></span>`);
           })
         });
       });
