@@ -72,14 +72,19 @@
     .icon {
       position: relative;
       counter-increment: icon;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .icon img {
+      padding-top: 8px;
     }
 
     .icon:before {
-      font-size: 14px;
       padding: 0.2em;
-      content: counter(icon);
+      content: counter(icon) ". ";
       z-index: 99;
-      display: block;
     }
   </style>
 </head>
@@ -100,7 +105,7 @@
           html += `<h3 id="${item[0].toLowerCase().replace(/ /g, '-')}-${cat[0].toLowerCase().replace(/ /g, '-')}">${cat[0]}</h3>`;
           cat[1].forEach((path)=>{
             count++;
-            html += (`<span class="icon"><img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}"></span>`);
+            html += (`<span class="icon">${path.tag.replace(/icon-/,'')}<img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}"></span>`);
           })
         });
       });
