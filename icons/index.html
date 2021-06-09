@@ -83,7 +83,7 @@
       Object.entries(json).forEach((item) => {
         html += `<h2 id="${item[0].toLowerCase().replace(/ /g, '-')}">${item[0]}</h2>`;
         Object.entries(item[1]).forEach((cat)=>{
-          html += `<h3 id="${cat[0].toLowerCase().replace(/ /g, '-')}">${cat[0]}</h3>`;
+          html += `<h3 id="${item[0].toLowerCase().replace(/ /g, '-')}-${cat[0].toLowerCase().replace(/ /g, '-')}">${cat[0]}</h3>`;
           cat[1].forEach((path)=>{
             count++;
             html += (`<img src="${url}${path.tag.replace(/icon-/,'')}.png?bypass-service-worker" title="${path.tag}">`);
