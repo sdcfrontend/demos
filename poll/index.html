@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="vars.css">
+  <link rel="stylesheet" href="ui-controls.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: clamp(16px, 15px + 1vw, 20px);
+    }
+
+    body {
+      font-family: 'Sky Text', sans-serif;
+      background: var(--gradient-linear);
+      min-height: 100vh;
+    }
+
+    .ui-poll {
+      margin: 1rem auto;
+      width: min(500px, 90%);
+      background: var(--component-bg);
+      padding: var(--component-padding);
+      border: 1px solid var(--border-color);
+      font-size: var(--component-text);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .ui-poll-question {
+      font-weight: 500;
+      margin-bottom: 0.2em;
+    }
+
+    .ui-poll-snippet {
+      margin-bottom: var(--component-margin);
+    }
+
+    .ui-poll-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: var(--component-margin);
+    }
+
+  
+  </style>
+</head>
+<body>
+  <div class="ui-poll">
+    <h3 class="ui-poll-question">Who is the best dog in history?</h3>
+    <p class="ui-poll-snippet">Pick your best dog below</p>
+    <form action="">
+    <ul class="ui-poll-items">
+      <li><div class="ui-control" value="Category">
+        <input class="ui-control-radio" type="radio" id="radio-4" name="option">
+        <label for="radio-4">Jack Russel</label>
+    </div>
+</li>
+<li>
+    <div class="ui-control" value="Category">
+        <input class="ui-control-radio" type="radio" id="radio-5" name="option">
+        <label for="radio-5">Cockapoo</label>
+    </div></li>
+    <li>
+    <div class="ui-control" value="Category">
+        <input class="ui-control-radio" type="radio" id="radio-6" name="option">
+        <label for="radio-6">Schnauzer 3</label>
+    </div></li>
+    </ul>
+    <div class="ui-control">
+      <button class="ui-control-button ui-control--active">Submit</button>
+  </div>
+</form>
+  </div>
+</body>
+</html>
