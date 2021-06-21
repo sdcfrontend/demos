@@ -35,11 +35,13 @@ for (var item in package.dependencies) {
 };
 
 function buildsection(name, gitlink) {
-
+console.log(name);
   //get files based on component name
   if (name.match(/sdc-project/)) {
     return;
   }
+
+
 
   const template = fs.readFileSync(path.resolve(ROOT, 'node_modules', name, 'template.hbs'), 'utf8').toString();
   const csspath = path.resolve(ROOT, 'node_modules', name, `styles/preview.scss`);

@@ -79,14 +79,15 @@
     "sdc-site-tiles": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-tiles.git#v5.0.0",
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
     "sdc-site-trending": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-trending.git#css-variables",
-    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git"
+    "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git",
+    "ui-liveblog": "git+https://github.com/sky-uk/ui-liveblog.git#BLOG-53-add-to-front-end"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
     "fse": "^4.0.1",
     "handlebars": "^4.7.3",
-    "node-sass": "^4.13.1",
+    "node-sass": "^6.0.0",
     "postcss": "^7.0.27",
     "postcss-css-variables": "^0.14.0",
     "sort-package-json": "^1.40.0",
