@@ -270,12 +270,12 @@ ul {
 
 @font-face {
   font-family: 'Sky Text';
-  src: url("/guides/fonts/sky-regular.woff") format("woff");
+  src: url("/demos/guides/fonts/sky-regular.woff") format("woff");
   font-display: "optional"; }
 
 @font-face {
   font-family: 'Sky Text';
-  src: url("/guides/fonts/sky-medium.woff") format("woff");
+  src: url("/demos/guides/fonts/sky-medium.woff") format("woff");
   font-weight: bold;
   font-display: "optional"; }
 
