@@ -98,13 +98,35 @@
             content: counter(icon) ". ";
             z-index: 99;
         }
+
+        .dark,
+        .dark .icon {
+            background: #777;
+        }
+
+        .button {
+            color: #3157A1;
+            font-size: 18px;
+            border: 1px solid currentColor;
+            padding: 0.35em 0.65em;
+            justify-self: flex-start;
+            margin-bottom: 1em;
+            background: white;
+            line-height: 1;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <h1 class="wrap">Live Blog Icons <span></span></h1>
-    <main class="wrap"></main>
+    <div class="wrap"> <button class="button">Darker background</button></div>
+    <main class="wrap">
+    </main>
     <script>
+        document.querySelector('.button').onclick = () => {
+            document.body.classList.toggle('dark');
+        };
         (async() => {
             const main = document.querySelector('main');
             const url = `https://e3.365dm.com/liveblog-icons/`;
