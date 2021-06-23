@@ -726,7 +726,7 @@ ul {
     --post-filter: none;
     --post-shade: var(--component-shade);
     --post-grid-main-col: 2;
-    --post-grid-columns: minmax(64px, 18%) 1fr;
+    --post-grid-columns: minmax(64px, 19%) 1fr;
     position: relative;
     font-size: var(--component-text);
     background-image: linear-gradient(var(--post-bg), var(--post-bg));
@@ -748,7 +748,7 @@ ul {
 
 .ncpost-container {
     display: grid;
-    grid-gap: var(--component-gap) var(--space-xs);
+    grid-gap: var(--component-gap) 2px;
     grid-template-columns: var(--post-grid-columns);
 }
 
