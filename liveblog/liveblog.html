@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://localhost:9876/#ncpost-list-post-title-2496136 -->
+<html><script type="text/javascript" async="" src="./azuremediaplayer.min.js"></script><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function (namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  let open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method) {
+    this.addEventListener(
+      "readystatechange",
+      function () {
+        if (
+          this.readyState === 4 &&
+          window[namespace].responseRules.hasOwnProperty(this.responseURL)
+        ) {
+          const responseRule =
+            window[namespace].responseRules[this.responseURL];
+          const { response, id } = responseRule;
+          const responseType = this.responseType;
+          let customResponse;
+
+          customResponse =
+            response.type === "code"
+              ? responseRule.evaluator({
+                  method,
+                  url: this.responseURL,
+                  requestHeaders: this.requestHeaders,
+                  requestData: this.requestData,
+                  responseType: this.responseType,
+                  response: this.response,
+                })
+              : response.value;
+
+          Object.defineProperty(this, "response", {
+            get: function () {
+              if (response.type === "static" && responseType === "json") {
+                return JSON.parse(customResponse);
+              }
+              return customResponse;
+            },
+          });
+
+          if (responseType === "" || responseType === "text") {
+            Object.defineProperty(this, "responseText", {
+              get: function () {
+                return customResponse;
+              },
+            });
+          }
+
+          window.postMessage(
+            {
+              from: "requestly",
+              type: "response_rule_applied",
+              id,
+            },
+            window.location.href
+          );
+        }
+      },
+      false
+    );
+    open.apply(this, arguments);
+  };
+
+  let send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function (data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function (header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  };
+})('__REQUESTLY__')</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style class="vjs-styles-dimensions">
+                .azuremp-1000-dimensions {
+                        width: 0px;
+                        height: 400px;
+                    }
+
+                .azuremp-1000-dimensions.vjs-fluid {
+                        padding-top: 100%;
+                    }
+            </style>
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">@charset "UTF-8";
+/*
+ *  This file is used for previewing locally using the toolbelt.
+ *  The actual entry point for your component styles are in
+ *  /styles/components/ui-liveblog.scss
+ *
+ *  To reference project-wide styles, sdc-project-base should
+ *  be added to the component npm devDependencies and imported:
+ *  @import "sdc-project-base/css/base/core/_start.scss";
+ *
+ *  Any other files referenced in here will not be imported
+ *  when the component is consumed by your app project.
+ */
+/* ----------------- */
+/* ---BASE SCALERS--- */
+/* ----------------- */
+:root {
+  --base-scaler: 10px;
+  --base-font-scaler: 48px
+; }
+
+@media all and (max-width: 900px) {
+  :root {
+    --base-scaler: calc(3.3px + 0.75vw);
+    --base-font-scaler: calc(21.2px + 3vw); } }
+
+@media all and (max-width: 360px) {
+  :root {
+    --base-scaler: 6px;
+    --base-font-scaler: 32px; } }
+
+:root {
+  /* ----------------- */
+  /* ---GLOBAL VARS--- */
+  /* ----------------- */
+  /* COLORS */
+  /* brand */
+  --brand-1: #002672;
+  /* placeholder - overriden by brand file */
+  --brand-2: #EA021A;
+  /* placeholder - overriden by brand file */
+  --brand-3: linear-gradient(#002672, #00043B);
+  /* placeholder - overriden by brand file */
+  --brand-highlight: #3578FF;
+  /* used for ui highlights */
+  /* shade colors (for internal use) */
+  --shade-0: #FFFFFF;
+  --shade-1: #F4F5F7;
+  --shade-2: #E2E2E2;
+  --shade-2-5: #9F9F9F;
+  --shade-3: #707070;
+  --shade-4: #4A4A4A;
+  --shade-5: #222222;
+  --shade-6: #111111;
+  /* semi opaque blacks */
+  --black-op80: rgba(0, 0, 0, 0.8);
+  --black-op60: rgba(0, 0, 0, 0.6);
+  --black-op40: rgba(0, 0, 0, 0.4);
+  /* shade gradients */
+  --gradient-radial: radial-gradient(circle at center,#fff 0,#e8e7ed 100%);
+  --gradient-pipe: linear-gradient(90deg,#d7d5dd 0,#eee 30%,#eee 70%,#d7d5dd);
+  --gradient-linear: linear-gradient(180deg, #F5F5F5, #E3E4E4);
+  /* ui states */
+  --success: #299934;
+  /* success messages */
+  --alert: #EA021A;
+  /* alerts and warnings */
+  --live: #EA021A;
+  /* live scores and coverage */
+  --breaking: #FDE000;
+  /* breaking news components */
+  --link-color: #3157A1;
+  /* global text link color */
+  --live-bg: linear-gradient(180deg, #E90E10, #BC0000);
+  /* gradient version of live */
+  --breaking-bg: linear-gradient(180deg, #F8EB1F, #F2CA06);
+  /* gradient version of breaking */
+  /* common alias values */
+  --body-bg: var(--shade-1);
+  /* mobile site bg (desktop uses a gradient) */
+  --component-bg: var(--shade-0);
+  /* components bg is generally white */
+  --component-shade: var(--shade-1);
+  /* component header bg */
+  --border-color: var(--shade-2);
+  /* border color for components */
+  --text-color: var(--shade-4);
+  /* main body text */
+  --text-color-invert: var(--shade-0);
+  /* text on dark backgrounds */
+  --text-color-secondary: var(--shade-3);
+  /* lighter body text */
+  --text-color-tertiary: var(--shade-2-5);
+  /* lighest body text */
+  --text-color-dark: var(--shade-6);
+  /* darker body text */
+  --icon-color: var(--shade-6);
+  /* color for svg/ui icons */
+  /* box shadows */
+  --drop-shadow: 0 3px 3px rgba(0, 0, 0, 0.12);
+  /* horizontal drop shadow beneath a ui element */
+  --glow-shadow: 0 0 8px rgba(0,0,0,0.12);
+  /* glow shadow around a ui element */
+  /* SPACING */
+  /* scaling values (for internal use) - scales between 360 - 900px */
+  --space-xs: calc(var(--base-scaler) * 1);
+  /* 6 - 10px */
+  --space-s: calc(var(--base-scaler) * 2);
+  /* 12 - 20px */
+  --space-m: calc(var(--base-scaler) * 3);
+  /* 18 - 30px */
+  --space-l: calc(var(--base-scaler) * 4);
+  /* 24 - 40px */
+  --space-xl: calc(var(--base-scaler) * 6);
+  /* 36 - 60px */
+  /* widths constraints */
+  --site-width: 1024px;
+  /* max site width including gutters */
+  --site-width-amp: 600px;
+  /* max site width for amp */
+  --site-width-inner: 976px;
+  /* max site width minus gutters */
+  /* common alias values */
+  --component-gap: var(--space-s);
+  /* gap between internal component elements */
+  --component-padding: var(--space-m);
+  /* padding on main component container */
+  --component-margin: var(--space-l);
+  /* vertical margin between different components */
+  --group-margin: var(--space-xl);
+  /* large vertical margin between large or groups of components */
+  --site-gutter: calc(var(--space-s) + 4px);
+  /* left and right gutter on site body */
+  --z-index-ui: 999;
+  /* layer for site ui elements - navs, menus etc */
+  --z-index-ads: 9999;
+  /* layer for ads that go over ui */
+  --z-index-overlays: 99999;
+  /* layer for overlays that sit on top of everything */
+  /* FONTS */
+  /* faces */
+  --branding-sky-text-font: 'Sky Text';
+  --branding-sky-headline-font: 'Sky Headline';
+  /* settings */
+  --base-font-name: 'skytext';
+  --base-font-load-setting: 'optional';
+  /* bases */
+  --base-font-size: 18px;
+  /* scaling values (for internal use) - scales between 360 - 900px */
+  --font-scale-xl: var(--base-font-scaler);
+  /* 32 - 48px */
+  --font-scale-l: calc((var(--base-font-scaler) * 1.25 / 2) + 6px);
+  /* 26 - 36px */
+  --font-scale-m: calc(var(--base-font-scaler) * 0.35 + 13.2px);
+  /* 24 - 30px */
+  --font-scale-s: calc( ( (var(--base-font-scaler)) / 8) + 16px);
+  /* 20 - 22px */
+  --font-scale-xs: calc( ( (var(--base-font-scaler)) / 8) + 14px);
+  /* 18 - 20px */
+  --font-scale-xxs: calc( ( (var(--base-font-scaler) - 10px) / 8) + 13.25px);
+  /* 16 - 18px */
+  /* fixed values */
+  --font-fixed-m: var(--base-font-size);
+  --font-fixed-s: calc(var(--base-font-size) - 2px);
+  --font-fixed-xs: calc(var(--base-font-size) - 4px);
+  /* common alias values */
+  --display-1: var(--font-scale-xl);
+  /* article headline/extra large header */
+  --display-2: var(--font-scale-l);
+  /* large component/group header */
+  --display-3: var(--font-scale-m);
+  /* med component header */
+  --display-4: var(--font-scale-s);
+  /* standard component header */
+  --display-5: var(--font-scale-xs);
+  /* small component header */
+  --display-6: var(--font-scale-xxs);
+  /* x small component header */
+  --article-text: var(--font-scale-xs);
+  /* any large body of text */
+  --component-text: var(--font-scale-xxs);
+  /* smaller blocks of text within components */
+  --supporting-text: var(--font-fixed-s);
+  /* accompanying text */
+  --label-text: var(--font-fixed-xs);
+  /* label and note text */ }
+
+:root {
+  --brand-1: #002672;
+  --brand-2: #EA021A;
+  --brand-3: linear-gradient(var(--brand-1), #00043B);
+  /* sports channel branding */
+  --sports-branding-premier-league-primary: #030c7e;
+  --sports-branding-premier-league-gradient: linear-gradient(-192deg, #1d238a 0%, #222677 48.5%, #090f68 49%, #0e1151 100%);
+  --sports-branding-premier-league-color: #fff;
+  --sports-branding-premier-league-font: "Sky Premier League";
+  --sports-branding-football-primary: #cc0f13;
+  --sports-branding-football-primary-gradient: linear-gradient(-192deg, #cd2529 0%, #be2022 48.5%, #b70709 49%, #a00000 100%);
+  --sports-branding-football-color: #fff;
+  --sports-branding-football-font: "Sky Football";
+  --sports-branding-transfer-center-primary: #272728;
+  --sports-branding-transfer-center-secondary: #f9db28;
+  --sports-branding-transfer-center-color: #fff;
+  --sports-branding-skysports-primary: #002672;
+  --sports-branding-skysports-color: #fff;
+  --sports-branding-skysports-font: "Sky Display";
+  --sports-branding-skysports-light-primary: #fff;
+  --sports-branding-skysports-light-color: inherit;
+  --sports-branding-skysports-light-font: "Sky Display";
+  --sports-branding-f1-primary: #e20613;
+  --sports-branding-f1-color: #fff;
+  --sports-branding-f1-font: "Sky F1";
+  --sports-branding-horseracing-primary: #006270;
+  --sports-branding-horseracing-color: #fff;
+  --sports-branding-horseracing-alt-primary: #014350;
+  --sports-branding-horseracing-alt-secondary: #005763;
+  --sports-branding-horseracing-alt-color: #fff;
+  --sports-branding-rugby-union-primary: #063b80;
+  --sports-branding-rugby-union-color: #fff;
+  --sports-branding-rugby-league-primary: #d3181c;
+  --sports-branding-rugby-league-color: #fff;
+  --sports-branding-cricket-primary: #053d70;
+  --sports-branding-cricket-color: #fff;
+  --sports-branding-cricket-font: "Sky Cricket";
+  --sports-branding-cricket-the-hundred-primary: #000;
+  --sports-branding-cricket-the-hundred-secondary: #ff0082;
+  --sports-branding-cricket-the-hundred-color: #fff;
+  --sports-branding-cricket-the-hundred-font: "The Hundred";
+  --sports-branding-tennis-primary: #032a63;
+  --sports-branding-tennis-color: #fff;
+  --sports-branding-golf-primary: #00472e;
+  --sports-branding-golf-color: #fff;
+  --sports-branding-golf-font: "Sky Golf";
+  --sports-branding-boxing-primary: #000;
+  --sports-branding-boxing-color: #fff;
+  --sports-branding-darts-primary: #e00c14;
+  --sports-branding-darts-color: #fff;
+  --sports-branding-nfl-primary: #273271;
+  --sports-branding-nfl-color: #fff;
+  --sports-branding-nba-primary: #004fa7;
+  --sports-branding-nba-color: #fff;
+  --sports-branding-netball-primary: #622482;
+  --sports-branding-netball-color: #fff;
+  --sports-branding-gaa-primary: #0c5177;
+  --sports-branding-gaa-color: #fff;
+  --sports-branding-wwe-primary: #000;
+  --sports-branding-wwe-color: #fff; }
+
+/* START/RESET */
+/* ========= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%; }
+
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+  font-family: var(--branding-sky-text-font), sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  word-wrap: break-word;
+  text-decoration-skip: ink;
+  overflow-anchor: none; }
+
+body[data-body-locked='true'] {
+  overflow: hidden;
+  width: 100%; }
+
+img {
+  max-width: 100%;
+  opacity: 1;
+  border: 0; }
+
+a,
+svg {
+  color: inherit;
+  fill: inherit;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+@media (hover: none) {
+  a[href]:hover {
+    text-decoration: none; } }
+
+:focus {
+  outline-offset: -2px; }
+
+ul {
+  list-style: none; }
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url("/node_modules/sdc-project-base/fonts/sky-regular.woff") format("woff");
+  font-display: "optional"; }
+
+@font-face {
+  font-family: 'Sky Text';
+  src: url("/node_modules/sdc-project-base/fonts/sky-medium.woff") format("woff");
+  font-weight: bold;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: 'Sky Headline';
+  src: url("/assets/fonts/sky-headline-semi-bold.woff") format("woff");
+  font-weight: normal;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: 'Sky Display';
+  src: url("/assets/fonts/sky-display-medium.woff") format("woff");
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Football";
+  src: url("/assets/fonts/sky-football.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Premier League";
+  src: url("/assets/fonts/sky-premier-league.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Cricket";
+  src: url("/assets/fonts/sky-cricket.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "The Hundred";
+  src: url("/assets/fonts/the-hundred-regular.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky F1";
+  src: url("/assets/fonts/sky-f1.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+@font-face {
+  font-family: "Sky Golf";
+  src: url("/assets/fonts/sky-golf.woff") format("woff");
+  font-weight: 200;
+  font-display: "optional"; }
+
+/* PROJECT COLOR PALETTE */
+/* ========= */
+/* primary */
+/* ========= */
+/* backgrounds */
+/* ========= */
+/* text */
+/* ========= */
+/* keylines */
+/* ========= */
+/* gradients */
+/* ========= */
+/* SDC project settings
+  =========================================== */
+/* AMP Specific settings
+  =========================================== */
+/* SDC site layout
+  =========================================== */
+@media all and (max-width: 939px) {
+  .site-wrap-basic {
+    width: 100%;
+    max-width: var(--site-width-inner);
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+@media all and (min-width: 940px) {
+  .site-wrap-basic {
+    padding-right: 0 !important;
+    padding-left: 0 !important; } }
+
+.site-wrap {
+  max-width: var(--site-width);
+  margin-left: auto;
+  margin-right: auto; }
+
+.site-wrap-padding, .section-wrap__article-column {
+  padding-left: var(--site-gutter);
+  padding-right: var(--site-gutter); }
+
+.site-indent[class] {
+  padding-left: var(--component-padding);
+  padding-right: var(--component-padding); }
+
+.site-component-vertical-margin {
+  margin-bottom: var(--component-margin); }
+
+.site-component-vertical-margin-negative {
+  margin-top: calc(var(--component-margin) * -1); }
+
+.site-component-vertical-margin-l {
+  margin-bottom: var(--group-margin); }
+
+.site-component-vertical-margin-s {
+  margin-bottom: var(--component-gap); }
+
+.section-wrap {
+  background: white; }
+  .section-wrap > .site-component-vertical-margin:last-child {
+    margin-bottom: 0;
+    padding-bottom: var(--component-margin); }
+
+.section-wrap--padding {
+  padding: var(--component-margin) 0; }
+
+.section-wrap--shade {
+  padding: var(--group-margin) 0; }
+
+.section-wrap__article-column .sdc-site-component-header__body {
+  padding: 0; }
+
+@media all and (max-width: 480px) {
+  .site-wrap--mobile-edge {
+    padding-left: 0;
+    padding-right: 0; }
+  .site-wrap.sdc-site-tiles__inner {
+    padding-left: 0;
+    padding-right: 0; } }
+
+/* Glints
+  =========================================== */
+.glints-box {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  background-color: white;
+  background-clip: padding-box;
+  position: relative; }
+
+.glints-box:before {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px; }
+
+.glints-wings {
+  transform-style: preserve-3d;
+  position: relative;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 0;
+  border-bottom: 0;
+  background-clip: padding-box;
+  box-shadow: none;
+  box-shadow: 4px 0 2px rgba(0, 0, 0, 0.1), -4px 0 2px rgba(0, 0, 0, 0.1); }
+
+@supports (transform-style: preserve-3d) {
+  .glints-wings:before {
+    background: rgba(255, 255, 255, 0.15); } }
+
+.glints-wings:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: calc(100%);
+  left: -12px;
+  width: calc(100% + 24px);
+  transform: translateZ(-1px);
+  border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.47) 9%, rgba(255, 255, 255, 0.57) 26%, rgba(255, 255, 255, 0.8) 44%, rgba(255, 255, 255, 0.15)) 1;
+  border-right: 1px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 1px solid;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+.glints-wings:after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: calc(100% + 24px);
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), linear-gradient(166deg, rgba(255, 255, 255, 0.09) 45%, rgba(255, 255, 255, 0) 45%);
+  background-size: 5px 100%, 5px 100%, 100%;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 7px) 0, 7px 0, 0 0; }
+
+.glints-wings > * {
+  transform: translateZ(1px); }
+
+.glints-wings--right {
+  border-left: 0; }
+
+.glints-wings--right:before {
+  left: 0;
+  width: calc(100% + 12px); }
+
+.glints-wings--right:after {
+  left: 0;
+  width: calc(100% + 12px);
+  background-size: 5px 100%, 0 0, 100%; }
+
+.glints-box-padding {
+  padding: var(--component-padding); }
+
+@media all and (max-width: 480px) {
+  .glints-wings {
+    border-left-width: 8px;
+    border-right-width: 8px; }
+  .glints-wings:before {
+    left: -8px;
+    width: calc(100% + 16px); }
+  .glints-wings:after {
+    left: -8px;
+    width: calc(100% + 16px);
+    background-position: calc(100% - 4px) 0, 4px 0, 0 0; }
+  .glints-wings--right:before {
+    left: 0;
+    width: calc(100% + 8px); }
+  .glints-wings--right:after {
+    left: 0;
+    width: calc(100% + 8px); } }
+
+/* SDC site shared ui skin
+  =========================================== */
+/* LINK ARROW */
+/* a generic > link arrow implemented using css (allows for recoloring) */
+/* BULLET LIST */
+/* a generic bulleted list with appended > link arrows */
+.sdc-ui-bullet-list {
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  color: #4a4a4a; }
+
+.sdc-ui-bullet-list > li:not(:last-of-type) {
+  margin-bottom: 0.25em; }
+
+.sdc-ui-bullet-list > li > a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.2em 0;
+  line-height: 1;
+  vertical-align: middle; }
+
+.sdc-ui-bullet-list > li > a:hover {
+  background: none;
+  text-decoration: underline;
+  text-decoration-skip: ink; }
+
+.sdc-ui-bullet-list > li > a:after {
+  content: "";
+  width: 0.35em;
+  height: 0.35em;
+  display: inline-block;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: 0.9;
+  margin-left: 0.25em; }
+
+/* MEDIA CAPTION */
+.sdc-ui-media-caption {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  line-height: 1.4;
+  text-align: left;
+  font-size: var(--supporting-text);
+  background: var(--component-shade);
+  color: var(--text-color-secondary);
+  padding-left: var(--component-padding);
+  padding-right: var(--component-padding); }
+
+/* hide the first span if there are two (its a visually hidden piece of text for screen readers) */
+.sdc-ui-media-caption > span:first-of-type:not(:only-child) {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+.sdc-ui-media-caption > span:last-of-type {
+  display: block; }
+
+/* EXTERNAL LINK ICON */
+.sdc-ui-external-link:after {
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.2em;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Zz48cGF0aCBkPSJNNC43OTcgNy45N0wxMi42NS4xMmwuNDguNDc4TDUuMjc1IDguNDV6Ii8+PHBhdGggZD0iTTEzLjIgNC45MWgtLjY2M1YuNzUyaC00LjI2di0uNjVIMTMuMm0tMS4zMSAxMi44M0guMTA2VjEuMzg2SDUuOTl2LjY1SC43NVYxMi4zaDEwLjQ4VjcuMTY2aC42NjMiLz48L2c+PC9zdmc+Cg==) no-repeat;
+  background-size: 100%;
+  opacity: 0.5; }
+
+/* BUTTONS */
+/* LABELS */
+.sdc-ui-label {
+  font-size: 15px;
+  color: var(--link-color); }
+
+/* SIGNIFICANCE */
+.sdc-article-significance[class] {
+  color: var(--text-color-invert);
+  background: var(--brand-1);
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.08;
+  display: inline-block;
+  padding: 2px 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: default;
+  vertical-align: middle; }
+
+.sdc-article-significance--breaking[class] {
+  color: black;
+  background: var(--breaking); }
+
+.sdc-article-significance--transfer[class] {
+  color: var(--breaking);
+  background: black; }
+
+.sdc-article-significance--sponsored[class] {
+  background: none;
+  color: var(--text-color-secondary); }
+
+.sdc-article-significance--live[class] {
+  color: var(--text-color-invert);
+  background: var(--live); }
+
+/* all below use default style */
+/* .sdc-article-significance--analysis[class],
+.sdc-article-significance--exclusive[class],
+.sdc-article-significance--explainer[class],
+.sdc-article-significance--podcast[class],
+.sdc-article-significance--eyewitness[class],
+.sdc-article-significance--opinion[class],
+.sdc-article-significance--update[class]{
+}
+*/
+.ui-liveblog {
+  --post-breaking: var(--breaking);
+  --post-important: var(--shade-5);
+  --post-betting: #284f9a;
+  --post-highlight: var(--component-shade);
+  font-family: inherit;
+  color: var(--text-color);
+  font-size: var(--component-text);
+  margin-bottom: var(--component-margin);
+  word-break: break-word;
+  display: grid;
+  grid-gap: var(--component-margin); }
+
+.ui-liveblog a {
+  color: var(--link-color);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1px;
+  font-weight: bold; }
+
+.ui-liveblog__inner {
+  display: grid;
+  grid-gap: var(--component-gap); }
+
+.ui-liveblog__load-more {
+  justify-self: center; }
+  .ui-liveblog__load-more[class] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.64em 1em;
+    line-height: 1;
+    color: var(--link-color);
+    border: 1px solid currentColor;
+    background: none;
+    font-family: inherit;
+    font-weight: normal;
+    border-radius: 3px;
+    cursor: pointer; }
+    .ui-liveblog__load-more[class]:hover {
+      text-decoration: none;
+      border-color: var(--link-color);
+      background-color: var(--link-color);
+      color: white; }
+
+.ncpost-top-text-container {
+  background: var(--component-shade);
+  padding: var(--component-padding); }
+
+.ncpost-top-text-container[class] h5 {
+  font-size: var(--display-4);
+  line-height: 1.2; }
+
+@keyframes new-post {
+  from {
+    max-height: 0;
+    opacity: 0; }
+  to {
+    max-height: 1000vh;
+    opacity: 1; } }
+
+.ncpost-list-post,
+.ncpost-pinned {
+  --post-color: var(--text-color);
+  --post-bg: var(--component-bg);
+  --post-icon: none;
+  --post-icon-filter: none;
+  --post-border: var(--border-color);
+  --post-indent-right: 0;
+  --post-indent-left: 0;
+  position: relative;
+  background: var(--post-bg);
+  color: var(--post-color);
+  border-bottom: 1px solid var(--post-border);
+  padding: var(--component-padding) 0 var(--component-padding) 0;
+  line-height: 1.35; }
+
+.ncpost-list-post[data-new] {
+  animation: new-post 1s 0.25s ease-in;
+  animation-fill-mode: both; }
+
+.ncpost-container {
+  display: grid;
+  grid-gap: var(--component-gap) 1%;
+  grid-template-columns: clamp(68px, 18%, 120px) 1fr clamp(64px, 18%, 100px);
+  grid-template-areas: "time header header" "icon content content"; }
+
+.ncpost-header {
+  grid-area: time;
+  display: flex;
+  justify-self: center;
+  font-size: var(--display-5); }
+
+.ncpost-icon {
+  grid-area: icon;
+  display: flex;
+  justify-self: center;
+  background: var(--post-icon) no-repeat 0 0/100%;
+  filter: var(--post-icon-filter);
+  width: calc(var(--space-l) + 8px);
+  height: calc(var(--space-l) + 8px);
+  aspect-ratio: 1/1; }
+
+.ncpost-title {
+  grid-area: header;
+  font-weight: bold;
+  font-size: var(--display-4);
+  line-height: 1.2;
+  scroll-margin-top: calc(var(--component-padding) - 2px); }
+
+.ncpost-image {
+  display: block;
+  width: 100%;
+  height: auto; }
+
+.ncpost-image-byline {
+  background: var(--component-shade);
+  font-size: var(--label-text);
+  padding: 0.75em var(--component-gap); }
+
+.ncpost-image-byline-source {
+  padding-left: 0.5em;
+  font-style: italic; }
+
+.ncpost-image-container,
+.ncpost-link {
+  grid-area: content;
+  grid-row: -1; }
+
+.ncpost-content {
+  grid-area: content; }
+
+.ncpost-content > :not(:last-child) {
+  margin-bottom: calc(var(--component-gap) * 1.25); }
+
+.ncpost-content :is(p, div, span):empty {
+  display: none; }
+
+.ncpost-content h5 {
+  font-size: var(--display-5);
+  line-height: 1.12; }
+
+.ncpost-content :is(ul, ol) {
+  padding: 0 0 0 1.2em;
+  line-height: 1.2;
+  list-style: revert; }
+
+.ncpost-content li {
+  padding-bottom: 0.48em;
+  padding-left: 0.2em; }
+
+.ncpost-content blockquote {
+  font-style: italic;
+  color: var(--post-secondary-color);
+  padding: 0.5em 0.65em 0.5em 1.2em;
+  position: relative; }
+
+.ncpost-content blockquote:before {
+  content: "\201C";
+  position: absolute;
+  left: -0.2em;
+  top: 0;
+  font-size: 3em;
+  font-family: serif;
+  opacity: 0.5; }
+
+@media all and (max-width: 370px) {
+  .ncpost-list-post {
+    --post-indent-right: 3.5%;
+    --post-indent-left: 3.5%; }
+  .ncpost-container {
+    grid-template-areas: "time time icon" "header header header" "content content content"; }
+  .ncpost-header {
+    justify-self: flex-start;
+    align-items: center; }
+  .ncpost-icon {
+    justify-self: flex-end;
+    margin-bottom: calc((var(--component-gap) / 2) * -1); } }
+
+.ncpost-list-post[data-post-type],
+.ncpost-pinned {
+  --post-indent-right: 3%;
+  border-style: none;
+  top: -1px;
+  padding-left: var(--post-indent-left);
+  padding-right: var(--post-indent-right); }
+
+.ncpost-list-post[data-post-type] + .ncpost-list-post[data-post-type] {
+  margin-top: 2%; }
+
+.ncpost-list-post[data-post-type="breaking"] {
+  --post-bg: var(--post-breaking); }
+
+.ncpost-list-post[data-post-type="important"] {
+  --post-bg: var(--post-important); }
+
+.ncpost-list-post[data-post-type="goal"] {
+  --post-bg: var(--post-important);
+  --post-color: var(--text-color-invert);
+  --post-icon: url("https://e3.365dm.com/liveblog-icons/goal.png");
+  --post-icon-filter: invert(1) brightness(1.5); }
+
+.ncpost-list-post[data-post-type="skybet"] {
+  --post-bg: var(--post-betting);
+  --post-color: var(--text-color-invert);
+  --post-icon: url("https://e3.365dm.com/liveblog-icons/betting.png"); }
+
+.ncpost-pinned {
+  --post-bg: var(--post-important);
+  --post-color: var(--text-color-invert);
+  --post-indent-left: 3%; }
+
+.ncpost-pinned .ncpost-container {
+  grid-template-areas: "header header header" "content content content"; }
+
+.ncpost-youtube-embed {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%; }
+
+.ncpost-youtube-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.ncpost-instagram-oembed-container[class] iframe {
+  min-width: 270px !important;
+  margin: 0 !important; }
+
+.ncpost-link {
+  background: var(--component-shade);
+  border: 1px solid var(--border-color);
+  padding: var(--component-gap);
+  font-size: var(--supporting-text);
+  border-radius: 4px;
+  display: grid;
+  gap: 0.5em; }
+
+.ncpost-link-title {
+  font-size: var(--display-5);
+  line-height: 1.1; }
+
+.ncpost-link-site {
+  font-size: var(--label-text); }
+
+.azuremediaplayer {
+  padding-bottom: 56.25%; }
+
+@supports (display: contents) {
+  .azuremediaplayer[class],
+  .azuremediaplayer[class] *:not(video) {
+    display: contents !important;
+    font-size: var(--component-text) !important;
+    visibility: visible;
+    opacity: 1; }
+  .azuremediaplayer[class]:before,
+  .azuremediaplayer[class] *:not(video):before {
+    content: none !important; }
+  .azuremediaplayer[class] :is(.vjs-control-bar, .vjs-error-display, .vjs-caption-settings, .vjs-big-play-button) {
+    display: none !important; }
+  .azuremediaplayer[class][class] video {
+    position: static;
+    width: 100%;
+    height: auto; } }
+
+.ncpost-byline,
+.ncpost-comments-container,
+.ncpost-pinned .ncpost-header,
+.ncpost-pinned .ncpost-icon {
+  display: none; }
+
+body {
+  padding-top: 1em; }
+
+.ui-liveblog {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto; }
+</style><script src="./sports-4.js"></script><script src="./sky"></script><link type="text/css" rel="stylesheet" href="./azuremediaplayer.min.css"><style>@font-face{font-family:"Segoe UI";src: url("https://amp.azure.net/libs/amp/2.2.4/skins/amp-default/assets/fonts/segoeui/segoeui.eot");src: url("https://amp.azure.net/libs/amp/2.2.4/skins/amp-default/assets/fonts/segoeui/segoeui.eot?#iefix") format("embedded-opentype"),url("https://amp.azure.net/libs/amp/2.2.4/skins/amp-default/assets/fonts/segoeui/segoeui.woff") format("woff"), url("https://amp.azure.net/libs/amp/2.2.4/skins/amp-default/assets/fonts/segoeui/segoeui.ttf") format("truetype"), url("https://amp.azure.net/libs/amp/2.2.4/skins/amp-default/assets/fonts/segoeui/segoeui.svg#Segoe") format("svg");font-weight: normal;font-style: normal;}</style></head>
+<body class="site-wrap-padding">
+
+  <div id="container"></div>
+  <div class="ui-liveblog" data-component-name="ui-liveblog" data-tenant-key="sky" data-theme="sports" data-channel-id="13053" data-icon-path="https://e3.365dm.com/liveblog-icons/">
+    <div class="ui-liveblog__inner" data-role="ui-liveblog-container"><div class="ncpost-channelcontent-container"><div class="ncpost-content ncpost-top-text-container"> <h5>Chelsea vs Everton</h5><ul><li><a href="https://www.skysports.com/football/chelsea-vs-everton/report/429100" target="_blank" rel="nofollow noreferrer">Report and highlights: Chelsea 2-0 Everton</a><br></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/report/429100" target="_blank" rel="nofollow noreferrer">Chelsea extend unbeaten run under Tuchel to 11 games</a></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/report/429100" target="_blank" rel="nofollow noreferrer">Fourth-placed Chelsea move four points clear of Everton</a></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/report/429100" target="_blank" rel="nofollow noreferrer">Havertz shot deflects in off Godfrey (31)</a></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/report/429100" target="_blank" rel="nofollow noreferrer">Jorginho doubles lead from spot (65)</a></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/stats/429100" target="_blank" rel="nofollow noreferrer">Match stats</a></li><li><a href="https://www.skysports.com/football/chelsea-vs-everton/teams/429100" target="_blank" rel="nofollow noreferrer">How the teams lined up</a></li><li><a href="https://www.skysports.com/premier-league-table" target="_blank" rel="nofollow noreferrer">Premier League table</a>&nbsp;</li><li><a href="https://www.skybet.com/go/class/5/type/1?aff_id=11941&amp;dcmp=ss_betlink_LIVE_FOOTBALL" target="_blank" rel="nofollow noreferrer">Bet in-play with Sky Bet&nbsp;</a></li></ul></div></div><div class="ncpost-pinned" style="display: block;"><div class="ncpost-container" data-ncpost-id="2500100"><div class="ncpost-header"><div class="ncpost-timestamp">14:17</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500100" class="ncpost-title">Here is a post with a very long post title that wraps into multiple lines</div><div class="ncpost-content" id="ncpost-list-post-content-2500100"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae consequat leo. Duis finibus turpis turpis, et ullamcorper augue sagittis ac. Maecenas et arcu non justo eleifend placerat.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae consequat leo. Duis finibus turpis turpis, et ullamcorper augue sagittis ac. Maecenas et arcu non justo eleifend placerat.</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><section role="feed" class="ncpost-list-container"><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500318" aria-describedby="ncpost-list-post-content-2500318" aria-posinset="1" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500318"><div class="ncpost-header"><div class="ncpost-timestamp">16:00</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500318" class="ncpost-title">Update post</div><div class="ncpost-content" id="ncpost-list-post-content-2500318"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dignissim nisi. Proin in sollicitudin nulla, quis lacinia nunc. Curabitur pretium malesuada hendrerit.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dignissim nisi. Proin in sollicitudin nulla, quis lacinia nunc. Curabitur pretium malesuada hendrerit.</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500282" aria-describedby="ncpost-list-post-content-2500282" aria-posinset="2" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500282"><div class="ncpost-header"><div class="ncpost-timestamp">15:50</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500282" class="ncpost-title">Hello</div><div class="ncpost-content" id="ncpost-list-post-content-2500282"><p>helloo a new post</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500208" aria-describedby="ncpost-list-post-content-2500208" aria-posinset="3" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500208"><div class="ncpost-header"><div class="ncpost-timestamp">15:11</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500208" class="ncpost-title">A non brightcove video</div><div class="ncpost-content" id="ncpost-list-post-content-2500208"><p>Here is a video I uploaded:</p><div data-priority="10" data-id="AZUREMP_0"><div poster="" style="margin-top: 10px; margin-bottom: 10px; width: 100%; font-size: 0px;" tabindex="-1" class="azuremediaplayer amp-default-skin amp-big-play-centered azuremp-1000-dimensions vjs-user-inactive" id="azuremp-1000"><div tabindex="0" class="vjs-controls-enabled vjs-player vjs-workinghover outline-enabled amp-showing-more-options-button" aria-label="video player"><div><video id="azuremp-1000_AzureHtml5JS_api_3650" class="vjs-tech" oncontextmenu="return false;" tabindex="-1" aria-hidden="true" src="blob:http://localhost:9876/8925df4b-0f87-40eb-bb38-ffe3bd35ac33"></video></div><div></div><div class="vjs-fullscreen-outline outline-enabled-control"></div><div class="vjs-poster vjs-hidden" tabindex="-1"><span class="vjs-poster-span" tabindex="-1"></span><img src="http://localhost:9876/" width="100%" height="auto" style="display: inline;"></div><div class="vjs-text-track-display" aria-live="assertive" aria-atomic="true" role="description"><div style="position: absolute; inset: 0px; margin: 1.5%;"></div></div><div class="vjs-loading-spinner" dir="ltr"><span></span></div><button class="vjs-big-play-button " type="button" aria-live="off"><span class="vjs-control-text">Play Video</span></button><div class="vjs-control-bar" dir="ltr" role="group"><div class="amp-controlbaricons-left"><button class="vjs-play-control vjs-control vjs-button outline-enabled-control" type="button" aria-live="off"><span class="vjs-control-text">Play</span></button><div class="vjs-live-control vjs-control vjs-hidden outline-enabled-control" tabindex="0" role="button" aria-live="off" aria-label="LIVE"><span class="vjs-control-text"></span><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type</span>LIVE</div></div><div class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control" tabindex="0" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-label="Chapters Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-title" tabindex="-1">Chapters</li></ul></div><span class="vjs-control-text">Chapters</span></div></div><div class="amp-controlbaricons-middle" style="min-width: 0px;"><div class="vjs-current-time vjs-time-control vjs-control outline-enabled-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time </span>0:00</div><div class="amp-livetimeindicator">LIVE</div></div><div class="vjs-progress-control vjs-control outline-enabled-control" tabindex="-1"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" aria-label="progress bar" aria-valuetext="0"><div class="vjs-load-progress " style="width: 99.2561%;"><span class="vjs-control-text" style="left: 0.353503%; width: 99.6465%;"><span>Loaded</span>: 0%</span></div><div class="vjs-mouse-display" style="left: 0px;"><span class="amp-time-tooltip" style="right: 0px;">0:00</span></div><div class="vjs-play-progress vjs-slider-bar " data-current-time="0:00"><span class="vjs-control-text"><span>Progress</span>: 0%</span></div><div class="vjs-slider-handle "><span class="vjs-control-text">Seekbar Handle</span></div></div></div><div class="vjs-time-control vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-control vjs-control outline-enabled-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time</span> 0:19</div></div><div class="vjs-remaining-time vjs-time-control vjs-control outline-enabled-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time</span> -0:19</div></div></div><div class="amp-controlbaricons-right"><button class="amp-download-control vjs-control vjs-button outline-enabled-control amp-control-disabled" type="button" aria-live="off" tabindex="-1" style="display: none;"><span class="vjs-control-text">Download</span></button><div class="amp-audiotracks-control vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control amp-control-disabled" tabindex="-1" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-label="Audio Tracks Menu"><span class="vjs-control-text"></span></div><div class="vjs-subtitles-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control amp-subtitles-control amp-control-disabled" tabindex="-1" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-label="Subtitles Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="amp-menu-header">Subtitles</li><li class="vjs-menu-item vjs-selected outline-enabled-control" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="Subtitles Off" aria-checked="true">Off</li></ul></div><span class="vjs-control-text">Subtitles</span></div><div class="vjs-captions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control amp-closedcaption-control amp-control-disabled" tabindex="-1" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-label="Captions Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="amp-menu-header">Closed Captioning</li><li class="vjs-menu-item vjs-texttrack-settings outline-enabled-control" tabindex="-1" role="menuitem" aria-live="off" aria-label="Settings">Settings<span class="vjs-control-text">, opens captions settings dialog</span></li><li class="vjs-menu-item vjs-selected outline-enabled-control" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="Captions Off" aria-checked="true">Captions Off<span class="vjs-control-text">, selected</span></li></ul></div><span class="vjs-control-text">Captions</span></div><div class="amp-quality-control vjs-menu-button vjs-menu-button-popup vjs-control vjs-button outline-enabled-control quality-4 amp-control-disabled" tabindex="-1" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-label="Video Quality Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="amp-menu-header">Quality</li><li class="vjs-menu-item vjs-selected amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="Auto" aria-checked="true">Auto<span class="vjs-control-text">, selected</span></li><li class="vjs-menu-item amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="640p-941.1Kbps" aria-checked="false">640p-941.1Kbps<span class="vjs-control-text"> </span></li><li class="vjs-menu-item amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="540p-537.4Kbps" aria-checked="false">540p-537.4Kbps<span class="vjs-control-text"> </span></li><li class="vjs-menu-item amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="360p-325.6Kbps" aria-checked="false">360p-325.6Kbps<span class="vjs-control-text"> </span></li><li class="vjs-menu-item amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="270p-175.6Kbps" aria-checked="false">270p-175.6Kbps<span class="vjs-control-text"> </span></li><li class="vjs-menu-item amp-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="off" aria-label="180p-110.2Kbps" aria-checked="false">180p-110.2Kbps<span class="vjs-control-text"> </span></li></ul></div><span class="vjs-control-text"></span></div><div class="vjs-volume-control" aria-expanded="false"><button class="vjs-mute-control vjs-control vjs-button outline-enabled-control vjs-vol-3" type="button" aria-live="off"><span class="vjs-control-text">Mute</span></button><div class="vjs-menu"><div class="vjs-menu-content"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-vertical" role="slider" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" aria-label="volume level" aria-valuetext="100.00%"><div class="vjs-volume-level"><span class="vjs-control-text"></span></div><div class="vjs-volume-handle vjs-control outline-enabled-control"><span class="vjs-control-text"></span></div></div></div></div></div><div class="amp-moreoptions-control vjs-menu-button vjs-menu-button-popup vjs-control vjs-button outline-enabled-control" tabindex="0" role="menuitem" aria-live="off" aria-expanded="false" aria-haspopup="true" aria-hidden="false" aria-label="More Options"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="amp-menu-header">More Options</li><li class="vjs-menu-item amp-menu-item amp-quality-control vjs-menu-button vjs-menu-button-popup vjs-control vjs-button outline-enabled-control quality-4" tabindex="-1" role="menuitem" aria-live="off" aria-label="Quality">Quality<span class="vjs-control-text"></span></li><li class="vjs-menu-item amp-menu-item vjs-captions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control amp-closedcaption-control" tabindex="-1" role="menuitem" aria-live="off" aria-label="Closed Captioning">Closed Captioning<span class="vjs-control-text"></span></li><li class="vjs-menu-item amp-menu-item vjs-subtitles-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control amp-subtitles-control" tabindex="-1" role="menuitem" aria-live="off" aria-label="Subtitles">Subtitles<span class="vjs-control-text"></span></li><li class="vjs-menu-item amp-menu-item amp-audiotracks-control vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden outline-enabled-control" tabindex="-1" role="menuitem" aria-live="off" aria-label="Audio Tracks">Audio Tracks<span class="vjs-control-text"></span></li><li class="vjs-menu-item amp-menu-item amp-download-control vjs-control vjs-button outline-enabled-control" tabindex="-1" role="menuitem" aria-live="off" aria-label="Download">Download<span class="vjs-control-text"></span></li></ul></div><span class="vjs-control-text"></span></div><button class="vjs-fullscreen-control vjs-control vjs-button outline-enabled-control" type="button" aria-live="off"><span class="vjs-control-text">Fullscreen</span></button></div></div><div class="vjs-error-display vjs-modal-dialog vjs-hidden " tabindex="-1" aria-describedby="azuremp-1000_component_319_description" aria-hidden="true" aria-label="Modal Window" role="dialog"><p class="vjs-modal-dialog-description vjs-offscreen" id="azuremp-1000_component_319_description">This is a modal window.</p><div class="vjs-modal-dialog-content" role="document" tabindex="0"></div></div><div class="vjs-caption-settings vjs-modal-overlay vjs-hidden" tabindex="-1" role="dialog" aria-labelledby="TTsettingsDialogLabel-azuremp-1000_component_324" aria-describedby="TTsettingsDialogDescription-azuremp-1000_component_324">
+    <div role="document">
+      <div role="heading" aria-level="1" id="TTsettingsDialogLabel-azuremp-1000_component_324" class="vjs-control-text">Captions Settings Dialog</div>
+      <div id="TTsettingsDialogDescription-azuremp-1000_component_324" class="vjs-control-text">Beginning of dialog window. Escape will cancel and close the window.</div>
+      <div class="vjs-tracksettings">
+        <div class="vjs-tracksettings-colors">
+          <fieldset class="vjs-fg-color vjs-tracksetting">
+            <legend>Text</legend>
+            <label class="vjs-label" for="captions-foreground-color-azuremp-1000_component_324">Text color</label>
+            <select id="captions-foreground-color-azuremp-1000_component_324">
+              <option value="#FFF" selected="">White</option>
+              <option value="#000">Black</option>
+              <option value="#F00">Red</option>
+              <option value="#0F0">Green</option>
+              <option value="#00F">Blue</option>
+              <option value="#FF0">Yellow</option>
+              <option value="#F0F">Magenta</option>
+              <option value="#0FF">Cyan</option>
+            </select>
+            <span class="vjs-text-opacity vjs-opacity">
+             <label class="vjs-label" for="captions-foreground-opacity-azuremp-1000_component_324">Text opacity</label>
+              <select id="captions-foreground-opacity-azuremp-1000_component_324">
+                <option value="1" selected="">Opaque</option>
+                <option value="0.5">Semi-Opaque</option>
+              </select>
+            </span>
+          </fieldset>
+          <fieldset class="vjs-bg-color vjs-tracksetting">
+            <legend>Background</legend>
+            <label class="vjs-label" for="captions-background-color-azuremp-1000_component_324">Background Color</label>
+            <select id="captions-background-color-azuremp-1000_component_324">
+              <option value="#000" selected="">Black</option>
+              <option value="#FFF">White</option>
+              <option value="#F00">Red</option>
+              <option value="#0F0">Green</option>
+              <option value="#00F">Blue</option>
+              <option value="#FF0">Yellow</option>
+              <option value="#F0F">Magenta</option>
+              <option value="#0FF">Cyan</option>
+            </select>
+            <span class="vjs-bg-opacity vjs-opacity">
+              <label class="vjs-label" for="captions-background-opacity-azuremp-1000_component_324">Background opacity</label>
+              <select id="captions-background-opacity-azuremp-1000_component_324">
+                <option value="1" selected="">Opaque</option>
+                <option value="0.5">Semi-Transparent</option>
+                <option value="0">Transparent</option>
+              </select>
+            </span>
+          </fieldset>
+          <fieldset class="window-color vjs-tracksetting">
+            <legend>Window</legend>
+            <label class="vjs-label" for="captions-window-color-azuremp-1000_component_324">Window Color</label>
+            <select id="captions-window-color-azuremp-1000_component_324">
+              <option value="#000" selected="">Black</option>
+              <option value="#FFF">White</option>
+              <option value="#F00">Red</option>
+              <option value="#0F0">Green</option>
+              <option value="#00F">Blue</option>
+              <option value="#FF0">Yellow</option>
+              <option value="#F0F">Magenta</option>
+              <option value="#0FF">Cyan</option>
+            </select>
+            <span class="vjs-window-opacity vjs-opacity">
+              <label class="vjs-label" for="captions-window-opacity-azuremp-1000_component_324">Transparency</label>
+              <select id="captions-window-opacity-azuremp-1000_component_324">
+                <option value="0" selected="">Transparent</option>
+                <option value="0.5">Semi-Transparent</option>
+                <option value="1">Opaque</option>
+              </select>
+            </span>
+          </fieldset>
+        </div> <!-- vjs-tracksettings-colors -->
+        <div class="vjs-tracksettings-font">
+          <div class="vjs-font-percent vjs-tracksetting">
+            <label class="vjs-label" for="captions-font-size-azuremp-1000_component_324">Font Size</label>
+            <select id="captions-font-size-azuremp-1000_component_324">
+              <option value="0.50">50%</option>
+              <option value="0.75">75%</option>
+              <option value="1.00" selected="">100%</option>
+              <option value="1.25">125%</option>
+              <option value="1.50">150%</option>
+              <option value="1.75">175%</option>
+              <option value="2.00">200%</option>
+              <option value="3.00">300%</option>
+              <option value="4.00">400%</option>
+            </select>
+          </div>
+          <div class="vjs-edge-style vjs-tracksetting">
+            <label class="vjs-label" for="captions-edge-style-azuremp-1000_component_324">Text Edge Style</label>
+            <select id="captions-edge-style-azuremp-1000_component_324">
+              <option value="none" selected="">None</option>
+              <option value="raised">Raised</option>
+              <option value="depressed">Depressed</option>
+              <option value="uniform">Uniform</option>
+              <option value="dropshadow">Dropshadow</option>
+            </select>
+          </div>
+          <div class="vjs-font-family vjs-tracksetting">
+            <label class="vjs-label" for="captions-font-family-azuremp-1000_component_324">Font Family</label>
+            <select id="captions-font-family-azuremp-1000_component_324">
+              <option value="proportionalSansSerif" selected="">Proportional Sans-Serif</option>
+              <option value="monospaceSansSerif">Monospace Sans-Serif</option>
+              <option value="proportionalSerif">Proportional Serif</option>
+              <option value="monospaceSerif">Monospace Serif</option>
+              <option value="casual">Casual</option>
+              <option value="script">Script</option>
+              <option value="small-caps">Small Caps</option>
+            </select>
+          </div>
+        </div> <!-- vjs-tracksettings-font -->
+        <div class="vjs-tracksettings-controls">
+          <button class="vjs-default-button">Defaults</button>
+          <button class="vjs-done-button">Done</button>
+        </div>
+      </div> <!-- vjs-tracksettings -->
+    </div> <!--  role="document" --></div><p class="vjs-screen-reader-text" id="player-use-for-screen-reader-alert-only" role="alert" aria-atomic="true"></p><div class="amp-content-title"><div class="logo-title-row"><div class="title"></div><div class="amp-logo"></div></div></div></div></div></div></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500149" aria-describedby="ncpost-list-post-content-2500149" aria-posinset="4" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500149"><div class="ncpost-header"><div class="ncpost-timestamp">14:48</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500149" class="ncpost-title">A link with a quote</div><div class="ncpost-content" id="ncpost-list-post-content-2500149"><p>Sky pundit had this to say:</p><blockquote><p>Aww, I can't take his money, I can't print my own money, I have to work for my money. Why don't I just lay down and die.<br></p></blockquote></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500120" aria-describedby="ncpost-list-post-content-2500120" aria-posinset="5" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500120"><div class="ncpost-header"><div class="ncpost-timestamp">14:25</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500120" class="ncpost-title">Here is an Instagram of a cat</div><div class="ncpost-content" id="ncpost-list-post-content-2500120"><div data-priority="100" data-id="INSTAGRAM-OEMBED_1" class="ncpost-instagram-oembed-container"><iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="./saved_resource.html" allowtransparency="true" allowfullscreen="true" frameborder="0" height="1024" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 658px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe>
+<script src="./embeds.js" async=""></script></div></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500100" aria-describedby="ncpost-list-post-content-2500100" aria-posinset="6" aria-setsize="10" style="display: none;"><div class="ncpost-container" data-ncpost-id="2500100"><div class="ncpost-header"><div class="ncpost-timestamp">14:17</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500100" class="ncpost-title">Here is a post with a very long post title that wraps into multiple lines</div><div class="ncpost-content" id="ncpost-list-post-content-2500100"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae consequat leo. Duis finibus turpis turpis, et ullamcorper augue sagittis ac. Maecenas et arcu non justo eleifend placerat.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae consequat leo. Duis finibus turpis turpis, et ullamcorper augue sagittis ac. Maecenas et arcu non justo eleifend placerat.</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2500082" aria-describedby="ncpost-list-post-content-2500082" aria-posinset="7" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2500082"><div class="ncpost-header"><div class="ncpost-timestamp">14:03</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2500082" class="ncpost-title">Animate a new post in</div><div class="ncpost-content" id="ncpost-list-post-content-2500082"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dignissim nisi. Proin in sollicitudin nulla, quis lacinia nunc. Curabitur pretium malesuada hendrerit.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dignissim nisi. Proin in sollicitudin nulla, quis lacinia nunc. Curabitur pretium malesuada hendrerit.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dignissim nisi. Proin in sollicitudin nulla, quis lacinia nunc. Curabitur pretium malesuada hendrerit.</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2499933" aria-describedby="ncpost-list-post-content-2499933" aria-posinset="8" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2499933"><div class="ncpost-header"><div class="ncpost-timestamp">13:03</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2499933" class="ncpost-title">Important youtube video</div><div class="ncpost-content" id="ncpost-list-post-content-2499933"><div data-priority="100" data-id="VIDEO_2"><div class="ncpost-youtube-embed"><iframe src="./XAXwmMu8otM.html" id="null" allowfullscreen="true" frameborder="0"></iframe></div></div><p>This is a very important cat video from youtube and here is the <a href="https://www.youtube.com/watch?v=XAXwmMu8otM&amp;t=1s" target="_blank">link</a> to it.</p><p>Isn't the cat good?</p></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2499675" aria-describedby="ncpost-list-post-content-2499675" aria-posinset="9" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2499675"><div class="ncpost-header"><div class="ncpost-timestamp">10:45</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2499675" class="ncpost-title">Some formatting</div><div class="ncpost-content" id="ncpost-list-post-content-2499675"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam <u>gravida</u> leo tellus, ac <i>condimentum</i> turpis varius volutpat. Sed hendrerit posuere congue.</p><ul><li>List point 1</li><li>List point 2</li><li>List point 3</li><li><a href="http://www.hats.com/" target="_blank">This one has a link</a></li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida leo tellus, ac <b>condimentum</b> turpis varius volutpat. Sed hendrerit posuere congue.</p><h5>This is a subtitle</h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida leo tellus, ac condimentum turpis varius volutpat. Sed hendrerit posuere congue.</p><ol><li>Numbered list 1</li><li>Numbered list 2</li><li>Numbered list 3</li></ol></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div><div class="ncpost-list-post" role="article" aria-labelledby="ncpost-list-post-title-2496136" aria-describedby="ncpost-list-post-content-2496136" aria-posinset="10" aria-setsize="10"><div class="ncpost-container" data-ncpost-id="2496136"><div class="ncpost-header"><div class="ncpost-timestamp">19:54</div><div class="ncpost-byline">groak</div></div><div role="heading" id="ncpost-list-post-title-2496136" class="ncpost-title">Test post</div><div class="ncpost-content" id="ncpost-list-post-content-2496136"><p>Here is some text to go with this image</p></div><div class="ncpost-image-container"><img class="ncpost-image" src="./lcimg-c815102f-3592-45e5-81a1-1196f1137ead.jpg" alt="Ding Pie"><div aria-hidden="true" class="ncpost-image-byline" style="display: block;"><span class="ncpost-image-byline-description">Ding Pie</span><span class="ncpost-image-byline-source">Me</span></div></div><div aria-hidden="true" class="ncpost-comments-container"><div></div><div></div></div><div class="ncpost-icon"></div></div></div></section></div>
+    <button class="ui-liveblog__load-more sdc-ui-button" data-role="ui-liveblog-load-more" style="display: inline-block;">Load more</button>
+</div>
+
+
+  <script src="./bundle.js"></script>
+
+
+
+</body></html>

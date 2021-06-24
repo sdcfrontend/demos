@@ -80,7 +80,7 @@
     "sdc-site-tournament-promo": "git+https://git.bskyb.com/sky-components/sdc-site-tournament-promo.git",
     "sdc-site-trending": "git+https://git.bskyb.com/sky-components/blackjack-sdc-site-trending.git#css-variables",
     "sdc-site-video": "git+https://git.bskyb.com/sky-components/sdc-site-video.git",
-    "ui-liveblog": "git+https://github.com/sky-uk/ui-liveblog.git#BLOG-53-add-to-front-end"
+    "ui-liveblog": "git+https://github.com/sky-uk/ui-liveblog.git#simplify-styles"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.4",
