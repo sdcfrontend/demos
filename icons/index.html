@@ -92,6 +92,11 @@
         .icon img {
             padding-top: 8px;
         }
+
+        .icon[style] img {
+            mix-blend-mode: overlay;
+            opacity: 0.7        
+        }
         
         .icon:before {
             padding: 0.2em;
@@ -132,6 +137,8 @@
             const url = `https://e3.365dm.com/liveblog-icons/`;
             const icons = await fetch('./icons.json');
             const json = await icons.json();
+            const usagejson = await fetch('./icons-usage.json');
+            const usage = await usagejson.json();
             let html = '';
             let count = 0;
             Object.entries(json).forEach((item) => {
@@ -147,6 +154,23 @@
 
             main.insertAdjacentHTML('afterbegin', html);
             document.querySelector('h1 span').textContent = `${count} icons`;
+
+            const iconslist = document.querySelectorAll('span.icon');
+            const usagelist = Array.from(usage, (item) => {
+                return {
+                    delete: item.Delete.trim().toLowerCase(),
+                    change: item["Change?"]
+                };
+            })
+            usagelist.forEach((item, index) => {
+                if(item.delete == 'y') {
+                    iconslist[index].style.cssText = "background: hsl(0,100%,50%, 0.4); outline: 3px solid red"
+                }
+
+                if(item.change) {
+                    iconslist[index].style.cssText = "background: hsl(136, 75%, 50%, 0.4); outline: 3px solid green"
+                }
+            });
         })();
     </script>
 </body>
