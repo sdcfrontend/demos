@@ -54,6 +54,11 @@
             background: #ffcc00;
             width: fit-content;
         }
+
+        h1 span:nth-child(2) {
+            background: crimson;
+            color: white;
+        }
         
         h2:not(:first-of-type),
         h3 {
@@ -124,7 +129,7 @@
 </head>
 
 <body>
-    <h1 class="wrap">Live Blog Icons <span></span></h1>
+    <h1 class="wrap">Live Blog Icons <span></span><span></span><span></span></h1>
     <div class="wrap"> <button class="button">Darker background</button></div>
     <main class="wrap">
     </main>
@@ -141,6 +146,7 @@
             const usage = await usagejson.json();
             let html = '';
             let count = 0;
+            let deleted = 0;
             Object.entries(json).forEach((item) => {
                 html += `<h2 id="${item[0].toLowerCase().replace(/ /g, '-')}">${item[0]}</h2>`;
                 Object.entries(item[1]).forEach((cat) => {
@@ -153,7 +159,6 @@
             });
 
             main.insertAdjacentHTML('afterbegin', html);
-            document.querySelector('h1 span').textContent = `${count} icons`;
 
             const iconslist = document.querySelectorAll('span.icon');
             const usagelist = Array.from(usage, (item) => {
@@ -161,9 +166,10 @@
                     delete: item.Delete.trim().toLowerCase(),
                     change: item["Change?"]
                 };
-            })
+            });
             usagelist.forEach((item, index) => {
                 if(item.delete == 'y') {
+                    deleted ++;
                     iconslist[index].style.cssText = "background: hsl(0,100%,50%, 0.4); outline: 3px solid red"
                 }
 
@@ -171,6 +177,10 @@
                     iconslist[index].style.cssText = "background: hsl(136, 75%, 50%, 0.4); outline: 3px solid green"
                 }
             });
+
+
+            document.querySelector('h1 span').textContent = `${count - deleted} icons`;
+            document.querySelector('h1 span + span').textContent = `${deleted} deleted`;
         })();
     </script>
 </body>
