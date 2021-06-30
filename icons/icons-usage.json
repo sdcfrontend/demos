@@ -2916,12 +2916,12 @@
   },
   {
     "Icon Number": "584",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "585",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -2956,22 +2956,22 @@
   },
   {
     "Icon Number": "592",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "593",
-    "Delete": "",
-    "Change?": ""
-  },
-  {
-    "Icon Number": "594",
     "Delete": "Y",
     "Change?": ""
   },
   {
-    "Icon Number": "595",
+    "Icon Number": "594",
     "Delete": "",
+    "Change?": ""
+  },
+  {
+    "Icon Number": "595",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -2986,7 +2986,7 @@
   },
   {
     "Icon Number": "598",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -2996,7 +2996,7 @@
   },
   {
     "Icon Number": "600",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3026,7 +3026,7 @@
   },
   {
     "Icon Number": "606",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3046,7 +3046,7 @@
   },
   {
     "Icon Number": "610",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3166,7 +3166,7 @@
   },
   {
     "Icon Number": "634",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3176,7 +3176,7 @@
   },
   {
     "Icon Number": "636",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3191,8 +3191,8 @@
   },
   {
     "Icon Number": "639",
-    "Delete": "",
-    "Change?": "Y (update)"
+    "Delete": "Y",
+    "Change?": ""
   },
   {
     "Icon Number": "640",
@@ -3206,7 +3206,7 @@
   },
   {
     "Icon Number": "642",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3216,12 +3216,12 @@
   },
   {
     "Icon Number": "644",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "645",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3231,7 +3231,7 @@
   },
   {
     "Icon Number": "647",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3251,7 +3251,7 @@
   },
   {
     "Icon Number": "651",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3261,7 +3261,7 @@
   },
   {
     "Icon Number": "653",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -3286,7 +3286,7 @@
   },
   {
     "Icon Number": "658",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3306,12 +3306,12 @@
   },
   {
     "Icon Number": "662",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "663",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3351,12 +3351,12 @@
   },
   {
     "Icon Number": "671",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "672",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -3366,12 +3366,12 @@
   },
   {
     "Icon Number": "674",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
     "Icon Number": "675",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -4286,7 +4286,7 @@
   },
   {
     "Icon Number": "858",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -4301,7 +4301,7 @@
   },
   {
     "Icon Number": "861",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
@@ -4316,7 +4316,7 @@
   },
   {
     "Icon Number": "864",
-    "Delete": "",
+    "Delete": "Y",
     "Change?": ""
   },
   {
@@ -5316,7 +5316,7 @@
   },
   {
     "Icon Number": "1064",
-    "Delete": "Y",
+    "Delete": "",
     "Change?": ""
   },
   {
