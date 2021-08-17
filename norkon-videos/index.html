@@ -185,14 +185,14 @@ body {
 .norkon-cms-extension.open {
   display: block; }
 
-.ui-liveblog-cms-brightcove {
+.ui-liveblog-cms-modal-container {
   --bg-color: hsla(0, 0%, 98%, 100%);
   --color: hsl(0, 0%, 29%);
   --secondary-color: hsl(0, 0%, 44%);
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   left: 0;
   top: 0;
   display: flex;
@@ -200,66 +200,59 @@ body {
   align-items: center;
   font: inherit;
   font-size: 14px;
+  font-size: clamp(13px, calc(9px + 1vw), 15px);
   line-height: 1.35; }
 
-.ui-liveblog-cms-brightcove *,
-.ui-liveblog-cms-brightcove *:before,
-.ui-liveblog-cms-brightcove *:after {
+.ui-liveblog-cms-modal-container *,
+.ui-liveblog-cms-modal-container *:before,
+.ui-liveblog-cms-modal-container *:after {
   padding: 0;
   margin: 0;
   position: relative;
   box-sizing: border-box;
   list-style: none; }
 
-.ui-liveblog-cms-brightcove *:focus {
+.ui-liveblog-cms-modal-container *:focus {
   outline: revert !important; }
 
-.ui-liveblog-cms-brightcove-modal {
+.ui-liveblog-cms-modal {
   background: var(--bg-color);
   color: var(--color);
-  padding: calc(1em + 1.75%);
-  width: 90%;
+  padding: calc(2em + 0.5vw);
+  width: 95%;
   max-width: 700px;
   height: 90%;
-  max-height: 700px;
+  height: clamp(300px, 90%, 750px);
   display: grid;
-  grid-gap: 1.5em 1em;
   grid-template-rows: max-content max-content 1fr;
+  grid-gap: 1.5em 1em;
   border-radius: 8px;
   box-shadow: 0 0 22px rgba(0, 0, 0, 0.2); }
 
-.ui-liveblog-cms-brightcove-modal:after {
-  content: "";
-  height: 4em;
-  width: 100%;
-  left: 0;
-  bottom: 1em;
-  position: absolute;
-  background: linear-gradient(to top, var(--bg-color), rgba(250, 250, 250, 0));
-  pointer-events: none; }
-
-.ui-liveblog-cms-brightcove-header {
+.ui-liveblog-cms-modal-header {
   display: flex;
   justify-content: space-between; }
 
-.ui-liveblog-cms-brightcove-header h1 {
-  font-size: 1.6em; }
+.ui-liveblog-cms-modal-header h1 {
+  font-size: 1.6em;
+  padding: 0 0.4em; }
 
-.ui-liveblog-cms-brightcove-close[class][class][class] {
-  width: fit-content;
+.ui-liveblog-cms-modal-close[class][class][class] {
+  width: max-content;
   padding: 0.3em;
   background: none;
   border: 0;
   font-size: 0;
   cursor: pointer; }
 
-.ui-liveblog-cms-brightcove-close:before {
+.ui-liveblog-cms-modal-close:before {
   content: "\F057";
   font-family: FontAwesome;
   font-size: 28px;
   vertical-align: middle;
   color: var(--color); }
 
+/* brightcove panel */
 .ui-liveblog-cms-brightcove-search {
   position: relative; }
 
@@ -296,7 +289,7 @@ body {
   right: 0;
   top: 0.7em;
   height: calc(100% - 1.4em);
-  width: fit-content;
+  width: auto;
   font: inherit;
   font-weight: bold;
   color: inherit;
@@ -311,8 +304,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-auto-rows: max-content;
   position: relative;
-  padding-right: 0.5em;
-  padding-bottom: 12em; }
+  padding: 0 calc(1.4em + 0.5vw) 0 1%;
+  margin-right: calc(-1.6em - 0.5vw); }
 
 /* loading items */
 .ui-liveblog-cms-brightcove-content[data-loading] {
@@ -368,7 +361,7 @@ body {
   border-radius: 5px;
   background: #3157a1;
   color: white;
-  width: fit-content;
+  width: max-content;
   margin: 0.5em 0;
   padding: 0.3em 0.75em;
   font: inherit;
@@ -398,7 +391,7 @@ body {
   width: 6px;
   height: 6px;
   border-radius: 7px;
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   background-clip: padding-box; }
 
 .ui-scrollbars::-moz-scrollbar {
@@ -409,10 +402,10 @@ body {
   <div id="container"></div>
   <div class="norkon-cms-editor"></div>
 <button class="norkon-cms-extension-button">Toggle extension</button>
-<div class="norkon-cms-extension open"><div class="ui-liveblog-cms-brightcove"><div class="ui-liveblog-cms-brightcove-modal">
-      <div class="ui-liveblog-cms-brightcove-header">
+<div class="norkon-cms-extension open"><div class="ui-liveblog-cms-modal-container"><div class="ui-liveblog-cms-modal">
+      <div class="ui-liveblog-cms-modal-header">
         <h1>Add videos</h1>
-      <button class="ui-liveblog-cms-brightcove-close">Close</button></div>
+      <button class="ui-liveblog-cms-modal-close">Close</button></div>
       <div class="ui-liveblog-cms-brightcove-search">
       <input class="ui-liveblog-cms-brightcove-search-input" placeholder="Search..." spellcheck="false" required=""><button class="ui-liveblog-cms-brightcove-search-submit">Submit</button></div>
     <div class="ui-liveblog-cms-brightcove-content ui-scrollbars">
