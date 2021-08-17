@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9876/ -->
+<html><script type="text/javascript" class="__REQUESTLY__SCRIPT">(function (namespace) {
+  window[namespace] = window[namespace] || {};
+  window[namespace].responseRules = {};
+
+  const isApplicableOnUrl = (url) =>
+    window[namespace].responseRules.hasOwnProperty(url);
+  const getResponseRule = (url) => window[namespace].responseRules[url];
+  const notifyRuleApplied = (rule) => {
+    window.postMessage(
+      {
+        from: "requestly",
+        type: "response_rule_applied",
+        id: rule.id,
+      },
+      window.location.href
+    );
+  };
+
+  // Intercept XMLHttpRequest
+  const onReadyStateChange = function () {
+    if (this.readyState === 4 && isApplicableOnUrl(this.responseURL)) {
+      const responseRule = getResponseRule(this.responseURL);
+      const { response } = responseRule;
+      const responseType = this.responseType;
+      const customResponse =
+        response.type === "code"
+          ? responseRule.evaluator({
+              method: this.method,
+              url: this.responseURL,
+              requestHeaders: this.requestHeaders,
+              requestData: this.requestData,
+              responseType: this.responseType,
+              response: this.response,
+            })
+          : response.value;
+
+      Object.defineProperty(this, "response", {
+        get: function () {
+          if (response.type === "static" && responseType === "json") {
+            return JSON.parse(customResponse);
+          }
+          return customResponse;
+        },
+      });
+
+      if (responseType === "" || responseType === "text") {
+        Object.defineProperty(this, "responseText", {
+          get: function () {
+            return customResponse;
+          },
+        });
+      }
+
+      notifyRuleApplied(responseRule);
+    }
+  };
+
+  const XHR = XMLHttpRequest;
+  XMLHttpRequest = function () {
+    const xhr = new XHR();
+    xhr.addEventListener(
+      "readystatechange",
+      onReadyStateChange.bind(xhr),
+      false
+    );
+    return xhr;
+  };
+  XMLHttpRequest.prototype = XHR.prototype;
+  Object.entries(XHR).map(([key, val]) => {
+    XMLHttpRequest[key] = val;
+  });
+
+  const open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method) {
+    this.method = method;
+    open.apply(this, arguments);
+  };
+
+  const send = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.send = function (data) {
+    this.requestData = data;
+    send.apply(this, arguments);
+  };
+
+  let setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
+  XMLHttpRequest.prototype.setRequestHeader = function (header, value) {
+    this.requestHeaders = this.requestHeaders || {};
+    this.requestHeaders[header] = value;
+    setRequestHeader.apply(this, arguments);
+  };
+
+  // Intercept fetch API
+  const _fetch = fetch;
+  fetch = async (resource, initOptions) => {
+    const url =
+      resource instanceof Request ? resource.url : resource.toString();
+    const fetchedResponse = await _fetch(resource, initOptions);
+
+    if (!isApplicableOnUrl(url)) {
+      return fetchedResponse;
+    }
+
+    let method, requestHeaders, requestData;
+
+    if (resource instanceof Request) {
+      const request = resource.clone();
+      method = request.method || "GET";
+      requestHeaders =
+        request.headers &&
+        Array.from(request.headers).reduce((obj, [key, val]) => {
+          obj[key] = val;
+          return obj;
+        }, {});
+      requestData = await request.text();
+    } else {
+      method = initOptions.method || "GET";
+      if (initOptions.headers instanceof Headers) {
+        requestHeaders = Array.from(initOptions.headers).reduce(
+          (obj, [key, val]) => {
+            obj[key] = val;
+            return obj;
+          },
+          {}
+        );
+      } else {
+        requestHeaders = initOptions.headers;
+      }
+      requestData = initOptions.body;
+    }
+
+    const responseRule = getResponseRule(url);
+    const customResponseText =
+      responseRule.response.type === "code"
+        ? responseRule.evaluator({
+            method,
+            url,
+            requestHeaders,
+            requestData,
+            response: await fetchedResponse.text(),
+          })
+        : responseRule.response.value;
+
+    notifyRuleApplied(responseRule);
+
+    return new Response(new Blob([customResponseText]), {
+      status: fetchedResponse.status,
+      statusText: fetchedResponse.statusText,
+      headers: fetchedResponse.headers,
+    });
+  };
+})('__REQUESTLY__')</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style type="text/css">@import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);</style><style type="text/css">@import url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css);</style><style type="text/css">@font-face {
+  font-family: FontAwesome;
+  src: url("https://dninvestor.azureedge.net/data/fa/fontawesome-webfont.woff2") format("woff2"), url("https://dninvestor.azureedge.net/data/fa/fontawesome-webfont.woff") format("woff"); }
+
+body {
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-column: 1fr;
+  grid-gap: 2em; }
+
+.norkon-cms-editor {
+  height: 200px;
+  border: 3px solid #ccc;
+  padding: 1em; }
+
+.norkon-cms-extension {
+  border: 3px solid hotpink;
+  display: none; }
+
+.norkon-cms-extension-button {
+  width: fit-content; }
+
+.norkon-cms-extension.open {
+  display: block; }
+
+.ui-liveblog-cms-brightcove {
+  --bg-color: hsla(0, 0%, 98%, 100%);
+  --color: hsl(0, 0%, 29%);
+  --secondary-color: hsl(0, 0%, 44%);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.35; }
+
+.ui-liveblog-cms-brightcove *,
+.ui-liveblog-cms-brightcove *:before,
+.ui-liveblog-cms-brightcove *:after {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+  list-style: none; }
+
+.ui-liveblog-cms-brightcove *:focus {
+  outline: revert !important; }
+
+.ui-liveblog-cms-brightcove-modal {
+  background: var(--bg-color);
+  color: var(--color);
+  padding: calc(1em + 1.75%);
+  width: 90%;
+  max-width: 700px;
+  height: 90%;
+  max-height: 700px;
+  display: grid;
+  grid-gap: 1.5em 1em;
+  grid-template-rows: max-content max-content 1fr;
+  border-radius: 8px;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.2); }
+
+.ui-liveblog-cms-brightcove-modal:after {
+  content: "";
+  height: 4em;
+  width: 100%;
+  left: 0;
+  bottom: 1em;
+  position: absolute;
+  background: linear-gradient(to top, var(--bg-color), rgba(250, 250, 250, 0));
+  pointer-events: none; }
+
+.ui-liveblog-cms-brightcove-header {
+  display: flex;
+  justify-content: space-between; }
+
+.ui-liveblog-cms-brightcove-header h1 {
+  font-size: 1.6em; }
+
+.ui-liveblog-cms-brightcove-close[class][class][class] {
+  width: fit-content;
+  padding: 0.3em;
+  background: none;
+  border: 0;
+  font-size: 0;
+  cursor: pointer; }
+
+.ui-liveblog-cms-brightcove-close:before {
+  content: "\F057";
+  font-family: FontAwesome;
+  font-size: 28px;
+  vertical-align: middle;
+  color: var(--color); }
+
+.ui-liveblog-cms-brightcove-search {
+  position: relative; }
+
+.ui-liveblog-cms-brightcove-search:before {
+  content: "\F002";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  left: 0.8em;
+  font-size: 1.25em;
+  transform: translate(0%, -50%); }
+
+.ui-liveblog-cms-brightcove-search-input[class][class][class] {
+  font: inherit;
+  font-size: 15px;
+  padding: 0.9em 4em 0.9em 2.75em;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background: var(--bg-color);
+  color: var(--color);
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.ui-liveblog-cms-brightcove-search-input:focus {
+  background: white !important; }
+
+.ui-liveblog-cms-brightcove-search-submit[class][class][class] {
+  background: none;
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  right: 0;
+  top: 0.7em;
+  height: calc(100% - 1.4em);
+  width: fit-content;
+  font: inherit;
+  font-weight: bold;
+  color: inherit;
+  padding: 0 1.2em;
+  border-left: 1px solid rgba(0, 0, 0, 0.25);
+  cursor: pointer; }
+
+/* create scrolling content div */
+.ui-liveblog-cms-brightcove-content {
+  display: grid;
+  grid-gap: 2em 1.5em;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: max-content;
+  position: relative;
+  padding-right: 0.5em;
+  padding-bottom: 12em; }
+
+/* loading items */
+.ui-liveblog-cms-brightcove-content[data-loading] {
+  overflow: hidden; }
+
+.ui-liveblog-cms-brightcove-content[data-loading]:before {
+  content: "Loading videos";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.ui-liveblog-cms-brightcove-media {
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-gap: 0.6em; }
+
+.ui-liveblog-cms-brightcove-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+.ui-liveblog-cms-brightcove-media h2 {
+  font-size: 16px;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; }
+
+.ui-liveblog-cms-brightcove-media p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: inherit;
+  font-size: inherit; }
+
+.ui-liveblog-cms-brightcove-info {
+  font-size: 12px;
+  opacity: 0.8;
+  display: flex;
+  gap: 1em;
+  color: var(--color); }
+
+.ui-liveblog-cms-brightcove-media[class][class][class] button {
+  border: 0;
+  border-radius: 5px;
+  background: #3157a1;
+  color: white;
+  width: fit-content;
+  margin: 0.5em 0;
+  padding: 0.3em 0.75em;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  height: auto; }
+
+/* thin scrollbar styles */
+.ui-scrollbars {
+  overflow: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: none;
+  scrollbar-width: thin;
+  -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+.ui-scrollbars::-webkit-scrollbar {
+  width: 10px; }
+
+.ui-scrollbars::-webkit-scrollbar-track {
+  background: none; }
+
+.ui-scrollbars::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  width: 6px;
+  height: 6px;
+  border-radius: 7px;
+  border: 3px solid transparent;
+  background-clip: padding-box; }
+
+.ui-scrollbars::-moz-scrollbar {
+  width: 10px; }
+</style></head>
+<body>
+
+  <div id="container"></div>
+  <div class="norkon-cms-editor"></div>
+<button class="norkon-cms-extension-button">Toggle extension</button>
+<div class="norkon-cms-extension open"><div class="ui-liveblog-cms-brightcove"><div class="ui-liveblog-cms-brightcove-modal">
+      <div class="ui-liveblog-cms-brightcove-header">
+        <h1>Add videos</h1>
+      <button class="ui-liveblog-cms-brightcove-close">Close</button></div>
+      <div class="ui-liveblog-cms-brightcove-search">
+      <input class="ui-liveblog-cms-brightcove-search-input" placeholder="Search..." spellcheck="false" required=""><button class="ui-liveblog-cms-brightcove-search-submit">Submit</button></div>
+    <div class="ui-liveblog-cms-brightcove-content ui-scrollbars">
+      <div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div><div class="ui-liveblog-cms-brightcove-media">
+        <img src="./skynews-jeff-bezos-atmosphere_5453367.jpg" aria-hidden="true" width="160" height="90">
+        <h2>Here is a video based on the search that is long enough to span more than two lines</h2>
+        <p>Here is some description of the video that is long enough to span more than two lines</p>
+        <div class="ui-liveblog-cms-brightcove-info">
+          <div>12/08/21</div>
+        </div>
+        <button>Add video</button>  
+        </div></div></div></div></div>
+
+  <script src="./bundle.js"></script>
+
+
+
+</body></html>
