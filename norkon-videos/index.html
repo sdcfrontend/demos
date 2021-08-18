@@ -189,6 +189,8 @@ body {
   --bg-color: hsla(0, 0%, 98%, 100%);
   --color: hsl(0, 0%, 29%);
   --secondary-color: hsl(0, 0%, 44%);
+  --spacing: 15px;
+  --spacing: clamp(20px, calc(16px + 1vw), 24px);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -199,8 +201,7 @@ body {
   justify-content: center;
   align-items: center;
   font: inherit;
-  font-size: 14px;
-  font-size: clamp(13px, calc(9px + 1vw), 15px);
+  font-size: 15px;
   line-height: 1.35; }
 
 .ui-liveblog-cms-modal-container *,
@@ -218,14 +219,14 @@ body {
 .ui-liveblog-cms-modal {
   background: var(--bg-color);
   color: var(--color);
-  padding: calc(2em + 0.5vw);
+  padding: calc(var(--spacing) * 1.4);
   width: 95%;
   max-width: 700px;
   height: 90%;
   height: clamp(300px, 90%, 750px);
   display: grid;
   grid-template-rows: max-content max-content 1fr;
-  grid-gap: 1.5em 1em;
+  grid-gap: var(--spacing);
   border-radius: 8px;
   box-shadow: 0 0 22px rgba(0, 0, 0, 0.2); }
 
@@ -304,8 +305,9 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-auto-rows: max-content;
   position: relative;
-  padding: 0 calc(1.4em + 0.5vw) 0 1%;
-  margin-right: calc(-1.6em - 0.5vw); }
+  padding: 0 calc(var(--spacing) / 3);
+  padding-right: calc(var(--spacing) * 1.1);
+  margin-right: calc((var(--spacing) * 1.4 - 7px) * -1); }
 
 /* loading items */
 .ui-liveblog-cms-brightcove-content[data-loading] {
@@ -316,17 +318,19 @@ body {
   background-color: var(--bg-color);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 102%;
   left: 0;
-  top: 0;
+  top: -1px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 2; }
 
 .ui-liveblog-cms-brightcove-media {
   display: grid;
   grid-auto-rows: max-content;
-  grid-gap: 0.6em; }
+  grid-gap: 0.6em;
+  top: 1px; }
 
 .ui-liveblog-cms-brightcove-media img {
   width: 100%;
@@ -402,7 +406,7 @@ body {
   <div id="container"></div>
   <div class="norkon-cms-editor"></div>
 <button class="norkon-cms-extension-button">Toggle extension</button>
-<div class="norkon-cms-extension open"><div class="ui-liveblog-cms-modal-container"><div class="ui-liveblog-cms-modal">
+<div class="norkon-cms-extension"><div class="ui-liveblog-cms-modal-container"><div class="ui-liveblog-cms-modal">
       <div class="ui-liveblog-cms-modal-header">
         <h1>Add videos</h1>
       <button class="ui-liveblog-cms-modal-close">Close</button></div>
