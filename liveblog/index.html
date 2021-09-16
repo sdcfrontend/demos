@@ -632,7 +632,7 @@ html {
     opacity: 1; } }
 
 .ncpost-list-post[data-new] {
-  animation: new-post 1s 0.25s ease-in;
+  animation: new-post 0.75s 0.45s linear;
   animation-fill-mode: both; }
 
 .ncpost-list-container,
@@ -643,6 +643,7 @@ html {
 .ncpost-list-post,
 .ncpost-linked,
 .ncpost-pinned-post {
+  will-change: opacity;
   display: grid;
   position: relative;
   grid-template-areas: var(--post-layout);
