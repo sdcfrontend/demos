@@ -522,6 +522,7 @@ html {
   --post-load-more-label: "Load More";
   --post-label-link-text: "View post";
   --post-label-close-post: "Close post";
+  --post-label-updates-below: "Updates continue below";
   font-family: inherit;
   font-size: var(--post-font-size);
   line-height: 1.32;
@@ -567,6 +568,12 @@ html {
   background: var(--color);
   color: var(--bg); }
 
+@keyframes view-post {
+  25% {
+    background-position-y: 0.1em; }
+  75% {
+    background-position-y: 0.3em; } }
+
 .ncpost-top-text-container {
   padding: var(--post-padding-l);
   background: var(--post-top-text-bg);
@@ -608,9 +615,14 @@ html {
   color: var(--link-color);
   font-weight: bold;
   font-size: calc(1em - 3px);
-  padding: 0 1.8em 0 0.5em;
+  padding: 0.2em 1.8em 0.2em 0.5em;
   content: var(--post-label-link-text);
-  background: url("data:image/svg+xml,%3Csvg fill='none' viewBox='0 0 14.779 14.779' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='m14.39 7.3897c0-3.8662-3.1338-7-7-7s-7 3.1338-7 7 3.1338 7 7 7 7-3.1338 7-7' stroke='%2300369f' stroke-width='.77945'/%3E%3Cpath clip-rule='evenodd' d='m7.086 10.566c.17106.1711.44756.1711.61862 0l2.2824-2.2837c.0704-.07131.105-.14481.1085-.23143v-.00044c0-.19731-.3434-.46244-.4515-.55169-.0223-.01837-.0424-.03456-.0604-.04856l-1.7508 1.7509v-5.0851c-.02319-.00306-.04856-.00569-.07744-.00875-.13956-.01356-.56918-.07131-.70918.07394h-.00044c-.05863.0665-.08619.14525-.08706.24981l-.00088 4.7701-1.7509-1.7509c-.01793.01444-.03806.03019-.06037.04856-.10806.08925-.4515.35438-.4515.55169v.00044c.0035.08662.03806.16012.1085.23143z' fill='%2300369f'/%3E%3C/svg%3E") no-repeat calc(100% - 0.4em) 0/15px; }
+  background: url("data:image/svg+xml,%3Csvg fill='none' viewBox='0 0 14.779 14.779' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='m14.39 7.3897c0-3.8662-3.1338-7-7-7s-7 3.1338-7 7 3.1338 7 7 7 7-3.1338 7-7' stroke='%2300369f' stroke-width='.77945'/%3E%3Cpath clip-rule='evenodd' d='m7.086 10.566c.17106.1711.44756.1711.61862 0l2.2824-2.2837c.0704-.07131.105-.14481.1085-.23143v-.00044c0-.19731-.3434-.46244-.4515-.55169-.0223-.01837-.0424-.03456-.0604-.04856l-1.7508 1.7509v-5.0851c-.02319-.00306-.04856-.00569-.07744-.00875-.13956-.01356-.56918-.07131-.70918.07394h-.00044c-.05863.0665-.08619.14525-.08706.24981l-.00088 4.7701-1.7509-1.7509c-.01793.01444-.03806.03019-.06037.04856-.10806.08925-.4515.35438-.4515.55169v.00044c.0035.08662.03806.16012.1085.23143z' fill='%2300369f'/%3E%3C/svg%3E") no-repeat calc(100% - 0.4em) 0.2em/15px;
+  will-change: background-position; }
+
+@media (hover: hover) {
+  .ncpost-top-text-container[class] a[href*="postid="]:hover:after {
+    animation: view-post 1s infinite; } }
 
 /* animate a new post if it comes in after initial load */
 @keyframes new-post {
@@ -770,23 +782,36 @@ html {
 .ncpost-post-close {
   display: var(--post-close-button-display, none);
   position: absolute;
-  top: var(--post-padding-l);
+  top: var(--post-padding-m);
   right: var(--post-padding-m);
-  width: calc(20px + 1%);
-  height: calc(20px + 1%);
-  background: none;
+  width: 28px;
+  height: 28px;
   border: 0;
   cursor: pointer;
   font-size: 0;
-  text-indent: -1000px; }
+  text-indent: -1000px;
+  border-radius: 4px;
+  background: none; }
+
+.ncpost-post-close:hover:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border: 1px solid var(--post-color);
+  box-sizing: border-box;
+  border-radius: 50%;
+  opacity: 0.4; }
 
 .ncpost-post-close svg {
   fill: var(--post-color);
   position: absolute;
-  top: 5%;
-  left: 15%;
-  width: 70%;
-  height: 70%; }
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%; }
 
 @media all and (max-width: 480px) {
   .ncpost-list-post,
@@ -932,7 +957,7 @@ html {
   outline: none; }
 
 .ncpost-list-post-linked[class]:after {
-  content: "Updates continue below";
+  content: attr(data-label);
   text-align: center;
   color: var(--text-color-secondary);
   font-size: 14px;
@@ -1270,7 +1295,9 @@ ncpost-content[data-type="LINK-CARD"][data-image*='"hide":false'] {
   --post-share-label-copy: "Copy link in German";
   --post-share-label-copied: "Copied! in German";
   --post-load-more-label: "Load more in German";
-  --post-label-link-text: "View post in German"; }
+  --post-label-link-text: "View post in German";
+  --post-label-close-post: "Close post in German";
+  --post-label-updates-below: "BUM"; }
 
 /* brightcove video renderer */
 .ui-liveblog-brightcove-video {
@@ -1400,7 +1427,7 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto; }
-</style><script src="./ncposts-6.1.0.min.js"></script><script charset="utf-8" src="./main.bb4e193a1672882ab200.hot-update.js"></script></head>
+</style><script src="./ncposts-6.1.0.min.js"></script></head>
 <body class="site-wrap-padding">
 
   <div id="container"></div>
