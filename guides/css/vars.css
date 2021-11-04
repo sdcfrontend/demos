@@ -37,10 +37,11 @@
   --shade-0: #FFFFFF;
   --shade-1: #F4F5F7;
   --shade-2: #E2E2E2;
+  --shade-2-5: #9F9F9F;
   --shade-3: #707070;
   --shade-4: #4A4A4A;
   --shade-5: #222222;
-  --shade-6: #000;
+  --shade-6: #111111;
 
   /* semi opaque blacks */
   --black-op80: rgba(0, 0, 0, 0.8);
@@ -56,23 +57,33 @@
   --success: #299934; /* success messages */
   --alert: #EA021A; /* alerts and warnings */
   --live: #EA021A; /* live scores and coverage */
+  --live-color: white;
   --breaking: #FDE000; /* breaking news components */
+  --breaking-color: #111;
   --link-color: #3157A1; /* global text link color */
+  --link-color-invert: #2AA2E1;
+  --link-color-on-light: #00369F;
+  --link-color-on-dark: #4FC2FF;
 
-  --live-bg: linear-gradient(180deg, #E90E10 0%, #BC0000 100%); /* gradient version of live */
-  --breaking-bg: linear-gradient(180deg, #F8EB1F 0%, #F2CA06 100%); /* gradient version of breaking */
+  --live-bg: linear-gradient(180deg, #E90E10, #BC0000); /* gradient version of live */
+  --breaking-bg: linear-gradient(180deg, #F8EB1F, #F2CA06); /* gradient version of breaking */
   
   /* common alias values */
-  --body-bg: var(--shade-1); /* mobile site bg (desktop uses a gradient) */
+  --body-bg: var(--gradient-pipe); /* general site bg */
+  --article-bg: var(--shade-0); /* article page bg */
   --component-bg: var(--shade-0); /* components bg is generally white */
   --component-shade: var(--shade-1); /* component header bg */
+  --component-shade-gradient: linear-gradient(180deg,#fafafa,#f1f2f2); /* gradient version of above */
+  --component-shade-dark: var(--shade-5);
   --border-color: var(--shade-2); /* border color for components */
+  --border-color-dark: var(--shade-5) /* stronger border color for components */;
   --text-color: var(--shade-4); /* main body text */
   --text-color-invert: var(--shade-0); /* text on dark backgrounds */
   --text-color-secondary: var(--shade-3); /* lighter body text */
-  --text-color-tertiary: #9F9F9F; /* lighest body text */
-  --text-color-dark: var(--shade-5); /* darker body text */
-  --icon-color: var(--shade-5); /* color for svg/ui icons */
+  --text-color-tertiary: var(--shade-2-5); /* lighest body text */
+  --text-color-dark: var(--shade-6); /* darker body text */
+  --text-color-light: var(--shade-0); /* lighest body text */
+  --icon-color: var(--shade-6); /* color for svg/ui icons */
 
   /* box shadows */
   --drop-shadow: 0 3px 3px rgba(0, 0, 0, 0.12); /* horizontal drop shadow beneath a ui element */ 
@@ -140,4 +151,33 @@
   --component-text: var(--font-scale-xxs); /* smaller blocks of text within components */
   --supporting-text: var(--font-fixed-s); /* accompanying text */
   --label-text: var(--font-fixed-xs); /* label and note text */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      /* shade gradients */
+      --gradient-radial: #453F3F;
+      --gradient-pipe: linear-gradient(#111, #111);
+      --gradient-linear: linear-gradient(#252525, #2B2B2B);
+    
+      /* ui states */
+      --link-color: var(--link-color-invert); /* global text link color */
+      --link-color-on-light: var(--link-color-invert);
+
+       /* common alias values */
+      --body-bg: #111; /* general site bg */
+      --article-bg: #111; /* article page bg */
+      --component-bg: #252525; /* components bg is generally white */
+      --component-shade: #453F3F; /* component header bg */
+      --component-shade-gradient: linear-gradient(#515255, #272b30);
+      --component-shade-dark: #4a4a4a;
+      --border-color: #9F9F9F; /* border color for components */
+      --border-color-dark: #9F9F9F;
+      --text-color: #FFF; /* main body text */
+      --text-color-secondary: #E2E2E2; /* lighter body text */
+      --text-color-tertiary: #9F9F9F; /* lighest body text */
+      --text-color-dark: #FFF; /* darker body text */
+      --text-color-light: #4A4A4A;
+      --icon-color: #E2E2E2; /* color for svg/ui icons */
+    } 
 }

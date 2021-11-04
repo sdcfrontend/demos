@@ -24,6 +24,7 @@ body {
     font-family: 'skytext', sans-serif;
     font-size: var(--base-font-size);
     color: var(--text-color);
+    background: var(--article-bg);
     line-height: 1.4;
 }
 
