@@ -2,34 +2,33 @@ html, body
 {
 	margin: 0;
 	padding: 0;
-  background: red !important;
 }
 
 /* #########################################################################################
 *  # Für die CI Anpassungen sind hier die Klassen vorbereitet. Wenn Sie diese einkommentieren
 *  # werden keine Verläufe angezeigt und die Applikation ist auf rot gestellt.
 *  ######################################################################################### */
-/*
+
 .dpa_app .fontColorHighlight
 {
-	color				: #;
+	color				: red;
 }
 
 .dpa_app .backgroundColorHighlight
 {
-	background-color	: #;
+	background-color	: green;
 }
 
 .dpa_app .dpa_gradient
 {
-	background-color	: #;
+	background-color	: blue;
 }
 
 .dpa_app .dpa_gradientReverse
 {
-	background-color	: #;
+	background-color	: hotpink;
 }
-*/
+
 
 /* #########################################################################################
 *  # STANDALONES (.dpaAppSA+{standloneType})
