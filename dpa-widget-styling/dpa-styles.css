@@ -1,0 +1,55 @@
+html, body
+{
+	margin: 0;
+	padding: 0;
+  background: red !important;
+}
+
+/* #########################################################################################
+*  # Für die CI Anpassungen sind hier die Klassen vorbereitet. Wenn Sie diese einkommentieren
+*  # werden keine Verläufe angezeigt und die Applikation ist auf rot gestellt.
+*  ######################################################################################### */
+/*
+.dpa_app .fontColorHighlight
+{
+	color				: #;
+}
+
+.dpa_app .backgroundColorHighlight
+{
+	background-color	: #;
+}
+
+.dpa_app .dpa_gradient
+{
+	background-color	: #;
+}
+
+.dpa_app .dpa_gradientReverse
+{
+	background-color	: #;
+}
+*/
+
+/* #########################################################################################
+*  # STANDALONES (.dpaAppSA+{standloneType})
+*  ######################################################################################### */
+/*
+.dpa_appSAConference {}
+.dpa_appSAGameStatistics {}
+.dpa_appSALineup {}
+.dpa_appSASchedule {}
+.dpa_appSAScoreboard {}
+.dpa_appSAStatistic {}
+.dpa_appSATable {}
+.dpa_appSATeams {}
+.dpa_appSATicker {}
+.dpa_appSATimeline {}
+*/
+
+/* #########################################################################################
+*  # MOBILE VIEW
+*  ######################################################################################### */
+/*
+.dpa_app-mobile_true {}
+*/
