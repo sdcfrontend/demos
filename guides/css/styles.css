@@ -1,6 +1,6 @@
-@import "./vars/_vars-global.css";
-@import "./vars/_vars-dark-mode.css" screen and ( prefers-color-scheme: dark );
-@import "./vars/_vars-elections.css";
+@import "../css/vars/_vars-global.css";
+@import "../css/vars/_vars-dark-mode.css" screen and ( prefers-color-scheme: dark );
+@import "../css/vars/_vars-elections.css";
 @import "utilities.css";
 @import "glints.css";
 @import "ui.css";
