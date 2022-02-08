@@ -1,7 +1,7 @@
 :root {
   --brand-1: #002672;
   --brand-2: #EA021A;
-  --brand-3: linear-gradient(var(--brand-1), #00043B);
+  --brand-3: linear-gradient(var(--brand-1), #00043B); 
 
   /* sports channel branding */
   --sports-branding-premier-league-primary: #030c7e;

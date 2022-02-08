@@ -3,7 +3,7 @@
 /* ----------------- */
 :root {
   --base-scaler: 10px;
-  --base-font-scaler: 48px
+  --base-font-scaler: 48px;
 }
 
 @media all and (max-width: 900px) {
