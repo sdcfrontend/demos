@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "copy-css": "cp -R ./node_modules/sdc-project-base/css/base/core/vars/ ./guides/css/vars/"
+    "copy-css": "cp -R ./node_modules/sdc-project-base/css/base/core/vars/ ./guides/css/"
   },
   "repository": {
     "type": "git",
