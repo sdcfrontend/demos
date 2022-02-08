@@ -35,10 +35,12 @@ img {
 a {
     color: var(--link-color);
     text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration-line: underline;
     text-decoration-skip: ink;
 }
 
@@ -53,8 +55,8 @@ a:hover {
     max-width: 100%;
 }
 
-.main {
-  margin-bottom: var(--group-margin);
+main {
+  margin-bottom: calc(var(--group-margin) * 2);
 }
 
 .component-margin {

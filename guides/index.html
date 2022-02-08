@@ -15,7 +15,7 @@
       const here = document.currentScript;
       (async function () {
         const nav = await import('./nav.js')
-        nav.default(here);
+        nav.default(here, 0);
       })();  
     </script>
 
@@ -30,12 +30,18 @@
           </p>
         </div>
         <h4>Owners</h4>
-        <div class="text-block group-margin">
+        <div class="text-block">
           <p>If you see a mistake or something that is missing please contact one of the following people:</p>
           <ul>
             <li><a href="#">mark.groak@sky.uk</a> (developer)</li>
             <li><a href="#">ross.turner@sky.uk</a> (designer)</li>
             <li><a href="#">anthony.wadsworth@sky.uk</a> (designer)</li>
+          </ul>
+        </div>
+        <h4>Github link</h4>
+        <div class="text-block">
+          <ul>
+            <li><a href="https://git.bskyb.com/sky-components/sdc-project-base">https://git.bskyb.com/sky-components/sdc-project-base</a></li>
           </ul>
         </div>
       </div>

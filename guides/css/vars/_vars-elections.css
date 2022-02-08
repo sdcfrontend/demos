@@ -1,0 +1,146 @@
+:root {
+  --election-party-color-light: #FFF;
+  --election-party-color-dark: black;
+  /* conservatives */
+  --election-party-con-light: #1465B6;
+  --election-party-con-dark: #105192;
+  /* labour */
+  --election-party-lab-light: #C40813;
+  --election-party-lab-dark: #90060F;
+  /* snp */
+  --election-party-snp-light: #FCE440;
+  --election-party-snp-dark: #CAB633;
+   /* lib dem */
+   --election-party-lib-dem-light: #F7B229;
+   --election-party-lib-dem-dark: #E4951D;
+   /* reform */
+   --election-party-reform-light: #1CBBCC;
+   --election-party-reform-dark: #1699AA;
+   /* green */
+   --election-party-green-light: #73A533;
+   --election-party-green-dark: #628C2B;
+   /* plaid */
+   --election-party-plaid-light: #17A454;
+   --election-party-plaid-dark: #128343;
+   /* sinn fein */
+   --election-party-sf-light: #139108;
+   --election-party-sf-dark: #107B07;
+   /* sdlp */
+   --election-party-sdlp-light: #2C776A;
+   --election-party-sdlp-dark: #295C62;
+   /* alliance */
+   --election-party-alliance-light: #F9CC34;
+   --election-party-alliance-dark: #D7A929;
+   /* uup */
+   --election-party-uup-light: #6D94D9;
+   --election-party-uup-dark: #5272B9;
+   /* ukip */
+   --election-party-ukip-light: #A10BBD;
+   --election-party-ukip-dark: #801697;
+   /* dup */
+   --election-party-dup-light: #1F284F;
+   --election-party-dup-dark: #141D49;
+   /* change */
+   --election-party-change-light: #414141;
+   --election-party-change-dark: #1F1F1F;
+   /* other */
+   --election-party-other-light: #999999;
+   --election-party-other-dark: #828282;
+   /* undeclared */
+   --election-party-undeclared-light: #C8C8C8;
+   --election-party-undeclared-dark: #B4B4B5;
+}
+
+[data-party] {
+  --light: none;
+  --dark: none;
+  --color: var(--election-party-color-light);
+  background: linear-gradient(var(--light), var(--dark));
+  border-color: var(--dark);
+  color: var(--color);
+  fill: var(--dark);
+}
+
+[data-party~="Con" i] {
+  --light: var(--election-party-con-light);
+  --dark: var(--election-party-con-dark);
+}
+
+[data-party~="Lab" i] {
+  --light: var(--election-party-lab-light);
+  --dark: var(--election-party-lab-dark);
+}
+
+[data-party~="SNP" i] {
+  --light: var(--election-party-snp-light);
+  --dark: var(--election-party-snp-dark);
+  --color: var(--election-party-color-dark);
+}
+
+[data-party~="Lib-Dem" i] {
+  --light: var(--election-party-lib-dem-light);
+  --dark: var(--election-party-lib-dem-dark);
+  --color: var(--election-party-color-dark);
+}
+
+[data-party~="Reform" i] {
+  --light: var(--election-party-reform-light);
+  --dark: var(--election-party-reform-dark);
+}
+
+[data-party~="Green" i] {
+  --light: var(--election-party-green-light);
+  --dark: var(--election-party-green-dark);
+}
+
+[data-party~="Plaid" i] {
+  --light: var(--election-party-plaid-light);
+  --dark: var(--election-party-plaid-dark);
+}
+
+[data-party~="SF" i] {
+  --light: var(--election-party-sf-light);
+  --dark: var(--election-party-sf-dark);
+}
+
+[data-party~="SDLP" i] {
+  --light: var(--election-party-sdlp-light);
+  --dark: var(--election-party-sdlp-dark);
+}
+
+[data-party~="Alliance" i] {
+  --light: var(--election-party-alliance-light);
+  --dark: var(--election-party-alliance-dark);
+  --color: var(--election-party-color-dark);
+}
+
+[data-party~="UUP" i] {
+  --light: var(--election-party-uup-light);
+  --dark: var(--election-party-uup-dark);
+}
+
+[data-party~="UKIP" i] {
+  --light: var(--election-party-ukip-light);
+  --dark: var(--election-party-ukip-dark);
+}
+
+[data-party~="DUP" i] {
+  --light: var(--election-party-dup-light);
+  --dark: var(--election-party-dup-dark);
+}
+
+[data-party~="Change" i] {
+  --light: var(--election-party-change-light);
+  --dark: var(--election-party-change-dark);
+}
+
+[data-party~="Other" i] {
+  --light: var(--election-party-other-light);
+  --dark: var(--election-party-other-dark);
+}
+
+[data-party~="Undeclared" i] {
+  --light: var(--election-party-undeclared-light);
+  --dark: var(--election-party-undeclared-dark);
+  --color: var(--election-party-color-dark);
+}

@@ -1,4 +1,4 @@
-export default function (el) {
+export default function (el, index) {
   el.insertAdjacentHTML('afterend', `<nav class="nav" role="navigation">
   <div class="wrap wrap-wide">
     <div class="nav-body">
@@ -21,7 +21,8 @@ export default function (el) {
       <div class="nav-items" id="menu" data-role="menu" aria-hidden="true">
         <ul>
           <li class="nav-item"><a class="nav-item-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-item-link" href="color.html">Colour</a></li>
+          <li class="nav-item"><a class="nav-item-link" href="color.html">Colour</a>
+          </li>
           <li class="nav-item"><a class="nav-item-link" href="typography.html">Typography</a></li>
           <li class="nav-item"><a class="nav-item-link" href="spacing.html">Spacing</a></li>
           <li class="nav-item"><a class="nav-item-link" href="utilities.html">Utilities</a></li>
@@ -32,4 +33,6 @@ export default function (el) {
   </div>
 </nav>
 `)
+
+document.querySelectorAll('.nav-item a')[index].classList.add('nav-item-link-active');
 }

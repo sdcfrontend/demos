@@ -1,0 +1,84 @@
+:root {
+  --brand-1: #002672;
+  --brand-2: #EA021A;
+  --brand-3: linear-gradient(var(--brand-1), #00043B);
+
+  /* sports channel branding */
+  --sports-branding-premier-league-primary: #030c7e;
+  --sports-branding-premier-league-gradient: linear-gradient(-192deg, #1d238a 0%, #222677 48.5%, #090f68 49%, #0e1151 100%);
+  --sports-branding-premier-league-color: #fff;
+  --sports-branding-premier-league-font: "Sky Premier League";
+
+  --sports-branding-football-primary: #cc0f13;
+  --sports-branding-football-primary-gradient: linear-gradient(-192deg, #cd2529 0%, #be2022 48.5%, #b70709 49%, #a00000 100%);
+  --sports-branding-football-color: #fff;
+  --sports-branding-football-font: "Sky Football";
+
+  --sports-branding-football-womens-super-league-primary: #4A386F;
+
+  --sports-branding-transfer-center-primary: #272728;
+  --sports-branding-transfer-center-secondary: #f9db28;
+  --sports-branding-transfer-center-color: #fff;
+
+  --sports-branding-skysports-primary: #002672;
+  --sports-branding-skysports-color: #fff;
+  --sports-branding-skysports-font: "Sky Display";
+
+  --sports-branding-skysports-light-primary: #fff;
+  --sports-branding-skysports-light-color: inherit;
+  --sports-branding-skysports-light-font: "Sky Display";
+
+  --sports-branding-f1-primary: #e20613;
+  --sports-branding-f1-color: #fff;
+  --sports-branding-f1-font: "Sky F1";
+
+  --sports-branding-horseracing-primary: #006270;
+  --sports-branding-horseracing-color: #fff;
+
+  --sports-branding-horseracing-alt-primary: #014350;
+  --sports-branding-horseracing-alt-secondary: #005763;
+  --sports-branding-horseracing-alt-color: #fff;
+
+  --sports-branding-rugby-union-primary: #063b80;
+  --sports-branding-rugby-union-color: #fff;
+
+  --sports-branding-rugby-league-primary: #d3181c;
+  --sports-branding-rugby-league-color: #fff;
+
+  --sports-branding-cricket-primary: #053d70;
+  --sports-branding-cricket-color: #fff;
+  --sports-branding-cricket-font: "Sky Cricket";
+
+  --sports-branding-cricket-the-hundred-primary: #000;
+  --sports-branding-cricket-the-hundred-secondary: #ff0082;
+  --sports-branding-cricket-the-hundred-color: #fff;
+  --sports-branding-cricket-the-hundred-font: "The Hundred";
+
+  --sports-branding-tennis-primary: #032a63;
+  --sports-branding-tennis-color: #fff;
+
+  --sports-branding-golf-primary: #00472e;
+  --sports-branding-golf-color: #fff;
+  --sports-branding-golf-font: "Sky Golf";
+
+  --sports-branding-boxing-primary: #fff;
+  --sports-branding-boxing-color: #4A4A4A;
+
+  --sports-branding-darts-primary: #e00c14;
+  --sports-branding-darts-color: #fff;
+
+  --sports-branding-nfl-primary: #273271;
+  --sports-branding-nfl-color: #fff;
+
+  --sports-branding-nba-primary: #004fa7;
+  --sports-branding-nba-color: #fff;
+
+  --sports-branding-netball-primary: #622482;
+  --sports-branding-netball-color: #fff;
+
+  --sports-branding-gaa-primary: #0c5177;
+  --sports-branding-gaa-color: #fff;
+
+  --sports-branding-wwe-primary: #000;
+  --sports-branding-wwe-color: #fff;
+}

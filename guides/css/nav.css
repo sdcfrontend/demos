@@ -96,6 +96,27 @@ body {
   font-family: inherit;
 } 
 
+.nav-item-link-active,
+.nav-item-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 4px;
+}
+
+.sub-nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 2em;
+  margin: -0.5em auto var(--component-margin);
+}
+
+.sub-nav a {
+  display: block;
+  padding: 4px 0;
+
+}
+
 @media all and (max-width: 900px) {
 
   .nav-button {

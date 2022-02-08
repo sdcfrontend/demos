@@ -12,8 +12,14 @@
 }
 
 .swatch-color {
-    padding-bottom: 40%;
-    background: #eee;
+    aspect-ratio: 16/9;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: 1px solid var(--dark);
 }
 
 .swatch-shadow .swatch-color {
@@ -35,6 +41,12 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+}
+
+.swatch-name em {
+    color: var(--text-color-secondary);
+    font-style: normal;
+    font-weight: normal;
 }
 
 .swatch-code {

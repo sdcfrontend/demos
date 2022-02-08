@@ -15,7 +15,7 @@
       const here = document.currentScript;
       (async function () {
         const nav = await import('./nav.js')
-        nav.default(here);
+        nav.default(here, 5);
       })();  
     </script>
 

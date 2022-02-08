@@ -15,7 +15,7 @@
       const here = document.currentScript;
       (async function () {
         const nav = await import('./nav.js')
-        nav.default(here);
+        nav.default(here, 3);
       })();  
     </script>
 
@@ -253,7 +253,7 @@
           <span>900px</span>
         </div>
 
-        <h4 id="css-vars">CSS Vars <a href="#" class="ass-link">github link</a></h4>
+        <h4 id="css-vars">CSS Vars</h4>
         <div class="code-block group-margin">
           <pre>
 <i>/* SPACING */</i>
@@ -284,7 +284,7 @@
         </div>
 
 
-        <h4 id="example">Example usage <a href="#" class="ass-link">github link</a></h4>
+        <h4 id="example">Example usage</h4>
         <div class="eg group-margin">
           <div class="eg-item eg-item-xray" data-label="--component-margin" data-bottom>
             <p class="eg-row" data-label="--component-padding">Row

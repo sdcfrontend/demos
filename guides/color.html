@@ -16,14 +16,21 @@
       (async function () {
         const nav = await
           import('./nav.js')
-        nav.default(here);
+        nav.default(here, 1);
       })();
     </script>
 
     <main role="main">
+      <ul class="wrap sub-nav">
+        <li><a href="#global">Global</a></li>
+        <li><a href="#sky-sports">Sports</a></li>
+        <li><a href="#sky-news">News</a></li>
+        <li><a href="#sky-sport-germany">DE</a></li>
+        <li><a href="#elections">Elections</a></li>
+      </ul>
       <div class="wrap">
         <h2>Color</h2>
-        <h3 id="color-global">Global</h3>
+        <h3 id="global">Global</h3>
         <h4>Neutral shades</h4>
 
         <div class="swatch-group group-margin">
@@ -425,7 +432,7 @@
 
         </div>
 
-        <h4 id="utility">Shadows</h4>
+        <h4 id="shadows">Shadows</h4>
         <div class="swatch-group group-margin">
           <div class="swatch swatch-shadow">
             <div class="swatch-color" style="box-shadow: var(--drop-shadow)"></div>
@@ -451,7 +458,7 @@
 
         </div>
 
-        <h4 id="transparency">Transulent blacks</h4>
+        <h4 id="transulent-blacks">Transulent blacks</h4>
         <div class="swatch-group group-margin">
           <div class="swatch">
             <div class="swatch-color" style="background-color: var(--black-op40)"></div>
@@ -487,7 +494,7 @@
 
         </div>
 
-        <h4 id="css-vars">CSS Vars <a href="#" class="ass-link">github link</a></h4>
+        <h4 id="css-vars">CSS Vars</h4>
         <div class="code-block group-margin">
           <pre>
 <i>/* COLORS */</i>
@@ -539,7 +546,7 @@
         </pre>
         </div>
 
-        <h4 id="example">Example usage <a href="#" class="ass-link">github link</a></h4>
+        <h4 id="example">Example usage</h4>
         <div class="eg group-margin" data-label="--component-shade" data-inside>
           <div class="eg-item" data-label="--component-bg" data-inside>
             <p class="eg-row" data-label="--component-shade" data-inside data-right>Row header
@@ -563,7 +570,7 @@
           </div>
         </div>
 
-        <h3 id="color-sports">Sky Sports</h3>
+        <h3 id="sky-sports">Sky Sports</h3>
         <h4>Brand</h4>
         <div class="swatch-group">
           <div class="swatch">
@@ -597,7 +604,7 @@
             </div>
           </div>
         </div>
-        <h4>CSS Vars <a href="#" class="ass-link">github link</a></h4>
+        <h4>CSS Vars</h4>
         <div class="code-block group-margin">
           <pre><i>/* Brand */</i>
 --brand-1: <span>#002672;</span>
@@ -605,7 +612,7 @@
 --brand-3: <span>linear-gradient(#002672, #00043B);</span></pre>
         </div>
 
-        <h3 id="color-news">Sky News</h3>
+        <h3 id="sky-news">Sky News</h3>
         <h4>Brand</h4>
         <div class="swatch-group">
           <div class="swatch">
@@ -662,7 +669,7 @@
 
           
         </div>
-        <h4>CSS Vars <a href="#" class="ass-link">github link</a></h4>
+        <h4>CSS Vars</h4>
         <div class="code-block group-margin">
           <pre><i>/* Brand */</i>
 --brand-1: <span>#063E7B;</span>
@@ -672,7 +679,7 @@
 --alert: <span>#FF2744;</span></pre>
         </div>
 
-        <h3 id="color-news">Sky Sports Germany</h3>
+        <h3 id="sky-sport-germany">Sky Sport Germany</h3>
         <h4>Brand</h4>
         <div class="swatch-group">
           <div class="swatch">
@@ -706,12 +713,261 @@
             </div>
           </div>
         </div>
-        <h4>CSS Vars <a href="#" class="ass-link">github link</a></h4>
+        <h4>CSS Vars</h4>
         <div class="code-block group-margin">
           <pre><i>/* Brand */</i>
 --brand-1: <span>#002672;</span>
 --brand-2: <span>#EA021A;</span>
 --brand-3: <span>linear-gradient(#0B0B44, #0E0E79);</span></pre>
+        </div>
+
+        <h3 id="elections">Elections</h3>
+        <h4>Parties</h4>
+        <div class="swatch-group">
+          <div class="swatch">
+            <div class="swatch-color" data-party="Con">Con</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#1465B6, #105192, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Conservative</span>
+                <span class="swatch-code">--election-party-con-light<br> --election-party-con-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="Lab">Lab</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#C40813, #90060F, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Labour</span>
+                <span class="swatch-code">--election-party-lab-light<br> --election-party-lab-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="snp">SNP</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FCE440, #CAB633, #000</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>SNP</span>
+                <span class="swatch-code">--election-party-snp-light<br> --election-party-snp-dark<br> --election-party-color-dark</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="lib-dem">Lib Dem</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FCE440, #CAB633, #000</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Lib Dem</span>
+                <span class="swatch-code">--election-party-lib-dem-light<br> --election-party-lib-dem-dark<br> --election-party-color-dark</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="reform">Reform</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FCE440, #CAB633, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Reform</span>
+                <span class="swatch-code">--election-party-reform-light<br> --election-party-reform-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="green">Green</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#FCE440, #CAB633, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Green</span>
+                <span class="swatch-code">--election-party-green-light<br> --election-party-green-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="plaid">Plaid</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#17A454, #128343, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Plaid</span>
+                <span class="swatch-code">--election-party-plaid-light<br> --election-party-plaid-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="sf">SF</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#139108, #107B07, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Sinn Fein</span>
+                <span class="swatch-code">--election-party-sf-light<br> --election-party-sf-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" data-party="sdlp">SDLP</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#2C776A, #295C62, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>SDLP</span>
+                <span class="swatch-code">--election-party-sdlp-light<br> --election-party-sdlp-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="alliance">Alliance</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#F9CC34, #D7A929, #000</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Alliance</span>
+                <span class="swatch-code">--election-party-alliance-light<br> --election-party-alliance-dark<br> --election-party-color-dark</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="uup">UUP</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#6D94D9, #5272B9, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>UUP</span>
+                <span class="swatch-code">--election-party-uup-light<br> --election-party-uup-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" data-party="ukip">UKIP</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#A10BBD, #801697, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>UKIP</span>
+                <span class="swatch-code">--election-party-ukip-light<br> --election-party-ukip-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" data-party="dup">DUP</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#1F284F, #141D49, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>DUP</span>
+                <span class="swatch-code">--election-party-dup-light<br> --election-party-dup-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" data-party="change">Change</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#414141, #1F1F1F, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Change</span>
+                <span class="swatch-code">--election-party-change-light<br> --election-party-change-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="other">Other</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#999999, #828282, #FFF</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Other</span>
+                <span class="swatch-code">--election-party-other-light<br> --election-party-other-dark<br> --election-party-color-light</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="swatch-color" data-party="undeclared">Undeclared</div>
+            <div class="swatch-body">
+              <p class="swatch-hex">#C8C8C8, #B4B4B5, #000</p>
+              <p class="swatch-name" style="flex-direction: column; gap: 0.5em">
+                <span>Undecalared</span>
+                <span class="swatch-code">--election-party-undeclared-light<br> --election-party-undeclared-dark<br> --election-party-color-dark</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <h4>CSS Vars</h4>
+        <div class="code-block group-margin">
+          <pre><i>/* Party colors */</i>
+--election-party-color-light: <span>#FFF;</span>
+--election-party-color-dark: <span>black;</span>
+<i>/* conservatives */</i>
+--election-party-con-light: <span>#1465B6;</span>
+--election-party-con-dark: <span>#105192;</span>
+<i>/* labour */</i>
+--election-party-lab-light: <span>#C40813;</span>
+--election-party-lab-dark: <span>#90060F;</span>
+<i>/* snp */</i>
+--election-party-snp-light: <span>#FCE440;</span>
+--election-party-snp-dark: <span>#CAB633;</span>
+<i>/* lib dem */</i>
+--election-party-lib-dem-light: <span>#F7B229;</span>
+--election-party-lib-dem-dark: <span>#E4951D;</span>
+<i>/* reform */</i>
+--election-party-reform-light: <span>#1CBBCC;</span>
+--election-party-reform-dark: <span>#1699AA;</span>
+<i>/* green */</i>
+--election-party-green-light: <span>#73A533;</span>
+--election-party-green-dark: <span>#628C2B;</span>
+<i>/* plaid */</i>
+--election-party-plaid-light: <span>#17A454;</span>
+--election-party-plaid-dark: <span>#128343;</span>
+<i>/* sinn fein */</i>
+--election-party-sf-light: <span>#139108;</span>
+--election-party-sf-dark: <span>#107B07;</span>
+<i>/* sdlp */</i>
+--election-party-sdlp-light: <span>#2C776A;</span>
+--election-party-sdlp-dark: <span>#295C62;</span>
+<i>/* alliance */</i>
+--election-party-alliance-light: <span>#F9CC34;</span>
+--election-party-alliance-dark: <span>#D7A929;</span>
+<i>/* uup */</i>
+--election-party-uup-light: <span>#6D94D9;</span>
+--election-party-uup-dark: <span>#5272B9;</span>
+<i>/* ukip */</i>
+--election-party-ukip-light: <span>#A10BBD;</span>
+--election-party-ukip-dark: <span>#801697;</span>
+<i>/* dup */</i>
+--election-party-dup-light: <span>#1F284F;</span>
+--election-party-dup-dark: <span>#141D49;</span>
+<i>/* change */</i>
+--election-party-change-light: <span>#414141;</span>
+--election-party-change-dark: <span>#1F1F1F;</span>
+<i>/* other */</i>
+--election-party-other-light: <span>#999999;</span>
+--election-party-other-dark: <span>#828282;</span>
+<i>/* undeclared */</i>
+--election-party-undeclared-light: <span>#C8C8C8;</span>
+--election-party-undeclared-dark: <span>#B4B4B5;</span>
+
+<i>/* Utilities classes */</i>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"con"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"lab"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"snp"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"lib-dem"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"reform"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"green"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"plaid"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"sf"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"sdlp"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"alliance"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"uup"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"ukip"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"dup"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"change"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"other"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+<e>&lt;</e>div <se>data-party</se><e>=</e><c>"undeclared"</c><e>&gt;&lt;</e>div<e>&gt;</e>
+</pre>
         </div>
       </div>
     </main>
