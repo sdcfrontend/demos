@@ -13,6 +13,7 @@
 
 .swatch-color {
     aspect-ratio: 16/9;
+    min-height: 120px;
     background-color: #eee;
     display: flex;
     align-items: center;
