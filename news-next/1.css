@@ -1,0 +1,5 @@
+.next-layout {
+    display: grid;
+    grid-template-columns: 910px 300px;
+    grid-gap: 18px;
+}
