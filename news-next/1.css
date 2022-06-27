@@ -1,5 +1,112 @@
 .next-layout {
-    display: grid;
-    grid-template-columns: 910px 300px;
-    grid-gap: 18px;
+  display: grid;
+  grid-template-columns: 890px 300px;
+  grid-gap: 20px;
 }
+
+.next-col {
+  display: grid;
+  align-content: start;
+  grid-gap: 18px;
+}
+
+.next-col > * {
+  
+}
+
+.next-pod {
+  display: grid;
+  gap: 9px;
+  justify-items: left;
+  background-color: #fff;
+  padding: calc(var(--component-padding) * 0.75);
+}
+
+.next-blog {
+  position: relative;
+  gap: 0px;
+}
+
+.next-blog h2,
+.next-pod .sdc-site-trending__title {
+  font-weight: 500;
+  font-size: 1.25em !important;
+  margin-bottom: 0.75em;
+  line-height: 1;
+  position: relative;
+}
+
+.next-blog p {
+  font-size: 15px;
+  display: flex;
+  position: relative;
+}
+
+.next-blog p span:first-child {
+  font-weight: bold;
+  color: var(--link-color);
+  width: 36px;
+}
+
+.next-blog p a {
+  flex: 1;
+  color: inherit;
+}
+
+.next-blog-group {
+  display: grid;
+  gap: 9px;
+  position: relative;
+  padding-left: 1em;
+}
+
+.next-blog-group:before {
+  content: "";
+  width: 1px;
+  left: 0.25em;
+  background: var(--link-color);
+  height: 100%;
+  position: absolute;
+}
+
+.next-blog p:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--link-color);
+  position: absolute;
+  top: 6px;
+  left: -16px;
+}
+
+.next-opinion {
+  text-align: center;
+}
+
+.next-opinion .sdc-site-pundits__inner {
+  padding: 0;
+}
+
+.next-opinion .sdc-site-pundits__figure {
+  margin-top: 2px;
+}
+
+.next-mpu {
+  height: 250px;
+  background: #aaa;
+}
+
+.next-trending.sdc-site-trending--compact .sdc-site-trending__body {
+  padding: 0;
+  border: 0;
+}
+
+.next-trending .sdc-site-trending__link:before {
+  width: 1em !important;
+}
+
+.next-trending .sdc-site-trending__items {
+  padding-top: 0!important;
+}
+
