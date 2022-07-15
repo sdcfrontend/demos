@@ -128,7 +128,7 @@
 
 @media all and (max-width: 1376px) {
   :root {
-    --site-width: 976px;
+    --site-width: 976px; 
   }
 
   .next-layout {
