@@ -98,7 +98,7 @@
 
 .next-mpu {
   height: 250px;
-  background: #ccc;
+  background: hotpink;
   display: grid;
   place-items: center;
 }
@@ -107,7 +107,7 @@
   height: 90px;
   width: 100%;
   max-width: 728px;
-  background: #ccc;
+  background: hotpink;
   margin: 1em auto;
   display: grid;
   place-items: center;
@@ -153,7 +153,7 @@
   width: calc((100vw - var(--site-width)) / 2);
   background: inherit;
   left: 0;
-  height: 3000px;
+  height: 5000px;
 }
 
 .has-takeover .sdc-site-au__leaderboard:after {
