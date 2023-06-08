@@ -1,0 +1,10 @@
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/reset.css');
+
+@import url('./node_modules/sdc-project-base-static/css/base/core/vars/_vars-global.css');
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/vars.css');
+
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/site.css');
+
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/grids.css');
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/wrap.css');
+@import url('./node_modules/sdc-project-base-static/css/base/v2/core/gaps.css');
