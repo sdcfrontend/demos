@@ -1,4 +1,4 @@
-@import url('./node_modules/sdc-project-base-static/css/base/v2/core/fonts.css');
+@import url('./fonts.css');
 @import url('./node_modules/sdc-project-base-static/css/base/v2/core/reset.css');
 
 @import url('./node_modules/sdc-project-base-static/css/base/core/vars/_vars-global.css');
@@ -12,3 +12,5 @@
 @import url('./node_modules/sdc-project-base-static/css/base/v2/core/typeography.css');
 
 @import url('./node_modules/sdc-project-base-static/css/base/v2/ui/story.css');
+@import url('./node_modules/sdc-project-base-static/css/base/v2/ui/labels.css');
+@import url('./node_modules/sdc-project-base-static/css/base/v2/ui/lists.css');
