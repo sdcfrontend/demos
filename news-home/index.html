@@ -15,6 +15,7 @@
 
     body {
       padding-top: 320px;
+      position: relative;
     }
 
     .takeover {
@@ -22,7 +23,7 @@
       position: absolute;
       display: grid;
       grid-template-areas: "t1 l1 t2" "t1 l1 t2";
-      grid-template-columns: var(--side-width) 1144px var(--side-width);
+      grid-template-columns: 1fr 1144px 1fr;
       grid-template-rows: 280px 1fr;
       left: 0;
       top: 0;
