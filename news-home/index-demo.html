@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --site-width: 1176px;
+      --site-gutter: var(--gap-600);
+    }
+
+    body {
+      padding-top: 320px;
+      position: relative;
+    }
+
+    .takeover {
+      --side-width: 129px;
+      position: absolute;
+      display: grid;
+      grid-template-areas: "t1 l1 t2" "t1 l1 t2";
+      grid-template-columns: 1fr 1144px 1fr;
+      grid-template-rows: 280px 1fr;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      z-index: 0;
+      color: black;
+      font-size: 20px;
+    }
+
+    .takeover>* {
+      background: hotpink;
+    }
+
+    .leaderboard {
+      height: 280px;
+      grid-area: l1;
+    }
+
+    .leaderboard,
+    .takeover-1,
+    .takeover-2 {
+      display: grid;
+      place-content: center;
+    }
+
+    .leaderboard:after,
+    .takeover-1:after,
+    .takeover-2:after {
+      content: attr(data-s1);
+      position: relative;
+    }
+
+    .takeover-1:after,
+    .takeover-2:after {
+      top: -500px;
+    }
+
+    .takeover-1 {
+      grid-area: t1;
+    }
+
+    .takeover-2 {
+      grid-area: t2;
+    }
+
+    @media all and (min-width: 1440px) {
+      .takeover {
+        --side-width: 148px;
+      }
+
+      .leaderboard:after,
+      .takeover-1:after,
+      .takeover-2:after {
+        content: attr(data-s2);
+      }
+    }
+
+    @media all and (min-width: 1600px) {
+      .takeover {
+        --side-width: 228px;
+      }
+
+      .leaderboard:after,
+      .takeover-1:after,
+      .takeover-2:after {
+        content: attr(data-s3);
+      }
+    }
+
+    @media all and (min-width: 1920px) {
+      .takeover {
+        --side-width: 338px;
+      }
+
+      .leaderboard:after,
+      .takeover-1:after,
+      .takeover-2:after {
+        content: attr(data-s4);
+      }
+    }
+
+    @media all and (max-width: 1402px) {
+      .takeover {
+        grid-template-columns: 1fr 970px 1fr
+      }
+
+      .leaderboard:after {
+        content: "970x250px"
+      }
+
+      .takeover-1,
+      .takeover-2 {
+        display: none
+      }
+
+      .leaderboard {
+        height: 250px
+      }
+
+      body {
+        padding-top: 290px
+      }
+    }
+
+    @media all and (max-width: 1000px) {
+      .takeover {
+        grid-template-columns: 1fr 728px 1fr;
+      }
+
+      .leaderboard {
+        height: 90px;
+      }
+
+      .leaderboard:after {
+        content: "728x90px"
+      }
+
+      body {
+        padding-top: 110px;
+      }
+    }
+
+    @media all and (max-width: 750px) {
+      .takeover {
+        grid-template-columns: 1fr 320px 1fr;
+      }
+
+      .leaderboard {
+        height: 50px;
+      }
+
+      body {
+        padding-top: 70px;
+      }
+
+      .leaderboard:after {
+        content: "320x50px"
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="takeover">
+    <div class="leaderboard" data-s0="" data-s1="1144x280" data-s2="1144x280" data-s3="1144x280" data-s4="1144x280">
+    </div>
+    <div class="takeover-1" data-s1="129px" data-s2="148px" data-s3="228px" data-s4="338px"></div>
+    <div class="takeover-2" data-s1="129px" data-s2="148px" data-s3="228px" data-s4="338px"></div>
+  </div>
+  <div class="wrap wrap-site-width wrap-auto-align wrap-gutter gap-800">
+    <div class="wrap gap-400">
+      <h2 class="display-500 font-brand-2">TOP STORIES</h2>
+      <div class="grid-areas" style="
+        --cols:repeat(4,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
+        --cols-s: 1fr;
+        --areas: 'cell1 cell1 cell1 cell2' 'cell3 cell4 cell5 cell6';
+        --areas-l: 'cell1 cell1 cell1' 'cell2 cell3 cell4' 'cell5 cell6 cell7';
+        --areas-m: 'cell1 cell1' 'cell2 cell3' 'cell4 cell5' 'cell6 cell7';
+        --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
+      ">
+        <div class="grid-cell">
+          <article class="ui-story" data-type="horizontal hero">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <div class="ui-story-content">
+                  <div class="ui-story-meta">
+                    <div class="ui-label" data-live>Live</div>
+                    <div class="ui-label" data-tag>Politics</div>
+                  </div>
+                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                      Hampshire farm</a>
+                  </h2>
+                </div>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="wrap gap-400">
+      <h2 class="display-500 font-brand-2">MORE STORIES</h2>
+      <div class="grid-areas" style="
+        --cols:repeat(4,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
+        --cols-s: 1fr;
+        --areas: 'cell1 cell2 cell3 cell4';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
+        --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
+      ">
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="grid-cell">
+          <article class="ui-story" data-type="vertical">
+            <div class="ui-story-wrap">
+              <figure class="ui-story-figure">
+                <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+              </figure>
+              <div class="ui-story-body">
+                <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
+                    Hampshire farm</a>
+                </h2>
+                <ul class="ui-list" data-chevron>
+                  <li><a href="#">Here is a link</a></li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
