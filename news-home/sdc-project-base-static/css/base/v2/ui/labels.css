@@ -3,10 +3,10 @@
   --font-weight: bold;
   --color: white;
   --bg: var(--brand-3);
-  --text-transform: capitalize;
+  --text-transform: uppercase;
   --padding-inline: 0.55em;
   --padding-block: 0.23em;
-  --border-radius: 0;
+  --border-radius: 2px;
   --border: 0;
   display: inline-block;
   vertical-align: middle;
@@ -24,7 +24,7 @@
   text-transform: var(--text-transform);
 }
 
-.ui-label:not([data-tag]):hover {
+.ui-label:not([data-type~="tag"]):hover {
   text-decoration: none !important;
 }
 
@@ -33,29 +33,30 @@
   color: var(--hover-color, var(--color));
 }
 
-.ui-label[data-tag] {
-  padding-inline: 0;
+.ui-label[data-type~="tag"] {
+  --text-transform: normal;
   --color: var(--link-color);
   --bg: none;
   --font-size: var(--display-fixed-50, 14px);
+  padding-inline: 0;
 }
 
-.ui-label[data-live] {
+.ui-label[data-type~="live"] {
   --bg: var(--live-bg);
   --color: white;
 }
 
-.ui-label[data-breaking] {
+.ui-label[data-type~="breaking"] {
   --bg: var(--breaking-bg);
   --color: black;
 }
 
-.ui-label[data-stamp] {
+.ui-label[data-type~="stamp"] {
   --bg: rgba(0,0,0,0.75);
   color: white;
 }
 
-.ui-label[data-capsule] {
+.ui-label[data-type~="capsule"] {
   --font-size: var(--display-fixed-50, 14px);
   --border: 1px solid var(--link-color);
   --border-radius: 1em;

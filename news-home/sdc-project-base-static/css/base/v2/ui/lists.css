@@ -33,12 +33,12 @@
   align-items: center;
 }
 
-.ui-list[data-chevron] {
+.ui-list[data-type~="chevron"] {
   --indent: 0;
   --mark-content: none;
 }
 
-.ui-list[data-chevron] a:after {
+.ui-list[data-type~="chevron"] a:after {
   content: "";
   display: inline-block;
   vertical-align: baseline;
@@ -50,6 +50,6 @@
   margin-left: 0.25em;
 }
 
-.ui-list[data-chevron] a:has(strong):after {
+.ui-list[data-type~="chevron"] a:has(strong):after {
   border-width: 2px 2px 0 0;
 }

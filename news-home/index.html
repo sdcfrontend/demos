@@ -17,11 +17,20 @@
     footer {
       background: #eee;
       padding: 1em;
+      height: 200px;
+      text-align: center;
     }
 
     div[class*="sdc-site-au__mpu"] {
       min-height: 250px;
       min-width: 300px;
+    }
+
+    .ui-story {
+      min-height: 350px;
+      border: 7px solid rgba(0,0,0,0.08);
+      box-shadow: 0 0 9px rgba(0,0,0,0.05);
+      background-clip: content-box;
     }
   </style>
 
@@ -216,9 +225,9 @@
         </nav>
       </div>
     </header>
-    <div class="wrap wrap-site-width wrap-auto-align wrap-gutter gap-600">
+    <div class="wrap wrap-site-width wrap-auto-align wrap-gutter gap-700">
       <div class="wrap gap-400">
-        <h2 class="display-500 font-brand-2">TOP STORIES</h2>
+        <h2 class="display-600 font-brand-2">TOP STORIES</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
         --cols-l: repeat(3,1fr);
@@ -233,20 +242,20 @@
             <article class="ui-story" data-type="horizontal hero">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/06/768x432/skynews-ukraine-sean-bell-air-war_6189164.png" alt="">
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
                     <div class="ui-story-meta">
-                      <div class="ui-label" data-live>Live</div>
-                      <div class="ui-label" data-tag>Politics</div>
+                      <div class="ui-label" data-type="live">Live</div>
+                      <div class="ui-label" data-type="tag">The war in Ukraine</div>
                     </div>
-                    <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                        Hampshire farm</a>
+                    <h2 class="ui-story-headline">
+                      <a href="#">Key development in Bakhmut where heavy fighting rages</a>
                     </h2>
                   </div>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
+                  <ul class="ui-list" data-type="chevron">
+                    <li><a href="#">Read more</a></li>
                   </ul>
                 </div>
               </div>
@@ -256,15 +265,20 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/22/12/384x216/skynews-cost-of-living-money_5987523.jpg?20221205145049"
+                    alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="breaking">Breaking</div>
+                      <div class="ui-label" data-type="tag">UK</div>
+                    </div>
+                    <h2 class="ui-story-headline">
+                      <a href="#">Almost 11 million people are struggling to keep up with their bills - but help is
+                        available</a>
+                    </h2>
+                  </div>
                 </div>
               </div>
             </article>
@@ -273,15 +287,19 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/03/384x216/skynews-barclays-branch-bank_6100694.jpg?20230326155941"
+                    alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="live">Live</div>
+                      <div class="ui-label" data-type="tag">Business</div>
+                    </div>
+                    <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
+                        profit</a>
+                    </h2>
+                  </div>
                 </div>
               </div>
             </article>
@@ -290,15 +308,18 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/04/384x216/skynews-queen-elizabeth_6134536.jpg?20230426211847" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                    
+                      <div class="ui-label" data-type="tag">United Kingdom</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International </a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                </div>
+                 
                 </div>
               </div>
             </article>
@@ -307,15 +328,18 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src=" https://e3.365dm.com/22/05/384x216/skynews-istock-1201121888-ivf_5789539.jpg" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="live">Live</div>
+                      <div class="ui-label" data-type="tag">Science &amp; Technology</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their biological heritage for the first time</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -324,15 +348,18 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/04/384x216/skynews-pope-francis-vatican_6134753.jpg?20230427061954" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="live">Live</div>
+                      <div class="ui-label" data-type="tag">World</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential bishops' meeting</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -341,15 +368,18 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/04/384x216/skynews-tom-daley-dustin-lance-black_6136301.jpg?20230428112916" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="breaking">Breaking</div>
+                      <div class="ui-label" data-type="tag">World</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">Tom Daley's husband Dustin Lance Black accused of assaulting woman in nightclub</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -358,15 +388,17 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/04/384x216/skynews-eva-green-file_6136463.jpg?20230428130154" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="tag">Arts &amp; Entertainment</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">Former Bond girl Eva Green to get $1m fee after winning case over collapsed film</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -375,15 +407,17 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/04/384x216/skynews-bamburgh-beach-northumberland_6135980.jpg?20230428082729" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="tag">United Kingdom</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">UK's best and worst seaside towns revealed - voted by visitors</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -392,15 +426,18 @@
             <article class="ui-story" data-type="vertical">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
+                  <img src="https://e3.365dm.com/23/06/384x216/skynews-mortgage-worry-problem_6190093.jpg?20230617110830" alt="">
                 </figure>
                 <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
+                  <div class="ui-story-content">
+                    <div class="ui-story-meta">
+                      <div class="ui-label" data-type="analysis">Analysis</div>
+                      <div class="ui-label" data-type="tag">Business</div>
+                    </div>
+                  <h2 class="ui-story-headline"><a href="#">The mortgage crunch: Why is it happening, will it get worse and what can you do if you're struggling?</a>
                   </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+                  </div>
+                  
                 </div>
               </div>
             </article>
@@ -427,249 +464,695 @@
 
       </div>
       <div class="wrap gap-400">
-        <h2 class="display-500 font-brand-2">MORE STORIES</h2>
+        <h2 class="display-600 font-brand-2">MORE STORIES</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
         --cols-l: repeat(3,1fr);
         --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
-        --areas: 'cell1 cell2 cell3 cell4';
+        --areas: 'cell1 cell2 cell3 cell4' 'cell5 cell6 cell7 cell8';
         --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
         --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
       ">
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/03/384x216/skynews-barclays-branch-bank_6100694.jpg?20230326155941"
+                      alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                      <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
+                          profit</a>
+                      </h2>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-queen-elizabeth_6134536.jpg?20230426211847" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                      
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International </a>
+                    </h2>
+                  </div>
+                   
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src=" https://e3.365dm.com/22/05/384x216/skynews-istock-1201121888-ivf_5789539.jpg" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Science &amp; Technology</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their biological heritage for the first time</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-pope-francis-vatican_6134753.jpg?20230427061954" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential bishops' meeting</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-tom-daley-dustin-lance-black_6136301.jpg?20230428112916" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="breaking">Breaking</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Tom Daley's husband Dustin Lance Black accused of assaulting woman in nightclub</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-eva-green-file_6136463.jpg?20230428130154" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">Arts &amp; Entertainment</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Former Bond girl Eva Green to get $1m fee after winning case over collapsed film</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-bamburgh-beach-northumberland_6135980.jpg?20230428082729" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">UK's best and worst seaside towns revealed - voted by visitors</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/06/384x216/skynews-mortgage-worry-problem_6190093.jpg?20230617110830" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="analysis">Analysis</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">The mortgage crunch: Why is it happening, will it get worse and what can you do if you're struggling?</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
         </div>
       </div>
       <div class="wrap gap-400">
-        <h2 class="display-500 font-brand-2">MORE STORIES</h2>
+        <h2 class="display-600 font-brand-2">MORE STORIES</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
         --cols-l: repeat(3,1fr);
         --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
-        --areas: 'cell1 cell2 cell3 cell4';
+        --areas: 'cell1 cell2 cell3 cell4' 'cell5 cell6 cell7 cell8';
         --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
         --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
       ">
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/03/384x216/skynews-barclays-branch-bank_6100694.jpg?20230326155941"
+                      alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                      <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
+                          profit</a>
+                      </h2>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-queen-elizabeth_6134536.jpg?20230426211847" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                      
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International </a>
+                    </h2>
+                  </div>
+                   
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src=" https://e3.365dm.com/22/05/384x216/skynews-istock-1201121888-ivf_5789539.jpg" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Science &amp; Technology</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their biological heritage for the first time</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-pope-francis-vatican_6134753.jpg?20230427061954" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential bishops' meeting</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-tom-daley-dustin-lance-black_6136301.jpg?20230428112916" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="breaking">Breaking</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Tom Daley's husband Dustin Lance Black accused of assaulting woman in nightclub</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-eva-green-file_6136463.jpg?20230428130154" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">Arts &amp; Entertainment</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Former Bond girl Eva Green to get $1m fee after winning case over collapsed film</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-bamburgh-beach-northumberland_6135980.jpg?20230428082729" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">UK's best and worst seaside towns revealed - voted by visitors</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/06/384x216/skynews-mortgage-worry-problem_6190093.jpg?20230617110830" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="analysis">Analysis</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">The mortgage crunch: Why is it happening, will it get worse and what can you do if you're struggling?</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
         </div>
       </div>
       <div class="wrap gap-400">
-        <h2 class="display-500 font-brand-2">MORE STORIES</h2>
+        <h2 class="display-600 font-brand-2">MORE STORIES</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
         --cols-l: repeat(3,1fr);
         --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
-        --areas: 'cell1 cell2 cell3 cell4';
+        --areas: 'cell1 cell2 cell3 cell4' 'cell5 cell6 cell7 cell8';
         --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
         --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
       ">
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/03/384x216/skynews-barclays-branch-bank_6100694.jpg?20230326155941"
+                      alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                      <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
+                          profit</a>
+                      </h2>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-queen-elizabeth_6134536.jpg?20230426211847" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                      
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International </a>
+                    </h2>
+                  </div>
+                   
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src=" https://e3.365dm.com/22/05/384x216/skynews-istock-1201121888-ivf_5789539.jpg" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Science &amp; Technology</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their biological heritage for the first time</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="grid-cell">
-            <article class="ui-story" data-type="vertical">
-              <div class="ui-story-wrap">
-                <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/05/768x432/skynews-donkey-animal_6157023.jpg" alt="">
-                </figure>
-                <div class="ui-story-body">
-                  <h2 class="ui-story-headline"><a href="#">Man and youth arrested after baby donkey Moon stolen from
-                      Hampshire farm</a>
-                  </h2>
-                  <ul class="ui-list" data-chevron>
-                    <li><a href="#">Here is a link</a></li>
-                  </ul>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-pope-francis-vatican_6134753.jpg?20230427061954" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential bishops' meeting</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
                 </div>
-              </div>
-            </article>
-          </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-tom-daley-dustin-lance-black_6136301.jpg?20230428112916" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="breaking">Breaking</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Tom Daley's husband Dustin Lance Black accused of assaulting woman in nightclub</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-eva-green-file_6136463.jpg?20230428130154" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">Arts &amp; Entertainment</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Former Bond girl Eva Green to get $1m fee after winning case over collapsed film</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-bamburgh-beach-northumberland_6135980.jpg?20230428082729" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">UK's best and worst seaside towns revealed - voted by visitors</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/06/384x216/skynews-mortgage-worry-problem_6190093.jpg?20230617110830" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="analysis">Analysis</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">The mortgage crunch: Why is it happening, will it get worse and what can you do if you're struggling?</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+        </div>
+      </div>
+      <div class="wrap gap-400">
+        <h2 class="display-600 font-brand-2">MORE STORIES</h2>
+        <div class="grid-areas" style="
+        --cols:repeat(4,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
+        --cols-s: 1fr;
+        --areas: 'cell1 cell2 cell3 cell4' 'cell5 cell6 cell7 cell8';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
+        --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
+      ">
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/03/384x216/skynews-barclays-branch-bank_6100694.jpg?20230326155941"
+                      alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                      <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
+                          profit</a>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-queen-elizabeth_6134536.jpg?20230426211847" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                      
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International </a>
+                    </h2>
+                  </div>
+                   
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src=" https://e3.365dm.com/22/05/384x216/skynews-istock-1201121888-ivf_5789539.jpg" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">Science &amp; Technology</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their biological heritage for the first time</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-pope-francis-vatican_6134753.jpg?20230427061954" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="live">Live</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential bishops' meeting</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-tom-daley-dustin-lance-black_6136301.jpg?20230428112916" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="breaking">Breaking</div>
+                        <div class="ui-label" data-type="tag">World</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Tom Daley's husband Dustin Lance Black accused of assaulting woman in nightclub</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-eva-green-file_6136463.jpg?20230428130154" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">Arts &amp; Entertainment</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">Former Bond girl Eva Green to get $1m fee after winning case over collapsed film</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/04/384x216/skynews-bamburgh-beach-northumberland_6135980.jpg?20230428082729" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="tag">United Kingdom</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">UK's best and worst seaside towns revealed - voted by visitors</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="grid-cell">
+              <article class="ui-story" data-type="vertical">
+                <div class="ui-story-wrap">
+                  <figure class="ui-story-figure">
+                    <img src="https://e3.365dm.com/23/06/384x216/skynews-mortgage-worry-problem_6190093.jpg?20230617110830" alt="">
+                  </figure>
+                  <div class="ui-story-body">
+                    <div class="ui-story-content">
+                      <div class="ui-story-meta">
+                        <div class="ui-label" data-type="analysis">Analysis</div>
+                        <div class="ui-label" data-type="tag">Business</div>
+                      </div>
+                    <h2 class="ui-story-headline"><a href="#">The mortgage crunch: Why is it happening, will it get worse and what can you do if you're struggling?</a>
+                    </h2>
+                    </div>
+                    
+                  </div>
+                </div>
+              </article>
+            </div>
         </div>
       </div>
     </div>
