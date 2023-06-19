@@ -14,12 +14,6 @@
       --page-canvas: #fefefe;
     }
 
-    @media all and (prefers-color-scheme: dark) {
-      :root {
-        --page-canvas: #101010;
-      }
-    }
-
     footer {
       background: var(--component-shade);
       padding: 1em;
@@ -37,6 +31,19 @@
       box-shadow: 0 0 9px rgba(0, 0, 0, 0.065);
       background-clip: content-box;
     }
+
+    @media all and (prefers-color-scheme: dark) {
+      :root {
+        --page-canvas: #101010;
+      }
+
+      .ui-glass-box {
+      border: 7px solid rgba(255,255,255, 0.05);
+      box-shadow: 0 0 9px rgba(255,255,255, 0.015);
+      background-clip: content-box;
+    }
+    }
+
 
     @media all and (max-width: 480px) {
       .ui-glass-box[class] {
