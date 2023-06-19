@@ -53,6 +53,41 @@
       --headline-link-color: white;
       border: 0;
     }
+
+    .most-read ul {
+      padding: var(--gap-500);
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-auto-flow: column;
+      gap: 18px 32px;
+      font-size: 18px;
+      counter-reset: trending;
+    }
+
+    .most-read ul a {
+      color: var(--text-color);
+    }
+
+    .most-read ul li {
+      display: grid;
+      grid-template-columns: 2em 1fr;
+      align-items: start;
+    }
+
+    .most-read ul li:before {
+      content: counter(trending);
+      counter-increment: trending;
+      font-size: 2em;
+      color: var(--link-color);
+      font-family: var(--font-brand-2);
+      line-height: 0.9;
+    }
+
+    @media all and (max-width: 768px) {
+      .most-read ul {
+        grid-auto-flow: row;
+      }
+    }
   </style>
 
 </head>
@@ -615,7 +650,7 @@
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
-                    
+
                     <h2 class="ui-story-headline"><a href="#">Barclays reports above expectations first quarter
                         profit</a>
                     </h2>
@@ -633,7 +668,7 @@
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
-                   
+
                     <h2 class="ui-story-headline"><a href="#">Queen approved legal action against News International
                       </a>
                     </h2>
@@ -651,7 +686,7 @@
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
-                   
+
                     <h2 class="ui-story-headline"><a href="#">Donor conceived children on the brink of finding out their
                         biological heritage for the first time</a>
                     </h2>
@@ -670,7 +705,7 @@
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
-                   
+
                     <h2 class="ui-story-headline"><a href="#">Pope Francis gives women vote in upcoming influential
                         bishops' meeting</a>
                     </h2>
@@ -1342,6 +1377,74 @@
               </div>
             </article>
           </div>
+        </div>
+      </div>
+
+      <div class="wrap gap-400">
+        <h2 class="display-600 font-brand-2">Most Read</h2>
+        <div class="most-read ui-glass-box">
+          <ul class="sdc-site-trending__items">
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/phone-hacking-case-live-updates-piers-morgan-explained-how-to-hack-a-phone-witness-tells-court-12881275"
+                data-tracking-label="site-trending/link-1"><span class="sdc-site-trending__link-text">Piers Morgan
+                  explained how to hack a phone, former Mirror journalist tells court | Hacking case live</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link" href="/story/david-cameron-heckled-as-he-leaves-covid-inquiry-12905436"
+                data-tracking-label="site-trending/link-2"><span class="sdc-site-trending__link-text">'Shame on you!':
+                  David Cameron heckled as he leaves COVID inquiry</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/ukraine-war-latest-kremlin-declined-un-help-after-dam-collapse-over-security-concerns-west-accused-of-trying-to-undermine-russian-election-12541713"
+                data-tracking-label="site-trending/link-3"><span class="sdc-site-trending__link-text">Kremlin declined
+                  UN help after dam collapse over 'security concerns'; West accused of 'trying to undermine Russian
+                  election' | War latest</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/average-mortgage-rate-rises-above-6-for-two-year-fixed-deal-12905215"
+                data-tracking-label="site-trending/link-4"><span class="sdc-site-trending__link-text">PM urged to end
+                  'mortgage horror show' as average fixed two-year rate tops 6%</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/football-fan-pleads-guilty-to-causing-distress-over-offensive-hillsborough-shirt-at-fa-cup-final-12905214"
+                data-tracking-label="site-trending/link-5"><span class="sdc-site-trending__link-text">Football fan who
+                  wore offensive shirt about Hillsborough disaster chuckles after being sentenced</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/shiloh-pottinger-who-killed-student-luke-oconnor-with-mafia-stiletto-knife-is-jailed-12905284"
+                data-tracking-label="site-trending/link-6"><span class="sdc-site-trending__link-text">Man who killed
+                  student with 'Mafia stiletto' knife after skateboarding remark is jailed</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/huge-pile-of-unused-ppe-dumped-near-nature-reserve-in-hampshire-12905402"
+                data-tracking-label="site-trending/link-7"><span class="sdc-site-trending__link-text">Huge pile of
+                  unused PPE dumped near nature reserve</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/politics-latest-boris-johnson-allies-to-boycott-partygate-vote-will-sunak-turn-up-12593360"
+                data-tracking-label="site-trending/link-8"><span class="sdc-site-trending__link-text">Boris Johnson
+                  allies to boycott partygate vote; will Sunak turn up? | Politics latest</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/partygate-video-who-is-in-the-footage-of-the-conservative-christmas-party-during-covid-lockdown-12905279"
+                data-tracking-label="site-trending/link-9"><span class="sdc-site-trending__link-text">Partygate: Who was
+                  at the Conservative Christmas party during COVID lockdown?</span></a>
+            </li>
+            <li class="sdc-site-trending__item">
+              <a class="sdc-site-trending__link"
+                href="/story/harry-and-meghan-called-grifters-by-spotify-executive-after-podcast-deal-ends-12905298"
+                data-tracking-label="site-trending/link-10"><span class="sdc-site-trending__link-text">Spotify executive
+                  criticises Sussexes in expletive-laden podcast</span></a>
+            </li>
+          </ul>
         </div>
       </div>
 
