@@ -14,8 +14,14 @@
       --page-canvas: #fefefe;
     }
 
+    @media all and (prefers-color-scheme: dark) {
+      :root {
+        --page-canvas: #101010;
+      }
+    }
+
     footer {
-      background: #eee;
+      background: var(--component-shade);
       padding: 1em;
       height: 200px;
       text-align: center;
@@ -52,6 +58,10 @@
       --color: white;
       --headline-link-color: white;
       border: 0;
+    }
+
+    .most-read {
+      background-color: var(--component-bg);
     }
 
     .most-read ul {
