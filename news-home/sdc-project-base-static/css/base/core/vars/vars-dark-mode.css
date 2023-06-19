@@ -25,6 +25,7 @@
   --text-color-dark: #FFF; /* darker body text */
   --text-color-light: #4E5761;
   --icon-color: #E2E2E2; /* color for svg/ui icons */
+  --base-shade: 255, 255, 255;
 
   /* dark mode utilities */
   --ui-invert-in-dark-mode: invert(1) hue-rotate(180deg);

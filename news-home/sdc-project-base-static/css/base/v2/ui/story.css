@@ -16,14 +16,10 @@
   --headline-link-color: inherit;
   --headline-justify: left;
   --background: var(--component-bg);
-  --background-clip: border-box;
   --padding: 0;
   --min-height: auto;
   height: 100%;
   display: grid;
-  background: var(--background);
-  background-clip: var(--background-clip);
-  padding: var(--padding);
   line-height: 1.3;
   color: var(--text-color);
 }
@@ -35,6 +31,8 @@
   grid-auto-rows: var(--rows);
   grid-auto-flow: var(--direction);
   align-items: var(--align);
+  padding: var(--padding);
+  background: var(--background);
 }
 
 .ui-story-figure {
@@ -138,7 +136,7 @@
   .ui-story[data-type~="vertical-s"] {
     --direction: row;
     --min-height: auto;
-    --rows: min-content;s
+    --rows: min-content;
   }
 }
 

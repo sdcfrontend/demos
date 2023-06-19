@@ -11,11 +11,6 @@
   box-shadow: var(--box-shadow);
 }
 
-.ui-box[data-glass] {
-  --border: 6px solid rgba(255,255,255,0.5), 1px solid ;
-  --box-shadow: 1px 1px 15px rgb(0 0 0 / 14%), 0 0 1px #FFF;
-}
-
 .ui-box[data-outline] {
   --border: 1px solid var(--link-color);
 }

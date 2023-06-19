@@ -1,0 +1,19 @@
+.ui-glass-box {
+  border: 7px solid rgba(var(--base-shade), 0.065);
+  box-shadow: 0 0 9px rgba(var(--base-shade), 0.05);
+  background-clip: content-box;
+}
+
+@media all and (max-width: 480px) {
+  .ui-glass-box[data-type~="edge-s"] {
+    border: 0;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.ui-glass-sheen {
+
+}
