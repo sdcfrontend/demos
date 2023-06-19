@@ -2,15 +2,21 @@
   --direction: row;
   --cols: 2fr 1fr;
   --rows: min-content 1fr;
+  --align: stretch;
+  --meta-justify: left;
   --body-align: space-between;
   --body-padding: 24px 20px;
   --image-aspect-ratio: 16/9;
   --image-height: auto;
+  --image-width: 100%;
+  --image-border-radius: 0;
   --headline-size: 16px;
   --headline-link-color: inherit;
+  --headline-justify: left;
   --background: var(--component-bg);
   --background-clip: border-box;
   --padding: 0;
+  --min-height: auto;
   height: 100%;
   display: grid;
   background: var(--background);
@@ -25,20 +31,30 @@
   grid-auto-columns: var(--cols);
   grid-auto-rows: var(--rows);
   grid-auto-flow: var(--direction);
+  align-items: var(--align);
 }
 
-
 .ui-story-figure {
+  position: relative;
+  width: var(--image-width);
+  justify-self: center;
+}
+
+.ui-story-figure:before {
+  content: "";
+  display: block;
   position: relative;
   padding-bottom: calc((1 / (var(--image-aspect-ratio))) * 100%);
 }
 
-
 .ui-story-figure img {
   display: block;
   object-fit: cover;
+  top: 0;
   height: 100%;
+  width: 100%;
   position: absolute;
+  border-radius: var(--image-border-radius);
 }
 
 .ui-story-body {
@@ -59,7 +75,7 @@
 .ui-story-meta {
   display: grid;
   grid-auto-flow: column;
-  justify-content: left;
+  justify-content: var(--meta-justify);
   align-items: center;
   gap: 8px;
 }
@@ -67,6 +83,7 @@
 .ui-story-headline {
   font-size: var(--headline-size);
   font-weight: normal;
+  text-align: var(--headline-justify);
 }
 
 .ui-story-headline a {
@@ -79,12 +96,22 @@
   --link-color: var(--text-color);
 }
 
+.ui-story[data-type~="analysis"] {
+  --meta-justify: center;
+  --headline-justify: center;
+  --image-aspect-ratio: 1/1;
+  --image-width: clamp(90px, 60%, 124px);
+  --image-border-radius: 50%;
+  --padding: 40px 0 0 0;
+}
+
 .ui-story[data-type~="hero"] {
   --headline-size: 20px;
 }
 
 .ui-story[data-type~="vertical"] {
   --direction: row;
+  --min-height: 350px;
 }
 
 .ui-story[data-type~="horizontal"] {
@@ -93,7 +120,15 @@
   --image-height: 100%;
 }
 
-*/
+.ui-story[data-type~="horizontal-s"] {
+  --body-padding: 20px;
+  --align: center;
+  --cols: 100px 1fr;
+  --min-height: auto;
+  --direction: column;
+  --image-aspect-ratio: 1/1;
+}
+
 /* .ui-story {
   --gap-block: 19px;
   --gap-inline: 14px;

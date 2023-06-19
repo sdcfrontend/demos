@@ -83,4 +83,5 @@
 .font-brand-2 {
   font-family: var(--font-brand-2);
   font-weight: normal;
+  text-transform: uppercase;
 }
