@@ -12,7 +12,7 @@
 }
 
 .ui-box[data-outline] {
-  --border: 1px solid var(--link-color);
+  --border: 1px solid var(--border-color);
 }
 
 .ui-box[data-rounded] {
