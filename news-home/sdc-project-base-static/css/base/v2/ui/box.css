@@ -11,11 +11,10 @@
   box-shadow: var(--box-shadow);
 }
 
-.ui-box[data-outline] {
+.ui-box[data-type~="outline"] {
   --border: 1px solid var(--link-color);
 }
 
-.ui-box[data-rounded] {
+.ui-box[data-type~="rounded"] {
   --border-radius: 12px;
 }
-
