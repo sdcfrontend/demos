@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-sport.css">
   <style>
     :root {
       --site-width: 1128px;
@@ -117,186 +117,203 @@
   </div>
   <div class="site-wrap wrap">
     <div>
-    <header class="ui-news-header sdc-site-header" role="banner" data-component-name="ui-news-header"
-      data-testid="site-header" data-role="ui-news-header" data-lock-class="ui-news-header-nav-locked">
-      <a href="#main" class="ui-news-header-skip-to-link u-hide-visually"
-        data-tracking-label="site-header/a11y-link">Skip to content</a>
-
-      <div class="ui-news-header-wrap">
-        <div class="ui-news-header-body" data-testid="site-header-body">
-          <a href="/" class="ui-news-header-logo" data-testid="site-header-logo"
-            data-tracking-label="site-header/site-logo">
-            <span class="ui-news-header-logo-a11y-text">Sky News - back to home</span>
-            <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo.svg?v&#x3D;1" alt="sky news logo"
-              class="sdc-site-header-logo-light">
-            <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo-dark.svg?v&#x3D;1"
-              alt="sky news logo" class="sdc-site-header-logo-dark">
-          </a>
-          <div class="ui-news-header-subnav" data-testid="site-header-subnav">
-            <div class="ui-news-header-subnav-cell ui-news-header-subnav-weather" data-testid="site-header-weather">
-              <div class="ui-weather-widget" data-component-name="ui-weather-widget"
-                data-auth="5f2debd3b34c4b5b9c1e84a76343bdab" data-domain="https://news.sky.com"
-                data-api="https://api.condatis.sky/weather/GetWeather/"></div>
+      <div class="blackjack-sdc-digrev-header" data-component-name="blackjack-sdc-digrev-header" role="banner">
+        <div class="site-header ">
+      
+          <div class="site-header__body site-wrap site-wrap-padding">
+      
+            <div class="site-header__col site-header__col--branding">
+              <a href="/" class="svg-logo site-header__logo">
+                <img class="svg-logo__image" src="https://www.skysports.com/assets/Sky-Sports-Logo-transparent.svg" alt="Sky Sports"
+                  onerror="this.onerror=null;this.src='/assets/Sky-Sports-Logo-transparent.png'">
+              </a>
             </div>
-            <div class="ui-news-header-subnav-cell">
-              <a href="/watch-live" class="ui-news-header-watch-live" data-testid="site-header-watch-live"
-                data-tracking-label="site-header/watch-live">Watch Live</a>
+      
+            <div class="site-header__col site-header__col--login">
+              <div class="site-login" data-role="site-login">
+                <script type="text/template" class="login-text" data-role="default">
+                  <!--default-->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl&#x3D;https%3A%2F%2Fwww.skysports.com" data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isSkySports">
+                  <!-- sky sports user logged in -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isSky">
+                  <!-- sky sports user logged in -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Upgrade</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isNowTv">
+                  <!-- now tv customer -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isLoggedIn">
+                  <!-- just a sky id login -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isWholesale">
+                  <!-- wholesale customer -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> </span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+              </div>
+            </div>
+      
+            <a class="site-header__col site-header__col--hamburger site-header__nav-button-hit-area" data-role="open-left-hand-nav" href="#no-js-nav" aria-controls="site-nav-desktop-wrap">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2048 2048" xml:space="preserve" class="site-header__nav-button">
+                <rect y="384" width="2048" height="256"></rect>
+                <rect y="896" width="2048" height="256"></rect>
+                <rect y="1408" width="2048" height="256"></rect>
+              </svg>
+            </a>
+      
+          </div>
+          
+          <!-- desktop nav -->
+          <div class="site-nav-desktop__wrap site-wrap site-wrap-padding" >
+            <div class="site-nav-desktop" role="navigation" aria-label="Main" data-role="main-nav" id="site-nav-desktop-wrap">
+              <div class="site-login site-login--mobile" data-role="site-login">
+                <script type="text/template" class="login-text" data-role="default">
+                  <!--default-->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><a class="site-login__link site-login__link--user callfn" href="https://skyid.sky.com/signin/sports?successUrl&#x3D;https%3A%2F%2Fwww.skysports.com" data-mobile-url="/sso/signin/mobile" data-desktop-url="/sso/signin/desktop" data-lite="true"><span class="site-login__link--user-icon"></span> Log In</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isSkySports">
+                  <!-- sky sports user logged in -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isSky">
+                  <!-- sky sports user logged in -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Upgrade</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isNowTv">
+                  <!-- now tv customer -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isLoggedIn">
+                  <!-- just a sky id login -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item site-login__item--promo"><a href="/watch/get-sky" class="site-login__link">Get Sky Sports</a></li>
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> #{name}</span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+                <script type="text/template" class="login-text" data-role="isWholesale">
+                  <!-- wholesale customer -->
+                  <ul class="site-login__links">
+                    <li class="site-login__item"><span class="site-login__link site-login__link--user"><span class="site-login__link--user-icon"></span> </span></li>
+                    <li class="site-login__item"><a href="/signout?url=" class="site-login__link site-login__link--signout">Log Out</a></li>
+                  </ul>
+                </script>
+              </div>
+              <ul class="site-nav-desktop__body">
+                <li class="site-nav-desktop__item">
+                  <a href="/" class="site-nav-desktop__item-link">Home</a>
+                </li>
+                <li class="site-nav-desktop__item">
+                  <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-sports-more-nav" id="site-nav-desktop-sports-more">
+                    Sports<svg viewBox="0 0 2048 2048" class="site-nav-desktop__icon" aria-hidden="true">
+                      <path d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5" />
+                    </svg>
+                  </a>
+                  <nav class="site-nav-desktop__menu" aria-labelledby="site-nav-desktop-sports-more" id="site-nav-desktop-sports-more-nav">
+                    <div class="site-nav-desktop__menu-body">
+                      <ul class="site-nav-desktop__menu-links">
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/football">Football</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/f1">F1</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/cricket">Cricket</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/rugby-union">Rugby Union</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/rugby-league">Rugby League</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/golf">Golf</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/boxing">Boxing</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/nfl">NFL</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/tennis">Tennis</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/racing">Racing</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/darts">Darts</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/nba">NBA</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/netball">Netball</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/mma">MMA</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/more-sports">More Sports</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </li>
+                <li class="site-nav-desktop__item"><a href="/live-scores" class="site-nav-desktop__item-link">Scores</a></li>
+                <li class="site-nav-desktop__item"><a href="/watch" class="site-nav-desktop__item-link" data-tracking-key="header|watch-link">Watch</a></li>
+                <li class="site-nav-desktop__item"><a href="https://m.skybet.com?aff=9749&dcmp=ss_main_nav" class="site-nav-desktop__item-link" data-tracking-key="header|sky-bet" target="_blank">Sky Bet</a></li>
+                <li class="site-nav-desktop__item"><a href="https://shop.skysports.com/en/?_s&#x3D;bm-fi-skysports-prtsite-web-homepage-header-en" class="site-nav-desktop__item-link" target="_blank">Shop</a></li>
+                <li class="site-nav-desktop__item">
+                  <a href="#no-js-nav" class="site-nav-desktop__item-link site-nav-desktop__item-link--more" aria-controls="site-nav-desktop-more-more-nav" id="site-nav-desktop-more-more">More<svg viewBox="0 0 2048 2048"
+                      class="site-nav-desktop__icon">
+                      <path
+                        d="M1024.21 1662.938L2048 638.906l-254.016-253.844-769.773 769.594-769.89-769.594L0 639.022l977.914 977.5" />
+                    </svg></a>
+                  <div class="site-nav-desktop__menu site-nav-desktop__menu--right" aria-labelledby="site-nav-desktop-more-more" id="site-nav-desktop-more-more-nav">
+                    <div class="site-nav-desktop__menu-body">
+                      <ul class="site-nav-desktop__menu-links">
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/transfer-centre">Transfer Centre</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/watch/sport-on-sky">Live on Sky</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/get-sky?dcmp=gss_more_dropdown">Get Sky Sports</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="https://www.sky.com/shop/tv/sky-go/?dcmp=skygo_ss.com_more" target="_blank">Sky Go</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="http://www.nowtv.com/promo/sky-sports?dcmp=ilc_SSNTV_skysports_hardcode_moredropdownlink" target="_blank">Now TV</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="https://www.kickitout.org/forms/online-reporting-form" target="_blank">Kick It Out</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/football/news/topic/8724/black-lives-matter">Black Lives Matter</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/football/news/topic/9087/south-asians-in-football">British South Asians in Football</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/sky-zero">Sky Zero</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/podcasts">Podcasts</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/mobile">Mobile</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="https://twitter.com/SkySports" target="_blank">Twitter</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="https://www.facebook.com/SkySports" target="_blank">Facebook</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/contact-us">Contact Us</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="/workatskysports">Work &commat; Sky Sports</a></li>
+                        <li class="site-nav-desktop__menu-item"><a class="site-nav-desktop__menu-link" href="https://www.sky.com/help/articles/skycom-terms-and-conditions" target="_blank">Terms &amp; Conditions</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <a href="/watch" class="site-nav-desktop__watch-button no-default-hover no-default-active" data-tracking-key="header|watch-button"><span class="site-nav-desktop__watch-button__label">Watch Sky Sports</span></a>
             </div>
           </div>
         </div>
-        <nav class="ui-news-header-nav" role="navigation">
-          <button class="ui-news-header-nav-control" data-lock-scrolling="true" aria-expanded="false"
-            aria-controls="main-nav" data-role="nav-button" aria-label="Open the menu"
-            data-aria-label-open="Open the menu" data-aria-label-close="Close the menu"
-            data-testid="site-header-hamburger" data-tracking-label="site-header/nav/mobile-open">
-            <svg viewBox="0 0 32 32" aria-hidden="true">
-              <rect y="3" width="32" height="3"></rect>
-              <rect y="14" width="32" height="3"></rect>
-              <rect y="25" width="32" height="3"></rect>
-            </svg>
-          </button>
-          <div class="ui-news-header-nav-items-wrap">
-            <ul class="ui-news-header-nav-items" id="main-nav" data-role="main-nav-items"
-              data-testid="site-header-main-nav">
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
-                  data-tracking-label="site-header/nav/Home">Home</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/UK">UK</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/world"
-                  data-tracking-label="site-header/nav/World">World</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/politics"
-                  data-tracking-label="site-header/nav/Politics">Politics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/US">US</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/climate"
-                  data-tracking-label="site-header/nav/Climate">Climate</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/technology"
-                  data-tracking-label="site-header/nav/Science &amp; Tech">Science &amp; Tech</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/business"
-                  data-tracking-label="site-header/nav/Business">Business</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/entertainment"
-                  data-tracking-label="site-header/nav/Ents &amp; Arts">Ents &amp; Arts</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/travel"
-                  data-tracking-label="site-header/nav/Travel">Travel</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/strangenews"
-                  data-tracking-label="site-header/nav/Offbeat">Offbeat</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/analysis"
-                  data-tracking-label="site-header/nav/Analysis">Analysis</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
-                  data-tracking-label="site-header/nav/Data &amp; Forensics">Data &amp; Forensics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/videos"
-                  data-tracking-label="site-header/nav/Videos">Videos</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/weather"
-                  data-tracking-label="site-header/nav/Weather">Weather</a>
-              </li>
-            </ul>
-          </div>
-          <div class="ui-news-header-nav-more" aria-hidden="true" data-testid="site-header-more-nav">
-            <button class="ui-news-header-nav-more-button ui-news-header-nav-items-link" aria-expanded="false"
-              aria-controls="more-nav" aria-label="More nav" data-testid="site-header-more-nav-button"
-              data-tracking-label="site-header/nav/more-open">More <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 34 34" aria-hidden="true">
-                <path
-                  d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
-                </path>
-              </svg>
-            </button>
-            <ul class="ui-news-header-nav-more-items" id="more-nav" data-role="more-nav-items">
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
-                  data-tracking-label="site-header/nav/more/Home">Home</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/more/UK">UK</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/world"
-                  data-tracking-label="site-header/nav/more/World">World</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/politics"
-                  data-tracking-label="site-header/nav/more/Politics">Politics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/more/US">US</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/climate"
-                  data-tracking-label="site-header/nav/more/Climate">Climate</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/technology"
-                  data-tracking-label="site-header/nav/more/Science &amp; Tech">Science &amp; Tech</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/business"
-                  data-tracking-label="site-header/nav/more/Business">Business</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/entertainment"
-                  data-tracking-label="site-header/nav/more/Ents &amp; Arts">Ents &amp; Arts</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/travel"
-                  data-tracking-label="site-header/nav/more/Travel">Travel</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/strangenews"
-                  data-tracking-label="site-header/nav/more/Offbeat">Offbeat</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/analysis"
-                  data-tracking-label="site-header/nav/more/Analysis">Analysis</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
-                  data-tracking-label="site-header/nav/more/Data &amp; Forensics">Data &amp; Forensics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/videos"
-                  data-tracking-label="site-header/nav/more/Videos">Videos</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/weather"
-                  data-tracking-label="site-header/nav/more/Weather">Weather</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
-    </header>
     <!-- site promo banners would go here -->
   </div>
     <main class="page-wrap wrap wrap-site-width wrap-auto-align wrap-gutter gap-700">
       <div class="wrap gap-400">
-        <h2 class="display-600 font-brand-2">TOP STORIES</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
         --cols-l: repeat(3,1fr);
@@ -311,20 +328,20 @@
             <article class="ui-story ui-glass-box" data-type="edge-s horizontal vertical-s hero">
               <div class="ui-story-wrap">
                 <figure class="ui-story-figure">
-                  <img src="https://e3.365dm.com/23/06/768x432/skynews-ukraine-sean-bell-air-war_6189164.png" alt="">
+                  <img src="https://e0.365dm.com/23/07/768x432/skysports-jordan-henderson_6217266.jpg?20230713085105" alt="">
                 </figure>
                 <div class="ui-story-body">
                   <div class="ui-story-content">
                     <div class="ui-story-meta">
-                      <div class="ui-label" data-type="live">Live</div>
-                      <a href="#" class="ui-label" data-type="tag">The war in Ukraine</a>
+                      <a href="#" class="ui-label" data-type="tag">Football</a>
                     </div>
                     <h2 class="ui-story-headline">
-                      <a href="#">Key development in Bakhmut where heavy fighting rages</a>
+                      <a href="#">Henderson weighing up Liverpool future amid Al Ettifaq interest</a>
                     </h2>
                   </div>
                   <ul class="ui-list" data-type="chevron">
-                    <li><a href="#">Read more</a></li>
+                    <li><a href="#">Transfer Centre LIVE!</a></li>
+                    <li><a href="#">Papers - latest headlines</a></li>
                   </ul>
                 </div>
               </div>
@@ -533,10 +550,12 @@
         <h2 class="display-600 font-brand-2">PARTYGATE</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
-        --cols-l: repeat(2,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
         --areas: 'cell1 cell2 cell3 cell4';
-        --areas-l: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4' 'cell5 cell6';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4' 'cell5' 'cell6';
       ">
           <div class="grid-cell">
@@ -715,10 +734,12 @@
         <h2 class="display-600 font-brand-2">ANALYSIS</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
-        --cols-l: repeat(2,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
         --areas: 'cell1 cell2 cell3 cell4';
-        --areas-l: 'cell1 cell2' 'cell3 cell4';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4';
       ">
           <div class="grid-cell">
@@ -1091,10 +1112,12 @@
         <h2 class="display-600 font-brand-2">Climate</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
-        --cols-l: repeat(2,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
         --areas: 'cell1 cell2 cell3 cell4';
-        --areas-l: 'cell1 cell2' 'cell3 cell4';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4';
       ">
           <div class="grid-cell">
@@ -1206,10 +1229,12 @@
         <h2 class="display-600 font-brand-2">Podcasts</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
-        --cols-l: repeat(2,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
         --areas: 'cell1 cell2 cell3 cell4';
-        --areas-l: 'cell1 cell2' 'cell3 cell4';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4';
       ">
           <div class="grid-cell">
@@ -1303,10 +1328,12 @@
         <h2 class="display-600 font-brand-2">Sky Sports</h2>
         <div class="grid-areas" style="
         --cols:repeat(4,1fr);
-        --cols-l: repeat(2,1fr);
+        --cols-l: repeat(3,1fr);
+        --cols-m: repeat(2,1fr);
         --cols-s: 1fr;
         --areas: 'cell1 cell2 cell3 cell4';
-        --areas-l: 'cell1 cell2' 'cell3 cell4';
+        --areas-l: 'cell1 cell2 cell3' 'cell4 cell5 cell6';
+        --areas-m: 'cell1 cell2' 'cell3 cell4';
         --areas-s: 'cell1' 'cell2' 'cell3' 'cell4';
       ">
           <div class="grid-cell">
