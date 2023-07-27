@@ -146,6 +146,7 @@
 
     .sticky-region-ghost {
       min-height: var(--ghost-min-height);
+      height: var(--ghost-height);
     }
   </style>
 
@@ -167,11 +168,14 @@
       </div>
       <div class="sticky-region-ghost"></div>
       <script>
-        const region = document.currentScript.parentNode;
-        const resizeObserver = new ResizeObserver((entries) => {
-          region.style.setProperty('--ghost-height', `${entries[0].contentRect.height}px`);
-        });
-        resizeObserver.observe(region);
+        (function(){
+          const parent = document.currentScript.parentNode;
+          const target = parent.querySelector('.sticky-region-target > :first-child');
+          const resizeObserver = new ResizeObserver((entries) => {
+            parent.style.setProperty('--ghost-height', `${entries[0].contentRect.height}px`);
+          });
+          resizeObserver.observe(target);
+        })();
       </script>
     </div>
   </div>
