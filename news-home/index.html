@@ -12,6 +12,13 @@
       --site-width: 1128px;
       --site-gutter: var(--gap-400);
       --page-canvas: #fefefe;
+      --leaderboard-min-height: 120px;
+    }
+
+    @media all and (max-width: 740px) {
+      :root {
+        --leaderboard-min-height: 77px
+      }
     }
 
     html body {
@@ -119,20 +126,53 @@
       font-size: 14px;
       white-space: nowrap;
     }
+
+    .sticky-region {
+      position: relative;
+      z-index: 10001;
+    }
+
+    .sticky-region-target {
+      position: absolute;
+      top: 0;
+      height: var(--ghost-region-boundary);
+      width: 100%;
+    }
+
+    .sticky-region-target > :first-child {
+      position: sticky;
+      top: 0;
+    }
+
+    .sticky-region-ghost {
+      min-height: var(--ghost-min-height);
+    }
   </style>
 
 </head>
 
 <body>
   <div class="sdc-site-au sdc-site-au--full-bleed" data-ad-format="leaderboard" data-type="" aria-hidden="true">
-    <div class="sdc-site-au__leaderboard" data-role="ad-container"
-      data-config="{&quot;id&quot;:&quot;leaderboard&quot;,&quot;ad-type&quot;:&quot;leaderboard&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[320,50],[300,50]],&quot;tablet&quot;:[[728,90]],&quot;desktop&quot;:[[728,90],[970,250]]},&quot;partial-class&quot;:&quot;sdc-site-au--full-bleed&quot;,&quot;lazyload&quot;:{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}}"
-      data-enable-gpt-lazyload=""
-      data-lazyload-config="{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}"
-      data-targeting="{&quot;platform&quot;:&quot;live&quot;,&quot;advert-targeting&quot;:&quot;&#x27;platform&#x27;: &#x27;live&#x27;&quot;}"
-      data-targeting-strnativekey="" data-targeting-platform="" data-tag="69550299/skynews/uk-homepage"
-      data-component-name="sdc-site-mpu" data-peer39-url="https://tags.peer39.com/1362/trg_1362.js"
-      data-peer39-id="1362" data-peer39-timeout="2500" aria-label="Advertisement" id="leaderboard" data-tolerance="2">
+    <div class="sticky-region" style="--ghost-min-height: var(--leaderboard-min-height); --ghost-region-boundary: 2000px">
+      <div class="sticky-region-target">
+        <div class="sdc-site-au__leaderboard" data-role="ad-container"
+          data-config="{&quot;id&quot;:&quot;leaderboard&quot;,&quot;ad-type&quot;:&quot;leaderboard&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[320,50],[300,50]],&quot;tablet&quot;:[[728,90]],&quot;desktop&quot;:[[728,90],[970,250]]},&quot;partial-class&quot;:&quot;sdc-site-au--full-bleed&quot;,&quot;lazyload&quot;:{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}}"
+          data-enable-gpt-lazyload=""
+          data-lazyload-config="{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}"
+          data-targeting="{&quot;platform&quot;:&quot;live&quot;,&quot;advert-targeting&quot;:&quot;&#x27;platform&#x27;: &#x27;live&#x27;&quot;}"
+          data-targeting-strnativekey="" data-targeting-platform="" data-tag="69550299/skynews/uk-homepage"
+          data-component-name="sdc-site-mpu" data-peer39-url="https://tags.peer39.com/1362/trg_1362.js"
+          data-peer39-id="1362" data-peer39-timeout="2500" aria-label="Advertisement" id="leaderboard" data-tolerance="2">
+        </div>
+      </div>
+      <div class="sticky-region-ghost"></div>
+      <script>
+        const region = document.currentScript.parentNode;
+        const resizeObserver = new ResizeObserver((entries) => {
+          region.style.setProperty('--ghost-height', `${entries[0].contentRect.height}px`);
+        });
+        resizeObserver.observe(region);
+      </script>
     </div>
   </div>
   <div class="site-wrap wrap">
