@@ -99,6 +99,26 @@
         font-size: 16px;
       }
     }
+    .ui-news-header {
+      --logo-width: 102px;
+      --swoop-height: 65%;
+      --swoop-overlay-height: 50%;
+    }
+
+    .ui-news-header-body {
+      gap: 2em;
+      max-height: 60px;
+    }
+
+    .ui-news-header-nav {
+      font-size: 16px;
+      flex: 1;
+    }
+
+    .ui-news-header-watch-live {
+      font-size: 14px;
+      white-space: nowrap;
+    }
   </style>
 
 </head>
@@ -132,6 +152,152 @@
             <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo-dark.svg?v&#x3D;1"
               alt="sky news logo" class="sdc-site-header-logo-dark">
           </a>
+          <nav class="ui-news-header-nav" role="navigation">
+            <button class="ui-news-header-nav-control" data-lock-scrolling="true" aria-expanded="false"
+              aria-controls="main-nav" data-role="nav-button" aria-label="Open the menu"
+              data-aria-label-open="Open the menu" data-aria-label-close="Close the menu"
+              data-testid="site-header-hamburger" data-tracking-label="site-header/nav/mobile-open">
+              <svg viewBox="0 0 32 32" aria-hidden="true">
+                <rect y="3" width="32" height="3"></rect>
+                <rect y="14" width="32" height="3"></rect>
+                <rect y="25" width="32" height="3"></rect>
+              </svg>
+            </button>
+            <div class="ui-news-header-nav-items-wrap">
+              <ul class="ui-news-header-nav-items" id="main-nav" data-role="main-nav-items"
+                data-testid="site-header-main-nav">
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
+                    data-tracking-label="site-header/nav/Home">Home</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/UK">UK</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/world"
+                    data-tracking-label="site-header/nav/World">World</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/politics"
+                    data-tracking-label="site-header/nav/Politics">Politics</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/US">US</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/climate"
+                    data-tracking-label="site-header/nav/Climate">Climate</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/technology"
+                    data-tracking-label="site-header/nav/Science &amp; Tech">Science &amp; Tech</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/business"
+                    data-tracking-label="site-header/nav/Business">Business</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/entertainment"
+                    data-tracking-label="site-header/nav/Ents &amp; Arts">Ents &amp; Arts</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/travel"
+                    data-tracking-label="site-header/nav/Travel">Travel</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/strangenews"
+                    data-tracking-label="site-header/nav/Offbeat">Offbeat</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/analysis"
+                    data-tracking-label="site-header/nav/Analysis">Analysis</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
+                    data-tracking-label="site-header/nav/Data &amp; Forensics">Data &amp; Forensics</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/videos"
+                    data-tracking-label="site-header/nav/Videos">Videos</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/weather"
+                    data-tracking-label="site-header/nav/Weather">Weather</a>
+                </li>
+              </ul>
+            </div>
+            <div class="ui-news-header-nav-more" aria-hidden="true" data-testid="site-header-more-nav">
+              <button class="ui-news-header-nav-more-button ui-news-header-nav-items-link" aria-expanded="false"
+                aria-controls="more-nav" aria-label="More nav" data-testid="site-header-more-nav-button"
+                data-tracking-label="site-header/nav/more-open">More <svg xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 34 34" aria-hidden="true">
+                  <path
+                    d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
+                  </path>
+                </svg>
+              </button>
+              <ul class="ui-news-header-nav-more-items" id="more-nav" data-role="more-nav-items">
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
+                    data-tracking-label="site-header/nav/more/Home">Home</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/more/UK">UK</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/world"
+                    data-tracking-label="site-header/nav/more/World">World</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/politics"
+                    data-tracking-label="site-header/nav/more/Politics">Politics</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/more/US">US</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/climate"
+                    data-tracking-label="site-header/nav/more/Climate">Climate</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/technology"
+                    data-tracking-label="site-header/nav/more/Science &amp; Tech">Science &amp; Tech</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/business"
+                    data-tracking-label="site-header/nav/more/Business">Business</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/entertainment"
+                    data-tracking-label="site-header/nav/more/Ents &amp; Arts">Ents &amp; Arts</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/travel"
+                    data-tracking-label="site-header/nav/more/Travel">Travel</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/strangenews"
+                    data-tracking-label="site-header/nav/more/Offbeat">Offbeat</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/analysis"
+                    data-tracking-label="site-header/nav/more/Analysis">Analysis</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
+                    data-tracking-label="site-header/nav/more/Data &amp; Forensics">Data &amp; Forensics</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/videos"
+                    data-tracking-label="site-header/nav/more/Videos">Videos</a>
+                </li>
+                <li>
+                  <a class="ui-news-header-nav-items-link" href="/weather"
+                    data-tracking-label="site-header/nav/more/Weather">Weather</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
           <div class="ui-news-header-subnav" data-testid="site-header-subnav">
             <div class="ui-news-header-subnav-cell ui-news-header-subnav-weather" data-testid="site-header-weather">
               <div class="ui-weather-widget" data-component-name="ui-weather-widget"
@@ -144,152 +310,7 @@
             </div>
           </div>
         </div>
-        <nav class="ui-news-header-nav" role="navigation">
-          <button class="ui-news-header-nav-control" data-lock-scrolling="true" aria-expanded="false"
-            aria-controls="main-nav" data-role="nav-button" aria-label="Open the menu"
-            data-aria-label-open="Open the menu" data-aria-label-close="Close the menu"
-            data-testid="site-header-hamburger" data-tracking-label="site-header/nav/mobile-open">
-            <svg viewBox="0 0 32 32" aria-hidden="true">
-              <rect y="3" width="32" height="3"></rect>
-              <rect y="14" width="32" height="3"></rect>
-              <rect y="25" width="32" height="3"></rect>
-            </svg>
-          </button>
-          <div class="ui-news-header-nav-items-wrap">
-            <ul class="ui-news-header-nav-items" id="main-nav" data-role="main-nav-items"
-              data-testid="site-header-main-nav">
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
-                  data-tracking-label="site-header/nav/Home">Home</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/UK">UK</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/world"
-                  data-tracking-label="site-header/nav/World">World</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/politics"
-                  data-tracking-label="site-header/nav/Politics">Politics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/US">US</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/climate"
-                  data-tracking-label="site-header/nav/Climate">Climate</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/technology"
-                  data-tracking-label="site-header/nav/Science &amp; Tech">Science &amp; Tech</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/business"
-                  data-tracking-label="site-header/nav/Business">Business</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/entertainment"
-                  data-tracking-label="site-header/nav/Ents &amp; Arts">Ents &amp; Arts</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/travel"
-                  data-tracking-label="site-header/nav/Travel">Travel</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/strangenews"
-                  data-tracking-label="site-header/nav/Offbeat">Offbeat</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/analysis"
-                  data-tracking-label="site-header/nav/Analysis">Analysis</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
-                  data-tracking-label="site-header/nav/Data &amp; Forensics">Data &amp; Forensics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/videos"
-                  data-tracking-label="site-header/nav/Videos">Videos</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/weather"
-                  data-tracking-label="site-header/nav/Weather">Weather</a>
-              </li>
-            </ul>
-          </div>
-          <div class="ui-news-header-nav-more" aria-hidden="true" data-testid="site-header-more-nav">
-            <button class="ui-news-header-nav-more-button ui-news-header-nav-items-link" aria-expanded="false"
-              aria-controls="more-nav" aria-label="More nav" data-testid="site-header-more-nav-button"
-              data-tracking-label="site-header/nav/more-open">More <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 34 34" aria-hidden="true">
-                <path
-                  d="M6.02 12.67c.01.194.087.362.247.525l.188.192L16.52 23.45c.188.19.44.294.706.294s.518-.104.707-.293l10.135-10.134.123-.126c.162-.163.24-.332.248-.53.006-.173-.155-.438-.442-.725-.187-.187-.386-.368-.59-.537-.05-.04-.096-.078-.138-.11l-.496.495-9.193 9.193-.355.354-.354-.354-9.197-9.198-.484-.484c-.043.033-.09.07-.14.112-.204.168-.402.348-.59.536-.285.288-.446.553-.44.727z">
-                </path>
-              </svg>
-            </button>
-            <ul class="ui-news-header-nav-more-items" id="more-nav" data-role="more-nav-items">
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/" aria-current="true"
-                  data-tracking-label="site-header/nav/more/Home">Home</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/more/UK">UK</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/world"
-                  data-tracking-label="site-header/nav/more/World">World</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/politics"
-                  data-tracking-label="site-header/nav/more/Politics">Politics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/more/US">US</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/climate"
-                  data-tracking-label="site-header/nav/more/Climate">Climate</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/technology"
-                  data-tracking-label="site-header/nav/more/Science &amp; Tech">Science &amp; Tech</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/business"
-                  data-tracking-label="site-header/nav/more/Business">Business</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/entertainment"
-                  data-tracking-label="site-header/nav/more/Ents &amp; Arts">Ents &amp; Arts</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/travel"
-                  data-tracking-label="site-header/nav/more/Travel">Travel</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/strangenews"
-                  data-tracking-label="site-header/nav/more/Offbeat">Offbeat</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/analysis"
-                  data-tracking-label="site-header/nav/more/Analysis">Analysis</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/data-and-forensics"
-                  data-tracking-label="site-header/nav/more/Data &amp; Forensics">Data &amp; Forensics</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/videos"
-                  data-tracking-label="site-header/nav/more/Videos">Videos</a>
-              </li>
-              <li>
-                <a class="ui-news-header-nav-items-link" href="/weather"
-                  data-tracking-label="site-header/nav/more/Weather">Weather</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+       
       </div>
     </header>
     <!-- site promo banners would go here -->
