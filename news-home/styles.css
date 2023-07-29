@@ -14,7 +14,7 @@
 @import url('./sdc-project-base-static/css/base/v2/core/gaps.css');
 @import url('./sdc-project-base-static/css/base/v2/core/typeography.css');
 
-@import url('./sdc-project-base-static/css/base/v2/ui/story.css');
+@import url('./sdc-project-base-static/css/base/v2/ui/story.css?v=5');
 @import url('./sdc-project-base-static/css/base/v2/ui/labels.css');
 @import url('./sdc-project-base-static/css/base/v2/ui/lists.css');
 @import url('./sdc-project-base-static/css/base/v2/ui/glass.css');
