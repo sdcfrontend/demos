@@ -106,63 +106,98 @@
         font-size: 16px;
       }
     }
-
-    .sticky-block {
-      position: relative;
+    .ui-news-header {
+      --logo-width: 102px;
+      --swoop-height: 65%;
+      --swoop-overlay-height: 50%;
     }
 
-    .sticky-block .sdc-site-au {
+    .ui-news-header-body {
+      gap: 2em;
+      max-height: 60px;
+    }
+
+    .ui-news-header-nav {
+      font-size: 16px;
+      flex: 1;
+    }
+
+    .ui-news-header-watch-live {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .sticky-region {
+      position: relative;
+      z-index: 10001;
+    }
+
+    .sticky-region-target {
+      position: absolute;
+      top: 0;
+      height: var(--ghost-region-boundary);
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .sticky-region-target > :first-child {
       position: sticky;
       top: 0;
-      z-index: 11111111;
+      pointer-events: all;
+    }
+
+    .sticky-region-ghost {
+      min-height: var(--ghost-min-height);
+      height: var(--ghost-height);
     }
   </style>
 
 </head>
 
-<body class="wrap">
-  <div class="sticky-block">
-    <div class="sdc-site-au sdc-site-au--full-bleed" data-ad-format="leaderboard" data-type="" aria-hidden="true">
-      <div class="sdc-site-au__leaderboard" data-role="ad-container"
-        data-config="{&quot;id&quot;:&quot;leaderboard&quot;,&quot;ad-type&quot;:&quot;leaderboard&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[320,50],[300,50]],&quot;tablet&quot;:[[728,90]],&quot;desktop&quot;:[[728,90],[970,250]]},&quot;partial-class&quot;:&quot;sdc-site-au--full-bleed&quot;,&quot;lazyload&quot;:{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}}"
-        data-enable-gpt-lazyload=""
-        data-lazyload-config="{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}"
-        data-targeting="{&quot;platform&quot;:&quot;live&quot;,&quot;advert-targeting&quot;:&quot;&#x27;platform&#x27;: &#x27;live&#x27;&quot;}"
-        data-targeting-strnativekey="" data-targeting-platform="" data-tag="69550299/skynews/uk-homepage"
-        data-component-name="sdc-site-mpu" data-peer39-url="https://tags.peer39.com/1362/trg_1362.js"
-        data-peer39-id="1362" data-peer39-timeout="2500" aria-label="Advertisement" id="leaderboard" data-tolerance="2">
+<body>
+  <div class="sdc-site-au sdc-site-au--full-bleed" data-ad-format="leaderboard" data-type="" aria-hidden="true">
+    <div class="sticky-region" style="--ghost-min-height: var(--leaderboard-min-height); --ghost-region-boundary: 2000px">
+      <div class="sticky-region-target">
+        <div class="sdc-site-au__leaderboard" data-role="ad-container"
+          data-config="{&quot;id&quot;:&quot;leaderboard&quot;,&quot;ad-type&quot;:&quot;leaderboard&quot;,&quot;targeting&quot;:[],&quot;size&quot;:{&quot;mobile&quot;:[[320,50],[300,50]],&quot;tablet&quot;:[[728,90]],&quot;desktop&quot;:[[728,90],[970,250]]},&quot;partial-class&quot;:&quot;sdc-site-au--full-bleed&quot;,&quot;lazyload&quot;:{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}}"
+          data-enable-gpt-lazyload=""
+          data-lazyload-config="{&quot;fetch-margin-percent&quot;:500,&quot;render-margin-percent&quot;:50,&quot;mobile-scaling&quot;:2}"
+          data-targeting="{&quot;platform&quot;:&quot;live&quot;,&quot;advert-targeting&quot;:&quot;&#x27;platform&#x27;: &#x27;live&#x27;&quot;}"
+          data-targeting-strnativekey="" data-targeting-platform="" data-tag="69550299/skynews/uk-homepage"
+          data-component-name="sdc-site-mpu" data-peer39-url="https://tags.peer39.com/1362/trg_1362.js"
+          data-peer39-id="1362" data-peer39-timeout="2500" aria-label="Advertisement" id="leaderboard" data-tolerance="2">
+        </div>
       </div>
-
+      <div class="sticky-region-ghost"></div>
+      <script>
+        (function(){
+          const parent = document.currentScript.parentNode;
+          const target = parent.querySelector('.sticky-region-target > :first-child');
+          const resizeObserver = new ResizeObserver((entries) => {
+            parent.style.setProperty('--ghost-height', `${entries[0].contentRect.height}px`);
+          });
+          resizeObserver.observe(target);
+        })();
+      </script>
     </div>
+  </div>
+  <div class="site-wrap wrap">
     <div>
-      <header class="ui-news-header sdc-site-header" role="banner" data-component-name="ui-news-header"
-        data-testid="site-header" data-role="ui-news-header" data-lock-class="ui-news-header-nav-locked">
-        <a href="#main" class="ui-news-header-skip-to-link u-hide-visually"
-          data-tracking-label="site-header/a11y-link">Skip to content</a>
+    <header class="ui-news-header sdc-site-header" role="banner" data-component-name="ui-news-header"
+      data-testid="site-header" data-role="ui-news-header" data-lock-class="ui-news-header-nav-locked">
+      <a href="#main" class="ui-news-header-skip-to-link u-hide-visually"
+        data-tracking-label="site-header/a11y-link">Skip to content</a>
 
-        <div class="ui-news-header-wrap">
-          <div class="ui-news-header-body" data-testid="site-header-body">
-            <a href="/" class="ui-news-header-logo" data-testid="site-header-logo"
-              data-tracking-label="site-header/site-logo">
-              <span class="ui-news-header-logo-a11y-text">Sky News - back to home</span>
-              <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo.svg?v&#x3D;1"
-                alt="sky news logo" class="sdc-site-header-logo-light">
-              <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo-dark.svg?v&#x3D;1"
-                alt="sky news logo" class="sdc-site-header-logo-dark">
-            </a>
-
-            <div class="ui-news-header-subnav" data-testid="site-header-subnav">
-              <div class="ui-news-header-subnav-cell ui-news-header-subnav-weather" data-testid="site-header-weather">
-                <div class="ui-weather-widget" data-component-name="ui-weather-widget"
-                  data-auth="5f2debd3b34c4b5b9c1e84a76343bdab" data-domain="https://news.sky.com"
-                  data-api="https://api.condatis.sky/weather/GetWeather/"></div>
-              </div>
-              <div class="ui-news-header-subnav-cell">
-                <a href="/watch-live" class="ui-news-header-watch-live" data-testid="site-header-watch-live"
-                  data-tracking-label="site-header/watch-live">Watch Live</a>
-              </div>
-            </div>
-          </div>
+      <div class="ui-news-header-wrap">
+        <div class="ui-news-header-body" data-testid="site-header-body">
+          <a href="/" class="ui-news-header-logo" data-testid="site-header-logo"
+            data-tracking-label="site-header/site-logo">
+            <span class="ui-news-header-logo-a11y-text">Sky News - back to home</span>
+            <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo.svg?v&#x3D;1" alt="sky news logo"
+              class="sdc-site-header-logo-light">
+            <img aria-hidden="true" src="https://news.sky.com/resources/sky-news-logo-dark.svg?v&#x3D;1"
+              alt="sky news logo" class="sdc-site-header-logo-dark">
+          </a>
           <nav class="ui-news-header-nav" role="navigation">
             <button class="ui-news-header-nav-control" data-lock-scrolling="true" aria-expanded="false"
               aria-controls="main-nav" data-role="nav-button" aria-label="Open the menu"
@@ -253,8 +288,7 @@
                     data-tracking-label="site-header/nav/more/Home">Home</a>
                 </li>
                 <li>
-                  <a class="ui-news-header-nav-items-link" href="/uk"
-                    data-tracking-label="site-header/nav/more/UK">UK</a>
+                  <a class="ui-news-header-nav-items-link" href="/uk" data-tracking-label="site-header/nav/more/UK">UK</a>
                 </li>
                 <li>
                   <a class="ui-news-header-nav-items-link" href="/world"
@@ -265,8 +299,7 @@
                     data-tracking-label="site-header/nav/more/Politics">Politics</a>
                 </li>
                 <li>
-                  <a class="ui-news-header-nav-items-link" href="/us"
-                    data-tracking-label="site-header/nav/more/US">US</a>
+                  <a class="ui-news-header-nav-items-link" href="/us" data-tracking-label="site-header/nav/more/US">US</a>
                 </li>
                 <li>
                   <a class="ui-news-header-nav-items-link" href="/climate"
@@ -311,13 +344,23 @@
               </ul>
             </div>
           </nav>
+          <div class="ui-news-header-subnav" data-testid="site-header-subnav">
+            <div class="ui-news-header-subnav-cell ui-news-header-subnav-weather" data-testid="site-header-weather">
+              <div class="ui-weather-widget" data-component-name="ui-weather-widget"
+                data-auth="5f2debd3b34c4b5b9c1e84a76343bdab" data-domain="https://news.sky.com"
+                data-api="https://api.condatis.sky/weather/GetWeather/"></div>
+            </div>
+            <div class="ui-news-header-subnav-cell">
+              <a href="/watch-live" class="ui-news-header-watch-live" data-testid="site-header-watch-live"
+                data-tracking-label="site-header/watch-live">Watch Live</a>
+            </div>
+          </div>
         </div>
-      </header>
-      <!-- site promo banners would go here -->
-    </div>
+       
+      </div>
+    </header>
+    <!-- site promo banners would go here -->
   </div>
-  <div class="site-wrap wrap">
-
     <main class="page-wrap wrap wrap-site-width wrap-auto-align wrap-gutter gap-700">
       <div class="wrap gap-400">
         <h2 class="display-600 font-brand-2">TOP STORIES</h2>
