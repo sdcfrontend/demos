@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --site-width: 1128px;
+      --site-gutter: var(--gap-400);
+      --page-canvas: #fefefe;
+      --leaderboard-min-height: 120px;
+    }
+
+    @media all and (max-width: 740px) {
+      :root {
+        --leaderboard-min-height: 77px
+      }
+    }
+
+    html body {
+      /* width: 100% !important;
+      max-width: 100% !important; */
+    }
+
+    .site-wrap {
+      background: var(--page-canvas);
+    }
+
+    footer {
+      background: var(--component-shade);
+      padding: 1em;
+      height: 200px;
+      text-align: center;
+    }
+
+    div[class*="sdc-site-au__mpu"] {
+      min-height: 250px;
+      min-width: 300px;
+    }
+
+    @media all and (prefers-color-scheme: dark) {
+      :root {
+        --page-canvas: #101010;
+      }
+    }
+
+    .video-carousel {
+      padding: var(--gap-500);
+    }
+
+    .video-carousel .ui-story {
+      --body-padding: 18px 0 18px;
+      --background: none;
+      --color: white;
+      --headline-link-color: white;
+      --min-height: auto;
+      border: 0;
+    }
+
+    .most-read {
+      container-type: inline-size;
+      background-color: var(--component-bg);
+    }
+
+    .most-read ul {
+      padding: var(--gap-500);
+      display: grid;
+      grid-template-rows: repeat(5, max-content);
+      grid-auto-flow: column;
+      gap: 24px 32px;
+      font-size: 18px;
+      counter-reset: trending;
+    }
+
+    .most-read ul a {
+      color: var(--text-color);
+    }
+
+    .most-read ul li {
+      display: grid;
+      grid-template-columns: 2em 1fr;
+      align-items: start;
+    }
+
+    .most-read ul li:before {
+      content: counter(trending);
+      counter-increment: trending;
+      font-size: 2em;
+      color: var(--link-color);
+      font-family: var(--font-brand-2);
+      line-height: 0.9;
+    }
+
+    @container (max-width: 640px) {
+      .most-read ul {
+        grid-auto-flow: row;
+      }
+    }
+
+    @container (max-width: 480px) {
+      .most-read ul {
+        font-size: 16px;
+      }
+    }
+
+    .sticky {
+      --sticky-height: auto;
+      --sticky-top: 0;
+      position: relative;
+    }
+
+    .sticky-target {
+      position: sticky;
+      top: var(--sticky-top);
+    }
+
+    .sticky-block .sdc-site-au {
+      position: sticky;
+      top: 0;
+      z-index: 11111111;
+    }
+
+    .wrap {
+      --collapse: var(--gap);
+    }
+
+    .page-content {
+      padding-block: var(--gap-600);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="site-wrap" style="height: 200vh">
+
+    <div class="sticky">
+      <div class="sticky-target" style="height: 200px; background: orange">advert</div>
+      <header style="background: grey; height: 100px;">header</header>
+    </div>
+    <main id="main" class="page-wrap" style="border: 3px solid red;">
+      <div class="wrap page-banners gap-200">
+        <div style="background: yellow">banner</div>
+        <div style="background: pink">Takeover</div>
+      </div>
+      <div class="page-content wrap wrap-auto-align wrap-gutter wrap-site-width">
+        content
+      </div>
+     
+    </main>
+    <footer style="background: purple">footer</footer>
+  </div>
+  
+
+
+  <script src="./ads.js"></script>
+  <script src="./header.js"></script>
+  <script>
+    document.querySelectorAll('[data-component-name="sdc-site-mpu"]').forEach((item) => {
+      window['sdc-site-mpu'](item);
+    });
+
+    document.querySelectorAll('[data-component-name="ui-news-header"]').forEach((item) => {
+      window['ui-news-header'](item);
+    });
+  </script>
+</body>
+
+</html>
