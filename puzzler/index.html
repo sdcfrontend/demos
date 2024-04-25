@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            max-width: 1080px;
+            padding: 24px;
+            margin: auto;
+        }
+
+        #root {
+            position: relative;
+            border: 1px solid hotpink;
+            height: clamp(600px, 100vw, 700px);
+        }
+    </style>
+    <div class="wrap">
+        <div id="root" style="position: relative"></div>
+    </div>
+    <script src="environment-setup.js"></script>
+    <script src="pml.js"></script>
+    <script>
+        const s = new URLSearchParams(location.search);
+        const game = (s.get('game') || 'kk').toUpperCase();
+
+        window.pml && window.pml.startGame("root", {
+            "localStoragePrefix": "vanilla.uat",
+            "scriptPath": "./",
+            "autoViewport": true,
+            "puzzle": TestData[game][0],
+            "localStoragePrefix": "pws_media_88",
+        });
+
+    </script>
+</body>
+
+</html>
