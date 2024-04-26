@@ -13,11 +13,16 @@
     <style>
         * {
             box-sizing: border-box;
+            padding: 0;
+            marrgin: 0;
         }
 
+        html {
+            font-family: 'Sky Text';
+        }
         .wrap {
             max-width: 1080px;
-            padding: 24px;
+            padding: 12px min(3.5%, 24px);
             margin: auto;
         }
 
@@ -26,22 +31,35 @@
             border: 1px solid hotpink;
             height: clamp(600px, 100vw, 700px);
         }
+
+        ul {
+            display: flex;
+            gap: 14px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
     </style>
     <div class="wrap">
+        <ul>
+            <li><a href="?game=AL">Add a Letter</a></li>
+            <li><a href="?game=WL">Word Ladder</a></li>
+            <li><a href="?game=SU-EASY">Sudoku</a></li>
+            <li><a href="?game=TT">Make Tracks</a></li>
+            <li><a href="?game=CD">Totalize</a></li>
+        </ul>
         <div id="root" style="position: relative"></div>
     </div>
     <script src="environment-setup.js"></script>
     <script src="pml.js"></script>
     <script>
         const s = new URLSearchParams(location.search);
-        const game = (s.get('game') || 'kk').toUpperCase();
+        const game = (s.get('game') || 'al').toUpperCase();
 
         window.pml && window.pml.startGame("root", {
-            "localStoragePrefix": "vanilla.uat",
             "scriptPath": "./",
             "autoViewport": true,
             "puzzle": TestData[game][0],
-            "localStoragePrefix": "pws_media_88",
+            "eventCallback": function (name, data) { console.log(name, data); } 
         });
 
     </script>
