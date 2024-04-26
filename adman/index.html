@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      background: Canvas;
+      color-scheme: light dark;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      font-family: sans-serif;
+    }
+
+    a {
+      margin: 8px;
+      padding: 8px;
+      border: 2px dotted #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div>Drag this link to your bookmarks: </div>
+  <a
+    href="javascript:(function()%7Bconsole.log('%25cUI-ADVERT-MANAGER'%2C%20'font-size%3A20px%3Bcolor%3Agreen%3Btext-decoration%3A%20underline')%3B%0Aconst%20admanager%20%3D%20document.querySelector('.ui-advert-manager')%3B%0Aif(admanager)%7B%0A%20%20%20%20console.log('%25cPAGE%20LEVEL'%2C%20'font-size%3A16px%3Bcolor%3Agreen%3B'%2C%20admanager.config%20%7C%7C%20%7B%7D)%0A%7D%0Adocument.querySelectorAll('.ui-advert').forEach((unit%2C%20index)%20%3D%3E%20%7B%0Aconsole.log('%25c'%2B(index%2B1)%2B'%3A%20'%2B(unit.config%5B'ad-type'%5D).toUpperCase()%2B''%2C%20'font-size%3A16px%3Bcolor%3Agreen%3B'%2C%20unit.config%20%7C%7C%20%7B%7D)%0A%0A%7D)%7D)()%3B">Ad
+    Man</a>
+</body>
+
+</html>
