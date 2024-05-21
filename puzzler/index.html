@@ -61,12 +61,19 @@
         const s = new URLSearchParams(location.search);
         const game = (s.get('game') || 'al').toUpperCase();
 
-        window.pml && window.pml.startGame("root", {
+        const file = 'WL_000103_20240512.json';
+        fetch(`./puzzles/${file}`).then((res) => res.json()).then((data) => {
+            console.log(data);
+
+            window.pml && window.pml.startGame("root", {
             "scriptPath": "./",
             "autoViewport": true,
-            "puzzle": TestData[game][0],
+            "puzzle": data,
             "eventCallback": function (name, data) { console.log(name, data); } 
         });
+        });
+
+        
 
     </script>
 </body>
