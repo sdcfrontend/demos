@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<a href="https://x.com/intent/post?text=&url=" target="_parent">share on twitter</a>
+<br>
+<br>
+<div class="share-text"></div>
+<script>
+
+const parties = [
+  "Leeds & Morley exit poll prediction",
+  "",
+  "⚪ TOO CLOSE TO CALL",
+  "🔴 LIKELY LABOUR WIN 95%",
+  "🟣 LIKELY REFORM WIN 95%",
+  "🔵 LIKELY CONSERVATIVE WIN 95%",
+  "🟡 LIKELY SNP WIN 95%",
+  "🟠 LIKELY LIB DEM WIN 95%",
+  "🟢 LIKELY GREEN WIN 95%",
+  "",
+  "Search your constituency on Sky News at - https://news.sky.com/blah"
+];
+
+const text = [
+  "Leeds & Morley exit poll prediction",
+  "",
+  "🔴 LIKELY LABOUR WIN 95%25",
+  "🟣 POSSIBLE REFORM WIN 5%25",
+  "",
+  "Search your constituency on Sky News at - https://news.sky.com/blah"
+]
+
+
+document.querySelector('.share-text').innerHTML = parties.map((item) => (item + '<br>')).join('');
+
+document.querySelector('a').href=`https://x.com/intent/post?text=${text.map((line) => {
+  return line.replace(/ /g, '+').replace('&','');
+}).join('%0A')}&url=https://news.sky.com`
+</script>
+</body>
+</html>
