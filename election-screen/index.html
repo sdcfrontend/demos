@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      background: Canvas;
+      color-scheme: light dark;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      font-family: sans-serif;
+    }
+
+    a {
+      margin: 8px;
+      padding: 8px;
+      border: 2px dotted #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div>Drag this link to your bookmarks: </div>
+  <a
+    href="javascript:(function()%7Bdocument.body.insertAdjacentHTML('beforeend'%2C%20%60%0A%3Cstyle%3E%0Aheader%2C%20%0Afooter%2C%0Asummary%2C%0Adiv%5Bclass*%3D%22page-header%22%5D%2C%0Adiv%5Bclass*%3D%22notify-banner%22%5D%2C%0Adiv%5Bclass*%3D%22az-nav%22%5D%2C%0Adiv%5Bclass*%3D%22list-navigation%22%5D%2C%0Asection%5Baria-labelledby%3D%22election-constituency-results%22%5D%2C%0Asection%5Baria-labelledby%3D%22election-vote-share%22%5D%20%7B%0A%20%20display%3A%20none%3B%0A%7D%0A%0Amain%20%7B%0A%20%20height%3A%20100vh%3B%0A%20%20display%3A%20grid%3B%0A%20%20place-items%3A%20center%3B%0A%20%20align-content%3A%20center!important%3B%0A%20%20padding%3A%201em%200%0A%7D%3C%2Fstyle%3E%0A%60)%0A%0Aconst%20sections%20%3D%20document.querySelectorAll('%5Baria-labelledby%3D%22election-constituency-results%22%5D%2C%5Baria-labelledby%3D%22election-seats%22%5D%2C%20%5Baria-labelledby%3D%22election-vote-share%22%5D')%3B%0Alet%20index%20%3D%200%3B%0AsetInterval(()%20%3D%3E%20%7B%0A%20%20%20%20index%2B%2B%3B%0A%20%20%20%20%20%20%20%20if(index%3E2)%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20index%20%3D%200%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20sections.forEach((item)%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20item.style.display%20%3D%20%22none%22%3B%0A%20%20%20%20%7D)%3B%0A%20%20%20%20sections%5Bindex%5D.style.display%20%3D%20%22grid%22%0A%7D%2C%202000)%7D)()%3B">Election screens</a>
+</body>
+
+</html>
