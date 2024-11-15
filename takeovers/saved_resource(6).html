@@ -1,0 +1,51 @@
+
+<!-- saved from url=(0021)https://news.sky.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="sBeacon" src="./sovrn_standalone_beacon.js"></script>
+
+<script>
+(()=>{
+   var boundCheckPosition;
+   var stickyFooter;
+   var outBrain;
+   var mpu;
+    
+    function init() {
+
+        
+        try {
+            boundCheckPosition = CheckPosition.bind(this);
+             stickyFooter = window.top.document.querySelector('#sovrn-overlay-footer');
+             outBrain = window.top.document.querySelector('.ob-widget-section');
+             mpu = window.top.document.querySelector('.sdc-site-layout-sticky-region__mask');
+            setInterval(function(){
+                boundCheckPosition();
+            }, 100);
+        } catch {
+            setTimeout(()=>{init()}, 1000);
+        }
+    }
+    init();
+    function CheckPosition(){
+        try{
+            var outbrainRect = outBrain.getBoundingClientRect()
+            var mpuRect = mpu.getBoundingClientRect()
+            var outbrainOffset = CheckOffSet(outbrainRect);
+            var mpuOffset = CheckOffSet(mpuRect);
+
+            if(outbrainOffset < 0 || mpuOffset > -2*mpuRect.height){
+                stickyFooter.style.display = 'none'
+            }else{
+                stickyFooter.style.display = 'block'
+            }
+        }
+        catch{}
+    }
+
+    function CheckOffSet(element){
+        return element.y - element.height
+    }
+
+   
+
+})()
+</script></head><body marginwidth="0" marginheight="0"><iframe id="sovrn_beacon" margin="0" padding="0" frameborder="0" width="1" height="1" scrolling="no" src="./beacon.html" style="margin: 0px; padding: 0px; border: 0px none; width: 1px; height: 1px; overflow: hidden;"></iframe></body></html>
