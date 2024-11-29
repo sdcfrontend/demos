@@ -2,6 +2,12 @@
   overflow-x: visible;
 }
 
+.ui-label[data-type="tag"] {
+  --bg: none;
+  --color: var(--text-links);
+  border: 1px solid currentColor;
+}
+
 .ui-article {
   --headline-3: var(--font-size-900) / 1.142 var(--font-brand1);
   --body-3: var(--font-size-400) / 1.4 var(--font-brand1);
