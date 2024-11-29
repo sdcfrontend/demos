@@ -35,6 +35,10 @@
   font-weight: 600;
 }
 
+.ui-article svg {
+  fill: currentColor;
+}
+
 /* ARTICLE HEADER */
 .ui-article-header {
   grid-area: header;
@@ -79,6 +83,13 @@
 .ui-article-date {
   font: var(--date-font);
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.ui-article-date svg {
+  width: 1em;
 }
 
 /* SHARE */
