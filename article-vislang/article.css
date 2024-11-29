@@ -30,7 +30,7 @@
 }
 
 .ui-article a {
-  color: #3157a1;
+  color: var(--text-links);
   font-weight: 600;
 }
 
