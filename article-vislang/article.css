@@ -21,6 +21,7 @@
   --author-font: var(--body-2);
   --date-font: var(--body-1);
   --caption-font: var(--body-1);
+  --h-font: var(--headline-1);
   display: grid;
   grid-template-columns: var(--cols);
   grid-template-rows: min-content;
@@ -109,7 +110,7 @@
 }
 
 .ui-article-body > :is(h2,h3,h4,h5,h6) {
-  font: var(--headline-1);
+  font: var(--h-font);
   font-weight: bold;
   padding-top: 1em;
 }
@@ -196,11 +197,12 @@
     --row-gap-s: 0.75rem;
     --row-gap-xs: 0.5rem;
     --headline-font: var(--headline-2);
-    --byline-font: var(--body-2);
+    --byline-font: var(--body-1);
     --body-font: var(--body-2);
     --author-font: var(--body-1);
     --date-font: var(--body-1);
-    --caption-font: var(--body-1);
+    --caption-font: var(--caption-1);
+    --h-font: var(--title-2);
   }
 }
 
