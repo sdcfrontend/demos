@@ -104,6 +104,11 @@
   gap: 1.5em;
 }
 
+.ui-article-header-group > *:not(.ui-article-headline),
+.ui-article-body > *:not(.ui-article-media, .ui-article-aside) {
+  max-width: 700px;
+}
+
 .ui-article-body p:first-of-type {
   font-weight: bold;
   font-size: 1.2em;
