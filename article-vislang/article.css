@@ -1,0 +1,223 @@
+.page-canvas[class] {
+  overflow-x: visible;
+}
+
+.ui-article {
+  --headline-3: var(--font-size-900) / 1.142 var(--font-brand1);
+  --body-3: var(--font-size-400) / 1.4 var(--font-brand1);
+  --col-gap: 3rem;
+  --row-gap-xl: 3rem;
+  --row-gap-l: 2rem;
+  --row-gap-m: 1.5rem;
+  --row-gap-s: 1rem;
+  --row-gap-xs: 0.5rem;
+  --col-1-size: 1fr;
+  --col-2-size: 300px;
+  --cols: var(--col-1-size) var(--col-2-size);
+  --areas: "header ." "body .";
+  --headline-font: var(--headline-3);
+  --byline-font: var(--title-2);
+  --body-font: var(--body-3);
+  --author-font: var(--body-2);
+  --date-font: var(--body-1);
+  --caption-font: var(--body-1);
+  display: grid;
+  grid-template-columns: var(--cols);
+  grid-template-rows: min-content;
+  grid-template-areas: var(--areas);
+  gap: var(--row-gap-l) var(--col-gap);
+  position: relative;
+}
+
+.ui-article a {
+  color: #3157a1;
+  font-weight: 600;
+}
+
+/* ARTICLE HEADER */
+.ui-article-header {
+  grid-area: header;
+  display: grid;
+  gap: var(--row-gap-l);
+}
+
+.ui-article-header-group {
+  display: grid;
+  gap: var(--row-gap-s);
+}
+
+/* HEADLINE */
+.ui-article-headline {
+  font: var(--headline-font);
+}
+
+.ui-article-byline {
+  font: var(--byline-font);
+}
+
+/* AUTHOR */
+.ui-article-author {
+  display: flex;
+  align-items: center;
+  gap: var(--row-gap-s);
+  font: var(--author-font);
+  line-height: 1.4;
+}
+
+.ui-article-author-avatar {
+  width: 47px;
+}
+
+.ui-article-author-avatar>img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+/* DATE*/
+.ui-article-date {
+  font: var(--date-font);
+  color: var(--text-secondary);
+}
+
+/* SHARE */
+.ui-article-share {
+  height: 40px;
+  width: 200px;
+  display: flex;
+  gap: 0.5em;
+}
+
+.ui-article-share li {
+  border: 1px solid var(--theme-surface-outline);
+  border-radius: 4px;
+  height: 40px;
+  width: 40px;
+}
+
+/* BODY */
+.ui-article-body {
+  grid-area: body;
+  display: grid;
+  font: var(--body-font);
+  gap: 1.5em;
+}
+
+.ui-article-body p:first-of-type {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.ui-article-body > :is(h2,h3,h4,h5,h6) {
+  font: var(--headline-1);
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+/*MEDIA*/
+.ui-article-media {
+  margin-block: 1em;
+}
+
+.ui-article-media-item {
+  height: auto;
+  position: relative;
+  display: block;
+  width: var(--media-width);
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.ui-article-caption {
+  background: var(--theme-surface-tile);
+  font: var(--caption-font);
+  padding: 1.25em;
+  position: relative;
+}
+
+/* ASIDE WIDGETS */
+.ui-article-aside {
+  display: grid;
+  place-items: center;
+  gap: var(--row-gap-m);
+  align-content: start;
+}
+
+.advert-mpu {
+  position: sticky;
+  top: 0;
+  width: 300px;
+  height: 600px;
+  background: var(--theme-surface-tile);
+  display: grid;
+  place-items: center;
+}
+
+.ui-article-related {
+  border: 1px solid var(--theme-surface-outline);
+  border-radius: 4px;
+  width: 100%;
+  display: grid;
+  gap: 0.5em;
+}
+
+.ui-article-related ul {
+  display: grid;
+  gap: 0.75em;
+}
+
+.ui-article-related ul a {
+  font: var(--body-2);
+  font-weight: bold;
+  display: block;
+}
+
+/* OUTBRAIN */
+.ui-article-outbrain {
+  height: 600px;
+  background: var(--theme-surface-tile);
+  display: grid;
+  place-items: center;
+}
+
+@media all and (max-width: 840px) {
+  .ui-article {
+    --cols: 1fr;
+    --areas: "header" "body";
+  }
+}
+
+@media all and (max-width: 600px) {
+  .ui-article {
+    --col-gap: 2rem;
+    --row-gap-xl: 2rem;
+    --row-gap-l: 1.5rem;
+    --row-gap-m: 1rem;
+    --row-gap-s: 0.75rem;
+    --row-gap-xs: 0.5rem;
+    --headline-font: var(--headline-2);
+    --byline-font: var(--body-2);
+    --body-font: var(--body-2);
+    --author-font: var(--body-1);
+    --date-font: var(--body-1);
+    --caption-font: var(--body-1);
+  }
+}
+
+@media all and (min-width: 840px) {
+  .ui-article-aside[data-float="true"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--col-2-size);
+  }
+
+  .ui-article-aside[data-aside="1"] {
+    height: 1500px;
+  }
+
+  .ui-article-aside[data-aside="2"] {
+    top: calc(1500px + var(--row-gap-m));
+  }
+
+}
