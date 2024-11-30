@@ -671,8 +671,6 @@ iframe {
     background: var(--bg);
     color: var(--color);
     display: flex;
-    font: var(--caption-1);
-    font-size: var(--label-size);
     font-weight: 700;
     gap: var(--gap);
     gap: round(var(--gap), 2px);
@@ -683,6 +681,11 @@ iframe {
     text-transform: var(--case);
     width: -moz-fit-content;
     width: fit-content
+}
+
+:where(.ui-label) {
+    font: var(--caption-1);
+    font-size: var(--label-size);
 }
 
 .ui-label[data-size=m] {

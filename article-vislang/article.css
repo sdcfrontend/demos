@@ -152,10 +152,11 @@
 }
 
 .ui-article-caption {
-  background: var(--theme-surface-tile);
   font: var(--caption-font);
-  padding: 1.25em;
+  padding: 1.25em 0;
   position: relative;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--theme-surface-outline);
 }
 
 /* ASIDE WIDGETS */
@@ -177,11 +178,12 @@
 }
 
 .ui-article-related {
-  border: 1px solid var(--theme-surface-outline);
-  border-radius: 4px;
+  border: 0 solid var(--theme-surface-outline);
+  border-width: 1px 0 1px 0;
   width: 100%;
   display: grid;
   gap: 0.5em;
+  padding: var(--row-gap) 0
 }
 
 .ui-article-related ul a {

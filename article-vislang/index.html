@@ -78,7 +78,7 @@
 
     <script>window.sdc = window.sdc || {}, window.sdc.checkConsent = function (t, e) { null !== t && (t.dataset.consent && "true" === t.dataset.consent.toString() ? e() : new MutationObserver((function (t, n) { for (var i in t) "attributes" === (i = t[i]).type && "data-consent" === i.attributeName && "true" === i.target.dataset.consent.toString() && i.target.attributes.getNamedItem(i.attributeName).value && (e(), n.disconnect()) })).observe(t, { attributes: !0 })) }, window.sdc.executeConsentByElement = function (t) { const e = window.sdc.consentIdMapping || {}, n = t.dataset.vendorName; if (!document.cookie) return; const i = document.cookie.split("; ").find((function (t) { return t.startsWith("consents=") })); if (!i) return; const o = i.split("=")[1]; if (!e) return; const s = e.filter((function (t) { return t.vendorName === n }))[0]; o.includes(":" + s.gdpId + ":") && s.active || document.querySelectorAll('[data-vendor-name="' + n + '"][data-consent="true"]').length ? t.dataset.consent = "true" : t.dataset.consent = "false" }, function () { const t = ["js"]; var e = "ontouchstart" in document.documentElement && /Android|iPhone|iPad|iPod|Mac OS/i.test(navigator.userAgent); window.sdc = window.sdc || {}, window.sdc.isDesktop = !e, window.sdc.isMobile = e, document.head.insertAdjacentHTML("beforeend", "<style>" + (window.sdc.isInApp ? ".ui-is-hidden--in-app" : e ? ".ui-is-hidden--mobile" : ".ui-is-hidden--desktop") + "{display: none !important;}</style>"), Array.prototype.push.apply(t, [window.sdc.isInApp && "ui-is-in-app", window.sdc.isDesktop && "ui-is-desktop", window.sdc.isMobile && !window.sdc.isInApp && "ui-is-mobile"].filter((function (t) { return t }))), document.documentElement.className = t.join(" "); const n = document.createElement("div"), i = document.documentElement; n.style.cssText = "overflow:scroll;width:50px;height:50px;position:absolute;visibility:hidden", i.appendChild(n), i.style.setProperty("--scrollbar-width", n.offsetWidth - n.clientWidth + "px"), i.removeChild(n) }(), window.navigator && navigator.serviceWorker && navigator.serviceWorker.getRegistrations().then((function (t) { t.forEach((function (t) { t.active.scriptURL.match("lazy-images-service-worker") && (t.unregister(), window.location.reload()) })) }));</script>
 
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./puzzles.css">
     <link rel="stylesheet" href="./article.css">
 </head>
 
@@ -467,7 +467,7 @@
                                 </a></strong></p>
                         <aside class="ui-article-aside" data-aside="2" data-float="true">
 
-                            <div class="ui-article-related ui-box" data-type="rounded outline" style="--padding: var(--space-600)">
+                            <div class="ui-article-related">
                                 <h3 class="display-1">More stories</h3>
                                 <ul class="wrap" style="--gap: var(--space-500)">
                                     <li><a href="#"> What is the 'quad-demic' - and how can you protect yourself?</a>
@@ -499,9 +499,9 @@
                    
                 </div>
                 <div class="ui-article-tags grid-flex" style="--basis:1;--grow:0;--gap: 0.75em;">
-                    <a href="#" class="ui-label" data-type="tag">Donald Trump</a>
-                    <a href="#" class="ui-label" data-type="tag">Russia</a>
-                    <a href="#" class="ui-label" data-type="tag">Ukraine</a>
+                    <a href="#" class="ui-label body-2" data-type="tag">Donald Trump</a>
+                    <a href="#" class="ui-label body-2" data-type="tag">Russia</a>
+                    <a href="#" class="ui-label body-2" data-type="tag">Ukraine</a>
                 </div>
                 <div class="ui-article-outbrain">
                     OUTBRAIN
