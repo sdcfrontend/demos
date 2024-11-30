@@ -34,6 +34,7 @@
   grid-template-areas: var(--areas);
   gap: var(--row-gap-l) var(--col-gap);
   position: relative;
+  min-height: 600px;
 }
 
 .ui-article a {
@@ -100,9 +101,6 @@
 
 /* SHARE */
 .ui-article-share {
-  height: 40px;
-  width: 200px;
-  display: flex;
   gap: 0.5em;
 }
 
@@ -139,7 +137,7 @@
 
 /*MEDIA*/
 .ui-article-media {
-  margin-block: 1em;
+  margin-block: 1%;
 }
 
 .ui-article-media:first-child {
@@ -173,7 +171,7 @@
 
 .advert-mpu {
   position: sticky;
-  top: 0;
+  top: 1em;
   width: 300px;
   height: 600px;
   background: var(--theme-surface-tile);
@@ -238,11 +236,12 @@
   }
 
   .ui-article-aside[data-aside="1"] {
-    height: 1500px;
+    height: calc(100% - 400px);
   }
 
   .ui-article-aside[data-aside="2"] {
-    top: calc(1500px + var(--row-gap-m));
+    top: auto;
+    bottom: 0;
   }
 
 }
