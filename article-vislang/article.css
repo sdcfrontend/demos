@@ -84,6 +84,7 @@
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
+  display: block;
   border: 1px solid var(--theme-surface-outline);
 }
 
