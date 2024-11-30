@@ -151,6 +151,7 @@
   width: var(--media-width);
   transform: translateX(-50%);
   left: 50%;
+  border-radius: var(--box-radius);
 }
 
 .ui-article-caption {
