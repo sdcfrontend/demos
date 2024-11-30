@@ -142,6 +142,10 @@
   margin-block: 1em;
 }
 
+.ui-article-media:first-child {
+  margin-top: 0;
+}
+
 .ui-article-media-item {
   height: auto;
   position: relative;
