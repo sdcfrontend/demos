@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chartbeat</title>
+  <style>
+    body,
+    html {
+      background: Canvas;
+      color-scheme: light dark;
+    }
+
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      font-family: sans-serif;
+    }
+
+    a {
+      margin: 8px;
+      padding: 8px;
+      border: 2px dotted #aaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div>Drag this link to your bookmarks:</div>
+  <a id="bookmarklet-a" class="bookmarklet" href="javascript:(function()%7Bdocument.querySelectorAll('.ui-story-headline').forEach((a)%20%3D%3E%20%7B%0A%0A%20%20%20%20if(a.dataset.title%20!%3D%3D%20a.textContent.trim())%7B%0A%20%20%20%20%20%20%20%20a.style.color%20%3D%20'red'%0A%20%20%20%20%7D%0A%7D)%0A%0Adocument.querySelectorAll('.ui-story-media').forEach((a)%20%3D%3E%20%7B%0A%0A%20%20%20%20if(a.src.match(%2F%5Ehttps%3A%5C%2F%5C%2Fimagetesting%5C.chartbeat%5C.com%2F))%7B%0A%20%20%20%20%20%20%20%20a.style.outline%20%3D%20'4px%20solid%20red'%3B%0A%20%20%20%20%7D%0A%7D)%7D)()%3B">Chartbeat testing</a>
+</body>
+
+</html>
