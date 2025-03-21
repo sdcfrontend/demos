@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script type="module" crossorigin src="./assets/index-j5qZ55nU.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B50qnU6q.css">
+  </head>
+  <body>
+    <!-- <canvas></canvas> -->
+    <div class="switcher" style="display: grid;gap: 12px;justify-content: left;"> 
+    <button onclick="location.reload()">Try autoplay with sound</button>
+    <h2>Switch video</h2>
+     <ul>
+        <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29')">Sky visits the UK's last aluminium plant</button></li>
+        <li><button onclick="config.loadSource('ref:21f0b8d8-e837-4d19-a8d8-02b877236240')">
+          Why is German defence spending getting a boost?
+        </button></li>
+        <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc')">
+          Badenoch asked if she's different to Reform
+      </button></li>
+     </ul>
+    </div>
+    <div class="video-player"></div>
+
+  <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  </body>
+</html>
