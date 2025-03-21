@@ -34,7 +34,7 @@
   grid-template-areas: var(--areas);
   gap: var(--row-gap-l) var(--col-gap);
   position: relative;
-  min-height: 600px;
+  min-height: 1000px;
 }
 
 .ui-article a {
@@ -119,6 +119,7 @@
   display: grid;
   font: var(--body-font);
   gap: 1.5em;
+  align-content: start;
 }
 
 .ui-article-header-group > *:not(.ui-article-headline),
