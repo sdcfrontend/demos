@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script type="module" crossorigin src="./assets/index-CTlEKjJb.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dr72ln5w.css">
+    <script type="module" crossorigin src="./assets/index-Bt8IgJIL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C8qXTg0H.css">
   </head>
   <body>
     <!-- <canvas></canvas> -->
     <div class="switcher" style="display: grid;gap: 12px;justify-content: left;"> 
     <button onclick="location.reload()">Try autoplay with sound</button>
+    <style>
+      .switcher {
+        list-style: inside;
+        display: grid;
+        gap: 3px;
+      }
+
+      .switcher button {
+        background: 0;
+        border: 0;
+        color: #188ae4;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: left;
+      }
+    </style>
     <h2>Switch video</h2>
-     <ul>
+     <ul class="switcher">
         <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29')">Sky visits the UK's last aluminium plant</button></li>
         <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc')">
           Badenoch asked if she's different to Reform
@@ -28,6 +44,7 @@
     </ul>
     </div>
     <div class="video-player"></div>
+    <!-- <video width="160" height="90" id="thumb"></video> -->
 
   <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
   </body>
