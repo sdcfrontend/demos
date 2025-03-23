@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script type="module" crossorigin src="./assets/main-CPGuBtVp.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-B5dhC-PO.css">
+    <script type="module" crossorigin src="./assets/main-BM9Z-GR9.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-aFMQKL2f.css">
   </head>
   <body>
     <!-- <canvas></canvas> -->
-    <div class="switcher" style="display: grid;gap: 12px;justify-content: left;"> 
-      <button onclick="location.reload()">Try autoplay with sound</button>  <button class="disable-ads active">Enable Ads</button>
+    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;"> 
+      <button onclick="location.reload()">Try autoplay with sound</button> 
+      <button class="disable-ads active">Enable Ads</button>
+      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''">16/9</button>
+      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'">9/16</button>
+    </div>
 
     <style>
       .switcher {
@@ -32,8 +36,9 @@
         padding: 0.2em;
       }
     </style>
-    <h2>Switch video</h2>
+   
      <ul class="switcher">
+      <h2>Switch video</h2>
         <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29')">Sky visits the UK's last aluminium plant</button></li>
         <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc')">
           Badenoch asked if she's different to Reform
@@ -45,7 +50,7 @@
      <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a')">Sunday Morning with Trevor Phillips</button></li>
     <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f')">LIVE STREAM</button></li>
     </ul>
-    </div>
+   
     <div class="video-player"></div>
     <!-- <video width="160" height="90" id="thumb"></video> -->
 
