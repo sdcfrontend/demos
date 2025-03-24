@@ -14,8 +14,8 @@
     <div class="switcher" style="display: flex;gap: 12px;justify-content: left;"> 
       <button onclick="location.reload()">Try autoplay with sound</button> 
       <button class="disable-ads active">Enable Ads</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''">16/9</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'">9/16</button>
+      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''" id="button-16-9">16/9</button>
+      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'" id="button-9-16">9/16</button>
     </div>
 
     <style>
@@ -39,16 +39,16 @@
    
      <ul class="switcher">
       <h2>Switch video</h2>
-        <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29')">Sky visits the UK's last aluminium plant</button></li>
-        <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc')">
-          Badenoch asked if she's different to Reform
+        <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click()">Sky visits the UK's last aluminium plant (9/16)</button></li>
+        <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click()">
+          Badenoch asked if she's different to Reform (9/16)
       </button></li>
-      <li><button onclick="config.loadSource('ref:18e6e5f0-a9ca-414b-99d2-a8720f2cdd29')">
-        Moment protesters disrupt House of Lords session
+      <li><button onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click()">
+        Donald Trump attends wrestling championship
     </button></li>
-    <li><button onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5')">The World with Yalda Hakim</button></li>
-     <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a')">Sunday Morning with Trevor Phillips</button></li>
-    <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f')">LIVE STREAM</button></li>
+    <li><button onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click()">The World with Yalda Hakim (16/9)</button></li>
+     <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()">Sunday Morning with Trevor Phillips (16/9)</button></li>
+    <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()">LIVE STREAM (16/9)</button></li>
     </ul>
    
     <div class="video-player"></div>
