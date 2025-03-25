@@ -1,54 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/main-Dsdd8BUX.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-C3W7RRxY.css">
-  </head>
-  <body>
-    <!-- <canvas></canvas> -->
-    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;"> 
-      <button onclick="location.reload()">Try autoplay with sound</button> 
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script type="module" crossorigin src="/assets/main-CL_xptkf.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-C3W7RRxY.css">
+</head>
+
+<body>
+  <style>
+    .switcher {
+      list-style: inside;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+      gap: 0.4em 2em;
+      padding: 0;
+    }
+
+    .switcher li {
+      padding: 0;
+    }
+
+    .switcher button {
+      background: 0;
+      border: 0;
+      color: #188ae4;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: left;
+      width: fit-content;
+      padding: 0.2em;
+    }
+
+    .wrap {
+      max-width: 1024px;
+      margin: auto;
+      display: grid;
+      gap: 0.7em;
+    }
+
+    h1 {
+      margin: 0.24em 0;
+    }
+  </style>
+  <div class="wrap">
+    <!-- <h1>News Player</h1> -->
+    <h2>Options:</h2>
+    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;">
+      <button onclick="location.reload()">Try autoplay with sound</button>
       <button class="disable-ads active">Enable Ads</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''" id="button-16-9">16/9</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'" id="button-9-16">9/16</button>
+      <button
+        onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''"
+        id="button-16-9">16/9</button>
+      <button
+        onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'"
+        id="button-9-16">9/16</button>
+        <button
+        onclick="config.controls.captionsButton.toggleCaptions()"
+        id="captions">Captions</button>
     </div>
 
-    <style>
-      .switcher {
-        list-style: inside;
-        display: grid;
-        gap: 3px;
-      }
 
-      .switcher button {
-        background: 0;
-        border: 0;
-        color: #188ae4;
-        font-weight: bold;
-        cursor: pointer;
-        text-align: left;
-        width: fit-content;
-        padding: 0.2em;
-      }
-    </style>
-   
-   <ul class="switcher">
-    <h2>Switch video</h2>
-      <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click()">Sky visits the UK's last aluminium plant (9/16)</button></li>
-      <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click()">
-        Badenoch asked if she's different to Reform (9/16)
-    </button></li>
-    <li><button onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click()">
-      Donald Trump attends wrestling championship (9/16)
-  </button></li>
-  <li><button onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click()">The World with Yalda Hakim (16/9)</button></li>
-   <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()">Sunday Morning with Trevor Phillips (16/9)</button></li>
-  <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()">LIVE STREAM (16/9)</button></li>
-  </ul>
+    <h2>Switch video:</h2>
+    <ul class="switcher">
+
+      <li><button
+          onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click()">Sky
+          visits the UK's last aluminium plant (9/16)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click()">
+          Badenoch asked if she's different to Reform (9/16)
+        </button></li>
+      <li><button
+          onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click()">
+          Donald Trump attends wrestling championship (9/16)
+        </button></li>
+      <li><button
+          onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click()">The
+          World with Yalda Hakim (16/9)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()">Sunday
+          Morning with Trevor Phillips (16/9)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()">LIVE
+          STREAM (16/9)</button></li>
+    </ul>
+  </div>
   <script>
     // Set up disable ads button
     const disableAdsButton = document.querySelector('.disable-ads');
@@ -58,14 +99,15 @@
       disableAdsButton.textContent = config.showAds ? 'Disable Ads' : 'Enable Ads';
     });
   </script>
-   
-    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
-      <div class="video-player-poster"></div>
-      <div class="video-player-body"></div>
-      <script></script>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
+    <div class="video-player-poster"></div>
+    <div class="video-player-body"></div>
+    <script></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-  </body>
+</body>
+
 </html>
