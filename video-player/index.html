@@ -5,9 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <script type="module" crossorigin src="./assets/main-CAehhbGr.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-DkD3XhZC.css">
+    <script type="module" crossorigin src="./assets/main-CXpaj9u2.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main-BNxcIQRM.css">
   </head>
   <body>
     <!-- <canvas></canvas> -->
@@ -50,9 +49,22 @@
    <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()">Sunday Morning with Trevor Phillips (16/9)</button></li>
   <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()">LIVE STREAM (16/9)</button></li>
   </ul>
+  <script>
+    // Set up disable ads button
+    const disableAdsButton = document.querySelector('.disable-ads');
+    disableAdsButton.addEventListener('click', () => {
+      disableAdsButton.classList.toggle('active');
+      config.showAds = !config.showAds;
+      disableAdsButton.textContent = config.showAds ? 'Disable Ads' : 'Enable Ads';
+    });
+  </script>
    
-    <div class="video-player"></div>
-    <!-- <video width="160" height="90" id="thumb"></video> -->
+    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
+      <div class="video-player-poster"></div>
+      <div class="video-player-body"></div>
+      <script></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
   </body>
