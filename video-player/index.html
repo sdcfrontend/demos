@@ -1,71 +1,298 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-    <script type="module" crossorigin src="./assets/main-C-U0lFCV.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/main-BYLLASvK.css">
-  </head>
-  <body>
-    <!-- <canvas></canvas> -->
-    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;"> 
-      <button onclick="location.reload()">Try autoplay with sound</button> 
-      <button class="disable-ads active">Enable Ads</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '16/9'); config.rootElement.style.maxWidth = ''" id="button-16-9">16/9</button>
-      <button onclick="config.rootElement.style.setProperty('--aspect-ratio', '9/16');config.rootElement.style.maxWidth = '300px'" id="button-9-16">9/16</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script type="module" crossorigin src="./assets/main-Dmm7-Dp_.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Bcc5OZXW.css">
+</head>
+
+<body>
+  <style>
+    .switcher {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.2em 1.5em;
+      padding: 0;
+    }
+
+    .switcher li {
+      padding: 0;
+    }
+
+    .switcher button {
+      background: 0;
+      border: 0;
+      color: #188ae4;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: left;
+      width: fit-content;
+      padding: 0.2em;
+    }
+
+    .switcher button[aria-pressed="true"],
+    .switcher button.active {
+      color: white;
+      background: #188ae4;
+      border-radius: 4px;
+      padding: 0.2em 2px;
+    }
+
+    .wrap {
+      max-width: 1024px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      gap: 1em;
+    }
+
+    h1 {
+      margin: 0.24em 0;
+    }
+
+
+  </style>
+  <div class="wrap">
+    <!-- <h1>News Player</h1> -->
+    <h2>Options:</h2>
+    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;">
+      <button onclick="location.reload()">Try autoplay with sound</button>
+      <div style="display: flex; gap: 8px;">
+        <button onclick="toggleAds(false)" id="disableAds" class="active">Ads disabled</button>
+        <button onclick="toggleAds(true)" id="enableAds">Ads enabled</button>
+      </div>
+      <button
+        onclick="toggleAspectRatio('16/9')"
+        id="button-16-9">16/9</button>
+      <button
+        onclick="toggleAspectRatio('9/16')"
+        id="button-9-16">9/16</button>
+        <button
+        onclick="config.controls.captionsButton.toggleCaptions();this.classList.toggle('active')"
+        id="captions">Captions</button>
     </div>
 
-    <style>
-      .switcher {
-        list-style: inside;
-        display: grid;
-        gap: 3px;
+    <script>
+      function removeActiveState() {
+        const buttons = document.querySelectorAll('.switch-videos button:not([id^="button-"])');
+        buttons.forEach(button => {
+          button.classList.remove('active');
+        });
       }
+    </script>
+    <h2>Switch video:</h2>
+    <ul class="switcher switch-videos">
 
-      .switcher button {
-        background: 0;
-        border: 0;
-        color: #188ae4;
-        font-weight: bold;
-        cursor: pointer;
-        text-align: left;
-        width: fit-content;
-        padding: 0.2em;
-      }
-    </style>
-   
-   <ul class="switcher">
-    <h2>Switch video</h2>
-      <li><button onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click()">Sky visits the UK's last aluminium plant (9/16)</button></li>
-      <li><button onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click()">
-        Badenoch asked if she's different to Reform (9/16)
-    </button></li>
-    <li><button onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click()">
-      Donald Trump attends wrestling championship (9/16)
-  </button></li>
-  <li><button onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click()">The World with Yalda Hakim (16/9)</button></li>
-   <li><button onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()">Sunday Morning with Trevor Phillips (16/9)</button></li>
-  <li><button onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()">LIVE STREAM (16/9)</button></li>
-  </ul>
+      <li><button
+          onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">Sky
+          visits the UK's last aluminium plant (9/16)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">
+          Badenoch asked if she's different to Reform (9/16)
+        </button></li>
+      <li><button
+          onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">
+          Donald Trump attends wrestling championship (9/16)
+        </button></li>
+      <li><button
+          onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">The
+          World with Yalda Hakim (16/9)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">Sunday
+          Morning with Trevor Phillips (16/9)</button></li>
+      <li><button
+          onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">LIVE
+          STREAM (16/9)</button></li>
+    </ul>
+  </div>
   <script>
-    // Set up disable ads button
-    const disableAdsButton = document.querySelector('.disable-ads');
-    disableAdsButton.addEventListener('click', () => {
-      disableAdsButton.classList.toggle('active');
-      config.showAds = !config.showAds;
-      disableAdsButton.textContent = config.showAds ? 'Disable Ads' : 'Enable Ads';
+    // Set up ads toggle
+    function toggleAds(enabled) {
+      const config = window.config;
+      config.showAds = enabled;
+      document.getElementById('enableAds').classList.toggle('active', enabled);
+      document.getElementById('disableAds').classList.toggle('active', !enabled);
+    }
+
+    // Initialize ads buttons
+    const enableAdsButton = document.getElementById('enableAds');
+    const disableAdsButton = document.getElementById('disableAds');
+    enableAdsButton.classList.toggle('active', window.config.showAds);
+    disableAdsButton.classList.toggle('active', !window.config.showAds);
+
+    // Set up aspect ratio buttons
+    function toggleAspectRatio(aspectRatio) {
+      const config = window.config;
+      config.rootElement.style.setProperty('--aspect-ratio', aspectRatio);
+      if (aspectRatio === '16/9') {
+        config.rootElement.style.maxWidth = '';
+      } else if (aspectRatio === '9/16') {
+        config.rootElement.style.maxWidth = '300px';
+      }
+      const buttons = document.querySelectorAll('.switcher button[id^="button-"]');
+      buttons.forEach(button => {
+        button.classList.remove('active');
+      });
+      const activeButton = document.querySelector(`#button-${aspectRatio.replace('/', '-')}`);
+      if (activeButton) {
+        activeButton.classList.add('active');
+      }
+    }
+
+    // Initialize aspect ratio buttons
+    const currentAspectRatio = window.config.rootElement.style.getPropertyValue('--aspect-ratio');
+    const activeButton = document.querySelector(`#button-${currentAspectRatio.replace('/', '-')}`);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
+
+    // Set up captions button
+    const captionsButton = document.querySelector('#captions');
+    captionsButton.addEventListener('click', () => {
+      const config = window.config;
+      config.controls.captionsButton.toggleCaptions();
+      captionsButton.classList.toggle('active', config.captionsEnabled);
     });
+
+    // Initialize captions button
+    captionsButton.classList.toggle('active', window.config.captionsEnabled);
+
+    // Set up video selection buttons
+    const videoButtons = document.querySelectorAll('.switcher button:not([id^="button-"])');
+    videoButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all video buttons
+        videoButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to the clicked button
+        button.classList.add('active');
+      });
+    });
+
+    // Initialize video selection
+    const currentSource = window.config.videoTag.src;
+    const currentButton = Array.from(videoButtons).find(button => {
+      const source = button.getAttribute('onclick').match(/'ref:([^']+)'/);
+      return source && source[1] === currentSource.split('/').pop();
+    });
+    if (currentButton) {
+      currentButton.classList.add('active');
+    }
   </script>
-   
-    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
-      <div class="video-player-poster"></div>
-      <div class="video-player-body"></div>
-      <script></script>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+  <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
+    <div class="video-player-poster"></div>
+    <div class="video-player-body"></div>
+    <script></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-  </body>
+
+  <!-- Documentation -->
+  <div class="wrap">
+    <div class="docs">
+      <h2>Video Player features</h2>
+      
+      <h3>Controls</h3>
+      <ul>
+      <li><strong>Play/Pause</strong> - Toggle video playback</li>
+      <li><strong>Playback Speed</strong> - Adjust speed (0.5x, 1x, 2x)</li>
+      <li><strong>Skip Forward/Backward</strong> - Skip 10 seconds</li>
+      <li><strong>Volume</strong> - Mute/unmute and adjust volume</li>
+      <li><strong>Captions</strong> - Toggle captions on/off</li>
+      <li><strong>PiP</strong> - Toggle Picture-in-Picture mode</li>
+      <li><strong>Fullscreen</strong> - Toggle fullscreen mode</li>
+    </ul>
+
+    <h3>Options</h3>
+    <ul>
+      <li><strong>Aspect Ratio</strong> - Switch between 16:9 and 9:16</li>
+      <li><strong>Ads</strong> - Enable or disable video ads</li>
+      <li><strong>Autoplay</strong> - Try autoplay with sound</li>
+    </ul>
+
+    <h3>Features</h3>
+    <ul>
+      <li>Live streaming support</li>
+      <li>Seek bar with thumbnails</li>
+      <li>Customizable controls</li>
+      <li>Responsive design</li>
+      <li>Picture-in-Picture mode</li>
+      <li>Fullscreen support</li>
+      <li>Volume control</li>
+      <li>Playback speed control</li>
+      <li>Captions support</li>
+      <li><strong>Accessibility</strong> - All controls are properly labeled and keyboard accessible</li>
+    </ul>
+
+    <h3>Accessibility Features</h3>
+    <ul>
+      <li>All buttons are properly labeled</li>
+      <li>Keyboard navigation support</li>
+      <li>Screen reader compatibility</li>
+      <li>High contrast color scheme</li>
+      <li>Focus indicators for interactive elements</li>
+    </ul>
+
+    <h3>Usage</h3>
+    <p>Click the video player to interact with controls. Use the options panel above to customize your viewing experience.</p>
+    <p><strong>Accessibility Tips:</strong> All controls can be accessed via keyboard. Use Tab to navigate between controls and Space/Enter to activate them.</p>
+  </div>
+
+  <style>
+    .docs {
+      margin-top: 2em;
+      padding: 1.5em;
+      background: #f6f8fa;
+      border-radius: 6px;
+      border: 1px solid #e1e4e8;
+    }
+
+    .docs h2 {
+      margin-top: 0;
+      color: #24292e;
+      font-size: 1.5em;
+      border-bottom: 1px solid #e1e4e8;
+      padding-bottom: 0.5em;
+    }
+
+    .docs h3 {
+      color: #24292e;
+      font-size: 1.25em;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .docs ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .docs li {
+      padding: 0.5em 0;
+      border-bottom: 1px solid #e1e4e8;
+    }
+
+    .docs li:last-child {
+      border-bottom: none;
+    }
+
+    .docs strong {
+      color: #24292e;
+      font-weight: 600;
+    }
+
+    .docs p {
+      margin-top: 1em;
+      color: #57606a;
+    }
+  </style>
+  </div>
+</body>
 </html>
