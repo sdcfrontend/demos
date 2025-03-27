@@ -109,6 +109,8 @@
           onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">LIVE
           STREAM (16/9)</button></li>
     </ul>
+    <h2>Load M3u8 file</h2>
+    <div class="switcher" style="display: flex; gap: 0.5em"><input style="padding: 3px;width: max(50%, 180px)" type="text" id="load-m3u8"><button onclick="const f = document.querySelector('#load-m3u8').value.trim(); if(f && f.match(/\.m3u8$/)){config.loadSource(null, f)}">Load</button></div>
   </div>
   <script>
     // Set up ads toggle
