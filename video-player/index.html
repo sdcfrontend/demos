@@ -1,300 +1,368 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <script type="module" crossorigin src="./assets/main-DisQH_sI.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CV7hRkSi.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Player Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <style>
+        button.active {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+    </style>
+  <script type="module" crossorigin src="./assets/main-CbudQgDg.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-8-shMZNW.css">
 </head>
 
-<body>
-  <style>
-    .switcher {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.2em 1.5em;
-      padding: 0;
-    }
+<body class="bg-gray-100">
+    <div class="w-full max-w-[1120px] mx-auto py-4">
+        <h1 class="text-3xl font-bold text-gray-800 mb-8">News Player Demo</h1>
 
-    .switcher li {
-      padding: 0;
-    }
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Video Player Section -->
+            <div class="md:col-span-2">
+                <div id="player-container" class="aspect-video rounded-lg mb-4">
+                    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
+                        <div class="video-player-poster"></div>
+                        <div class="video-player-body"></div>
+                        <div class="video-player-captions"></div>
+                    </div>
+                </div>
 
-    .switcher button {
-      background: 0;
-      border: 0;
-      color: #188ae4;
-      font-weight: bold;
-      cursor: pointer;
-      text-align: left;
-      width: fit-content;
-      padding: 0.2em;
-    }
+                <!-- Settings Panel -->
+                <div class="space-y-4 bg-white p-6">
+                    <div class="flex items-center gap-4">
+                        <label class="text-gray-700">Captions</label>
+                        <div class="flex gap-2">
+                            <button 
+                                id="captions-disable" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
+                                onclick="config.controls.captionsButton.toggleCaptions(); this.classList.add('active'); document.getElementById('captions-enable').classList.remove('active')">
+                                Disable
+                            </button>
+                            <button 
+                                id="captions-enable" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white"
+                                onclick="config.controls.captionsButton.toggleCaptions(); this.classList.add('active'); document.getElementById('captions-disable').classList.remove('active')">
+                                Enable
+                            </button>
+                        </div>
+                    </div>
 
-    .switcher button[aria-pressed="true"],
-    .switcher button.active {
-      color: white;
-      background: #188ae4;
-      border-radius: 4px;
-      padding: 0.2em 2px;
-    }
+                    <div class="flex items-center gap-4">
+                        <label class="text-gray-700">Aspect Ratio</label>
+                        <div class="flex gap-2">
+                            <button 
+                                id="button-16-9" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
+                                onclick="toggleAspectRatio('16/9')">
+                                16:9
+                            </button>
+                            <button 
+                                id="button-9-16" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white"
+                                onclick="toggleAspectRatio('9/16')">
+                                9:16
+                            </button>
+                        </div>
+                    </div>
 
-    .wrap {
-      max-width: 1024px;
-      width: 100%;
-      margin: auto;
-      display: grid;
-      gap: 1em;
-    }
+                    <div class="flex items-center gap-4">
+                        <label class="text-gray-700">Ads</label>
+                        <div class="flex gap-2">
+                            <button 
+                                id="disableAds" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
+                                onclick="toggleAds(false)">
+                                Disabled
+                            </button>
+                            <button 
+                                id="enableAds" 
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white"
+                                onclick="toggleAds(true)">
+                                Enabled
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Video Manifest Switcher -->
+            <div class="bg-white p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Video Manifests</h2>
+                <div class="space-y-4 video-selector">
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:0039b167-1664-4dc1-bb91-765f2a147d21');document.querySelector('#button-16-9').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active">
+                        The impact of US tariffs (16/9)
+                    </button>
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                        Sky visits the UK's last aluminium plant (9/16)
+                    </button>
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                        Badenoch asked if she's different to Reform (9/16)
+                    </button>
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                        The World with Yalda Hakim (16/9)
+                    </button>
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                        Sunday Morning with Trevor Phillips (16/9)
+                    </button>
+                    <button 
+                        onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()"
+                        class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
+                        LIVE STREAM (16/9)
+                    </button>
+                </div>
 
-    h1 {
-      margin: 0.24em 0;
-    }
-
-
-  </style>
-  <div class="wrap">
-    <!-- <h1>News Player</h1> -->
-    <h2>Options:</h2>
-    <div class="switcher" style="display: flex;gap: 12px;justify-content: left;">
-      <button onclick="location.reload()">Try autoplay with sound</button>
-      <div style="display: flex; gap: 8px;">
-        <button onclick="toggleAds(false)" id="disableAds" class="active">Ads disabled</button>
-        <button onclick="toggleAds(true)" id="enableAds">Ads enabled</button>
-      </div>
-      <button
-        onclick="toggleAspectRatio('16/9')"
-        id="button-16-9">16/9</button>
-      <button
-        onclick="toggleAspectRatio('9/16')"
-        id="button-9-16">9/16</button>
-        <button
-        onclick="config.controls.captionsButton.toggleCaptions();this.classList.toggle('active')"
-        id="captions">Captions</button>
+                <!-- M3U8 Input Section -->
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Load M3U8</h3>
+                    <div class="flex items-center gap-4">
+                        <input 
+                            type="text" 
+                            id="m3u8-url" 
+                            class="flex-1 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            placeholder="Enter M3U8 URL">
+                        <button 
+                            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                            onclick="loadM3U8()">
+                            Load
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Documentation Section -->
+    <div class="w-full max-w-[1120px] mx-auto">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">News Player Features</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Accessibility Features -->
+            <div class="bg-white p-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Accessibility</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Keyboard Navigation Support</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Screen Reader Compatibility</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Customizable Font Sizes</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>High Contrast Mode</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Advanced Features -->
+            <div class="bg-white p-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Advanced Features</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>DRM Support (Widevine, PlayReady)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>HLS Streaming Support</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>IMA3 Pre/Post Roll Ad Support</span>
+                    </li>
+                   
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Picture-in-Picture (PiP) Mode</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Fullscreen Support</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="bg-white p-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Player Controls</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Play/Pause</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Volume Control</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Seek Bar with Thumbnails</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Playback Speed Control (0.5x, 1x, 2x)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Customizable Controls Layout and Theme</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="bg-white p-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Additional Features</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Multiple Aspect Ratios (16:9, 9:16)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Custom Video Sources</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span>Live Stream Support with 30s Buffer</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
     <script>
-      function removeActiveState() {
-        const buttons = document.querySelectorAll('.switch-videos button:not([id^="button-"])');
-        buttons.forEach(button => {
-          button.classList.remove('active');
-        });
-      }
+        // Initialize the video player
+        window.config = {
+            rootElement: document.querySelector('.video-player'),
+            showAds: false,
+            videoTag: document.querySelector('.video-player-body'),
+            captionsEl: document.querySelector('.video-player-captions')
+        };
+
+        function removeActiveState() {
+            const buttons = document.querySelectorAll('.video-selector button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+        }
+
+        function toggleAds(enabled) {
+            window.config.showAds = enabled;
+            document.getElementById('enableAds').classList.toggle('active', enabled);
+            document.getElementById('disableAds').classList.toggle('active', !enabled);
+        }
+
+        function toggleAspectRatio(aspectRatio) {
+            const container = document.querySelector('.video-player');
+            container.style.setProperty('--aspect-ratio', aspectRatio);
+            if (aspectRatio === '16/9') {
+                document.getElementById('button-16-9').classList.add('active');
+                document.getElementById('button-9-16').classList.remove('active');
+                container.style.maxWidth = '';
+            } else if (aspectRatio === '9/16') {
+                document.getElementById('button-16-9').classList.remove('active');
+                document.getElementById('button-9-16').classList.add('active');
+                container.style.maxWidth = '300px';
+            }
+        }
+
+        function loadM3U8() {
+            const url = document.getElementById('m3u8-url').value;
+            if (url) {
+                window.config.loadSource(null, url);
+            }
+        }
+
+        // Initialize buttons
+     
+            // Store the current ad state
+            window.config.showAds = false;
+            
+            // Function to load video source while maintaining ad state
+            function loadVideoSource(source) {
+                window.config.loadSource(source);
+                // Update the UI to reflect the current ad state
+            }
+
+            // Initialize captions buttons
+            const captionsDisableButton = document.getElementById('captions-disable');
+            const captionsEnableButton = document.getElementById('captions-enable');
+            
+            // Set default state (disabled)
+            captionsDisableButton.classList.add('active');
+            captionsEnableButton.classList.remove('active');
+            
+            // Set default aspect ratio
+            const container = document.querySelector('.video-player');
+            container.style.setProperty('--aspect-ratio', '16/9');
+            container.style.maxWidth = '';
+            document.getElementById('button-16-9').classList.add('active');
+            document.getElementById('button-9-16').classList.remove('active');
+            
+            // Set default ads state
+            document.getElementById('disableAds').classList.add('active');
+            document.getElementById('enableAds').classList.remove('active');
+            
+            // Load default video while maintaining ad state
+            loadVideoSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');
+        
     </script>
-    <h2>Switch source:</h2>
-    <ul class="switcher switch-videos">
-
-      <li><button
-          onclick="config.loadSource('ref:f8e2f37d-62ab-4811-9c69-b1dac023cf29');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">Sky
-          visits the UK's last aluminium plant (9/16)</button></li>
-      <li><button
-          onclick="config.loadSource('ref:a11413f1-03f8-4bc2-8f4b-d4ba147831bc');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">
-          Badenoch asked if she's different to Reform (9/16)
-        </button></li>
-      <li><button
-          onclick="config.loadSource('ref:16472ea1-20ed-4e58-b89f-ae0a3fe5389f');document.querySelector('#button-9-16').click();removeActiveState();this.classList.add('active')">
-          Donald Trump attends wrestling championship (9/16)
-        </button></li>
-      <li><button
-          onclick="config.loadSource('ref:0e42898e-d81e-45e7-a54d-d29295e668a5');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">The
-          World with Yalda Hakim (16/9)</button></li>
-      <li><button
-          onclick="config.loadSource('ref:80a5ecdc-cdb6-4df6-ae4e-1fc7f7ef619a');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">Sunday
-          Morning with Trevor Phillips (16/9)</button></li>
-      <li><button
-          onclick="config.loadSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click();removeActiveState();this.classList.add('active')">LIVE
-          STREAM (16/9)</button></li>
-    </ul>
-    <h2>Load M3u8 file</h2>
-    <div class="switcher" style="display: flex; gap: 0.5em"><input style="padding: 3px;width: max(50%, 180px)" type="text" id="load-m3u8"><button onclick="const f = document.querySelector('#load-m3u8').value.trim(); if(f && f.match(/\.m3u8$/)){config.loadSource(null, f)}">Load</button></div>
-  </div>
-  <script>
-    // Set up ads toggle
-    function toggleAds(enabled) {
-      const config = window.config;
-      config.showAds = enabled;
-      document.getElementById('enableAds').classList.toggle('active', enabled);
-      document.getElementById('disableAds').classList.toggle('active', !enabled);
-    }
-
-    // Initialize ads buttons
-    const enableAdsButton = document.getElementById('enableAds');
-    const disableAdsButton = document.getElementById('disableAds');
-    enableAdsButton.classList.toggle('active', window.config.showAds);
-    disableAdsButton.classList.toggle('active', !window.config.showAds);
-
-    // Set up aspect ratio buttons
-    function toggleAspectRatio(aspectRatio) {
-      const config = window.config;
-      config.rootElement.style.setProperty('--aspect-ratio', aspectRatio);
-      if (aspectRatio === '16/9') {
-        config.rootElement.style.maxWidth = '';
-      } else if (aspectRatio === '9/16') {
-        config.rootElement.style.maxWidth = '300px';
-      }
-      const buttons = document.querySelectorAll('.switcher button[id^="button-"]');
-      buttons.forEach(button => {
-        button.classList.remove('active');
-      });
-      const activeButton = document.querySelector(`#button-${aspectRatio.replace('/', '-')}`);
-      if (activeButton) {
-        activeButton.classList.add('active');
-      }
-    }
-
-    // Initialize aspect ratio buttons
-    const currentAspectRatio = window.config.rootElement.style.getPropertyValue('--aspect-ratio');
-    const activeButton = document.querySelector(`#button-${currentAspectRatio.replace('/', '-')}`);
-    if (activeButton) {
-      activeButton.classList.add('active');
-    }
-
-    // Set up captions button
-    const captionsButton = document.querySelector('#captions');
-    captionsButton.addEventListener('click', () => {
-      const config = window.config;
-      config.controls.captionsButton.toggleCaptions();
-      captionsButton.classList.toggle('active', config.captionsEnabled);
-    });
-
-    // Initialize captions button
-    captionsButton.classList.toggle('active', window.config.captionsEnabled);
-
-    // Set up video selection buttons
-    const videoButtons = document.querySelectorAll('.switcher button:not([id^="button-"])');
-    videoButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Remove active class from all video buttons
-        videoButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to the clicked button
-        button.classList.add('active');
-      });
-    });
-
-    // Initialize video selection
-    const currentSource = window.config.videoTag.src;
-    const currentButton = Array.from(videoButtons).find(button => {
-      const source = button.getAttribute('onclick').match(/'ref:([^']+)'/);
-      return source && source[1] === currentSource.split('/').pop();
-    });
-    if (currentButton) {
-      currentButton.classList.add('active');
-    }
-  </script>
-
-  <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9">
-    <div class="video-player-poster"></div>
-    <div class="video-player-body"></div>
-    <script></script>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-  <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-
-  <!-- Documentation -->
-  <div class="wrap">
-    <div class="docs">
-      <h2>Video Player features</h2>
-      
-      <h3>Controls</h3>
-      <ul>
-      <li><strong>Play/Pause</strong> - Toggle video playback</li>
-      <li><strong>Playback Speed</strong> - Adjust speed (0.5x, 1x, 2x)</li>
-      <li><strong>Skip Forward/Backward</strong> - Skip 10 seconds</li>
-      <li><strong>Volume</strong> - Mute/unmute and adjust volume</li>
-      <li><strong>Captions</strong> - Toggle captions on/off</li>
-      <li><strong>PiP</strong> - Toggle Picture-in-Picture mode</li>
-      <li><strong>Fullscreen</strong> - Toggle fullscreen mode</li>
-    </ul>
-
-    <h3>Options</h3>
-    <ul>
-      <li><strong>Aspect Ratio</strong> - Switch between 16:9 and 9:16</li>
-      <li><strong>Ads</strong> - Enable or disable video ads</li>
-      <li><strong>Autoplay</strong> - Try autoplay with sound</li>
-    </ul>
-
-    <h3>Features</h3>
-    <ul>
-      <li>Live streaming support</li>
-      <li>Seek bar with thumbnails</li>
-      <li>Customizable controls</li>
-      <li>Responsive design</li>
-      <li>Picture-in-Picture mode</li>
-      <li>Fullscreen support</li>
-      <li>Volume control</li>
-      <li>Playback speed control</li>
-      <li>Captions support</li>
-      <li><strong>Accessibility</strong> - All controls are properly labeled and keyboard accessible</li>
-    </ul>
-
-    <h3>Accessibility Features</h3>
-    <ul>
-      <li>All buttons are properly labeled</li>
-      <li>Keyboard navigation support</li>
-      <li>Screen reader compatibility</li>
-      <li>High contrast color scheme</li>
-      <li>Focus indicators for interactive elements</li>
-    </ul>
-
-    <h3>Usage</h3>
-    <p>Click the video player to interact with controls. Use the options panel above to customize your viewing experience.</p>
-    <p><strong>Accessibility Tips:</strong> All controls can be accessed via keyboard. Use Tab to navigate between controls and Space/Enter to activate them.</p>
-  </div>
-
-  <style>
-    .docs {
-      margin-top: 2em;
-      padding: 1.5em;
-      background: #f6f8fa;
-      border-radius: 6px;
-      border: 1px solid #e1e4e8;
-    }
-
-    .docs h2 {
-      margin-top: 0;
-      color: #24292e;
-      font-size: 1.5em;
-      border-bottom: 1px solid #e1e4e8;
-      padding-bottom: 0.5em;
-    }
-
-    .docs h3 {
-      color: #24292e;
-      font-size: 1.25em;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-    }
-
-    .docs ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-    }
-
-    .docs li {
-      padding: 0.5em 0;
-      border-bottom: 1px solid #e1e4e8;
-    }
-
-    .docs li:last-child {
-      border-bottom: none;
-    }
-
-    .docs strong {
-      color: #24292e;
-      font-weight: 600;
-    }
-
-    .docs p {
-      margin-top: 1em;
-      color: #57606a;
-    }
-  </style>
-  </div>
 </body>
 </html>
