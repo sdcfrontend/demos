@@ -14,8 +14,8 @@
             color: white !important;
         }
     </style>
-  <script type="module" crossorigin src="./assets/main-DGKcMb_q.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-Cl4IMqhA.css">
+  <script type="module" crossorigin src="./assets/main-JYaFWeGm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-bDSrvg6a.css">
 </head>
 
 <body class="bg-gray-100">
@@ -411,6 +411,9 @@
             const url = document.getElementById('m3u8-url').value;
             if (url) {
                 const rootElement = document.querySelector('.video-player');
+                rootElement.config.autoPlay = true;
+                rootElement.config.playerBody.removeAttribute('inert');
+                rootElement.config.videoTag.autoplay = true;
                 rootElement.loadHls(url);
             }
         }
@@ -418,6 +421,9 @@
         // Function to load video source while maintaining ad state
         function loadVideoSource(source) {
             const rootElement = document.querySelector('.video-player');
+            rootElement.config.autoPlay = true;
+            rootElement.config.playerBody.removeAttribute('inert');
+            rootElement.config.videoTag.autoplay = true;
             rootElement.loadManifest(source);
             // Update the UI to reflect the current ad state
         }
