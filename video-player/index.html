@@ -13,6 +13,24 @@
             background-color: #3b82f6 !important;
             color: white !important;
         }
+
+        @media all and (prefers-color-scheme: dark) {
+            .bg-gray-100:not(.active) {
+                background-color: #1e1e1e !important;
+            }
+
+            .text-gray-800:not(.active) {
+                color: #f8f8f8 !important;
+            }
+
+            .text-gray-700:not(.active) {
+                color: #afafaf !important;
+            }
+
+            .bg-white:not(.active) {
+                background-color: #2f2f2f !important;
+            }
+        }
     </style>
   <script type="module" crossorigin src="./assets/main-JYaFWeGm.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-bDSrvg6a.css">
@@ -161,7 +179,7 @@
                     <button 
                         onclick="removeActiveState(); this.classList.add('active'); loadVideoSource('ref:89badd34-6615-4a81-aa2e-43571ddf347f');document.querySelector('#button-16-9').click()"
                         class="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200">
-                        LIVE STREAM (16/9)
+                        Sky News Live Stream (16/9)
                     </button>
                 </div>
 
