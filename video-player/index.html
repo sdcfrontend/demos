@@ -32,7 +32,7 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="./assets/main-BIjp1OGq.js"></script>
+  <script type="module" crossorigin src="./assets/main-Ckag5fuf.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/main-CNsfkn7C.css">
 </head>
 
@@ -416,11 +416,12 @@
               
                 document.getElementById('button-9-16').classList.remove('active');
                 document.getElementById('button-16-9').classList.add('active');
+                container.style.setProperty('--aspect-ratio', '16/9');
             } else if (aspectRatio === '9/16') {
                 document.getElementById('button-16-9').classList.remove('active');
                 document.getElementById('button-9-16').classList.add('active');
         
-        
+                container.style.setProperty('--aspect-ratio', '9/16');
             }
         }
 
