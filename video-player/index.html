@@ -32,8 +32,9 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="./assets/main-Ckag5fuf.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CNsfkn7C.css">
+  <script type="module" crossorigin src="./assets/main-Kl0IlFv9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/main-BZ2G5OdN.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-NJg2Khjl.css">
 </head>
 
 <body class="bg-gray-100">
@@ -58,7 +59,7 @@
                 </div>
 
                 <div id="player-container" class="aspect-video rounded-lg mb-4">
-                    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9" role="region" aria-label="video">
+                    <div class="video-player" data-auto-play="true" style="--aspect-ratio: 16/9" role="region" aria-label="video" id="video-1">
                       <button class="video-player-poster">
                         <img src="https://e3.365dm.com/25/03/768x432/skynews-ed-conway-tarriffs_6862649.jpg?20250320220250" alt="" aria-hidden="true">
                         <span class="visually-hidden">Play video: The impact of US tariffs on UK industry</span> 
@@ -67,26 +68,9 @@
                             <div data-role="label-hidden-text" class="u-hide-visually">Video, 1 minute 11 seconds</div>
                             <span aria-hidden="true">14:42</span>
                         </div>
-                    </button>
+                        </button>
                         <div class="video-player-body"></div>
-                        <script>
-                          document.currentScript.parentNode.init = {
-                            aspectRatio: '16/9',
-                            showAds: false,
-                            autoPlay: true,
-                            accountId: '6058004172001',
-                            videoId: 'ref:0039b167-1664-4dc1-bb91-765f2a147d21',
-                            policyKey: 'BCpkADawqM3o4nRENnJkSC77aIstiiHQMEaI_dlj2r_TxSpGBXpkF-L6UaPoAQumRNVgcBTN4OJjlKfjV6JQe3eNPmYMGAgUGvNv2Rxu6GX7KzUlKhLuurt5blL_7uhfKB3_xmcku_uW7IV0',
-                            manifestUrl: 'https://edge.api.brightcove.com/playback/v1/accounts/${accountId}/videos/${videoId}',
-                            captionsLanguage: {
-                              vod: ['English'],
-                              live: ['ENG_80_888']
-                            }
-                          }
-                        </script>
                     </div>
-
-                    
                 </div>
 
                 <!-- Settings Panel -->
@@ -132,14 +116,14 @@
                         <div class="flex gap-2">
                             <button 
                                 id="disableAds" 
-                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
-                                onclick="if (!this.classList.contains('active')) { toggleAds(false); this.classList.remove('active'); document.getElementById('enableAds').classList.add('active'); }">
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white "
+                                onclick="toggleAds(false); this.classList.add('active'); document.getElementById('enableAds').classList.remove('active');">
                                 Disabled
                             </button>
                             <button 
                                 id="enableAds" 
-                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white"
-                                onclick="if (!this.classList.contains('active')) { toggleAds(true); this.classList.add('active'); document.getElementById('disableAds').classList.remove('active'); }">
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
+                                onclick="toggleAds(true); this.classList.add('active'); document.getElementById('disableAds').classList.remove('active');">
                                 Enabled
                             </button>
                         </div>
@@ -416,12 +400,13 @@
               
                 document.getElementById('button-9-16').classList.remove('active');
                 document.getElementById('button-16-9').classList.add('active');
-                container.style.setProperty('--aspect-ratio', '16/9');
+                container.style.setProperty('--aspect-ratio', '16/9')
             } else if (aspectRatio === '9/16') {
                 document.getElementById('button-16-9').classList.remove('active');
                 document.getElementById('button-9-16').classList.add('active');
+                container.style.setProperty('--aspect-ratio', '9/16')
         
-                container.style.setProperty('--aspect-ratio', '9/16');
+        
             }
         }
 
@@ -446,11 +431,6 @@
             // Update the UI to reflect the current ad state
         }
 
-        // Initialize buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            const rootElement = document.querySelector('.video-player');
-            rootElement.config.showAds = false;
-        });
     </script>
 </body>
 </html>

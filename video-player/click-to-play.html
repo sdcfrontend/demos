@@ -32,8 +32,9 @@
             }
         }
     </style>
-  <script type="module" crossorigin src="./assets/main-Ckag5fuf.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/main-CNsfkn7C.css">
+  <script type="module" crossorigin src="./assets/click-to-play-CmVIv9mq.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/main-BZ2G5OdN.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-NJg2Khjl.css">
 </head>
 
 <body class="bg-gray-100">
@@ -47,10 +48,11 @@
                 <div class="mb-4">
                     <div class="">
                         <nav class="-mb-px flex space-x-4" aria-label="Tabs">
-                            <a href="index.html" class="px-4 py-3 bg-white text-gray-700 rounded">
+                            <a href="index.html" class="px-4 py-3 bg-white text-gray-700 rounded active:bg-blue-500 active:text-white">
+                           
                                 Auto Play
                             </a>
-                            <a href="click-to-play.html" class="px-4 py-3 bg-white text-gray-700 rounded active:bg-blue-500 active:text-white active">
+                            <a href="click-to-play.html" class="px-4 py-3 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active">
                                 Click to Play
                             </a>
                         </nav>
@@ -58,35 +60,18 @@
                 </div>
 
                 <div id="player-container" class="aspect-video rounded-lg mb-4">
-                    <div class="video-player" data-auto-play="false" style="--aspect-ratio: 16/9" role="region" aria-label="video">
-                        <button class="video-player-poster">
-                            <img src="https://e3.365dm.com/25/03/768x432/skynews-ed-conway-tarriffs_6862649.jpg?20250320220250" alt="" aria-hidden="true">
-                            <span class="visually-hidden">Play video: The impact of US tariffs on UK industry</span> 
-                            <div class="ui-label" data-role="label" data-size="" data-type="media" data-icon="play">
-                                <svg fill="none" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="m5.77166 17.4559c-.88029.7073-1.95313.6824-2.77166.1704v-17.252639c.81853-.512 1.89138-.536869 2.77166.170399l8.45794 6.79552c1.0272.82535 1.0272 2.4955 0 3.32082z"></path></svg> 
-                                <div data-role="label-hidden-text" class="u-hide-visually">Video, 1 minute 11 seconds</div>
-                                <span aria-hidden="true">14:42</span>
-                            </div>
+                    <div class="video-player" data-auto-play="false" style="--aspect-ratio: 16/9" role="region" aria-label="video" id="video-1">
+                      <button class="video-player-poster">
+                        <img src="https://e3.365dm.com/25/03/768x432/skynews-ed-conway-tarriffs_6862649.jpg?20250320220250" alt="" aria-hidden="true">
+                        <span class="visually-hidden">Play video: The impact of US tariffs on UK industry</span> 
+                        <div class="ui-label" data-role="label" data-size="" data-type="media" data-icon="play">
+                            <svg fill="none" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" role="presentation"><path d="m5.77166 17.4559c-.88029.7073-1.95313.6824-2.77166.1704v-17.252639c.81853-.512 1.89138-.536869 2.77166.170399l8.45794 6.79552c1.0272.82535 1.0272 2.4955 0 3.32082z"></path></svg> 
+                            <div data-role="label-hidden-text" class="u-hide-visually">Video, 1 minute 11 seconds</div>
+                            <span aria-hidden="true">14:42</span>
+                        </div>
                         </button>
-                        <div class="video-player-body" inert></div>
-                        <script>
-                          document.currentScript.parentNode.init = {
-                            aspectRatio: '16/9',
-                            showAds: false,
-                            autoPlay: false,
-                            accountId: '6058004172001',
-                            videoId: 'ref:0039b167-1664-4dc1-bb91-765f2a147d21',
-                            policyKey: 'BCpkADawqM3o4nRENnJkSC77aIstiiHQMEaI_dlj2r_TxSpGBXpkF-L6UaPoAQumRNVgcBTN4OJjlKfjV6JQe3eNPmYMGAgUGvNv2Rxu6GX7KzUlKhLuurt5blL_7uhfKB3_xmcku_uW7IV0',
-                            manifestUrl: 'https://edge.api.brightcove.com/playback/v1/accounts/${accountId}/videos/${videoId}',
-                            captionsLanguage: {
-                              vod: ['English'],
-                              live: ['ENG_80_888']
-                            }
-                          }
-                        </script>
+                        <div class="video-player-body"></div>
                     </div>
-
-                    
                 </div>
 
                 <!-- Settings Panel -->
@@ -132,14 +117,14 @@
                         <div class="flex gap-2">
                             <button 
                                 id="disableAds" 
-                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
-                                onclick="if (!this.classList.contains('active')) { toggleAds(false); this.classList.remove('active'); document.getElementById('enableAds').classList.add('active'); }">
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white "
+                                onclick="toggleAds(false); this.classList.add('active'); document.getElementById('enableAds').classList.remove('active');">
                                 Disabled
                             </button>
                             <button 
                                 id="enableAds" 
-                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white"
-                                onclick="if (!this.classList.contains('active')) { toggleAds(true); this.classList.add('active'); document.getElementById('disableAds').classList.remove('active'); }">
+                                class="px-4 py-2 bg-gray-100 text-gray-700 rounded hover:bg-gray-200 active:bg-blue-500 active:text-white active"
+                                onclick="toggleAds(true); this.classList.add('active'); document.getElementById('disableAds').classList.remove('active');">
                                 Enabled
                             </button>
                         </div>
@@ -208,7 +193,7 @@
     <div class="w-full max-w-[1180px] text-gray-800 mx-auto mt-6">
         <h2 class="text-2xl font-bold text-gray-800 mb-8">News Player Features</h2>
         
-        <div class="grid md:grid-cols-2 gap-8 text-gray-700">
+        <div class="grid md:grid-cols-2 gap-8">
             <!-- General Player Features -->
             <div class="bg-white p-8">
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">General Player Features</h3>
@@ -413,14 +398,16 @@
         function toggleAspectRatio(aspectRatio) {
             const container = document.querySelector('.video-player');
             if (aspectRatio === '16/9') {
-             
+              
                 document.getElementById('button-9-16').classList.remove('active');
                 document.getElementById('button-16-9').classList.add('active');
-                container.style.setProperty('--aspect-ratio', '16/9');
+                container.style.setProperty('--aspect-ratio', '16/9')
             } else if (aspectRatio === '9/16') {
                 document.getElementById('button-16-9').classList.remove('active');
                 document.getElementById('button-9-16').classList.add('active');
-                container.style.setProperty('--aspect-ratio', '9/16');
+                container.style.setProperty('--aspect-ratio', '9/16')
+        
+        
             }
         }
 
@@ -445,11 +432,6 @@
             // Update the UI to reflect the current ad state
         }
 
-        // Initialize buttons
-        document.addEventListener('DOMContentLoaded', () => {
-            const rootElement = document.querySelector('.video-player');
-            rootElement.config.showAds = false;
-        });
     </script>
 </body>
 </html>
