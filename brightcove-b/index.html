@@ -5,10 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <script type="module" crossorigin src="./assets/index-BJyFlVNq.js"></script>
-    <link rel="stylesheet" crossorigin href="./index-BYtDYmnK.css">
+    <script type="module" crossorigin src="./assets/index-TPhcpnPs.js"></script>
+    <link rel="stylesheet" crossorigin href="./index-CMwiUTvf.css">
   </head>
   <body>
     <div id="root"></div>
+    <div id="video-input"><input type="text"><button>switch video</button></div> 
+    <script>
+      const input = document.querySelector('#video-input input');
+      const button = document.querySelector('#video-input button');
+      button.onclick = () => {
+        document.querySelector('.ui-video-player').switchVideo(input.value.trim());
+      }
+    </script>
   </body>
 </html>
