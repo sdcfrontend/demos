@@ -1,73 +1,29 @@
-
 <!doctype html>
-<html lang="en-gb">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- static_css -->
-  <title>Sky Component Preview</title>
-  <link rel="stylesheet" href="https://news.sky.com/css/min/index-a6104fb712943aebb3403e5b87cb11f2.css">
-  <style>
-    @font-face{font-display:fallback;font-family:Sky Text;font-weight:400;src:url(/demos/resources/fonts/sky-regular.woff) format("woff")}@font-face{font-display:fallback;font-family:Sky Text;font-weight:700;src:url(/demos/resources/fonts/sky-medium.woff) format("woff")}@font-face{font-display:fallback;font-family:Sky Headline;font-weight:400;src:url(/demos/resources/fonts/sky-headline-semi-bold.woff) format("woff")}
-  </style>
-</head>
-<body>
-
-  <div id="container"></div>
-  <div 
-  class="ui-video-player"
-  data-component-name="ui-video-player"
-
-  data-state="loading"
-  
-  data-originator-id="51"
-  data-originator-handle="brightcove-news-gb"
-  data-sdc-id="3956511"
-  data-account-id="6058004219001"
-  data-video-id="42f5f1cc-4056-461f-99b2-2c6cb0fc538f"
-  data-player-id="SM8YDwJQB"
-  data-player-no-ads-id="CiHZJuKz0"
-
-  data-options=""
-
-  data-autoplay="any"
-  data-is-live-stream="false"
-  data-duration="10:13"
-  data-show-closed-captions="true"
-  data-closed-captions-position="middle-third"
-  data-caption="Example VOD clip with captions"
-  data-auto-pause-on-not-visible="true"
-
-  data-disable-ads="true"
-  data-sensitive=""
-  data-video-ad-unit=""
-
-  data-auth-config=""
-
-  data-consent="pending"
->
-    <div class="ui-video-player-content" data-role="bridge-controller" style="--aspect-ratio:16/9"
-    >
-
-
-      <div class="ui-video-player-bridge-message" data-role="bridge-message">
-        <p data-role="bridge-message-text"></p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="./index-BJZuVjxF.js"></script>
+    <link rel="stylesheet" crossorigin href="./index-PrsjLWvY.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <div id="root"></div>
+      <div class="button-wrap">
+        <button data-ref="ref:7b2501e4-5553-4741-8acd-8a705eef4ff0">VOD 16/9</button>
+        <button data-ref="ref:cd0e937a-a140-4c00-bb84-5707d3d625d9">VOD 9/16</button>
+        <button data-ref="ref:bc9c9e2f-9723-4d22-ba97-0da915f16641">Live Stream</button>
       </div>
-
-      <video-js 
-        class="video-js ui-video-player-tag"
-        data-embed="default" 
-        data-application-id 
-        controls
-        playsinline
-        poster="">
-      </video-js>
     </div>
-</div>
-
-  <script src="./bundle.js"></script>
-
-</body>
+    <script>
+      document.querySelectorAll('.button-wrap').forEach((button) => {
+        button.onclick = (event) => {
+          const video = document.querySelector('.ui-video-player');
+          video.switchVideo(event.target.dataset.ref);
+        }
+      })
+    </script>
+  </body>
 </html>
