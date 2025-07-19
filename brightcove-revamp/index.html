@@ -2,28 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="./index-BJRmIUpY.js"></script>
-    <link rel="stylesheet" crossorigin href="./index-DK8_00Le.css">
+    <title>Brightcove Player v2</title>
+    <script type="module" crossorigin src="./index-CP3ZYBs7.js"></script>
+    <link rel="stylesheet" crossorigin href="./index-BkGd9PdA.css">
   </head>
   <body>
     <div class="wrap">
+      <h1>Brightcove Player v2</h1>
+      <a href="/">Brightcove Player</a>
+      <ul>
+        <li>Much improved player controls and design</li>
+        <li>Improved advert handling</li>
+        <li>Instant captions toggle</li>
+        <li>Dynamic aspect ratio switching</li>
+        <li>Client side video switching</li>
+      </ul>
       <div id="root"></div>
-      <div class="button-wrap">
-        <button data-ref="ref:7b2501e4-5553-4741-8acd-8a705eef4ff0">VOD 16/9</button>
-        <button data-ref="ref:cd0e937a-a140-4c00-bb84-5707d3d625d9">VOD 9/16</button>
-        <button data-ref="ref:bc9c9e2f-9723-4d22-ba97-0da915f16641">Live Stream</button>
-      </div>
-    </div>
-    <script>
-      document.querySelectorAll('.button-wrap').forEach((button) => {
-        button.onclick = (event) => {
-          const video = document.querySelector('.ui-video-player');
-          video.switchVideo(event.target.dataset.ref);
-        }
-      })
-    </script>
+     </div>
   </body>
 </html>
