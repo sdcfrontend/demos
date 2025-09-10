@@ -1,0 +1,4 @@
+function getTargetingTags_1362() { return '004#2;00#9999:100.0;##'; }
+
+if( typeof(afterFinished_1362)=="function" && p39_cb_1362== '1' ){afterFinished_1362();}
+
