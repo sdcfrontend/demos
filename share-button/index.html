@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:9876/ -->
+<html lang="en-gb"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- static_css -->
+  <title>Sky Component Preview</title>
+<style>.ui-share-button {
+  --border: 0;
+  --border-radius: 3px;
+  --bg: light-dark(#F4F5F7, #252525);
+  --color: light-dark(#4A4A4A, #BEBEBE);
+  --size: 16px;
+  --weight: bold;
+  --padding: 0.75em;
+  --gap: 0.5em;
+  --icon-size: 1em;
+  --icon-fill: light-dark(#0162BC, #359CFC);
+  --tooltip-bg: green;
+  --tooltip-color: white;
+  --tooltip-size: 14px;
+  line-height: 1;
+  position: relative;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background: var(--bg);
+  font: inherit;
+  font-weight: var(--weight);
+  font-size: var(--size);
+  color: var(--color);
+  padding: var(--padding);
+  gap: var(--gap);
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ui-share-button-tooltip {
+  background: var(--tooltip-bg);
+  color: var(--tooltip-color);
+  font-size: var(--tooltip-size);
+  border-radius: var(--border-radius);
+  padding: 0.35em 0.5em;
+  font-weight: normal;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -5px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ui-share-button-tooltip:not(:empty) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ui-share-button svg {
+  display: block;
+  width: var(--icon-size);
+  fill: var(--icon-fill);
+}
+
+@media all and (scripting: none) {
+  .ui-share-button-label {
+    display: none;
+  }
+}</style><style>html {
+  color-scheme: light dark;
+}
+
+body {
+  padding: 3em 1em;
+}</style></head>
+<body>
+
+  <div id="container"></div>
+  <button class="ui-share-button" data-share-title="Share this article" data-share-url="https://news.sky.com/share-link" data-component-name="ui-share-button"><noscript>Enable javascript to share</noscript><span class="ui-share-button-label">Share</span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" version="1.1" viewBox="0 0 16 16"><path d="m13 0c1.66 0 3 1.34 3 3s-1.34 3-3 3c-0.809 0-1.54-0.321-2.08-0.842l-4.94 2.47c0.0149 0.121 0.0244 0.245 0.0244 0.37 0 0.125-0.00955 0.248-0.0244 0.369l4.94 2.47c0.54-0.52 1.27-0.841 2.08-0.841 1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3c0-0.125 0.0085-0.249 0.0234-0.37l-4.94-2.47c-0.539 0.52-1.27 0.842-2.08 0.842-1.66 0-3-1.34-3-3s1.34-3 3-3c0.808 0 1.54 0.321 2.08 0.841l4.94-2.47c-0.0148-0.121-0.0234-0.244-0.0234-0.369 0-1.66 1.34-3 3-3z"></path></svg><span class="ui-share-button-tooltip" aria-live="polite"></span></button>
+
+  <script src="./bundle.js"></script>
+
+
+
+</body></html>
