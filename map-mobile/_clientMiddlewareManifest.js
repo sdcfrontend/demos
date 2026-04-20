@@ -1,0 +1,1 @@
+[{"has":[{"type":"query","key":"isDarkMode"}],"regexp":"^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/elections(?:\\/([^\\/#\\?]+?))\\/banner(\\.json)?[\\/#\\?]?$","originalSource":"/elections/:election/banner"}]
